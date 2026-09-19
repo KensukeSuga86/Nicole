@@ -121,7 +121,85 @@ ul.tips{padding-left:1.4em;margin:6px 0;line-height:1.9;font-size:13px;color:#b8
 .skymap-timebar button:hover{background:#1a3a5c;color:#fff;}
 .skymap-timebar .reset{border-color:#4a6a8a;color:#c8dff0;}
 .skymap-time-now{font-size:11px;color:#ffd54f;font-weight:bold;margin-left:auto;}
-@media(max-width:600px){.skymap-time-now{width:100%;margin-left:0;margin-top:2px;}}
+.skymap-slider-wrap{width:100%;display:grid;grid-template-columns:auto minmax(140px,1fr) auto;gap:8px;align-items:center;margin-top:4px;}
+.skymap-slider-wrap input[type="range"]{width:100%;padding:0;accent-color:#7eb8e8;}
+.skymap-slider-edge{font-size:9px;color:#6a8aaa;white-space:nowrap;}
+.skymap-zoom-bar{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0 0 10px;padding:7px 10px;background:#081120;border:1px solid #17314d;border-radius:8px;}
+.skymap-zoom-bar .label{font-size:11px;color:#8ab4d4;margin-right:2px;}
+.skymap-zoom-bar button{background:#0d2040;border:1px solid #2a5a8c;color:#9ccbf0;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;min-width:38px;}
+.skymap-zoom-bar button:hover{background:#1a3a5c;color:#fff;}
+.skymap-zoom-label{font-size:11px;color:#ffd54f;font-weight:bold;margin-left:2px;}
+.skymap-zoom-help{font-size:9px;color:#6a8aaa;margin-left:auto;}
+
+.weather-panel{margin:0 0 10px;padding:10px 12px;background:#081120;border:1px solid #17314d;border-radius:9px;}
+.weather-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:7px;}
+.weather-title{font-size:12px;font-weight:bold;color:#9ccbf0;}
+.weather-source{font-size:9px;color:#5f7f9d;}
+.weather-status{font-size:10px;color:#8ab4d4;line-height:1.6;}
+.weather-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:7px;}
+.weather-cell{background:#0b1728;border:1px solid #17314d;border-radius:7px;padding:7px 8px;min-width:0;}
+.weather-cell .k{font-size:9px;color:#6f94b3;margin-bottom:2px;}
+.weather-cell .v{font-size:12px;color:#e0eaf5;font-weight:bold;white-space:nowrap;}
+.weather-eval{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px;padding-top:7px;border-top:1px solid #17314d;}
+.weather-grade{font-size:18px;font-weight:bold;}
+.weather-grade.good{color:#4ade80;}
+.weather-grade.ok{color:#fbbf24;}
+.weather-grade.poor{color:#fb923c;}
+.weather-grade.bad{color:#f87171;}
+.weather-note{font-size:10px;color:#8ab4d4;line-height:1.5;}
+.weather-offline{color:#fb923c;font-weight:bold;}
+.weather-error{color:#f87171;}
+
+.obs-grid-primary{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;}
+.obs-grid-detail{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:10px;}
+.obs-field{min-width:0;}
+.obs-field input,.obs-field select{min-width:0;width:100%;max-width:100%;}
+.location-presets{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+.location-presets .loc-btn{flex:0 0 auto;}
+.map-select-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px;}
+@media(max-width:1100px){
+.obs-grid-detail{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+@media(max-width:850px){
+.obs-grid-primary{grid-template-columns:1fr 1fr;}
+.obs-grid-detail{grid-template-columns:1fr 1fr;}
+.panel{padding:15px 14px;margin:10px;}
+}
+@media(max-width:560px){
+.obs-grid-primary,.obs-grid-detail{grid-template-columns:1fr;}
+.map-select-row{align-items:stretch;}
+.map-select-btn{width:100%;}
+.location-presets{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
+.location-presets .loc-btn{width:100%;margin:0;}
+}
+.map-select-btn{background:#0d2040;border:1px solid #2a5a8c;color:#9ccbf0;border-radius:7px;padding:8px 12px;font-size:12px;cursor:pointer;min-height:38px;}
+.map-select-btn:hover{background:#1a3a5c;color:#fff;}
+.map-modal{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:9999;display:none;align-items:center;justify-content:center;padding:14px;}
+.map-modal.open{display:flex;}
+.map-dialog{width:min(920px,100%);max-height:92vh;overflow:auto;background:#0d1525;border:1px solid #2a4a6a;border-radius:12px;padding:12px;}
+.map-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;}
+.map-dialog-title{font-size:14px;font-weight:bold;color:#9ccbf0;}
+.map-close-btn{background:#151b29;border:1px solid #3a5168;color:#c8dff0;border-radius:7px;padding:6px 10px;cursor:pointer;}
+#gsiMap{height:min(62vh,560px);min-height:320px;border-radius:9px;overflow:hidden;background:#d9dee2;}
+.map-select-info{margin-top:9px;padding:9px 10px;background:#081120;border:1px solid #17314d;border-radius:8px;font-size:11px;color:#9ccbf0;line-height:1.7;}
+.map-select-actions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;margin-top:9px;}
+.map-use-btn{background:#143b2b;border:1px solid #2c7a56;color:#9ff0c8;border-radius:7px;padding:8px 14px;font-size:12px;cursor:pointer;}
+.map-use-btn:disabled{opacity:.45;cursor:not-allowed;}
+.map-attribution-note{margin-top:6px;font-size:9px;color:#627f98;line-height:1.45;}
+.map-offline-msg{padding:30px 10px;text-align:center;color:#fb923c;font-weight:bold;}
+@media(max-width:600px){#gsiMap{min-height:300px;height:52vh;}.map-dialog{padding:9px;}.map-select-actions{justify-content:stretch}.map-use-btn,.map-close-btn{min-height:42px;}}
+@media(max-width:700px){.weather-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+.night-mode-toggle{margin-left:auto;background:#160000;border:1px solid #6b1b1b;color:#ff8a80;border-radius:8px;padding:7px 12px;font-size:12px;cursor:pointer;white-space:nowrap;}
+.night-mode-toggle:hover{background:#260000;color:#ffb4ad;}
+body.night-mode{filter:grayscale(1) sepia(1) saturate(8) hue-rotate(305deg) brightness(.52) contrast(1.08);}
+body.night-mode .night-mode-toggle{background:#220000;border-color:#ff4d4d;color:#ffb0a8;}
+@media(max-width:600px){
+.skymap-time-now{width:100%;margin-left:0;margin-top:2px;}
+.skymap-slider-wrap{grid-template-columns:auto minmax(100px,1fr) auto;}
+.skymap-zoom-help{width:100%;margin-left:0;}
+header{align-items:flex-start;}
+.night-mode-toggle{margin-left:0;}
+}
 .season-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:bold;}
 .s-spring{background:#1a2a0d;color:#a3e635;}
 .s-summer{background:#2a1a00;color:#fb923c;}
@@ -181,7 +259,7 @@ footer span{color:#7eb8e8;}
 .skymap-controls input[type="checkbox"]{width:auto;margin:0;}
 .skymap-controls select{width:auto;min-width:90px;padding:4px 8px;font-size:12px;}
 .skymap-canvas-wrap{display:flex;justify-content:center;overflow:hidden;background:#030711;border:1px solid #1e3a5f;border-radius:10px;padding:8px;}
-#skyMapCanvas{display:block;width:min(100%,760px);height:auto;aspect-ratio:1/1;touch-action:none;}
+#skyMapCanvas{display:block;width:min(100%,760px);height:auto;aspect-ratio:1/1;touch-action:none;cursor:grab;}#skyMapCanvas.dragging{cursor:grabbing;}
 .skymap-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;font-size:10px;color:#6a8aaa;}
 .skymap-object-info{margin-top:10px;background:#080c18;border:1px solid #1e3a5f;border-left:4px solid #4a9fd4;border-radius:0 8px 8px 0;padding:9px 12px;font-size:12px;color:#b8d0e8;line-height:1.7;min-height:40px;}
 .skymap-object-info b{color:#ffd54f;}
@@ -258,25 +336,33 @@ footer span{color:#7eb8e8;}
 </style>
 </head>
 <body>
-<header><div><h1>🔭 Nicole the Astronavigator</h1></div></header>
+<header>
+<div><h1>🔭 Nicole the Astronavigator</h1></div>
+<button type="button" class="night-mode-toggle" id="nightModeToggle" aria-pressed="false">🔴 赤色夜間モード</button>
+</header>
 
 <div class="panel">
 <h2>📍 観測条件を設定</h2>
-<div class="row">
-<div class="col"><label>観測日時</label><input type="datetime-local" id="inDatetime"></div>
-<div class="col"><label>場所名（任意）</label><input type="text" id="inPlace" placeholder="例：帯広"></div>
+<div class="obs-grid-primary">
+<div class="obs-field"><label>観測日時</label><input type="datetime-local" id="inDatetime"></div>
+<div class="obs-field"><label>場所名（任意）</label><input type="text" id="inPlace" placeholder="例：帯広"></div>
 </div>
-<div class="row" style="margin-top:10px">
-<div class="col"><label>緯度（北緯）</label><input type="number" id="inLat" step="0.0001" placeholder="例：42.9236"></div>
-<div class="col"><label>経度（東経）</label><input type="number" id="inLon" step="0.0001" placeholder="例：143.1965"></div>
-<div class="col"><label>最低高度（°）</label>
+<div class="obs-grid-detail">
+<div class="obs-field"><label>緯度（北緯）</label><input type="number" id="inLat" step="0.000001" placeholder="例：42.923600"></div>
+<div class="obs-field"><label>経度（東経）</label><input type="number" id="inLon" step="0.000001" placeholder="例：143.196500"></div>
+<div class="obs-field"><label>標高（m）</label><input type="number" id="inAlt" step="0.1" placeholder="地図から自動取得"></div>
+<div class="obs-field"><label>最低高度（°）</label>
 <select id="inMinAlt"><option value="10">10°以上</option><option value="20" selected>20°以上</option><option value="30">30°以上</option></select>
 </div>
-<div class="col"><label>等級上限</label>
+<div class="obs-field"><label>等級上限</label>
 <select id="inMaxMag"><option value="7">〜7等（明るめ）</option><option value="9">〜9等</option><option value="11" selected>〜11等（標準）</option><option value="14">〜14等（全て）</option></select>
 </div>
 </div>
-<div style="margin-top:10px">
+<div class="map-select-row">
+<button type="button" class="map-select-btn" id="openMapSelect">🗺 地図から選択</button>
+<span style="font-size:10px;color:#6f94b3">地理院淡色地図から緯度・経度・標高を選択（オンライン時のみ）</span>
+</div>
+<div class="location-presets">
 <button class="loc-btn" id="btnGPS">📡 現在地を取得</button>
 <button class="loc-btn" id="btnObihiro">📌 帯広</button>
 <button class="loc-btn" id="btnSapporo">📌 札幌</button>
@@ -357,6 +443,16 @@ footer span{color:#7eb8e8;}
 <label>恒星 <select id="skyMag"><option value="2">2等まで</option><option value="3">3等まで</option><option value="4">4等まで</option><option value="5" selected>5等まで</option><option value="6">6等まで</option></select></label>
 </div>
 
+<div class="weather-panel" id="weatherPanel">
+<div class="weather-head">
+<div class="weather-title">☁️ 観測地点の天候</div>
+<div class="weather-source">Open-Meteo</div>
+</div>
+<div class="weather-status" id="weatherStatus">天候情報を確認しています…</div>
+<div class="weather-grid" id="weatherGrid" style="display:none"></div>
+<div class="weather-eval" id="weatherEval" style="display:none"></div>
+</div>
+
 <div class="skymap-timebar">
 <span class="label">⏱ 星図の時刻</span>
 <button type="button" data-sky-shift="-6">−6h</button>
@@ -367,6 +463,21 @@ footer span{color:#7eb8e8;}
 <button type="button" data-sky-shift="3">+3h</button>
 <button type="button" data-sky-shift="6">+6h</button>
 <span class="skymap-time-now" id="skyViewTimeLabel">—</span>
+
+<div class="skymap-slider-wrap">
+<span class="skymap-slider-edge">−24h</span>
+<input type="range" id="skyTimeSlider" min="-24" max="24" step="0.25" value="0" aria-label="星図の時刻を前後24時間で変更">
+<span class="skymap-slider-edge">+24h</span>
+</div>
+</div>
+
+<div class="skymap-zoom-bar">
+<span class="label">🔎 星図ズーム</span>
+<button type="button" id="skyZoomOut" aria-label="縮小">−</button>
+<button type="button" id="skyZoomReset">100%</button>
+<button type="button" id="skyZoomIn" aria-label="拡大">＋</button>
+<span class="skymap-zoom-label" id="skyZoomLabel">100%</span>
+<span class="skymap-zoom-help">ホイール／ピンチで拡大、ドラッグで移動</span>
 </div>
 
 <div id="skyLineStatus" style="font-size:10px;color:#6f94b3;margin:2px 0 7px">星座線：内蔵簡易データ</div>
@@ -477,6 +588,23 @@ footer span{color:#7eb8e8;}
 <canvas id="altChart" height="120"></canvas>
 </div>
 <div style="margin-top:12px"><button class="action gray sm" id="btnCloseDetail">✕ 閉じる</button></div>
+</div>
+
+<div class="map-modal" id="mapSelectModal" aria-hidden="true">
+<div class="map-dialog" role="dialog" aria-modal="true" aria-labelledby="mapSelectTitle">
+<div class="map-dialog-head">
+<div class="map-dialog-title" id="mapSelectTitle">🗺 地図から観測地点を選択</div>
+<button type="button" class="map-close-btn" id="closeMapSelect">✕ 閉じる</button>
+</div>
+<div id="gsiMap"></div>
+<div class="map-select-info" id="mapSelectInfo">地図をクリック／タップして観測地点を選択してください。</div>
+<div class="map-select-actions">
+<button type="button" class="map-use-btn" id="useMapLocation" disabled>この場所を使う</button>
+</div>
+<div class="map-attribution-note">
+背景地図：地理院タイル（淡色地図）／標高：国土地理院 標高タイル（基盤地図情報数値標高モデル）
+</div>
+</div>
 </div>
 
 <footer>
@@ -1249,6 +1377,22 @@ let SKY_MAP_HITS=[];
 let SKY_FOCUS_CONSTELLATION_ID=null;
 let SKY_VIEW_DATE=null;
 
+let SKY_ZOOM=1;
+let SKY_PAN_X=0;
+let SKY_PAN_Y=0;
+const SKY_ZOOM_MIN=1;
+const SKY_ZOOM_MAX=5;
+const SKY_POINTERS=new Map();
+let SKY_GESTURE=null;
+let SKY_POINTER_MOVED=false;
+
+const NICOLE_NIGHT_MODE_KEY="nicole_night_mode_v1";
+
+let WEATHER_DATA=null;
+let WEATHER_META=null;
+let WEATHER_LOADING=false;
+const WEATHER_ENDPOINT="https://api.open-meteo.com/v1/forecast";
+
 function formatSkyViewDate(date){
 if(!(date instanceof Date)||isNaN(date))return "—";
 const pad=n=>String(n).padStart(2,"0");
@@ -1266,27 +1410,633 @@ const v=$("#inDatetime").value;
 return v?new Date(v):new Date();
 }
 
-function shiftSkyViewTime(hours){
-const d=getSkyViewDate();
-d.setHours(d.getHours()+hours);
-SKY_VIEW_DATE=d;
-
-/* JPL小天体は取得した観測時刻の座標なので、時間を動かしたら自動OFF */
-if($("#skyShowSmallBodies")){
-$("#skyShowSmallBodies").checked=false;
+function getSkyBaseDate(){
+if(currentDate instanceof Date&&!isNaN(currentDate))return new Date(currentDate);
+const v=$("#inDatetime").value;
+return v?new Date(v):new Date();
 }
 
+function getSkyTimeOffsetHours(){
+const base=getSkyBaseDate();
+const view=getSkyViewDate();
+return (view-base)/3600000;
+}
+
+function syncSkyTimeSlider(){
+const slider=$("#skyTimeSlider");
+if(!slider)return;
+const offset=getSkyTimeOffsetHours();
+const min=Number(slider.min),max=Number(slider.max);
+slider.value=Math.max(min,Math.min(max,offset));
+}
+
+function setSkyViewOffsetHours(hours){
+const slider=$("#skyTimeSlider");
+const min=slider?Number(slider.min):-24;
+const max=slider?Number(slider.max):24;
+const clamped=Math.max(min,Math.min(max,Number(hours)||0));
+const base=getSkyBaseDate();
+SKY_VIEW_DATE=new Date(base.getTime()+clamped*3600000);
+
+/* JPL小天体は取得時刻に依存するため、時刻を動かしたら誤表示防止でOFF */
+if($("#skyShowSmallBodies")&&Math.abs(clamped)>0.0001){
+$("#skyShowSmallBodies").checked=false;
+}
 renderSkyChart();
+}
+
+function shiftSkyViewTime(hours){
+setSkyViewOffsetHours(getSkyTimeOffsetHours()+hours);
 }
 
 function resetSkyViewTime(){
-if(currentDate instanceof Date&&!isNaN(currentDate)){
-SKY_VIEW_DATE=new Date(currentDate);
-}else{
-const v=$("#inDatetime").value;
-SKY_VIEW_DATE=v?new Date(v):new Date();
-}
+SKY_VIEW_DATE=getSkyBaseDate();
 renderSkyChart();
+}
+
+function clampSkyZoom(v){
+return Math.max(SKY_ZOOM_MIN,Math.min(SKY_ZOOM_MAX,v));
+}
+
+function limitSkyPan(){
+const canvas=$("#skyMapCanvas");
+if(!canvas)return;
+if(SKY_ZOOM<=1.001){
+SKY_PAN_X=0;
+SKY_PAN_Y=0;
+return;
+}
+const size=Math.min(canvas.clientWidth||760,canvas.clientHeight||760);
+const maxPan=size*0.44*(SKY_ZOOM-1);
+SKY_PAN_X=Math.max(-maxPan,Math.min(maxPan,SKY_PAN_X));
+SKY_PAN_Y=Math.max(-maxPan,Math.min(maxPan,SKY_PAN_Y));
+}
+
+function setSkyZoom(newZoom,anchorX=null,anchorY=null){
+const canvas=$("#skyMapCanvas");
+const oldZoom=SKY_ZOOM;
+const z=clampSkyZoom(newZoom);
+
+if(canvas&&anchorX!==null&&anchorY!==null&&oldZoom>0){
+const cx=canvas.clientWidth/2;
+const cy=canvas.clientHeight/2;
+const worldX=(anchorX-cx-SKY_PAN_X)/oldZoom;
+const worldY=(anchorY-cy-SKY_PAN_Y)/oldZoom;
+SKY_PAN_X=anchorX-cx-worldX*z;
+SKY_PAN_Y=anchorY-cy-worldY*z;
+}
+
+SKY_ZOOM=z;
+limitSkyPan();
+renderSkyChart();
+}
+
+function resetSkyZoom(){
+SKY_ZOOM=1;
+SKY_PAN_X=0;
+SKY_PAN_Y=0;
+renderSkyChart();
+}
+
+function restoreNightMode(){
+let on=false;
+try{on=localStorage.getItem(NICOLE_NIGHT_MODE_KEY)==="1";}catch(e){}
+document.body.classList.toggle("night-mode",on);
+const btn=$("#nightModeToggle");
+if(btn){
+btn.setAttribute("aria-pressed",String(on));
+btn.textContent=on?"⚫ 通常表示へ":"🔴 赤色夜間モード";
+}
+const theme=document.querySelector('meta[name="theme-color"]');
+if(theme)theme.setAttribute("content",on?"#100000":"#081120");
+}
+
+function toggleNightMode(){
+const on=!document.body.classList.contains("night-mode");
+document.body.classList.toggle("night-mode",on);
+try{localStorage.setItem(NICOLE_NIGHT_MODE_KEY,on?"1":"0");}catch(e){}
+restoreNightMode();
+}
+
+
+function weatherCodeJa(code){
+const m={
+0:"快晴",
+1:"晴れ",
+2:"一部曇り",
+3:"曇り",
+45:"霧",
+48:"着氷性の霧",
+51:"弱い霧雨",
+53:"霧雨",
+55:"強い霧雨",
+56:"弱い着氷性霧雨",
+57:"強い着氷性霧雨",
+61:"弱い雨",
+63:"雨",
+65:"強い雨",
+66:"弱い着氷性の雨",
+67:"強い着氷性の雨",
+71:"弱い雪",
+73:"雪",
+75:"強い雪",
+77:"霧雪",
+80:"弱いにわか雨",
+81:"にわか雨",
+82:"強いにわか雨",
+85:"弱いにわか雪",
+86:"強いにわか雪",
+95:"雷雨",
+96:"ひょうを伴う雷雨",
+99:"激しいひょうを伴う雷雨"
+};
+return m[Number(code)]||"—";
+}
+
+function weatherGradeFor(row){
+let rank=4;
+const reasons=[];
+
+const cloud=Number(row.cloud_cover);
+const pp=Number(row.precipitation_probability);
+const precip=Number(row.precipitation);
+const wind=Number(row.wind_speed_10m);
+const vis=Number(row.visibility);
+const rh=Number(row.relative_humidity_2m);
+
+if((Number.isFinite(precip)&&precip>=0.2)||(Number.isFinite(pp)&&pp>=60)){
+rank=1;reasons.push("降水の可能性が高い");
+}else if(Number.isFinite(cloud)&&cloud>=80){
+rank=1;reasons.push("雲量が非常に多い");
+}else if(Number.isFinite(cloud)&&cloud>=60){
+rank=Math.min(rank,2);reasons.push("雲が多い");
+}else if(Number.isFinite(cloud)&&cloud>=35){
+rank=Math.min(rank,3);reasons.push("雲がやや多い");
+}else{
+reasons.push("雲量が少ない");
+}
+
+if(Number.isFinite(wind)&&wind>=10){
+rank=Math.min(rank,2);reasons.push("風が強い");
+}else if(Number.isFinite(wind)&&wind>=6){
+rank=Math.min(rank,3);reasons.push("風がやや強い");
+}
+
+if(Number.isFinite(vis)&&vis<5000){
+rank=Math.min(rank,2);reasons.push("視程が悪い");
+}else if(Number.isFinite(vis)&&vis<10000){
+rank=Math.min(rank,3);reasons.push("視程がやや短い");
+}
+
+if(Number.isFinite(rh)&&rh>=92){
+rank=Math.min(rank,3);reasons.push("高湿度");
+}
+
+const map={
+4:{grade:"◎",cls:"good",label:"良好"},
+3:{grade:"○",cls:"ok",label:"まずまず"},
+2:{grade:"△",cls:"poor",label:"条件注意"},
+1:{grade:"×",cls:"bad",label:"観測には不向き"}
+};
+return{...map[rank],reason:reasons.join("・")};
+}
+
+function clearWeatherData(message,cls=""){
+WEATHER_DATA=null;
+WEATHER_META=null;
+const status=$("#weatherStatus");
+const grid=$("#weatherGrid");
+const evalEl=$("#weatherEval");
+if(status){
+status.className=`weather-status ${cls}`.trim();
+status.textContent=message;
+}
+if(grid){grid.style.display="none";grid.innerHTML="";}
+if(evalEl){evalEl.style.display="none";evalEl.innerHTML="";}
+}
+
+function weatherRowAt(date){
+if(!WEATHER_DATA||!WEATHER_DATA.time||!WEATHER_DATA.time.length)return null;
+const target=date.getTime()/1000;
+const times=WEATHER_DATA.time;
+if(target<times[0]-1800||target>times[times.length-1]+1800)return null;
+
+let lo=0,hi=times.length-1;
+while(lo<hi){
+const mid=Math.floor((lo+hi)/2);
+if(times[mid]<target)lo=mid+1;
+else hi=mid;
+}
+let idx=lo;
+if(idx>0&&Math.abs(times[idx-1]-target)<Math.abs(times[idx]-target))idx--;
+
+const row={time:times[idx]};
+[
+"temperature_2m","relative_humidity_2m","precipitation_probability",
+"precipitation","cloud_cover","cloud_cover_low","cloud_cover_mid",
+"cloud_cover_high","visibility","wind_speed_10m","weather_code"
+].forEach(k=>row[k]=WEATHER_DATA[k]?WEATHER_DATA[k][idx]:null);
+return row;
+}
+
+function renderWeatherForDate(date){
+const status=$("#weatherStatus");
+const grid=$("#weatherGrid");
+const evalEl=$("#weatherEval");
+if(!status||!grid||!evalEl)return;
+
+if(!navigator.onLine){
+status.className="weather-status weather-offline";
+status.textContent="オフライン環境では使用できません";
+grid.style.display="none";
+evalEl.style.display="none";
+return;
+}
+
+if(WEATHER_LOADING){
+status.className="weather-status";
+status.textContent="Open-Meteoから天候情報を取得中…";
+grid.style.display="none";
+evalEl.style.display="none";
+return;
+}
+
+if(!WEATHER_DATA){
+status.className="weather-status";
+status.textContent="天候情報を取得できていません。オンライン接続を確認してください。";
+grid.style.display="none";
+evalEl.style.display="none";
+return;
+}
+
+const row=weatherRowAt(date);
+if(!row){
+status.className="weather-status";
+status.textContent="この星図時刻はOpen-Meteoの予報範囲外です。";
+grid.style.display="none";
+evalEl.style.display="none";
+return;
+}
+
+const fmt=n=>Number.isFinite(Number(n))?Number(n):null;
+const cloud=fmt(row.cloud_cover);
+const low=fmt(row.cloud_cover_low);
+const mid=fmt(row.cloud_cover_mid);
+const high=fmt(row.cloud_cover_high);
+const pp=fmt(row.precipitation_probability);
+const precip=fmt(row.precipitation);
+const vis=fmt(row.visibility);
+const wind=fmt(row.wind_speed_10m);
+const temp=fmt(row.temperature_2m);
+const rh=fmt(row.relative_humidity_2m);
+
+status.className="weather-status";
+status.textContent=`${formatSkyViewDate(date)} に最も近い1時間予報：${weatherCodeJa(row.weather_code)}`;
+
+const cells=[
+["総雲量",cloud===null?"—":`${Math.round(cloud)}%`],
+["低・中・高層雲",
+`${low===null?"—":Math.round(low)} / ${mid===null?"—":Math.round(mid)} / ${high===null?"—":Math.round(high)}%`],
+["降水確率",pp===null?"—":`${Math.round(pp)}%`],
+["降水量",precip===null?"—":`${precip.toFixed(1)} mm`],
+["視程",vis===null?"—":`${(vis/1000).toFixed(1)} km`],
+["風速",wind===null?"—":`${wind.toFixed(1)} m/s`],
+["気温",temp===null?"—":`${temp.toFixed(1)} ℃`],
+["湿度",rh===null?"—":`${Math.round(rh)}%`]
+];
+
+grid.innerHTML=cells.map(([k,v])=>`
+<div class="weather-cell">
+<div class="k">${k}</div>
+<div class="v">${v}</div>
+</div>`).join("");
+grid.style.display="grid";
+
+const ev=weatherGradeFor(row);
+evalEl.innerHTML=`
+<span class="weather-grade ${ev.cls}">${ev.grade}</span>
+<div>
+<div style="font-size:11px;color:#e0eaf5;font-weight:bold">観測目安：${ev.label}</div>
+<div class="weather-note">${ev.reason}<br>※ 雲量・降水・風・視程などから算出した簡易目安です。</div>
+</div>`;
+evalEl.style.display="flex";
+}
+
+async function loadWeatherForecast(lat,lon){
+if(!navigator.onLine){
+clearWeatherData("オフライン環境では使用できません","weather-offline");
+return;
+}
+if(!Number.isFinite(lat)||!Number.isFinite(lon)){
+clearWeatherData("緯度・経度を設定すると天候情報を取得します。");
+return;
+}
+
+WEATHER_LOADING=true;
+renderWeatherForDate(getSkyViewDate());
+
+try{
+const params=new URLSearchParams({
+latitude:String(lat),
+longitude:String(lon),
+hourly:[
+"temperature_2m",
+"relative_humidity_2m",
+"precipitation_probability",
+"precipitation",
+"cloud_cover",
+"cloud_cover_low",
+"cloud_cover_mid",
+"cloud_cover_high",
+"visibility",
+"wind_speed_10m",
+"weather_code"
+].join(","),
+wind_speed_unit:"ms",
+forecast_days:"16",
+timezone:"auto",
+timeformat:"unixtime"
+});
+
+const res=await fetch(`${WEATHER_ENDPOINT}?${params.toString()}`,{cache:"no-store"});
+if(!res.ok)throw new Error(`HTTP ${res.status}`);
+const data=await res.json();
+
+if(!data||!data.hourly||!Array.isArray(data.hourly.time)){
+throw new Error("予報データの形式が不正です");
+}
+
+WEATHER_DATA=data.hourly;
+WEATHER_META={
+lat,
+lon,
+timezone:data.timezone||"",
+utcOffset:data.utc_offset_seconds||0,
+fetchedAt:new Date()
+};
+WEATHER_LOADING=false;
+renderWeatherForDate(getSkyViewDate());
+}catch(err){
+WEATHER_LOADING=false;
+clearWeatherData("天候情報の取得に失敗しました。ネット接続を確認してください。","weather-error");
+}
+}
+
+function loadWeatherFromInputs(){
+const lat=parseFloat($("#inLat").value);
+const lon=parseFloat($("#inLon").value);
+loadWeatherForecast(lat,lon);
+}
+
+
+/* =====================================================
+国土地理院 地図選択 + 標高自動取得
+===================================================== */
+let GSI_MAP=null;
+let GSI_MARKER=null;
+let GSI_SELECTED=null;
+let LEAFLET_PROMISE=null;
+
+function ensureLeaflet(){
+if(window.L)return Promise.resolve(window.L);
+if(LEAFLET_PROMISE)return LEAFLET_PROMISE;
+
+LEAFLET_PROMISE=new Promise((resolve,reject)=>{
+if(!document.querySelector('link[data-nicole-leaflet]')){
+const link=document.createElement("link");
+link.rel="stylesheet";
+link.href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css";
+link.dataset.nicoleLeaflet="1";
+document.head.appendChild(link);
+}
+
+const existing=document.querySelector('script[data-nicole-leaflet]');
+if(existing){
+existing.addEventListener("load",()=>window.L?resolve(window.L):reject(new Error("Leafletの読込に失敗しました")));
+existing.addEventListener("error",()=>reject(new Error("Leafletの読込に失敗しました")));
+return;
+}
+
+const script=document.createElement("script");
+script.src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js";
+script.dataset.nicoleLeaflet="1";
+script.onload=()=>window.L?resolve(window.L):reject(new Error("Leafletの読込に失敗しました"));
+script.onerror=()=>reject(new Error("Leafletの読込に失敗しました"));
+document.head.appendChild(script);
+});
+
+return LEAFLET_PROMISE;
+}
+
+function demTilePoint(lat,lon,z){
+const maxLat=85.05112878;
+const clampedLat=Math.max(-maxLat,Math.min(maxLat,lat));
+const n=Math.pow(2,z);
+const px=((lon+180)/360)*n*256;
+const latRad=clampedLat*Math.PI/180;
+const py=(1-Math.log(Math.tan(latRad)+1/Math.cos(latRad))/Math.PI)/2*n*256;
+const tileX=Math.floor(px/256);
+const tileY=Math.floor(py/256);
+return{
+x:tileX,
+y:tileY,
+px:Math.max(0,Math.min(255,Math.floor(px-tileX*256))),
+py:Math.max(0,Math.min(255,Math.floor(py-tileY*256)))
+};
+}
+
+async function demPixelFromBlob(blob,px,py){
+if("createImageBitmap" in window){
+try{
+const bmp=await createImageBitmap(blob);
+const canvas=document.createElement("canvas");
+canvas.width=256;canvas.height=256;
+const ctx=canvas.getContext("2d",{willReadFrequently:true});
+ctx.drawImage(bmp,0,0,256,256);
+const d=ctx.getImageData(px,py,1,1).data;
+if(bmp.close)bmp.close();
+return[d[0],d[1],d[2]];
+}catch(e){}
+}
+
+return await new Promise((resolve,reject)=>{
+const url=URL.createObjectURL(blob);
+const img=new Image();
+img.onload=()=>{
+try{
+const canvas=document.createElement("canvas");
+canvas.width=256;canvas.height=256;
+const ctx=canvas.getContext("2d",{willReadFrequently:true});
+ctx.drawImage(img,0,0,256,256);
+const d=ctx.getImageData(px,py,1,1).data;
+URL.revokeObjectURL(url);
+resolve([d[0],d[1],d[2]]);
+}catch(err){
+URL.revokeObjectURL(url);
+reject(err);
+}
+};
+img.onerror=()=>{
+URL.revokeObjectURL(url);
+reject(new Error("標高タイル画像を読めません"));
+};
+img.src=url;
+});
+}
+
+function decodeGsiElevation(r,g,b){
+if(r===128&&g===0&&b===0)return null;
+const x=65536*r+256*g+b;
+if(x===8388608)return null;
+const signed=x<8388608?x:x-16777216;
+return signed*0.01;
+}
+
+async function fetchGsiElevation(lat,lon){
+const sources=[
+{id:"dem1a_png",z:17,label:"DEM1A"},
+{id:"dem5a_png",z:15,label:"DEM5A"},
+{id:"dem5b_png",z:15,label:"DEM5B"},
+{id:"dem5c_png",z:15,label:"DEM5C"},
+{id:"dem_png",z:14,label:"DEM10B"}
+];
+
+for(const s of sources){
+try{
+const t=demTilePoint(lat,lon,s.z);
+const url=`https://cyberjapandata.gsi.go.jp/xyz/${s.id}/${s.z}/${t.x}/${t.y}.png`;
+const res=await fetch(url,{cache:"no-store"});
+if(!res.ok)continue;
+const blob=await res.blob();
+const [r,g,b]=await demPixelFromBlob(blob,t.px,t.py);
+const h=decodeGsiElevation(r,g,b);
+if(Number.isFinite(h))return{elevation:h,source:s.label};
+}catch(e){}
+}
+throw new Error("この地点の標高データを取得できませんでした");
+}
+
+function updateMapSelection(lat,lon,elevation=null,source=""){
+GSI_SELECTED={lat,lon,elevation,source};
+
+if(GSI_MAP&&window.L){
+if(!GSI_MARKER){
+GSI_MARKER=L.marker([lat,lon]).addTo(GSI_MAP);
+}else{
+GSI_MARKER.setLatLng([lat,lon]);
+}
+}
+
+const info=$("#mapSelectInfo");
+const use=$("#useMapLocation");
+if(info){
+const elevText=Number.isFinite(elevation)
+?`標高 <b>${elevation.toFixed(1)} m</b>${source?`（${source}）`:""}`
+:"標高を取得中…";
+info.innerHTML=`緯度 <b>${lat.toFixed(6)}</b> / 経度 <b>${lon.toFixed(6)}</b><br>${elevText}`;
+}
+if(use)use.disabled=!Number.isFinite(elevation);
+}
+
+async function selectMapPoint(lat,lon){
+updateMapSelection(lat,lon,null,"");
+try{
+const result=await fetchGsiElevation(lat,lon);
+if(!GSI_SELECTED||Math.abs(GSI_SELECTED.lat-lat)>1e-10||Math.abs(GSI_SELECTED.lon-lon)>1e-10)return;
+updateMapSelection(lat,lon,result.elevation,result.source);
+}catch(err){
+if(!GSI_SELECTED||Math.abs(GSI_SELECTED.lat-lat)>1e-10||Math.abs(GSI_SELECTED.lon-lon)>1e-10)return;
+GSI_SELECTED={lat,lon,elevation:null,source:""};
+const info=$("#mapSelectInfo");
+if(info){
+info.innerHTML=`緯度 <b>${lat.toFixed(6)}</b> / 経度 <b>${lon.toFixed(6)}</b><br><span style="color:#fb923c">${err.message}</span>`;
+}
+const use=$("#useMapLocation");
+if(use)use.disabled=false;
+}
+}
+
+async function openMapSelector(){
+const modal=$("#mapSelectModal");
+const mapDiv=$("#gsiMap");
+const info=$("#mapSelectInfo");
+const use=$("#useMapLocation");
+
+modal.classList.add("open");
+modal.setAttribute("aria-hidden","false");
+GSI_SELECTED=null;
+use.disabled=true;
+
+if(!navigator.onLine){
+mapDiv.innerHTML='<div class="map-offline-msg">オフライン環境では地図を使用できません</div>';
+info.textContent="インターネット接続後にもう一度お試しください。";
+return;
+}
+
+mapDiv.innerHTML="";
+info.textContent="地図を読み込んでいます…";
+
+try{
+await ensureLeaflet();
+
+const latInput=parseFloat($("#inLat").value);
+const lonInput=parseFloat($("#inLon").value);
+const startLat=Number.isFinite(latInput)?latInput:36.2;
+const startLon=Number.isFinite(lonInput)?lonInput:138.25;
+const zoom=Number.isFinite(latInput)&&Number.isFinite(lonInput)?13:5;
+
+if(GSI_MAP){
+GSI_MAP.remove();
+GSI_MAP=null;
+GSI_MARKER=null;
+}
+
+GSI_MAP=L.map("gsiMap",{zoomControl:true}).setView([startLat,startLon],zoom);
+
+L.tileLayer(
+"https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
+{
+maxZoom:18,
+attribution:'<a href="https://maps.gsi.go.jp/" target="_blank" rel="noopener">地理院タイル</a>'
+}
+).addTo(GSI_MAP);
+
+GSI_MAP.on("click",e=>{
+selectMapPoint(e.latlng.lat,e.latlng.lng);
+});
+
+setTimeout(()=>GSI_MAP.invalidateSize(),100);
+info.textContent="地図をクリック／タップして観測地点を選択してください。";
+
+if(Number.isFinite(latInput)&&Number.isFinite(lonInput)){
+GSI_MARKER=L.marker([latInput,lonInput]).addTo(GSI_MAP);
+}
+}catch(err){
+mapDiv.innerHTML='<div class="map-offline-msg">地図の読み込みに失敗しました</div>';
+info.innerHTML=`<span style="color:#f87171">${String(err.message||err)}</span>`;
+}
+}
+
+function closeMapSelector(){
+const modal=$("#mapSelectModal");
+modal.classList.remove("open");
+modal.setAttribute("aria-hidden","true");
+}
+
+function useMapSelectedLocation(){
+if(!GSI_SELECTED)return;
+
+$("#inLat").value=GSI_SELECTED.lat.toFixed(6);
+$("#inLon").value=GSI_SELECTED.lon.toFixed(6);
+$("#inAlt").value=Number.isFinite(GSI_SELECTED.elevation)
+?GSI_SELECTED.elevation.toFixed(1)
+:"";
+
+closeMapSelector();
+
+if(navigator.onLine){
+loadWeatherForecast(GSI_SELECTED.lat,GSI_SELECTED.lon);
+}
 }
 
 function getConstellationById(id){
@@ -1506,7 +2256,14 @@ const aa=altAz(ra,dec,lat,lon,date);
 if(aa.alt<0)return null;
 const r=radius*(90-aa.alt)/90;
 const az=aa.az*D2R;
-return{x:cx-r*Math.sin(az),y:cy-r*Math.cos(az),alt:aa.alt,az:aa.az};
+const bx=cx-r*Math.sin(az);
+const by=cy-r*Math.cos(az);
+return{
+x:cx+(bx-cx)*SKY_ZOOM+SKY_PAN_X,
+y:cy+(by-cy)*SKY_ZOOM+SKY_PAN_Y,
+alt:aa.alt,
+az:aa.az
+};
 }
 
 function renderSkyChart(){
@@ -1527,13 +2284,14 @@ const w=cssSize,h=cssSize,cx=w/2,cy=h/2,R=Math.min(w,h)*0.44;
 SKY_MAP_HITS=[];
 ctx.clearRect(0,0,w,h);ctx.fillStyle="#030711";ctx.fillRect(0,0,w,h);
 
-ctx.strokeStyle="#35506b";ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.stroke();
+const mapCx=cx+SKY_PAN_X,mapCy=cy+SKY_PAN_Y,mapR=R*SKY_ZOOM;
+ctx.strokeStyle="#35506b";ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(mapCx,mapCy,mapR,0,Math.PI*2);ctx.stroke();
 ctx.strokeStyle="#16283a";ctx.lineWidth=1;
-[30,60].forEach(alt=>{const rr=R*(90-alt)/90;ctx.beginPath();ctx.arc(cx,cy,rr,0,Math.PI*2);ctx.stroke();});
-ctx.strokeStyle="#20364c";ctx.beginPath();ctx.moveTo(cx-R,cy);ctx.lineTo(cx+R,cy);ctx.moveTo(cx,cy-R);ctx.lineTo(cx,cy+R);ctx.stroke();
+[30,60].forEach(alt=>{const rr=mapR*(90-alt)/90;ctx.beginPath();ctx.arc(mapCx,mapCy,rr,0,Math.PI*2);ctx.stroke();});
+ctx.strokeStyle="#20364c";ctx.beginPath();ctx.moveTo(mapCx-mapR,mapCy);ctx.lineTo(mapCx+mapR,mapCy);ctx.moveTo(mapCx,mapCy-mapR);ctx.lineTo(mapCx,mapCy+mapR);ctx.stroke();
 ctx.fillStyle="#8ab4d4";ctx.font="bold 13px sans-serif";ctx.textAlign="center";ctx.textBaseline="middle";
-ctx.fillText("N",cx,cy-R-15);ctx.fillText("E",cx-R-15,cy);ctx.fillText("S",cx,cy+R+15);ctx.fillText("W",cx+R+15,cy);
-ctx.fillStyle="#4a6a8a";ctx.font="10px sans-serif";ctx.fillText("60°",cx+3,cy-R*(30/90));ctx.fillText("30°",cx+3,cy-R*(60/90));
+ctx.fillText("N",mapCx,mapCy-mapR-15);ctx.fillText("E",mapCx-mapR-15,mapCy);ctx.fillText("S",mapCx,mapCy+mapR+15);ctx.fillText("W",mapCx+mapR+15,mapCy);
+ctx.fillStyle="#4a6a8a";ctx.font="10px sans-serif";ctx.fillText("60°",mapCx+3,mapCy-mapR*(30/90));ctx.fillText("30°",mapCx+3,mapCy-mapR*(60/90));
 
 const maxMag=parseFloat($("#skyMag").value||"5");
 const pointMap={};
@@ -1667,8 +2425,14 @@ const pad=n=>String(n).padStart(2,"0");
 const place=$("#inPlace").value||"指定場所";
 $("#skyMapInfo").textContent=`${date.getFullYear()}年${pad(date.getMonth()+1)}月${pad(date.getDate())}日 ${pad(date.getHours())}:${pad(date.getMinutes())} / ${place} / 北が上・東が左`;
 if($("#skyViewTimeLabel")){
-$("#skyViewTimeLabel").textContent=`表示：${formatSkyViewDate(date)}`;
+const offset=getSkyTimeOffsetHours();
+const sign=offset>0?"+":"";
+$("#skyViewTimeLabel").textContent=`表示：${formatSkyViewDate(date)}（${sign}${offset.toFixed(2).replace(/\.00$/,"")}h）`;
 }
+if($("#skyZoomLabel"))$("#skyZoomLabel").textContent=`${Math.round(SKY_ZOOM*100)}%`;
+if($("#skyZoomReset"))$("#skyZoomReset").textContent=`${Math.round(SKY_ZOOM*100)}%`;
+syncSkyTimeSlider();
+renderWeatherForDate(date);
 }
 
 function showSkyMapHit(hit){
@@ -1947,9 +2711,10 @@ const lat=parseFloat($("#inLat").value);
 const lon=parseFloat($("#inLon").value);
 const dtVal=$("#inDatetime").value;
 const date=dtVal?new Date(dtVal):null;
+const altM=parseFloat($("#inAlt").value||"0");
 const magLimit=parseFloat($("#sbMagLimit").value||"12");
 const place=$("#inPlace").value||"指定場所";
-return{lat,lon,date,magLimit,place};
+return{lat,lon,altM:Number.isFinite(altM)?altM:0,date,magLimit,place};
 }
 
 function saveSmallBodyCache(){
@@ -1985,7 +2750,12 @@ if(!meta||!date||isNaN(date)||!Number.isFinite(lat)||!Number.isFinite(lon))retur
 const cachedDate=new Date(meta.observationDate);
 if(isNaN(cachedDate))return false;
 const timeDiff=Math.abs(cachedDate.getTime()-date.getTime());
-return timeDiff<60000&&Math.abs(Number(meta.lat)-lat)<0.0001&&Math.abs(Number(meta.lon)-lon)<0.0001;
+const currentAlt=parseFloat($("#inAlt").value||"0");
+const cachedAlt=Number(meta.altM||0);
+return timeDiff<60000
+&&Math.abs(Number(meta.lat)-lat)<0.0001
+&&Math.abs(Number(meta.lon)-lon)<0.0001
+&&Math.abs(cachedAlt-(Number.isFinite(currentAlt)?currentAlt:0))<1;
 }
 
 function smallBodyCacheMatchesCurrent(){
@@ -1999,7 +2769,7 @@ return smallBodyConditionsMatch(SMALL_BODY_CACHE_META,date,lat,lon);
 
 function smallBodyCacheSummary(meta){
 if(!meta)return "";
-return `最終取得：${formatLocalDateTime(meta.fetchedAt)} / 対象：${formatLocalDateTime(meta.observationDate)} / ${meta.place||"指定場所"} / ${meta.magLimit}等まで`;
+return `最終取得：${formatLocalDateTime(meta.fetchedAt)} / 対象：${formatLocalDateTime(meta.observationDate)} / ${meta.place||"指定場所"} / 標高 ${Number(meta.altM||0).toFixed(0)}m / ${meta.magLimit}等まで`;
 }
 
 function updateSmallBodyStoredStatus(prefix="📦 保存データを表示中"){
@@ -2056,7 +2826,8 @@ const p=new URLSearchParams();
 p.set("sb-kind",kind);
 p.set("lat",String(lat));
 p.set("lon",String(lon));
-p.set("alt","0");
+const altM=parseFloat($("#inAlt").value||"0");
+p.set("alt",String((Number.isFinite(altM)?altM:0)/1000));
 p.set("obs-time",smallBodyObsTime(date));
 p.set("vmag-lim",String(magLimit));
 p.set("mag-required","true");
@@ -2144,7 +2915,7 @@ draw("#sbAsteroidGrid",asteroids,"asteroid");
 }
 
 async function loadSmallBodies(){
-const {lat,lon,date,magLimit,place}=getSmallBodyCurrentConditions();
+const {lat,lon,altM,date,magLimit,place}=getSmallBodyCurrentConditions();
 const status=$("#sbStatus");
 
 if(!Number.isFinite(lat)||!Number.isFinite(lon)||!date||isNaN(date)){
@@ -2167,11 +2938,11 @@ fetchSmallBodies("a",lat,lon,date,magLimit)
 ]);
 
 ONLINE_SMALL_BODIES=[...comets,...asteroids];
-smallBodyLoadedKey=`${lat}|${lon}|${date.toISOString()}|${magLimit}`;
+smallBodyLoadedKey=`${lat}|${lon}|${altM}|${date.toISOString()}|${magLimit}`;
 SMALL_BODY_CACHE_META={
 fetchedAt:new Date().toISOString(),
 observationDate:date.toISOString(),
-lat,lon,place,magLimit,
+lat,lon,altM,place,magLimit,
 loadedKey:smallBodyLoadedKey
 };
 renderSmallBodyCards();
@@ -2260,7 +3031,10 @@ let moonCalBaseDate=new Date();
 (function(){
 const now=new Date();const p=n=>String(n).padStart(2,"0");
 $("#inDatetime").value=`${now.getFullYear()}-${p(now.getMonth()+1)}-${p(now.getDate())}T21:00`;
-$("#inLat").value=42.9236;$("#inLon").value=143.1965;$("#inPlace").value="帯広";
+$("#inLat").value=42.9236;
+$("#inLon").value=143.1965;
+$("#inPlace").value="帯広";
+$("#inAlt").value="";
 })();
 
 const LOCS={
@@ -2271,14 +3045,65 @@ btnFukuoka:{lat:33.5904,lon:130.4017,name:"福岡"},btnNaha:{lat:26.2124,lon:127
 };
 Object.keys(LOCS).forEach(id=>{
 const btn=$(("#"+id));
-if(btn)btn.addEventListener("click",()=>{const l=LOCS[id];$("#inLat").value=l.lat;$("#inLon").value=l.lon;$("#inPlace").value=l.name;});
+if(btn)btn.addEventListener("click",()=>{
+const l=LOCS[id];
+$("#inLat").value=l.lat;
+$("#inLon").value=l.lon;
+$("#inPlace").value=l.name;
+$("#inAlt").value="";
+if(navigator.onLine)loadWeatherForecast(l.lat,l.lon);
 });
-$("#btnGPS").addEventListener("click",()=>{
-if(!navigator.geolocation){alert("GPSに対応していません。");return;}
-navigator.geolocation.getCurrentPosition(p=>{
-$("#inLat").value=Math.round(p.coords.latitude*10000)/10000;
-$("#inLon").value=Math.round(p.coords.longitude*10000)/10000;$("#inPlace").value="現在地";
-},()=>alert("位置情報の取得に失敗しました。"));
+});
+$("#btnGPS").addEventListener("click",async()=>{
+if(!navigator.geolocation){
+alert("GPSに対応していません。");
+return;
+}
+
+const btn=$("#btnGPS");
+const originalText=btn.textContent;
+btn.disabled=true;
+btn.textContent="📡 現在地を取得中…";
+
+navigator.geolocation.getCurrentPosition(async p=>{
+const lat=p.coords.latitude;
+const lon=p.coords.longitude;
+
+$("#inLat").value=lat.toFixed(6);
+$("#inLon").value=lon.toFixed(6);
+$("#inPlace").value="現在地";
+$("#inAlt").value="";
+btn.textContent="⛰ 標高を取得中…";
+
+if(navigator.onLine){
+try{
+const result=await fetchGsiElevation(lat,lon);
+$("#inAlt").value=result.elevation.toFixed(1);
+}catch(err){
+/* 標高だけ失敗しても緯度経度はそのまま利用できる */
+console.warn("標高取得失敗:",err);
+}
+
+loadWeatherForecast(lat,lon);
+}
+
+btn.disabled=false;
+btn.textContent=originalText;
+},err=>{
+btn.disabled=false;
+btn.textContent=originalText;
+
+let msg="位置情報の取得に失敗しました。";
+if(err&&err.code===1)msg="位置情報の利用が許可されていません。Safariの位置情報設定を確認してください。";
+else if(err&&err.code===2)msg="現在地を特定できませんでした。";
+else if(err&&err.code===3)msg="現在地の取得がタイムアウトしました。";
+
+alert(msg);
+},{
+enableHighAccuracy:true,
+timeout:12000,
+maximumAge:60000
+});
 });
 $("#btnNow").addEventListener("click",()=>{
 const now=new Date();const p=n=>String(n).padStart(2,"0");
@@ -2339,6 +3164,41 @@ shiftSkyViewTime(Number(btn.dataset.skyShift));
 
 $("#skyTimeReset").addEventListener("click",resetSkyViewTime);
 
+$("#skyTimeSlider").addEventListener("input",event=>{
+setSkyViewOffsetHours(Number(event.target.value));
+});
+
+$("#skyZoomIn").addEventListener("click",()=>setSkyZoom(SKY_ZOOM*1.35));
+$("#skyZoomOut").addEventListener("click",()=>setSkyZoom(SKY_ZOOM/1.35));
+$("#skyZoomReset").addEventListener("click",resetSkyZoom);
+
+$("#nightModeToggle").addEventListener("click",toggleNightMode);
+restoreNightMode();
+
+$("#openMapSelect").addEventListener("click",openMapSelector);
+$("#closeMapSelect").addEventListener("click",closeMapSelector);
+$("#useMapLocation").addEventListener("click",useMapSelectedLocation);
+$("#mapSelectModal").addEventListener("click",event=>{
+if(event.target===event.currentTarget)closeMapSelector();
+});
+document.addEventListener("keydown",event=>{
+if(event.key==="Escape"&&$("#mapSelectModal").classList.contains("open"))closeMapSelector();
+});
+
+/* 天候はオンライン時に自動取得。オフライン時はキャッシュを使用しない */
+if(navigator.onLine){
+loadWeatherFromInputs();
+}else{
+clearWeatherData("オフライン環境では使用できません","weather-offline");
+}
+
+window.addEventListener("online",()=>{
+loadWeatherFromInputs();
+});
+window.addEventListener("offline",()=>{
+clearWeatherData("オフライン環境では使用できません","weather-offline");
+});
+
 $("#sbRefresh").addEventListener("click",loadSmallBodies);
 /* 起動時は通信せず、ブラウザに保存した前回データだけ復元 */
 restoreSmallBodyCache();
@@ -2349,13 +3209,109 @@ loadWesternConstellationLines();
 
 $("#meteorRefresh").addEventListener("click",loadMeteorShowers);
 $("#skyRedraw").addEventListener("click",renderSkyChart);
-$("#skyMapCanvas").addEventListener("click",event=>{
-const canvas=event.currentTarget;
-const rect=canvas.getBoundingClientRect();
-const x=(event.clientX-rect.left)*(canvas.clientWidth/rect.width);
-const y=(event.clientY-rect.top)*(canvas.clientHeight/rect.height);
+const skyCanvas=$("#skyMapCanvas");
+
+skyCanvas.addEventListener("wheel",event=>{
+event.preventDefault();
+const rect=skyCanvas.getBoundingClientRect();
+const x=(event.clientX-rect.left)*(skyCanvas.clientWidth/rect.width);
+const y=(event.clientY-rect.top)*(skyCanvas.clientHeight/rect.height);
+const factor=event.deltaY<0?1.16:1/1.16;
+setSkyZoom(SKY_ZOOM*factor,x,y);
+},{passive:false});
+
+skyCanvas.addEventListener("pointerdown",event=>{
+skyCanvas.setPointerCapture(event.pointerId);
+SKY_POINTERS.set(event.pointerId,{x:event.offsetX,y:event.offsetY});
+SKY_POINTER_MOVED=false;
+skyCanvas.classList.add("dragging");
+
+if(SKY_POINTERS.size===1){
+SKY_GESTURE={
+type:"pan",
+startX:event.offsetX,
+startY:event.offsetY,
+panX:SKY_PAN_X,
+panY:SKY_PAN_Y
+};
+}else if(SKY_POINTERS.size===2){
+const pts=[...SKY_POINTERS.values()];
+const dx=pts[1].x-pts[0].x,dy=pts[1].y-pts[0].y;
+const midX=(pts[0].x+pts[1].x)/2,midY=(pts[0].y+pts[1].y)/2;
+SKY_GESTURE={
+type:"pinch",
+distance:Math.hypot(dx,dy)||1,
+zoom:SKY_ZOOM,
+panX:SKY_PAN_X,
+panY:SKY_PAN_Y,
+midX,midY
+};
+}
+});
+
+skyCanvas.addEventListener("pointermove",event=>{
+if(!SKY_POINTERS.has(event.pointerId))return;
+SKY_POINTERS.set(event.pointerId,{x:event.offsetX,y:event.offsetY});
+
+if(SKY_POINTERS.size===1&&SKY_GESTURE&&SKY_GESTURE.type==="pan"&&SKY_ZOOM>1.001){
+const dx=event.offsetX-SKY_GESTURE.startX;
+const dy=event.offsetY-SKY_GESTURE.startY;
+if(Math.hypot(dx,dy)>3)SKY_POINTER_MOVED=true;
+SKY_PAN_X=SKY_GESTURE.panX+dx;
+SKY_PAN_Y=SKY_GESTURE.panY+dy;
+limitSkyPan();
+renderSkyChart();
+}else if(SKY_POINTERS.size===2){
+const pts=[...SKY_POINTERS.values()];
+const dx=pts[1].x-pts[0].x,dy=pts[1].y-pts[0].y;
+const dist=Math.hypot(dx,dy)||1;
+const midX=(pts[0].x+pts[1].x)/2,midY=(pts[0].y+pts[1].y)/2;
+
+if(!SKY_GESTURE||SKY_GESTURE.type!=="pinch"){
+SKY_GESTURE={type:"pinch",distance:dist,zoom:SKY_ZOOM,panX:SKY_PAN_X,panY:SKY_PAN_Y,midX,midY};
+return;
+}
+
+SKY_POINTER_MOVED=true;
+const newZoom=clampSkyZoom(SKY_GESTURE.zoom*(dist/SKY_GESTURE.distance));
+const cx=skyCanvas.clientWidth/2,cy=skyCanvas.clientHeight/2;
+const worldX=(SKY_GESTURE.midX-cx-SKY_GESTURE.panX)/SKY_GESTURE.zoom;
+const worldY=(SKY_GESTURE.midY-cy-SKY_GESTURE.panY)/SKY_GESTURE.zoom;
+
+SKY_ZOOM=newZoom;
+SKY_PAN_X=midX-cx-worldX*newZoom;
+SKY_PAN_Y=midY-cy-worldY*newZoom;
+limitSkyPan();
+renderSkyChart();
+}
+});
+
+function finishSkyPointer(event){
+SKY_POINTERS.delete(event.pointerId);
+if(SKY_POINTERS.size===0){
+skyCanvas.classList.remove("dragging");
+SKY_GESTURE=null;
+}else if(SKY_POINTERS.size===1){
+const p=[...SKY_POINTERS.values()][0];
+SKY_GESTURE={type:"pan",startX:p.x,startY:p.y,panX:SKY_PAN_X,panY:SKY_PAN_Y};
+}
+}
+skyCanvas.addEventListener("pointerup",finishSkyPointer);
+skyCanvas.addEventListener("pointercancel",finishSkyPointer);
+
+skyCanvas.addEventListener("click",event=>{
+if(SKY_POINTER_MOVED){
+SKY_POINTER_MOVED=false;
+return;
+}
+const rect=skyCanvas.getBoundingClientRect();
+const x=(event.clientX-rect.left)*(skyCanvas.clientWidth/rect.width);
+const y=(event.clientY-rect.top)*(skyCanvas.clientHeight/rect.height);
 let best=null,bestDist=Infinity;
-SKY_MAP_HITS.forEach(hit=>{const d=Math.hypot(x-hit.x,y-hit.y);if(d<=hit.r&&d<bestDist){best=hit;bestDist=d;}});
+SKY_MAP_HITS.forEach(hit=>{
+const d=Math.hypot(x-hit.x,y-hit.y);
+if(d<=hit.r&&d<bestDist){best=hit;bestDist=d;}
+});
 showSkyMapHit(best);
 });
 let skyResizeTimer;window.addEventListener("resize",()=>{clearTimeout(skyResizeTimer);skyResizeTimer=setTimeout(()=>{if($("#rtab-skymap").classList.contains("active"))renderSkyChart();},120);});
@@ -2581,6 +3537,13 @@ if(!dtVal||isNaN(lat)||isNaN(lon)){alert("日時・緯度・経度を正しく�
 const date=new Date(dtVal);
 currentLat=lat;currentLon=lon;currentDate=date;
 SKY_VIEW_DATE=new Date(date);
+
+/* 観測地点確定時に最新の天候予報を自動取得 */
+if(navigator.onLine){
+loadWeatherForecast(lat,lon);
+}else{
+clearWeatherData("オフライン環境では使用できません","weather-offline");
+}
 
 /* 流星群は同じ年のデータなら観測条件だけ再計算 */
 if(METEOR_SHOWERS.length){
