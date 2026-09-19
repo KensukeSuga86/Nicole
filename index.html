@@ -179,7 +179,20 @@ ul.tips{padding-left:1.4em;margin:6px 0;line-height:1.9;font-size:13px;color:#b8
 .map-dialog{width:min(920px,100%);max-height:92vh;overflow:auto;background:#0d1525;border:1px solid #2a4a6a;border-radius:12px;padding:12px;}
 .map-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;}
 .map-dialog-title{font-size:14px;font-weight:bold;color:#9ccbf0;}
+.map-search-wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin:0 0 9px;}
+.map-search-wrap input{min-width:0;width:100%;box-sizing:border-box;}
+.map-search-btn{background:#0d2040;border:1px solid #2a5a8c;color:#9ccbf0;border-radius:7px;padding:8px 14px;cursor:pointer;min-width:74px;}
+.map-search-btn:disabled{opacity:.45;cursor:not-allowed;}
+.map-search-results{display:none;margin:0 0 9px;border:1px solid #17314d;border-radius:8px;overflow:hidden;background:#081120;}
+.map-search-results.show{display:block;}
+.map-search-result{display:block;width:100%;border:0;border-bottom:1px solid #17314d;background:#081120;color:#c8dff0;text-align:left;padding:9px 10px;cursor:pointer;font-size:11px;line-height:1.45;}
+.map-search-result:last-child{border-bottom:0;}
+.map-search-result:hover,.map-search-result:focus{background:#10233a;color:#fff;outline:none;}
+.map-search-result .main{font-weight:bold;color:#e6f2ff;}
+.map-search-result .sub{font-size:9px;color:#7896af;margin-top:2px;}
+.map-search-msg{padding:9px 10px;font-size:10px;color:#8ab4d4;}
 .map-close-btn{background:#151b29;border:1px solid #3a5168;color:#c8dff0;border-radius:7px;padding:6px 10px;cursor:pointer;}
+@media(max-width:560px){.map-search-wrap{grid-template-columns:1fr;}.map-search-btn{width:100%;}}
 #gsiMap{height:min(62vh,560px);min-height:320px;border-radius:9px;overflow:hidden;background:#d9dee2;}
 .map-select-info{margin-top:9px;padding:9px 10px;background:#081120;border:1px solid #17314d;border-radius:8px;font-size:11px;color:#9ccbf0;line-height:1.7;}
 .map-select-actions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;margin-top:9px;}
@@ -596,13 +609,20 @@ footer span{color:#7eb8e8;}
 <div class="map-dialog-title" id="mapSelectTitle">🗺 地図から観測地点を選択</div>
 <button type="button" class="map-close-btn" id="closeMapSelect">✕ 閉じる</button>
 </div>
+
+<form class="map-search-wrap" id="mapSearchForm">
+<input type="search" id="mapSearchInput" placeholder="地名・施設名・住所を検索　例：然別湖、帯広駅、知床峠" autocomplete="off" enterkeyhint="search">
+<button type="submit" class="map-search-btn" id="mapSearchBtn">検索</button>
+</form>
+<div class="map-search-results" id="mapSearchResults"></div>
+
 <div id="gsiMap"></div>
 <div class="map-select-info" id="mapSelectInfo">地図をクリック／タップして観測地点を選択してください。</div>
 <div class="map-select-actions">
 <button type="button" class="map-use-btn" id="useMapLocation" disabled>この場所を使う</button>
 </div>
 <div class="map-attribution-note">
-背景地図：地理院タイル（淡色地図）／標高：国土地理院 標高タイル（基盤地図情報数値標高モデル）
+背景地図：地理院タイル（淡色地図）／標高：国土地理院 標高タイル（基盤地図情報数値標高モデル）／地点検索：© OpenStreetMap contributors（Nominatim）
 </div>
 </div>
 </div>
@@ -1716,7 +1736,7 @@ const ev=weatherGradeFor(row);
 evalEl.innerHTML=`
 <span class="weather-grade ${ev.cls}">${ev.grade}</span>
 <div>
-<div style="font-size:11px;color:#e0eaf5;font-weight:bold">観測目安：${ev.label}</div>
+<div style="font-size:11px;color:#e0eaf5;font-weight:bold">Nicole観測目安：${ev.label}</div>
 <div class="weather-note">${ev.reason}<br>※ 雲量・降水・風・視程などから算出した簡易目安です。</div>
 </div>`;
 evalEl.style.display="flex";
@@ -1796,6 +1816,9 @@ let GSI_MAP=null;
 let GSI_MARKER=null;
 let GSI_SELECTED=null;
 let LEAFLET_PROMISE=null;
+let MAP_SEARCH_LAST_AT=0;
+let MAP_SEARCH_BUSY=false;
+const MAP_SEARCH_ENDPOINT="https://nominatim.openstreetmap.org/search";
 
 function ensureLeaflet(){
 if(window.L)return Promise.resolve(window.L);
@@ -1956,6 +1979,113 @@ if(use)use.disabled=false;
 }
 }
 
+
+function compactSearchName(result){
+const a=result.address||{};
+const primary=
+a.tourism||a.amenity||a.building||a.railway||a.natural||
+a.mountain_pass||a.road||a.village||a.town||a.city||a.municipality||
+a.county||a.state||result.name||"検索結果";
+
+const parts=[
+a.neighbourhood,a.suburb,a.city_district,a.city,a.town,a.village,
+a.municipality,a.county,a.state
+].filter(Boolean);
+
+return{
+main:String(primary),
+sub:[...new Set(parts)].join("、")||result.display_name||""
+};
+}
+
+function renderMapSearchMessage(message,isError=false){
+const box=$("#mapSearchResults");
+if(!box)return;
+box.className="map-search-results show";
+box.innerHTML=`<div class="map-search-msg"${isError?' style="color:#f87171"':""}>${message}</div>`;
+}
+
+function clearMapSearchResults(){
+const box=$("#mapSearchResults");
+if(!box)return;
+box.className="map-search-results";
+box.innerHTML="";
+}
+
+async function searchMapLocation(query){
+query=String(query||"").trim();
+if(!query){
+renderMapSearchMessage("検索する地名・施設名・住所を入力してください。",true);
+return;
+}
+if(!navigator.onLine){
+renderMapSearchMessage("オフライン環境では場所検索を使用できません。",true);
+return;
+}
+if(MAP_SEARCH_BUSY)return;
+
+const elapsed=Date.now()-MAP_SEARCH_LAST_AT;
+if(elapsed<1000){
+renderMapSearchMessage("検索間隔を空けています。少し待ってからもう一度検索してください。");
+return;
+}
+
+MAP_SEARCH_BUSY=true;
+MAP_SEARCH_LAST_AT=Date.now();
+const btn=$("#mapSearchBtn");
+if(btn){btn.disabled=true;btn.textContent="検索中…";}
+renderMapSearchMessage("検索しています…");
+
+try{
+const params=new URLSearchParams({
+q:query,
+format:"jsonv2",
+addressdetails:"1",
+limit:"6",
+countrycodes:"jp",
+"accept-language":"ja"
+});
+const res=await fetch(`${MAP_SEARCH_ENDPOINT}?${params.toString()}`);
+if(!res.ok)throw new Error(`HTTP ${res.status}`);
+const data=await res.json();
+
+if(!Array.isArray(data)||data.length===0){
+renderMapSearchMessage("該当する場所が見つかりませんでした。");
+return;
+}
+
+const box=$("#mapSearchResults");
+box.className="map-search-results show";
+box.innerHTML="";
+
+data.forEach((r,index)=>{
+const lat=Number(r.lat),lon=Number(r.lon);
+if(!Number.isFinite(lat)||!Number.isFinite(lon))return;
+
+const names=compactSearchName(r);
+const b=document.createElement("button");
+b.type="button";
+b.className="map-search-result";
+b.innerHTML=`<div class="main">${names.main}</div><div class="sub">${names.sub}</div>`;
+b.addEventListener("click",async()=>{
+if(!GSI_MAP)return;
+GSI_MAP.setView([lat,lon],Math.max(GSI_MAP.getZoom(),13));
+clearMapSearchResults();
+$("#mapSearchInput").value=names.main;
+await selectMapPoint(lat,lon);
+});
+box.appendChild(b);
+});
+
+if(!box.children.length)renderMapSearchMessage("該当する場所が見つかりませんでした。");
+}catch(err){
+renderMapSearchMessage("場所検索に失敗しました。しばらくしてからもう一度お試しください。",true);
+}finally{
+MAP_SEARCH_BUSY=false;
+if(btn){btn.disabled=false;btn.textContent="検索";}
+}
+}
+
 async function openMapSelector(){
 const modal=$("#mapSelectModal");
 const mapDiv=$("#gsiMap");
@@ -1966,6 +2096,8 @@ modal.classList.add("open");
 modal.setAttribute("aria-hidden","false");
 GSI_SELECTED=null;
 use.disabled=true;
+clearMapSearchResults();
+if($("#mapSearchInput"))$("#mapSearchInput").value="";
 
 if(!navigator.onLine){
 mapDiv.innerHTML='<div class="map-offline-msg">オフライン環境では地図を使用できません</div>';
@@ -3176,6 +3308,10 @@ $("#nightModeToggle").addEventListener("click",toggleNightMode);
 restoreNightMode();
 
 $("#openMapSelect").addEventListener("click",openMapSelector);
+$("#mapSearchForm").addEventListener("submit",event=>{
+event.preventDefault();
+searchMapLocation($("#mapSearchInput").value);
+});
 $("#closeMapSelect").addEventListener("click",closeMapSelector);
 $("#useMapLocation").addEventListener("click",useMapSelectedLocation);
 $("#mapSelectModal").addEventListener("click",event=>{
