@@ -49,6 +49,11 @@ button.action.sm{padding:5px 12px;font-size:12px;}
 .sky-card.weather-grade{border-color:#4ade8055;}
 .sky-card.weather .sky-val{font-size:16px;}
 .sky-card.weather-grade .sky-val{font-size:16px;}
+.model-compare{margin-top:5px;padding-top:5px;border-top:1px solid #17314d;font-size:9px;line-height:1.55;color:#7896af;}
+.model-compare b{color:#c8dff0;font-weight:600;}
+.agreement-high{color:#4ade80;}
+.agreement-mid{color:#fbbf24;}
+.agreement-low{color:#f87171;}
 .result-header{background:linear-gradient(135deg,#0a1428,#0d2040);border:1px solid #1e4a6a;border-radius:10px;padding:14px 18px;margin-bottom:12px;}
 .result-header .date{font-size:18px;font-weight:bold;color:#ffd54f;}
 .result-header .loc{font-size:13px;color:#8ab4d4;margin-top:4px;}
@@ -1415,7 +1420,14 @@ const NICOLE_NIGHT_MODE_KEY="nicole_night_mode_v1";
 let WEATHER_DATA=null;
 let WEATHER_META=null;
 let WEATHER_LOADING=false;
+let WEATHER_MODEL_DATA={};
+let WEATHER_MODEL_LOADING=false;
 const WEATHER_ENDPOINT="https://api.open-meteo.com/v1/forecast";
+const WEATHER_COMPARE_MODELS=[
+{id:"jma_msm",label:"JMA MSM"},
+{id:"ecmwf_ifs",label:"ECMWF IFS"},
+{id:"ncep_gfs_global",label:"NOAA GFS"}
+];
 
 function formatSkyViewDate(date){
 if(!(date instanceof Date)||isNaN(date))return "—";
@@ -1663,6 +1675,121 @@ const row={time:times[idx]};
 return row;
 }
 
+
+function modelWeatherRowAt(modelId,date){
+const data=WEATHER_MODEL_DATA[modelId];
+if(!data||!Array.isArray(data.time)||!data.time.length)return null;
+
+const target=date.getTime()/1000;
+if(target<data.time[0]-1800||target>data.time[data.time.length-1]+1800)return null;
+
+let lo=0,hi=data.time.length-1;
+while(lo<hi){
+const mid=Math.floor((lo+hi)/2);
+if(data.time[mid]<target)lo=mid+1;
+else hi=mid;
+}
+let idx=lo;
+if(idx>0&&Math.abs(data.time[idx-1]-target)<Math.abs(data.time[idx]-target))idx--;
+
+return{
+time:data.time[idx],
+cloud_cover:data.cloud_cover?data.cloud_cover[idx]:null
+};
+}
+
+function median(values){
+const a=values.filter(v=>Number.isFinite(v)).sort((x,y)=>x-y);
+if(!a.length)return null;
+const m=Math.floor(a.length/2);
+return a.length%2?a[m]:(a[m-1]+a[m])/2;
+}
+
+function getModelComparison(date){
+const rows=WEATHER_COMPARE_MODELS.map(m=>{
+const row=modelWeatherRowAt(m.id,date);
+const cloud=row&&Number.isFinite(Number(row.cloud_cover))?Number(row.cloud_cover):null;
+return{...m,cloud};
+});
+
+const values=rows.map(r=>r.cloud).filter(Number.isFinite);
+if(!values.length)return{rows,medianCloud:null,agreement:null,spread:null,count:0};
+
+const med=median(values);
+const spread=Math.max(...values)-Math.min(...values);
+
+let agreement="高";
+let cls="agreement-high";
+if(spread>40){agreement="低";cls="agreement-low";}
+else if(spread>20){agreement="中";cls="agreement-mid";}
+
+return{
+rows,
+medianCloud:med,
+agreement,
+agreementClass:cls,
+spread,
+count:values.length
+};
+}
+
+function integratedWeatherGrade(baseRow,comparison){
+if(!comparison||!Number.isFinite(comparison.medianCloud)){
+return baseRow?weatherGradeFor(baseRow):{grade:"—",cls:"",label:"評価できません",reason:"モデル比較データなし"};
+}
+
+const synthetic={...(baseRow||{}),cloud_cover:comparison.medianCloud};
+let result=weatherGradeFor(synthetic);
+
+/* モデル間の食い違いが大きい場合は、見かけの好天評価を1段階慎重にする */
+if(comparison.agreement==="低"&&result.grade==="◎"){
+result={grade:"○",cls:"ok",label:"まずまず",reason:"雲量予報のばらつきが大きい"};
+}
+return result;
+}
+
+async function loadWeatherModelComparison(lat,lon,altM=0){
+if(!navigator.onLine){
+WEATHER_MODEL_DATA={};
+WEATHER_MODEL_LOADING=false;
+return;
+}
+
+WEATHER_MODEL_LOADING=true;
+
+const common={
+latitude:String(lat),
+longitude:String(lon),
+hourly:"cloud_cover",
+forecast_days:"4",
+timezone:"auto",
+timeformat:"unixtime"
+};
+
+if(Number.isFinite(Number(altM)))common.elevation=String(Number(altM));
+
+const jobs=WEATHER_COMPARE_MODELS.map(async model=>{
+try{
+const params=new URLSearchParams({...common,models:model.id});
+const res=await fetch(`${WEATHER_ENDPOINT}?${params.toString()}`,{cache:"no-store"});
+if(!res.ok)throw new Error(`HTTP ${res.status}`);
+const data=await res.json();
+if(!data||!data.hourly||!Array.isArray(data.hourly.time))throw new Error("invalid model data");
+return[model.id,data.hourly];
+}catch(e){
+return[model.id,null];
+}
+});
+
+const entries=await Promise.all(jobs);
+WEATHER_MODEL_DATA=Object.fromEntries(entries.filter(([,v])=>v));
+WEATHER_MODEL_LOADING=false;
+
+if(currentDate instanceof Date&&!isNaN(currentDate)){
+renderTonightSkyWeather(currentDate);
+}
+}
+
 function renderWeatherForDate(date){
 const status=$("#weatherStatus");
 const grid=$("#weatherGrid");
@@ -1748,6 +1875,8 @@ evalEl.style.display="flex";
 
 async function loadWeatherForecast(lat,lon){
 if(!navigator.onLine){
+WEATHER_MODEL_DATA={};
+WEATHER_MODEL_LOADING=false;
 clearWeatherData("オフライン環境では使用できません","weather-offline");
 return;
 }
@@ -1758,6 +1887,9 @@ return;
 
 WEATHER_LOADING=true;
 renderWeatherForDate(getSkyViewDate());
+
+const altM=parseFloat($("#inAlt")?$("#inAlt").value:"0");
+loadWeatherModelComparison(lat,lon,Number.isFinite(altM)?altM:0);
 
 try{
 const params=new URLSearchParams({
@@ -3436,6 +3568,8 @@ window.addEventListener("online",()=>{
 loadWeatherFromInputs();
 });
 window.addEventListener("offline",()=>{
+WEATHER_MODEL_DATA={};
+WEATHER_MODEL_LOADING=false;
 clearWeatherData("オフライン環境では使用できません","weather-offline");
 if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
 });
@@ -3740,15 +3874,32 @@ weatherCard.innerHTML=`
 <div class="sky-sub">雲量 ${cloud===null?"—":Math.round(cloud)+"%"} / 降水 ${pp===null?"—":Math.round(pp)+"%"}</div>
 <div class="sky-sub">気温 ${temp===null?"—":temp.toFixed(1)+"℃"} / 風 ${wind===null?"—":wind.toFixed(1)+"m/s"}</div>`;
 
-const ev=weatherGradeFor(row);
+const comparison=getModelComparison(date);
+const ev=integratedWeatherGrade(row,comparison);
 const extra=[];
 if(vis!==null)extra.push(`視程 ${(vis/1000).toFixed(1)}km`);
 if(rh!==null)extra.push(`湿度 ${Math.round(rh)}%`);
 
+let compareHtml="";
+if(WEATHER_MODEL_LOADING){
+compareHtml=`<div class="model-compare">3モデルの雲量を比較中…</div>`;
+}else if(comparison.count>0){
+const modelLines=comparison.rows.map(m=>
+`<span><b>${m.label}</b> ${Number.isFinite(m.cloud)?Math.round(m.cloud)+"%":"—"}</span>`
+).join(" / ");
+
+compareHtml=`
+<div class="sky-sub">雲量中央値 ${comparison.medianCloud===null?"—":Math.round(comparison.medianCloud)+"%"}</div>
+<div class="sky-sub">予報一致度：<span class="${comparison.agreementClass||""}">${comparison.agreement||"—"}</span></div>
+<div class="model-compare">${modelLines}</div>`;
+}else{
+compareHtml=`<div class="sky-sub">3モデル比較データなし</div>`;
+}
+
 gradeCard.innerHTML=`
 <div class="sky-label">🔭 観測目安</div>
 <div class="sky-val">${ev.grade} ${ev.label}</div>
-<div class="sky-sub">${ev.reason}</div>
+${compareHtml}
 ${extra.length?`<div class="sky-sub">${extra.join(" / ")}</div>`:""}`;
 }
 
