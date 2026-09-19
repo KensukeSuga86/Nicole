@@ -45,6 +45,10 @@ button.action.sm{padding:5px 12px;font-size:12px;}
 .sky-card.sun{border-color:#f59e0b55;}
 .sky-card.moon{border-color:#c084fc55;}
 .sky-card.twilight{border-color:#4a9fd455;}
+.sky-card.weather{border-color:#38bdf855;}
+.sky-card.weather-grade{border-color:#4ade8055;}
+.sky-card.weather .sky-val{font-size:16px;}
+.sky-card.weather-grade .sky-val{font-size:16px;}
 .result-header{background:linear-gradient(135deg,#0a1428,#0d2040);border:1px solid #1e4a6a;border-radius:10px;padding:14px 18px;margin-bottom:12px;}
 .result-header .date{font-size:18px;font-weight:bold;color:#ffd54f;}
 .result-header .loc{font-size:13px;color:#8ab4d4;margin-top:4px;}
@@ -1736,7 +1740,7 @@ const ev=weatherGradeFor(row);
 evalEl.innerHTML=`
 <span class="weather-grade ${ev.cls}">${ev.grade}</span>
 <div>
-<div style="font-size:11px;color:#e0eaf5;font-weight:bold">Nicole観測目安：${ev.label}</div>
+<div style="font-size:11px;color:#e0eaf5;font-weight:bold">観測目安：${ev.label}</div>
 <div class="weather-note">${ev.reason}<br>※ 雲量・降水・風・視程などから算出した簡易目安です。</div>
 </div>`;
 evalEl.style.display="flex";
@@ -1796,9 +1800,11 @@ fetchedAt:new Date()
 };
 WEATHER_LOADING=false;
 renderWeatherForDate(getSkyViewDate());
+if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
 }catch(err){
 WEATHER_LOADING=false;
 clearWeatherData("天候情報の取得に失敗しました。ネット接続を確認してください。","weather-error");
+if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
 }
 }
 
@@ -3431,6 +3437,7 @@ loadWeatherFromInputs();
 });
 window.addEventListener("offline",()=>{
 clearWeatherData("オフライン環境では使用できません","weather-offline");
+if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
 });
 
 $("#sbRefresh").addEventListener("click",loadSmallBodies);
@@ -3694,6 +3701,57 @@ ${info.moonPhase} ${getMoonPhaseName(info.moonAge)}<br>
 grid.appendChild(div);
 });
 }
+
+function renderTonightSkyWeather(date){
+const weatherCard=$("#skyTonightWeather");
+const gradeCard=$("#skyTonightWeatherGrade");
+if(!weatherCard||!gradeCard)return;
+
+if(!navigator.onLine){
+weatherCard.innerHTML='<div class="sky-label">☁️ 天気</div><div class="sky-val" style="font-size:13px">オフライン</div><div class="sky-sub">オフライン環境では使用できません</div>';
+gradeCard.innerHTML='<div class="sky-label">🔭 観測条件</div><div class="sky-val">—</div><div class="sky-sub">天候情報を取得できません</div>';
+return;
+}
+
+if(WEATHER_LOADING){
+weatherCard.innerHTML='<div class="sky-label">☁️ 天気</div><div class="sky-val" style="font-size:13px">取得中…</div><div class="sky-sub">Open-Meteoから予報を取得しています</div>';
+gradeCard.innerHTML='<div class="sky-label">🔭 観測条件</div><div class="sky-val">…</div><div class="sky-sub">天候データ待機中</div>';
+return;
+}
+
+const row=weatherRowAt(date);
+if(!row){
+weatherCard.innerHTML='<div class="sky-label">☁️ 天気</div><div class="sky-val" style="font-size:13px">予報なし</div><div class="sky-sub">この日時の予報は取得できません</div>';
+gradeCard.innerHTML='<div class="sky-label">🔭 観測条件</div><div class="sky-val">—</div><div class="sky-sub">評価できません</div>';
+return;
+}
+
+const num=v=>Number.isFinite(Number(v))?Number(v):null;
+const cloud=num(row.cloud_cover);
+const pp=num(row.precipitation_probability);
+const wind=num(row.wind_speed_10m);
+const temp=num(row.temperature_2m);
+const rh=num(row.relative_humidity_2m);
+const vis=num(row.visibility);
+
+weatherCard.innerHTML=`
+<div class="sky-label">☁️ 天気</div>
+<div class="sky-val">${weatherCodeJa(row.weather_code)}</div>
+<div class="sky-sub">雲量 ${cloud===null?"—":Math.round(cloud)+"%"} / 降水 ${pp===null?"—":Math.round(pp)+"%"}</div>
+<div class="sky-sub">気温 ${temp===null?"—":temp.toFixed(1)+"℃"} / 風 ${wind===null?"—":wind.toFixed(1)+"m/s"}</div>`;
+
+const ev=weatherGradeFor(row);
+const extra=[];
+if(vis!==null)extra.push(`視程 ${(vis/1000).toFixed(1)}km`);
+if(rh!==null)extra.push(`湿度 ${Math.round(rh)}%`);
+
+gradeCard.innerHTML=`
+<div class="sky-label">🔭 観測目安</div>
+<div class="sky-val">${ev.grade} ${ev.label}</div>
+<div class="sky-sub">${ev.reason}</div>
+${extra.length?`<div class="sky-sub">${extra.join(" / ")}</div>`:""}`;
+}
+
 function renderSkyInfo(lat,lon,date){
 const info=calcSkyInfo(lat,lon,date);
 $("#skyGrid").innerHTML=`
@@ -3704,7 +3762,10 @@ $("#skyGrid").innerHTML=`
 <div class="sky-card moon"><div class="sky-label">${info.moonPhase||"🌙"} 月の出</div><div class="sky-val">${fmtTime(info.moonRise)}</div></div>
 <div class="sky-card moon"><div class="sky-label">${info.moonPhase||"🌙"} 月の入り</div><div class="sky-val">${fmtTime(info.moonSet)}</div></div>
 <div class="sky-card moon"><div class="sky-label">🌙 月齢</div><div class="sky-val">${info.moonAge!==null?info.moonAge+"日":"—"}</div><div class="sky-sub">輝面比 ${info.moonIllum!==null?info.moonIllum+"%":"—"}</div></div>
-<div class="sky-card moon"><div class="sky-label">月相</div><div class="sky-val" style="font-size:28px">${info.moonPhase||"—"}</div><div class="sky-sub">${getMoonPhaseName(info.moonAge)}</div></div>`;
+<div class="sky-card moon"><div class="sky-label">月相</div><div class="sky-val" style="font-size:28px">${info.moonPhase||"—"}</div><div class="sky-sub">${getMoonPhaseName(info.moonAge)}</div></div>
+<div class="sky-card weather" id="skyTonightWeather"></div>
+<div class="sky-card weather-grade" id="skyTonightWeatherGrade"></div>`;
+renderTonightSkyWeather(date);
 }
 const SEASON_CLASS={spring:"s-spring",summer:"s-summer",autumn:"s-autumn",winter:"s-winter",circumpolar:"s-circumpolar"};
 function renderConstellations(month,query){
