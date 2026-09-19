@@ -1818,7 +1818,9 @@ let GSI_SELECTED=null;
 let LEAFLET_PROMISE=null;
 let MAP_SEARCH_LAST_AT=0;
 let MAP_SEARCH_BUSY=false;
+let MAP_REVERSE_TOKEN=0;
 const MAP_SEARCH_ENDPOINT="https://nominatim.openstreetmap.org/search";
+const MAP_REVERSE_ENDPOINT="https://nominatim.openstreetmap.org/reverse";
 
 function ensureLeaflet(){
 if(window.L)return Promise.resolve(window.L);
@@ -1939,8 +1941,15 @@ if(Number.isFinite(h))return{elevation:h,source:s.label};
 throw new Error("この地点の標高データを取得できませんでした");
 }
 
-function updateMapSelection(lat,lon,elevation=null,source=""){
-GSI_SELECTED={lat,lon,elevation,source};
+function updateMapSelection(lat,lon,elevation=null,source="",placeName="",placeSub=""){
+const prev=GSI_SELECTED&&Math.abs(GSI_SELECTED.lat-lat)<1e-10&&Math.abs(GSI_SELECTED.lon-lon)<1e-10
+?GSI_SELECTED
+:null;
+GSI_SELECTED={
+lat,lon,elevation,source,
+placeName:placeName||(prev&&prev.placeName)||"",
+placeSub:placeSub||(prev&&prev.placeSub)||""
+};
 
 if(GSI_MAP&&window.L){
 if(!GSI_MARKER){
@@ -1956,29 +1965,117 @@ if(info){
 const elevText=Number.isFinite(elevation)
 ?`標高 <b>${elevation.toFixed(1)} m</b>${source?`（${source}）`:""}`
 :"標高を取得中…";
-info.innerHTML=`緯度 <b>${lat.toFixed(6)}</b> / 経度 <b>${lon.toFixed(6)}</b><br>${elevText}`;
+const placeText=GSI_SELECTED&&GSI_SELECTED.placeName
+?`<br>地名 <b>${GSI_SELECTED.placeName}</b>${GSI_SELECTED.placeSub?` <span style="color:#7896af">（${GSI_SELECTED.placeSub}）</span>`:""}`
+:"<br>地名を取得中…";
+info.innerHTML=`緯度 <b>${lat.toFixed(6)}</b> / 経度 <b>${lon.toFixed(6)}</b><br>${elevText}${placeText}`;
 }
 if(use)use.disabled=!Number.isFinite(elevation);
 }
 
-async function selectMapPoint(lat,lon){
-updateMapSelection(lat,lon,null,"");
-try{
-const result=await fetchGsiElevation(lat,lon);
+async function selectMapPoint(lat,lon,knownPlaceName="",knownPlaceSub=""){
+const token=++MAP_REVERSE_TOKEN;
+updateMapSelection(lat,lon,null,"",knownPlaceName,knownPlaceSub);
+
+const elevationPromise=fetchGsiElevation(lat,lon)
+.then(result=>({ok:true,result}))
+.catch(error=>({ok:false,error}));
+
+const reversePromise=knownPlaceName
+?Promise.resolve({placeName:knownPlaceName,placeSub:knownPlaceSub})
+:reverseGeocodeMapPoint(lat,lon,token);
+
+const [elevResult,placeResult]=await Promise.all([elevationPromise,reversePromise]);
+
 if(!GSI_SELECTED||Math.abs(GSI_SELECTED.lat-lat)>1e-10||Math.abs(GSI_SELECTED.lon-lon)>1e-10)return;
-updateMapSelection(lat,lon,result.elevation,result.source);
-}catch(err){
-if(!GSI_SELECTED||Math.abs(GSI_SELECTED.lat-lat)>1e-10||Math.abs(GSI_SELECTED.lon-lon)>1e-10)return;
-GSI_SELECTED={lat,lon,elevation:null,source:""};
+
+const placeName=placeResult&&placeResult.placeName
+?placeResult.placeName
+:(GSI_SELECTED.placeName||"選択地点");
+const placeSub=placeResult&&placeResult.placeSub
+?placeResult.placeSub
+:(GSI_SELECTED.placeSub||"");
+
+if(elevResult.ok){
+updateMapSelection(lat,lon,elevResult.result.elevation,elevResult.result.source,placeName,placeSub);
+}else{
+GSI_SELECTED={
+lat,lon,elevation:null,source:"",
+placeName,placeSub
+};
 const info=$("#mapSelectInfo");
 if(info){
-info.innerHTML=`緯度 <b>${lat.toFixed(6)}</b> / 経度 <b>${lon.toFixed(6)}</b><br><span style="color:#fb923c">${err.message}</span>`;
+info.innerHTML=`緯度 <b>${lat.toFixed(6)}</b> / 経度 <b>${lon.toFixed(6)}</b><br><span style="color:#fb923c">${elevResult.error.message}</span><br>地名 <b>${placeName}</b>${placeSub?` <span style="color:#7896af">（${placeSub}）</span>`:""}`;
 }
 const use=$("#useMapLocation");
 if(use)use.disabled=false;
 }
 }
 
+
+
+function compactReverseName(result){
+const a=result&&result.address?result.address:{};
+
+const main=
+a.tourism||a.amenity||a.building||a.railway||a.natural||
+a.mountain_pass||a.road||a.neighbourhood||a.suburb||
+a.village||a.town||a.city||a.municipality||a.county||
+(result&&result.name)||"選択地点";
+
+const area=[
+a.neighbourhood,a.suburb,a.city_district,a.city,a.town,a.village,
+a.municipality,a.county,a.state
+].filter(Boolean);
+
+const unique=[...new Set(area.filter(v=>v!==main))];
+return{
+main:String(main),
+sub:unique.join("、")
+};
+}
+
+async function waitForNominatimInterval(){
+const elapsed=Date.now()-MAP_SEARCH_LAST_AT;
+if(elapsed<1000){
+await new Promise(resolve=>setTimeout(resolve,1000-elapsed));
+}
+MAP_SEARCH_LAST_AT=Date.now();
+}
+
+async function reverseGeocodeMapPoint(lat,lon,token){
+if(!navigator.onLine)return null;
+
+try{
+await waitForNominatimInterval();
+if(token!==MAP_REVERSE_TOKEN)return null;
+
+const params=new URLSearchParams({
+lat:String(lat),
+lon:String(lon),
+format:"jsonv2",
+addressdetails:"1",
+zoom:"16",
+"accept-language":"ja"
+});
+
+const res=await fetch(`${MAP_REVERSE_ENDPOINT}?${params.toString()}`);
+if(!res.ok)throw new Error(`HTTP ${res.status}`);
+const data=await res.json();
+
+if(token!==MAP_REVERSE_TOKEN)return null;
+if(!data)return null;
+
+const names=compactReverseName(data);
+return{
+placeName:names.main,
+placeSub:names.sub,
+displayName:data.display_name||""
+};
+}catch(e){
+return null;
+}
+}
 
 function compactSearchName(result){
 const a=result.address||{};
@@ -2072,7 +2169,7 @@ if(!GSI_MAP)return;
 GSI_MAP.setView([lat,lon],Math.max(GSI_MAP.getZoom(),13));
 clearMapSearchResults();
 $("#mapSearchInput").value=names.main;
-await selectMapPoint(lat,lon);
+await selectMapPoint(lat,lon,names.main,names.sub);
 });
 box.appendChild(b);
 });
@@ -2163,6 +2260,7 @@ $("#inLon").value=GSI_SELECTED.lon.toFixed(6);
 $("#inAlt").value=Number.isFinite(GSI_SELECTED.elevation)
 ?GSI_SELECTED.elevation.toFixed(1)
 :"";
+$("#inPlace").value=GSI_SELECTED.placeName||"選択地点";
 
 closeMapSelector();
 
