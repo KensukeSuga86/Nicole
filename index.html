@@ -208,6 +208,26 @@ ul.tips{padding-left:1.4em;margin:6px 0;line-height:1.9;font-size:13px;color:#b8
 .map-use-btn{background:#143b2b;border:1px solid #2c7a56;color:#9ff0c8;border-radius:7px;padding:8px 14px;font-size:12px;cursor:pointer;}
 .map-use-btn:disabled{opacity:.45;cursor:not-allowed;}
 .map-attribution-note{margin-top:6px;font-size:9px;color:#627f98;line-height:1.45;}
+
+.map-light-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 9px;padding:8px 10px;background:#081120;border:1px solid #17314d;border-radius:8px;}
+.map-light-controls label{display:flex;align-items:center;gap:6px;margin:0;color:#9ccbf0;font-size:11px;}
+.map-light-controls input[type="checkbox"]{width:auto;margin:0;}
+.map-light-controls input[type="range"]{width:120px;padding:0;accent-color:#7eb8e8;}
+.map-light-help{font-size:9px;color:#6f94b3;line-height:1.5;}
+.light-grade{font-weight:bold;}
+.light-vlow{color:#67e8f9;}
+.light-low{color:#4ade80;}
+.light-mid{color:#fbbf24;}
+.light-high{color:#fb923c;}
+.light-vhigh{color:#f87171;}
+.site-grade{display:inline-block;margin-left:5px;padding:1px 7px;border-radius:9px;background:#0d2040;border:1px solid #2a5a8c;color:#e0eaf5;font-weight:bold;}
+.darker-search-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px;}
+.darker-search-btn{background:#101f35;border:1px solid #315d87;color:#9ccbf0;border-radius:7px;padding:7px 11px;font-size:11px;cursor:pointer;}
+.darker-search-btn:disabled{opacity:.45;cursor:not-allowed;}
+.darker-search-result{display:none;margin-top:8px;padding:9px 10px;background:#081120;border:1px solid #17314d;border-radius:8px;font-size:10px;color:#b8d0e8;line-height:1.65;}
+.darker-search-result.show{display:block;}
+.darker-candidate-btn{margin-top:7px;background:#143b2b;border:1px solid #2c7a56;color:#9ff0c8;border-radius:6px;padding:6px 10px;font-size:10px;cursor:pointer;}
+
 .map-offline-msg{padding:30px 10px;text-align:center;color:#fb923c;font-weight:bold;}
 @media(max-width:600px){#gsiMap{min-height:300px;height:52vh;}.map-dialog{padding:9px;}.map-select-actions{justify-content:stretch}.map-use-btn,.map-close-btn{min-height:42px;}}
 @media(max-width:700px){.weather-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
@@ -355,12 +375,83 @@ footer span{color:#7eb8e8;}
 .story-topic p{margin:0;color:#c8dff0;line-height:1.9;}
 
 @media(max-width:600px){.obj-grid{grid-template-columns:1fr;}.sky-grid{grid-template-columns:1fr 1fr;}header h1{font-size:17px;}.mooncal-grid{gap:4px;}.mooncal-day{min-height:74px;padding:5px;}}
+
+/* ===== 使用マニュアル組み込み ===== */
+.header-actions{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.header-actions .night-mode-toggle{margin-left:0;}
+.manual-open-btn{
+  background:#0d2040;
+  border:1px solid #2a5a8c;
+  color:#9ccbf0;
+  border-radius:8px;
+  padding:7px 12px;
+  font-size:12px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.manual-open-btn:hover{background:#1a3a5c;color:#fff;}
+.manual-modal{
+  position:fixed;
+  inset:0;
+  z-index:12000;
+  display:none;
+  background:#07111c;
+}
+.manual-modal.open{display:flex;flex-direction:column;}
+.manual-modal-head{
+  flex:0 0 auto;
+  min-height:54px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:9px 14px;
+  background:linear-gradient(135deg,#0a1428,#0d2040);
+  border-bottom:1px solid #2a4a6a;
+}
+.manual-modal-title{
+  min-width:0;
+  flex:1;
+  font-size:14px;
+  font-weight:bold;
+  color:#d9ecff;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.manual-close-btn{
+  flex:0 0 auto;
+  background:#0a1428;
+  border:1px solid #2a4a6a;
+  color:#9ccbf0;
+  border-radius:8px;
+  padding:8px 12px;
+  font-size:12px;
+  cursor:pointer;
+}
+.manual-close-btn:hover{background:#1a3a5c;color:#fff;}
+.manual-frame{
+  flex:1 1 auto;
+  width:100%;
+  min-height:0;
+  border:0;
+  background:#07111c;
+}
+body.manual-open{overflow:hidden;}
+@media(max-width:600px){
+  .header-actions{width:100%;margin-left:0;}
+  .manual-open-btn,.header-actions .night-mode-toggle{flex:1 1 auto;}
+  .manual-modal-head{padding:8px 10px;}
+}
+
 </style>
 </head>
 <body>
 <header>
 <div><h1>🔭 Nicole the Astronavigator</h1></div>
+<div class="header-actions">
+<button type="button" class="manual-open-btn" id="openManual">📖 使い方</button>
 <button type="button" class="night-mode-toggle" id="nightModeToggle" aria-pressed="false">🔴 赤色夜間モード</button>
+</div>
 </header>
 
 <div class="panel">
@@ -386,14 +477,6 @@ footer span{color:#7eb8e8;}
 </div>
 <div class="location-presets">
 <button class="loc-btn" id="btnGPS">📡 現在地を取得</button>
-<button class="loc-btn" id="btnObihiro">📌 帯広</button>
-<button class="loc-btn" id="btnSapporo">📌 札幌</button>
-<button class="loc-btn" id="btnSendai">📌 仙台</button>
-<button class="loc-btn" id="btnShinjuku">📌 新宿</button>
-<button class="loc-btn" id="btnNagoya">📌 名古屋</button>
-<button class="loc-btn" id="btnOsaka">📌 大阪</button>
-<button class="loc-btn" id="btnFukuoka">📌 福岡</button>
-<button class="loc-btn" id="btnNaha">📌 那覇</button>
 </div>
 <div style="margin-top:14px">
 <label>🔍 天体を検索（名前・カタログ番号・種類などで検索）</label>
@@ -625,15 +708,631 @@ footer span{color:#7eb8e8;}
 </form>
 <div class="map-search-results" id="mapSearchResults"></div>
 
+
+<div class="map-light-controls">
+<label><input type="checkbox" id="lightPollutionToggle" checked> 🌌 光害を表示</label>
+<label>濃さ <input type="range" id="lightPollutionOpacity" min="20" max="90" step="5" value="60"></label>
+<span class="map-light-help">NASA VIIRS 夜間光（2016年年次）を半透明表示。地上から見た空の明るさそのものではありません。</span>
+</div>
 <div id="gsiMap"></div>
 <div class="map-select-info" id="mapSelectInfo">地図をクリック／タップして観測地点を選択してください。</div>
+<div class="darker-search-row">
+<button type="button" class="darker-search-btn" id="findDarkerLocation" disabled>🌌 周囲10kmでもっと暗い場所を探す</button>
+<span class="map-light-help">夜間光だけを比較した候補です。道路・私有地・安全性・視界は別途確認してください。</span>
+</div>
+<div class="darker-search-result" id="darkerSearchResult"></div>
 <div class="map-select-actions">
 <button type="button" class="map-use-btn" id="useMapLocation" disabled>この場所を使う</button>
 </div>
 <div class="map-attribution-note">
-背景地図：地理院タイル（淡色地図）／標高：国土地理院 標高タイル（基盤地図情報数値標高モデル）／地点検索：© OpenStreetMap contributors（Nominatim）
+背景地図：地理院タイル（淡色地図）／標高：国土地理院 標高タイル（基盤地図情報数値標高モデル）／地点検索：© OpenStreetMap contributors（Nominatim）／夜間光：NASA GIBS・Suomi NPP/VIIRS Night Lights（2016）
 </div>
 </div>
+</div>
+
+
+<div class="manual-modal" id="manualModal" aria-hidden="true">
+  <div class="manual-modal-head">
+    <div class="manual-modal-title">📖 Nicole the Astronavigator 使用マニュアル</div>
+    <button type="button" class="manual-close-btn" id="closeManual">✕ 閉じる</button>
+  </div>
+  <iframe
+    class="manual-frame"
+    id="manualFrame"
+    title="Nicole the Astronavigator 使用マニュアル"
+    srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ja&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Nicole the Astronavigator 使用マニュアル&lt;/title&gt;
+  &lt;style&gt;
+    :root{
+      --bg:#07111c;
+      --panel:#0c1828;
+      --panel-2:#0f2035;
+      --line:#1f3854;
+      --text:#e8f1ff;
+      --muted:#9db3c9;
+      --accent:#82c6ff;
+      --accent-2:#5ea3e2;
+      --warm:#ffd479;
+      --ok:#7ee08b;
+      --shadow:0 10px 28px rgba(0,0,0,.28);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Hiragino Sans&quot;,&quot;Yu Gothic UI&quot;,&quot;Yu Gothic&quot;,Meiryo,sans-serif;
+      background:linear-gradient(180deg,#07111c 0%, #081420 35%, #0b1622 100%);
+      color:var(--text);
+      line-height:1.8;
+    }
+    a{color:var(--accent)}
+    .wrap{width:min(1100px, calc(100% - 28px)); margin:0 auto; padding:28px 0 60px;}
+    .hero{
+      background:radial-gradient(circle at top right, rgba(130,198,255,.12), transparent 30%), linear-gradient(180deg, rgba(17,35,56,.95), rgba(12,24,40,.96));
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      margin-bottom:20px;
+    }
+    .eyebrow{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:8px;}
+    h1{margin:0 0 8px; font-size:clamp(28px, 4vw, 42px); line-height:1.2;}
+    .subtitle{font-size:clamp(16px, 2vw, 20px); color:#d6e7ff; margin:0 0 16px;}
+    .lead{color:var(--muted); margin:0;}
+    .chip-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px;}
+    .chip{padding:8px 12px; border:1px solid var(--line); border-radius:999px; background:rgba(130,198,255,.08); font-size:13px; color:#d8ecff;}
+    .chip-link{display:inline-block; text-decoration:none; cursor:pointer; transition:.15s ease;}
+    .chip-link:hover{background:rgba(130,198,255,.16); transform:translateY(-1px);}
+    .chip-link:focus{outline:2px solid var(--accent); outline-offset:2px;}
+    .toolbar{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 24px;}
+    button.tool{
+      appearance:none; border:none; cursor:pointer;
+      background:var(--panel-2); color:var(--text); border:1px solid var(--line);
+      border-radius:10px; padding:10px 14px; font-size:14px;
+    }
+    button.tool:hover{background:#132845}
+    .nav-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:14px; margin-bottom:24px;}
+    .nav-card{
+      display:block; text-decoration:none; color:inherit;
+      background:linear-gradient(180deg, rgba(17,34,55,.92), rgba(11,23,37,.92));
+      border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:var(--shadow);
+    }
+    .nav-card h3{margin:0 0 8px; font-size:20px}
+    .nav-card p{margin:0; color:var(--muted); font-size:14px}
+    .section-title{font-size:26px; margin:34px 0 12px;}
+    .note-box{
+      background:rgba(255,212,121,.08);
+      border:1px solid rgba(255,212,121,.22);
+      border-radius:14px; padding:14px 16px; color:#ffeec6; margin:18px 0;
+    }
+    details.panel{
+      background:linear-gradient(180deg, rgba(12,24,40,.98), rgba(10,20,32,.98));
+      border:1px solid var(--line);
+      border-radius:16px;
+      margin:12px 0;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    details.panel[open]{border-color:#2f5278}
+    details.panel &gt; summary{
+      list-style:none; cursor:pointer; padding:16px 18px; font-weight:700; font-size:18px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      background:rgba(130,198,255,.04);
+    }
+    details.panel &gt; summary::-webkit-details-marker{display:none}
+    .summary-left{display:flex; align-items:center; gap:10px}
+    .summary-icon{font-size:20px}
+    .summary-sub{display:block; font-size:12px; font-weight:400; color:var(--muted); margin-top:2px}
+    .chev{color:var(--muted); font-size:14px}
+    details[open] .chev{transform:rotate(180deg)}
+    .panel-body{padding:18px 18px 22px}
+    .panel-body &gt; :first-child{margin-top:0}
+    h3{font-size:20px; margin:18px 0 8px;}
+    h4{font-size:16px; margin:16px 0 6px; color:#dbeaff}
+    p{margin:8px 0}
+    ul,ol{margin:8px 0 8px 1.2em; padding:0}
+    li{margin:4px 0}
+    .quote{
+      margin:14px 0; padding:12px 14px; border-left:3px solid var(--accent);
+      background:rgba(130,198,255,.06); color:#e7f4ff; border-radius:0 12px 12px 0;
+    }
+    .quote strong{color:#fff}
+    .muted{color:var(--muted)}
+    .grid-2{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px;}
+    .mini-card{border:1px solid var(--line); border-radius:14px; padding:14px 16px; background:rgba(130,198,255,.035)}
+    .mini-card h4{margin-top:0}
+    .footer{margin-top:32px; color:var(--muted); font-size:13px; text-align:center}
+    .toc-list{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; margin-top:12px}
+    .toc-list a{display:block; text-decoration:none; background:rgba(130,198,255,.05); border:1px solid var(--line); border-radius:12px; padding:10px 12px; color:#dcecff; font-size:14px}
+    .toc-list a:hover{background:rgba(130,198,255,.12)}
+    .anchor-pad{scroll-margin-top:18px}
+    @media (max-width:640px){
+      .hero{padding:20px}
+      details.panel &gt; summary{padding:14px 14px; font-size:17px}
+      .panel-body{padding:16px 14px 18px}
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;header class=&quot;hero&quot; id=&quot;top&quot;&gt;
+      &lt;div class=&quot;eyebrow&quot;&gt;Nicole the Astronavigator Manual&lt;/div&gt;
+      &lt;h1&gt;Nicole the Astronavigator 使用マニュアル&lt;/h1&gt;
+      &lt;p class=&quot;subtitle&quot;&gt;&lt;strong&gt;星空の案内人・ニコルと一緒に&lt;/strong&gt;&lt;/p&gt;
+      &lt;div class=&quot;lead&quot;&gt;
+        &lt;p&gt;&lt;strong&gt;Nicole the Astronavigator&lt;/strong&gt; は、あなたのための星空の案内人です。&lt;/p&gt;
+        &lt;p&gt;名前を知らなくても星空は美しい。&lt;br&gt;
+        でも、「あの星は何だろう」「どのくらい遠いんだろう」「どうしてこの名前なんだろう」と気になってしまうことがあるはず。&lt;/p&gt;
+        &lt;p&gt;見えないものを見ようとした時、知らないものを知ろうとした時、もうすでに天体観測は始まっています。&lt;/p&gt;
+        &lt;p&gt;「今夜は何が見える？」&lt;/p&gt;
+        &lt;p&gt;「指差す先に見えているあの星は何？」&lt;/p&gt;
+        &lt;p&gt;「一緒にいる人と星空を楽しみたい。」&lt;/p&gt;
+        &lt;p&gt;ニコルは、そんな「もう少し知りたい」、「もう少し伝えたい」に寄り添い、必要な情報をひとつにまとめて天体観測をサポートします。&lt;/p&gt;
+        &lt;p&gt;観測する日時と場所を設定すると、その場所から見える天体や星座、太陽、月、惑星、流星群などを確認できます。星図、天候、月齢、薄明、彗星・小惑星などの情報もまとめて確認できます。&lt;/p&gt;
+        &lt;p&gt;このアプリは主に、&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;「天体観測を計画する」&lt;/strong&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;「今見えているものを確認する」&lt;/strong&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;「星空について解説する」&lt;/strong&gt;&lt;/p&gt;
+        &lt;p&gt;という3つの目的で作られています。&lt;/p&gt;
+        &lt;p&gt;天体観測を計画するとき。&lt;/p&gt;
+        &lt;p&gt;実際に星空を見上げているとき。&lt;/p&gt;
+        &lt;p&gt;誰かと一緒に星を眺めているとき。&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;ニコルと一緒なら、誰でも簡単に星を探し、観察し、もう一歩深く楽しめる。&lt;/strong&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;chip-row&quot;&gt;
+        &lt;a class=&quot;chip chip-link&quot; href=&quot;#purpose-plan&quot; onclick=&quot;openAndScroll(event, &#x27;purpose-plan&#x27;)&quot;&gt;天体観測を計画する&lt;/a&gt;
+        &lt;a class=&quot;chip chip-link&quot; href=&quot;#purpose-now&quot; onclick=&quot;openAndScroll(event, &#x27;purpose-now&#x27;)&quot;&gt;今見えているものを確認する&lt;/a&gt;
+        &lt;a class=&quot;chip chip-link&quot; href=&quot;#purpose-guide-explain&quot; onclick=&quot;openAndScroll(event, &#x27;purpose-guide-explain&#x27;)&quot;&gt;星空について解説する&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;div class=&quot;toolbar&quot;&gt;
+      &lt;button class=&quot;tool&quot; onclick=&quot;setAllDetails(true)&quot;&gt;すべて開く&lt;/button&gt;
+      &lt;button class=&quot;tool&quot; onclick=&quot;setAllDetails(false)&quot;&gt;すべて閉じる&lt;/button&gt;
+      &lt;button class=&quot;tool&quot; onclick=&quot;location.href=&#x27;#top&#x27;&quot;&gt;ページ上部へ戻る&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;section&gt;
+      &lt;h2 class=&quot;section-title&quot;&gt;目的から探す&lt;/h2&gt;
+      &lt;div class=&quot;nav-grid&quot;&gt;
+        &lt;a class=&quot;nav-card&quot; href=&quot;#quickstart&quot;&gt;
+          &lt;h3&gt;🌟 はじめて使う&lt;/h3&gt;
+          &lt;p&gt;今いる場所で、今見える星空を調べるための最短手順です。&lt;/p&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;nav-card&quot; href=&quot;#purpose-guide&quot;&gt;
+          &lt;h3&gt;🧭 目的別ガイド&lt;/h3&gt;
+          &lt;p&gt;観測を計画する・現場で確認する・星空を案内する、の3つの使い方から入れます。&lt;/p&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;nav-card&quot; href=&quot;#feature-guide&quot;&gt;
+          &lt;h3&gt;🛠 機能から探す&lt;/h3&gt;
+          &lt;p&gt;観測条件、星図、天候、流星群など、個別機能をリファレンス形式で確認できます。&lt;/p&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section id=&quot;quickstart&quot; class=&quot;anchor-pad&quot;&gt;
+      &lt;h2 class=&quot;section-title&quot;&gt;はじめてニコルを使う&lt;/h2&gt;
+      &lt;details class=&quot;panel&quot; open&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🌌&lt;/span&gt;&lt;span&gt;今いる場所で、今見える星空を調べる&lt;span class=&quot;summary-sub&quot;&gt;まずはこの手順だけで使い始められます&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;ol&gt;
+            &lt;li&gt;「現在時刻をセット」を押します。&lt;/li&gt;
+            &lt;li&gt;「現在地を取得」を押します。&lt;/li&gt;
+            &lt;li&gt;「今夜の空情報」で天候や月の状態を確認します。&lt;/li&gt;
+            &lt;li&gt;「天体カード」で見える天体を確認します。&lt;/li&gt;
+            &lt;li&gt;「星図」で実際の空のどこにあるか確認します。&lt;/li&gt;
+          &lt;/ol&gt;
+          &lt;p&gt;これだけで、現在地から今見えている星空を調べることができます。&lt;/p&gt;
+          &lt;p class=&quot;muted&quot;&gt;観測する日時や場所が決まっている場合は、現在時刻や現在地を使わず、観測予定の条件を入力してください。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+    &lt;/section&gt;
+
+    &lt;section id=&quot;purpose-guide&quot; class=&quot;anchor-pad&quot;&gt;
+      &lt;h2 class=&quot;section-title&quot;&gt;ニコルに何を手伝ってもらいますか？&lt;/h2&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;purpose-plan&quot; open&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;📅&lt;/span&gt;&lt;span&gt;1. 天体観測を計画する&lt;span class=&quot;summary-sub&quot;&gt;いつ・どこで・何を見るかを考える&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;これから天体観測へ出かけるときに、「いつ行くか」「どこへ行くか」「何を見るか」「天候は良さそうか」を調べるための使い方です。&lt;/p&gt;
+          &lt;p&gt;観測日時と観測場所を設定すると、その条件で見える天体や星座、月、流星群などを確認できます。天候情報や月齢、日の入り、薄明終了時刻なども確認できるため、観測に適した時間帯を考えることができます。&lt;/p&gt;
+          &lt;div class=&quot;mini-card&quot;&gt;
+            &lt;h4&gt;主に使う機能&lt;/h4&gt;
+            &lt;ul&gt;
+              &lt;li&gt;観測条件&lt;/li&gt;
+              &lt;li&gt;今夜の空情報&lt;/li&gt;
+              &lt;li&gt;天体カード&lt;/li&gt;
+              &lt;li&gt;見頃の星座&lt;/li&gt;
+              &lt;li&gt;流星群&lt;/li&gt;
+              &lt;li&gt;月カレンダー&lt;/li&gt;
+              &lt;li&gt;彗星・小惑星&lt;/li&gt;
+              &lt;li&gt;観測スケジュール&lt;/li&gt;
+              &lt;li&gt;星図&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;purpose-now&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🔭&lt;/span&gt;&lt;span&gt;2. 観測現場で今見えているものを確認する&lt;span class=&quot;summary-sub&quot;&gt;頭上の空と星図を結びつける&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;実際に屋外へ出た後、「今どんな天体が見えているのか」「この星は何なのか」「数時間後にはどこへ移動するのか」を確認するための使い方です。&lt;/p&gt;
+          &lt;p&gt;現在時刻と現在地を設定すると、その瞬間の空を星図として確認できます。星図を拡大したり、時刻を進めたり戻したりしながら、星や星座の位置を確認できます。&lt;/p&gt;
+          &lt;p&gt;見上げた空と、この地図を重ねてみましょう。&lt;/p&gt;
+          &lt;p&gt;観測現場では赤色夜間モードを使用すると、暗い環境に慣れた目への影響を抑えることができます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;purpose-guide-explain&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;✨&lt;/span&gt;&lt;span&gt;3. 誰かに星空を案内する&lt;span class=&quot;summary-sub&quot;&gt;知ることと伝えることをつなぐ&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;ニコルは、自分で天体を見るだけではなく、一緒にいる人へ星空を案内するときにも使うことを想定しています。&lt;/p&gt;
+          &lt;p&gt;天体カードや星座の解説では、その天体がどんなものなのか、どのように観察すると面白いのか、天文学的にどんな特徴があるのか、名前にはどんな由来があるのか、といった情報を確認できます。&lt;/p&gt;
+          &lt;p&gt;例えば「これはアンドロメダ銀河です」だけではなく、「私たちの銀河系の隣にある大きな銀河で、肉眼でも条件が良ければ見ることができます」といった、一歩深い案内をするための情報として使うことができます。&lt;/p&gt;
+          &lt;p&gt;ニコルの名前には、&lt;strong&gt;“星の案内人・ニコル”&lt;/strong&gt;という意味が込められています。星を探すだけではなく、星空そのものを楽しむ手助けをすることが、このアプリの目的です。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+    &lt;/section&gt;
+
+    &lt;section id=&quot;feature-guide&quot; class=&quot;anchor-pad&quot;&gt;
+      &lt;h2 class=&quot;section-title&quot;&gt;機能から探す&lt;/h2&gt;
+      &lt;div class=&quot;toc-list&quot;&gt;
+        &lt;a href=&quot;#obs-conditions&quot;&gt;観測条件&lt;/a&gt;
+        &lt;a href=&quot;#place-setting&quot;&gt;観測場所&lt;/a&gt;
+        &lt;a href=&quot;#tonight-sky&quot;&gt;今夜の空情報&lt;/a&gt;
+        &lt;a href=&quot;#weather-info&quot;&gt;天候情報・観測目安&lt;/a&gt;
+        &lt;a href=&quot;#cards&quot;&gt;天体カード&lt;/a&gt;
+        &lt;a href=&quot;#chart&quot;&gt;星図&lt;/a&gt;
+        &lt;a href=&quot;#minor-bodies&quot;&gt;彗星・小惑星&lt;/a&gt;
+        &lt;a href=&quot;#meteor&quot;&gt;流星群&lt;/a&gt;
+        &lt;a href=&quot;#constellations&quot;&gt;見頃の星座&lt;/a&gt;
+        &lt;a href=&quot;#moon-calendar&quot;&gt;月カレンダー&lt;/a&gt;
+        &lt;a href=&quot;#schedule&quot;&gt;観測スケジュール&lt;/a&gt;
+        &lt;a href=&quot;#night-mode&quot;&gt;赤色夜間モード&lt;/a&gt;
+        &lt;a href=&quot;#online-offline&quot;&gt;オンライン / オフライン&lt;/a&gt;
+        &lt;a href=&quot;#faq&quot;&gt;よくある質問&lt;/a&gt;
+      &lt;/div&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;obs-conditions&quot; open&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;⚙️&lt;/span&gt;&lt;span&gt;観測条件を設定する&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;ニコルでは、最初に観測条件を設定します。設定した日時と場所をもとに、天体の高度、方位、日の出・日の入り、月出・月没、星図、天候、流星群の観測条件などが計算されます。&lt;/p&gt;
+          &lt;h4&gt;観測日時&lt;/h4&gt;
+          &lt;p&gt;観測する日時を指定します。初期状態では、その日の夜の時刻が設定されています。「現在時刻をセット」を押すと、現在の日時へ変更できます。&lt;/p&gt;
+          &lt;h4&gt;場所名&lt;/h4&gt;
+          &lt;p&gt;観測場所を分かりやすくするための名前です。例えば「帯広」「然別湖」「自宅」「三国峠」などを入力できます。場所名自体は天体計算には使用されず、天体計算では緯度・経度が使用されます。&lt;/p&gt;
+          &lt;h4&gt;緯度・経度&lt;/h4&gt;
+          &lt;p&gt;観測地点の緯度と経度です。天体の高度や方位は、地球上のどこから見るかによって変わるため、ニコルの計算で重要な情報になります。&lt;/p&gt;
+          &lt;h4&gt;標高&lt;/h4&gt;
+          &lt;p&gt;観測地点の標高です。地図または現在地から観測地点を設定した場合、国土地理院の標高データから自動取得されます。&lt;/p&gt;
+          &lt;h4&gt;最低高度&lt;/h4&gt;
+          &lt;p&gt;観測候補として表示する天体の最低高度を設定します。例えば最低高度を20°に設定すると、高度20°未満の天体を候補から除外できます。&lt;/p&gt;
+          &lt;h4&gt;等級上限&lt;/h4&gt;
+          &lt;p&gt;表示する天体の明るさを制限します。天体の等級は、数字が小さいほど明るく、数字が大きいほど暗くなります。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;place-setting&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🗺️&lt;/span&gt;&lt;span&gt;観測場所を設定する&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;h4&gt;現在地を取得する&lt;/h4&gt;
+          &lt;p&gt;「現在地を取得」を押すと、端末の位置情報機能から現在の緯度・経度を取得します。オンライン環境では、その地点の標高も国土地理院の標高データから自動取得します。その後、その地点の天候情報も更新されます。&lt;/p&gt;
+          &lt;h4&gt;地図から選択する&lt;/h4&gt;
+          &lt;p&gt;「地図から選択」を押すと、国土地理院の淡色地図が表示されます。地図を移動・拡大し、観測したい場所をタップします。地点を選択すると、緯度、経度、標高、地名が取得されます。「この場所を使う」を押すと、観測条件へ反映されます。&lt;/p&gt;
+          &lt;h4&gt;光害マップ&lt;/h4&gt;
+          &lt;p&gt;地図画面では、NASAのVIIRS夜間光データを光害の参考として重ねて表示できます。「光害を表示」でON／OFFを切り替え、濃さも調整できます。地点を選ぶと、衛星画像上の夜間光を「非常に少ない」から「非常に多い」までの相対的な目安で表示します。これはBortle階級やSQM値を直接示すものではありません。&lt;/p&gt;
+          &lt;h4&gt;観測地目安&lt;/h4&gt;
+          &lt;p&gt;選択地点の夜間光と標高から、観測地としての簡易目安を表示します。天候、道路状況、立入可否、周囲の街灯、地平線の開け方などは含まれないため、現地条件と合わせて判断してください。&lt;/p&gt;
+          &lt;h4&gt;周囲10kmでもっと暗い場所を探す&lt;/h4&gt;
+          &lt;p&gt;選択地点の周囲10kmを衛星夜間光で比較し、現在地点より暗い候補を探します。候補が見つかった場合は、地図上でその地点を選択できます。候補地点へ実際に移動できるか、安全に観測できるかは別途確認してください。&lt;/p&gt;
+          &lt;h4&gt;キーワードで場所を検索する&lt;/h4&gt;
+          &lt;p&gt;地図画面では、地名・施設名・住所を検索できます。例えば、「然別湖」「帯広駅」「知床峠」「北海道帯広市」などを入力できます。&lt;/p&gt;
+          &lt;h4&gt;地図を直接タップした場合&lt;/h4&gt;
+          &lt;p&gt;検索を使わず地図を直接タップした場合でも、その地点の緯度・経度から地名を取得します。取得した地名は場所名へ自動的に反映されます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;tonight-sky&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🌙&lt;/span&gt;&lt;span&gt;今夜の空情報&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;「今夜の空情報」では、その日の観測環境をまとめて確認できます。ここを見ることで、「いつ暗くなるか」「月はどのくらい明るいか」「天候は良いか」を短時間で確認できます。&lt;/p&gt;
+          &lt;h4&gt;日の入り・日の出&lt;/h4&gt;
+          &lt;p&gt;太陽が地平線へ沈む時刻と、翌朝昇る時刻を表示します。&lt;/p&gt;
+          &lt;h4&gt;薄明&lt;/h4&gt;
+          &lt;p&gt;太陽が地平線より下にあるものの、まだ空が明るい時間帯を薄明と呼びます。暗い天体を観察する場合は、天文薄明が終了した後が一つの目安になります。&lt;/p&gt;
+          &lt;h4&gt;月齢&lt;/h4&gt;
+          &lt;p&gt;月の満ち欠けの進み具合を表示します。新月に近いほど月明かりが少なく、星雲や銀河など淡い天体を観察しやすくなります。&lt;/p&gt;
+          &lt;h4&gt;月相&lt;/h4&gt;
+          &lt;p&gt;月の形を表示します。月そのものを観察する場合は、月齢によってクレーターなどの見え方も変化します。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;weather-info&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;☁️&lt;/span&gt;&lt;span&gt;天候情報・観測目安&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;h4&gt;天候情報&lt;/h4&gt;
+          &lt;p&gt;ニコルでは、観測地点の天候予報を取得します。天体観測では一般的な天気予報だけでなく、特に雲量が重要になります。ニコルでは、総雲量、低層雲、中層雲、高層雲、降水確率、降水量、気温、湿度、風速、視程などを表示します。&lt;/p&gt;
+          &lt;p&gt;天候情報はオンライン環境でのみ利用できます。オフラインの場合は、「オフライン環境では使用できません」と表示されます。古い天気予報を誤って現在の予報として表示しないため、天候情報についてはオフラインキャッシュを使用しません。&lt;/p&gt;
+          &lt;h4&gt;観測目安&lt;/h4&gt;
+          &lt;p&gt;ニコルでは、取得した気象データをもとに、天体観測に適しているかを簡易的に表示します。表示は、◎ 良好、○ まずまず、△ 条件注意、× 観測には不向きの4段階です。&lt;/p&gt;
+          &lt;h4&gt;3つの気象モデルを比較する&lt;/h4&gt;
+          &lt;p&gt;ニコルでは、雲量について複数の数値予報モデルを比較します。使用するモデルは、JMA MSM、ECMWF IFS、NOAA GFSです。&lt;/p&gt;
+          &lt;div class=&quot;quote&quot;&gt;
+            &lt;strong&gt;観測目安　◎ 良好&lt;/strong&gt;&lt;br&gt;
+            雲量中央値　14%&lt;br&gt;
+            予報一致度：高&lt;br&gt;
+            JMA MSM 12% / ECMWF IFS 18% / NOAA GFS 14%
+          &lt;/div&gt;
+          &lt;h4&gt;雲量中央値&lt;/h4&gt;
+          &lt;p&gt;3モデルの雲量予報の中央値です。単純に一つの予報だけを見るのではなく、複数モデルの中心的な値を見るために使用します。&lt;/p&gt;
+          &lt;h4&gt;予報一致度&lt;/h4&gt;
+          &lt;p&gt;3モデルがどの程度似た予報をしているかを示します。モデル間の差が小さい場合は「高」、差が大きくなると「中」「低」になります。&lt;/p&gt;
+          &lt;h4&gt;天気予報についての注意&lt;/h4&gt;
+          &lt;p&gt;天候情報は、実際の空を直接観測しているものではなく、数値予報モデルによる計算結果です。「観測目安が◎だから必ず晴れる」という意味ではありません。最終的には実際の空や最新の気象情報も確認してください。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;cards&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🪐&lt;/span&gt;&lt;span&gt;天体カード&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;名前を知れば、さっきまでただ光っていたものが、少しだけ近く感じられるかもしれません。&lt;/p&gt;
+          &lt;p&gt;天体カードでは、設定した観測条件から見える天体を一覧で確認できます。各カードには、天体名、天体の種類、等級、高度、方位、解説などが表示されます。&lt;/p&gt;
+          &lt;h4&gt;高度&lt;/h4&gt;
+          &lt;p&gt;天体が地平線からどれくらい高い場所にあるかを表します。地平線が0°、真上が90°です。&lt;/p&gt;
+          &lt;h4&gt;方位&lt;/h4&gt;
+          &lt;p&gt;天体がどの方向に見えるかを示します。実際に空を探すときは、星図と合わせて確認してください。&lt;/p&gt;
+          &lt;h4&gt;解説&lt;/h4&gt;
+          &lt;p&gt;各天体には、その天体についての解説があります。概要、観測のポイント、天文学的な特徴、歴史、名称の由来などが含まれます。観察するときだけではなく、同行者へ説明するときにも利用できます。&lt;/p&gt;
+          &lt;h4&gt;星空を案内するときの使い方&lt;/h4&gt;
+          &lt;p&gt;例えば望遠鏡で天体を見せる場合、まず星図で場所を確認し、天体カードで特徴を確認し、実際の天体を見ながら説明します。「この天体は何か」だけではなく、「どうして面白いのか」「どのくらい遠いのか」「どんな特徴があるのか」といった情報を加えることで、星空をより深く楽しむことができます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;chart&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;⭐&lt;/span&gt;&lt;span&gt;星図&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;星図では、指定した場所と日時から見える空を全天図として表示します。基本表示は、北が上、東が左、西が右、南が下です。&lt;/p&gt;
+          &lt;p&gt;星図には、恒星、星座線、星座名、太陽、月、惑星、天体、彗星・小惑星、流星群の放射点などを表示できます。必要な情報だけをONにすることで、目的に合わせて星図を整理できます。&lt;/p&gt;
+          &lt;h4&gt;星図上の天体を確認する&lt;/h4&gt;
+          &lt;p&gt;星図上に表示されている星や天体をタップすると、その天体についての情報を確認できます。星座カードなどにある「星図で見る」を使用すると、星図へ移動し、その対象を見つけやすくできます。星座の場合は対象となる星座線が強調表示されます。&lt;/p&gt;
+          &lt;h4&gt;星図の時刻を変更する&lt;/h4&gt;
+          &lt;p&gt;少し先の夜空を、先に覗いてみましょう。&lt;/p&gt;
+          &lt;p&gt;星図の表示時刻は、観測条件として設定した日時とは別に変更できます。−6時間、−3時間、−1時間、+1時間、+3時間、+6時間のボタンや時刻スライダーを使って、星空が時間とともにどのように動くかを連続的に確認できます。&lt;/p&gt;
+          &lt;h4&gt;設定時刻へ戻す&lt;/h4&gt;
+          &lt;p&gt;「設定時刻へ戻す」を押すと、観測条件で設定した日時へ戻ります。星図の時刻を変更しても、観測条件そのものは変更されません。&lt;/p&gt;
+          &lt;h4&gt;星図のズーム&lt;/h4&gt;
+          &lt;p&gt;星図は拡大・縮小できます。「＋」で拡大し、「−」で縮小します。Macではマウスホイールやトラックパッド、iPad・iPhoneでは2本指のピンチ操作でも拡大・縮小できます。拡大しているときは、星図をドラッグして表示位置を移動できます。&lt;/p&gt;
+          &lt;h4&gt;星座線と星座名&lt;/h4&gt;
+          &lt;p&gt;星座線を表示すると、主な恒星を結んだ星座の形を確認できます。星座名を表示すると、星座の位置関係を把握しやすくなります。&lt;/p&gt;
+          &lt;h4&gt;太陽・月・惑星&lt;/h4&gt;
+          &lt;p&gt;星図では、観測日時における太陽・月・惑星の位置も表示できます。惑星は恒星とは違い、日々位置を変えていきます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;minor-bodies&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;☄️&lt;/span&gt;&lt;span&gt;彗星・小惑星&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;ニコルでは、オンラインから彗星や小惑星の位置情報を取得できます。小天体のデータは、指定した観測日時・場所に対応した位置情報として取得します。&lt;/p&gt;
+          &lt;p&gt;同じ場所にはいない旅人たちです。今夜の居場所を確かめてください。&lt;/p&gt;
+          &lt;h4&gt;データを更新する&lt;/h4&gt;
+          &lt;p&gt;彗星・小惑星データは毎回自動取得せず、「更新」を行ったときに取得します。取得したデータはブラウザ内に保存されます。&lt;/p&gt;
+          &lt;h4&gt;オフライン時&lt;/h4&gt;
+          &lt;p&gt;以前取得したデータが残っている場合は、オフラインでも確認できます。ただし、小天体の位置情報は取得した観測条件に対応しています。現在の観測日時・場所と保存データの条件が違う場合は注意表示が出ます。&lt;/p&gt;
+          &lt;h4&gt;星図の時刻を変更した場合&lt;/h4&gt;
+          &lt;p&gt;彗星や小惑星は時間とともに位置が変わります。そのため、星図の表示時刻を変更した場合は、取得時刻と異なる位置を誤って表示しないように、小天体表示が自動的にOFFになります。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;meteor&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🌠&lt;/span&gt;&lt;span&gt;流星群&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;流星群では、現在活動中の流星群と、その年の主な流星群を確認できます。&lt;/p&gt;
+          &lt;h4&gt;今夜活動中の流星群&lt;/h4&gt;
+          &lt;p&gt;観測日時が活動期間に含まれている流星群を表示します。各流星群について、活動期間、極大日、ZHR、流星速度、母天体、放射点などを確認できます。&lt;/p&gt;
+          &lt;h4&gt;時間帯別観測条件&lt;/h4&gt;
+          &lt;p&gt;今夜活動している流星群については、21時、0時、3時、5時など、夜間の代表時刻ごとに観測条件を確認できます。放射点の高度や月の状態などをもとに、どの時間帯が見やすいかを判断できます。&lt;/p&gt;
+          &lt;h4&gt;この年の主な流星群&lt;/h4&gt;
+          &lt;p&gt;年間一覧では、その年の代表的な流星群を確認できます。こちらは「今夜」の状態ではなく、活動期間、極大日、ZHR、速度、母天体、極大夜の月条件など、年間観測計画に必要な情報を中心に表示します。&lt;/p&gt;
+          &lt;h4&gt;流星群の放射点&lt;/h4&gt;
+          &lt;p&gt;流星群には「放射点」と呼ばれる位置があります。これは、流星を逆方向へたどると、空の一点から飛び出してくるように見える場所です。星図では、活動中の流星群の放射点を表示できます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;constellations&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;♈&lt;/span&gt;&lt;span&gt;見頃の星座&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;「見頃の星座」では、観測日時に見やすい星座を確認できます。各星座には解説があります。星座の特徴や代表的な星などを確認したあと、「星図で見る」を押すと星図へ移動できます。対象星座の星座線が強調されるため、実際の空で星座を探しやすくなります。&lt;/p&gt;
+          &lt;p&gt;線を結ぶ前はただの星でも、形を知れば物語が見えてきます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;moon-calendar&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🗓️&lt;/span&gt;&lt;span&gt;月カレンダー&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;月カレンダーでは、日ごとの月齢や月の状態を確認できます。月齢だけでなく、月出、月没、薄明などを確認できます。月明かりの少ない日に星雲や銀河を観測したい場合や、月そのものを観察したい場合の計画に利用できます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;schedule&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;📝&lt;/span&gt;&lt;span&gt;観測スケジュール&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;観測スケジュールでは、その夜に観測したい天体を時間順に整理することができます。天体は時間とともに東から西へ移動していきます。同じ夜でも、早い時間にしか見られない天体、深夜に高くなる天体、明け方に昇ってくる天体があります。&lt;/p&gt;
+          &lt;p&gt;全部を見る必要はありません。今夜会いたい星から順番を決めましょう。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;night-mode&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🔴&lt;/span&gt;&lt;span&gt;赤色夜間モード&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;天体観測中に明るい画面を見ると、暗い場所に慣れた目が一時的に見えにくくなります。ニコルでは「赤色夜間モード」を使用できます。&lt;/p&gt;
+          &lt;p&gt;明かりを少し落として、夜の暗さに目を預けましょう。&lt;/p&gt;
+          &lt;p&gt;赤色夜間モードをONにすると、画面全体が赤を中心とした暗い表示になります。設定状態はブラウザに保存されるため、次回起動時にも引き継がれます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;online-offline&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;📡&lt;/span&gt;&lt;span&gt;オンライン / オフライン&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;div class=&quot;grid-2&quot;&gt;
+            &lt;div class=&quot;mini-card&quot;&gt;
+              &lt;h4&gt;オンラインで必要になる機能&lt;/h4&gt;
+              &lt;ul&gt;
+                &lt;li&gt;天候情報&lt;/li&gt;
+                &lt;li&gt;国土地理院の地図&lt;/li&gt;
+                &lt;li&gt;地名・施設名・住所検索&lt;/li&gt;
+                &lt;li&gt;地名の自動取得&lt;/li&gt;
+                &lt;li&gt;標高の新規取得&lt;/li&gt;
+                &lt;li&gt;彗星・小惑星の最新データ取得&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mini-card&quot;&gt;
+              &lt;h4&gt;オフラインでも使える機能&lt;/h4&gt;
+              &lt;ul&gt;
+                &lt;li&gt;星図&lt;/li&gt;
+                &lt;li&gt;恒星・星座表示&lt;/li&gt;
+                &lt;li&gt;太陽・月・惑星の位置&lt;/li&gt;
+                &lt;li&gt;天体カード&lt;/li&gt;
+                &lt;li&gt;月齢・日の出日の入り・薄明&lt;/li&gt;
+                &lt;li&gt;見頃の星座・月カレンダー&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;p&gt;彗星・小惑星については、以前取得したデータが保存されていれば確認できます。天候については古い予報を誤表示しないため、オフライン時には表示しません。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;👣&lt;/span&gt;&lt;span&gt;観測現場でおすすめの使い方&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;ol&gt;
+            &lt;li&gt;現在地を取得します。&lt;/li&gt;
+            &lt;li&gt;現在時刻をセットします。&lt;/li&gt;
+            &lt;li&gt;「今夜の空情報」で天候、月齢、薄明などを確認します。&lt;/li&gt;
+            &lt;li&gt;赤色夜間モードをONにします。&lt;/li&gt;
+            &lt;li&gt;天体カードから見たい天体を探します。&lt;/li&gt;
+            &lt;li&gt;「星図で見る」または星図から位置を確認します。&lt;/li&gt;
+            &lt;li&gt;必要に応じて星図を拡大し、実際の空と見比べます。&lt;/li&gt;
+            &lt;li&gt;数時間後の状態を確認したい場合は時刻スライダーを使用します。&lt;/li&gt;
+          &lt;/ol&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🗣️&lt;/span&gt;&lt;span&gt;同行者へ星空を案内するときの使い方&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;星空を誰かと一緒に見る場合は、まず星図で目印になる明るい星や星座を探します。次に、その星座や天体の解説を確認します。実際の空を指し示しながら、名前、見つけ方、天文学的な特徴、歴史や名前の由来などを紹介すると、より深く星空を楽しむことができます。&lt;/p&gt;
+          &lt;p&gt;知らないものを知ろうとした、その瞬間から観測は始まっています。望遠鏡を覗く前に、ニコルを開いてみましょう。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;faq&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;❓&lt;/span&gt;&lt;span&gt;よくある質問&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;h4&gt;地図が表示されない&lt;/h4&gt;
+          &lt;p&gt;地図の表示にはインターネット接続が必要です。通信状況を確認してください。&lt;/p&gt;
+          &lt;h4&gt;地名検索ができない&lt;/h4&gt;
+          &lt;p&gt;場所検索はオンライン通信を使用します。短時間に繰り返し検索した場合は、少し時間を空けて再度検索してください。&lt;/p&gt;
+          &lt;h4&gt;現在地が取得できない&lt;/h4&gt;
+          &lt;p&gt;端末の位置情報が有効になっていることを確認してください。iPhone・iPadの場合は、Safariまたは使用しているブラウザに位置情報の利用が許可されている必要があります。&lt;/p&gt;
+          &lt;h4&gt;現在地は取得できたが標高が表示されない&lt;/h4&gt;
+          &lt;p&gt;標高データの取得にはインターネット接続が必要です。また、場所によっては利用可能な標高データが存在しない場合があります。&lt;/p&gt;
+          &lt;h4&gt;天気が表示されない&lt;/h4&gt;
+          &lt;p&gt;インターネット接続を確認してください。また、緯度・経度が正しく入力されていることを確認してください。&lt;/p&gt;
+          &lt;h4&gt;天気予報と実際の空が違う&lt;/h4&gt;
+          &lt;p&gt;天候情報は数値予報モデルによる予報です。特に雲や霧は局地的な変化が大きいため、実際の空と異なる場合があります。3モデルの「予報一致度」も参考にしてください。&lt;/p&gt;
+          &lt;h4&gt;彗星・小惑星が表示されない&lt;/h4&gt;
+          &lt;p&gt;彗星・小惑星タブでデータを更新してください。また、星図の表示時刻を変更すると、位置の誤表示を防ぐために彗星・小惑星表示が自動的にOFFになります。&lt;/p&gt;
+          &lt;h4&gt;星座を見つけられない&lt;/h4&gt;
+          &lt;p&gt;「見頃の星座」から目的の星座を探し、「星図で見る」を使用してください。対象星座の星座線が強調表示されます。&lt;/p&gt;
+          &lt;h4&gt;星図を拡大したら元に戻せなくなった&lt;/h4&gt;
+          &lt;p&gt;星図のズームリセットを使用すると100%表示へ戻すことができます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+    &lt;/section&gt;
+&lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    function setAllDetails(open){
+      document.querySelectorAll(&#x27;details.panel&#x27;).forEach(d =&gt; d.open = open);
+    }
+
+    function openAndScroll(event, id){
+      if(event) event.preventDefault();
+      const el = document.getElementById(id);
+      if(!el) return;
+      if(el.tagName &amp;&amp; el.tagName.toLowerCase() === &#x27;details&#x27;) el.open = true;
+      el.scrollIntoView({behavior:&#x27;smooth&#x27;, block:&#x27;start&#x27;});
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+">
+  </iframe>
 </div>
 
 <footer>
@@ -1960,6 +2659,13 @@ let MAP_REVERSE_TOKEN=0;
 const MAP_SEARCH_ENDPOINT="https://nominatim.openstreetmap.org/search";
 const MAP_REVERSE_ENDPOINT="https://nominatim.openstreetmap.org/reverse";
 
+let GSI_LIGHT_LAYER=null;
+let MAP_LIGHT_TOKEN=0;
+const LIGHT_TILE_Z=8;
+const LIGHT_TILE_CACHE=new Map();
+const LIGHT_TILE_URL="https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Night_Lights/default/2016-01-01/GoogleMapsCompatible_Level8/{z}/{y}/{x}.png";
+
+
 function ensureLeaflet(){
 if(window.L)return Promise.resolve(window.L);
 if(LEAFLET_PROMISE)return LEAFLET_PROMISE;
@@ -2079,14 +2785,215 @@ if(Number.isFinite(h))return{elevation:h,source:s.label};
 throw new Error("この地点の標高データを取得できませんでした");
 }
 
-function updateMapSelection(lat,lon,elevation=null,source="",placeName="",placeSub=""){
+
+function lightTilePoint(lat,lon,z=LIGHT_TILE_Z){
+const maxLat=85.05112878;
+const clampedLat=Math.max(-maxLat,Math.min(maxLat,lat));
+const n=Math.pow(2,z);
+const px=((lon+180)/360)*n*256;
+const latRad=clampedLat*Math.PI/180;
+const py=(1-Math.log(Math.tan(latRad)+1/Math.cos(latRad))/Math.PI)/2*n*256;
+const x=Math.floor(px/256),y=Math.floor(py/256);
+return{x,y,px:Math.max(0,Math.min(255,Math.floor(px-x*256))),py:Math.max(0,Math.min(255,Math.floor(py-y*256)))};
+}
+
+async function getLightTileCanvas(x,y,z=LIGHT_TILE_Z){
+const key=`${z}/${x}/${y}`;
+if(LIGHT_TILE_CACHE.has(key))return LIGHT_TILE_CACHE.get(key);
+const promise=(async()=>{
+const url=LIGHT_TILE_URL.replace("{z}",z).replace("{x}",x).replace("{y}",y);
+const res=await fetch(url,{cache:"force-cache"});
+if(!res.ok)throw new Error(`夜間光タイル HTTP ${res.status}`);
+const blob=await res.blob();
+let image;
+if("createImageBitmap" in window){
+image=await createImageBitmap(blob);
+}else{
+image=await new Promise((resolve,reject)=>{
+const u=URL.createObjectURL(blob);
+const img=new Image();
+img.onload=()=>{URL.revokeObjectURL(u);resolve(img);};
+img.onerror=()=>{URL.revokeObjectURL(u);reject(new Error("夜間光画像を読めません"));};
+img.src=u;
+});
+}
+const canvas=document.createElement("canvas");
+canvas.width=256;canvas.height=256;
+const ctx=canvas.getContext("2d",{willReadFrequently:true});
+ctx.drawImage(image,0,0,256,256);
+if(image.close)image.close();
+return canvas;
+})().catch(err=>{LIGHT_TILE_CACHE.delete(key);throw err;});
+LIGHT_TILE_CACHE.set(key,promise);
+return promise;
+}
+
+function lightPollutionAssessment(brightness){
+let label,cls,score;
+if(brightness<=3){label="非常に少ない";cls="light-vlow";score=4;}
+else if(brightness<=10){label="少ない";cls="light-low";score=3;}
+else if(brightness<=28){label="中程度";cls="light-mid";score=2;}
+else if(brightness<=65){label="多い";cls="light-high";score=1;}
+else{label="非常に多い";cls="light-vhigh";score=0;}
+return{label,cls,score};
+}
+
+async function fetchLightPollution(lat,lon){
+const t=lightTilePoint(lat,lon,LIGHT_TILE_Z);
+const canvas=await getLightTileCanvas(t.x,t.y,LIGHT_TILE_Z);
+const ctx=canvas.getContext("2d",{willReadFrequently:true});
+const radius=4;
+const x0=Math.max(0,t.px-radius),y0=Math.max(0,t.py-radius);
+const x1=Math.min(255,t.px+radius),y1=Math.min(255,t.py+radius);
+const data=ctx.getImageData(x0,y0,x1-x0+1,y1-y0+1).data;
+const vals=[];
+for(let i=0;i<data.length;i+=4){
+if(data[i+3]===0)continue;
+const lum=0.2126*data[i]+0.7152*data[i+1]+0.0722*data[i+2];
+vals.push(lum);
+}
+if(!vals.length)throw new Error("夜間光データを取得できません");
+vals.sort((a,b)=>a-b);
+const mean=vals.reduce((a,b)=>a+b,0)/vals.length;
+const p75=vals[Math.floor((vals.length-1)*0.75)];
+const brightness=Math.max(0,Math.min(255,mean*0.7+p75*0.3));
+return{brightness, ...lightPollutionAssessment(brightness)};
+}
+
+function observingSiteAssessment(lightInfo,elevation){
+if(!lightInfo||!Number.isFinite(lightInfo.score))return{grade:"—",label:"評価待ち"};
+let score=lightInfo.score;
+if(Number.isFinite(elevation)){
+if(elevation>=1000)score+=0.7;
+else if(elevation>=500)score+=0.4;
+else if(elevation>=200)score+=0.2;
+}
+if(score>=3.7)return{grade:"◎",label:"良好"};
+if(score>=2.7)return{grade:"○",label:"まずまず"};
+if(score>=1.7)return{grade:"△",label:"条件注意"};
+return{grade:"×",label:"明るい"};
+}
+
+function lightInfoHtml(lightInfo,elevation){
+if(lightInfo===null)return'<br>夜間光 <span style="color:#fb923c">取得できませんでした</span>';
+if(!lightInfo)return'<br>夜間光を解析中…';
+const site=observingSiteAssessment(lightInfo,elevation);
+return `<br>夜間光 <span class="light-grade ${lightInfo.cls}"><b>${lightInfo.label}</b></span> <span style="color:#7896af">（相対値 ${lightInfo.brightness.toFixed(1)}）</span>`
++`<br>観測地目安 <span class="site-grade">${site.grade} ${site.label}</span> <span style="color:#7896af">（光害＋標高の簡易評価）</span>`;
+}
+
+function destinationPoint(lat,lon,distanceKm,bearingDeg){
+const R=6371;
+const d=distanceKm/R;
+const br=bearingDeg*Math.PI/180;
+const p1=lat*Math.PI/180;
+const l1=lon*Math.PI/180;
+const p2=Math.asin(Math.sin(p1)*Math.cos(d)+Math.cos(p1)*Math.sin(d)*Math.cos(br));
+const l2=l1+Math.atan2(Math.sin(br)*Math.sin(d)*Math.cos(p1),Math.cos(d)-Math.sin(p1)*Math.sin(p2));
+return{lat:p2*180/Math.PI,lon:((l2*180/Math.PI+540)%360)-180};
+}
+
+function haversineKm(lat1,lon1,lat2,lon2){
+const R=6371,toRad=v=>v*Math.PI/180;
+const dLat=toRad(lat2-lat1),dLon=toRad(lon2-lon1);
+const a=Math.sin(dLat/2)**2+Math.cos(toRad(lat1))*Math.cos(toRad(lat2))*Math.sin(dLon/2)**2;
+return 2*R*Math.asin(Math.sqrt(a));
+}
+
+async function findDarkerNearby(){
+if(!GSI_SELECTED||!Number.isFinite(GSI_SELECTED.lat)||!Number.isFinite(GSI_SELECTED.lon))return;
+const btn=$("#findDarkerLocation"),box=$("#darkerSearchResult");
+if(btn){btn.disabled=true;btn.textContent="探索中…";}
+if(box){box.className="darker-search-result show";box.textContent="周囲10kmの夜間光を比較しています…";}
+
+try{
+const origin=GSI_SELECTED;
+const candidates=[{lat:origin.lat,lon:origin.lon,distance:0,bearing:0}];
+[2.5,5,7.5,10].forEach(distance=>{
+for(let bearing=0;bearing<360;bearing+=45){
+const p=destinationPoint(origin.lat,origin.lon,distance,bearing);
+candidates.push({...p,distance,bearing});
+}
+});
+const sampled=await Promise.all(candidates.map(async c=>{
+try{return{...c,light:await fetchLightPollution(c.lat,c.lon)};}
+catch(e){return{...c,light:null};}
+}));
+const valid=sampled.filter(x=>x.light&&Number.isFinite(x.light.brightness));
+if(!valid.length)throw new Error("周辺の夜間光を取得できませんでした");
+valid.sort((a,b)=>a.light.brightness-b.light.brightness);
+const best=valid[0];
+const current=valid.find(x=>x.distance===0)||null;
+
+let elevation=null;
+try{elevation=(await fetchGsiElevation(best.lat,best.lon)).elevation;}catch(e){}
+let place=null;
+try{
+const token=++MAP_REVERSE_TOKEN;
+place=await reverseGeocodeMapPoint(best.lat,best.lon,token);
+}catch(e){}
+
+const improvement=current
+?Math.max(0,current.light.brightness-best.light.brightness)
+:null;
+const distance=haversineKm(origin.lat,origin.lon,best.lat,best.lon);
+const placeName=place&&place.placeName?place.placeName:"暗い候補地点";
+const site=observingSiteAssessment(best.light,elevation);
+
+if(distance<0.4 || (improvement!==null&&improvement<1.0)){
+box.innerHTML=`この10km圏では、現在地点より明確に暗い候補は見つかりませんでした。<br><span style="color:#7896af">現在地点：${current?current.light.label:"—"} / 相対値 ${current?current.light.brightness.toFixed(1):"—"}</span>`;
+return;
+}
+
+box.innerHTML=`<b>🌌 より暗い候補：${escapeHTML(placeName)}</b><br>`
++`現在地点から 約 ${distance.toFixed(1)} km / 夜間光 <span class="${best.light.cls}">${best.light.label}</span>（相対値 ${best.light.brightness.toFixed(1)}）`
++`${current?`<br>現在地点より相対値で ${improvement.toFixed(1)} 低い候補`:""}`
++`${Number.isFinite(elevation)?` / 標高 ${elevation.toFixed(0)} m`:""}`
++` / 観測地目安 ${site.grade} ${site.label}`
++`<br><span style="color:#7896af">※ 衛星夜間光だけで探索した候補です。道路、立入可否、安全性、地平線の開け方は評価していません。</span>`
++`<br><button type="button" class="darker-candidate-btn" id="useDarkerCandidate">この候補を地図で選択</button>`;
+
+$("#useDarkerCandidate").addEventListener("click",async()=>{
+if(GSI_MAP)GSI_MAP.setView([best.lat,best.lon],Math.max(GSI_MAP.getZoom(),13));
+await selectMapPoint(best.lat,best.lon,placeName,place&&place.placeSub?place.placeSub:"");
+});
+}catch(err){
+if(box){box.className="darker-search-result show";box.innerHTML=`<span style="color:#f87171">${escapeHTML(String(err.message||err))}</span>`;}
+}finally{
+if(btn){btn.disabled=!GSI_SELECTED;btn.textContent="🌌 周囲10kmでもっと暗い場所を探す";}
+}
+}
+
+function setLightPollutionLayerVisible(visible){
+if(!GSI_MAP||!window.L)return;
+if(visible){
+if(!GSI_LIGHT_LAYER){
+GSI_LIGHT_LAYER=L.tileLayer(
+LIGHT_TILE_URL,
+{
+maxNativeZoom:8,
+maxZoom:18,
+minZoom:0,
+opacity:($("#lightPollutionOpacity")?Number($("#lightPollutionOpacity").value):60)/100,
+attribution:'NASA GIBS / Suomi NPP VIIRS Night Lights (2016)'
+}
+);
+}
+if(!GSI_MAP.hasLayer(GSI_LIGHT_LAYER))GSI_LIGHT_LAYER.addTo(GSI_MAP);
+}else if(GSI_LIGHT_LAYER&&GSI_MAP.hasLayer(GSI_LIGHT_LAYER)){
+GSI_MAP.removeLayer(GSI_LIGHT_LAYER);
+}
+}
+
+function updateMapSelection(lat,lon,elevation=null,source="",placeName="",placeSub="",lightInfo=undefined){
 const prev=GSI_SELECTED&&Math.abs(GSI_SELECTED.lat-lat)<1e-10&&Math.abs(GSI_SELECTED.lon-lon)<1e-10
 ?GSI_SELECTED
 :null;
 GSI_SELECTED={
 lat,lon,elevation,source,
 placeName:placeName||(prev&&prev.placeName)||"",
-placeSub:placeSub||(prev&&prev.placeSub)||""
+placeSub:placeSub||(prev&&prev.placeSub)||"",
+lightInfo:lightInfo===undefined?(prev?prev.lightInfo:undefined):lightInfo
 };
 
 if(GSI_MAP&&window.L){
@@ -2099,6 +3006,7 @@ GSI_MARKER.setLatLng([lat,lon]);
 
 const info=$("#mapSelectInfo");
 const use=$("#useMapLocation");
+const darker=$("#findDarkerLocation");
 if(info){
 const elevText=Number.isFinite(elevation)
 ?`標高 <b>${elevation.toFixed(1)} m</b>${source?`（${source}）`:""}`
@@ -2106,14 +3014,18 @@ const elevText=Number.isFinite(elevation)
 const placeText=GSI_SELECTED&&GSI_SELECTED.placeName
 ?`<br>地名 <b>${GSI_SELECTED.placeName}</b>${GSI_SELECTED.placeSub?` <span style="color:#7896af">（${GSI_SELECTED.placeSub}）</span>`:""}`
 :"<br>地名を取得中…";
-info.innerHTML=`緯度 <b>${lat.toFixed(6)}</b> / 経度 <b>${lon.toFixed(6)}</b><br>${elevText}${placeText}`;
+info.innerHTML=`緯度 <b>${lat.toFixed(6)}</b> / 経度 <b>${lon.toFixed(6)}</b><br>${elevText}${placeText}${lightInfoHtml(GSI_SELECTED.lightInfo,elevation)}`;
 }
 if(use)use.disabled=!Number.isFinite(elevation);
+if(darker)darker.disabled=false;
 }
 
 async function selectMapPoint(lat,lon,knownPlaceName="",knownPlaceSub=""){
 const token=++MAP_REVERSE_TOKEN;
-updateMapSelection(lat,lon,null,"",knownPlaceName,knownPlaceSub);
+const lightToken=++MAP_LIGHT_TOKEN;
+updateMapSelection(lat,lon,null,"",knownPlaceName,knownPlaceSub,undefined);
+const darker=$("#darkerSearchResult");
+if(darker){darker.className="darker-search-result";darker.innerHTML="";}
 
 const elevationPromise=fetchGsiElevation(lat,lon)
 .then(result=>({ok:true,result}))
@@ -2123,9 +3035,13 @@ const reversePromise=knownPlaceName
 ?Promise.resolve({placeName:knownPlaceName,placeSub:knownPlaceSub})
 :reverseGeocodeMapPoint(lat,lon,token);
 
-const [elevResult,placeResult]=await Promise.all([elevationPromise,reversePromise]);
+const lightPromise=fetchLightPollution(lat,lon)
+.then(result=>({ok:true,result}))
+.catch(error=>({ok:false,error}));
 
-if(!GSI_SELECTED||Math.abs(GSI_SELECTED.lat-lat)>1e-10||Math.abs(GSI_SELECTED.lon-lon)>1e-10)return;
+const [elevResult,placeResult,lightResult]=await Promise.all([elevationPromise,reversePromise,lightPromise]);
+
+if(!GSI_SELECTED||Math.abs(GSI_SELECTED.lat-lat)>1e-10||Math.abs(GSI_SELECTED.lon-lon)>1e-10||lightToken!==MAP_LIGHT_TOKEN)return;
 
 const placeName=placeResult&&placeResult.placeName
 ?placeResult.placeName
@@ -2133,20 +3049,23 @@ const placeName=placeResult&&placeResult.placeName
 const placeSub=placeResult&&placeResult.placeSub
 ?placeResult.placeSub
 :(GSI_SELECTED.placeSub||"");
+const lightInfo=lightResult.ok?lightResult.result:null;
 
 if(elevResult.ok){
-updateMapSelection(lat,lon,elevResult.result.elevation,elevResult.result.source,placeName,placeSub);
+updateMapSelection(lat,lon,elevResult.result.elevation,elevResult.result.source,placeName,placeSub,lightInfo);
 }else{
 GSI_SELECTED={
 lat,lon,elevation:null,source:"",
-placeName,placeSub
+placeName,placeSub,lightInfo
 };
 const info=$("#mapSelectInfo");
 if(info){
-info.innerHTML=`緯度 <b>${lat.toFixed(6)}</b> / 経度 <b>${lon.toFixed(6)}</b><br><span style="color:#fb923c">${elevResult.error.message}</span><br>地名 <b>${placeName}</b>${placeSub?` <span style="color:#7896af">（${placeSub}）</span>`:""}`;
+info.innerHTML=`緯度 <b>${lat.toFixed(6)}</b> / 経度 <b>${lon.toFixed(6)}</b><br><span style="color:#fb923c">${elevResult.error.message}</span><br>地名 <b>${placeName}</b>${placeSub?` <span style="color:#7896af">（${placeSub}）</span>`:""}${lightInfoHtml(lightInfo,null)}`;
 }
 const use=$("#useMapLocation");
 if(use)use.disabled=false;
+const darkerBtn=$("#findDarkerLocation");
+if(darkerBtn)darkerBtn.disabled=false;
 }
 }
 
@@ -2301,7 +3220,7 @@ const names=compactSearchName(r);
 const b=document.createElement("button");
 b.type="button";
 b.className="map-search-result";
-b.innerHTML=`<div class="main">${names.main}</div><div class="sub">${names.sub}</div>`;
+b.innerHTML=`<div class="main">${escapeHTML(names.main)}</div><div class="sub">${escapeHTML(names.sub)}</div>`;
 b.addEventListener("click",async()=>{
 if(!GSI_MAP)return;
 GSI_MAP.setView([lat,lon],Math.max(GSI_MAP.getZoom(),13));
@@ -2331,6 +3250,10 @@ modal.classList.add("open");
 modal.setAttribute("aria-hidden","false");
 GSI_SELECTED=null;
 use.disabled=true;
+const darkerBtn=$("#findDarkerLocation");
+if(darkerBtn)darkerBtn.disabled=true;
+const darkerBox=$("#darkerSearchResult");
+if(darkerBox){darkerBox.className="darker-search-result";darkerBox.innerHTML="";}
 clearMapSearchResults();
 if($("#mapSearchInput"))$("#mapSearchInput").value="";
 
@@ -2356,6 +3279,7 @@ if(GSI_MAP){
 GSI_MAP.remove();
 GSI_MAP=null;
 GSI_MARKER=null;
+GSI_LIGHT_LAYER=null;
 }
 
 GSI_MAP=L.map("gsiMap",{zoomControl:true}).setView([startLat,startLon],zoom);
@@ -2367,6 +3291,8 @@ maxZoom:18,
 attribution:'<a href="https://maps.gsi.go.jp/" target="_blank" rel="noopener">地理院タイル</a>'
 }
 ).addTo(GSI_MAP);
+
+setLightPollutionLayerVisible($("#lightPollutionToggle")?$("#lightPollutionToggle").checked:true);
 
 GSI_MAP.on("click",e=>{
 selectMapPoint(e.latlng.lat,e.latlng.lng);
@@ -2995,17 +3921,17 @@ const peakMoon=Number.isFinite(s.peakMoonPercent)?s.peakMoonPercent+"%":"—";
 const moonCondition=meteorPeakMoonCondition(s.peakMoonPercent);
 
 card.innerHTML=`
-<div class="meteor-name">🌠 ${displayName}<span class="meteor-code">${s.code||""}</span></div>
-${englishName&&englishName!==displayName?`<div class="meteor-en">${englishName}</div>`:""}
+<div class="meteor-name">🌠 ${escapeHTML(displayName)}<span class="meteor-code">${escapeHTML(s.code||"")}</span></div>
+${englishName&&englishName!==displayName?`<div class="meteor-en">${escapeHTML(englishName)}</div>`:""}
 <div class="meteor-meta">
-活動期間：${s.activityLabel||"—"}<br>
-極大：${s.peakLabel||"—"}${s.peakUT?` / ${s.peakUT} UT`:""}<br>
-ZHR：${s.zhr??"—"}　速度：${s.velocityKms??"—"} km/s<br>
-母天体：${s.parent||"—"}<br>
-極大夜の月輝面：${peakMoon}
+活動期間：${escapeHTML(s.activityLabel||"—")}<br>
+極大：${escapeHTML(s.peakLabel||"—")}${s.peakUT?` / ${escapeHTML(s.peakUT)} UT`:""}<br>
+ZHR：${escapeHTML(s.zhr??"—")}　速度：${escapeHTML(s.velocityKms??"—")} km/s<br>
+母天体：${escapeHTML(s.parent||"—")}<br>
+極大夜の月輝面：${escapeHTML(peakMoon)}
 </div>
-<div class="meteor-score ${moonCondition.gradeClass}">${moonCondition.grade} 極大夜の月条件：${moonCondition.label}</div>
-${s.note?`<div class="meteor-note-text">💡 ${s.note}</div>`:""}`;
+<div class="meteor-score ${moonCondition.gradeClass}">${escapeHTML(moonCondition.grade)} 極大夜の月条件：${escapeHTML(moonCondition.label)}</div>
+${s.note?`<div class="meteor-note-text">💡 ${escapeHTML(s.note)}</div>`:""}`;
 return card;
 }
 
@@ -3055,7 +3981,7 @@ if($("#rtab-skymap").classList.contains("active"))renderSkyChart();
 }catch(e){
 METEOR_SHOWERS=[];meteorLoadedYear=null;
 status.className="meteor-status error";
-status.innerHTML=`取得に失敗しました。Cloudflare Workerの /meteors を確認してください。<br><span style="font-size:10px">${String(e.message||e)}</span>`;
+status.innerHTML=`取得に失敗しました。Cloudflare Workerの /meteors を確認してください。<br><span style="font-size:10px">${escapeHTML(String(e.message||e))}</span>`;
 }finally{$("#meteorRefresh").disabled=false;}
 }
 
@@ -3265,7 +4191,7 @@ list.slice(0,60).forEach(o=>{
 const card=document.createElement("div");
 card.className=`smallbody-card ${kind}`;
 card.innerHTML=`
-<div class="sb-name">${kind==="comet"?"☄️":"🪨"} ${o.name}</div>
+<div class="sb-name">${kind==="comet"?"☄️":"🪨"} ${escapeHTML(o.name)}</div>
 <div class="sb-meta">推定V等級 ${o.mag.toFixed(1)}<br>高度 ${o.alt.toFixed(1)}° / 方位 ${azToDir(o.az)}（${o.az.toFixed(1)}°）</div>
 `;
 grid.appendChild(card);
@@ -3391,6 +4317,9 @@ return pts;
 }
 
 const $=s=>document.querySelector(s);
+function escapeHTML(value){
+return String(value??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+}
 const TYPE_LABEL={galaxy:"銀河",nebula:"星雲",cluster:"星団",planet:"惑星",double:"二重星",star:"恒星",snr:"超新星残骸"};
 const TYPE_BADGE={galaxy:"b-type-galaxy",nebula:"b-type-nebula",cluster:"b-type-cluster",planet:"b-type-planet",double:"b-type-double",star:"b-type-star",snr:"b-type-snr"};
 let currentResults=[],currentLat,currentLon,currentDate,activeFilter="all",currentSort="score";
@@ -3550,6 +4479,14 @@ searchMapLocation($("#mapSearchInput").value);
 });
 $("#closeMapSelect").addEventListener("click",closeMapSelector);
 $("#useMapLocation").addEventListener("click",useMapSelectedLocation);
+
+$("#lightPollutionToggle").addEventListener("change",event=>{
+setLightPollutionLayerVisible(event.target.checked);
+});
+$("#lightPollutionOpacity").addEventListener("input",event=>{
+if(GSI_LIGHT_LAYER)GSI_LIGHT_LAYER.setOpacity(Number(event.target.value)/100);
+});
+$("#findDarkerLocation").addEventListener("click",findDarkerNearby);
 $("#mapSelectModal").addEventListener("click",event=>{
 if(event.target===event.currentTarget)closeMapSelector();
 });
@@ -4037,14 +4974,19 @@ renderRecommendations(results);
 moonCalBaseDate=new Date(date.getFullYear(),date.getMonth(),1);
 renderMoonCalendar(moonCalBaseDate);
 const tbody=$("#scheduleTable tbody");tbody.innerHTML="";
-const baseH=date.getHours();
+const baseDay=new Date(date.getFullYear(),date.getMonth(),date.getDate()).getTime();
+const fmtScheduleTime=d=>{
+const dayDiff=Math.round((new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime()-baseDay)/86400000);
+const hh=String(d.getHours()).padStart(2,"0"),mm=String(d.getMinutes()).padStart(2,"0");
+return `${dayDiff>0?`翌${dayDiff>1?dayDiff+"日":""} `:""}${hh}:${mm}`;
+};
 sortResults(results).slice(0,15).forEach((obj,i)=>{
-const m=baseH*60+i*15;
-const sh=String(Math.floor(m/60)).padStart(2,"0"),sm=String(m%60).padStart(2,"0");
-const eh=String(Math.floor((m+15)/60)).padStart(2,"0"),em=String((m+15)%60).padStart(2,"0");
+const slotStart=new Date(date.getTime()+i*15*60000);
+const slotEnd=new Date(slotStart.getTime()+15*60000);
+const sh=fmtScheduleTime(slotStart),eh=fmtScheduleTime(slotEnd);
 const dl=diffLabel(obj.difficulty);
 const tr=document.createElement("tr");
-tr.innerHTML=`<td style="text-align:center">${i+1}</td><td>${sh}:${sm}〜${eh}:${em}</td><td>${obj.icon} ${obj.name}</td><td><span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type}</span></td><td><span class="diff-badge diff-${obj.difficulty}">${dl.stars}</span></td><td style="text-align:center">${obj.alt}°</td><td>${obj.azDir}</td><td>${obj.scope}</td><td style="font-size:12px;color:#7ab4d4">${obj.highlight}</td>`;
+tr.innerHTML=`<td style="text-align:center">${i+1}</td><td>${sh}〜${eh}</td><td>${obj.icon} ${obj.name}</td><td><span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type}</span></td><td><span class="diff-badge diff-${obj.difficulty}">${dl.stars}</span></td><td style="text-align:center">${obj.alt}°</td><td>${obj.azDir}</td><td>${obj.scope}</td><td style="font-size:12px;color:#7ab4d4">${obj.highlight}</td>`;
 tbody.appendChild(tr);
 });
 renderConstellations(date.getMonth()+1,"");$("#constSearch").value="";
@@ -4106,6 +5048,36 @@ document.querySelectorAll(".tab-content").forEach(x=>{if(x.id.startsWith("dtab-"
 document.querySelector("[data-dtab='data']").classList.add("active");$("#dtab-data").classList.add("active");
 $("#detailPanel").style.display="block";$("#detailPanel").scrollIntoView({behavior:"smooth"});
 }
+
+/* ===== 使用マニュアル ===== */
+function openManual(){
+  const modal=document.getElementById("manualModal");
+  if(!modal)return;
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden","false");
+  document.body.classList.add("manual-open");
+  const closeBtn=document.getElementById("closeManual");
+  if(closeBtn)closeBtn.focus();
+}
+function closeManual(){
+  const modal=document.getElementById("manualModal");
+  if(!modal)return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden","true");
+  document.body.classList.remove("manual-open");
+  const openBtn=document.getElementById("openManual");
+  if(openBtn)openBtn.focus();
+}
+const manualOpenBtn=document.getElementById("openManual");
+const manualCloseBtn=document.getElementById("closeManual");
+if(manualOpenBtn)manualOpenBtn.addEventListener("click",openManual);
+if(manualCloseBtn)manualCloseBtn.addEventListener("click",closeManual);
+document.addEventListener("keydown",event=>{
+  if(event.key==="Escape" && document.getElementById("manualModal")?.classList.contains("open")){
+    closeManual();
+  }
+});
+
 </script>
 </body>
 </html>
