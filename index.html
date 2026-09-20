@@ -183,6 +183,113 @@ ul.tips{padding-left:1.4em;margin:6px 0;line-height:1.9;font-size:13px;color:#b8
 }
 .map-select-btn{background:#0d2040;border:1px solid #2a5a8c;color:#9ccbf0;border-radius:7px;padding:8px 12px;font-size:12px;cursor:pointer;min-height:38px;}
 .map-select-btn:hover{background:#1a3a5c;color:#fff;}
+
+.moon-date-btn{
+  margin-top:7px;
+  width:100%;
+  background:#17152d;
+  border:1px solid #5a4f92;
+  color:#d8d0ff;
+  border-radius:7px;
+  padding:8px 11px;
+  font-size:12px;
+  cursor:pointer;
+}
+.moon-date-btn:hover{background:#211d3d;color:#fff;}
+.moon-picker-modal{
+  position:fixed;
+  inset:0;
+  z-index:10050;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:14px;
+  background:rgba(0,0,0,.78);
+}
+.moon-picker-modal.open{display:flex;}
+.moon-picker-dialog{
+  width:min(760px,100%);
+  max-height:92vh;
+  overflow:auto;
+  background:#0d1525;
+  border:1px solid #4a4373;
+  border-radius:13px;
+  padding:13px;
+  box-shadow:0 18px 60px rgba(0,0,0,.45);
+}
+.moon-picker-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:10px;
+}
+.moon-picker-title{font-size:14px;font-weight:bold;color:#d8d0ff;}
+.moon-picker-close{
+  background:#151829;border:1px solid #4a4f68;color:#cfd8e8;
+  border-radius:7px;padding:7px 10px;cursor:pointer;
+}
+.moon-picker-nav{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:8px;
+  margin-bottom:10px;
+}
+.moon-picker-nav button{
+  background:#10182a;border:1px solid #314b6a;color:#a9c7e5;
+  border-radius:7px;padding:7px 10px;cursor:pointer;
+}
+.moon-picker-month{text-align:center;font-size:14px;font-weight:bold;color:#ffd54f;}
+.moon-picker-week,.moon-picker-grid{
+  display:grid;
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  gap:5px;
+}
+.moon-picker-week div{
+  text-align:center;font-size:10px;color:#7896af;padding:2px 0 4px;
+}
+.moon-picker-day{
+  min-height:88px;
+  background:#081120;
+  border:1px solid #1e3a5f;
+  border-radius:8px;
+  padding:6px 5px;
+  cursor:pointer;
+  text-align:center;
+  transition:border-color .15s, background .15s, transform .15s;
+}
+.moon-picker-day:hover{
+  border-color:#7c6fc6;background:#111a2e;transform:translateY(-1px);
+}
+.moon-picker-day.other{opacity:.32;}
+.moon-picker-day.today{box-shadow:0 0 0 1px #ffd54f inset;}
+.moon-picker-day.selected{border-color:#c084fc;box-shadow:0 0 0 1px #c084fc inset;background:#171129;}
+.moon-picker-num{font-size:11px;color:#dbe7f4;text-align:left;}
+.moon-picker-phase{font-size:26px;line-height:1.1;margin:3px 0;}
+.moon-picker-illum{font-size:10px;color:#b9aef0;}
+.moon-picker-hint{font-size:8px;line-height:1.25;margin-top:2px;color:#7896af;min-height:10px;}
+.moon-picker-hint.dark{color:#67e8f9;}
+.moon-picker-hint.bright{color:#fbbf24;}
+.moon-picker-foot{
+  margin-top:10px;
+  padding:9px 10px;
+  background:#081120;
+  border:1px solid #1e3a5f;
+  border-radius:8px;
+  font-size:10px;
+  color:#8fa8bf;
+  line-height:1.6;
+}
+@media(max-width:600px){
+  .moon-picker-dialog{padding:9px;}
+  .moon-picker-day{min-height:76px;padding:5px 3px;}
+  .moon-picker-phase{font-size:22px;}
+  .moon-picker-illum{font-size:9px;}
+  .moon-picker-hint{display:none;}
+  .moon-picker-nav button{padding:7px 8px;font-size:11px;}
+}
+
 .map-modal{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:9999;display:none;align-items:center;justify-content:center;padding:14px;}
 .map-modal.open{display:flex;}
 .map-dialog{width:min(920px,100%);max-height:92vh;overflow:auto;background:#0d1525;border:1px solid #2a4a6a;border-radius:12px;padding:12px;}
@@ -457,7 +564,9 @@ body.manual-open{overflow:hidden;}
 <div class="panel">
 <h2>📍 観測条件を設定</h2>
 <div class="obs-grid-primary">
-<div class="obs-field"><label>観測日時</label><input type="datetime-local" id="inDatetime"></div>
+<div class="obs-field"><label>観測日時</label><input type="datetime-local" id="inDatetime">
+<button type="button" class="moon-date-btn" id="openMoonDatePicker">🌙 月相を見ながら選ぶ</button>
+</div>
 <div class="obs-field"><label>場所名（任意）</label><input type="text" id="inPlace" placeholder="例：帯広"></div>
 </div>
 <div class="obs-grid-detail">
@@ -693,6 +802,32 @@ body.manual-open{overflow:hidden;}
 <canvas id="altChart" height="120"></canvas>
 </div>
 <div style="margin-top:12px"><button class="action gray sm" id="btnCloseDetail">✕ 閉じる</button></div>
+</div>
+
+
+<div class="moon-picker-modal" id="moonDatePickerModal" aria-hidden="true">
+  <div class="moon-picker-dialog" role="dialog" aria-modal="true" aria-labelledby="moonDatePickerTitle">
+    <div class="moon-picker-head">
+      <div class="moon-picker-title" id="moonDatePickerTitle">🌙 月相を見ながら観測日を選ぶ</div>
+      <button type="button" class="moon-picker-close" id="closeMoonDatePicker">✕ 閉じる</button>
+    </div>
+    <div class="moon-picker-nav">
+      <button type="button" id="moonDatePrev">◀ 前の月</button>
+      <div class="moon-picker-month" id="moonDateMonthLabel">—</div>
+      <button type="button" id="moonDateNext">次の月 ▶</button>
+    </div>
+    <div style="display:flex;justify-content:center;margin-bottom:8px">
+      <button type="button" class="moon-picker-close" id="moonDateToday">今日の月へ</button>
+    </div>
+    <div class="moon-picker-week">
+      <div>日</div><div>月</div><div>火</div><div>水</div><div>木</div><div>金</div><div>土</div>
+    </div>
+    <div class="moon-picker-grid" id="moonDateGrid"></div>
+    <div class="moon-picker-foot">
+      日付をタップすると、現在設定されている「時刻」を保ったまま観測日だけ変更します。<br>
+      🌑 新月付近は月明かりが少なく、淡い星雲・銀河などを狙いやすい目安です。🌕 満月付近は月明かりの影響が大きくなります。
+    </div>
+  </div>
 </div>
 
 <div class="map-modal" id="mapSelectModal" aria-hidden="true">
@@ -1018,6 +1153,8 @@ body.manual-open{overflow:hidden;}
           &lt;p&gt;ニコルでは、最初に観測条件を設定します。設定した日時と場所をもとに、天体の高度、方位、日の出・日の入り、月出・月没、星図、天候、流星群の観測条件などが計算されます。&lt;/p&gt;
           &lt;h4&gt;観測日時&lt;/h4&gt;
           &lt;p&gt;観測する日時を指定します。初期状態では、その日の夜の時刻が設定されています。「現在時刻をセット」を押すと、現在の日時へ変更できます。&lt;/p&gt;
+          &lt;h4&gt;月相を見ながら観測日を選ぶ&lt;/h4&gt;
+          &lt;p&gt;観測日時の下にある「🌙 月相を見ながら選ぶ」を押すと、各日の月相アイコンと輝面率を並べたカレンダーを表示します。新月付近の日や満月付近の日を視覚的に比較しながら観測日を選べます。日付を選ぶと、現在設定している時刻はそのままに、日付だけが変更されます。&lt;/p&gt;
           &lt;h4&gt;場所名&lt;/h4&gt;
           &lt;p&gt;観測場所を分かりやすくするための名前です。例えば「帯広」「然別湖」「自宅」「三国峠」などを入力できます。場所名自体は天体計算には使用されず、天体計算では緯度・経度が使用されます。&lt;/p&gt;
           &lt;h4&gt;緯度・経度&lt;/h4&gt;
@@ -4324,6 +4461,7 @@ const TYPE_LABEL={galaxy:"銀河",nebula:"星雲",cluster:"星団",planet:"惑�
 const TYPE_BADGE={galaxy:"b-type-galaxy",nebula:"b-type-nebula",cluster:"b-type-cluster",planet:"b-type-planet",double:"b-type-double",star:"b-type-star",snr:"b-type-snr"};
 let currentResults=[],currentLat,currentLon,currentDate,activeFilter="all",currentSort="score";
 let moonCalBaseDate=new Date();
+let moonDatePickerBaseDate=new Date();
 
 (function(){
 const now=new Date();const p=n=>String(n).padStart(2,"0");
@@ -4696,6 +4834,108 @@ showDetail(found,null);
 grid.appendChild(div);
 });
 }
+
+function moonPickerHint(illum){
+if(illum<=15)return{label:"暗い空を狙いやすい",cls:"dark"};
+if(illum>=85)return{label:"月明かりが強い",cls:"bright"};
+return{label:"",cls:""};
+}
+
+function currentObservationTimeParts(){
+const raw=$("#inDatetime")?$("#inDatetime").value:"";
+const m=String(raw||"").match(/T(\d{2}):(\d{2})/);
+return m?{hour:Number(m[1]),minute:Number(m[2])}:{hour:21,minute:0};
+}
+
+function setObservationDateKeepTime(date){
+const t=currentObservationTimeParts();
+const p=n=>String(n).padStart(2,"0");
+$("#inDatetime").value=
+`${date.getFullYear()}-${p(date.getMonth()+1)}-${p(date.getDate())}T${p(t.hour)}:${p(t.minute)}`;
+}
+
+function renderMoonDatePicker(baseDate){
+const grid=$("#moonDateGrid"),label=$("#moonDateMonthLabel");
+if(!grid||!label)return;
+const y=baseDate.getFullYear(),m=baseDate.getMonth();
+label.textContent=`${y}年${m+1}月`;
+grid.innerHTML="";
+
+const first=new Date(y,m,1,12,0,0);
+const startDay=first.getDay();
+const daysInMonth=new Date(y,m+1,0).getDate();
+const prevLast=new Date(y,m,0).getDate();
+const today=new Date();
+
+const selectedRaw=$("#inDatetime")?$("#inDatetime").value:"";
+const selected=selectedRaw?new Date(selectedRaw):null;
+
+const cells=[];
+for(let i=0;i<startDay;i++){
+const n=prevLast-startDay+i+1;
+cells.push({date:new Date(y,m-1,n,12,0,0),num:n,other:true});
+}
+for(let n=1;n<=daysInMonth;n++){
+cells.push({date:new Date(y,m,n,12,0,0),num:n,other:false});
+}
+while(cells.length%7!==0){
+const n=cells.length-(startDay+daysInMonth)+1;
+cells.push({date:new Date(y,m+1,n,12,0,0),num:n,other:true});
+}
+
+cells.forEach(c=>{
+const info=moonPhaseInfo(c.date);
+const hint=moonPickerHint(info.moonIllum);
+const isToday=
+c.date.getFullYear()===today.getFullYear()&&
+c.date.getMonth()===today.getMonth()&&
+c.date.getDate()===today.getDate();
+const isSelected=selected&&!isNaN(selected)&&
+c.date.getFullYear()===selected.getFullYear()&&
+c.date.getMonth()===selected.getMonth()&&
+c.date.getDate()===selected.getDate();
+
+const btn=document.createElement("button");
+btn.type="button";
+btn.className=`moon-picker-day${c.other?" other":""}${isToday?" today":""}${isSelected?" selected":""}`;
+btn.setAttribute("aria-label",`${c.date.getFullYear()}年${c.date.getMonth()+1}月${c.date.getDate()}日、${getMoonPhaseName(info.moonAge)}、輝面${info.moonIllum}%`);
+btn.innerHTML=`
+<div class="moon-picker-num">${c.num}</div>
+<div class="moon-picker-phase">${info.moonPhase}</div>
+<div class="moon-picker-illum">${info.moonIllum}%</div>
+<div class="moon-picker-hint ${hint.cls}">${hint.label}</div>`;
+btn.addEventListener("click",()=>{
+setObservationDateKeepTime(c.date);
+closeMoonDatePicker();
+});
+grid.appendChild(btn);
+});
+}
+
+function openMoonDatePicker(){
+const modal=$("#moonDatePickerModal");
+if(!modal)return;
+const raw=$("#inDatetime")?$("#inDatetime").value:"";
+const d=raw?new Date(raw):new Date();
+moonDatePickerBaseDate=new Date(
+Number.isFinite(d.getTime())?d.getFullYear():new Date().getFullYear(),
+Number.isFinite(d.getTime())?d.getMonth():new Date().getMonth(),
+1
+);
+renderMoonDatePicker(moonDatePickerBaseDate);
+modal.classList.add("open");
+modal.setAttribute("aria-hidden","false");
+document.body.classList.add("manual-open");
+}
+
+function closeMoonDatePicker(){
+const modal=$("#moonDatePickerModal");
+if(!modal)return;
+modal.classList.remove("open");
+modal.setAttribute("aria-hidden","true");
+document.body.classList.remove("manual-open");
+}
+
 function renderMoonCalendar(baseDate){
 const grid=$("#moonCalGrid"),title=$("#moonCalTitle"),detail=$("#moonCalDetail");
 if(!grid||!title||!detail)return;
@@ -5009,6 +5249,30 @@ renderMoonCalendar(moonCalBaseDate);
 $("#moonToday").addEventListener("click",()=>{
 moonCalBaseDate=new Date(new Date().getFullYear(),new Date().getMonth(),1);
 renderMoonCalendar(moonCalBaseDate);
+});
+
+$("#openMoonDatePicker").addEventListener("click",openMoonDatePicker);
+$("#closeMoonDatePicker").addEventListener("click",closeMoonDatePicker);
+$("#moonDatePrev").addEventListener("click",()=>{
+moonDatePickerBaseDate=new Date(moonDatePickerBaseDate.getFullYear(),moonDatePickerBaseDate.getMonth()-1,1);
+renderMoonDatePicker(moonDatePickerBaseDate);
+});
+$("#moonDateNext").addEventListener("click",()=>{
+moonDatePickerBaseDate=new Date(moonDatePickerBaseDate.getFullYear(),moonDatePickerBaseDate.getMonth()+1,1);
+renderMoonDatePicker(moonDatePickerBaseDate);
+});
+$("#moonDateToday").addEventListener("click",()=>{
+const now=new Date();
+moonDatePickerBaseDate=new Date(now.getFullYear(),now.getMonth(),1);
+renderMoonDatePicker(moonDatePickerBaseDate);
+});
+$("#moonDatePickerModal").addEventListener("click",event=>{
+if(event.target===$("#moonDatePickerModal"))closeMoonDatePicker();
+});
+document.addEventListener("keydown",event=>{
+if(event.key==="Escape"&&$("#moonDatePickerModal")?.classList.contains("open")){
+closeMoonDatePicker();
+}
 });
 function showDetail(obj,card){
 document.querySelectorAll(".obj-card").forEach(c=>c.classList.remove("active"));
