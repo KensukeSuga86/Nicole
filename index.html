@@ -598,6 +598,17 @@ text-align:right;
   white-space:nowrap;
 }
 .manual-open-btn:hover{background:#1a3a5c;color:#fff;}
+footer{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+}
+.footer-manual-btn{
+  margin:0;
+  min-width:120px;
+}
 .manual-modal{
   position:fixed;
   inset:0;
@@ -647,7 +658,7 @@ text-align:right;
 body.manual-open{overflow:hidden;}
 @media(max-width:600px){
   .header-actions{width:100%;margin-left:0;}
-  .manual-open-btn,.header-actions .night-mode-toggle{flex:1 1 auto;}
+  .header-actions .night-mode-toggle{flex:1 1 auto;}
   .manual-modal-head{padding:8px 10px;}
 }
 
@@ -657,7 +668,6 @@ body.manual-open{overflow:hidden;}
 <header>
 <div><h1>🔭 Nicole the Astronavigator</h1></div>
 <div class="header-actions">
-<button type="button" class="manual-open-btn" id="openManual">📖 使い方</button>
 <button type="button" class="night-mode-toggle" id="nightModeToggle" aria-pressed="false">🔴 赤色夜間モード</button>
 </div>
 </header>
@@ -779,12 +789,12 @@ body.manual-open{overflow:hidden;}
 
 <div class="skymap-controls">
 <label><input type="checkbox" id="skyShowLines" checked> 星座線</label>
-<label><input type="checkbox" id="skyShowNames" checked> 星座名</label>
+<label><input type="checkbox" id="skyShowNames"> 星座名</label>
 <label><input type="checkbox" id="skyShowPlanets" checked> 太陽・月・惑星</label>
-<label><input type="checkbox" id="skyShowDSO" checked> 主要天体</label>
+<label><input type="checkbox" id="skyShowDSO"> 主要天体</label>
 <label><input type="checkbox" id="skyShowSmallBodies"> 彗星・小惑星</label>
 <label><input type="checkbox" id="skyShowMeteors"> 流星群放射点</label>
-<label><input type="checkbox" id="skyShowMilkyWay" checked> 天の川</label><span id="skyMilkyWayStatus" style="font-size:9px;color:#6f94b3"></span>
+<label><input type="checkbox" id="skyShowMilkyWay"> 天の川</label><span id="skyMilkyWayStatus" style="font-size:9px;color:#6f94b3"></span>
 <label>恒星 <select id="skyMag"><option value="2">2等まで</option><option value="3">3等まで</option><option value="4">4等まで</option><option value="5" selected>5等まで</option><option value="6">6等まで</option></select></label>
 </div>
 
@@ -1421,7 +1431,7 @@ body.manual-open{overflow:hidden;}
           &lt;p&gt;星図は「全天」と「地平」を切り替えられます。「全天」では天頂を中心に地平線までを円形に表示します。「地平」では、正面よりやや上を見上げたときに近い透視図法で表示し、向いている方角と見上げ角を変更できます。初期状態は南向き・仰角35°です。&lt;/p&gt;
           &lt;p&gt;地平表示でも、時刻変更、星座線、星座名、太陽・月・惑星、主要天体、ズームなどの機能を利用できます。ドラッグやスワイプで向きを変え、上方向・下方向への操作で見上げ角も変えられます。&lt;/p&gt;
           &lt;h4&gt;天の川を表示する&lt;/h4&gt;
-          &lt;p&gt;星図の「天の川」をONにすると、天の川の実測等輝度輪郭データを星図上に投影して表示します。最外周の輪郭を主線として描き、内部の等輝度輪郭も薄く表示します。初回はオンラインで輪郭データを取得し、以後はブラウザに保存したデータを利用できます。&lt;/p&gt;
+          &lt;p&gt;星図の「天の川」をONにすると、天の川の実測等輝度輪郭データを星図上に薄い線で投影して表示します。最外周の輪郭を主線として描き、内部の等輝度輪郭も薄く表示します。初回はオンラインで輪郭データを取得し、以後はブラウザに保存したデータを利用できます。&lt;/p&gt;
           &lt;h4&gt;カメラの写野を表示する&lt;/h4&gt;
           &lt;p&gt;「📷 写野を表示」をONにし、センサーサイズとレンズの焦点距離を指定すると、星図の中心方向を撮影した場合のおおよその撮像範囲を枠で表示します。センサーサイズはフルサイズ、APS-C、フォーサーズから選択でき、横位置・縦位置も切り替えられます。初期設定はフルサイズ＋35mmです。&lt;/p&gt;
           &lt;p&gt;「全天」でも写野を表示できます。写野枠の内側をドラッグ／スワイプすると、全天図上で撮影方向を自由に移動できます。「地平」では現在画面中央を向いて撮影する場合の写野として表示されます。地平モードで星図をドラッグすると、写野も視線方向と一緒に移動します。&lt;/p&gt;
@@ -1665,7 +1675,8 @@ document.addEventListener(&#x27;click&#x27;, event =&gt; {
 </div>
 
 <footer>
-🔭 Nicole the Astronavigator ／ 制作者：<span>Kensuke Suga</span>
+<div>🔭 Nicole the Astronavigator ／ 制作者：<span>Kensuke Suga</span></div>
+<button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
 </footer>
 
 <script>
@@ -4186,11 +4197,11 @@ const features=MILKYWAY_OUTLINE_DATA.features||[];
 
 /* ol1が最外周。必要に応じて内部等輝度輪郭もごく薄く表示 */
 const styles={
-ol1:{color:"rgba(194,205,232,.62)",width:1.45},
-ol2:{color:"rgba(176,190,220,.20)",width:.8},
-ol3:{color:"rgba(176,190,220,.14)",width:.7},
-ol4:{color:"rgba(176,190,220,.10)",width:.65},
-ol5:{color:"rgba(176,190,220,.08)",width:.6}
+ol1:{color:"rgba(194,205,232,.32)",width:1.25},
+ol2:{color:"rgba(176,190,220,.10)",width:.75},
+ol3:{color:"rgba(176,190,220,.07)",width:.68},
+ol4:{color:"rgba(176,190,220,.05)",width:.62},
+ol5:{color:"rgba(176,190,220,.035)",width:.58}
 };
 
 for(const feature of features){
@@ -4365,16 +4376,7 @@ ctx.moveTo(center.x-5,center.y);ctx.lineTo(center.x+5,center.y);
 ctx.moveTo(center.x,center.y-5);ctx.lineTo(center.x,center.y+5);
 ctx.stroke();
 
-ctx.fillStyle="rgba(251,207,232,.95)";
-ctx.font="10px sans-serif";
-ctx.textAlign="left";
-ctx.textBaseline="bottom";
-const fovCenterLabel=SKY_PROJECTION==="perspective"
-?""
-:`${azToDir(centerAz)} ${Math.round(centerAlt)}°  `;
-ctx.fillText(`${fovCenterLabel}${f.focal}mm  ${f.hFov.toFixed(1)}°×${f.vFov.toFixed(1)}°`,center.x+8,center.y-18);
-ctx.fillStyle="rgba(255,217,138,.95)";
-ctx.fillText(`500ルール 約${f.maxExposure500>=10?f.maxExposure500.toFixed(1):f.maxExposure500.toFixed(2)}秒`,center.x+8,center.y-6);
+
 }
 ctx.restore();
 }
