@@ -448,9 +448,14 @@ footer span{color:#7eb8e8;}
 .skymap-perspective-controls select{
   width:auto;min-width:74px;padding:5px 7px;font-size:11px;
 }
-.skymap-view-hint{font-size:9px;color:#6a8aaa;margin-left:auto;}
+.skymap-view-hint{
+font-size:9px;color:#6a8aaa;margin-left:auto;
+white-space:nowrap;
+min-width:150px;
+text-align:right;
+}
 @media(max-width:600px){
-  .skymap-view-hint{width:100%;margin-left:0;}
+  .skymap-view-hint{width:100%;min-width:0;margin-left:0;text-align:left;}
 }
 
 .skymap-canvas-wrap{display:flex;justify-content:center;overflow:hidden;background:#030711;border:1px solid #1e3a5f;border-radius:10px;padding:8px;}
@@ -2363,6 +2368,7 @@ const SKY_ZOOM_MAX=5;
 const SKY_POINTERS=new Map();
 let SKY_GESTURE=null;
 let SKY_POINTER_MOVED=false;
+let SKY_INTERACTIVE_RAF=0;
 
 const NICOLE_NIGHT_MODE_KEY="nicole_night_mode_v1";
 
@@ -2450,7 +2456,7 @@ if(pBtn)pBtn.classList.toggle("active",SKY_PROJECTION==="perspective");
 if(controls)controls.classList.toggle("show",SKY_PROJECTION==="perspective");
 if(hint){
 hint.textContent=SKY_PROJECTION==="perspective"
-?`${azToDir(SKY_PERSPECTIVE_AZ)}向き・仰角${SKY_PERSPECTIVE_ALT}°の地平表示（ドラッグ/スワイプで向き変更）`
+?"ドラッグ／スワイプで向き変更"
 :"天頂を中心に地平線まで表示";
 }
 }
@@ -2472,6 +2478,31 @@ return a;
 
 function clampPerspectiveAltitudeDeg(v){
 return Math.max(5,Math.min(85,Number(v)||35));
+}
+
+function syncPerspectiveSelectors(){
+const azSel=$("#skyPerspectiveAz");
+const altSel=$("#skyPerspectiveAlt");
+if(azSel){
+const azPreset=(Math.round(SKY_PERSPECTIVE_AZ/45)*45)%360;
+azSel.value=String(azPreset);
+}
+if(altSel){
+const presets=[20,35,50,65];
+let closest=presets[0];
+for(const v of presets){
+if(Math.abs(v-SKY_PERSPECTIVE_ALT)<Math.abs(closest-SKY_PERSPECTIVE_ALT))closest=v;
+}
+altSel.value=String(closest);
+}
+}
+
+function requestSkyInteractiveRender(){
+if(SKY_INTERACTIVE_RAF)return;
+SKY_INTERACTIVE_RAF=requestAnimationFrame(()=>{
+SKY_INTERACTIVE_RAF=0;
+renderSkyChart(true);
+});
 }
 
 function clampSkyZoom(v){
@@ -3971,7 +4002,7 @@ if(p)ctx.fillText(`${alt}°`,p.x+18,p.y);
 ctx.restore();
 }
 
-function renderSkyChart(){
+function renderSkyChart(interactive=false){
 const canvas=$("#skyMapCanvas");
 if(!canvas)return;
 const lat=Number.isFinite(currentLat)?currentLat:parseFloat($("#inLat").value);
@@ -4130,10 +4161,11 @@ const sun=sunPosition(toJD(date)),moon=moonPosition(toJD(date));
 DSO_DB.filter(o=>o.type==="planet").forEach(o=>{const q=planetRaDec(o.planet,toJD(date));const p=skyProject(q.ra,q.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.strokeStyle="#c084fc";ctx.lineWidth=1.4;ctx.beginPath();ctx.moveTo(p.x,p.y-4);ctx.lineTo(p.x+4,p.y);ctx.lineTo(p.x,p.y+4);ctx.lineTo(p.x-4,p.y);ctx.closePath();ctx.stroke();ctx.fillStyle="#d8b4fe";ctx.font="10px sans-serif";ctx.textAlign="left";ctx.fillText(o.name,p.x+7,p.y);SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"planet",name:o.name,mag:q.mag,alt:p.alt,az:p.az});});
 }
 
+if(!interactive){
 const pad=n=>String(n).padStart(2,"0");
 const place=$("#inPlace").value||"指定場所";
 const projectionInfo=SKY_PROJECTION==="perspective"
-?`地平 / ${azToDir(SKY_PERSPECTIVE_AZ)}向き・仰角${SKY_PERSPECTIVE_ALT}°`
+?`地平 / ${azToDir(SKY_PERSPECTIVE_AZ)}向き・仰角${Math.round(SKY_PERSPECTIVE_ALT)}°`
 :"全天 / 北が上・東が左";
 $("#skyMapInfo").textContent=`${date.getFullYear()}年${pad(date.getMonth()+1)}月${pad(date.getDate())}日 ${pad(date.getHours())}:${pad(date.getMinutes())} / ${place} / ${projectionInfo}`;
 if($("#skyViewTimeLabel")){
@@ -4145,6 +4177,7 @@ if($("#skyZoomLabel"))$("#skyZoomLabel").textContent=`${Math.round(SKY_ZOOM*100)
 if($("#skyZoomReset"))$("#skyZoomReset").textContent=`${Math.round(SKY_ZOOM*100)}%`;
 syncSkyTimeSlider();
 renderWeatherForDate(date);
+}
 }
 
 function showSkyMapHit(hit){
@@ -5022,16 +5055,10 @@ const azSensitivity=0.28;
 const altSensitivity=0.18;
 SKY_PERSPECTIVE_AZ=normalizeAzimuthDeg(SKY_GESTURE.az-dx*azSensitivity);
 SKY_PERSPECTIVE_ALT=clampPerspectiveAltitudeDeg(SKY_GESTURE.alt-dy*altSensitivity);
-const azSel=$("#skyPerspectiveAz"),altSel=$("#skyPerspectiveAlt");
-if(azSel)azSel.value=String(Math.round(SKY_PERSPECTIVE_AZ/45)*45%360);
-if(altSel){
-const presets=[20,35,50,65];
-let closest=presets[0];
-for(const v of presets){ if(Math.abs(v-SKY_PERSPECTIVE_ALT)<Math.abs(closest-SKY_PERSPECTIVE_ALT)) closest=v; }
-altSel.value=String(closest);
-}
-updateSkyProjectionUI();
-renderSkyChart();
+
+/* 操作中は星図Canvasだけ再描画する。
+   方角・仰角表示や天候UIなどのDOM更新は指を離した時に一度だけ行う。 */
+requestSkyInteractiveRender();
 }else if(SKY_POINTERS.size===1&&SKY_GESTURE&&SKY_GESTURE.type==="pan"&&SKY_ZOOM>1.001){
 const dx=event.offsetX-SKY_GESTURE.startX;
 const dy=event.offsetY-SKY_GESTURE.startY;
@@ -5065,7 +5092,7 @@ const newZoom=clampSkyZoom(SKY_GESTURE.zoom*(dist/SKY_GESTURE.distance));
 
 if(SKY_PROJECTION==="perspective"){
 SKY_ZOOM=newZoom;
-renderSkyChart();
+requestSkyInteractiveRender();
 }else{
 const cx=skyCanvas.clientWidth/2,cy=skyCanvas.clientHeight/2;
 const worldX=(SKY_GESTURE.midX-cx-SKY_GESTURE.panX)/SKY_GESTURE.zoom;
@@ -5084,6 +5111,13 @@ SKY_POINTERS.delete(event.pointerId);
 if(SKY_POINTERS.size===0){
 skyCanvas.classList.remove("dragging");
 SKY_GESTURE=null;
+
+if(SKY_PROJECTION==="perspective"){
+syncPerspectiveSelectors();
+updateSkyProjectionUI();
+/* 操作終了時にだけ方角・仰角表示などを更新 */
+renderSkyChart();
+}
 }else if(SKY_POINTERS.size===1){
 const p=[...SKY_POINTERS.values()][0];
 if(SKY_PROJECTION==="perspective"){
