@@ -454,6 +454,56 @@ white-space:nowrap;
 min-width:150px;
 text-align:right;
 }
+
+.skymap-fov-controls{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  flex-wrap:wrap;
+  margin:8px 0 0;
+  padding:8px 10px;
+  background:#081120;
+  border:1px solid #17314d;
+  border-radius:8px;
+}
+.skymap-fov-controls label{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  margin:0;
+  color:#8ab4d4;
+  font-size:10px;
+}
+.skymap-fov-controls .fov-check{color:#c8dff0;font-weight:bold;}
+.skymap-fov-controls input[type="checkbox"]{width:auto;margin:0;}
+.skymap-fov-controls select{width:auto;min-width:86px;padding:5px 7px;font-size:11px;}
+.fov-number-wrap{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+}
+.fov-number-wrap input{
+  width:70px;
+  min-width:0;
+  padding:5px 7px;
+  font-size:11px;
+}
+.skymap-fov-info{
+  margin-left:auto;
+  font-size:9px;
+  color:#f2c6ff;
+  white-space:nowrap;
+}
+.skymap-fov-500{
+  font-size:9px;
+  color:#ffd98a;
+  white-space:nowrap;
+  padding-left:2px;
+}
+@media(max-width:700px){
+  .skymap-fov-info,.skymap-fov-500{width:100%;margin-left:0;white-space:normal;}
+}
+
 @media(max-width:600px){
   .skymap-view-hint{width:100%;min-width:0;margin-left:0;text-align:left;}
 }
@@ -734,7 +784,30 @@ body.manual-open{overflow:hidden;}
 <label><input type="checkbox" id="skyShowDSO" checked> 主要天体</label>
 <label><input type="checkbox" id="skyShowSmallBodies"> 彗星・小惑星</label>
 <label><input type="checkbox" id="skyShowMeteors"> 流星群放射点</label>
+<label><input type="checkbox" id="skyShowMilkyWay" checked> 天の川</label><span id="skyMilkyWayStatus" style="font-size:9px;color:#6f94b3"></span>
 <label>恒星 <select id="skyMag"><option value="2">2等まで</option><option value="3">3等まで</option><option value="4">4等まで</option><option value="5" selected>5等まで</option><option value="6">6等まで</option></select></label>
+</div>
+
+<div class="skymap-fov-controls">
+<label class="fov-check"><input type="checkbox" id="skyShowFov"> 📷 写野を表示</label>
+<label>センサー
+<select id="skyFovSensor">
+<option value="36,24,1" selected>フルサイズ</option>
+<option value="23.5,15.6,1.5">APS-C</option>
+<option value="17.3,13,2">フォーサーズ</option>
+</select>
+</label>
+<label>焦点距離
+<span class="fov-number-wrap"><input type="number" id="skyFovFocal" min="4" max="3000" step="1" value="35"><span>mm</span></span>
+</label>
+<label>向き
+<select id="skyFovOrientation">
+<option value="landscape" selected>横位置</option>
+<option value="portrait">縦位置</option>
+</select>
+</label>
+<span class="skymap-fov-info" id="skyFovInfo">フルサイズ 35mm：54.4° × 37.8°</span>
+<span class="skymap-fov-500" id="skyFov500">500ルール：最大 約14.3秒</span>
 </div>
 
 <div class="weather-panel" id="weatherPanel">
@@ -1347,6 +1420,11 @@ body.manual-open{overflow:hidden;}
           &lt;h4&gt;星図の表示を切り替える&lt;/h4&gt;
           &lt;p&gt;星図は「全天」と「地平」を切り替えられます。「全天」では天頂を中心に地平線までを円形に表示します。「地平」では、正面よりやや上を見上げたときに近い透視図法で表示し、向いている方角と見上げ角を変更できます。初期状態は南向き・仰角35°です。&lt;/p&gt;
           &lt;p&gt;地平表示でも、時刻変更、星座線、星座名、太陽・月・惑星、主要天体、ズームなどの機能を利用できます。ドラッグやスワイプで向きを変え、上方向・下方向への操作で見上げ角も変えられます。&lt;/p&gt;
+          &lt;h4&gt;天の川を表示する&lt;/h4&gt;
+          &lt;p&gt;星図の「天の川」をONにすると、天の川の実測等輝度輪郭データを星図上に投影して表示します。最外周の輪郭を主線として描き、内部の等輝度輪郭も薄く表示します。初回はオンラインで輪郭データを取得し、以後はブラウザに保存したデータを利用できます。&lt;/p&gt;
+          &lt;h4&gt;カメラの写野を表示する&lt;/h4&gt;
+          &lt;p&gt;「📷 写野を表示」をONにし、センサーサイズとレンズの焦点距離を指定すると、星図の中心方向を撮影した場合のおおよその撮像範囲を枠で表示します。センサーサイズはフルサイズ、APS-C、フォーサーズから選択でき、横位置・縦位置も切り替えられます。初期設定はフルサイズ＋35mmです。&lt;/p&gt;
+          &lt;p&gt;「全天」でも写野を表示できます。写野枠の内側をドラッグ／スワイプすると、全天図上で撮影方向を自由に移動できます。「地平」では現在画面中央を向いて撮影する場合の写野として表示されます。地平モードで星図をドラッグすると、写野も視線方向と一緒に移動します。&lt;/p&gt;
           &lt;h4&gt;星図上の天体を確認する&lt;/h4&gt;
           &lt;p&gt;星図上に表示されている星や天体をタップすると、その天体についての情報を確認できます。星座カードなどにある「星図で見る」を使用すると、星図へ移動し、その対象を見つけやすくできます。星座の場合は対象となる星座線が強調表示されます。&lt;/p&gt;
           &lt;h4&gt;星図の時刻を変更する&lt;/h4&gt;
@@ -2370,6 +2448,19 @@ let SKY_GESTURE=null;
 let SKY_POINTER_MOVED=false;
 let SKY_INTERACTIVE_RAF=0;
 
+/* 全天モードの写野中心。初期値は天頂。 */
+let SKY_FOV_ALLSKY_ALT=90;
+let SKY_FOV_ALLSKY_AZ=0;
+let SKY_FOV_HIT_POLYGON=[];
+
+let MILKYWAY_OUTLINE_DATA=null;
+let MILKYWAY_LOADING=false;
+const MILKYWAY_CACHE_KEY="nicole_milkyway_outline_v1";
+const MILKYWAY_URLS=[
+"https://raw.githubusercontent.com/sergio-dr/mw_geojson/main/mw_simplified_43p.json",
+"https://raw.githubusercontent.com/ofrohn/d3-celestial/master/data/mw.json"
+];
+
 const NICOLE_NIGHT_MODE_KEY="nicole_night_mode_v1";
 
 let WEATHER_DATA=null;
@@ -2457,7 +2548,7 @@ if(controls)controls.classList.toggle("show",SKY_PROJECTION==="perspective");
 if(hint){
 hint.textContent=SKY_PROJECTION==="perspective"
 ?"ドラッグ／スワイプで向き変更"
-:"天頂を中心に地平線まで表示";
+:"天頂を中心に地平線まで表示／写野は枠内をドラッグして移動";
 }
 }
 
@@ -3875,8 +3966,10 @@ z:Math.sin(alt)
 };
 }
 
-function perspectiveProjectAltAz(alt,az,cx,cy,radius){
-if(alt<0)return null;
+function perspectiveProjectAltAz(alt,az,cx,cy,radius,allowBelowHorizon=false){
+if(!allowBelowHorizon && alt<0)return null;
+/* 写野枠では地上側も少し広めに許可 */
+if(allowBelowHorizon && alt<-89.5)return null;
 
 const v=horizontalUnitVector(alt,az);
 const forward=horizontalUnitVector(SKY_PERSPECTIVE_ALT,SKY_PERSPECTIVE_AZ);
@@ -3899,7 +3992,6 @@ const Z=v.x*forward.x+v.y*forward.y+v.z*forward.z;
 /* カメラ背面は表示しない */
 if(Z<=0.001)return null;
 
-/* 正距円筒ではなく、StellariumのPerspectiveに近いrectilinear投影 */
 const viewportHalf=radius*1.06;
 const halfFov=(SKY_PERSPECTIVE_FOV/2)*D2R;
 const scale=viewportHalf/Math.tan(halfFov);
@@ -3907,7 +3999,6 @@ const scale=viewportHalf/Math.tan(halfFov);
 let x=cx+(X/Z)*scale;
 let y=cy-(Y/Z)*scale;
 
-/* ズーム・パン */
 x=cx+(x-cx)*SKY_ZOOM+SKY_PAN_X;
 y=cy+(y-cy)*SKY_ZOOM+SKY_PAN_Y;
 
@@ -3924,9 +4015,9 @@ az:((az%360)+360)%360
 };
 }
 
-function skyProjectAltAz(alt,az,cx,cy,radius){
+function skyProjectAltAz(alt,az,cx,cy,radius,allowBelowHorizon=false){
 if(SKY_PROJECTION==="perspective"){
-return perspectiveProjectAltAz(alt,az,cx,cy,radius);
+return perspectiveProjectAltAz(alt,az,cx,cy,radius,allowBelowHorizon);
 }
 if(alt<0)return null;
 const r=radius*(90-alt)/90;
@@ -3944,6 +4035,348 @@ az
 function skyProject(ra,dec,lat,lon,date,cx,cy,radius){
 const aa=altAz(ra,dec,lat,lon,date);
 return skyProjectAltAz(aa.alt,aa.az,cx,cy,radius);
+}
+
+
+/* =====================================================
+天の川：実測等輝度輪郭データ
+d3-celestial系 Milky Way GeoJSON（RA/Dec）を使用
+===================================================== */
+function setMilkyWayStatus(message,color="#6f94b3"){
+const el=$("#skyMilkyWayStatus");
+if(!el)return;
+el.textContent=message||"";
+el.style.color=color;
+}
+
+function validateMilkyWayGeoJSON(data){
+return !!(
+data &&
+data.type==="FeatureCollection" &&
+Array.isArray(data.features) &&
+data.features.some(f=>f&&f.geometry&&["Polygon","MultiPolygon"].includes(f.geometry.type))
+);
+}
+
+function restoreMilkyWayCache(){
+try{
+const raw=localStorage.getItem(MILKYWAY_CACHE_KEY);
+if(!raw)return false;
+const data=JSON.parse(raw);
+if(!validateMilkyWayGeoJSON(data))return false;
+MILKYWAY_OUTLINE_DATA=data;
+setMilkyWayStatus("輪郭データ：保存済み","#7fc8a9");
+return true;
+}catch(e){
+return false;
+}
+}
+
+async function loadMilkyWayOutline(){
+if(MILKYWAY_LOADING)return;
+if(MILKYWAY_OUTLINE_DATA){
+renderSkyChart();
+return;
+}
+if(!navigator.onLine){
+setMilkyWayStatus("輪郭データ未取得（オフライン）","#fb923c");
+return;
+}
+
+MILKYWAY_LOADING=true;
+setMilkyWayStatus("輪郭データ読込中…","#8ab4d4");
+
+let lastError=null;
+for(const url of MILKYWAY_URLS){
+try{
+const res=await fetch(url,{cache:"no-store"});
+if(!res.ok)throw new Error(`HTTP ${res.status}`);
+const data=await res.json();
+if(!validateMilkyWayGeoJSON(data))throw new Error("データ形式が不正です");
+
+MILKYWAY_OUTLINE_DATA=data;
+try{
+localStorage.setItem(MILKYWAY_CACHE_KEY,JSON.stringify(data));
+}catch(e){}
+
+setMilkyWayStatus("輪郭データ：読込済み","#7fc8a9");
+MILKYWAY_LOADING=false;
+renderSkyChart();
+return;
+}catch(err){
+lastError=err;
+}
+}
+
+MILKYWAY_LOADING=false;
+setMilkyWayStatus("輪郭データ取得失敗","#f87171");
+console.warn("Milky Way outline load failed:",lastError);
+}
+
+function milkyWayRaFromGeoLon(lon){
+const v=Number(lon);
+if(!Number.isFinite(v))return null;
+/* d3-celestial: RAは -180..180° 表記 */
+return v<0?v+360:v;
+}
+
+function milkyWayGeometryRings(geometry){
+if(!geometry)return[];
+if(geometry.type==="Polygon"){
+return Array.isArray(geometry.coordinates)?geometry.coordinates:[];
+}
+if(geometry.type==="MultiPolygon"){
+const rings=[];
+(geometry.coordinates||[]).forEach(poly=>{
+(poly||[]).forEach(ring=>rings.push(ring));
+});
+return rings;
+}
+return[];
+}
+
+function drawMilkyWayRing(ctx,ring,lat,lon,date,cx,cy,R,style){
+if(!Array.isArray(ring)||ring.length<3)return;
+
+ctx.save();
+ctx.strokeStyle=style.color;
+ctx.lineWidth=style.width;
+ctx.lineJoin="round";
+ctx.lineCap="round";
+ctx.beginPath();
+
+let prev=null;
+let started=false;
+
+for(const coord of ring){
+if(!Array.isArray(coord)||coord.length<2){
+prev=null;started=false;continue;
+}
+const ra=milkyWayRaFromGeoLon(coord[0]);
+const dec=Number(coord[1]);
+if(!Number.isFinite(ra)||!Number.isFinite(dec)){
+prev=null;started=false;continue;
+}
+
+const p=skyProject(ra,dec,lat,lon,date,cx,cy,R);
+if(!p){
+prev=null;started=false;
+continue;
+}
+
+/* 地平線・投影境界・RA境界をまたぐ誤接続を防止 */
+const jump=prev?Math.hypot(p.x-prev.x,p.y-prev.y):0;
+if(!started || !prev || jump>R*0.34){
+ctx.moveTo(p.x,p.y);
+started=true;
+}else{
+ctx.lineTo(p.x,p.y);
+}
+prev=p;
+}
+
+ctx.stroke();
+ctx.restore();
+}
+
+function drawMilkyWay(ctx,lat,lon,date,cx,cy,R){
+if(!MILKYWAY_OUTLINE_DATA)return;
+
+const features=MILKYWAY_OUTLINE_DATA.features||[];
+
+/* ol1が最外周。必要に応じて内部等輝度輪郭もごく薄く表示 */
+const styles={
+ol1:{color:"rgba(194,205,232,.62)",width:1.45},
+ol2:{color:"rgba(176,190,220,.20)",width:.8},
+ol3:{color:"rgba(176,190,220,.14)",width:.7},
+ol4:{color:"rgba(176,190,220,.10)",width:.65},
+ol5:{color:"rgba(176,190,220,.08)",width:.6}
+};
+
+for(const feature of features){
+const id=String(feature.id||"").toLowerCase();
+const style=styles[id]||styles.ol1;
+const rings=milkyWayGeometryRings(feature.geometry);
+for(const ring of rings){
+drawMilkyWayRing(ctx,ring,lat,lon,date,cx,cy,R,style);
+}
+}
+}
+
+/* =====================================================
+カメラ写野
+===================================================== */
+function getFovSettings(){
+const sensorValue=$("#skyFovSensor")?$("#skyFovSensor").value:"36,24,1";
+let [sensorW,sensorH,cropFactor]=sensorValue.split(",").map(Number);
+let focal=parseFloat($("#skyFovFocal")?$("#skyFovFocal").value:"35");
+
+if(!Number.isFinite(sensorW)||!Number.isFinite(sensorH)){
+sensorW=36;sensorH=24;
+}
+if(!Number.isFinite(cropFactor)||cropFactor<=0)cropFactor=1;
+if(!Number.isFinite(focal)||focal<=0)focal=35;
+
+if($("#skyFovOrientation")?.value==="portrait"){
+[sensorW,sensorH]=[sensorH,sensorW];
+}
+
+const hFov=2*Math.atan(sensorW/(2*focal))/D2R;
+const vFov=2*Math.atan(sensorH/(2*focal))/D2R;
+const maxExposure500=500/(focal*cropFactor);
+
+return{sensorW,sensorH,cropFactor,focal,hFov,vFov,maxExposure500};
+}
+
+function updateFovInfo(){
+const info=$("#skyFovInfo");
+const rule=$("#skyFov500");
+const sensor=$("#skyFovSensor");
+const f=getFovSettings();
+
+if(info){
+const sensorName=sensor&&sensor.selectedOptions&&sensor.selectedOptions[0]
+?sensor.selectedOptions[0].textContent
+:"";
+info.textContent=`${sensorName} ${f.focal}mm：${f.hFov.toFixed(1)}° × ${f.vFov.toFixed(1)}°`;
+}
+
+if(rule){
+const sec=f.maxExposure500;
+const secText=sec>=10?sec.toFixed(1):sec.toFixed(2);
+rule.textContent=`500ルール：最大 約${secText}秒`;
+rule.title="目安：500 ÷（焦点距離 × クロップファクター）。星の流れを完全に保証するものではありません。";
+}
+}
+
+
+function allSkyCanvasToAltAz(x,y,cx,cy,R){
+/* ズーム・パンを戻して全天図の基準座標へ */
+const bx=cx+(x-cx-SKY_PAN_X)/SKY_ZOOM;
+const by=cy+(y-cy-SKY_PAN_Y)/SKY_ZOOM;
+const dx=bx-cx;
+const dy=by-cy;
+const r=Math.hypot(dx,dy);
+
+if(r>R*1.04)return null;
+
+const alt=Math.max(0,Math.min(90,90-(r/R)*90));
+let az=Math.atan2(-dx,-dy)/D2R;
+az=((az%360)+360)%360;
+return{alt,az};
+}
+
+function pointInPolygon(x,y,poly){
+if(!Array.isArray(poly)||poly.length<3)return false;
+let inside=false;
+for(let i=0,j=poly.length-1;i<poly.length;j=i++){
+const xi=poly[i].x, yi=poly[i].y;
+const xj=poly[j].x, yj=poly[j].y;
+const hit=((yi>y)!==(yj>y)) &&
+(x < (xj-xi)*(y-yi)/((yj-yi)||1e-9)+xi);
+if(hit)inside=!inside;
+}
+return inside;
+}
+
+function viewTangentPoint(centerAlt,centerAz,tx,ty){
+const forward=horizontalUnitVector(centerAlt,centerAz);
+const az=centerAz*D2R;
+const right={x:Math.cos(az),y:-Math.sin(az),z:0};
+const up={
+x:right.y*forward.z-right.z*forward.y,
+y:right.z*forward.x-right.x*forward.z,
+z:right.x*forward.y-right.y*forward.x
+};
+
+let x=forward.x+tx*right.x+ty*up.x;
+let y=forward.y+tx*right.y+ty*up.y;
+let z=forward.z+tx*right.z+ty*up.z;
+const n=Math.hypot(x,y,z)||1;
+x/=n;y/=n;z/=n;
+
+const alt=Math.asin(Math.max(-1,Math.min(1,z)))/D2R;
+let azDeg=Math.atan2(x,y)/D2R;
+azDeg=((azDeg%360)+360)%360;
+return{alt,az:azDeg};
+}
+
+function drawFovEdge(ctx,centerAlt,centerAz,cx,cy,R,edgeFn,collectPoints=null){
+ctx.beginPath();
+let prev=null;
+for(let i=0;i<=40;i++){
+const t=i/40;
+const q=edgeFn(t);
+const aa=viewTangentPoint(centerAlt,centerAz,q.tx,q.ty);
+
+/* 地平モードでは写野枠のみ地平線下も描く */
+const p=skyProjectAltAz(
+aa.alt,aa.az,cx,cy,R,
+SKY_PROJECTION==="perspective"
+);
+
+if(!p){prev=null;continue;}
+
+if(Array.isArray(collectPoints))collectPoints.push({x:p.x,y:p.y});
+
+if(prev&&Math.hypot(p.x-prev.x,p.y-prev.y)<R*0.55){
+ctx.lineTo(p.x,p.y);
+}else{
+ctx.moveTo(p.x,p.y);
+}
+prev=p;
+}
+ctx.stroke();
+}
+
+function drawCameraFov(ctx,cx,cy,R){
+const f=getFovSettings();
+const tx=Math.tan((f.hFov/2)*D2R);
+const ty=Math.tan((f.vFov/2)*D2R);
+
+/* 全天では独立した写野中心、地平では現在の視線中心 */
+const centerAlt=SKY_PROJECTION==="perspective"?SKY_PERSPECTIVE_ALT:SKY_FOV_ALLSKY_ALT;
+const centerAz=SKY_PROJECTION==="perspective"?SKY_PERSPECTIVE_AZ:SKY_FOV_ALLSKY_AZ;
+
+ctx.save();
+ctx.strokeStyle="rgba(244,114,182,.95)";
+ctx.lineWidth=1.7;
+ctx.setLineDash([7,4]);
+
+const hitPoly=[];
+drawFovEdge(ctx,centerAlt,centerAz,cx,cy,R,t=>({tx:-tx+2*tx*t,ty:-ty}),hitPoly);
+drawFovEdge(ctx,centerAlt,centerAz,cx,cy,R,t=>({tx:tx,ty:-ty+2*ty*t}),hitPoly);
+drawFovEdge(ctx,centerAlt,centerAz,cx,cy,R,t=>({tx:tx-2*tx*t,ty:ty}),hitPoly);
+drawFovEdge(ctx,centerAlt,centerAz,cx,cy,R,t=>({tx:-tx,ty:ty-2*ty*t}),hitPoly);
+
+/* 全天モードでのみ、写野内ドラッグ用の輪郭を保存 */
+SKY_FOV_HIT_POLYGON=SKY_PROJECTION==="allsky"?hitPoly:[];
+
+ctx.setLineDash([]);
+const center=skyProjectAltAz(
+centerAlt,centerAz,cx,cy,R,
+SKY_PROJECTION==="perspective"
+);
+if(center){
+ctx.strokeStyle="rgba(244,114,182,.8)";
+ctx.lineWidth=1;
+ctx.beginPath();
+ctx.moveTo(center.x-5,center.y);ctx.lineTo(center.x+5,center.y);
+ctx.moveTo(center.x,center.y-5);ctx.lineTo(center.x,center.y+5);
+ctx.stroke();
+
+ctx.fillStyle="rgba(251,207,232,.95)";
+ctx.font="10px sans-serif";
+ctx.textAlign="left";
+ctx.textBaseline="bottom";
+const fovCenterLabel=SKY_PROJECTION==="perspective"
+?""
+:`${azToDir(centerAz)} ${Math.round(centerAlt)}°  `;
+ctx.fillText(`${fovCenterLabel}${f.focal}mm  ${f.hFov.toFixed(1)}°×${f.vFov.toFixed(1)}°`,center.x+8,center.y-18);
+ctx.fillStyle="rgba(255,217,138,.95)";
+ctx.fillText(`500ルール 約${f.maxExposure500>=10?f.maxExposure500.toFixed(1):f.maxExposure500.toFixed(2)}秒`,center.x+8,center.y-6);
+}
+ctx.restore();
 }
 
 function drawPerspectiveGuide(ctx,cx,cy,R){
@@ -4031,6 +4464,14 @@ ctx.strokeStyle="#20364c";ctx.beginPath();ctx.moveTo(mapCx-mapR,mapCy);ctx.lineT
 ctx.fillStyle="#8ab4d4";ctx.font="bold 13px sans-serif";ctx.textAlign="center";ctx.textBaseline="middle";
 ctx.fillText("N",mapCx,mapCy-mapR-15);ctx.fillText("E",mapCx-mapR-15,mapCy);ctx.fillText("S",mapCx,mapCy+mapR+15);ctx.fillText("W",mapCx+mapR+15,mapCy);
 ctx.fillStyle="#4a6a8a";ctx.font="10px sans-serif";ctx.fillText("60°",mapCx+3,mapCy-mapR*(30/90));ctx.fillText("30°",mapCx+3,mapCy-mapR*(60/90));
+}
+
+if($("#skyShowMilkyWay")?.checked){
+if(MILKYWAY_OUTLINE_DATA){
+drawMilkyWay(ctx,lat,lon,date,cx,cy,R);
+}else if(!MILKYWAY_LOADING){
+loadMilkyWayOutline();
+}
 }
 
 const maxMag=parseFloat($("#skyMag").value||"5");
@@ -4159,6 +4600,10 @@ if($("#skyShowPlanets").checked){
 const sun=sunPosition(toJD(date)),moon=moonPosition(toJD(date));
 [{name:"☀ 太陽",ra:sun.ra,dec:sun.dec,color:"#ffd54f",r:5},{name:"☾ 月",ra:moon.ra,dec:moon.dec,color:"#e8e8f0",r:5}].forEach(o=>{const p=skyProject(o.ra,o.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.fillStyle=o.color;ctx.beginPath();ctx.arc(p.x,p.y,o.r,0,Math.PI*2);ctx.fill();ctx.font="10px sans-serif";ctx.textAlign="left";ctx.fillText(o.name,p.x+7,p.y);SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"solar",name:o.name,alt:p.alt,az:p.az});});
 DSO_DB.filter(o=>o.type==="planet").forEach(o=>{const q=planetRaDec(o.planet,toJD(date));const p=skyProject(q.ra,q.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.strokeStyle="#c084fc";ctx.lineWidth=1.4;ctx.beginPath();ctx.moveTo(p.x,p.y-4);ctx.lineTo(p.x+4,p.y);ctx.lineTo(p.x,p.y+4);ctx.lineTo(p.x-4,p.y);ctx.closePath();ctx.stroke();ctx.fillStyle="#d8b4fe";ctx.font="10px sans-serif";ctx.textAlign="left";ctx.fillText(o.name,p.x+7,p.y);SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"planet",name:o.name,mag:q.mag,alt:p.alt,az:p.az});});
+}
+
+if($("#skyShowFov")?.checked){
+drawCameraFov(ctx,cx,cy,R);
 }
 
 if(!interactive){
@@ -4904,6 +5349,15 @@ $("#skyMapObjectInfo").innerHTML='<b>☄ 彗星・小惑星</b><br>保存デー�
 renderSkyChart();
 });
 $("#skyMag").addEventListener("change",renderSkyChart);
+$("#skyShowMilkyWay").addEventListener("change",()=>{
+if($("#skyShowMilkyWay").checked && !MILKYWAY_OUTLINE_DATA)loadMilkyWayOutline();
+renderSkyChart();
+});
+$("#skyShowFov").addEventListener("change",()=>{updateFovInfo();renderSkyChart();});
+$("#skyFovSensor").addEventListener("change",()=>{updateFovInfo();renderSkyChart();});
+$("#skyFovFocal").addEventListener("input",()=>{updateFovInfo();renderSkyChart();});
+$("#skyFovOrientation").addEventListener("change",()=>{updateFovInfo();renderSkyChart();});
+updateFovInfo();
 
 $("#skyViewAllSky").addEventListener("click",()=>setSkyProjection("allsky"));
 $("#skyViewPerspective").addEventListener("click",()=>setSkyProjection("perspective"));
@@ -4987,6 +5441,12 @@ restoreSmallBodyCache();
 restoreWesternLineCache();
 loadWesternConstellationLines();
 
+/* 天の川輪郭も保存済みデータを優先。なければ初回だけ取得して保存 */
+restoreMilkyWayCache();
+if($("#skyShowMilkyWay")?.checked && !MILKYWAY_OUTLINE_DATA && navigator.onLine){
+loadMilkyWayOutline();
+}
+
 $("#meteorRefresh").addEventListener("click",loadMeteorShowers);
 $("#skyRedraw").addEventListener("click",renderSkyChart);
 const skyCanvas=$("#skyMapCanvas");
@@ -5016,6 +5476,16 @@ az:SKY_PERSPECTIVE_AZ,
 alt:SKY_PERSPECTIVE_ALT
 };
 }else{
+const fovEnabled=$("#skyShowFov")?.checked;
+const onFov=fovEnabled&&pointInPolygon(event.offsetX,event.offsetY,SKY_FOV_HIT_POLYGON);
+
+if(onFov){
+SKY_GESTURE={
+type:"fovmove",
+startX:event.offsetX,
+startY:event.offsetY
+};
+}else{
 SKY_GESTURE={
 type:"pan",
 startX:event.offsetX,
@@ -5023,6 +5493,7 @@ startY:event.offsetY,
 panX:SKY_PAN_X,
 panY:SKY_PAN_Y
 };
+}
 }
 }else if(SKY_POINTERS.size===2){
 const pts=[...SKY_POINTERS.values()];
@@ -5045,7 +5516,23 @@ skyCanvas.addEventListener("pointermove",event=>{
 if(!SKY_POINTERS.has(event.pointerId))return;
 SKY_POINTERS.set(event.pointerId,{x:event.offsetX,y:event.offsetY});
 
-if(SKY_POINTERS.size===1&&SKY_GESTURE&&SKY_GESTURE.type==="rotate"&&SKY_PROJECTION==="perspective"){
+if(SKY_POINTERS.size===1&&SKY_GESTURE&&SKY_GESTURE.type==="fovmove"&&SKY_PROJECTION==="allsky"){
+const dx=event.offsetX-SKY_GESTURE.startX;
+const dy=event.offsetY-SKY_GESTURE.startY;
+if(Math.hypot(dx,dy)>3)SKY_POINTER_MOVED=true;
+
+const canvas=$("#skyMapCanvas");
+const cx=canvas.clientWidth/2;
+const cy=canvas.clientHeight/2;
+const R=Math.min(canvas.clientWidth,canvas.clientHeight)*0.44;
+const aa=allSkyCanvasToAltAz(event.offsetX,event.offsetY,cx,cy,R);
+
+if(aa){
+SKY_FOV_ALLSKY_ALT=aa.alt;
+SKY_FOV_ALLSKY_AZ=aa.az;
+requestSkyInteractiveRender();
+}
+}else if(SKY_POINTERS.size===1&&SKY_GESTURE&&SKY_GESTURE.type==="rotate"&&SKY_PROJECTION==="perspective"){
 const dx=event.offsetX-SKY_GESTURE.startX;
 const dy=event.offsetY-SKY_GESTURE.startY;
 if(Math.hypot(dx,dy)>3)SKY_POINTER_MOVED=true;
@@ -5110,12 +5597,15 @@ function finishSkyPointer(event){
 SKY_POINTERS.delete(event.pointerId);
 if(SKY_POINTERS.size===0){
 skyCanvas.classList.remove("dragging");
+const finishedGesture=SKY_GESTURE?SKY_GESTURE.type:"";
 SKY_GESTURE=null;
 
 if(SKY_PROJECTION==="perspective"){
 syncPerspectiveSelectors();
 updateSkyProjectionUI();
 /* 操作終了時にだけ方角・仰角表示などを更新 */
+renderSkyChart();
+}else if(finishedGesture==="fovmove"){
 renderSkyChart();
 }
 }else if(SKY_POINTERS.size===1){
@@ -5129,7 +5619,11 @@ az:SKY_PERSPECTIVE_AZ,
 alt:SKY_PERSPECTIVE_ALT
 };
 }else{
-SKY_GESTURE={type:"pan",startX:p.x,startY:p.y,panX:SKY_PAN_X,panY:SKY_PAN_Y};
+const fovEnabled=$("#skyShowFov")?.checked;
+const onFov=fovEnabled&&pointInPolygon(p.x,p.y,SKY_FOV_HIT_POLYGON);
+SKY_GESTURE=onFov
+?{type:"fovmove",startX:p.x,startY:p.y}
+:{type:"pan",startX:p.x,startY:p.y,panX:SKY_PAN_X,panY:SKY_PAN_Y};
 }
 }
 }
