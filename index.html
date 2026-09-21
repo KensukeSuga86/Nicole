@@ -161,8 +161,18 @@ ul.tips{padding-left:1.4em;margin:6px 0;line-height:1.9;font-size:13px;color:#b8
 
 .obs-grid-primary{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;}
 .obs-grid-detail{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:10px;}
-.obs-field{min-width:0;}
-.obs-field input,.obs-field select{min-width:0;width:100%;max-width:100%;}
+.obs-field{min-width:0;max-width:100%;overflow:visible;}
+.obs-field input,.obs-field select{min-width:0;width:100%;max-width:100%;box-sizing:border-box;}
+#inDatetime{
+display:block;
+width:100%;
+min-width:0;
+max-width:100%;
+box-sizing:border-box;
+inline-size:100%;
+min-inline-size:0;
+max-inline-size:100%;
+}
 .location-presets{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
 .location-presets .loc-btn{flex:0 0 auto;}
 .map-select-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px;}
@@ -173,6 +183,12 @@ ul.tips{padding-left:1.4em;margin:6px 0;line-height:1.9;font-size:13px;color:#b8
 .obs-grid-primary{grid-template-columns:1fr 1fr;}
 .obs-grid-detail{grid-template-columns:1fr 1fr;}
 .panel{padding:15px 14px;margin:10px;}
+}
+@media(max-width:720px){
+.obs-grid-primary{grid-template-columns:minmax(0,1fr);}
+}
+@supports (-webkit-touch-callout:none){
+#inDatetime{-webkit-appearance:none;appearance:none;}
 }
 @media(max-width:560px){
 .obs-grid-primary,.obs-grid-detail{grid-template-columns:1fr;}
@@ -407,6 +423,36 @@ footer span{color:#7eb8e8;}
 .skymap-controls label{display:flex;align-items:center;gap:5px;margin:0;color:#9fc2dc;font-size:12px;white-space:nowrap;}
 .skymap-controls input[type="checkbox"]{width:auto;margin:0;}
 .skymap-controls select{width:auto;min-width:90px;padding:4px 8px;font-size:12px;}
+
+.skymap-viewbar{
+  display:flex;align-items:center;gap:7px;flex-wrap:wrap;
+  margin:0 0 10px;padding:8px 10px;
+  background:#081120;border:1px solid #17314d;border-radius:8px;
+}
+.skymap-viewbar .label{font-size:11px;color:#8ab4d4;}
+.skymap-viewbar button{
+  background:#0d2040;border:1px solid #2a5a8c;color:#9ccbf0;
+  border-radius:6px;padding:6px 10px;font-size:11px;cursor:pointer;
+}
+.skymap-viewbar button.active{
+  background:#1a3a5c;border-color:#7eb8e8;color:#fff;font-weight:bold;
+}
+.skymap-perspective-controls{
+  display:none;align-items:center;gap:6px;flex-wrap:wrap;
+  padding-left:4px;
+}
+.skymap-perspective-controls.show{display:flex;}
+.skymap-perspective-controls label{
+  display:flex;align-items:center;gap:5px;margin:0;color:#8ab4d4;font-size:10px;
+}
+.skymap-perspective-controls select{
+  width:auto;min-width:74px;padding:5px 7px;font-size:11px;
+}
+.skymap-view-hint{font-size:9px;color:#6a8aaa;margin-left:auto;}
+@media(max-width:600px){
+  .skymap-view-hint{width:100%;margin-left:0;}
+}
+
 .skymap-canvas-wrap{display:flex;justify-content:center;overflow:hidden;background:#030711;border:1px solid #1e3a5f;border-radius:10px;padding:8px;}
 #skyMapCanvas{display:block;width:min(100%,760px);height:auto;aspect-ratio:1/1;touch-action:none;cursor:grab;}#skyMapCanvas.dragging{cursor:grabbing;}
 .skymap-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;font-size:10px;color:#6a8aaa;}
@@ -647,6 +693,35 @@ body.manual-open{overflow:hidden;}
 </div>
 <button class="action gray sm" id="skyRedraw">↻ 再描画</button>
 </div>
+<div class="skymap-viewbar">
+<span class="label">🌌 星図表示</span>
+<button type="button" id="skyViewAllSky" class="active">全天</button>
+<button type="button" id="skyViewPerspective">地平</button>
+<div class="skymap-perspective-controls" id="skyPerspectiveControls">
+<label>向き
+<select id="skyPerspectiveAz">
+<option value="0">北</option>
+<option value="45">北東</option>
+<option value="90">東</option>
+<option value="135">南東</option>
+<option value="180" selected>南</option>
+<option value="225">南西</option>
+<option value="270">西</option>
+<option value="315">北西</option>
+</select>
+</label>
+<label>見上げ角
+<select id="skyPerspectiveAlt">
+<option value="20">20°</option>
+<option value="35" selected>35°</option>
+<option value="50">50°</option>
+<option value="65">65°</option>
+</select>
+</label>
+</div>
+<span class="skymap-view-hint" id="skyViewHint">天頂を中心に地平線まで表示</span>
+</div>
+
 <div class="skymap-controls">
 <label><input type="checkbox" id="skyShowLines" checked> 星座線</label>
 <label><input type="checkbox" id="skyShowNames" checked> 星座名</label>
@@ -1264,6 +1339,9 @@ body.manual-open{overflow:hidden;}
         &lt;div class=&quot;panel-body&quot;&gt;
           &lt;p&gt;星図では、指定した場所と日時から見える空を全天図として表示します。基本表示は、北が上、東が左、西が右、南が下です。&lt;/p&gt;
           &lt;p&gt;星図には、恒星、星座線、星座名、太陽、月、惑星、天体、彗星・小惑星、流星群の放射点などを表示できます。必要な情報だけをONにすることで、目的に合わせて星図を整理できます。&lt;/p&gt;
+          &lt;h4&gt;星図の表示を切り替える&lt;/h4&gt;
+          &lt;p&gt;星図は「全天」と「地平」を切り替えられます。「全天」では天頂を中心に地平線までを円形に表示します。「地平」では、正面よりやや上を見上げたときに近い透視図法で表示し、向いている方角と見上げ角を変更できます。初期状態は南向き・仰角35°です。&lt;/p&gt;
+          &lt;p&gt;地平表示でも、時刻変更、星座線、星座名、太陽・月・惑星、主要天体、ズームなどの機能を利用できます。ドラッグやスワイプで向きを変え、上方向・下方向への操作で見上げ角も変えられます。&lt;/p&gt;
           &lt;h4&gt;星図上の天体を確認する&lt;/h4&gt;
           &lt;p&gt;星図上に表示されている星や天体をタップすると、その天体についての情報を確認できます。星座カードなどにある「星図で見る」を使用すると、星図へ移動し、その対象を見つけやすくできます。星座の場合は対象となる星座線が強調表示されます。&lt;/p&gt;
           &lt;h4&gt;星図の時刻を変更する&lt;/h4&gt;
@@ -1453,19 +1531,50 @@ body.manual-open{overflow:hidden;}
 &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;/p&gt;
   &lt;/div&gt;
 
-  &lt;script&gt;
-    function setAllDetails(open){
-      document.querySelectorAll(&#x27;details.panel&#x27;).forEach(d =&gt; d.open = open);
-    }
+  
+&lt;script&gt;
+function setAllDetails(open){
+  document.querySelectorAll(&#x27;details.panel&#x27;).forEach(d =&gt; d.open = open);
+}
 
-    function openAndScroll(event, id){
-      if(event) event.preventDefault();
-      const el = document.getElementById(id);
-      if(!el) return;
-      if(el.tagName &amp;&amp; el.tagName.toLowerCase() === &#x27;details&#x27;) el.open = true;
-      el.scrollIntoView({behavior:&#x27;smooth&#x27;, block:&#x27;start&#x27;});
-    }
-  &lt;/script&gt;
+function scrollManualTarget(id){
+  const el = document.getElementById(id);
+  if(!el) return;
+  if(el.tagName &amp;&amp; el.tagName.toLowerCase() === &#x27;details&#x27;){
+    el.open = true;
+  }
+  requestAnimationFrame(() =&gt; {
+    el.scrollIntoView({behavior:&#x27;smooth&#x27;, block:&#x27;start&#x27;});
+  });
+}
+
+function openAndScroll(event, id){
+  if(event){
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  scrollManualTarget(id);
+}
+
+/* Safari / iPadOS 対策:
+   マニュアル内の #リンクはURLや履歴を変更せず、
+   このマニュアル内だけで移動する。 */
+document.addEventListener(&#x27;click&#x27;, event =&gt; {
+  const link = event.target.closest(&#x27;a[href^=&quot;#&quot;]&#x27;);
+  if(!link) return;
+
+  const href = link.getAttribute(&#x27;href&#x27;);
+  if(!href || href === &#x27;#&#x27;) return;
+
+  const id = decodeURIComponent(href.slice(1));
+  if(!document.getElementById(id)) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+  scrollManualTarget(id);
+}, true);
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 ">
@@ -2242,6 +2351,10 @@ let SKY_MAP_HITS=[];
 let SKY_FOCUS_CONSTELLATION_ID=null;
 let SKY_VIEW_DATE=null;
 
+let SKY_PROJECTION="allsky";
+let SKY_PERSPECTIVE_AZ=180;
+let SKY_PERSPECTIVE_ALT=35;
+const SKY_PERSPECTIVE_FOV=100;
 let SKY_ZOOM=1;
 let SKY_PAN_X=0;
 let SKY_PAN_Y=0;
@@ -2324,6 +2437,41 @@ setSkyViewOffsetHours(getSkyTimeOffsetHours()+hours);
 function resetSkyViewTime(){
 SKY_VIEW_DATE=getSkyBaseDate();
 renderSkyChart();
+}
+
+
+function updateSkyProjectionUI(){
+const allBtn=$("#skyViewAllSky");
+const pBtn=$("#skyViewPerspective");
+const controls=$("#skyPerspectiveControls");
+const hint=$("#skyViewHint");
+if(allBtn)allBtn.classList.toggle("active",SKY_PROJECTION==="allsky");
+if(pBtn)pBtn.classList.toggle("active",SKY_PROJECTION==="perspective");
+if(controls)controls.classList.toggle("show",SKY_PROJECTION==="perspective");
+if(hint){
+hint.textContent=SKY_PROJECTION==="perspective"
+?`${azToDir(SKY_PERSPECTIVE_AZ)}向き・仰角${SKY_PERSPECTIVE_ALT}°の地平表示（ドラッグ/スワイプで向き変更）`
+:"天頂を中心に地平線まで表示";
+}
+}
+
+function setSkyProjection(mode){
+SKY_PROJECTION=mode==="perspective"?"perspective":"allsky";
+SKY_ZOOM=1;
+SKY_PAN_X=0;
+SKY_PAN_Y=0;
+updateSkyProjectionUI();
+renderSkyChart();
+}
+
+function normalizeAzimuthDeg(v){
+let a=Number(v)||0;
+a=((a%360)+360)%360;
+return a;
+}
+
+function clampPerspectiveAltitudeDeg(v){
+return Math.max(5,Math.min(85,Number(v)||35));
 }
 
 function clampSkyZoom(v){
@@ -3567,7 +3715,11 @@ return CONSTELLATIONS.find(c=>String(c.abbr).toLowerCase()===String(abbr).toLowe
 
 function setSkyLineStatus(text,color="#6f94b3"){
 const el=$("#skyLineStatus");
-if(el){el.textContent=text;el.style.color=color;}
+if(el){
+el.textContent=text;
+el.style.color=color;
+el.style.display=text?"block":"none";
+}
 }
 
 function parseCsvRows(text){
@@ -3634,7 +3786,7 @@ SKY_CONSTELLATION_LINES=cached.lines;
 WESTERN_LINES_READY=true;
 
 const segCount=SKY_CONSTELLATION_LINES.reduce((n,c)=>n+c.lines.length,0);
-setSkyLineStatus(`星座線：Stellarium Western相当（保存済み / ${SKY_CONSTELLATION_LINES.length}星座・${segCount}線）`,"#7fc8a9");
+setSkyLineStatus("");
 return true;
 }catch(e){return false;}
 }
@@ -3671,7 +3823,7 @@ try{
 localStorage.setItem(WESTERN_CACHE_KEY,JSON.stringify({savedAt:new Date().toISOString(),stars,lines}));
 }catch(e){}
 
-setSkyLineStatus(`星座線：Stellarium Western相当（${lines.length}星座・${segCount}線 / 保存済み）`,"#7fc8a9");
+setSkyLineStatus("");
 
 if($("#rtab-skymap").classList.contains("active"))renderSkyChart();
 }catch(err){
@@ -3682,19 +3834,141 @@ setSkyLineStatus("星座線：内蔵簡易データ（Westernデータ取得失�
 }
 }
 
-function skyProject(ra,dec,lat,lon,date,cx,cy,radius){
-const aa=altAz(ra,dec,lat,lon,date);
-if(aa.alt<0)return null;
-const r=radius*(90-aa.alt)/90;
-const az=aa.az*D2R;
-const bx=cx-r*Math.sin(az);
-const by=cy-r*Math.cos(az);
+function horizontalUnitVector(altDeg,azDeg){
+const alt=altDeg*D2R,az=azDeg*D2R;
+/* x=東, y=北, z=天頂 */
+return{
+x:Math.cos(alt)*Math.sin(az),
+y:Math.cos(alt)*Math.cos(az),
+z:Math.sin(alt)
+};
+}
+
+function perspectiveProjectAltAz(alt,az,cx,cy,radius){
+if(alt<0)return null;
+
+const v=horizontalUnitVector(alt,az);
+const forward=horizontalUnitVector(SKY_PERSPECTIVE_ALT,SKY_PERSPECTIVE_AZ);
+
+/* 画面右方向。南を向いたときは西が右になる */
+const camAz=SKY_PERSPECTIVE_AZ*D2R;
+const right={x:Math.cos(camAz),y:-Math.sin(camAz),z:0};
+
+/* 画面上方向 */
+const up={
+x:right.y*forward.z-right.z*forward.y,
+y:right.z*forward.x-right.x*forward.z,
+z:right.x*forward.y-right.y*forward.x
+};
+
+const X=v.x*right.x+v.y*right.y+v.z*right.z;
+const Y=v.x*up.x+v.y*up.y+v.z*up.z;
+const Z=v.x*forward.x+v.y*forward.y+v.z*forward.z;
+
+/* カメラ背面は表示しない */
+if(Z<=0.001)return null;
+
+/* 正距円筒ではなく、StellariumのPerspectiveに近いrectilinear投影 */
+const viewportHalf=radius*1.06;
+const halfFov=(SKY_PERSPECTIVE_FOV/2)*D2R;
+const scale=viewportHalf/Math.tan(halfFov);
+
+let x=cx+(X/Z)*scale;
+let y=cy-(Y/Z)*scale;
+
+/* ズーム・パン */
+x=cx+(x-cx)*SKY_ZOOM+SKY_PAN_X;
+y=cy+(y-cy)*SKY_ZOOM+SKY_PAN_Y;
+
+const margin=14;
+if(
+x<cx-viewportHalf-margin||x>cx+viewportHalf+margin||
+y<cy-viewportHalf-margin||y>cy+viewportHalf+margin
+)return null;
+
+return{
+x,y,
+alt,
+az:((az%360)+360)%360
+};
+}
+
+function skyProjectAltAz(alt,az,cx,cy,radius){
+if(SKY_PROJECTION==="perspective"){
+return perspectiveProjectAltAz(alt,az,cx,cy,radius);
+}
+if(alt<0)return null;
+const r=radius*(90-alt)/90;
+const a=az*D2R;
+const bx=cx-r*Math.sin(a);
+const by=cy-r*Math.cos(a);
 return{
 x:cx+(bx-cx)*SKY_ZOOM+SKY_PAN_X,
 y:cy+(by-cy)*SKY_ZOOM+SKY_PAN_Y,
-alt:aa.alt,
-az:aa.az
+alt,
+az
 };
+}
+
+function skyProject(ra,dec,lat,lon,date,cx,cy,radius){
+const aa=altAz(ra,dec,lat,lon,date);
+return skyProjectAltAz(aa.alt,aa.az,cx,cy,radius);
+}
+
+function drawPerspectiveGuide(ctx,cx,cy,R){
+const half=R*1.06,left=cx-half,right=cx+half,top=cy-half,bottom=cy+half;
+ctx.save();
+ctx.strokeStyle="#35506b";ctx.lineWidth=1.2;
+ctx.strokeRect(left,top,right-left,bottom-top);
+
+/* 高度線 */
+[0,15,30,45,60,75].forEach(alt=>{
+ctx.beginPath();
+let started=false;
+for(let d=-100;d<=100;d+=2){
+const az=SKY_PERSPECTIVE_AZ+d;
+const p=skyProjectAltAz(alt,az,cx,cy,R);
+if(!p){started=false;continue;}
+if(!started){ctx.moveTo(p.x,p.y);started=true;}else ctx.lineTo(p.x,p.y);
+}
+ctx.strokeStyle=alt===0?"#466784":"#16283a";
+ctx.lineWidth=alt===0?1.4:1;
+ctx.stroke();
+});
+
+/* 方位線 */
+[-90,-60,-30,0,30,60,90].forEach(delta=>{
+ctx.beginPath();
+let started=false;
+for(let alt=0;alt<=90;alt+=2){
+const p=skyProjectAltAz(alt,SKY_PERSPECTIVE_AZ+delta,cx,cy,R);
+if(!p){started=false;continue;}
+if(!started){ctx.moveTo(p.x,p.y);started=true;}else ctx.lineTo(p.x,p.y);
+}
+ctx.strokeStyle=delta===0?"#20364c":"#16283a";
+ctx.lineWidth=1;
+ctx.stroke();
+});
+
+/* 方位ラベル */
+ctx.fillStyle="#8ab4d4";
+ctx.font="bold 12px sans-serif";
+ctx.textAlign="center";
+ctx.textBaseline="middle";
+[-60,-30,0,30,60].forEach(delta=>{
+const az=(SKY_PERSPECTIVE_AZ+delta+360)%360;
+const p=skyProjectAltAz(2,az,cx,cy,R);
+if(!p)return;
+ctx.fillText(azToDir(az),p.x,Math.min(bottom-9,p.y-9));
+});
+
+ctx.fillStyle="#4a6a8a";
+ctx.font="10px sans-serif";
+[15,30,45,60].forEach(alt=>{
+const p=skyProjectAltAz(alt,SKY_PERSPECTIVE_AZ,cx,cy,R);
+if(p)ctx.fillText(`${alt}°`,p.x+18,p.y);
+});
+ctx.restore();
 }
 
 function renderSkyChart(){
@@ -3715,6 +3989,9 @@ const w=cssSize,h=cssSize,cx=w/2,cy=h/2,R=Math.min(w,h)*0.44;
 SKY_MAP_HITS=[];
 ctx.clearRect(0,0,w,h);ctx.fillStyle="#030711";ctx.fillRect(0,0,w,h);
 
+if(SKY_PROJECTION==="perspective"){
+drawPerspectiveGuide(ctx,cx,cy,R);
+}else{
 const mapCx=cx+SKY_PAN_X,mapCy=cy+SKY_PAN_Y,mapR=R*SKY_ZOOM;
 ctx.strokeStyle="#35506b";ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(mapCx,mapCy,mapR,0,Math.PI*2);ctx.stroke();
 ctx.strokeStyle="#16283a";ctx.lineWidth=1;
@@ -3723,6 +4000,7 @@ ctx.strokeStyle="#20364c";ctx.beginPath();ctx.moveTo(mapCx-mapR,mapCy);ctx.lineT
 ctx.fillStyle="#8ab4d4";ctx.font="bold 13px sans-serif";ctx.textAlign="center";ctx.textBaseline="middle";
 ctx.fillText("N",mapCx,mapCy-mapR-15);ctx.fillText("E",mapCx-mapR-15,mapCy);ctx.fillText("S",mapCx,mapCy+mapR+15);ctx.fillText("W",mapCx+mapR+15,mapCy);
 ctx.fillStyle="#4a6a8a";ctx.font="10px sans-serif";ctx.fillText("60°",mapCx+3,mapCy-mapR*(30/90));ctx.fillText("30°",mapCx+3,mapCy-mapR*(60/90));
+}
 
 const maxMag=parseFloat($("#skyMag").value||"5");
 const pointMap={};
@@ -3854,7 +4132,10 @@ DSO_DB.filter(o=>o.type==="planet").forEach(o=>{const q=planetRaDec(o.planet,toJ
 
 const pad=n=>String(n).padStart(2,"0");
 const place=$("#inPlace").value||"指定場所";
-$("#skyMapInfo").textContent=`${date.getFullYear()}年${pad(date.getMonth()+1)}月${pad(date.getDate())}日 ${pad(date.getHours())}:${pad(date.getMinutes())} / ${place} / 北が上・東が左`;
+const projectionInfo=SKY_PROJECTION==="perspective"
+?`地平 / ${azToDir(SKY_PERSPECTIVE_AZ)}向き・仰角${SKY_PERSPECTIVE_ALT}°`
+:"全天 / 北が上・東が左";
+$("#skyMapInfo").textContent=`${date.getFullYear()}年${pad(date.getMonth()+1)}月${pad(date.getDate())}日 ${pad(date.getHours())}:${pad(date.getMinutes())} / ${place} / ${projectionInfo}`;
 if($("#skyViewTimeLabel")){
 const offset=getSkyTimeOffsetHours();
 const sign=offset>0?"+":"";
@@ -4591,6 +4872,22 @@ renderSkyChart();
 });
 $("#skyMag").addEventListener("change",renderSkyChart);
 
+$("#skyViewAllSky").addEventListener("click",()=>setSkyProjection("allsky"));
+$("#skyViewPerspective").addEventListener("click",()=>setSkyProjection("perspective"));
+$("#skyPerspectiveAz").addEventListener("change",event=>{
+SKY_PERSPECTIVE_AZ=Number(event.target.value)||180;
+SKY_ZOOM=1;SKY_PAN_X=0;SKY_PAN_Y=0;
+updateSkyProjectionUI();
+renderSkyChart();
+});
+$("#skyPerspectiveAlt").addEventListener("change",event=>{
+SKY_PERSPECTIVE_ALT=Number(event.target.value)||35;
+SKY_ZOOM=1;SKY_PAN_X=0;SKY_PAN_Y=0;
+updateSkyProjectionUI();
+renderSkyChart();
+});
+updateSkyProjectionUI();
+
 document.querySelectorAll("[data-sky-shift]").forEach(btn=>{
 btn.addEventListener("click",()=>{
 shiftSkyViewTime(Number(btn.dataset.skyShift));
@@ -4677,6 +4974,15 @@ SKY_POINTER_MOVED=false;
 skyCanvas.classList.add("dragging");
 
 if(SKY_POINTERS.size===1){
+if(SKY_PROJECTION==="perspective"){
+SKY_GESTURE={
+type:"rotate",
+startX:event.offsetX,
+startY:event.offsetY,
+az:SKY_PERSPECTIVE_AZ,
+alt:SKY_PERSPECTIVE_ALT
+};
+}else{
 SKY_GESTURE={
 type:"pan",
 startX:event.offsetX,
@@ -4684,6 +4990,7 @@ startY:event.offsetY,
 panX:SKY_PAN_X,
 panY:SKY_PAN_Y
 };
+}
 }else if(SKY_POINTERS.size===2){
 const pts=[...SKY_POINTERS.values()];
 const dx=pts[1].x-pts[0].x,dy=pts[1].y-pts[0].y;
@@ -4694,7 +5001,9 @@ distance:Math.hypot(dx,dy)||1,
 zoom:SKY_ZOOM,
 panX:SKY_PAN_X,
 panY:SKY_PAN_Y,
-midX,midY
+midX,midY,
+az:SKY_PERSPECTIVE_AZ,
+alt:SKY_PERSPECTIVE_ALT
 };
 }
 });
@@ -4703,7 +5012,27 @@ skyCanvas.addEventListener("pointermove",event=>{
 if(!SKY_POINTERS.has(event.pointerId))return;
 SKY_POINTERS.set(event.pointerId,{x:event.offsetX,y:event.offsetY});
 
-if(SKY_POINTERS.size===1&&SKY_GESTURE&&SKY_GESTURE.type==="pan"&&SKY_ZOOM>1.001){
+if(SKY_POINTERS.size===1&&SKY_GESTURE&&SKY_GESTURE.type==="rotate"&&SKY_PROJECTION==="perspective"){
+const dx=event.offsetX-SKY_GESTURE.startX;
+const dy=event.offsetY-SKY_GESTURE.startY;
+if(Math.hypot(dx,dy)>3)SKY_POINTER_MOVED=true;
+
+/* 右へドラッグで西側を見る／上へドラッグで見上げる */
+const azSensitivity=0.28;
+const altSensitivity=0.18;
+SKY_PERSPECTIVE_AZ=normalizeAzimuthDeg(SKY_GESTURE.az-dx*azSensitivity);
+SKY_PERSPECTIVE_ALT=clampPerspectiveAltitudeDeg(SKY_GESTURE.alt-dy*altSensitivity);
+const azSel=$("#skyPerspectiveAz"),altSel=$("#skyPerspectiveAlt");
+if(azSel)azSel.value=String(Math.round(SKY_PERSPECTIVE_AZ/45)*45%360);
+if(altSel){
+const presets=[20,35,50,65];
+let closest=presets[0];
+for(const v of presets){ if(Math.abs(v-SKY_PERSPECTIVE_ALT)<Math.abs(closest-SKY_PERSPECTIVE_ALT)) closest=v; }
+altSel.value=String(closest);
+}
+updateSkyProjectionUI();
+renderSkyChart();
+}else if(SKY_POINTERS.size===1&&SKY_GESTURE&&SKY_GESTURE.type==="pan"&&SKY_ZOOM>1.001){
 const dx=event.offsetX-SKY_GESTURE.startX;
 const dy=event.offsetY-SKY_GESTURE.startY;
 if(Math.hypot(dx,dy)>3)SKY_POINTER_MOVED=true;
@@ -4718,21 +5047,35 @@ const dist=Math.hypot(dx,dy)||1;
 const midX=(pts[0].x+pts[1].x)/2,midY=(pts[0].y+pts[1].y)/2;
 
 if(!SKY_GESTURE||SKY_GESTURE.type!=="pinch"){
-SKY_GESTURE={type:"pinch",distance:dist,zoom:SKY_ZOOM,panX:SKY_PAN_X,panY:SKY_PAN_Y,midX,midY};
+SKY_GESTURE={
+type:"pinch",
+distance:dist,
+zoom:SKY_ZOOM,
+panX:SKY_PAN_X,
+panY:SKY_PAN_Y,
+midX,midY,
+az:SKY_PERSPECTIVE_AZ,
+alt:SKY_PERSPECTIVE_ALT
+};
 return;
 }
 
 SKY_POINTER_MOVED=true;
 const newZoom=clampSkyZoom(SKY_GESTURE.zoom*(dist/SKY_GESTURE.distance));
+
+if(SKY_PROJECTION==="perspective"){
+SKY_ZOOM=newZoom;
+renderSkyChart();
+}else{
 const cx=skyCanvas.clientWidth/2,cy=skyCanvas.clientHeight/2;
 const worldX=(SKY_GESTURE.midX-cx-SKY_GESTURE.panX)/SKY_GESTURE.zoom;
 const worldY=(SKY_GESTURE.midY-cy-SKY_GESTURE.panY)/SKY_GESTURE.zoom;
-
 SKY_ZOOM=newZoom;
 SKY_PAN_X=midX-cx-worldX*newZoom;
 SKY_PAN_Y=midY-cy-worldY*newZoom;
 limitSkyPan();
 renderSkyChart();
+}
 }
 });
 
@@ -4743,7 +5086,17 @@ skyCanvas.classList.remove("dragging");
 SKY_GESTURE=null;
 }else if(SKY_POINTERS.size===1){
 const p=[...SKY_POINTERS.values()][0];
+if(SKY_PROJECTION==="perspective"){
+SKY_GESTURE={
+type:"rotate",
+startX:p.x,
+startY:p.y,
+az:SKY_PERSPECTIVE_AZ,
+alt:SKY_PERSPECTIVE_ALT
+};
+}else{
 SKY_GESTURE={type:"pan",startX:p.x,startY:p.y,panX:SKY_PAN_X,panY:SKY_PAN_Y};
+}
 }
 }
 skyCanvas.addEventListener("pointerup",finishSkyPointer);
@@ -5317,18 +5670,24 @@ $("#detailPanel").style.display="block";$("#detailPanel").scrollIntoView({behavi
 function openManual(){
   const modal=document.getElementById("manualModal");
   if(!modal)return;
+  if(modal.classList.contains("open"))return;
+
   modal.classList.add("open");
   modal.setAttribute("aria-hidden","false");
   document.body.classList.add("manual-open");
+
   const closeBtn=document.getElementById("closeManual");
   if(closeBtn)closeBtn.focus();
 }
 function closeManual(){
   const modal=document.getElementById("manualModal");
   if(!modal)return;
+  if(!modal.classList.contains("open"))return;
+
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden","true");
   document.body.classList.remove("manual-open");
+
   const openBtn=document.getElementById("openManual");
   if(openBtn)openBtn.focus();
 }
