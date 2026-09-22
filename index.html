@@ -686,6 +686,49 @@ body.manual-open{overflow:hidden;}
   .manual-modal-head{padding:8px 10px;}
 }
 
+
+.skymap-section-label{
+  margin:10px 0 5px;font-size:10px;font-weight:bold;
+  letter-spacing:.04em;color:#6f94b3;
+}
+.schedule-object-btn{
+  background:none;border:0;padding:0;margin:0;color:#9dd7ff;
+  font:inherit;font-weight:bold;cursor:pointer;text-align:left;
+  text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;
+}
+.schedule-object-btn:hover{color:#fff;}
+.object-popup-modal{
+  display:none;position:fixed;inset:0;z-index:10020;
+  background:rgba(0,0,0,.72);padding:20px;align-items:center;justify-content:center;
+}
+.object-popup-modal.open{display:flex;}
+.object-popup-card{
+  width:min(560px,100%);max-height:88vh;overflow:auto;
+  background:#0d1525;border:1px solid #355a7d;border-radius:14px;
+  box-shadow:0 20px 60px rgba(0,0,0,.55);
+}
+.object-popup-head{
+  display:flex;align-items:flex-start;gap:12px;padding:15px 16px;
+  border-bottom:1px solid #1a2a40;
+}
+.object-popup-icon{font-size:30px;line-height:1;}
+.object-popup-title{flex:1;color:#e8f1ff;font-size:17px;font-weight:bold;}
+.object-popup-close{
+  background:#151f2d;border:1px solid #3a5168;color:#cfe4f5;
+  border-radius:7px;padding:6px 10px;cursor:pointer;
+}
+.object-popup-body{padding:14px 16px 18px;}
+.object-popup-badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+.object-popup-highlight{
+  color:#8cc9ef;background:#091423;border:1px solid #17314d;
+  border-radius:8px;padding:10px 12px;margin-bottom:12px;line-height:1.6;
+}
+.object-popup-table{width:100%;border-collapse:collapse;font-size:12px;}
+.object-popup-table th,.object-popup-table td{
+  border-bottom:1px solid #172b40;padding:7px 6px;text-align:left;vertical-align:top;
+}
+.object-popup-table th{width:32%;color:#729abc;font-weight:normal;}
+.object-popup-story{margin-top:12px;color:#b9cce0;font-size:12px;line-height:1.8;}
 </style>
 </head>
 <body>
@@ -752,15 +795,15 @@ body.manual-open{overflow:hidden;}
 <div class="count" id="resCount"></div>
 </div>
 <div class="tabs">
-<button class="active" data-rtab="cards">🌌 天体カード</button>
-<button data-rtab="skymap">🗺 星図</button>
+<button class="active" data-rtab="skymap">🗺 星図</button>
+<button data-rtab="constellations">🌠 見頃の星座</button>
+<button data-rtab="cards">🌌 天体カード</button>
+<button data-rtab="mooncalendar">🌙 カレンダー</button>
+<button data-rtab="schedule">📅 観測スケジュール</button>
 <button data-rtab="smallbodies">☄️ 彗星・小惑星</button>
 <button data-rtab="meteors">🌠 流星群</button>
-<button data-rtab="schedule">📅 観測スケジュール</button>
-<button data-rtab="constellations">🌠 見頃の星座</button>
-<button data-rtab="mooncalendar">🌙 月カレンダー</button>
 </div>
-<div class="tab-content active" id="rtab-cards">
+<div class="tab-content" id="rtab-cards">
 <div class="ctrl-bar" id="filterBar"></div>
 <div class="ctrl-bar" style="margin-top:-4px">
 <span style="font-size:12px;color:#6a8aaa">並び替え：</span>
@@ -773,7 +816,7 @@ body.manual-open{overflow:hidden;}
 <div class="obj-grid" id="objGrid"></div>
 </div>
 
-<div class="tab-content" id="rtab-skymap">
+<div class="tab-content active" id="rtab-skymap">
 <div class="skymap-panel">
 <div class="skymap-head">
 <div>
@@ -811,6 +854,7 @@ body.manual-open{overflow:hidden;}
 <span class="skymap-view-hint" id="skyViewHint">天頂を中心に地平線まで表示</span>
 </div>
 
+<div class="skymap-section-label">表示設定</div>
 <div class="skymap-controls">
 <label><input type="checkbox" id="skyShowLines" checked> 星座線</label>
 <label><input type="checkbox" id="skyShowNames"> 星座名</label>
@@ -823,11 +867,53 @@ body.manual-open{overflow:hidden;}
 </div>
 
 <div class="comet-track-bar">
-<label><input type="checkbox" id="skyShowCometTrack" disabled> ☄ 選択彗星の軌道</label>
+<label><input type="checkbox" id="skyShowCometTrack" disabled> 選択彗星の軌道</label>
 <button type="button" class="comet-track-clear" id="clearCometTrack" disabled>軌道を消す</button>
-<span class="comet-track-status" id="cometTrackStatus">彗星カードの「☄ 星図に軌道表示」から選択できます。</span>
+<span class="comet-track-status" id="cometTrackStatus">彗星カードの「星図に軌道表示」から選択できます。</span>
 </div>
 
+<div class="skymap-section-label">星図本体</div>
+<div id="skyLineStatus" style="font-size:10px;color:#6f94b3;margin:2px 0 7px">星座線：内蔵簡易データ</div>
+<div class="skymap-canvas-wrap"><canvas id="skyMapCanvas" width="760" height="760"></canvas></div>
+<div class="skymap-legend"><span>★ 恒星</span><span style="color:#ffd54f">● 太陽</span><span style="color:#e8e8f0">● 月</span><span style="color:#c084fc">◇ 惑星</span><span style="color:#4ade80">□ 星雲・星団・銀河</span><span style="color:#67e8f9">○ 彗星</span><span style="color:#fbbf24">◆ 小惑星</span><span style="color:#a78bfa">✦ 流星群放射点</span></div>
+<div class="skymap-object-info" id="skyMapObjectInfo">星・惑星・月・主要天体をクリックすると、ここに情報を表示します。</div><div class="skymap-timebar">
+<span class="label">⏱ 星図の時刻</span>
+<button type="button" data-sky-shift="-6">−6h</button>
+<button type="button" data-sky-shift="-3">−3h</button>
+<button type="button" data-sky-shift="-1">−1h</button>
+<button type="button" class="reset" id="skyTimeReset">設定時刻へ戻す</button>
+<button type="button" data-sky-shift="1">+1h</button>
+<button type="button" data-sky-shift="3">+3h</button>
+<button type="button" data-sky-shift="6">+6h</button>
+<span class="skymap-time-now" id="skyViewTimeLabel">—</span>
+
+<div class="skymap-slider-wrap">
+<span class="skymap-slider-edge">−24h</span>
+<input type="range" id="skyTimeSlider" min="-24" max="24" step="0.25" value="0" aria-label="星図の時刻を前後24時間で変更">
+<span class="skymap-slider-edge">+24h</span>
+</div>
+</div>
+
+<div class="weather-panel" id="weatherPanel">
+<div class="weather-head">
+<div class="weather-title">☁️ 観測地点の天候</div>
+<div class="weather-source">Open-Meteo</div>
+</div>
+<div class="weather-status" id="weatherStatus">天候情報を確認しています…</div>
+<div class="weather-grid" id="weatherGrid" style="display:none"></div>
+<div class="weather-eval" id="weatherEval" style="display:none"></div>
+</div>
+
+<div class="skymap-zoom-bar">
+<span class="label">🔎 星図ズーム</span>
+<button type="button" id="skyZoomOut" aria-label="縮小">−</button>
+<button type="button" id="skyZoomReset">100%</button>
+<button type="button" id="skyZoomIn" aria-label="拡大">＋</button>
+<span class="skymap-zoom-label" id="skyZoomLabel">100%</span>
+<span class="skymap-zoom-help">ホイール／ピンチで拡大、ドラッグで移動</span>
+</div>
+
+<div class="skymap-section-label">写野</div>
 <div class="skymap-fov-controls">
 <label class="fov-check"><input type="checkbox" id="skyShowFov"> 📷 写野を表示</label>
 <label>センサー
@@ -850,47 +936,7 @@ body.manual-open{overflow:hidden;}
 <span class="skymap-fov-500" id="skyFov500">500ルール：最大 約14.3秒</span>
 </div>
 
-<div class="weather-panel" id="weatherPanel">
-<div class="weather-head">
-<div class="weather-title">☁️ 観測地点の天候</div>
-<div class="weather-source">Open-Meteo</div>
-</div>
-<div class="weather-status" id="weatherStatus">天候情報を確認しています…</div>
-<div class="weather-grid" id="weatherGrid" style="display:none"></div>
-<div class="weather-eval" id="weatherEval" style="display:none"></div>
-</div>
 
-<div class="skymap-timebar">
-<span class="label">⏱ 星図の時刻</span>
-<button type="button" data-sky-shift="-6">−6h</button>
-<button type="button" data-sky-shift="-3">−3h</button>
-<button type="button" data-sky-shift="-1">−1h</button>
-<button type="button" class="reset" id="skyTimeReset">設定時刻へ戻す</button>
-<button type="button" data-sky-shift="1">+1h</button>
-<button type="button" data-sky-shift="3">+3h</button>
-<button type="button" data-sky-shift="6">+6h</button>
-<span class="skymap-time-now" id="skyViewTimeLabel">—</span>
-
-<div class="skymap-slider-wrap">
-<span class="skymap-slider-edge">−24h</span>
-<input type="range" id="skyTimeSlider" min="-24" max="24" step="0.25" value="0" aria-label="星図の時刻を前後24時間で変更">
-<span class="skymap-slider-edge">+24h</span>
-</div>
-</div>
-
-<div class="skymap-zoom-bar">
-<span class="label">🔎 星図ズーム</span>
-<button type="button" id="skyZoomOut" aria-label="縮小">−</button>
-<button type="button" id="skyZoomReset">100%</button>
-<button type="button" id="skyZoomIn" aria-label="拡大">＋</button>
-<span class="skymap-zoom-label" id="skyZoomLabel">100%</span>
-<span class="skymap-zoom-help">ホイール／ピンチで拡大、ドラッグで移動</span>
-</div>
-
-<div id="skyLineStatus" style="font-size:10px;color:#6f94b3;margin:2px 0 7px">星座線：内蔵簡易データ</div>
-<div class="skymap-canvas-wrap"><canvas id="skyMapCanvas" width="760" height="760"></canvas></div>
-<div class="skymap-legend"><span>★ 恒星</span><span style="color:#ffd54f">● 太陽</span><span style="color:#e8e8f0">● 月</span><span style="color:#c084fc">◇ 惑星</span><span style="color:#4ade80">□ 星雲・星団・銀河</span><span style="color:#67e8f9">☄ 彗星</span><span style="color:#fbbf24">◆ 小惑星</span><span style="color:#a78bfa">✦ 流星群放射点</span></div>
-<div class="skymap-object-info" id="skyMapObjectInfo">星・惑星・月・主要天体をクリックすると、ここに情報を表示します。</div>
 </div>
 </div>
 
@@ -998,6 +1044,17 @@ body.manual-open{overflow:hidden;}
 </div>
 
 
+<div class="object-popup-modal" id="scheduleObjectModal" aria-hidden="true">
+  <div class="object-popup-card" role="dialog" aria-modal="true" aria-labelledby="scheduleObjectTitle">
+    <div class="object-popup-head">
+      <div class="object-popup-icon" id="scheduleObjectIcon"></div>
+      <div class="object-popup-title" id="scheduleObjectTitle"></div>
+      <button type="button" class="object-popup-close" id="closeScheduleObject">閉じる</button>
+    </div>
+    <div class="object-popup-body" id="scheduleObjectBody"></div>
+  </div>
+</div>
+
 <div class="moon-picker-modal" id="moonDatePickerModal" aria-hidden="true">
   <div class="moon-picker-dialog" role="dialog" aria-modal="true" aria-labelledby="moonDatePickerTitle">
     <div class="moon-picker-head">
@@ -1017,7 +1074,7 @@ body.manual-open{overflow:hidden;}
     </div>
     <div class="moon-picker-grid" id="moonDateGrid"></div>
     <div class="moon-picker-foot">
-      日付をタップすると、現在設定されている「時刻」を保ったまま観測日だけ変更します。<br>
+      日付をタップすると、その日の夕方の「天文薄明開始」（太陽高度 −12°）を観測時刻に設定します。<br>
       🌑 新月付近は月明かりが少なく、淡い星雲・銀河などを狙いやすい目安です。🌕 満月付近は月明かりの影響が大きくなります。
     </div>
   </div>
@@ -2566,10 +2623,8 @@ const clamped=Math.max(min,Math.min(max,Number(hours)||0));
 const base=getSkyBaseDate();
 SKY_VIEW_DATE=new Date(base.getTime()+clamped*3600000);
 
-/* JPL小天体は取得時刻に依存するため、時刻を動かしたら誤表示防止でOFF */
-if($("#skyShowSmallBodies")&&Math.abs(clamped)>0.0001){
-$("#skyShowSmallBodies").checked=false;
-}
+/* JPL小天体は取得時刻に依存するが、表示チェック自体は維持する。
+   条件が一致しない場合は renderSkyChart 側で描画しない。 */
 renderSkyChart();
 }
 
@@ -4655,10 +4710,15 @@ ctx.lineWidth=1.5;
 ctx.beginPath();
 ctx.arc(centerPoint.x,centerPoint.y,6,0,Math.PI*2);
 ctx.stroke();
-ctx.fillStyle="#67e8f9";
-ctx.font="13px sans-serif";
-ctx.textAlign="center";
-ctx.fillText("☄",centerPoint.x,centerPoint.y+4);
+ctx.strokeStyle="#67e8f9";
+ctx.lineWidth=1.5;
+ctx.beginPath();
+ctx.arc(centerPoint.x,centerPoint.y,3.2,0,Math.PI*2);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(centerPoint.x+4,centerPoint.y-4);
+ctx.lineTo(centerPoint.x+8,centerPoint.y-8);
+ctx.stroke();
 
 SKY_MAP_HITS.push({
 x:centerPoint.x,y:centerPoint.y,r:11,
@@ -4805,10 +4865,15 @@ const p=skyProject(o.ra,o.dec,lat,lon,date,cx,cy,R);
 if(!p)return;
 
 if(o.kind==="c"){
-ctx.fillStyle="#67e8f9";
-ctx.font="13px sans-serif";
-ctx.textAlign="center";
-ctx.fillText("☄",p.x,p.y+1);
+ctx.strokeStyle="#67e8f9";
+ctx.lineWidth=1.4;
+ctx.beginPath();
+ctx.arc(p.x,p.y,3,0,Math.PI*2);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(p.x+3,p.y-3);
+ctx.lineTo(p.x+7,p.y-7);
+ctx.stroke();
 }else{
 ctx.fillStyle="#fbbf24";
 ctx.beginPath();
@@ -4838,7 +4903,7 @@ type:o.kind==="c"?"彗星":"小惑星"
 
 if($("#skyShowPlanets").checked){
 const sun=sunPosition(toJD(date)),moon=moonPosition(toJD(date));
-[{name:"☀ 太陽",ra:sun.ra,dec:sun.dec,color:"#ffd54f",r:5},{name:"☾ 月",ra:moon.ra,dec:moon.dec,color:"#e8e8f0",r:5}].forEach(o=>{const p=skyProject(o.ra,o.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.fillStyle=o.color;ctx.beginPath();ctx.arc(p.x,p.y,o.r,0,Math.PI*2);ctx.fill();ctx.font="10px sans-serif";ctx.textAlign="left";ctx.fillText(o.name,p.x+7,p.y);SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"solar",name:o.name,alt:p.alt,az:p.az});});
+[{name:"太陽",ra:sun.ra,dec:sun.dec,color:"#ffd54f",r:5},{name:"月",ra:moon.ra,dec:moon.dec,color:"#e8e8f0",r:5}].forEach(o=>{const p=skyProject(o.ra,o.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.fillStyle=o.color;ctx.beginPath();ctx.arc(p.x,p.y,o.r,0,Math.PI*2);ctx.fill();ctx.font="10px sans-serif";ctx.textAlign="left";ctx.fillText(o.name,p.x+7,p.y);SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"solar",name:o.name,alt:p.alt,az:p.az});});
 DSO_DB.filter(o=>o.type==="planet").forEach(o=>{const q=planetRaDec(o.planet,toJD(date));const p=skyProject(q.ra,q.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.strokeStyle="#c084fc";ctx.lineWidth=1.4;ctx.beginPath();ctx.moveTo(p.x,p.y-4);ctx.lineTo(p.x+4,p.y);ctx.lineTo(p.x,p.y+4);ctx.lineTo(p.x-4,p.y);ctx.closePath();ctx.stroke();ctx.fillStyle="#d8b4fe";ctx.font="10px sans-serif";ctx.textAlign="left";ctx.fillText(o.name,p.x+7,p.y);SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"planet",name:o.name,mag:q.mag,alt:p.alt,az:p.az});});
 }
 
@@ -4874,7 +4939,7 @@ const alt=Math.round(hit.alt*10)/10;
 const az=Math.round(hit.az*10)/10;
 
 if(hit.kind==="comet-track"){
-info.innerHTML=`<b>☄ ${escapeHTML(hit.name)}</b><br>選択した観測日時付近の位置：高度 ${alt}° / 方位 ${azToDir(az)}（${az}°）<br><span style="color:#9debf5">破線＝過去 / 実線＝未来 / 日付は5日ごと</span>`;
+info.innerHTML=`<b>${escapeHTML(hit.name)}</b><br>選択した観測日時付近の位置：高度 ${alt}° / 方位 ${azToDir(az)}（${az}°）<br><span style="color:#9debf5">破線＝過去 / 実線＝未来 / 日付は5日ごと</span>`;
 return;
 }
 
@@ -4884,10 +4949,10 @@ const zhr=hit.zhr!==null&&hit.zhr!==undefined?`ZHR ${hit.zhr}`:"ZHR —";
 const velocity=Number.isFinite(hit.velocityKms)?` / ${hit.velocityKms} km/s`:"";
 const parent=hit.parent?`<br>母天体：${hit.parent}`:"";
 const peak=hit.peakLabel?`<br>極大：${hit.peakLabel}`:"";
-const note=hit.note?`<br><span style="color:#c8dff0">💡 ${hit.note}</span>`:"";
+const note=hit.note?`<br><span style="color:#c8dff0">${hit.note}</span>`:"";
 
 info.innerHTML=`
-<b>🌠 ${hit.name}</b>${hit.code?`（${hit.code}）`:""}${en}
+<b>${hit.name}</b>${hit.code?`（${hit.code}）`:""}${en}
 <br>放射点：高度 ${alt}° / 方位 ${azToDir(az)}（${az}°）
 <br>${zhr}${velocity}${parent}${peak}${note}
 `;
@@ -5389,7 +5454,7 @@ renderSmallBodyCards();
 
 const saved=saveSmallBodyCache();
 status.className="smallbody-status";
-status.innerHTML=`取得完了：彗星 ${comets.length}件 / 小惑星 ${asteroids.length}件（地平線上・${magLimit}等まで）${saved?" / ブラウザに保存しました":""}<br><span style="font-size:10px">${smallBodyCacheSummary(SMALL_BODY_CACHE_META)}</span>`;
+status.innerHTML=`取得完了：彗星 ${comets.length}件 / 小惑星 ${asteroids.length}件（地平線上・${magLimit}等まで）${saved?" / ブラウザに保存しました":""}<br><span style="font-size:10px">${smallBodyCacheSummary(SMALL_BODY_CACHE_META)}</span>${$("#skyShowSmallBodies")?.checked?'<br><span style="font-size:10px;color:#67e8f9">星図の「彗星・小惑星」がONなので、現在の星図へ反映します。</span>':""}`;
 
 if($("#rtab-skymap").classList.contains("active"))renderSkyChart();
 }catch(error){
@@ -5590,10 +5655,20 @@ else renderMeteorShowers();
 });
 ["skyShowLines","skyShowNames","skyShowPlanets","skyShowDSO","skyShowMeteors"].forEach(id=>{$("#"+id).addEventListener("change",renderSkyChart);});
 $("#skyShowSmallBodies").addEventListener("change",function(){
-if(this.checked&&!smallBodyCacheMatchesSky(getSkyViewDate(),parseFloat($("#inLat").value),parseFloat($("#inLon").value))){
-this.checked=false;
+if(this.checked){
+const hasData=ONLINE_SMALL_BODIES.length>0&&SMALL_BODY_CACHE_META;
+const matches=hasData&&smallBodyCacheMatchesSky(
+getSkyViewDate(),
+parseFloat($("#inLat").value),
+parseFloat($("#inLon").value)
+);
+
 if($("#skyMapObjectInfo")){
-$("#skyMapObjectInfo").innerHTML='<b>☄ 彗星・小惑星</b><br>保存データの対象日時・場所と現在の星図条件が異なるため、誤表示防止のため星図には表示しません。<br><span style="color:#8ab4d4">現在の観測条件で「最新データを取得」すると表示できます。</span>';
+if(!hasData){
+$("#skyMapObjectInfo").innerHTML='<b>☄ 彗星・小惑星</b><br>まだJPLの小天体データを取得していません。<br><span style="color:#8ab4d4">「彗星・小惑星」タブで「最新データを取得」を押すと、このチェックをONのまま星図へ表示できます。</span>';
+}else if(!matches){
+$("#skyMapObjectInfo").innerHTML='<b>☄ 彗星・小惑星</b><br>チェックはONになっていますが、保存データの対象日時・場所と現在の星図条件が異なるため、現在は描画していません。<br><span style="color:#8ab4d4">現在の観測条件で「最新データを取得」すると自動的に表示されます。</span>';
+}
 }
 }
 renderSkyChart();
@@ -5980,11 +6055,27 @@ const m=String(raw||"").match(/T(\d{2}):(\d{2})/);
 return m?{hour:Number(m[1]),minute:Number(m[2])}:{hour:21,minute:0};
 }
 
-function setObservationDateKeepTime(date){
-const t=currentObservationTimeParts();
+function setObservationDateToAstronomicalTwilightStart(date){
+const lat=parseFloat($("#inLat").value);
+const lon=parseFloat($("#inLon").value);
 const p=n=>String(n).padStart(2,"0");
+
+/* 夕方の天文薄明開始：太陽高度 -12° を下降中に通過する時刻 */
+const dayStart=new Date(date.getFullYear(),date.getMonth(),date.getDate(),0,0,0,0);
+let twilightStart=null;
+
+if(Number.isFinite(lat)&&Number.isFinite(lon)){
+twilightStart=findAltCrossing(sunAlt,lat,lon,dayStart,-12,false);
+}
+
+if(twilightStart instanceof Date&&!isNaN(twilightStart)){
+$("#inDatetime").value=
+`${twilightStart.getFullYear()}-${p(twilightStart.getMonth()+1)}-${p(twilightStart.getDate())}T${p(twilightStart.getHours())}:${p(twilightStart.getMinutes())}`;
+}else{
+const t=currentObservationTimeParts();
 $("#inDatetime").value=
 `${date.getFullYear()}-${p(date.getMonth()+1)}-${p(date.getDate())}T${p(t.hour)}:${p(t.minute)}`;
+}
 }
 
 function renderMoonDatePicker(baseDate){
@@ -6038,7 +6129,7 @@ btn.innerHTML=`
 <div class="moon-picker-illum">${info.moonIllum}%</div>
 <div class="moon-picker-hint ${hint.cls}">${hint.label}</div>`;
 btn.addEventListener("click",()=>{
-setObservationDateKeepTime(c.date);
+setObservationDateToAstronomicalTwilightStart(c.date);
 closeMoonDatePicker();
 });
 grid.appendChild(btn);
@@ -6321,10 +6412,8 @@ updateSmallBodyStoredStatus("📦 保存データを保持中");
 }else{
 updateSmallBodyStoredStatus();
 }
-/* 取得時と条件が違う場合、星図への小天体表示は自動OFF */
-if($("#skyShowSmallBodies")&&!smallBodyCacheMatchesCurrent()){
-$("#skyShowSmallBodies").checked=false;
-}
+/* 取得時と条件が違う場合もチェック状態は維持する。
+   描画可否は保存データと星図条件の一致判定で制御する。 */
 
 const results=calcObjects(lat,lon,date,minAlt,maxMag);currentResults=results;
 const pad=n=>String(n).padStart(2,"0");
@@ -6359,7 +6448,9 @@ const slotEnd=new Date(slotStart.getTime()+15*60000);
 const sh=fmtScheduleTime(slotStart),eh=fmtScheduleTime(slotEnd);
 const dl=diffLabel(obj.difficulty);
 const tr=document.createElement("tr");
-tr.innerHTML=`<td style="text-align:center">${i+1}</td><td>${sh}〜${eh}</td><td>${obj.icon} ${obj.name}</td><td><span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type}</span></td><td><span class="diff-badge diff-${obj.difficulty}">${dl.stars}</span></td><td style="text-align:center">${obj.alt}°</td><td>${obj.azDir}</td><td>${obj.scope}</td><td style="font-size:12px;color:#7ab4d4">${obj.highlight}</td>`;
+tr.innerHTML=`<td style="text-align:center">${i+1}</td><td>${sh}〜${eh}</td><td><button type="button" class="schedule-object-btn">${obj.name}</button></td><td><span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type}</span></td><td><span class="diff-badge diff-${obj.difficulty}">${dl.stars}</span></td><td style="text-align:center">${obj.alt}°</td><td>${obj.azDir}</td><td>${obj.scope}</td><td style="font-size:12px;color:#7ab4d4">${obj.highlight}</td>`;
+const objBtn=tr.querySelector(".schedule-object-btn");
+if(objBtn)objBtn.addEventListener("click",()=>openScheduleObjectModal(obj));
 tbody.appendChild(tr);
 });
 renderConstellations(date.getMonth()+1,"");$("#constSearch").value="";
@@ -6406,7 +6497,56 @@ document.addEventListener("keydown",event=>{
 if(event.key==="Escape"&&$("#moonDatePickerModal")?.classList.contains("open")){
 closeMoonDatePicker();
 }
+if(event.key==="Escape"&&$("#scheduleObjectModal")?.classList.contains("open")){
+closeScheduleObjectModal();
+}
 });
+function openScheduleObjectModal(obj){
+const modal=$("#scheduleObjectModal");
+if(!modal||!obj)return;
+const dl=diffLabel(obj.difficulty||3);
+$("#scheduleObjectIcon").textContent=obj.icon||"";
+$("#scheduleObjectTitle").textContent=obj.name||"";
+
+const rows=[
+["種類",TYPE_LABEL[obj.type]||obj.type||"—"],
+["カタログ",obj.cat||"—"],
+["難易度",`${dl.stars} ${dl.text}`],
+["高度",obj.alt!==undefined?`${obj.alt}°`:"—"],
+["方位",obj.azDir||"—"],
+["等級",`${obj.magVal||obj.mag||"—"} 等`],
+["距離",obj.distStr||obj.dist||"—"],
+["見かけの大きさ",obj.size||"—"],
+["推奨倍率",obj.scope||"—"]
+];
+
+$("#scheduleObjectBody").innerHTML=`
+<div class="object-popup-badges">
+<span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type||"—"}</span>
+<span class="diff-badge diff-${obj.difficulty||3}">${dl.stars} ${dl.text}</span>
+</div>
+<div class="object-popup-highlight">${escapeHTML(obj.highlight||"")}</div>
+<table class="object-popup-table">${rows.map(r=>`<tr><th>${r[0]}</th><td>${r[1]}</td></tr>`).join("")}</table>
+${obj.story?`<div class="object-popup-story">${obj.story}</div>`:""}
+`;
+modal.classList.add("open");
+modal.setAttribute("aria-hidden","false");
+document.body.classList.add("manual-open");
+}
+
+function closeScheduleObjectModal(){
+const modal=$("#scheduleObjectModal");
+if(!modal)return;
+modal.classList.remove("open");
+modal.setAttribute("aria-hidden","true");
+document.body.classList.remove("manual-open");
+}
+
+$("#closeScheduleObject").addEventListener("click",closeScheduleObjectModal);
+$("#scheduleObjectModal").addEventListener("click",event=>{
+if(event.target===$("#scheduleObjectModal"))closeScheduleObjectModal();
+});
+
 function showDetail(obj,card){
 document.querySelectorAll(".obj-card").forEach(c=>c.classList.remove("active"));
 if(card)card.classList.add("active");
