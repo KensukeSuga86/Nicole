@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="nicole-favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="nicole-favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="nicole-apple-touch-icon-180.png">
+<meta name="theme-color" content="#050b13">
 <title>Nicole the Astronavigator</title>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
@@ -1018,6 +1022,45 @@ body.manual-open{overflow:hidden;}
   .reverse-modal{padding:8px;}
   .reverse-body{padding:12px;}
 }
+
+/* ===== 星の鳥 GitHub Static DB ===== */
+.hoshinotori-panel{border-color:#23465f;background:linear-gradient(180deg,#091725 0%,#07111d 100%)}
+.ht-search-row{display:grid;grid-template-columns:minmax(240px,2fr) minmax(150px,.7fr);gap:10px;align-items:end;margin-top:12px}
+.ht-search-row label{display:flex;flex-direction:column;gap:4px;font-size:11px;color:#6f96b5}
+.ht-search-results{display:grid;gap:7px;margin-top:10px;max-height:340px;overflow:auto}
+.ht-result{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:9px 10px;border:1px solid #17354d;border-radius:9px;background:#081522}
+.ht-result-name{font-size:12px;color:#dcefff;font-weight:600}
+.ht-result-meta{font-size:10px;color:#6f91aa;margin-top:3px;line-height:1.5}
+.ht-result button{border:1px solid #356785;background:#0d293d;color:#bce6ff;border-radius:7px;padding:6px 9px;cursor:pointer;white-space:nowrap}
+.ht-selected{margin-top:12px;padding:12px;border:1px solid #28506b;border-radius:10px;background:#081827}
+.ht-selected-title{color:#dff3ff;font-weight:700;font-size:14px;margin-bottom:8px}
+.ht-selected-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.ht-kv{border:1px solid #17334a;border-radius:8px;padding:7px 8px;background:#06111c}
+.ht-k{font-size:9px;color:#6688a3}
+.ht-v{font-size:11px;color:#b9d8ed;margin-top:2px;word-break:break-word}
+@media(max-width:650px){.ht-search-row,.ht-selected-grid{grid-template-columns:1fr}.ht-result{grid-template-columns:1fr}.ht-result button{width:100%}}
+
+/* ===== 観測条件ボタンの高さ統一 ===== */
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"],
+.obs-row-datetime .moon-date-btn,
+.obs-row-datetime #btnNow{
+  height:42px;
+  min-height:42px;
+  box-sizing:border-box;
+}
+.obs-row-location-actions #btnGPS,
+.obs-row-location-actions #openMapSelect{
+  height:42px;
+  min-height:42px;
+  box-sizing:border-box;
+}
+.obs-row-datetime .obs-inline-action{
+  align-items:stretch;
+}
+.obs-row-datetime .obs-inline-action > button,
+.obs-row-location-actions > button{
+  margin:0;
+}
 </style>
 </head>
 <body>
@@ -1038,7 +1081,7 @@ body.manual-open{overflow:hidden;}
     <input type="datetime-local" id="inDatetime">
   </div>
   <div class="obs-inline-action">
-    <button type="button" class="moon-date-btn" id="openMoonDatePicker">🌙 月相を見ながら選ぶ</button>
+    <button type="button" class="moon-date-btn" id="openMoonDatePicker">🌙 月の満ち欠けから選ぶ</button>
   </div>
   <div class="obs-inline-action">
     <button class="action gray" id="btnNow">🕐 現在時刻をセット</button>
@@ -1267,10 +1310,51 @@ body.manual-open{overflow:hidden;}
 </div>
 
 <div class="tab-content" id="rtab-smallbodies">
+
+<div class="smallbody-panel hoshinotori-panel">
+<div class="smallbody-head">
+<div>
+<div class="smallbody-title">☄️ 星の鳥 — 彗星データベース</div>
+<div class="smallbody-sub">簡易版の彗星軌道データを読み込みます。</div>
+</div>
+<button class="action gray sm" id="htReloadIndex">↻ 星の鳥を更新</button>
+</div>
+
+<div class="ht-search-row">
+<label class="ht-search-field">彗星を検索
+<input type="search" id="htCometSearch" placeholder="例：Halley / 1P / C/2023 A3 / SPK-ID">
+</label>
+<label>計算モード
+<select id="htPrecisionMode">
+<option value="simple" selected>簡易計算</option>
+<option value="precise">精密計算</option>
+<option value="jpl">JPL高精度</option>
+</select>
+</label>
+</div>
+
+<div class="smallbody-status" id="htStatus">星の鳥の検索インデックスを読み込んでいます…</div>
+<div class="ht-search-results" id="htSearchResults"></div>
+
+<div class="ht-selected" id="htSelected" style="display:none">
+<div class="ht-selected-title" id="htSelectedTitle"></div>
+<div class="ht-selected-grid" id="htSelectedGrid"></div>
+<div class="sb-actions">
+<button type="button" class="comet-track-btn" id="htShowOnSky">星図に表示</button>
+<button type="button" class="comet-track-btn" id="htLongTrack">JPLで長期軌道を追う</button>
+</div>
+</div>
+
+<div class="smallbody-note">
+データ源：<b>星の鳥 — Comet Orbit Database for Nicole</b>（GitHub静的JSON） / NASA・JPL SBDB。<br>
+「簡易計算」は基本軌道要素からNicole内で二体近似を行います。「精密計算」は星の鳥に保存済みの詳細JSON（不確かさ・共分散・非重力モデル等）を追加取得しますが、現段階の位置計算自体は二体近似です。「JPL高精度」はJPL Horizonsの見かけ位置を利用する長期軌道取得へ進みます。
+</div>
+</div>
+
 <div class="smallbody-panel">
 <div class="smallbody-head">
 <div>
-<div class="smallbody-title">☄️ 今夜の彗星</div>
+<div class="smallbody-title">☄️ 今夜の彗星 — JPLライブ検索</div>
 <div class="smallbody-sub">NASA/JPLから、選択した観測地点で今夜見られる彗星を一晩分取得します。星図の時刻を動かすと、彗星が昇り、空を移動し、沈む様子を追えます。</div>
 </div>
 <button class="action gray sm" id="sbRefresh">↻ 今夜の彗星を取得</button>
@@ -1292,7 +1376,7 @@ body.manual-open{overflow:hidden;}
 <div class="smallbody-grid" id="sbCometGrid"></div>
 </div>
 <div class="smallbody-note">
-データ源：NASA/JPL Small-Body Observability API + Horizons。<br>
+データ源：NASA/JPL Small-Body Observability API + Horizons（Cloudflare Worker経由）。<br>
 「今夜の彗星を取得」を押すと、その夜に観測可能な彗星を検索し、各彗星の一晩分の見かけ位置を取得してブラウザに保存します。
 星図では時刻に合わせて位置を補間するため、地平線下から昇ってくる彗星も再現できます。<br>
 各彗星の「長期軌道を追う」を押すと、選択した彗星について観測日の30日前〜90日後を1日刻みで取得し、日付を変えても軌道と位置を追跡できます。
@@ -1791,7 +1875,7 @@ body.manual-open{overflow:hidden;}
           &lt;h4&gt;観測日時&lt;/h4&gt;
           &lt;p&gt;観測する日時を指定します。初期状態では、その日の夜の時刻が設定されています。「現在時刻をセット」を押すと、現在の日時へ変更できます。&lt;/p&gt;
           &lt;h4&gt;月相を見ながら観測日を選ぶ&lt;/h4&gt;
-          &lt;p&gt;観測日時の下にある「🌙 月相を見ながら選ぶ」を押すと、各日の月相アイコンと輝面率を並べたカレンダーを表示します。新月付近の日や満月付近の日を視覚的に比較しながら観測日を選べます。日付を選ぶと、現在設定している時刻はそのままに、日付だけが変更されます。&lt;/p&gt;
+          &lt;p&gt;観測日時の下にある「🌙 月の満ち欠けから選ぶ」を押すと、各日の月相アイコンと輝面率を並べたカレンダーを表示します。新月付近の日や満月付近の日を視覚的に比較しながら観測日を選べます。日付を選ぶと、現在設定している時刻はそのままに、日付だけが変更されます。&lt;/p&gt;
           &lt;h4&gt;場所名&lt;/h4&gt;
           &lt;p&gt;観測場所を分かりやすくするための名前です。例えば「帯広」「然別湖」「自宅」「三国峠」などを入力できます。場所名自体は天体計算には使用されず、天体計算では緯度・経度が使用されます。&lt;/p&gt;
           &lt;h4&gt;緯度・経度&lt;/h4&gt;
@@ -1931,14 +2015,14 @@ body.manual-open{overflow:hidden;}
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;ニコルでは、オンラインから彗星や小惑星の位置情報を取得できます。小天体のデータは、指定した観測日時・場所に対応した位置情報として取得します。&lt;/p&gt;
+          &lt;p&gt;ニコルでは、「星の鳥」の静的彗星データベースから彗星を検索できます。今夜の見かけ位置やJPL高精度軌道が必要な場合は、オンラインでJPL由来の位置情報を取得します。&lt;/p&gt;
           &lt;p&gt;同じ場所にはいない旅人たちです。今夜の居場所を確かめてください。&lt;/p&gt;
           &lt;h4&gt;データを更新する&lt;/h4&gt;
           &lt;p&gt;彗星データは毎回自動取得せず、「更新」を行ったときに取得します。取得したデータはブラウザ内に保存されます。&lt;/p&gt;
           &lt;h4&gt;オフライン時&lt;/h4&gt;
           &lt;p&gt;以前取得したデータが残っている場合は、オフラインでも確認できます。ただし、小天体の位置情報は取得した観測条件に対応しています。現在の観測日時・場所と保存データの条件が違う場合は注意表示が出ます。&lt;/p&gt;
           &lt;h4&gt;星図の時刻を変更した場合&lt;/h4&gt;
-          &lt;p&gt;彗星や小惑星は時間とともに位置が変わります。そのため、星図の表示時刻を変更した場合は、取得時刻と異なる位置を誤って表示しないように、小天体表示が自動的にOFFになります。&lt;/p&gt;
+          &lt;p&gt;彗星は時間とともに位置が変わります。星の鳥の簡易計算では星図時刻に合わせて軌道要素から位置を再計算し、JPLライブデータでは取得した時刻範囲内を補間して表示します。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
@@ -2939,6 +3023,15 @@ let COMET_TRACK_LOADING=false;
 const COMET_TRACK_ENDPOINT="https://astro-nicole.hideld12.workers.dev/comet-track";
 const NIGHT_COMETS_ENDPOINT="https://astro-nicole.hideld12.workers.dev/night-comets";
 
+/* 星の鳥 — GitHub Static DB */
+const HOSHINOTORI_BASE="https://kensukesuga86.github.io/Hoshinotori";
+const HOSHINOTORI_INDEX_URL=`${HOSHINOTORI_BASE}/data/catalog/index.json`;
+const HOSHINOTORI_INDEX_CACHE_KEY="nicole_hoshinotori_index_v2";
+let HOSHINOTORI_INDEX=[];
+let HOSHINOTORI_INDEX_LOADED=false;
+let HOSHINOTORI_SELECTED=null;
+const HOSHINOTORI_SHARD_CACHE=new Map();
+
 /* 全天モードの写野中心。初期値は天頂。 */
 let SKY_FOV_ALLSKY_ALT=90;
 let SKY_FOV_ALLSKY_AZ=0;
@@ -3010,6 +3103,7 @@ const max=slider?Number(slider.max):24;
 const clamped=Math.max(min,Math.min(max,Number(hours)||0));
 const base=getSkyBaseDate();
 SKY_VIEW_DATE=new Date(base.getTime()+clamped*3600000);
+if(HOSHINOTORI_SELECTED)renderHoshinotoriSelected();
 
 /* JPL小天体は取得時刻に依存するが、表示チェック自体は維持する。
    条件が一致しない場合は renderSkyChart 側で描画しない。 */
@@ -3022,6 +3116,7 @@ setSkyViewOffsetHours(getSkyTimeOffsetHours()+hours);
 
 function resetSkyViewTime(){
 SKY_VIEW_DATE=getSkyBaseDate();
+if(HOSHINOTORI_SELECTED)renderHoshinotoriSelected();
 renderSkyChart();
 }
 
@@ -4916,6 +5011,189 @@ ctx.restore();
 }
 
 
+
+/* =====================================================
+星の鳥 — GitHub Static DB
+===================================================== */
+function hoshinotoriName(r){return r?.full_name||r?.name||r?.designation||r?.spkid||"名称不明";}
+
+function hoshinotoriReadIndexCache(){
+try{
+const raw=localStorage.getItem(HOSHINOTORI_INDEX_CACHE_KEY);
+if(!raw)return null;
+const data=JSON.parse(raw);
+if(!data||!Array.isArray(data.records))return null;
+return data;
+}catch(e){return null;}
+}
+function hoshinotoriSaveIndexCache(doc){
+try{localStorage.setItem(HOSHINOTORI_INDEX_CACHE_KEY,JSON.stringify({savedAt:new Date().toISOString(),records:doc.records||[]}));}
+catch(e){console.warn("星の鳥 index cache save failed",e);}
+}
+async function loadHoshinotoriIndex(force=false){
+const status=$("#htStatus");
+if(status)status.textContent="星の鳥の検索インデックスを読み込んでいます…";
+if(!force){
+const cached=hoshinotoriReadIndexCache();
+if(cached?.records?.length){
+HOSHINOTORI_INDEX=cached.records;HOSHINOTORI_INDEX_LOADED=true;
+if(status){status.className="smallbody-status";status.textContent=`星の鳥：${HOSHINOTORI_INDEX.length.toLocaleString()}彗星を検索できます（ブラウザ保存データ）。`;}
+return HOSHINOTORI_INDEX;
+}}
+if(!navigator.onLine){
+if(status){status.className="smallbody-status error";status.textContent="星の鳥の初回読み込みにはオンライン接続が必要です。";}
+return[];
+}
+try{
+const res=await fetch(HOSHINOTORI_INDEX_URL,{cache:force?"no-store":"default"});
+if(!res.ok)throw new Error(`星の鳥 HTTP ${res.status}`);
+const doc=await res.json();
+const records=Array.isArray(doc)?doc:(doc.records||[]);
+if(!Array.isArray(records)||!records.length)throw new Error("星の鳥の検索インデックスが空です。");
+HOSHINOTORI_INDEX=records;HOSHINOTORI_INDEX_LOADED=true;hoshinotoriSaveIndexCache({records});
+if(status){status.className="smallbody-status";status.textContent=`星の鳥：${records.length.toLocaleString()}彗星を検索できます。`;}
+return records;
+}catch(e){
+const cached=hoshinotoriReadIndexCache();
+if(cached?.records?.length){
+HOSHINOTORI_INDEX=cached.records;HOSHINOTORI_INDEX_LOADED=true;
+if(status){status.className="smallbody-status";status.textContent=`星の鳥の更新取得に失敗したため、保存済み${HOSHINOTORI_INDEX.length.toLocaleString()}件を使用します。`;}
+return HOSHINOTORI_INDEX;
+}
+if(status){status.className="smallbody-status error";status.textContent=`星の鳥を読み込めませんでした：${String(e.message||e)}`;}
+return[];
+}}
+function searchHoshinotori(query){
+const q=String(query||"").trim().toLowerCase();if(!q)return[];
+const tokens=q.split(/\s+/).filter(Boolean);
+return HOSHINOTORI_INDEX.map(r=>{
+const hay=[r.spkid,r.designation,r.full_name,r.name,r.prefix,r.kind,r.class,r.orbit_id].filter(Boolean).join(" ").toLowerCase();
+let score=0;
+for(const t of tokens){
+if(!hay.includes(t))return null;
+if(String(r.spkid||"").toLowerCase()===t)score+=20;
+if(String(r.designation||"").toLowerCase()===t)score+=18;
+if(String(r.name||"").toLowerCase()===t)score+=16;
+if(String(r.full_name||"").toLowerCase().startsWith(t))score+=10;
+score+=2;
+}
+return{r,score};
+}).filter(Boolean).sort((a,b)=>b.score-a.score||hoshinotoriName(a.r).localeCompare(hoshinotoriName(b.r))).slice(0,30).map(x=>x.r);
+}
+function renderHoshinotoriResults(){
+const box=$("#htSearchResults");if(!box)return;
+const q=$("#htCometSearch")?.value||"";
+if(!q.trim()){box.innerHTML="";return;}
+if(!HOSHINOTORI_INDEX_LOADED){box.innerHTML='<div class="smallbody-status">星の鳥を読み込み中です…</div>';return;}
+const hits=searchHoshinotori(q);
+if(!hits.length){box.innerHTML='<div class="smallbody-status">該当する彗星が見つかりませんでした。</div>';return;}
+box.innerHTML="";
+hits.forEach(r=>{
+const row=document.createElement("div");row.className="ht-result";
+row.innerHTML=`<div><div class="ht-result-name">${escapeHTML(hoshinotoriName(r))}</div><div class="ht-result-meta">${r.designation?`符号 ${escapeHTML(r.designation)} / `:""}SPK-ID ${escapeHTML(r.spkid||"—")}${r.orbit_id?` / 軌道解 ${escapeHTML(r.orbit_id)}`:""}${r.detail?` / 詳細JSONあり`:" / 基本データ"}</div></div><button type="button">Nicoleに読み込む</button>`;
+row.querySelector("button").addEventListener("click",()=>selectHoshinotoriComet(r));box.appendChild(row);
+});
+}
+async function fetchHoshinotoriShard(bucket){
+if(HOSHINOTORI_SHARD_CACHE.has(bucket))return HOSHINOTORI_SHARD_CACHE.get(bucket);
+const res=await fetch(`${HOSHINOTORI_BASE}/data/catalog/${encodeURIComponent(bucket)}.json`);
+if(!res.ok)throw new Error(`基本軌道JSON HTTP ${res.status}`);
+const doc=await res.json();const records=Array.isArray(doc)?doc:(doc.records||[]);
+HOSHINOTORI_SHARD_CACHE.set(bucket,records);return records;
+}
+async function fetchHoshinotoriBasic(indexRecord){
+const bucket=indexRecord.bucket;if(!bucket)throw new Error("星の鳥のbucket情報がありません。");
+const records=await fetchHoshinotoriShard(bucket);
+const r=records.find(x=>String(x.spkid)===String(indexRecord.spkid));
+if(!r)throw new Error("基本軌道レコードが見つかりません。");return r;
+}
+async function fetchHoshinotoriDetail(indexRecord){
+const url=`${HOSHINOTORI_BASE}/data/comets/${encodeURIComponent(indexRecord.bucket)}/${encodeURIComponent(indexRecord.spkid)}.json`;
+const res=await fetch(url,{cache:"no-store"});if(res.status===404)return null;
+if(!res.ok)throw new Error(`詳細JSON HTTP ${res.status}`);return await res.json();
+}
+function normalizeDeg(v){v=Number(v)||0;return((v%360)+360)%360;}
+function solveKeplerElliptic(M,e){
+M=((M+Math.PI)%(2*Math.PI)+2*Math.PI)%(2*Math.PI)-Math.PI;let E=M;
+for(let j=0;j<24;j++){const f=E-e*Math.sin(E)-M,fp=1-e*Math.cos(E),d=f/fp;E-=d;if(Math.abs(d)<1e-12)break;}return E;
+}
+function solveKeplerHyperbolic(M,e){
+let H=Math.asinh(M/Math.max(e,1.000001));
+for(let j=0;j<30;j++){const f=e*Math.sinh(H)-H-M,fp=e*Math.cosh(H)-1,d=f/fp;H-=d;if(Math.abs(d)<1e-12)break;}return H;
+}
+function solveBarker(W){
+let D=Math.cbrt(3*W);
+for(let j=0;j<30;j++){const f=D+D*D*D/3-W,fp=1+D*D,d=f/fp;D-=d;if(Math.abs(d)<1e-12)break;}return D;
+}
+function earthHeliocentricEcliptic(jd){
+const d=jd-2451543.5,w=(282.9404+4.70935e-5*d)*D2R,e=0.016709-1.151e-9*d,M=normalizeDeg(356.0470+0.9856002585*d)*D2R;
+const E=solveKeplerElliptic(M,e),xv=Math.cos(E)-e,yv=Math.sqrt(1-e*e)*Math.sin(E),v=Math.atan2(yv,xv),r=Math.hypot(xv,yv),lon=v+w;
+return{x:-r*Math.cos(lon),y:-r*Math.sin(lon),z:0};
+}
+function cometHeliocentricEcliptic(rec,jd){
+const e=Number(rec.e),q=Number(rec.q),tp=Number(rec.tp),inc=Number(rec.i)*D2R,Om=Number(rec.om)*D2R,w=Number(rec.w)*D2R;
+if(![e,q,tp,inc,Om,w].every(Number.isFinite)||q<=0)return null;
+const k=0.01720209895,dt=jd-tp;let v,r;
+if(Math.abs(e-1)<1e-4){
+const W=k*dt/Math.sqrt(2*q*q*q),D=solveBarker(W);v=2*Math.atan(D);r=q*(1+D*D);
+}else if(e<1){
+const a=q/(1-e);if(!(a>0))return null;const n=k/Math.pow(a,1.5),M=n*dt,E=solveKeplerElliptic(M,e);
+v=2*Math.atan2(Math.sqrt(1+e)*Math.sin(E/2),Math.sqrt(1-e)*Math.cos(E/2));r=a*(1-e*Math.cos(E));
+}else{
+const a=q/(e-1);if(!(a>0))return null;const n=k/Math.pow(a,1.5),M=n*dt,H=solveKeplerHyperbolic(M,e);
+v=2*Math.atan2(Math.sqrt(e+1)*Math.sinh(H/2),Math.sqrt(e-1)*Math.cosh(H/2));r=a*(e*Math.cosh(H)-1);
+}
+const u=w+v,cu=Math.cos(u),su=Math.sin(u),cO=Math.cos(Om),sO=Math.sin(Om),ci=Math.cos(inc),si=Math.sin(inc);
+return{x:r*(cO*cu-sO*su*ci),y:r*(sO*cu+cO*su*ci),z:r*(su*si),r};
+}
+function hoshinotoriLocalPosition(rec,date){
+if(!rec||!date||isNaN(date))return null;const jd=toJD(date),c=cometHeliocentricEcliptic(rec,jd);if(!c)return null;
+const earth=earthHeliocentricEcliptic(jd),x=c.x-earth.x,y=c.y-earth.y,z=c.z-earth.z,dist=Math.hypot(x,y,z),T=(jd-2451545.0)/36525,eps=(23.439291-0.0130042*T)*D2R;
+const xe=x,ye=y*Math.cos(eps)-z*Math.sin(eps),ze=y*Math.sin(eps)+z*Math.cos(eps),ra=normalizeDeg(Math.atan2(ye,xe)*R2D),dec=Math.atan2(ze,Math.hypot(xe,ye))*R2D;
+const lat=parseFloat($("#inLat")?.value),lon=parseFloat($("#inLon")?.value),aa=(Number.isFinite(lat)&&Number.isFinite(lon))?altAz(ra,dec,lat,lon,date):null;
+return{ra,dec,dist,r:c.r,alt:aa?.alt,az:aa?.az};
+}
+function hoshinotoriDetailSummary(detail){
+if(!detail)return"星の鳥に詳細JSONはまだ保存されていません。";
+const orbit=detail.orbit||{},cov=orbit.covariance?"共分散あり":"共分散なし",model=Array.isArray(orbit.model_parameters)?orbit.model_parameters.length:0,phys=Array.isArray(detail.physical_parameters)?detail.physical_parameters.length:0;
+return`詳細JSON取得済み / ${cov} / モデルパラメータ ${model}件 / 物理パラメータ ${phys}件`;
+}
+async function selectHoshinotoriComet(indexRecord){
+const status=$("#htStatus"),mode=$("#htPrecisionMode")?.value||"simple";
+if(status){status.className="smallbody-status";status.textContent=`${hoshinotoriName(indexRecord)} を星の鳥から読み込んでいます…`;}
+try{
+const basic=await fetchHoshinotoriBasic(indexRecord);let detail=null;if(mode==="precise")detail=await fetchHoshinotoriDetail(indexRecord);
+HOSHINOTORI_SELECTED={index:indexRecord,basic,detail,mode};renderHoshinotoriSelected();$("#skyShowSmallBodies").checked=true;
+if(mode==="jpl"){
+if(status)status.textContent="星の鳥から対象を特定しました。JPL Horizons高精度軌道を取得します…";
+await loadCometTrack({name:hoshinotoriName(indexRecord),designation:indexRecord.designation||basic.pdes||"",spkid:indexRecord.spkid});
+}else{
+if(status){status.className="smallbody-status";status.textContent=mode==="precise"
+?`${hoshinotoriName(indexRecord)}：${hoshinotoriDetailSummary(detail)}。位置は現在、軌道要素の二体近似で計算しています。`
+:`${hoshinotoriName(indexRecord)}：基本軌道要素をNicoleへ読み込みました。二体近似で位置を計算します。`;}
+renderSkyChart();
+}
+}catch(e){if(status){status.className="smallbody-status error";status.textContent=`星の鳥からの読み込みに失敗しました：${String(e.message||e)}`;}}
+}
+function renderHoshinotoriSelected(){
+const wrap=$("#htSelected");if(!wrap||!HOSHINOTORI_SELECTED)return;
+const {index,basic,detail,mode}=HOSHINOTORI_SELECTED,date=getSkyViewDate(),p=hoshinotoriLocalPosition(basic,date);
+$("#htSelectedTitle").textContent=`☄️ ${hoshinotoriName(index)}`;
+const modeLabel=mode==="precise"?"精密計算":mode==="jpl"?"JPL高精度":"簡易計算";
+const values=[["モード",modeLabel],["SPK-ID",index.spkid||"—"],["符号",index.designation||basic.pdes||"—"],["軌道解",basic.orbit_id||index.orbit_id||"—"],
+["離心率 e",Number.isFinite(Number(basic.e))?Number(basic.e).toFixed(8):"—"],["近日点距離 q",Number.isFinite(Number(basic.q))?`${Number(basic.q).toFixed(6)} AU`:"—"],
+["RA",p?`${(p.ra/15).toFixed(4)} h`:"—"],["Dec",p?`${p.dec.toFixed(3)}°`:"—"],["高度",p&&Number.isFinite(p.alt)?`${p.alt.toFixed(1)}°`:"—"],
+["方位",p&&Number.isFinite(p.az)?`${azToDir(p.az)} ${p.az.toFixed(0)}°`:"—"],["地球距離",p?`${p.dist.toFixed(3)} AU`:"—"],["詳細",detail?hoshinotoriDetailSummary(detail):(index.detail?"未取得":"星の鳥未保存")]];
+$("#htSelectedGrid").innerHTML=values.map(([k,v])=>`<div class="ht-kv"><div class="ht-k">${escapeHTML(k)}</div><div class="ht-v">${escapeHTML(String(v))}</div></div>`).join("");wrap.style.display="block";
+}
+function drawHoshinotoriSelected(ctx,lat,lon,date,cx,cy,R){
+if(!HOSHINOTORI_SELECTED||HOSHINOTORI_SELECTED.mode==="jpl")return;
+const p0=hoshinotoriLocalPosition(HOSHINOTORI_SELECTED.basic,date);if(!p0)return;const p=skyProject(p0.ra,p0.dec,lat,lon,date,cx,cy,R);if(!p)return;
+ctx.save();ctx.strokeStyle="#67e8f9";ctx.lineWidth=1.8;ctx.beginPath();ctx.arc(p.x,p.y,4.2,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.moveTo(p.x+4,p.y-4);ctx.lineTo(p.x+9,p.y-9);ctx.stroke();
+ctx.fillStyle="#9debf5";ctx.font="9px sans-serif";ctx.textAlign="left";ctx.fillText(hoshinotoriName(HOSHINOTORI_SELECTED.index),p.x+7,p.y-5);ctx.restore();
+SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"comet",name:hoshinotoriName(HOSHINOTORI_SELECTED.index),mag:NaN,alt:p.alt,az:p.az,type:"彗星（星の鳥）"});
+}
+
 function formatCometTrackDate(value){
 const d=value instanceof Date?value:new Date(value);
 if(!d||isNaN(d))return "—";
@@ -5263,6 +5541,9 @@ note:s.note
 });
 }
 
+if($("#skyShowSmallBodies").checked&&HOSHINOTORI_SELECTED){
+drawHoshinotoriSelected(ctx,lat,lon,date,cx,cy,R);
+}
 if($("#skyShowSmallBodies").checked&&NIGHT_COMETS.length&&nightCometLocationMatches(lat,lon)){
 NIGHT_COMETS.forEach(o=>{
 if(COMET_TRACK_DATA&&COMET_TRACK_DATA.designation&&o.designation===COMET_TRACK_DATA.designation)return;
@@ -6500,6 +6781,28 @@ if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(curr
 });
 
 $("#sbRefresh").addEventListener("click",loadSmallBodies);
+
+$("#htCometSearch").addEventListener("input",renderHoshinotoriResults);
+$("#htReloadIndex").addEventListener("click",async()=>{
+try{localStorage.removeItem(HOSHINOTORI_INDEX_CACHE_KEY);}catch(e){}
+await loadHoshinotoriIndex(true);
+renderHoshinotoriResults();
+});
+$("#htPrecisionMode").addEventListener("change",()=>{
+if(HOSHINOTORI_SELECTED)selectHoshinotoriComet(HOSHINOTORI_SELECTED.index);
+});
+$("#htShowOnSky").addEventListener("click",()=>{
+if(!HOSHINOTORI_SELECTED)return;
+$("#skyShowSmallBodies").checked=true;switchResultTab("skymap");renderSkyChart();
+setTimeout(()=>$("#skyMapCanvas")?.scrollIntoView({behavior:"smooth",block:"center"}),40);
+});
+$("#htLongTrack").addEventListener("click",()=>{
+if(!HOSHINOTORI_SELECTED)return;
+const r=HOSHINOTORI_SELECTED.index;
+loadCometTrack({name:hoshinotoriName(r),designation:r.designation||HOSHINOTORI_SELECTED.basic?.pdes||"",spkid:r.spkid||""});
+});
+loadHoshinotoriIndex(false).then(renderHoshinotoriResults);
+
 /* 起動時は通信せず、ブラウザに保存した前回データだけ復元 */
 restoreSmallBodyCache();
 
