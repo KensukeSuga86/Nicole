@@ -729,6 +729,295 @@ body.manual-open{overflow:hidden;}
 }
 .object-popup-table th{width:32%;color:#729abc;font-weight:normal;}
 .object-popup-story{margin-top:12px;color:#b9cce0;font-size:12px;line-height:1.8;}
+
+/* 観測条件設定：縦方向の操作順を明確にする */
+.obs-order-block{
+  margin-top:12px;
+}
+.obs-order-block:first-of-type{
+  margin-top:0;
+}
+.obs-action-block{
+  display:flex;
+}
+.obs-full-action{
+  width:100%;
+  max-width:360px;
+  justify-content:center;
+}
+.obs-location-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+}
+.obs-limit-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  max-width:520px;
+}
+.obs-search-block{
+  margin-top:16px;
+}
+.obs-search-submit{
+  margin-top:10px;
+}
+@media(max-width:900px){
+  .obs-location-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:560px){
+  .obs-location-grid,.obs-limit-grid{grid-template-columns:1fr;}
+  .obs-full-action{max-width:none;}
+  .obs-order-block{margin-top:10px;}
+}
+
+/* ===== 観測条件：画面幅に応じて横並び / 縦並び ===== */
+.obs-row{
+  display:grid;
+  gap:10px;
+  margin-top:12px;
+  align-items:end;
+}
+.obs-row-datetime{
+  grid-template-columns:minmax(220px,1.5fr) minmax(180px,1fr) minmax(170px,1fr);
+}
+.obs-inline-action{
+  display:flex;
+}
+.obs-inline-action > button{
+  width:100%;
+  min-height:40px;
+}
+.obs-row-location-actions{
+  grid-template-columns:repeat(2,minmax(0,220px));
+}
+.obs-row-location-actions > button{
+  width:100%;
+}
+.obs-location-grid{
+  grid-template-columns:1.4fr 1fr 1fr .8fr;
+}
+.obs-limit-grid{
+  grid-template-columns:repeat(2,minmax(0,240px));
+}
+.favorite-location-box{
+  display:grid;
+  grid-template-columns:minmax(220px,1fr) auto auto auto;
+  gap:8px;
+  align-items:end;
+  margin-top:8px;
+  padding:9px 10px;
+  border:1px solid #172b40;
+  border-radius:9px;
+  background:#07111d;
+}
+.favorite-location-main{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.favorite-location-main label{
+  color:#7096b6;
+  font-size:11px;
+}
+.favorite-location-main select{
+  width:100%;
+}
+.favorite-location-btn{
+  min-height:36px;
+  padding:7px 10px;
+  border:1px solid #294765;
+  background:#0d1d2e;
+  color:#b9d7ef;
+  border-radius:7px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.favorite-location-btn:hover{border-color:#5285b0;color:#fff;}
+.favorite-location-btn.danger{color:#e9a1a1;border-color:#5a3037;}
+.obj-search-actions,.card-plan-actions,.const-plan-actions{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+.reverse-plan-btn{
+  border:1px solid #35618a;
+  background:#0b2237;
+  color:#a9d8f7;
+  border-radius:7px;
+  padding:6px 10px;
+  cursor:pointer;
+  font-size:11px;
+}
+.reverse-plan-btn:hover{color:#fff;border-color:#68a9db;}
+.obj-card .card-plan-actions{padding:0 12px 12px;}
+.const-plan-actions{margin-top:9px;}
+.const-plan-actions .const-sky-btn,
+.const-plan-actions .reverse-plan-btn{margin:0;}
+
+/* ===== 逆引きモーダル ===== */
+.reverse-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:10040;
+  padding:18px;
+  background:rgba(0,0,0,.76);
+  align-items:center;
+  justify-content:center;
+}
+.reverse-modal.open{display:flex;}
+.reverse-dialog{
+  width:min(760px,100%);
+  max-height:92vh;
+  overflow:auto;
+  background:#0b1422;
+  border:1px solid #315979;
+  border-radius:14px;
+  box-shadow:0 22px 70px rgba(0,0,0,.6);
+}
+.reverse-head{
+  position:sticky;
+  top:0;
+  z-index:2;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:14px 16px;
+  background:#0b1422;
+  border-bottom:1px solid #1b3147;
+}
+.reverse-title-wrap{flex:1;}
+.reverse-title{font-size:17px;font-weight:bold;color:#e8f4ff;}
+.reverse-sub{font-size:11px;color:#6f94b3;margin-top:3px;}
+.reverse-close{
+  border:1px solid #3b536a;
+  border-radius:7px;
+  padding:6px 10px;
+  color:#cfe5f7;
+  background:#15202e;
+  cursor:pointer;
+}
+.reverse-body{padding:14px 16px 18px;}
+.reverse-controls{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  align-items:end;
+}
+.reverse-controls label{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  color:#7199b9;
+  font-size:11px;
+}
+.reverse-controls select{width:100%;}
+.reverse-search-btn{
+  min-height:39px;
+  border:1px solid #4177a2;
+  border-radius:8px;
+  background:#11304b;
+  color:#d6ecff;
+  cursor:pointer;
+}
+.reverse-latitude{
+  margin-top:12px;
+  padding:10px 12px;
+  border:1px solid #1b344e;
+  border-radius:9px;
+  background:#07111e;
+  color:#9fc4df;
+  font-size:12px;
+  line-height:1.7;
+}
+.reverse-location-list{
+  margin-top:12px;
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.reverse-location-chip{
+  border:1px solid #284865;
+  background:#091725;
+  color:#9ebfd8;
+  padding:5px 8px;
+  border-radius:999px;
+  font-size:10px;
+}
+.reverse-results{
+  display:grid;
+  gap:9px;
+  margin-top:12px;
+}
+.reverse-result-card{
+  border:1px solid #1c3852;
+  border-radius:10px;
+  background:#091522;
+  padding:11px 12px;
+}
+.reverse-result-head{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:flex-start;
+}
+.reverse-result-place{
+  color:#dbeeff;
+  font-size:13px;
+  font-weight:bold;
+}
+.reverse-result-date{color:#7ea7c6;font-size:11px;}
+.reverse-result-main{
+  color:#8ccaf1;
+  font-size:12px;
+  margin-top:6px;
+  line-height:1.65;
+}
+.reverse-result-meta{
+  color:#7795ad;
+  font-size:10px;
+  margin-top:5px;
+  line-height:1.55;
+}
+.reverse-set-btn{
+  margin-top:8px;
+  border:1px solid #39719c;
+  border-radius:7px;
+  padding:6px 9px;
+  color:#d8efff;
+  background:#102a41;
+  cursor:pointer;
+}
+.reverse-empty{
+  color:#708ba2;
+  padding:18px 8px;
+  text-align:center;
+  font-size:12px;
+}
+
+@media(max-width:850px){
+  .obs-row-datetime{grid-template-columns:1fr 1fr;}
+  .obs-datetime-field{grid-column:1 / -1;}
+  .obs-location-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .favorite-location-box{grid-template-columns:1fr 1fr;}
+  .favorite-location-main{grid-column:1 / -1;}
+}
+@media(max-width:560px){
+  .obs-row-datetime,
+  .obs-row-location-actions,
+  .obs-location-grid,
+  .obs-limit-grid,
+  .favorite-location-box,
+  .reverse-controls{
+    grid-template-columns:1fr;
+  }
+  .obs-datetime-field,.favorite-location-main{grid-column:auto;}
+  .obs-row{gap:8px;margin-top:10px;}
+  .reverse-modal{padding:8px;}
+  .reverse-body{padding:12px;}
+}
 </style>
 </head>
 <body>
@@ -741,43 +1030,80 @@ body.manual-open{overflow:hidden;}
 
 <div class="panel">
 <h2>📍 観測条件を設定</h2>
-<div class="obs-grid-primary">
-<div class="obs-field"><label>観測日時</label><input type="datetime-local" id="inDatetime">
-<button type="button" class="moon-date-btn" id="openMoonDatePicker">🌙 月相を見ながら選ぶ</button>
+
+<!-- 1行目：観測日時 / 月相 / 現在時刻 -->
+<div class="obs-row obs-row-datetime">
+  <div class="obs-field obs-datetime-field">
+    <label>観測日時</label>
+    <input type="datetime-local" id="inDatetime">
+  </div>
+  <div class="obs-inline-action">
+    <button type="button" class="moon-date-btn" id="openMoonDatePicker">🌙 月相を見ながら選ぶ</button>
+  </div>
+  <div class="obs-inline-action">
+    <button class="action gray" id="btnNow">🕐 現在時刻をセット</button>
+  </div>
 </div>
-<div class="obs-field"><label>場所名（任意）</label><input type="text" id="inPlace" placeholder="例：帯広"></div>
+
+<!-- 2行目：現在地 / 地図 -->
+<div class="obs-row obs-row-location-actions">
+  <button class="loc-btn" id="btnGPS">📡 現在地を取得</button>
+  <button type="button" class="map-select-btn" id="openMapSelect">🗺 地図から選択</button>
 </div>
-<div class="obs-grid-detail">
-<div class="obs-field"><label>緯度（北緯）</label><input type="number" id="inLat" step="0.000001" placeholder="例：42.923600"></div>
-<div class="obs-field"><label>経度（東経）</label><input type="number" id="inLon" step="0.000001" placeholder="例：143.196500"></div>
-<div class="obs-field"><label>標高（m）</label><input type="number" id="inAlt" step="0.1" placeholder="地図から自動取得"></div>
-<div class="obs-field"><label>最低高度（°）</label>
-<select id="inMinAlt"><option value="10">10°以上</option><option value="20" selected>20°以上</option><option value="30">30°以上</option></select>
+
+<!-- 3行目：場所名 / 緯度 / 経度 / 標高 -->
+<div class="obs-row obs-location-grid">
+  <div class="obs-field"><label>場所名（任意）</label><input type="text" id="inPlace" placeholder="例：帯広"></div>
+  <div class="obs-field"><label>緯度（北緯）</label><input type="number" id="inLat" step="0.000001" placeholder="例：42.923600"></div>
+  <div class="obs-field"><label>経度（東経）</label><input type="number" id="inLon" step="0.000001" placeholder="例：143.196500"></div>
+  <div class="obs-field"><label>標高（m）</label><input type="number" id="inAlt" step="0.1" placeholder="地図から自動取得"></div>
 </div>
-<div class="obs-field"><label>等級上限</label>
-<select id="inMaxMag"><option value="7">〜7等（明るめ）</option><option value="9">〜9等</option><option value="11" selected>〜11等（標準）</option><option value="14">〜14等（全て）</option></select>
+
+<div class="favorite-location-box">
+  <div class="favorite-location-main">
+    <label for="favoriteLocationSelect">☆ お気に入り地点</label>
+    <select id="favoriteLocationSelect">
+      <option value="">お気に入り地点を選択</option>
+    </select>
+  </div>
+  <button type="button" class="favorite-location-btn" id="applyFavoriteLocation">この地点を使う</button>
+  <button type="button" class="favorite-location-btn" id="saveFavoriteLocation">☆ 現在の地点を登録</button>
+  <button type="button" class="favorite-location-btn danger" id="deleteFavoriteLocation">削除</button>
 </div>
+
+<!-- 4行目：最低高度 / 等級上限 -->
+<div class="obs-row obs-limit-grid">
+  <div class="obs-field">
+    <label>最低高度（°）</label>
+    <select id="inMinAlt">
+      <option value="10">10°以上</option>
+      <option value="20" selected>20°以上</option>
+      <option value="30">30°以上</option>
+    </select>
+  </div>
+  <div class="obs-field">
+    <label>等級上限</label>
+    <select id="inMaxMag">
+      <option value="7">〜7等（明るめ）</option>
+      <option value="9">〜9等</option>
+      <option value="11" selected>〜11等（標準）</option>
+      <option value="14">〜14等（全て）</option>
+    </select>
+  </div>
 </div>
-<div class="map-select-row">
-<button type="button" class="map-select-btn" id="openMapSelect">🗺 地図から選択</button>
-<span style="font-size:10px;color:#6f94b3">地理院淡色地図から緯度・経度・標高を選択（オンライン時のみ）</span>
-</div>
-<div class="location-presets">
-<button class="loc-btn" id="btnGPS">📡 現在地を取得</button>
-</div>
-<div style="margin-top:14px">
-<label>🔍 天体を検索（名前・カタログ番号・種類などで検索）</label>
-<div class="search-bar">
-<input type="text" id="objSearch" placeholder="例：M13 / アンドロメダ / 球状星団 / 銀河 ...">
-<span class="search-count" id="searchCount"></span>
-</div>
-<div id="objSearchResult" style="display:none" class="obj-search-result">
-<h4>🔍 検索結果</h4><div class="obj-search-list" id="objSearchList"></div>
-</div>
-</div>
-<div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-<button class="action" id="btnCalc">🔭 天体を検索する</button>
-<button class="action gray" id="btnNow">🕐 現在時刻をセット</button>
+
+<!-- 5行目：天体・星座を検索 -->
+<div class="obs-row obs-search-block">
+  <label>🔍 天体・星座を検索（名前・カタログ番号・種類などで検索）</label>
+  <div class="search-bar">
+    <input type="text" id="objSearch" placeholder="例：M13 / アンドロメダ / オリオン座 / 球状星団 ...">
+    <span class="search-count" id="searchCount"></span>
+  </div>
+  <div id="objSearchResult" style="display:none" class="obj-search-result">
+    <h4>🔍 検索結果</h4>
+    <div class="obj-search-list" id="objSearchList"></div>
+  </div>
+  <button class="action obs-search-submit" id="btnCalc">🔭 天体を検索する</button>
 </div>
 </div>
 
@@ -798,8 +1124,8 @@ body.manual-open{overflow:hidden;}
 <button class="active" data-rtab="skymap">🗺 星図</button>
 <button data-rtab="constellations">🌠 見頃の星座</button>
 <button data-rtab="cards">🌌 天体カード</button>
-<button data-rtab="mooncalendar">🌙 カレンダー</button>
-<button data-rtab="schedule">📅 観測スケジュール</button>
+<button data-rtab="mooncalendar">📅 カレンダー</button>
+<button data-rtab="schedule">⌚️ 観測スケジュール</button>
 <button data-rtab="smallbodies">☄️ 彗星</button>
 <button data-rtab="meteors">🌠 流星群</button>
 </div>
@@ -1056,6 +1382,41 @@ body.manual-open{overflow:hidden;}
   </div>
 </div>
 
+<div class="reverse-modal" id="reversePlannerModal" aria-hidden="true">
+  <div class="reverse-dialog" role="dialog" aria-modal="true" aria-labelledby="reversePlannerTitle">
+    <div class="reverse-head">
+      <div class="reverse-title-wrap">
+        <div class="reverse-title" id="reversePlannerTitle">いつ・どこで見る？</div>
+        <div class="reverse-sub" id="reversePlannerSub">現在地とお気に入り地点から観測しやすい日時を探します。</div>
+      </div>
+      <button type="button" class="reverse-close" id="closeReversePlanner">閉じる</button>
+    </div>
+    <div class="reverse-body">
+      <div class="reverse-controls">
+        <label>検索期間
+          <select id="reverseDays">
+            <option value="7">今後7日</option>
+            <option value="30" selected>今後30日</option>
+            <option value="90">今後90日</option>
+          </select>
+        </label>
+        <label>最低高度
+          <select id="reverseMinAlt">
+            <option value="10">10°以上</option>
+            <option value="20" selected>20°以上</option>
+            <option value="30">30°以上</option>
+            <option value="40">40°以上</option>
+          </select>
+        </label>
+        <button type="button" class="reverse-search-btn" id="runReversePlanner">候補を検索</button>
+      </div>
+      <div class="reverse-latitude" id="reverseLatitudeHint"></div>
+      <div class="reverse-location-list" id="reverseLocationList"></div>
+      <div class="reverse-results" id="reverseResults"></div>
+    </div>
+  </div>
+</div>
+
 <div class="moon-picker-modal" id="moonDatePickerModal" aria-hidden="true">
   <div class="moon-picker-dialog" role="dialog" aria-modal="true" aria-labelledby="moonDatePickerTitle">
     <div class="moon-picker-head">
@@ -1241,7 +1602,32 @@ body.manual-open{overflow:hidden;}
       details.panel &gt; summary{padding:14px 14px; font-size:17px}
       .panel-body{padding:16px 14px 18px}
     }
-  &lt;/style&gt;
+  
+    @media (max-width:720px){
+      body{font-size:14px;line-height:1.72;}
+      .wrap{width:min(100% - 20px,1100px);padding:18px 0 40px;}
+      h1{font-size:24px;line-height:1.25;}
+      h2{font-size:19px;line-height:1.35;}
+      h3{font-size:16px;line-height:1.4;}
+      p,li,td,th,summary{font-size:14px;}
+      .hero p,.lead{font-size:14px;}
+      .purpose-card h3{font-size:16px;}
+      .purpose-card p{font-size:13px;}
+      .nav-card,.step,.note,.callout{font-size:13px;}
+    }
+    @media (max-width:430px){
+      body{font-size:13px;line-height:1.68;}
+      .wrap{width:min(100% - 16px,1100px);padding:14px 0 32px;}
+      h1{font-size:21px;}
+      h2{font-size:17px;}
+      h3{font-size:15px;}
+      p,li,td,th,summary{font-size:13px;}
+      .hero p,.lead{font-size:13px;}
+      .purpose-card h3{font-size:15px;}
+      .purpose-card p{font-size:12px;}
+      .nav-card,.step,.note,.callout{font-size:12px;}
+    }
+&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;div class=&quot;wrap&quot;&gt;
@@ -5477,6 +5863,296 @@ return pts;
 }
 
 const $=s=>document.querySelector(s);
+
+/* =====================================================
+お気に入り地点
+===================================================== */
+const FAVORITE_LOCATIONS_KEY="nicole_favorite_locations_v1";
+let FAVORITE_LOCATIONS=[];
+
+function loadFavoriteLocations(){
+try{
+const data=JSON.parse(localStorage.getItem(FAVORITE_LOCATIONS_KEY)||"[]");
+FAVORITE_LOCATIONS=Array.isArray(data)?data.filter(x=>
+x&&Number.isFinite(Number(x.lat))&&Number.isFinite(Number(x.lon))
+):[];
+}catch(e){
+FAVORITE_LOCATIONS=[];
+}
+renderFavoriteLocations();
+}
+
+function persistFavoriteLocations(){
+try{
+localStorage.setItem(FAVORITE_LOCATIONS_KEY,JSON.stringify(FAVORITE_LOCATIONS));
+}catch(e){
+console.warn("お気に入り地点の保存に失敗しました",e);
+}
+renderFavoriteLocations();
+}
+
+function renderFavoriteLocations(){
+const sel=$("#favoriteLocationSelect");
+if(!sel)return;
+const selected=sel.value;
+sel.innerHTML='<option value="">お気に入り地点を選択</option>';
+FAVORITE_LOCATIONS.forEach((loc,i)=>{
+const op=document.createElement("option");
+op.value=String(i);
+op.textContent=loc.name||`地点 ${i+1}`;
+sel.appendChild(op);
+});
+if(selected!==""&&Number(selected)<FAVORITE_LOCATIONS.length)sel.value=selected;
+}
+
+function currentInputLocation(){
+const lat=parseFloat($("#inLat")?.value);
+const lon=parseFloat($("#inLon")?.value);
+const alt=parseFloat($("#inAlt")?.value||"0");
+const name=($("#inPlace")?.value||"").trim()||"現在の観測地点";
+if(!Number.isFinite(lat)||!Number.isFinite(lon))return null;
+return{name,lat,lon,alt:Number.isFinite(alt)?alt:0};
+}
+
+function applyLocationToInputs(loc){
+if(!loc)return;
+$("#inPlace").value=loc.name||"お気に入り地点";
+$("#inLat").value=Number(loc.lat).toFixed(6);
+$("#inLon").value=Number(loc.lon).toFixed(6);
+$("#inAlt").value=Number.isFinite(Number(loc.alt))?Number(loc.alt).toFixed(1):"";
+}
+
+function favoriteLocationsForPlanner(){
+const out=[];
+const current=currentInputLocation();
+if(current)out.push({...current,_source:"current"});
+FAVORITE_LOCATIONS.forEach((loc,i)=>{
+const duplicate=out.some(x=>Math.abs(x.lat-loc.lat)<1e-6&&Math.abs(x.lon-loc.lon)<1e-6);
+if(!duplicate)out.push({...loc,_source:"favorite",_favoriteIndex:i});
+});
+return out;
+}
+
+/* =====================================================
+天体・星座 逆引き
+===================================================== */
+let REVERSE_TARGET=null;
+
+function reverseTargetLabel(target){
+return target?.kind==="constellation" ? `${target.data.name}（星座）` : target?.data?.name||"天体";
+}
+
+function reverseTargetRaDec(target,date){
+if(!target||!target.data)return null;
+if(target.kind==="constellation"){
+const co=CONST_COORD[target.data.id];
+return co?{ra:co[0],dec:co[1]}:null;
+}
+const obj=target.data;
+if(obj.type==="planet"){
+const p=planetRaDec(obj.planet,toJD(date));
+return{ra:p.ra,dec:p.dec};
+}
+if(Number.isFinite(Number(obj.ra))&&Number.isFinite(Number(obj.dec))){
+return{ra:Number(obj.ra),dec:Number(obj.dec)};
+}
+return null;
+}
+
+function angularSeparationDeg(ra1,dec1,ra2,dec2){
+const a1=ra1*D2R,d1=dec1*D2R,a2=ra2*D2R,d2=dec2*D2R;
+const c=Math.sin(d1)*Math.sin(d2)+Math.cos(d1)*Math.cos(d2)*Math.cos(a1-a2);
+return Math.acos(Math.max(-1,Math.min(1,c)))*R2D;
+}
+
+function formatReverseDate(d){
+const p=n=>String(n).padStart(2,"0");
+return`${d.getFullYear()}/${p(d.getMonth()+1)}/${p(d.getDate())}`;
+}
+function formatReverseTime(d){
+const p=n=>String(n).padStart(2,"0");
+return`${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+
+function latitudeBandText(dec,minAlt){
+const half=90-minAlt;
+const low=Math.max(-90,dec-half);
+const high=Math.min(90,dec+half);
+const f=x=>Math.abs(x).toFixed(1);
+if(low<=-90&&high>=90)return"ほぼ全緯度で条件を満たせます。";
+if(low<=0&&high>0&&high<90)return`北半球では概ね北緯 ${f(high)}° 以南が目安です。`;
+if(low>0&&high>=90)return`北半球では概ね北緯 ${f(low)}° 以北が目安です。`;
+if(low>=0&&high<90)return`北緯 ${f(low)}°〜${f(high)}° が目安です。`;
+if(high<=0&&low>-90)return`南緯 ${f(high)}°〜${f(low)}° 付近が目安です。`;
+return`緯度 ${low.toFixed(1)}°〜${high.toFixed(1)}° が目安です。`;
+}
+
+function renderReverseLatitudeHint(target,minAlt){
+const box=$("#reverseLatitudeHint");
+if(!box)return;
+const baseDate=$("#inDatetime")?.value?new Date($("#inDatetime").value):new Date();
+const rd=reverseTargetRaDec(target,baseDate);
+if(!rd){
+box.textContent="緯度による見え方の概算を計算できません。";
+return;
+}
+const horizon=latitudeBandText(rd.dec,0);
+const useful=latitudeBandText(rd.dec,minAlt);
+const note=target.kind==="constellation"
+?"星座中心の代表座標から計算した概算です。星座全体の見え方とは多少異なります。"
+:target.data.type==="planet"
+?"惑星は日々位置が変わるため、現在の赤緯を基準にした概算です。"
+:"南中高度の幾何学的条件から求めた概算です。天候・地形・光害は含みません。";
+box.innerHTML=`<b>緯度の目安</b><br>地平線上に出る条件：${escapeHTML(horizon)}<br>${minAlt}°以上まで上がる条件：${escapeHTML(useful)}<br><span style="color:#607f98">${escapeHTML(note)}</span>`;
+}
+
+function plannerLocationsHtml(locations){
+return locations.map(loc=>`<span class="reverse-location-chip">${escapeHTML(loc.name)} / ${loc.lat.toFixed(2)}°, ${loc.lon.toFixed(2)}°</span>`).join("");
+}
+
+function nightSamplesForTarget(target,loc,day,minAlt){
+const samples=[];
+const start=new Date(day.getFullYear(),day.getMonth(),day.getDate(),17,0,0,0);
+const end=new Date(start.getTime()+14*3600000);
+
+for(let t=start.getTime();t<=end.getTime();t+=30*60000){
+const d=new Date(t);
+const rd=reverseTargetRaDec(target,d);
+if(!rd)continue;
+const aa=altAz(rd.ra,rd.dec,loc.lat,loc.lon,d);
+const sAlt=sunAlt(loc.lat,loc.lon,d);
+
+const moon=moonPosition(toJD(d));
+const sep=angularSeparationDeg(rd.ra,rd.dec,moon.ra,moon.dec);
+const phase=moonPhaseInfo(d);
+
+const qualifies=aa.alt>=minAlt && sAlt<=-12;
+const deepDark=sAlt<=-18;
+const moonPenalty=(phase.moonIllum/100)*Math.max(0,(70-sep)/70)*18;
+const score=aa.alt+(deepDark?8:0)+(sep/180)*5-moonPenalty;
+
+samples.push({
+date:d,alt:aa.alt,az:aa.az,sunAlt:sAlt,moonSep:sep,
+moonIllum:phase.moonIllum,qualifies,score
+});
+}
+return samples;
+}
+
+function bestNightCandidate(target,loc,day,minAlt){
+const samples=nightSamplesForTarget(target,loc,day,minAlt);
+const usable=samples.filter(s=>s.qualifies);
+if(!usable.length)return null;
+let best=usable[0];
+for(const s of usable)if(s.score>best.score)best=s;
+const first=usable[0];
+const last=usable[usable.length-1];
+return{
+loc,
+date:best.date,
+best,
+start:first.date,
+end:last.date,
+score:best.score
+};
+}
+
+function reverseCandidateCard(c,index){
+const label=formatReverseDate(c.date);
+return`
+<div class="reverse-result-card">
+  <div class="reverse-result-head">
+    <div>
+      <div class="reverse-result-place">${index+1}. ${escapeHTML(c.loc.name)}</div>
+      <div class="reverse-result-date">${label}</div>
+    </div>
+    <div class="reverse-result-date">最大候補高度 ${c.best.alt.toFixed(1)}°</div>
+  </div>
+  <div class="reverse-result-main">
+    見やすい時刻：<b>${formatReverseTime(c.best.date)}</b> ／ 方位 ${azToDir(c.best.az)}（${c.best.az.toFixed(0)}°）<br>
+    条件を満たす時間帯：約 ${formatReverseTime(c.start)}〜${formatReverseTime(c.end)}
+  </div>
+  <div class="reverse-result-meta">
+    月の輝面 ${c.best.moonIllum}% ／ 月との離角 ${c.best.moonSep.toFixed(0)}° ／ 太陽高度 ${c.best.sunAlt.toFixed(0)}°
+  </div>
+  <button type="button" class="reverse-set-btn" data-reverse-index="${index}">この日時・場所を観測条件にセット</button>
+</div>`;
+}
+
+function runReversePlanner(){
+if(!REVERSE_TARGET)return;
+const days=parseInt($("#reverseDays").value)||30;
+const minAlt=parseInt($("#reverseMinAlt").value)||20;
+const locations=favoriteLocationsForPlanner();
+$("#reverseLocationList").innerHTML=plannerLocationsHtml(locations);
+renderReverseLatitudeHint(REVERSE_TARGET,minAlt);
+
+if(!locations.length){
+$("#reverseResults").innerHTML='<div class="reverse-empty">現在地またはお気に入り地点を登録してください。</div>';
+return;
+}
+
+const baseRaw=$("#inDatetime")?.value;
+const base=baseRaw?new Date(baseRaw):new Date();
+const startDay=new Date(base.getFullYear(),base.getMonth(),base.getDate(),12,0,0,0);
+
+const candidates=[];
+for(const loc of locations){
+for(let i=0;i<days;i++){
+const day=new Date(startDay);
+day.setDate(day.getDate()+i);
+const c=bestNightCandidate(REVERSE_TARGET,loc,day,minAlt);
+if(c)candidates.push(c);
+}
+}
+candidates.sort((a,b)=>b.score-a.score);
+const top=candidates.slice(0,8);
+REVERSE_TARGET._lastCandidates=top;
+
+if(!top.length){
+$("#reverseResults").innerHTML=`<div class="reverse-empty">今後${days}日間、登録地点では最低高度${minAlt}°以上かつ薄明後に見える候補が見つかりませんでした。最低高度を下げるか、検索期間を広げてください。</div>`;
+return;
+}
+
+$("#reverseResults").innerHTML=top.map(reverseCandidateCard).join("");
+$("#reverseResults").querySelectorAll("[data-reverse-index]").forEach(btn=>{
+btn.addEventListener("click",()=>{
+const c=REVERSE_TARGET?._lastCandidates?.[Number(btn.dataset.reverseIndex)];
+if(!c)return;
+applyLocationToInputs(c.loc);
+const p=n=>String(n).padStart(2,"0");
+const d=c.best.date;
+$("#inDatetime").value=`${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}`;
+closeReversePlanner();
+$("#btnCalc").click();
+window.scrollTo({top:0,behavior:"smooth"});
+});
+});
+}
+
+function openReversePlanner(kind,data){
+REVERSE_TARGET={kind,data};
+const modal=$("#reversePlannerModal");
+$("#reversePlannerTitle").textContent=`${reverseTargetLabel(REVERSE_TARGET)} — いつ・どこで見る？`;
+$("#reversePlannerSub").textContent="現在の観測地点とお気に入り地点を比較し、薄明後に見やすい日時を探します。";
+$("#reverseMinAlt").value=$("#inMinAlt")?.value||"20";
+$("#reverseResults").innerHTML='<div class="reverse-empty">「候補を検索」を押すと、現在地とお気に入り地点から候補を計算します。</div>';
+const locs=favoriteLocationsForPlanner();
+$("#reverseLocationList").innerHTML=plannerLocationsHtml(locs);
+renderReverseLatitudeHint(REVERSE_TARGET,parseInt($("#reverseMinAlt").value)||20);
+modal.classList.add("open");
+modal.setAttribute("aria-hidden","false");
+document.body.classList.add("manual-open");
+}
+
+function closeReversePlanner(){
+const modal=$("#reversePlannerModal");
+if(!modal)return;
+modal.classList.remove("open");
+modal.setAttribute("aria-hidden","true");
+document.body.classList.remove("manual-open");
+}
+
 function escapeHTML(value){
 return String(value??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
 }
@@ -5493,6 +6169,7 @@ $("#inLat").value=42.9236;
 $("#inLon").value=143.1965;
 $("#inPlace").value="帯広";
 $("#inAlt").value="";
+loadFavoriteLocations();
 })();
 
 const LOCS={
@@ -5567,25 +6244,151 @@ $("#btnNow").addEventListener("click",()=>{
 const now=new Date();const p=n=>String(n).padStart(2,"0");
 $("#inDatetime").value=`${now.getFullYear()}-${p(now.getMonth()+1)}-${p(now.getDate())}T${p(now.getHours())}:${p(now.getMinutes())}`;
 });
+
+$("#saveFavoriteLocation").addEventListener("click",()=>{
+const loc=currentInputLocation();
+if(!loc){alert("場所名・緯度・経度を入力してください。");return;}
+const inputName=prompt("お気に入り地点の名前",loc.name||"観測地点");
+if(inputName===null)return;
+loc.name=inputName.trim()||loc.name||"観測地点";
+const same=FAVORITE_LOCATIONS.findIndex(x=>Math.abs(x.lat-loc.lat)<1e-6&&Math.abs(x.lon-loc.lon)<1e-6);
+if(same>=0){
+FAVORITE_LOCATIONS[same]=loc;
+}else{
+FAVORITE_LOCATIONS.push(loc);
+}
+persistFavoriteLocations();
+$("#favoriteLocationSelect").value=String(same>=0?same:FAVORITE_LOCATIONS.length-1);
+});
+
+$("#applyFavoriteLocation").addEventListener("click",()=>{
+const idx=Number($("#favoriteLocationSelect").value);
+if(!Number.isInteger(idx)||!FAVORITE_LOCATIONS[idx]){alert("お気に入り地点を選択してください。");return;}
+applyLocationToInputs(FAVORITE_LOCATIONS[idx]);
+});
+
+$("#deleteFavoriteLocation").addEventListener("click",()=>{
+const idx=Number($("#favoriteLocationSelect").value);
+if(!Number.isInteger(idx)||!FAVORITE_LOCATIONS[idx]){alert("削除するお気に入り地点を選択してください。");return;}
+if(!confirm(`「${FAVORITE_LOCATIONS[idx].name}」を削除しますか？`))return;
+FAVORITE_LOCATIONS.splice(idx,1);
+persistFavoriteLocations();
+});
+
+$("#runReversePlanner").addEventListener("click",runReversePlanner);
+$("#closeReversePlanner").addEventListener("click",closeReversePlanner);
+$("#reversePlannerModal").addEventListener("click",e=>{
+if(e.target===$("#reversePlannerModal"))closeReversePlanner();
+});
+$("#reverseMinAlt").addEventListener("change",()=>{
+if(REVERSE_TARGET)renderReverseLatitudeHint(REVERSE_TARGET,parseInt($("#reverseMinAlt").value)||20);
+});
+
 $("#objSearch").addEventListener("input",function(){
 const q=this.value.trim().toLowerCase();
-const resultDiv=$("#objSearchResult");const list=$("#objSearchList");const countEl=$("#searchCount");
-if(!q){resultDiv.style.display="none";countEl.textContent="";return;}
-const hits=ALL_OBJECTS.filter(o=>o.name.toLowerCase().includes(q)||(o.cat||"").toLowerCase().includes(q)||(TYPE_LABEL[o.type]||"").includes(q)||(o.highlight||"").toLowerCase().includes(q)||(o.id||"").toLowerCase().includes(q));
-countEl.textContent=`${hits.length}件ヒット`;
-if(hits.length===0){resultDiv.style.display="block";list.innerHTML=`<div style="color:#6a8aaa;padding:10px">該当する天体が見つかりませんでした。</div>`;return;}
+const resultDiv=$("#objSearchResult");
+const list=$("#objSearchList");
+const countEl=$("#searchCount");
+
+if(!q){
+resultDiv.style.display="none";
+countEl.textContent="";
+return;
+}
+
+const objHits=ALL_OBJECTS.filter(o=>
+o.name.toLowerCase().includes(q)||
+(o.cat||"").toLowerCase().includes(q)||
+(TYPE_LABEL[o.type]||"").includes(q)||
+(o.highlight||"").toLowerCase().includes(q)||
+(o.id||"").toLowerCase().includes(q)
+);
+
+const constHits=CONSTELLATIONS_ENRICHED.filter(c=>
+c.name.toLowerCase().includes(q)||
+c.en.toLowerCase().includes(q)||
+(c.abbr||"").toLowerCase().includes(q)||
+(c.stars||"").toLowerCase().includes(q)||
+(c.science||"").toLowerCase().includes(q)||
+(c.myth||"").toLowerCase().includes(q)
+);
+
+const total=objHits.length+constHits.length;
+countEl.textContent=`${total}件ヒット`;
+if(total===0){
+resultDiv.style.display="block";
+list.innerHTML='<div style="color:#6a8aaa;padding:10px">該当する天体・星座が見つかりませんでした。</div>';
+return;
+}
+
 list.innerHTML="";
-hits.slice(0,30).forEach(obj=>{
-const item=document.createElement("div");item.className="obj-search-item";
-item.innerHTML=`<div class="osi-icon">${obj.icon}</div><div class="osi-info"><div class="osi-name">${obj.name}</div><div class="osi-meta"><span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type}</span> ${obj.cat||""} ／ ${obj.dist||""} ／ 等級 ${obj.mag}</div><div class="osi-meta" style="color:#8ab4d4;margin-top:2px">🔭 ${obj.highlight||""}</div></div>`;
-item.addEventListener("click",()=>{
+const entries=[
+...objHits.map(data=>({kind:"object",data})),
+...constHits.map(data=>({kind:"constellation",data}))
+].slice(0,30);
+
+entries.forEach(entry=>{
+const item=document.createElement("div");
+item.className="obj-search-item";
+
+if(entry.kind==="object"){
+const obj=entry.data;
+item.innerHTML=`
+<div class="osi-icon">${obj.icon}</div>
+<div class="osi-info">
+  <div class="osi-name">${obj.name}</div>
+  <div class="osi-meta"><span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type}</span> ${obj.cat||""} ／ ${obj.dist||""} ／ 等級 ${obj.mag}</div>
+  <div class="osi-meta" style="color:#8ab4d4;margin-top:2px">🔭 ${obj.highlight||""}</div>
+  <div class="obj-search-actions">
+    <button type="button" class="reverse-plan-btn search-detail-btn">天体カードを見る</button>
+    <button type="button" class="reverse-plan-btn search-reverse-btn">いつ・どこで見る？</button>
+  </div>
+</div>`;
+item.querySelector(".search-detail-btn").addEventListener("click",e=>{
+e.stopPropagation();
 const found=currentResults.find(r=>r.id===obj.id);
 const target=found||{...obj,alt:"—",az:"—",azDir:"—",magVal:obj.mag,distStr:obj.dist,difficulty:3};
 showDetail(target,null);
 });
+item.querySelector(".search-reverse-btn").addEventListener("click",e=>{
+e.stopPropagation();
+openReversePlanner("object",obj);
+});
+}else{
+const c=entry.data;
+item.innerHTML=`
+<div class="osi-icon">✦</div>
+<div class="osi-info">
+  <div class="osi-name">${c.name} <span style="font-size:11px;color:#6a8aaa">${c.en}（${c.abbr}）</span></div>
+  <div class="osi-meta"><span class="badge">星座</span> ${SEASON_LABEL[c.season]||c.season} ／ 主な星：${c.stars||"—"}</div>
+  <div class="obj-search-actions">
+    <button type="button" class="reverse-plan-btn search-const-btn">星座パネルで見る</button>
+    <button type="button" class="reverse-plan-btn search-reverse-btn">いつ・どこで見る？</button>
+  </div>
+</div>`;
+item.querySelector(".search-const-btn").addEventListener("click",e=>{
+e.stopPropagation();
+if($("#resultArea").style.display==="none")$("#btnCalc").click();
+$("#constSearch").value=c.name;
+renderConstellations(currentDate?currentDate.getMonth()+1:null,c.name);
+const tab=document.querySelector('[data-rtab="constellations"]');
+if(tab)tab.click();
+setTimeout(()=>$("#rtab-constellations")?.scrollIntoView({behavior:"smooth",block:"start"}),50);
+});
+item.querySelector(".search-reverse-btn").addEventListener("click",e=>{
+e.stopPropagation();
+openReversePlanner("constellation",c);
+});
+}
 list.appendChild(item);
 });
-if(hits.length>30){const more=document.createElement("div");more.style.cssText="color:#6a8aaa;padding:8px;font-size:12px;text-align:center";more.textContent=`他 ${hits.length-30} 件`;list.appendChild(more);}
+
+if(total>30){
+const more=document.createElement("div");
+more.style.cssText="color:#6a8aaa;padding:8px;font-size:12px;text-align:center";
+more.textContent=`他 ${total-30} 件`;
+list.appendChild(more);
+}
 resultDiv.style.display="block";
 });
 document.querySelectorAll("[data-rtab]").forEach(b=>{
@@ -5935,8 +6738,10 @@ $("#noResult").style.display=sorted.length===0?"block":"none";
 sorted.forEach(obj=>{
 const vis=Math.min(100,Math.max(0,(obj.alt/90)*100));const dl=diffLabel(obj.difficulty);
 const card=document.createElement("div");card.className="obj-card";
-card.innerHTML=`<div class="card-header"><div class="card-icon">${obj.icon}</div><div class="card-title"><div class="name">${obj.name}</div><div class="type-row"><span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type}</span><span style="font-size:11px;color:#5a7a9a">${obj.cat||""}</span><span class="diff-badge diff-${obj.difficulty}">${dl.stars} ${dl.text}</span></div></div></div><div class="card-body"><div class="card-row"><span class="badge b-alt">高度 ${obj.alt}°</span><span class="badge b-az">方位 ${obj.azDir}</span><span class="badge b-mag">等級 ${obj.magVal}</span><span class="badge b-dist">${obj.distStr}</span></div><div style="font-size:12px;color:#7ab4d4;margin-top:8px">🔭 ${obj.highlight}</div><div class="visibility-bar"><div class="visibility-fill" style="width:${vis}%"></div></div></div>`;
+card.innerHTML=`<div class="card-header"><div class="card-icon">${obj.icon}</div><div class="card-title"><div class="name">${obj.name}</div><div class="type-row"><span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type}</span><span style="font-size:11px;color:#5a7a9a">${obj.cat||""}</span><span class="diff-badge diff-${obj.difficulty}">${dl.stars} ${dl.text}</span></div></div></div><div class="card-body"><div class="card-row"><span class="badge b-alt">高度 ${obj.alt}°</span><span class="badge b-az">方位 ${obj.azDir}</span><span class="badge b-mag">等級 ${obj.magVal}</span><span class="badge b-dist">${obj.distStr}</span></div><div style="font-size:12px;color:#7ab4d4;margin-top:8px">🔭 ${obj.highlight}</div><div class="visibility-bar"><div class="visibility-fill" style="width:${vis}%"></div></div></div><div class="card-plan-actions"><button type="button" class="reverse-plan-btn">いつ・どこで見る？</button></div>`;
 card.addEventListener("click",()=>showDetail(obj,card));
+const planBtn=card.querySelector(".reverse-plan-btn");
+planBtn.addEventListener("click",e=>{e.stopPropagation();openReversePlanner("object",obj);});
 grid.appendChild(card);
 });
 }
@@ -6288,8 +7093,11 @@ card.innerHTML=`
 </div>
 <div class="const-pane active" data-constpane="${key}" data-pane="science"><p>${c.science}</p></div>
 <div class="const-pane" data-constpane="${key}" data-pane="myth"><p>${c.myth}</p></div>
+<div class="const-plan-actions">
 <button type="button" class="const-sky-btn" data-sky-const="${c.id}">🗺 星図で見る</button>
-<div class="sky-focus-hint">Nicoleの星図へ移動し、この星座の位置を強調表示します。</div>
+<button type="button" class="reverse-plan-btn const-reverse-btn" data-reverse-const="${c.id}">いつ・どこで見る？</button>
+</div>
+<div class="sky-focus-hint">Nicoleの星図へ移動するか、この星座が見やすい日時・場所を逆引きできます。</div>
 `;
 grid.appendChild(card);
 });
@@ -6308,6 +7116,12 @@ if(target)target.classList.add("active");
 grid.querySelectorAll(".const-sky-btn").forEach(btn=>{
 btn.addEventListener("click",()=>{
 focusConstellationOnSky(btn.dataset.skyConst);
+});
+});
+grid.querySelectorAll(".const-reverse-btn").forEach(btn=>{
+btn.addEventListener("click",()=>{
+const c=CONSTELLATIONS_ENRICHED.find(x=>x.id===btn.dataset.reverseConst);
+if(c)openReversePlanner("constellation",c);
 });
 });
 }
@@ -6433,6 +7247,9 @@ closeMoonDatePicker();
 }
 if(event.key==="Escape"&&$("#scheduleObjectModal")?.classList.contains("open")){
 closeScheduleObjectModal();
+}
+if(event.key==="Escape"&&$("#reversePlannerModal")?.classList.contains("open")){
+closeReversePlanner();
 }
 });
 function openScheduleObjectModal(obj){
