@@ -514,7 +514,7 @@ text-align:right;
 .skymap-object-info{margin-top:10px;background:#080c18;border:1px solid #1e3a5f;border-left:4px solid #4a9fd4;border-radius:0 8px 8px 0;padding:9px 12px;font-size:12px;color:#b8d0e8;line-height:1.7;min-height:40px;}
 .skymap-object-info b{color:#ffd54f;}
 
-/* 彗星・小惑星 オンライン情報 */
+/* 今夜の彗星 */
 .smallbody-panel{background:#0d1525;border:1px solid #1e3a5f;border-radius:10px;padding:14px 16px;}
 .smallbody-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
 .smallbody-title{font-size:14px;color:#ffd54f;font-weight:bold;}
@@ -800,7 +800,7 @@ body.manual-open{overflow:hidden;}
 <button data-rtab="cards">🌌 天体カード</button>
 <button data-rtab="mooncalendar">🌙 カレンダー</button>
 <button data-rtab="schedule">📅 観測スケジュール</button>
-<button data-rtab="smallbodies">☄️ 彗星・小惑星</button>
+<button data-rtab="smallbodies">☄️ 彗星</button>
 <button data-rtab="meteors">🌠 流星群</button>
 </div>
 <div class="tab-content" id="rtab-cards">
@@ -860,22 +860,22 @@ body.manual-open{overflow:hidden;}
 <label><input type="checkbox" id="skyShowNames"> 星座名</label>
 <label><input type="checkbox" id="skyShowPlanets" checked> 太陽・月・惑星</label>
 <label><input type="checkbox" id="skyShowDSO"> 主要天体</label>
-<label><input type="checkbox" id="skyShowSmallBodies"> 彗星・小惑星</label>
+<label><input type="checkbox" id="skyShowSmallBodies"> 彗星</label>
 <label><input type="checkbox" id="skyShowMeteors"> 流星群放射点</label>
 <label><input type="checkbox" id="skyShowMilkyWay"> 天の川</label><span id="skyMilkyWayStatus" style="font-size:9px;color:#6f94b3"></span>
 <label>恒星 <select id="skyMag"><option value="2">2等まで</option><option value="3">3等まで</option><option value="4">4等まで</option><option value="5" selected>5等まで</option><option value="6">6等まで</option></select></label>
 </div>
 
 <div class="comet-track-bar">
-<label><input type="checkbox" id="skyShowCometTrack" disabled> 選択彗星の軌道</label>
+<label><input type="checkbox" id="skyShowCometTrack" disabled> 選択彗星の長期軌道</label>
 <button type="button" class="comet-track-clear" id="clearCometTrack" disabled>軌道を消す</button>
-<span class="comet-track-status" id="cometTrackStatus">彗星カードの「星図に軌道表示」から選択できます。</span>
+<span class="comet-track-status" id="cometTrackStatus">彗星カードの「長期軌道を追う」から選択できます。</span>
 </div>
 
 <div class="skymap-section-label">星図本体</div>
 <div id="skyLineStatus" style="font-size:10px;color:#6f94b3;margin:2px 0 7px">星座線：内蔵簡易データ</div>
 <div class="skymap-canvas-wrap"><canvas id="skyMapCanvas" width="760" height="760"></canvas></div>
-<div class="skymap-legend"><span>★ 恒星</span><span style="color:#ffd54f">● 太陽</span><span style="color:#e8e8f0">● 月</span><span style="color:#c084fc">◇ 惑星</span><span style="color:#4ade80">□ 星雲・星団・銀河</span><span style="color:#67e8f9">○ 彗星</span><span style="color:#fbbf24">◆ 小惑星</span><span style="color:#a78bfa">✦ 流星群放射点</span></div>
+<div class="skymap-legend"><span>★ 恒星</span><span style="color:#ffd54f">● 太陽</span><span style="color:#e8e8f0">● 月</span><span style="color:#c084fc">◇ 惑星</span><span style="color:#4ade80">□ 星雲・星団・銀河</span><span style="color:#67e8f9">○ 彗星</span><span style="color:#a78bfa">✦ 流星群放射点</span></div>
 <div class="skymap-object-info" id="skyMapObjectInfo">星・惑星・月・主要天体をクリックすると、ここに情報を表示します。</div><div class="skymap-timebar">
 <span class="label">⏱ 星図の時刻</span>
 <button type="button" data-sky-shift="-6">−6h</button>
@@ -944,10 +944,10 @@ body.manual-open{overflow:hidden;}
 <div class="smallbody-panel">
 <div class="smallbody-head">
 <div>
-<div class="smallbody-title">☄️ 彗星・小惑星 オンライン情報</div>
-<div class="smallbody-sub">NASA/JPLのデータを手動更新し、このブラウザに保存します。保存後はオフラインでも前回データを確認できます。</div>
+<div class="smallbody-title">☄️ 今夜の彗星</div>
+<div class="smallbody-sub">NASA/JPLから、選択した観測地点で今夜見られる彗星を一晩分取得します。星図の時刻を動かすと、彗星が昇り、空を移動し、沈む様子を追えます。</div>
 </div>
-<button class="action gray sm" id="sbRefresh">↻ 最新データを取得</button>
+<button class="action gray sm" id="sbRefresh">↻ 今夜の彗星を取得</button>
 </div>
 <div class="smallbody-controls">
 <label>限界等級
@@ -958,18 +958,19 @@ body.manual-open{overflow:hidden;}
 <option value="16">16等まで</option>
 </select>
 </label>
-<span style="font-size:11px;color:#6a8aaa">※ 地平線より上の天体だけ表示</span>
+<span style="font-size:11px;color:#6a8aaa">※ 一晩の位置を15分刻みで取得</span>
 </div>
-<div class="smallbody-status" id="sbStatus">保存済みデータを確認しています…</div>
+<div class="smallbody-status" id="sbStatus">保存済みの「今夜の彗星」データを確認しています…</div>
 <div class="smallbody-section">
-<h4>☄️ 彗星 <span id="sbCometCount"></span></h4>
+<h4>☄️ 観測可能な彗星 <span id="sbCometCount"></span></h4>
 <div class="smallbody-grid" id="sbCometGrid"></div>
 </div>
-<div class="smallbody-section">
-<h4>🪨 小惑星 <span id="sbAsteroidCount"></span></h4>
-<div class="smallbody-grid" id="sbAsteroidGrid"></div>
+<div class="smallbody-note">
+データ源：NASA/JPL Small-Body Observability API + Horizons。<br>
+「今夜の彗星を取得」を押すと、その夜に観測可能な彗星を検索し、各彗星の一晩分の見かけ位置を取得してブラウザに保存します。
+星図では時刻に合わせて位置を補間するため、地平線下から昇ってくる彗星も再現できます。<br>
+各彗星の「長期軌道を追う」を押すと、選択した彗星について観測日の30日前〜90日後を1日刻みで取得し、日付を変えても軌道と位置を追跡できます。
 </div>
-<div class="smallbody-note">データ源：NASA/JPL Small-Body Identification API。取得結果はこのブラウザに保存され、「最新データを取得」を押した時だけ更新します。保存データはオフラインでも確認できます。星図への彗星・小惑星表示は、取得時と同じ観測日時・場所の場合のみ有効です。彗星カードの「☄ 星図に軌道表示」を押すと、JPL Horizonsから観測日時の前後30日を1日刻みで取得し、恒星背景上の見かけの移動経路を星図へ表示できます。破線は過去、実線は未来、5日ごとに日付を表示します。</div>
 </div>
 </div>
 
@@ -1257,7 +1258,7 @@ body.manual-open{overflow:hidden;}
         &lt;p&gt;「指差す先に見えているあの星は何？」&lt;/p&gt;
         &lt;p&gt;「一緒にいる人と星空を楽しみたい。」&lt;/p&gt;
         &lt;p&gt;ニコルは、そんな「もう少し知りたい」、「もう少し伝えたい」に寄り添い、必要な情報をひとつにまとめて天体観測をサポートします。&lt;/p&gt;
-        &lt;p&gt;観測する日時と場所を設定すると、その場所から見える天体や星座、太陽、月、惑星、流星群などを確認できます。星図、天候、月齢、薄明、彗星・小惑星などの情報もまとめて確認できます。&lt;/p&gt;
+        &lt;p&gt;観測する日時と場所を設定すると、その場所から見える天体や星座、太陽、月、惑星、流星群などを確認できます。星図、天候、月齢、薄明、彗星などの情報もまとめて確認できます。&lt;/p&gt;
         &lt;p&gt;このアプリは主に、&lt;/p&gt;
         &lt;p&gt;&lt;strong&gt;「天体観測を計画する」&lt;/strong&gt;&lt;/p&gt;
         &lt;p&gt;&lt;strong&gt;「今見えているものを確認する」&lt;/strong&gt;&lt;/p&gt;
@@ -1340,7 +1341,7 @@ body.manual-open{overflow:hidden;}
               &lt;li&gt;見頃の星座&lt;/li&gt;
               &lt;li&gt;流星群&lt;/li&gt;
               &lt;li&gt;月カレンダー&lt;/li&gt;
-              &lt;li&gt;彗星・小惑星&lt;/li&gt;
+              &lt;li&gt;彗星&lt;/li&gt;
               &lt;li&gt;観測スケジュール&lt;/li&gt;
               &lt;li&gt;星図&lt;/li&gt;
             &lt;/ul&gt;
@@ -1384,7 +1385,7 @@ body.manual-open{overflow:hidden;}
         &lt;a href=&quot;#weather-info&quot;&gt;天候情報・観測目安&lt;/a&gt;
         &lt;a href=&quot;#cards&quot;&gt;天体カード&lt;/a&gt;
         &lt;a href=&quot;#chart&quot;&gt;星図&lt;/a&gt;
-        &lt;a href=&quot;#minor-bodies&quot;&gt;彗星・小惑星&lt;/a&gt;
+        &lt;a href=&quot;#minor-bodies&quot;&gt;彗星&lt;/a&gt;
         &lt;a href=&quot;#meteor&quot;&gt;流星群&lt;/a&gt;
         &lt;a href=&quot;#constellations&quot;&gt;見頃の星座&lt;/a&gt;
         &lt;a href=&quot;#moon-calendar&quot;&gt;月カレンダー&lt;/a&gt;
@@ -1513,7 +1514,7 @@ body.manual-open{overflow:hidden;}
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
           &lt;p&gt;星図では、指定した場所と日時から見える空を全天図として表示します。基本表示は、北が上、東が左、西が右、南が下です。&lt;/p&gt;
-          &lt;p&gt;星図には、恒星、星座線、星座名、太陽、月、惑星、天体、彗星・小惑星、流星群の放射点などを表示できます。必要な情報だけをONにすることで、目的に合わせて星図を整理できます。&lt;/p&gt;
+          &lt;p&gt;星図には、恒星、星座線、星座名、太陽、月、惑星、天体、彗星、流星群の放射点などを表示できます。必要な情報だけをONにすることで、目的に合わせて星図を整理できます。&lt;/p&gt;
           &lt;h4&gt;星図の表示を切り替える&lt;/h4&gt;
           &lt;p&gt;星図は「全天」と「地平」を切り替えられます。「全天」では天頂を中心に地平線までを円形に表示します。「地平」では、正面よりやや上を見上げたときに近い透視図法で表示し、向いている方角と見上げ角を変更できます。初期状態は南向き・仰角35°です。&lt;/p&gt;
           &lt;p&gt;地平表示でも、時刻変更、星座線、星座名、太陽・月・惑星、主要天体、ズームなどの機能を利用できます。ドラッグやスワイプで向きを変え、上方向・下方向への操作で見上げ角も変えられます。&lt;/p&gt;
@@ -1540,14 +1541,14 @@ body.manual-open{overflow:hidden;}
 
       &lt;details class=&quot;panel&quot; id=&quot;minor-bodies&quot;&gt;
         &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;☄️&lt;/span&gt;&lt;span&gt;彗星・小惑星&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;☄️&lt;/span&gt;&lt;span&gt;彗星&lt;/span&gt;&lt;/span&gt;
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
           &lt;p&gt;ニコルでは、オンラインから彗星や小惑星の位置情報を取得できます。小天体のデータは、指定した観測日時・場所に対応した位置情報として取得します。&lt;/p&gt;
           &lt;p&gt;同じ場所にはいない旅人たちです。今夜の居場所を確かめてください。&lt;/p&gt;
           &lt;h4&gt;データを更新する&lt;/h4&gt;
-          &lt;p&gt;彗星・小惑星データは毎回自動取得せず、「更新」を行ったときに取得します。取得したデータはブラウザ内に保存されます。&lt;/p&gt;
+          &lt;p&gt;彗星データは毎回自動取得せず、「更新」を行ったときに取得します。取得したデータはブラウザ内に保存されます。&lt;/p&gt;
           &lt;h4&gt;オフライン時&lt;/h4&gt;
           &lt;p&gt;以前取得したデータが残っている場合は、オフラインでも確認できます。ただし、小天体の位置情報は取得した観測条件に対応しています。現在の観測日時・場所と保存データの条件が違う場合は注意表示が出ます。&lt;/p&gt;
           &lt;h4&gt;星図の時刻を変更した場合&lt;/h4&gt;
@@ -1632,7 +1633,7 @@ body.manual-open{overflow:hidden;}
                 &lt;li&gt;地名・施設名・住所検索&lt;/li&gt;
                 &lt;li&gt;地名の自動取得&lt;/li&gt;
                 &lt;li&gt;標高の新規取得&lt;/li&gt;
-                &lt;li&gt;彗星・小惑星の最新データ取得&lt;/li&gt;
+                &lt;li&gt;今夜の彗星データ取得&lt;/li&gt;
               &lt;/ul&gt;
             &lt;/div&gt;
             &lt;div class=&quot;mini-card&quot;&gt;
@@ -1647,7 +1648,7 @@ body.manual-open{overflow:hidden;}
               &lt;/ul&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-          &lt;p&gt;彗星・小惑星については、以前取得したデータが保存されていれば確認できます。天候については古い予報を誤表示しないため、オフライン時には表示しません。&lt;/p&gt;
+          &lt;p&gt;彗星については、以前取得したデータが保存されていれば確認できます。天候については古い予報を誤表示しないため、オフライン時には表示しません。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
@@ -1699,8 +1700,8 @@ body.manual-open{overflow:hidden;}
           &lt;p&gt;インターネット接続を確認してください。また、緯度・経度が正しく入力されていることを確認してください。&lt;/p&gt;
           &lt;h4&gt;天気予報と実際の空が違う&lt;/h4&gt;
           &lt;p&gt;天候情報は数値予報モデルによる予報です。特に雲や霧は局地的な変化が大きいため、実際の空と異なる場合があります。3モデルの「予報一致度」も参考にしてください。&lt;/p&gt;
-          &lt;h4&gt;彗星・小惑星が表示されない&lt;/h4&gt;
-          &lt;p&gt;彗星・小惑星タブでデータを更新してください。また、星図の表示時刻を変更すると、位置の誤表示を防ぐために彗星・小惑星表示が自動的にOFFになります。&lt;/p&gt;
+          &lt;h4&gt;彗星が表示されない&lt;/h4&gt;
+          &lt;p&gt;彗星タブで「今夜の彗星を取得」を実行してください。一晩分の位置を取得すると、星図の時刻を動かした際もその時刻の位置へ自動的に移動します。&lt;/p&gt;
           &lt;h4&gt;星座を見つけられない&lt;/h4&gt;
           &lt;p&gt;「見頃の星座」から目的の星座を探し、「星図で見る」を使用してください。対象星座の星座線が強調表示されます。&lt;/p&gt;
           &lt;h4&gt;星図を拡大したら元に戻せなくなった&lt;/h4&gt;
@@ -2549,7 +2550,8 @@ let SKY_INTERACTIVE_RAF=0;
 /* 選択した彗星のJPL Horizons見かけ軌道 */
 let COMET_TRACK_DATA=null;
 let COMET_TRACK_LOADING=false;
-const COMET_TRACK_ENDPOINT="https://astro-nicole.hideld12.workers.dev/horizons-track";
+const COMET_TRACK_ENDPOINT="https://astro-nicole.hideld12.workers.dev/comet-track";
+const NIGHT_COMETS_ENDPOINT="https://astro-nicole.hideld12.workers.dev/night-comets";
 
 /* 全天モードの写野中心。初期値は天頂。 */
 let SKY_FOV_ALLSKY_ALT=90;
@@ -4548,7 +4550,7 @@ const cb=$("#skyShowCometTrack");
 const clear=$("#clearCometTrack");
 if(cb){cb.checked=false;cb.disabled=true;}
 if(clear)clear.disabled=true;
-setCometTrackStatus("彗星カードの「☄ 星図に軌道表示」から選択できます。");
+setCometTrackStatus("彗星カードの「長期軌道を追う」から選択できます。");
 renderSkyChart();
 }
 
@@ -4572,25 +4574,27 @@ return;
 }
 
 COMET_TRACK_LOADING=true;
-setCometTrackStatus(`${comet.name} の前後30日軌道をJPL Horizonsから取得中…`,"#8ab4d4");
+setCometTrackStatus(`${comet.name} の長期軌道（30日前〜90日後）をJPL Horizonsから取得中…`,"#8ab4d4");
 
 document.querySelectorAll(".comet-track-btn").forEach(b=>b.disabled=true);
 
 try{
 const p=new URLSearchParams({
+designation:comet.designation||"",
 query:comet.name,
 lat:String(lat),
 lon:String(lon),
 alt_m:String(Number.isFinite(altM)?altM:0),
 center:center.toISOString(),
-days:"30",
+before_days:"30",
+after_days:"90",
 step_days:"1"
 });
 
 const res=await fetch(`${COMET_TRACK_ENDPOINT}?${p.toString()}`,{cache:"no-store"});
 if(!res.ok){
 if(res.status===404){
-throw new Error("Cloudflare Worker の /horizons-track が未実装です。");
+throw new Error("Cloudflare Worker の /comet-track が未実装です。");
 }
 throw new Error(`Nicole API HTTP ${res.status}`);
 }
@@ -4602,6 +4606,7 @@ throw new Error("軌道点を十分に取得できませんでした。");
 
 COMET_TRACK_DATA={
 name:data.object?.name||comet.name,
+designation:data.object?.designation||comet.designation||"",
 pdes:data.object?.pdes||"",
 spkid:data.object?.spkid||"",
 centerTime:data.centerTime||center.toISOString(),
@@ -4641,94 +4646,107 @@ document.querySelectorAll(".comet-track-btn").forEach(b=>b.disabled=false);
 }
 }
 
+
+function interpolateRaDeg(a,b,t){
+a=Number(a);b=Number(b);
+if(!Number.isFinite(a)||!Number.isFinite(b))return NaN;
+let d=((b-a+540)%360)-180;
+return (a+d*t+360)%360;
+}
+
+function interpolateEphemeris(points,date){
+if(!Array.isArray(points)||!points.length||!date||isNaN(date))return null;
+const target=date.getTime();
+const valid=points
+.map(p=>({...p,_t:new Date(p.time).getTime()}))
+.filter(p=>Number.isFinite(p._t)&&Number.isFinite(Number(p.ra))&&Number.isFinite(Number(p.dec)))
+.sort((a,b)=>a._t-b._t);
+
+if(!valid.length||target<valid[0]._t||target>valid[valid.length-1]._t)return null;
+let lo=0,hi=valid.length-1;
+while(hi-lo>1){
+const m=(lo+hi)>>1;
+if(valid[m]._t<=target)lo=m;else hi=m;
+}
+const a=valid[lo],b=valid[Math.min(hi,valid.length-1)];
+if(a._t===b._t)return{ra:Number(a.ra),dec:Number(a.dec),time:new Date(a._t)};
+const f=(target-a._t)/(b._t-a._t);
+return{
+ra:interpolateRaDeg(a.ra,b.ra,f),
+dec:Number(a.dec)+(Number(b.dec)-Number(a.dec))*f,
+time:new Date(target)
+};
+}
+
 function drawCometTrack(ctx,lat,lon,viewDate,cx,cy,R){
 if(!COMET_TRACK_DATA||!Array.isArray(COMET_TRACK_DATA.points))return;
 
-const centerTime=new Date(COMET_TRACK_DATA.centerTime).getTime();
+const viewMs=viewDate.getTime();
 const projected=[];
 
 COMET_TRACK_DATA.points.forEach((pt,index)=>{
 const ra=Number(pt.ra),dec=Number(pt.dec);
 if(!Number.isFinite(ra)||!Number.isFinite(dec))return;
-
-/* 軌跡は恒星背景上の移動として、全て現在の星図時刻へ投影する */
 const p=skyProject(ra,dec,lat,lon,viewDate,cx,cy,R);
 if(!p)return;
-
 const t=new Date(pt.time).getTime();
-const dayOffset=Math.round((t-centerTime)/86400000);
-projected.push({...p,time:pt.time,t,dayOffset,index});
+projected.push({...p,time:pt.time,t,index});
 });
 
-if(!projected.length)return;
-
+if(projected.length){
 function strokeSide(points,isFuture){
 ctx.save();
-ctx.strokeStyle=isFuture?"rgba(103,232,249,.95)":"rgba(103,232,249,.48)";
-ctx.lineWidth=isFuture?2:1.5;
+ctx.strokeStyle=isFuture?"rgba(103,232,249,.95)":"rgba(103,232,249,.42)";
+ctx.lineWidth=isFuture?2:1.4;
 ctx.setLineDash(isFuture?[]:[5,5]);
 ctx.beginPath();
 let prev=null;
 for(const p of points){
-if(prev&&Math.hypot(p.x-prev.x,p.y-prev.y)<R*0.55){
-ctx.lineTo(p.x,p.y);
-}else{
-ctx.moveTo(p.x,p.y);
-}
+if(prev&&Math.hypot(p.x-prev.x,p.y-prev.y)<R*0.55)ctx.lineTo(p.x,p.y);
+else ctx.moveTo(p.x,p.y);
 prev=p;
 }
 ctx.stroke();
 ctx.restore();
 }
+strokeSide(projected.filter(p=>p.t<=viewMs),false);
+strokeSide(projected.filter(p=>p.t>=viewMs),true);
 
-strokeSide(projected.filter(p=>p.t<=centerTime),false);
-strokeSide(projected.filter(p=>p.t>=centerTime),true);
-
-/* 5日ごとの日付 */
 ctx.save();
 ctx.font="9px sans-serif";
 ctx.textAlign="left";
 ctx.textBaseline="bottom";
-for(const p of projected){
-if(Math.abs(p.dayOffset)%5!==0)continue;
-ctx.fillStyle=p.dayOffset===0?"#ffffff":"#9debf5";
-ctx.beginPath();
-ctx.arc(p.x,p.y,p.dayOffset===0?3.4:2.1,0,Math.PI*2);
-ctx.fill();
+projected.forEach((p,i)=>{
+if(i%5!==0)return;
+ctx.fillStyle="#9debf5";
+ctx.beginPath();ctx.arc(p.x,p.y,2,0,Math.PI*2);ctx.fill();
 ctx.fillText(formatCometTrackDate(p.time).slice(5),p.x+5,p.y-4);
+});
+ctx.restore();
 }
 
-/* 観測日時（0日）の位置 */
-let centerPoint=projected.reduce((best,p)=>{
-if(!best)return p;
-return Math.abs(p.dayOffset)<Math.abs(best.dayOffset)?p:best;
-},null);
+/* 現在の星図日時における選択彗星の位置を補間 */
+const current=interpolateEphemeris(COMET_TRACK_DATA.points,viewDate);
+if(!current)return;
+const cp=skyProject(current.ra,current.dec,lat,lon,viewDate,cx,cy,R);
+if(!cp)return;
 
-if(centerPoint){
+ctx.save();
 ctx.strokeStyle="#ffffff";
 ctx.lineWidth=1.5;
-ctx.beginPath();
-ctx.arc(centerPoint.x,centerPoint.y,6,0,Math.PI*2);
-ctx.stroke();
+ctx.beginPath();ctx.arc(cp.x,cp.y,6,0,Math.PI*2);ctx.stroke();
 ctx.strokeStyle="#67e8f9";
-ctx.lineWidth=1.5;
-ctx.beginPath();
-ctx.arc(centerPoint.x,centerPoint.y,3.2,0,Math.PI*2);
-ctx.stroke();
-ctx.beginPath();
-ctx.moveTo(centerPoint.x+4,centerPoint.y-4);
-ctx.lineTo(centerPoint.x+8,centerPoint.y-8);
-ctx.stroke();
+ctx.beginPath();ctx.arc(cp.x,cp.y,3.2,0,Math.PI*2);ctx.stroke();
+ctx.beginPath();ctx.moveTo(cp.x+4,cp.y-4);ctx.lineTo(cp.x+8,cp.y-8);ctx.stroke();
+ctx.restore();
 
 SKY_MAP_HITS.push({
-x:centerPoint.x,y:centerPoint.y,r:11,
+x:cp.x,y:cp.y,r:11,
 kind:"comet-track",
 name:COMET_TRACK_DATA.name,
-type:"彗星軌道",
-alt:centerPoint.alt,az:centerPoint.az
+type:"彗星長期軌道",
+alt:cp.alt,az:cp.az
 });
-}
-ctx.restore();
 }
 
 function renderSkyChart(interactive=false){
@@ -4859,34 +4877,21 @@ note:s.note
 });
 }
 
-if($("#skyShowSmallBodies").checked&&ONLINE_SMALL_BODIES.length&&smallBodyCacheMatchesSky(date,lat,lon)){
-ONLINE_SMALL_BODIES.forEach(o=>{
-const p=skyProject(o.ra,o.dec,lat,lon,date,cx,cy,R);
+if($("#skyShowSmallBodies").checked&&NIGHT_COMETS.length&&nightCometLocationMatches(lat,lon)){
+NIGHT_COMETS.forEach(o=>{
+if(COMET_TRACK_DATA&&COMET_TRACK_DATA.designation&&o.designation===COMET_TRACK_DATA.designation)return;
+const pos=interpolateEphemeris(o.points,date);
+if(!pos)return;
+const p=skyProject(pos.ra,pos.dec,lat,lon,date,cx,cy,R);
 if(!p)return;
 
-if(o.kind==="c"){
 ctx.strokeStyle="#67e8f9";
 ctx.lineWidth=1.4;
-ctx.beginPath();
-ctx.arc(p.x,p.y,3,0,Math.PI*2);
-ctx.stroke();
-ctx.beginPath();
-ctx.moveTo(p.x+3,p.y-3);
-ctx.lineTo(p.x+7,p.y-7);
-ctx.stroke();
-}else{
-ctx.fillStyle="#fbbf24";
-ctx.beginPath();
-ctx.moveTo(p.x,p.y-3);
-ctx.lineTo(p.x+3,p.y);
-ctx.lineTo(p.x,p.y+3);
-ctx.lineTo(p.x-3,p.y);
-ctx.closePath();
-ctx.fill();
-}
+ctx.beginPath();ctx.arc(p.x,p.y,3,0,Math.PI*2);ctx.stroke();
+ctx.beginPath();ctx.moveTo(p.x+3,p.y-3);ctx.lineTo(p.x+7,p.y-7);ctx.stroke();
 
-if(o.mag<=9){
-ctx.fillStyle=o.kind==="c"?"#9debf5":"#f8d47a";
+if(Number(o.mag)<=12){
+ctx.fillStyle="#9debf5";
 ctx.font="9px sans-serif";
 ctx.textAlign="left";
 ctx.fillText(o.name,p.x+6,p.y-4);
@@ -4894,9 +4899,9 @@ ctx.fillText(o.name,p.x+6,p.y-4);
 
 SKY_MAP_HITS.push({
 x:p.x,y:p.y,r:9,
-kind:o.kind==="c"?"comet":"asteroid",
-name:o.name,mag:o.mag,alt:p.alt,az:p.az,
-type:o.kind==="c"?"彗星":"小惑星"
+kind:"comet",
+name:o.name,mag:Number(o.mag),alt:p.alt,az:p.az,
+type:"彗星"
 });
 });
 }
@@ -5192,12 +5197,11 @@ status.innerHTML=`取得に失敗しました。Cloudflare Workerの /meteors �
 }
 
 /* =====================================================
-彗星・小惑星 オンライン取得（NASA/JPL）
+今夜の彗星（NASA/JPL SB Observability + Horizons）
 ===================================================== */
-let ONLINE_SMALL_BODIES=[];
-let smallBodyLoadedKey="";
-let SMALL_BODY_CACHE_META=null;
-const SMALL_BODY_CACHE_KEY="nicole_smallbodies_cache_v1";
+let NIGHT_COMETS=[];
+let NIGHT_COMET_META=null;
+const NIGHT_COMET_CACHE_KEY="nicole_night_comets_v1";
 
 function formatLocalDateTime(value){
 const d=value instanceof Date?value:new Date(value);
@@ -5206,7 +5210,7 @@ const p=n=>String(n).padStart(2,"0");
 return `${d.getFullYear()}/${p(d.getMonth()+1)}/${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
 }
 
-function getSmallBodyCurrentConditions(){
+function getNightCometCurrentConditions(){
 const lat=parseFloat($("#inLat").value);
 const lon=parseFloat($("#inLon").value);
 const dtVal=$("#inDatetime").value;
@@ -5217,210 +5221,141 @@ const place=$("#inPlace").value||"指定場所";
 return{lat,lon,altM:Number.isFinite(altM)?altM:0,date,magLimit,place};
 }
 
-function saveSmallBodyCache(){
-if(!SMALL_BODY_CACHE_META||!ONLINE_SMALL_BODIES.length)return false;
+function saveNightCometCache(){
+if(!NIGHT_COMET_META)return false;
 try{
-localStorage.setItem(SMALL_BODY_CACHE_KEY,JSON.stringify({
+localStorage.setItem(NIGHT_COMET_CACHE_KEY,JSON.stringify({
 version:1,
-meta:SMALL_BODY_CACHE_META,
-objects:ONLINE_SMALL_BODIES
+meta:NIGHT_COMET_META,
+comets:NIGHT_COMETS
 }));
 return true;
 }catch(e){
-console.warn("Small-body cache save failed",e);
+console.warn("Night comet cache save failed",e);
 return false;
 }
 }
 
-function readSmallBodyCache(){
+function readNightCometCache(){
 try{
-const raw=localStorage.getItem(SMALL_BODY_CACHE_KEY);
+const raw=localStorage.getItem(NIGHT_COMET_CACHE_KEY);
 if(!raw)return null;
 const data=JSON.parse(raw);
-if(!data||!Array.isArray(data.objects)||!data.meta)return null;
+if(!data||!Array.isArray(data.comets)||!data.meta)return null;
 return data;
 }catch(e){
-console.warn("Small-body cache read failed",e);
+console.warn("Night comet cache read failed",e);
 return null;
 }
 }
 
-function smallBodyConditionsMatch(meta,date,lat,lon){
-if(!meta||!date||isNaN(date)||!Number.isFinite(lat)||!Number.isFinite(lon))return false;
-const cachedDate=new Date(meta.observationDate);
-if(isNaN(cachedDate))return false;
-const timeDiff=Math.abs(cachedDate.getTime()-date.getTime());
-const currentAlt=parseFloat($("#inAlt").value||"0");
-const cachedAlt=Number(meta.altM||0);
-return timeDiff<60000
-&&Math.abs(Number(meta.lat)-lat)<0.0001
-&&Math.abs(Number(meta.lon)-lon)<0.0001
-&&Math.abs(cachedAlt-(Number.isFinite(currentAlt)?currentAlt:0))<1;
+function nightCometLocationMatches(lat,lon){
+if(!NIGHT_COMET_META||!Number.isFinite(lat)||!Number.isFinite(lon))return false;
+const altM=parseFloat($("#inAlt").value||"0");
+return Math.abs(Number(NIGHT_COMET_META.lat)-lat)<0.0001
+&&Math.abs(Number(NIGHT_COMET_META.lon)-lon)<0.0001
+&&Math.abs(Number(NIGHT_COMET_META.altM||0)-(Number.isFinite(altM)?altM:0))<2;
 }
 
-function smallBodyCacheMatchesCurrent(){
-const c=getSmallBodyCurrentConditions();
-return smallBodyConditionsMatch(SMALL_BODY_CACHE_META,c.date,c.lat,c.lon);
-}
-
-function smallBodyCacheMatchesSky(date,lat,lon){
-return smallBodyConditionsMatch(SMALL_BODY_CACHE_META,date,lat,lon);
-}
-
-function smallBodyCacheSummary(meta){
+function nightCometCacheSummary(meta){
 if(!meta)return "";
-return `最終取得：${formatLocalDateTime(meta.fetchedAt)} / 対象：${formatLocalDateTime(meta.observationDate)} / ${meta.place||"指定場所"} / 標高 ${Number(meta.altM||0).toFixed(0)}m / ${meta.magLimit}等まで`;
+const night=meta.nightLabel||formatLocalDateTime(meta.observationDate);
+return `最終取得：${formatLocalDateTime(meta.fetchedAt)} / 対象夜：${night} / ${meta.place||"指定場所"} / ${meta.magLimit}等まで`;
 }
 
-function updateSmallBodyStoredStatus(prefix="📦 保存データを表示中"){
+function updateSmallBodyStoredStatus(prefix="保存データを表示中"){
 const status=$("#sbStatus");
 if(!status)return;
-if(!SMALL_BODY_CACHE_META||!ONLINE_SMALL_BODIES.length){
+if(!NIGHT_COMET_META){
 status.className="smallbody-status";
-status.textContent="保存済みデータはありません。「最新データを取得」を押すとJPLへ接続して保存します。";
+status.textContent="保存済みデータはありません。「今夜の彗星を取得」を押してください。";
 return;
 }
-const match=smallBodyCacheMatchesCurrent();
 status.className="smallbody-status";
-status.innerHTML=`${prefix}<br><span style="font-size:10px">${smallBodyCacheSummary(SMALL_BODY_CACHE_META)}</span>${match?"":'<br><span style="font-size:10px;color:#fbbf24">現在の観測条件とは異なる保存データです。更新すると現在の条件で置き換わります。</span>'}`;
+status.innerHTML=`${prefix}<br><span style="font-size:10px">${nightCometCacheSummary(NIGHT_COMET_META)}</span>`;
 }
 
 function restoreSmallBodyCache(){
-const cached=readSmallBodyCache();
+const cached=readNightCometCache();
 if(!cached){
-ONLINE_SMALL_BODIES=[];
-SMALL_BODY_CACHE_META=null;
+NIGHT_COMETS=[];
+NIGHT_COMET_META=null;
 renderSmallBodyCards();
 updateSmallBodyStoredStatus();
 return false;
 }
-ONLINE_SMALL_BODIES=cached.objects;
-SMALL_BODY_CACHE_META=cached.meta;
-smallBodyLoadedKey=SMALL_BODY_CACHE_META.loadedKey||"";
+NIGHT_COMETS=cached.comets;
+NIGHT_COMET_META=cached.meta;
 renderSmallBodyCards();
 updateSmallBodyStoredStatus();
 return true;
 }
 
-function parseSkyRa(text){
-const m=String(text||"").trim().match(/(\d+)[\s:]+(\d+)[\s:]+([\d.]+)/);
-if(!m)return NaN;
-return 15*(Number(m[1])+Number(m[2])/60+Number(m[3])/3600);
-}
+function cometNightStats(comet){
+const pts=Array.isArray(comet.points)?comet.points:[];
+const lat=Number(NIGHT_COMET_META?.lat);
+const lon=Number(NIGHT_COMET_META?.lon);
+if(!pts.length||!Number.isFinite(lat)||!Number.isFinite(lon))return null;
 
-function parseSkyDec(text){
-const s=String(text||"").trim();
-const sign=s.startsWith("-")?-1:1;
-const nums=s.replace(/[^\d.]+/g," ").trim().split(/\s+/).map(Number);
-if(nums.length<3||nums.some(Number.isNaN))return NaN;
-return sign*(nums[0]+nums[1]/60+nums[2]/3600);
-}
-
-function smallBodyObsTime(date){
-const p=n=>String(n).padStart(2,"0");
-return `${date.getUTCFullYear()}-${p(date.getUTCMonth()+1)}-${p(date.getUTCDate())}_${p(date.getUTCHours())}:${p(date.getUTCMinutes())}:${p(date.getUTCSeconds())}`;
-}
-
-function buildSmallBodyUrl(kind,lat,lon,date,magLimit){
-const p=new URLSearchParams();
-p.set("sb-kind",kind);
-p.set("lat",String(lat));
-p.set("lon",String(lon));
-const altM=parseFloat($("#inAlt").value||"0");
-p.set("alt",String((Number.isFinite(altM)?altM:0)/1000));
-p.set("obs-time",smallBodyObsTime(date));
-p.set("vmag-lim",String(magLimit));
-p.set("mag-required","true");
-p.set("two-pass","false");
-p.set("req-elem","false");
-p.set("fov-ra-center","12-00-00");
-p.set("fov-dec-center","00-00-00");
-p.set("fov-ra-hwidth","180");
-p.set("fov-dec-hwidth","90");
-return "https://astro-nicole.hideld12.workers.dev/smallbodies?"+p.toString();
-}
-
-function parseSmallBodyResponse(data,kind,lat,lon,date){
-const fields=data.fields_first||data.fields_second||[];
-const rows=data.data_first_pass||data.data_second_pass||[];
-
-const findField=(needle,fallback)=>{
-const i=fields.findIndex(x=>String(x).toLowerCase().includes(needle));
-return i>=0?i:fallback;
-};
-
-const iName=findField("object name",0);
-const iRa=findField("astrometric ra",1);
-const iDec=findField("astrometric dec",2);
-const iMag=findField("visual magnitude",6);
-
-return rows.map((row,index)=>{
-const ra=parseSkyRa(row[iRa]);
-const dec=parseSkyDec(row[iDec]);
-const mag=parseFloat(row[iMag]);
-if(!Number.isFinite(ra)||!Number.isFinite(dec)||!Number.isFinite(mag))return null;
-const aa=altAz(ra,dec,lat,lon,date);
-if(aa.alt<0)return null;
-return{
-id:`online-${kind}-${index}-${row[iName]}`,
-kind,
-name:String(row[iName]||"").trim(),
-ra,dec,mag,
-alt:aa.alt,az:aa.az
-};
+const samples=pts.map(pt=>{
+const d=new Date(pt.time);
+const ra=Number(pt.ra),dec=Number(pt.dec);
+if(isNaN(d)||!Number.isFinite(ra)||!Number.isFinite(dec))return null;
+const aa=altAz(ra,dec,lat,lon,d);
+return{date:d,alt:aa.alt,az:aa.az};
 }).filter(Boolean);
-}
 
-async function fetchSmallBodies(kind,lat,lon,date,magLimit){
-const url=buildSmallBodyUrl(kind,lat,lon,date,magLimit);
-const response=await fetch(url,{cache:"no-store"});
-if(!response.ok)throw new Error(`JPL API HTTP ${response.status}`);
-const data=await response.json();
-if(data.message&&data.code)throw new Error(data.message);
-return parseSmallBodyResponse(data,kind,lat,lon,date);
+const above=samples.filter(s=>s.alt>=0);
+if(!above.length)return null;
+const max=above.reduce((a,b)=>b.alt>a.alt?b:a,above[0]);
+const first=above[0],last=above[above.length-1];
+return{
+first:first.date,
+last:last.date,
+maxDate:max.date,
+maxAlt:max.alt
+};
 }
 
 function renderSmallBodyCards(){
-const comets=ONLINE_SMALL_BODIES.filter(o=>o.kind==="c").sort((a,b)=>a.mag-b.mag||b.alt-a.alt);
-const asteroids=ONLINE_SMALL_BODIES.filter(o=>o.kind==="a").sort((a,b)=>a.mag-b.mag||b.alt-a.alt);
-
+const comets=[...NIGHT_COMETS].sort((a,b)=>(Number(a.mag)||99)-(Number(b.mag)||99));
 $("#sbCometCount").textContent=`（${comets.length}件）`;
-$("#sbAsteroidCount").textContent=`（${asteroids.length}件）`;
+const grid=$("#sbCometGrid");
+grid.innerHTML="";
 
-const draw=(gridId,list,kind)=>{
-const grid=$(gridId);grid.innerHTML="";
-if(!list.length){
-grid.innerHTML=`<div style="font-size:11px;color:#6a8aaa;padding:6px">条件に該当する天体はありません。</div>`;
+if(!comets.length){
+grid.innerHTML=`<div style="font-size:11px;color:#6a8aaa;padding:6px">設定した条件で今夜観測可能な彗星は見つかりませんでした。</div>`;
 return;
 }
-list.slice(0,60).forEach(o=>{
+
+comets.forEach(o=>{
 const card=document.createElement("div");
-card.className=`smallbody-card ${kind}`;
+card.className="smallbody-card comet";
+const stats=cometNightStats(o);
+const mag=Number.isFinite(Number(o.mag))?Number(o.mag).toFixed(1):"—";
+const statText=stats
+?`地平線上：約 ${formatLocalDateTime(stats.first).slice(11)}〜${formatLocalDateTime(stats.last).slice(11)}<br>最高高度：約 ${stats.maxAlt.toFixed(1)}°（${formatLocalDateTime(stats.maxDate).slice(11)}）`
+:"一晩の高度情報を計算できませんでした。";
+
 card.innerHTML=`
-<div class="sb-name">${kind==="comet"?"☄️":"🪨"} ${escapeHTML(o.name)}</div>
-<div class="sb-meta">推定V等級 ${o.mag.toFixed(1)}<br>高度 ${o.alt.toFixed(1)}° / 方位 ${azToDir(o.az)}（${o.az.toFixed(1)}°）</div>
-${kind==="comet"?'<div class="sb-actions"><button type="button" class="comet-track-btn">☄ 星図に軌道表示</button></div>':""}
+<div class="sb-name">☄️ ${escapeHTML(o.name)}</div>
+<div class="sb-meta">
+推定V等級 ${mag}<br>
+${statText}<br>
+${o.designation?`符号 ${escapeHTML(o.designation)}`:""}
+</div>
+<div class="sb-actions">
+<button type="button" class="comet-track-btn">長期軌道を追う</button>
+</div>
 `;
-if(kind==="comet"){
-const trackBtn=card.querySelector(".comet-track-btn");
-if(trackBtn)trackBtn.addEventListener("click",()=>loadCometTrack(o));
-}
+const btn=card.querySelector(".comet-track-btn");
+if(btn)btn.addEventListener("click",()=>loadCometTrack(o));
 grid.appendChild(card);
 });
-if(list.length>60){
-const more=document.createElement("div");
-more.style.cssText="font-size:11px;color:#6a8aaa;padding:8px";
-more.textContent=`明るい順に60件を表示中（全${list.length}件）`;
-grid.appendChild(more);
-}
-};
-
-draw("#sbCometGrid",comets,"comet");
-draw("#sbAsteroidGrid",asteroids,"asteroid");
 }
 
 async function loadSmallBodies(){
-const {lat,lon,altM,date,magLimit,place}=getSmallBodyCurrentConditions();
+const {lat,lon,altM,date,magLimit,place}=getNightCometCurrentConditions();
 const status=$("#sbStatus");
 
 if(!Number.isFinite(lat)||!Number.isFinite(lon)||!date||isNaN(date)){
@@ -5428,47 +5363,61 @@ status.className="smallbody-status error";
 status.textContent="日時・緯度・経度を正しく入力してください。";
 return;
 }
+if(!navigator.onLine){
+status.className="smallbody-status error";
+status.textContent="今夜の彗星の取得にはオンライン接続が必要です。";
+return;
+}
 
 status.className="smallbody-status";
-status.textContent="NASA/JPLから最新データを取得しています…";
+status.textContent="JPLから今夜観測可能な彗星と一晩の軌跡を取得しています…";
 $("#sbRefresh").disabled=true;
 
-const previousObjects=ONLINE_SMALL_BODIES.slice();
-const previousMeta=SMALL_BODY_CACHE_META?{...SMALL_BODY_CACHE_META}:null;
+const previousComets=NIGHT_COMETS.slice();
+const previousMeta=NIGHT_COMET_META?{...NIGHT_COMET_META}:null;
 
 try{
-const [comets,asteroids]=await Promise.all([
-fetchSmallBodies("c",lat,lon,date,magLimit),
-fetchSmallBodies("a",lat,lon,date,magLimit)
-]);
+const p=new URLSearchParams({
+lat:String(lat),
+lon:String(lon),
+alt_m:String(altM),
+obs_time:date.toISOString(),
+vmag_max:String(magLimit),
+max_comets:"20",
+step_minutes:"15"
+});
+const response=await fetch(`${NIGHT_COMETS_ENDPOINT}?${p.toString()}`,{cache:"no-store"});
+if(!response.ok)throw new Error(`Nicole API HTTP ${response.status}`);
+const data=await response.json();
+if(!data.ok)throw new Error(data.error||"今夜の彗星を取得できませんでした。");
 
-ONLINE_SMALL_BODIES=[...comets,...asteroids];
-smallBodyLoadedKey=`${lat}|${lon}|${altM}|${date.toISOString()}|${magLimit}`;
-SMALL_BODY_CACHE_META={
+NIGHT_COMETS=(data.comets||[]).filter(c=>Array.isArray(c.points)&&c.points.length>=2);
+NIGHT_COMET_META={
 fetchedAt:new Date().toISOString(),
 observationDate:date.toISOString(),
+nightLabel:data.night?.label||"",
 lat,lon,altM,place,magLimit,
-loadedKey:smallBodyLoadedKey
+source:data.source||"NASA/JPL"
 };
+
 renderSmallBodyCards();
-
-const saved=saveSmallBodyCache();
+const saved=saveNightCometCache();
 status.className="smallbody-status";
-status.innerHTML=`取得完了：彗星 ${comets.length}件 / 小惑星 ${asteroids.length}件（地平線上・${magLimit}等まで）${saved?" / ブラウザに保存しました":""}<br><span style="font-size:10px">${smallBodyCacheSummary(SMALL_BODY_CACHE_META)}</span>${$("#skyShowSmallBodies")?.checked?'<br><span style="font-size:10px;color:#67e8f9">星図の「彗星・小惑星」がONなので、現在の星図へ反映します。</span>':""}`;
+status.innerHTML=`取得完了：今夜の彗星 ${NIGHT_COMETS.length}件${saved?" / ブラウザに保存しました":""}<br><span style="font-size:10px">${nightCometCacheSummary(NIGHT_COMET_META)}</span>`;
 
-if($("#rtab-skymap").classList.contains("active"))renderSkyChart();
+if($("#skyShowSmallBodies")?.checked)renderSkyChart();
 }catch(error){
-/* 通信失敗時も、前回の保存データは消さない */
-ONLINE_SMALL_BODIES=previousObjects;
-SMALL_BODY_CACHE_META=previousMeta;
+NIGHT_COMETS=previousComets;
+NIGHT_COMET_META=previousMeta;
 renderSmallBodyCards();
 status.className="smallbody-status error";
-const kept=ONLINE_SMALL_BODIES.length&&SMALL_BODY_CACHE_META;
-status.innerHTML=`最新データの取得に失敗しました。${kept?"前回保存したデータはそのまま表示しています。":"ネット接続を確認してください。"}<br><span style="font-size:10px">${String(error.message||error)}</span>${kept?`<br><span style="font-size:10px">${smallBodyCacheSummary(SMALL_BODY_CACHE_META)}</span>`:""}`;
+const kept=!!NIGHT_COMET_META;
+status.innerHTML=`今夜の彗星の取得に失敗しました。${kept?"前回保存したデータは保持しています。":"ネット接続とCloudflare Workerを確認してください。"}<br><span style="font-size:10px">${escapeHTML(String(error.message||error))}</span>`;
 }finally{
 $("#sbRefresh").disabled=false;
 }
 }
+
 
 function objAltAz(obj,lat,lon,date){
 if(obj.type==="planet"){
@@ -5655,21 +5604,8 @@ else renderMeteorShowers();
 });
 ["skyShowLines","skyShowNames","skyShowPlanets","skyShowDSO","skyShowMeteors"].forEach(id=>{$("#"+id).addEventListener("change",renderSkyChart);});
 $("#skyShowSmallBodies").addEventListener("change",function(){
-if(this.checked){
-const hasData=ONLINE_SMALL_BODIES.length>0&&SMALL_BODY_CACHE_META;
-const matches=hasData&&smallBodyCacheMatchesSky(
-getSkyViewDate(),
-parseFloat($("#inLat").value),
-parseFloat($("#inLon").value)
-);
-
-if($("#skyMapObjectInfo")){
-if(!hasData){
-$("#skyMapObjectInfo").innerHTML='<b>☄ 彗星・小惑星</b><br>まだJPLの小天体データを取得していません。<br><span style="color:#8ab4d4">「彗星・小惑星」タブで「最新データを取得」を押すと、このチェックをONのまま星図へ表示できます。</span>';
-}else if(!matches){
-$("#skyMapObjectInfo").innerHTML='<b>☄ 彗星・小惑星</b><br>チェックはONになっていますが、保存データの対象日時・場所と現在の星図条件が異なるため、現在は描画していません。<br><span style="color:#8ab4d4">現在の観測条件で「最新データを取得」すると自動的に表示されます。</span>';
-}
-}
+if(this.checked&&!NIGHT_COMETS.length&&$("#skyMapObjectInfo")){
+$("#skyMapObjectInfo").innerHTML='<b>彗星</b><br>「彗星」タブで「今夜の彗星を取得」を押すと、その夜の彗星を時刻に合わせて星図へ表示できます。';
 }
 renderSkyChart();
 });
@@ -6405,15 +6341,13 @@ $("#meteorStatus").textContent=`観測年が${date.getFullYear()}年に変わり
 }
 }
 
-/* 観測条件が変わっても保存済み小天体データは保持する */
-if(ONLINE_SMALL_BODIES.length&&SMALL_BODY_CACHE_META){
+/* 今夜の彗星データは手動更新まで保持する */
+if(NIGHT_COMET_META){
 renderSmallBodyCards();
-updateSmallBodyStoredStatus("📦 保存データを保持中");
+updateSmallBodyStoredStatus("保存データを保持中");
 }else{
 updateSmallBodyStoredStatus();
 }
-/* 取得時と条件が違う場合もチェック状態は維持する。
-   描画可否は保存データと星図条件の一致判定で制御する。 */
 
 const results=calcObjects(lat,lon,date,minAlt,maxMag);currentResults=results;
 const pad=n=>String(n).padStart(2,"0");
