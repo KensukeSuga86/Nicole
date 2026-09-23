@@ -1941,6 +1941,31 @@ footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
   .sky-label{font-size:10px}
   .sky-val{font-size:15px}
 }
+
+/* 観測日時：日時欄・月相ボタン・現在時刻ボタンの文字を統一 */
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"],
+.obs-row-datetime .moon-date-btn,
+.obs-row-datetime #btnNow{
+  font-family:"Meiryo","Yu Gothic","Hiragino Sans",sans-serif;
+  font-size:13px;
+  font-weight:400;
+  letter-spacing:0;
+  -webkit-font-smoothing:antialiased;
+  font-variant-numeric:tabular-nums;
+}
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"]::-webkit-datetime-edit,
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper,
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"]::-webkit-datetime-edit-text,
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"]::-webkit-datetime-edit-month-field,
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"]::-webkit-datetime-edit-day-field,
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"]::-webkit-datetime-edit-year-field,
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"]::-webkit-datetime-edit-hour-field,
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"]::-webkit-datetime-edit-minute-field{
+  font-family:"Meiryo","Yu Gothic","Hiragino Sans",sans-serif;
+  font-size:13px;
+  font-weight:400;
+}
+
 </style>
 </head>
 <body>
@@ -2782,6 +2807,130 @@ footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
       .purpose-card p{font-size:12px;}
       .nav-card,.step,.note,.callout{font-size:12px;}
     }
+
+    body.manual-night{
+      --bg:#080000;
+      --panel:#120303;
+      --panel-2:#190505;
+      --line:#4b1818;
+      --text:#ffb0a8;
+      --muted:#c56f68;
+      --accent:#ff665c;
+      --accent-2:#d94740;
+      --warm:#ff8b72;
+      --ok:#ff7d70;
+      background:linear-gradient(180deg,#050000 0%,#0a0101 45%,#080000 100%);
+    }
+    body.manual-night .hero{
+      background:radial-gradient(circle at top right, rgba(255,60,50,.12), transparent 30%),linear-gradient(180deg,rgba(28,4,4,.98),rgba(14,1,1,.98));
+    }
+    body.manual-night .panel,
+    body.manual-night .mini-card,
+    body.manual-night .nav-card{
+      background:#100202;
+      border-color:#461515;
+    }
+    body.manual-night .tool,
+    body.manual-night .chip{
+      background:#160303;
+      border-color:#572020;
+      color:#ff8178;
+    }
+    body.manual-night .quote{
+      background:#130202;
+      border-color:#4e1818;
+      color:#e8877f;
+    }
+    body.manual-night a{color:#ff7068}
+
+  
+    /* 赤色夜間モード：固定色も含めて明るい青白色を残さない */
+    body.manual-night,
+    body.manual-night .wrap,
+    body.manual-night .panel-body,
+    body.manual-night details.panel &gt; summary{
+      color:#d97972;
+    }
+    body.manual-night h1,
+    body.manual-night h2,
+    body.manual-night h3,
+    body.manual-night h4,
+    body.manual-night strong,
+    body.manual-night .subtitle,
+    body.manual-night .section-title,
+    body.manual-night .summary-left{
+      color:#ff8278;
+    }
+    body.manual-night .lead,
+    body.manual-night .summary-sub,
+    body.manual-night .chev,
+    body.manual-night .muted,
+    body.manual-night .footer,
+    body.manual-night .nav-card p{
+      color:#a95853;
+    }
+    body.manual-night .eyebrow,
+    body.manual-night a,
+    body.manual-night .toc-list a{
+      color:#e7645c;
+    }
+    body.manual-night .toc-list a{
+      background:rgba(100,8,8,.18);
+      border-color:#421313;
+    }
+    body.manual-night .toc-list a:hover,
+    body.manual-night .chip-link:hover,
+    body.manual-night button.tool:hover{
+      background:#260505;
+      color:#ff8d84;
+    }
+    body.manual-night details.panel{
+      background:linear-gradient(180deg,rgba(18,2,2,.99),rgba(10,1,1,.99));
+      border-color:#351010;
+    }
+    body.manual-night details.panel[open]{
+      border-color:#5b1a18;
+    }
+    body.manual-night details.panel &gt; summary{
+      background:rgba(110,12,12,.08);
+    }
+    body.manual-night .mini-card{
+      background:rgba(90,8,8,.10);
+      border-color:#351010;
+    }
+    body.manual-night .note-box{
+      background:rgba(110,20,10,.10);
+      border-color:#4e1914;
+      color:#d26d62;
+    }
+    body.manual-night .quote{
+      background:#100202;
+      border-left-color:#8b2923;
+      border-color:#421313;
+      color:#c96a63;
+    }
+    body.manual-night .quote strong{
+      color:#ef7b72;
+    }
+    body.manual-night .tool,
+    body.manual-night .chip{
+      background:#130202;
+      border-color:#421313;
+      color:#d96a63;
+    }
+
+
+    /* 赤色夜間モード：カラー絵文字も赤く減光する */
+    body.manual-night .summary-icon,
+    body.manual-night .manual-emoji{
+      display:inline-block;
+      filter:grayscale(1) sepia(1) saturate(7) hue-rotate(315deg) brightness(.62) contrast(1.08);
+      opacity:.88;
+    }
+    body.manual-night .summary-icon{
+      text-shadow:none;
+    }
+
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -2792,127 +2941,57 @@ footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
       &lt;p class=&quot;subtitle&quot;&gt;&lt;strong&gt;星空の案内人・ニコルと一緒に&lt;/strong&gt;&lt;/p&gt;
       &lt;div class=&quot;lead&quot;&gt;
         &lt;p&gt;&lt;strong&gt;Nicole the Astronavigator&lt;/strong&gt; は、あなたのための星空の案内人です。&lt;/p&gt;
-        &lt;p&gt;名前を知らなくても星空は美しい。&lt;br&gt;
-        でも、「あの星は何だろう」「どのくらい遠いんだろう」「どうしてこの名前なんだろう」と気になってしまうことがあるはず。&lt;/p&gt;
-        &lt;p&gt;見えないものを見ようとした時、知らないものを知ろうとした時、もうすでに天体観測は始まっています。&lt;/p&gt;
+        &lt;p&gt;名前を知らなくても星空は美しい。&lt;/p&gt;
+        &lt;p&gt;でも、「あの星は何だろう」、「どのくらい遠いんだろう」、「どうしてこの名前なんだろう」と気になってしまうことがあるはず。&lt;/p&gt;
+        &lt;p&gt;見えないものを見ようとした時、知らないものを知ろうとした時、もうすでにあなたの天体観測は始まっています。&lt;/p&gt;
         &lt;p&gt;「今夜は何が見える？」&lt;/p&gt;
         &lt;p&gt;「指差す先に見えているあの星は何？」&lt;/p&gt;
-        &lt;p&gt;「一緒にいる人と星空を楽しみたい。」&lt;/p&gt;
-        &lt;p&gt;ニコルは、そんな「もう少し知りたい」、「もう少し伝えたい」に寄り添い、必要な情報をひとつにまとめて天体観測をサポートします。&lt;/p&gt;
-        &lt;p&gt;観測する日時と場所を設定すると、その場所から見える天体や星座、太陽、月、惑星、流星群などを確認できます。星図、天候、月齢、薄明、彗星などの情報もまとめて確認できます。&lt;/p&gt;
+        &lt;p&gt;「一緒にいる人ともっと星空を楽しみたい。」&lt;/p&gt;
+        &lt;p&gt;ニコルは、そんな「もう少し知りたい」、「もう少し伝えたい」に寄り添い、必要な情報をひとつにまとめ、あなたの天体観測をサポートします。&lt;/p&gt;
+        &lt;p&gt;観測する日時と場所を設定すると、その場所から見える星空を確認できます。&lt;/p&gt;
+        &lt;p&gt;星図、天候、月齢、薄明、彗星などの情報もまとめて確認できます。&lt;/p&gt;
         &lt;p&gt;このアプリは主に、&lt;/p&gt;
         &lt;p&gt;&lt;strong&gt;「天体観測を計画する」&lt;/strong&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;strong&gt;「今見えているものを確認する」&lt;/strong&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;「今見えている星を確認する」&lt;/strong&gt;&lt;/p&gt;
         &lt;p&gt;&lt;strong&gt;「星空について解説する」&lt;/strong&gt;&lt;/p&gt;
         &lt;p&gt;という3つの目的で作られています。&lt;/p&gt;
-        &lt;p&gt;天体観測を計画するとき。&lt;/p&gt;
+        &lt;p&gt;星を観たいと思ったとき。&lt;/p&gt;
         &lt;p&gt;実際に星空を見上げているとき。&lt;/p&gt;
         &lt;p&gt;誰かと一緒に星を眺めているとき。&lt;/p&gt;
         &lt;p&gt;&lt;strong&gt;ニコルと一緒なら、誰でも簡単に星を探し、観察し、もう一歩深く楽しめる。&lt;/strong&gt;&lt;/p&gt;
       &lt;/div&gt;
       &lt;div class=&quot;chip-row&quot;&gt;
-        &lt;a class=&quot;chip chip-link&quot; href=&quot;#purpose-plan&quot; onclick=&quot;openAndScroll(event, &#x27;purpose-plan&#x27;)&quot;&gt;天体観測を計画する&lt;/a&gt;
-        &lt;a class=&quot;chip chip-link&quot; href=&quot;#purpose-now&quot; onclick=&quot;openAndScroll(event, &#x27;purpose-now&#x27;)&quot;&gt;今見えているものを確認する&lt;/a&gt;
-        &lt;a class=&quot;chip chip-link&quot; href=&quot;#purpose-guide-explain&quot; onclick=&quot;openAndScroll(event, &#x27;purpose-guide-explain&#x27;)&quot;&gt;星空について解説する&lt;/a&gt;
+        &lt;a class=&quot;chip chip-link&quot; href=&quot;#quickstart&quot;&gt;はじめて使う&lt;/a&gt;
+        &lt;a class=&quot;chip chip-link&quot; href=&quot;#obs-conditions&quot;&gt;観測条件&lt;/a&gt;
+        &lt;a class=&quot;chip chip-link&quot; href=&quot;#chart&quot;&gt;星図&lt;/a&gt;
+        &lt;a class=&quot;chip chip-link&quot; href=&quot;#shooting&quot;&gt;撮影&lt;/a&gt;
+        &lt;a class=&quot;chip chip-link&quot; href=&quot;#comets&quot;&gt;彗星&lt;/a&gt;
       &lt;/div&gt;
     &lt;/header&gt;
 
     &lt;div class=&quot;toolbar&quot;&gt;
       &lt;button class=&quot;tool&quot; onclick=&quot;setAllDetails(true)&quot;&gt;すべて開く&lt;/button&gt;
       &lt;button class=&quot;tool&quot; onclick=&quot;setAllDetails(false)&quot;&gt;すべて閉じる&lt;/button&gt;
+      &lt;button class=&quot;tool&quot; id=&quot;manualNightModeBtn&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;manual-emoji&quot;&gt;🔴&lt;/span&gt; 赤色夜間モード&lt;/button&gt;
       &lt;button class=&quot;tool&quot; onclick=&quot;location.href=&#x27;#top&#x27;&quot;&gt;ページ上部へ戻る&lt;/button&gt;
     &lt;/div&gt;
 
-    &lt;section&gt;
-      &lt;h2 class=&quot;section-title&quot;&gt;目的から探す&lt;/h2&gt;
-      &lt;div class=&quot;nav-grid&quot;&gt;
-        &lt;a class=&quot;nav-card&quot; href=&quot;#quickstart&quot;&gt;
-          &lt;h3&gt;🌟 はじめて使う&lt;/h3&gt;
-          &lt;p&gt;今いる場所で、今見える星空を調べるための最短手順です。&lt;/p&gt;
-        &lt;/a&gt;
-        &lt;a class=&quot;nav-card&quot; href=&quot;#purpose-guide&quot;&gt;
-          &lt;h3&gt;🧭 目的別ガイド&lt;/h3&gt;
-          &lt;p&gt;観測を計画する・現場で確認する・星空を案内する、の3つの使い方から入れます。&lt;/p&gt;
-        &lt;/a&gt;
-        &lt;a class=&quot;nav-card&quot; href=&quot;#feature-guide&quot;&gt;
-          &lt;h3&gt;🛠 機能から探す&lt;/h3&gt;
-          &lt;p&gt;観測条件、星図、天候、流星群など、個別機能をリファレンス形式で確認できます。&lt;/p&gt;
-        &lt;/a&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-
     &lt;section id=&quot;quickstart&quot; class=&quot;anchor-pad&quot;&gt;
-      &lt;h2 class=&quot;section-title&quot;&gt;はじめてニコルを使う&lt;/h2&gt;
+      &lt;h2 class=&quot;section-title&quot;&gt;はじめて使う&lt;/h2&gt;
       &lt;details class=&quot;panel&quot; open&gt;
         &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🌌&lt;/span&gt;&lt;span&gt;今いる場所で、今見える星空を調べる&lt;span class=&quot;summary-sub&quot;&gt;まずはこの手順だけで使い始められます&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🌌&lt;/span&gt;&lt;span&gt;今いる場所で、今見える空を調べる&lt;span class=&quot;summary-sub&quot;&gt;最短の使い方&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
           &lt;ol&gt;
             &lt;li&gt;「現在時刻をセット」を押します。&lt;/li&gt;
-            &lt;li&gt;「現在地を取得」を押します。&lt;/li&gt;
-            &lt;li&gt;「今夜の空情報」で天候や月の状態を確認します。&lt;/li&gt;
-            &lt;li&gt;「天体カード」で見える天体を確認します。&lt;/li&gt;
-            &lt;li&gt;「星図」で実際の空のどこにあるか確認します。&lt;/li&gt;
+            &lt;li&gt;「現在地を取得」を押します。位置情報を使わない場合は、地図または緯度・経度で場所を指定します。&lt;/li&gt;
+            &lt;li&gt;「天体を検索する」を押します。&lt;/li&gt;
+            &lt;li&gt;「今夜の空情報」で日の出・日の入り、天文薄明、月齢、月相、天候を確認します。&lt;/li&gt;
+            &lt;li&gt;「星図」で空の位置関係を確認し、「天体」「星座」「流星群」「彗星」など必要なタブを見ます。&lt;/li&gt;
           &lt;/ol&gt;
-          &lt;p&gt;これだけで、現在地から今見えている星空を調べることができます。&lt;/p&gt;
-          &lt;p class=&quot;muted&quot;&gt;観測する日時や場所が決まっている場合は、現在時刻や現在地を使わず、観測予定の条件を入力してください。&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/details&gt;
-    &lt;/section&gt;
-
-    &lt;section id=&quot;purpose-guide&quot; class=&quot;anchor-pad&quot;&gt;
-      &lt;h2 class=&quot;section-title&quot;&gt;ニコルに何を手伝ってもらいますか？&lt;/h2&gt;
-
-      &lt;details class=&quot;panel&quot; id=&quot;purpose-plan&quot; open&gt;
-        &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;📅&lt;/span&gt;&lt;span&gt;1. 天体観測を計画する&lt;span class=&quot;summary-sub&quot;&gt;いつ・どこで・何を見るかを考える&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
-        &lt;/summary&gt;
-        &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;これから天体観測へ出かけるときに、「いつ行くか」「どこへ行くか」「何を見るか」「天候は良さそうか」を調べるための使い方です。&lt;/p&gt;
-          &lt;p&gt;観測日時と観測場所を設定すると、その条件で見える天体や星座、月、流星群などを確認できます。天候情報や月齢、日の入り、薄明終了時刻なども確認できるため、観測に適した時間帯を考えることができます。&lt;/p&gt;
-          &lt;div class=&quot;mini-card&quot;&gt;
-            &lt;h4&gt;主に使う機能&lt;/h4&gt;
-            &lt;ul&gt;
-              &lt;li&gt;観測条件&lt;/li&gt;
-              &lt;li&gt;今夜の空情報&lt;/li&gt;
-              &lt;li&gt;天体カード&lt;/li&gt;
-              &lt;li&gt;見頃の星座&lt;/li&gt;
-              &lt;li&gt;流星群&lt;/li&gt;
-              &lt;li&gt;月カレンダー&lt;/li&gt;
-              &lt;li&gt;彗星&lt;/li&gt;
-              &lt;li&gt;観測スケジュール&lt;/li&gt;
-              &lt;li&gt;星図&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/details&gt;
-
-      &lt;details class=&quot;panel&quot; id=&quot;purpose-now&quot;&gt;
-        &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🔭&lt;/span&gt;&lt;span&gt;2. 観測現場で今見えているものを確認する&lt;span class=&quot;summary-sub&quot;&gt;頭上の空と星図を結びつける&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
-        &lt;/summary&gt;
-        &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;実際に屋外へ出た後、「今どんな天体が見えているのか」「この星は何なのか」「数時間後にはどこへ移動するのか」を確認するための使い方です。&lt;/p&gt;
-          &lt;p&gt;現在時刻と現在地を設定すると、その瞬間の空を星図として確認できます。星図を拡大したり、時刻を進めたり戻したりしながら、星や星座の位置を確認できます。&lt;/p&gt;
-          &lt;p&gt;見上げた空と、この地図を重ねてみましょう。&lt;/p&gt;
-          &lt;p&gt;観測現場では赤色夜間モードを使用すると、暗い環境に慣れた目への影響を抑えることができます。&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/details&gt;
-
-      &lt;details class=&quot;panel&quot; id=&quot;purpose-guide-explain&quot;&gt;
-        &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;✨&lt;/span&gt;&lt;span&gt;3. 誰かに星空を案内する&lt;span class=&quot;summary-sub&quot;&gt;知ることと伝えることをつなぐ&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
-        &lt;/summary&gt;
-        &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;ニコルは、自分で天体を見るだけではなく、一緒にいる人へ星空を案内するときにも使うことを想定しています。&lt;/p&gt;
-          &lt;p&gt;天体カードや星座の解説では、その天体がどんなものなのか、どのように観察すると面白いのか、天文学的にどんな特徴があるのか、名前にはどんな由来があるのか、といった情報を確認できます。&lt;/p&gt;
-          &lt;p&gt;例えば「これはアンドロメダ銀河です」だけではなく、「私たちの銀河系の隣にある大きな銀河で、肉眼でも条件が良ければ見ることができます」といった、一歩深い案内をするための情報として使うことができます。&lt;/p&gt;
-          &lt;p&gt;ニコルの名前には、&lt;strong&gt;“星の案内人・ニコル”&lt;/strong&gt;という意味が込められています。星を探すだけではなく、星空そのものを楽しむ手助けをすることが、このアプリの目的です。&lt;/p&gt;
+          
         &lt;/div&gt;
       &lt;/details&gt;
     &lt;/section&gt;
@@ -2923,14 +3002,17 @@ footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
         &lt;a href=&quot;#obs-conditions&quot;&gt;観測条件&lt;/a&gt;
         &lt;a href=&quot;#place-setting&quot;&gt;観測場所&lt;/a&gt;
         &lt;a href=&quot;#tonight-sky&quot;&gt;今夜の空情報&lt;/a&gt;
-        &lt;a href=&quot;#weather-info&quot;&gt;天候情報・観測目安&lt;/a&gt;
-        &lt;a href=&quot;#cards&quot;&gt;天体カード&lt;/a&gt;
+        &lt;a href=&quot;#recommend&quot;&gt;今夜のおすすめ&lt;/a&gt;
         &lt;a href=&quot;#chart&quot;&gt;星図&lt;/a&gt;
-        &lt;a href=&quot;#minor-bodies&quot;&gt;彗星&lt;/a&gt;
-        &lt;a href=&quot;#meteor&quot;&gt;流星群&lt;/a&gt;
-        &lt;a href=&quot;#constellations&quot;&gt;見頃の星座&lt;/a&gt;
-        &lt;a href=&quot;#moon-calendar&quot;&gt;月カレンダー&lt;/a&gt;
+        &lt;a href=&quot;#weather-info&quot;&gt;観測地点の天候&lt;/a&gt;
+        &lt;a href=&quot;#shooting&quot;&gt;撮影&lt;/a&gt;
+        &lt;a href=&quot;#objects&quot;&gt;天体&lt;/a&gt;
+        &lt;a href=&quot;#constellations&quot;&gt;星座&lt;/a&gt;
+        &lt;a href=&quot;#moon-calendar&quot;&gt;カレンダー&lt;/a&gt;
         &lt;a href=&quot;#schedule&quot;&gt;観測スケジュール&lt;/a&gt;
+        &lt;a href=&quot;#comets&quot;&gt;彗星&lt;/a&gt;
+        &lt;a href=&quot;#meteor&quot;&gt;流星群&lt;/a&gt;
+        &lt;a href=&quot;#reverse&quot;&gt;いつ・どこで見る？&lt;/a&gt;
         &lt;a href=&quot;#night-mode&quot;&gt;赤色夜間モード&lt;/a&gt;
         &lt;a href=&quot;#online-offline&quot;&gt;オンライン / オフライン&lt;/a&gt;
         &lt;a href=&quot;#faq&quot;&gt;よくある質問&lt;/a&gt;
@@ -2938,25 +3020,26 @@ footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
 
       &lt;details class=&quot;panel&quot; id=&quot;obs-conditions&quot; open&gt;
         &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;⚙️&lt;/span&gt;&lt;span&gt;観測条件を設定する&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;⚙️&lt;/span&gt;&lt;span&gt;観測条件&lt;/span&gt;&lt;/span&gt;
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;ニコルでは、最初に観測条件を設定します。設定した日時と場所をもとに、天体の高度、方位、日の出・日の入り、月出・月没、星図、天候、流星群の観測条件などが計算されます。&lt;/p&gt;
+          &lt;p&gt;ニコルは、基本的に「観測日時」と「観測場所」を基準にしています。&lt;/p&gt;
+
           &lt;h4&gt;観測日時&lt;/h4&gt;
-          &lt;p&gt;観測する日時を指定します。初期状態では、その日の夜の時刻が設定されています。「現在時刻をセット」を押すと、現在の日時へ変更できます。&lt;/p&gt;
-          &lt;h4&gt;月相を見ながら観測日を選ぶ&lt;/h4&gt;
-          &lt;p&gt;観測日時の下にある「🌙 月の満ち欠けから選ぶ」を押すと、各日の月相アイコンと輝面率を並べたカレンダーを表示します。新月付近の日や満月付近の日を視覚的に比較しながら観測日を選べます。日付を選ぶと、現在設定している時刻はそのままに、日付だけが変更されます。&lt;/p&gt;
-          &lt;h4&gt;場所名&lt;/h4&gt;
-          &lt;p&gt;観測場所を分かりやすくするための名前です。例えば「帯広」「然別湖」「自宅」「三国峠」などを入力できます。場所名自体は天体計算には使用されず、天体計算では緯度・経度が使用されます。&lt;/p&gt;
-          &lt;h4&gt;緯度・経度&lt;/h4&gt;
-          &lt;p&gt;観測地点の緯度と経度です。天体の高度や方位は、地球上のどこから見るかによって変わるため、ニコルの計算で重要な情報になります。&lt;/p&gt;
-          &lt;h4&gt;標高&lt;/h4&gt;
-          &lt;p&gt;観測地点の標高です。地図または現在地から観測地点を設定した場合、国土地理院の標高データから自動取得されます。&lt;/p&gt;
-          &lt;h4&gt;最低高度&lt;/h4&gt;
-          &lt;p&gt;観測候補として表示する天体の最低高度を設定します。例えば最低高度を20°に設定すると、高度20°未満の天体を候補から除外できます。&lt;/p&gt;
-          &lt;h4&gt;等級上限&lt;/h4&gt;
-          &lt;p&gt;表示する天体の明るさを制限します。天体の等級は、数字が小さいほど明るく、数字が大きいほど暗くなります。&lt;/p&gt;
+          &lt;p&gt;日時欄へ直接入力するほか、「&lt;span class=&quot;manual-emoji&quot;&gt;🌙&lt;/span&gt; 月の満ち欠けから選ぶ」で月相カレンダーから日を選んだり、「現在時刻をセット」で端末の現在時刻を反映したりできます。&lt;/p&gt;
+
+          &lt;h4&gt;観測場所&lt;/h4&gt;
+          &lt;p&gt;「現在地を取得」「地図から選択」、または場所名・緯度・経度・標高の手入力が使えます。天体の高度・方位計算では緯度・経度が使われます。&lt;/p&gt;
+
+          &lt;h4&gt;お気に入り地点&lt;/h4&gt;
+          &lt;p&gt;現在の地点へ名前を付けて保存し、あとから呼び出せます。「いつ・どこで見る？」の比較対象にも利用されます。&lt;/p&gt;
+
+          &lt;h4&gt;星の見え方&lt;/h4&gt;
+          &lt;p&gt;「最低高度」と「等級上限」を設定できます。最低高度は地平線近くの見づらい天体を除外するための条件、等級上限は一覧へ出す天体の暗さの上限です。&lt;/p&gt;
+
+          &lt;h4&gt;天体・星座検索&lt;/h4&gt;
+          &lt;p&gt;名前、カタログ番号、種類などから検索できます。観測条件を整えたら「天体を検索する」で結果を更新します。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
@@ -2966,20 +3049,23 @@ footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;h4&gt;現在地を取得する&lt;/h4&gt;
-          &lt;p&gt;「現在地を取得」を押すと、端末の位置情報機能から現在の緯度・経度を取得します。オンライン環境では、その地点の標高も国土地理院の標高データから自動取得します。その後、その地点の天候情報も更新されます。&lt;/p&gt;
-          &lt;h4&gt;地図から選択する&lt;/h4&gt;
-          &lt;p&gt;「地図から選択」を押すと、国土地理院の淡色地図が表示されます。地図を移動・拡大し、観測したい場所をタップします。地点を選択すると、緯度、経度、標高、地名が取得されます。「この場所を使う」を押すと、観測条件へ反映されます。&lt;/p&gt;
-          &lt;h4&gt;光害マップ&lt;/h4&gt;
-          &lt;p&gt;地図画面では、NASAのVIIRS夜間光データを光害の参考として重ねて表示できます。「光害を表示」でON／OFFを切り替え、濃さも調整できます。地点を選ぶと、衛星画像上の夜間光を「非常に少ない」から「非常に多い」までの相対的な目安で表示します。これはBortle階級やSQM値を直接示すものではありません。&lt;/p&gt;
-          &lt;h4&gt;観測地目安&lt;/h4&gt;
-          &lt;p&gt;選択地点の夜間光と標高から、観測地としての簡易目安を表示します。天候、道路状況、立入可否、周囲の街灯、地平線の開け方などは含まれないため、現地条件と合わせて判断してください。&lt;/p&gt;
+          &lt;h4&gt;現在地を取得&lt;/h4&gt;
+          &lt;p&gt;ブラウザの位置情報から緯度・経度を取得します。位置情報の利用許可が必要です。&lt;/p&gt;
+
+          &lt;h4&gt;地図から選択&lt;/h4&gt;
+          &lt;p&gt;地図を移動・拡大して地点を選び、「この場所を使う」で観測条件へ反映します。&lt;/p&gt;
+          &lt;p class=&quot;muted&quot;&gt;（オンライン環境でしか使用できません）&lt;/p&gt;
+
+          &lt;h4&gt;標高&lt;/h4&gt;
+          &lt;p&gt;地図や現在地から地点を選んだときに標高を取得します。&lt;/p&gt;
+          &lt;p class=&quot;muted&quot;&gt;（オンライン環境でしか使用できません）&lt;/p&gt;
+
+          &lt;h4&gt;夜間光&lt;/h4&gt;
+          &lt;p&gt;天体観測の邪魔になる街灯りなどのデータです。&lt;/p&gt;
+          &lt;p&gt;地図はNASA GIBSのVIIRS Night Lightsを参考表示できます。&lt;/p&gt;
+
           &lt;h4&gt;周囲10kmでもっと暗い場所を探す&lt;/h4&gt;
-          &lt;p&gt;選択地点の周囲10kmを衛星夜間光で比較し、現在地点より暗い候補を探します。候補が見つかった場合は、地図上でその地点を選択できます。候補地点へ実際に移動できるか、安全に観測できるかは別途確認してください。&lt;/p&gt;
-          &lt;h4&gt;キーワードで場所を検索する&lt;/h4&gt;
-          &lt;p&gt;地図画面では、地名・施設名・住所を検索できます。例えば、「然別湖」「帯広駅」「知床峠」「北海道帯広市」などを入力できます。&lt;/p&gt;
-          &lt;h4&gt;地図を直接タップした場合&lt;/h4&gt;
-          &lt;p&gt;検索を使わず地図を直接タップした場合でも、その地点の緯度・経度から地名を取得します。取得した地名は場所名へ自動的に反映されます。&lt;/p&gt;
+          &lt;p&gt;現在地点の周囲を夜間光で比較し、より暗い候補を探します。道路、私有地、立入可否、安全性、視界などは判定しないため、実際に移動する前に別途確認してください。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
@@ -2989,161 +3075,232 @@ footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;「今夜の空情報」では、その日の観測環境をまとめて確認できます。ここを見ることで、「いつ暗くなるか」「月はどのくらい明るいか」「天候は良いか」を短時間で確認できます。&lt;/p&gt;
-          &lt;h4&gt;日の入り・日の出&lt;/h4&gt;
-          &lt;p&gt;太陽が地平線へ沈む時刻と、翌朝昇る時刻を表示します。&lt;/p&gt;
-          &lt;h4&gt;薄明&lt;/h4&gt;
-          &lt;p&gt;太陽が地平線より下にあるものの、まだ空が明るい時間帯を薄明と呼びます。暗い天体を観察する場合は、天文薄明が終了した後が一つの目安になります。&lt;/p&gt;
-          &lt;h4&gt;月齢&lt;/h4&gt;
-          &lt;p&gt;月の満ち欠けの進み具合を表示します。新月に近いほど月明かりが少なく、星雲や銀河など淡い天体を観察しやすくなります。&lt;/p&gt;
-          &lt;h4&gt;月相&lt;/h4&gt;
-          &lt;p&gt;月の形を表示します。月そのものを観察する場合は、月齢によってクレーターなどの見え方も変化します。&lt;/p&gt;
+          &lt;p&gt;日の出、日の入り、夕方・朝の天文薄明、月の出、月の入り、月齢、月相、天候の概要を一覧で確認できます。&lt;/p&gt;
+
+          &lt;h4&gt;時刻カードから星図へ移動&lt;/h4&gt;
+          &lt;p&gt;日の出・日の入り・天文薄明・月の出入りなど、時刻が表示されているカードをタップすると、星図がその時刻へ切り替わります。薄明の終わりや月没後の空をすぐ確認したいときに便利です。&lt;/p&gt;
+
+          &lt;h4&gt;月齢・月相&lt;/h4&gt;
+          &lt;p&gt;月齢と輝面率、月相アイコンを表示します。星景撮影や淡い天体の観測では、月の有無と高度も合わせて確認してください。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;recommend&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;⭐&lt;/span&gt;&lt;span&gt;今夜のおすすめ&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;設定した条件で観測しやすい天体を上位から表示します。各カードの「星図で表示」を押すと、その天体を星図上で確認できます。カード本体を開くと詳細情報を確認できます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;chart&quot; open&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🗺️&lt;/span&gt;&lt;span&gt;星図&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;星図は、指定した日時・場所の空を表示する中心機能です。「全天」と「地平」を切り替えられます。&lt;/p&gt;
+
+          &lt;h4&gt;全天&lt;/h4&gt;
+          &lt;p&gt;天頂を中心に地平線までを円形に表示します。北が上、東が左です。ズーム時はドラッグして表示位置を移動できます。&lt;/p&gt;
+
+          &lt;h4&gt;地平&lt;/h4&gt;
+          &lt;p&gt;実際に空を見上げる感覚に近い表示です。方角と見上げ角を選べるほか、ドラッグ／スワイプで向きを変更できます。&lt;/p&gt;
+
+          &lt;h4&gt;表示設定&lt;/h4&gt;
+          &lt;p&gt;星座線、星座名、太陽、黄道、昼光、月、月光、白道、惑星、主要天体、彗星、流星群放射点、天の川、恒星の等級上限を個別に切り替えられます。&lt;/p&gt;
+
+          &lt;h4&gt;太陽・黄道&lt;/h4&gt;
+          &lt;p&gt;太陽と黄道は独立して表示できます。黄道は太陽が一年を通して移動して見える基準となる道筋です。&lt;/p&gt;
+
+          &lt;h4&gt;月・白道&lt;/h4&gt;
+          &lt;p&gt;月と白道を表示できます。白道は月の位置変化を追うための目安として描画されます。&lt;/p&gt;
+
+          &lt;h4&gt;昼光&lt;/h4&gt;
+          &lt;p&gt;ONにすると、太陽高度に応じて星図の空の明るさを連続的に変化させます。&lt;/p&gt;
+
+          &lt;h4&gt;月光&lt;/h4&gt;
+          &lt;p&gt;ONにすると、月相、月の高度、月からの角距離をもとに月明かりを星図へ反映します。&lt;/p&gt;
+          &lt;p&gt;満月に近く、月が高く、月の近くを見るほど空が明るくなり、暗い星が見えにくくなるよう表示されます。&lt;/p&gt;
+
+          &lt;h4&gt;天の川&lt;/h4&gt;
+          &lt;p&gt;天の川の輪郭を星図へ投影します。初回取得にはオンライン接続が必要ですが、一度オンラインで接続すれば次回からはオフラインでも使えます。&lt;/p&gt;
+
+          &lt;h4&gt;星図の時刻&lt;/h4&gt;
+          &lt;p&gt;−6h、−3h、−1h、+1h、+3h、+6hのボタンと、前後24時間のスライダーで星図だけの時刻を動かせます。「設定時刻へ戻す」で観測条件の時刻へ戻ります。&lt;/p&gt;
+
+          &lt;h4&gt;星図に合わせて更新&lt;/h4&gt;
+          &lt;p&gt;星図で時刻を動かしたあと、結果上部の「星図に合わせて更新」を押すと、その星図時刻を観測日時へ反映し、天体・星座・おすすめ・観測スケジュールなどを再計算します。&lt;/p&gt;
+
+          &lt;h4&gt;星図ズーム&lt;/h4&gt;
+          &lt;p&gt;＋／−、ホイール、ピンチで拡大・縮小できます。100%表示へ戻すこともできます。&lt;/p&gt;
+
+          &lt;h4&gt;星図上の天体&lt;/h4&gt;
+          &lt;p&gt;星、惑星、月、主要天体、彗星、流星群放射点などをタップすると、星図下の情報欄へ詳細を表示します。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
       &lt;details class=&quot;panel&quot; id=&quot;weather-info&quot;&gt;
         &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;☁️&lt;/span&gt;&lt;span&gt;天候情報・観測目安&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;☁️&lt;/span&gt;&lt;span&gt;観測地点の天候&lt;/span&gt;&lt;/span&gt;
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;h4&gt;天候情報&lt;/h4&gt;
-          &lt;p&gt;ニコルでは、観測地点の天候予報を取得します。天体観測では一般的な天気予報だけでなく、特に雲量が重要になります。ニコルでは、総雲量、低層雲、中層雲、高層雲、降水確率、降水量、気温、湿度、風速、視程などを表示します。&lt;/p&gt;
-          &lt;p&gt;天候情報はオンライン環境でのみ利用できます。オフラインの場合は、「オフライン環境では使用できません」と表示されます。古い天気予報を誤って現在の予報として表示しないため、天候情報についてはオフラインキャッシュを使用しません。&lt;/p&gt;
-          &lt;h4&gt;観測目安&lt;/h4&gt;
-          &lt;p&gt;ニコルでは、取得した気象データをもとに、天体観測に適しているかを簡易的に表示します。表示は、◎ 良好、○ まずまず、△ 条件注意、× 観測には不向きの4段階です。&lt;/p&gt;
-          &lt;h4&gt;3つの気象モデルを比較する&lt;/h4&gt;
-          &lt;p&gt;ニコルでは、雲量について複数の数値予報モデルを比較します。使用するモデルは、JMA MSM、ECMWF IFS、NOAA GFSです。&lt;/p&gt;
-          &lt;div class=&quot;quote&quot;&gt;
-            &lt;strong&gt;観測目安　◎ 良好&lt;/strong&gt;&lt;br&gt;
-            雲量中央値　14%&lt;br&gt;
-            予報一致度：高&lt;br&gt;
-            JMA MSM 12% / ECMWF IFS 18% / NOAA GFS 14%
-          &lt;/div&gt;
-          &lt;h4&gt;雲量中央値&lt;/h4&gt;
-          &lt;p&gt;3モデルの雲量予報の中央値です。単純に一つの予報だけを見るのではなく、複数モデルの中心的な値を見るために使用します。&lt;/p&gt;
-          &lt;h4&gt;予報一致度&lt;/h4&gt;
-          &lt;p&gt;3モデルがどの程度似た予報をしているかを示します。モデル間の差が小さい場合は「高」、差が大きくなると「中」「低」になります。&lt;/p&gt;
-          &lt;h4&gt;天気予報についての注意&lt;/h4&gt;
-          &lt;p&gt;天候情報は、実際の空を直接観測しているものではなく、数値予報モデルによる計算結果です。「観測目安が◎だから必ず晴れる」という意味ではありません。最終的には実際の空や最新の気象情報も確認してください。&lt;/p&gt;
+          &lt;p&gt;星図内の「観測地点の天候」は折りたたみ式です。必要なときだけ展開できます。&lt;/p&gt;
+          &lt;p&gt;Open-Meteoから総雲量、低層・中層・高層雲、降水確率、降水量、気温、湿度、風速、視程などを取得し、観測目安を表示します。&lt;/p&gt;
+          &lt;p class=&quot;muted&quot;&gt;（オンライン環境でしか使用できません）&lt;/p&gt;
+
+          &lt;h4&gt;予報モデル比較&lt;/h4&gt;
+          &lt;p&gt;雲量についてJMA MSM、ECMWF IFS、NOAA GFSを比較し、中央値と予報一致度を表示します。&lt;/p&gt;
+
+          &lt;h4&gt;オフライン&lt;/h4&gt;
+          &lt;p&gt;古い予報を現在の予報として見せないため、天候情報はオフラインキャッシュを使いません。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
-      &lt;details class=&quot;panel&quot; id=&quot;cards&quot;&gt;
+      &lt;details class=&quot;panel&quot; id=&quot;shooting&quot; open&gt;
         &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🪐&lt;/span&gt;&lt;span&gt;天体カード&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;📷&lt;/span&gt;&lt;span&gt;撮影&lt;/span&gt;&lt;/span&gt;
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;名前を知れば、さっきまでただ光っていたものが、少しだけ近く感じられるかもしれません。&lt;/p&gt;
-          &lt;p&gt;天体カードでは、設定した観測条件から見える天体を一覧で確認できます。各カードには、天体名、天体の種類、等級、高度、方位、解説などが表示されます。&lt;/p&gt;
-          &lt;h4&gt;高度&lt;/h4&gt;
-          &lt;p&gt;天体が地平線からどれくらい高い場所にあるかを表します。地平線が0°、真上が90°です。&lt;/p&gt;
-          &lt;h4&gt;方位&lt;/h4&gt;
-          &lt;p&gt;天体がどの方向に見えるかを示します。実際に空を探すときは、星図と合わせて確認してください。&lt;/p&gt;
-          &lt;h4&gt;解説&lt;/h4&gt;
-          &lt;p&gt;各天体には、その天体についての解説があります。概要、観測のポイント、天文学的な特徴、歴史、名称の由来などが含まれます。観察するときだけではなく、同行者へ説明するときにも利用できます。&lt;/p&gt;
-          &lt;h4&gt;星空を案内するときの使い方&lt;/h4&gt;
-          &lt;p&gt;例えば望遠鏡で天体を見せる場合、まず星図で場所を確認し、天体カードで特徴を確認し、実際の天体を見ながら説明します。「この天体は何か」だけではなく、「どうして面白いのか」「どのくらい遠いのか」「どんな特徴があるのか」といった情報を加えることで、星空をより深く楽しむことができます。&lt;/p&gt;
+          &lt;p&gt;星景写真の構図、星を点で写すシャッタースピード、月明かり、タイムラプスや比較明合成などをまとめて扱います。&lt;/p&gt;
+
+          &lt;h4&gt;写野・カメラ&lt;/h4&gt;
+          &lt;p&gt;カメラ、焦点距離、横位置／縦位置を指定し、「写野を星図に表示」をONにすると撮影範囲を星図へ表示します。写野表示をONにしたときは、自動的に地平星図へ切り替わります。&lt;/p&gt;
+          &lt;p&gt;プリセットにはNikon D6（低画素）、Nikon Z8（高画素）、Nikon ZR（中画素）があります。&lt;/p&gt;
+
+          &lt;h4&gt;カスタムカメラ&lt;/h4&gt;
+          &lt;p&gt;センサーサイズをフルサイズ、APS-C、フォーサーズから選び、画素数をMP単位で入力します。（例）Nikon D850（4575万画素）であれば、45.7MP入力。&lt;/p&gt;
+          &lt;p&gt;カスタム設定は、名前を付けて保存でき、保存したカメラはカメラ選択欄から呼び出しできます。&lt;/p&gt;
+
+          &lt;h4&gt;星を点で写す&lt;/h4&gt;
+          &lt;p&gt;カメラの画素ピッチ、焦点距離、撮影方向の赤緯から、星の日周運動がセンサー上で何px動くかを見積もり、推奨シャッタースピードを計算します。&lt;/p&gt;
+          &lt;p&gt;「星像優先」は1.5px以内、「実用優先」は2.5px以内を目安にしています。判定対象の初期値は「写野中心」です。「写野内で最も厳しい星」へ切り替えると、写野内で日周運動が最も速い領域を基準にできます。&lt;/p&gt;
+
+          &lt;h4&gt;撮影方向とSSの連動&lt;/h4&gt;
+          &lt;p&gt;同じカメラ・焦点距離でも、天の赤道付近と天の極付近では星の動く速さが異なります。星図の向きと連動して推奨SSを再計算します。&lt;/p&gt;
+
+          &lt;h4&gt;NPF参考・500ルール参考&lt;/h4&gt;
+          &lt;p&gt;NPF参考値と500ルールも比較用に表示します。絞り値はNPF参考値だけに使用され、「星像優先」「実用優先」には使われません。&lt;/p&gt;
+
+          &lt;h4&gt;焦点距離別の推奨SS比較&lt;/h4&gt;
+          &lt;p&gt;14mm、20mm、24mm、35mm、50mmなど複数の焦点距離について、現在のカメラと撮影方向を使った&lt;strong&gt;実用優先&lt;/strong&gt;の推奨SSを並べて比較します。&lt;/p&gt;
+
+          &lt;h4&gt;空の条件&lt;/h4&gt;
+          &lt;p&gt;銀河中心の高度・方位、月明かりの影響、写野中心と月との角距離を確認できます。「星図に天の川を表示」から天の川表示をONにできます。&lt;/p&gt;
+
+          &lt;h4&gt;インターバル撮影時間&lt;/h4&gt;
+          &lt;p&gt;露光時間、待機時間、枚数から、撮影全体に必要な時間を計算します。&lt;/p&gt;
+
+          &lt;h4&gt;タイムラプス枚数&lt;/h4&gt;
+          &lt;p&gt;タイムラプスの完成尺とfpsから必要枚数を求め、撮影間隔から実際の撮影スパンを計算します。&lt;/p&gt;
+
+          &lt;h4&gt;比較明合成・星グル&lt;/h4&gt;
+          &lt;p&gt;星の回転角から必要な撮影時間の目安を計算し、1枚あたりの露光と待機時間から必要枚数を求めます。&lt;/p&gt;
+
+          &lt;h4&gt;総撮影時間 → 必要枚数&lt;/h4&gt;
+          &lt;p&gt;総撮影時間、1枚の露光時間、待機時間から撮影可能な枚数を逆算します。&lt;/p&gt;
+
+          &lt;h4&gt;スタッキング&lt;/h4&gt;
+          &lt;p&gt;ランダムノイズを仮定した理論値として、枚数Nに対するS/N改善を√Nで表示します。目標S/N改善倍率から必要枚数も計算できます。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
-      &lt;details class=&quot;panel&quot; id=&quot;chart&quot;&gt;
+      &lt;details class=&quot;panel&quot; id=&quot;objects&quot;&gt;
         &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;⭐&lt;/span&gt;&lt;span&gt;星図&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;✦&lt;/span&gt;&lt;span&gt;天体&lt;/span&gt;&lt;/span&gt;
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;星図では、指定した場所と日時から見える空を全天図として表示します。基本表示は、北が上、東が左、西が右、南が下です。&lt;/p&gt;
-          &lt;p&gt;星図には、恒星、星座線、星座名、太陽、月、惑星、天体、彗星、流星群の放射点などを表示できます。必要な情報だけをONにすることで、目的に合わせて星図を整理できます。&lt;/p&gt;
-          &lt;h4&gt;星図の表示を切り替える&lt;/h4&gt;
-          &lt;p&gt;星図は「全天」と「地平」を切り替えられます。「全天」では天頂を中心に地平線までを円形に表示します。「地平」では、正面よりやや上を見上げたときに近い透視図法で表示し、向いている方角と見上げ角を変更できます。初期状態は南向き・仰角35°です。&lt;/p&gt;
-          &lt;p&gt;地平表示でも、時刻変更、星座線、星座名、太陽・月・惑星、主要天体、ズームなどの機能を利用できます。ドラッグやスワイプで向きを変え、上方向・下方向への操作で見上げ角も変えられます。&lt;/p&gt;
-          &lt;h4&gt;天の川を表示する&lt;/h4&gt;
-          &lt;p&gt;星図の「天の川」をONにすると、天の川の実測等輝度輪郭データを星図上に薄い線で投影して表示します。最外周の輪郭を主線として描き、内部の等輝度輪郭も薄く表示します。初回はオンラインで輪郭データを取得し、以後はブラウザに保存したデータを利用できます。&lt;/p&gt;
-          &lt;h4&gt;カメラの写野を表示する&lt;/h4&gt;
-          &lt;p&gt;「📷 写野を表示」をONにし、センサーサイズとレンズの焦点距離を指定すると、星図の中心方向を撮影した場合のおおよその撮像範囲を枠で表示します。センサーサイズはフルサイズ、APS-C、フォーサーズから選択でき、横位置・縦位置も切り替えられます。初期設定はフルサイズ＋35mmです。&lt;/p&gt;
-          &lt;p&gt;「全天」でも写野を表示できます。写野枠の内側をドラッグ／スワイプすると、全天図上で撮影方向を自由に移動できます。「地平」では現在画面中央を向いて撮影する場合の写野として表示されます。地平モードで星図をドラッグすると、写野も視線方向と一緒に移動します。&lt;/p&gt;
-          &lt;h4&gt;星図上の天体を確認する&lt;/h4&gt;
-          &lt;p&gt;星図上に表示されている星や天体をタップすると、その天体についての情報を確認できます。星座カードなどにある「星図で見る」を使用すると、星図へ移動し、その対象を見つけやすくできます。星座の場合は対象となる星座線が強調表示されます。&lt;/p&gt;
-          &lt;h4&gt;星図の時刻を変更する&lt;/h4&gt;
-          &lt;p&gt;少し先の夜空を、先に覗いてみましょう。&lt;/p&gt;
-          &lt;p&gt;星図の表示時刻は、観測条件として設定した日時とは別に変更できます。−6時間、−3時間、−1時間、+1時間、+3時間、+6時間のボタンや時刻スライダーを使って、星空が時間とともにどのように動くかを連続的に確認できます。&lt;/p&gt;
-          &lt;h4&gt;設定時刻へ戻す&lt;/h4&gt;
-          &lt;p&gt;「設定時刻へ戻す」を押すと、観測条件で設定した日時へ戻ります。星図の時刻を変更しても、観測条件そのものは変更されません。&lt;/p&gt;
-          &lt;h4&gt;星図のズーム&lt;/h4&gt;
-          &lt;p&gt;星図は拡大・縮小できます。「＋」で拡大し、「−」で縮小します。Macではマウスホイールやトラックパッド、iPad・iPhoneでは2本指のピンチ操作でも拡大・縮小できます。拡大しているときは、星図をドラッグして表示位置を移動できます。&lt;/p&gt;
-          &lt;h4&gt;星座線と星座名&lt;/h4&gt;
-          &lt;p&gt;星座線を表示すると、主な恒星を結んだ星座の形を確認できます。星座名を表示すると、星座の位置関係を把握しやすくなります。&lt;/p&gt;
-          &lt;h4&gt;太陽・月・惑星&lt;/h4&gt;
-          &lt;p&gt;星図では、観測日時における太陽・月・惑星の位置も表示できます。惑星は恒星とは違い、日々位置を変えていきます。&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/details&gt;
-
-      &lt;details class=&quot;panel&quot; id=&quot;minor-bodies&quot;&gt;
-        &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;☄️&lt;/span&gt;&lt;span&gt;彗星&lt;/span&gt;&lt;/span&gt;
-          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
-        &lt;/summary&gt;
-        &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;ニコルでは、「星の鳥」の静的彗星データベースから彗星を検索できます。今夜の見かけ位置やJPL高精度軌道が必要な場合は、オンラインでJPL由来の位置情報を取得します。&lt;/p&gt;
-          &lt;p&gt;同じ場所にはいない旅人たちです。今夜の居場所を確かめてください。&lt;/p&gt;
-          &lt;h4&gt;データを更新する&lt;/h4&gt;
-          &lt;p&gt;彗星データは毎回自動取得せず、「更新」を行ったときに取得します。取得したデータはブラウザ内に保存されます。&lt;/p&gt;
-          &lt;h4&gt;オフライン時&lt;/h4&gt;
-          &lt;p&gt;以前取得したデータが残っている場合は、オフラインでも確認できます。ただし、小天体の位置情報は取得した観測条件に対応しています。現在の観測日時・場所と保存データの条件が違う場合は注意表示が出ます。&lt;/p&gt;
-          &lt;h4&gt;星図の時刻を変更した場合&lt;/h4&gt;
-          &lt;p&gt;彗星は時間とともに位置が変わります。星の鳥の簡易計算では星図時刻に合わせて軌道要素から位置を再計算し、JPLライブデータでは取得した時刻範囲内を補間して表示します。&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/details&gt;
-
-      &lt;details class=&quot;panel&quot; id=&quot;meteor&quot;&gt;
-        &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🌠&lt;/span&gt;&lt;span&gt;流星群&lt;/span&gt;&lt;/span&gt;
-          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
-        &lt;/summary&gt;
-        &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;流星群では、現在活動中の流星群と、その年の主な流星群を確認できます。&lt;/p&gt;
-          &lt;h4&gt;今夜活動中の流星群&lt;/h4&gt;
-          &lt;p&gt;観測日時が活動期間に含まれている流星群を表示します。各流星群について、活動期間、極大日、ZHR、流星速度、母天体、放射点などを確認できます。&lt;/p&gt;
-          &lt;h4&gt;時間帯別観測条件&lt;/h4&gt;
-          &lt;p&gt;今夜活動している流星群については、21時、0時、3時、5時など、夜間の代表時刻ごとに観測条件を確認できます。放射点の高度や月の状態などをもとに、どの時間帯が見やすいかを判断できます。&lt;/p&gt;
-          &lt;h4&gt;この年の主な流星群&lt;/h4&gt;
-          &lt;p&gt;年間一覧では、その年の代表的な流星群を確認できます。こちらは「今夜」の状態ではなく、活動期間、極大日、ZHR、速度、母天体、極大夜の月条件など、年間観測計画に必要な情報を中心に表示します。&lt;/p&gt;
-          &lt;h4&gt;流星群の放射点&lt;/h4&gt;
-          &lt;p&gt;流星群には「放射点」と呼ばれる位置があります。これは、流星を逆方向へたどると、空の一点から飛び出してくるように見える場所です。星図では、活動中の流星群の放射点を表示できます。&lt;/p&gt;
+          &lt;p&gt;「天体」タブでは、設定した観測条件で見える天体をカード形式で表示します。種類による絞り込みや、高度・明るさ・難易度などによる並び替えができます。&lt;/p&gt;
+          &lt;p&gt;各カードから「星図で見る」と「いつ・どこで見る？」を利用できます。「星図で見る」では対象天体へ移動し、星図上で黄色いリングを使って強調します。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
       &lt;details class=&quot;panel&quot; id=&quot;constellations&quot;&gt;
         &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;♈&lt;/span&gt;&lt;span&gt;見頃の星座&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;✨&lt;/span&gt;&lt;span&gt;星座&lt;/span&gt;&lt;/span&gt;
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;「見頃の星座」では、観測日時に見やすい星座を確認できます。各星座には解説があります。星座の特徴や代表的な星などを確認したあと、「星図で見る」を押すと星図へ移動できます。対象星座の星座線が強調されるため、実際の空で星座を探しやすくなります。&lt;/p&gt;
-          &lt;p&gt;線を結ぶ前はただの星でも、形を知れば物語が見えてきます。&lt;/p&gt;
+          &lt;p&gt;「星座」タブでは、観測日時・場所で見えている星座を高度の高い順に表示します。検索も利用できます。&lt;/p&gt;
+          &lt;p&gt;各星座には「科学」と「神話・由来」の解説があり、「星図で見る」で星図へ移動すると対象星座の星座線を強調できます。「いつ・どこで見る？」では別の日時・場所も探せます。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
       &lt;details class=&quot;panel&quot; id=&quot;moon-calendar&quot;&gt;
         &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🗓️&lt;/span&gt;&lt;span&gt;月カレンダー&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;📅&lt;/span&gt;&lt;span&gt;カレンダー&lt;/span&gt;&lt;/span&gt;
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;月カレンダーでは、日ごとの月齢や月の状態を確認できます。月齢だけでなく、月出、月没、薄明などを確認できます。月明かりの少ない日に星雲や銀河を観測したい場合や、月そのものを観察したい場合の計画に利用できます。&lt;/p&gt;
+          &lt;p&gt;月ごとの月相・月齢を確認できます。日付を選ぶと、月齢・月相・薄明・月の出入りなど、その日の情報を確認できます。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
       &lt;details class=&quot;panel&quot; id=&quot;schedule&quot;&gt;
         &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;📝&lt;/span&gt;&lt;span&gt;観測スケジュール&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;⌚️&lt;/span&gt;&lt;span&gt;観測スケジュール&lt;/span&gt;&lt;/span&gt;
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;観測スケジュールでは、その夜に観測したい天体を時間順に整理することができます。天体は時間とともに東から西へ移動していきます。同じ夜でも、早い時間にしか見られない天体、深夜に高くなる天体、明け方に昇ってくる天体があります。&lt;/p&gt;
-          &lt;p&gt;全部を見る必要はありません。今夜会いたい星から順番を決めましょう。&lt;/p&gt;
+          &lt;p&gt;観測可能な天体を時間帯に割り当てた一覧です。天体名をタップすると、種類、難易度、高度、方位、等級、距離、見かけの大きさ、推奨倍率、見どころなどをポップアップで確認できます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;comets&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🧹&lt;/span&gt;&lt;span&gt;彗星&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;独自のデータベース「星の鳥」から、彗星の軌道情報を取得し、星図に反映することができます。&lt;/p&gt;
+          &lt;p class=&quot;muted&quot;&gt;新しいデータの取得やJPL高精度計算にはオンライン接続が必要です。取得済みの星の鳥データは、一部オフラインでも利用できます。&lt;/p&gt;
+
+          &lt;h4&gt;星の鳥&lt;/h4&gt;
+          &lt;p&gt;彗星名、符号、SPK-IDなどから検索します。「簡易計算」「精密計算」「JPL高精度」を切り替えられます。&lt;/p&gt;
+          &lt;p&gt;簡易計算は、軌道要素を使ったニコル内の二体近似であり、おおよその場所が分かります。&lt;/p&gt;
+          &lt;p&gt;精密計算は詳細データを追加取得しますが、現段階の位置計算自体は二体近似です。&lt;/p&gt;
+          &lt;p&gt;JPL高精度ではJPL Horizons由来の見かけ位置を利用します。&lt;/p&gt;
+          &lt;p&gt;一般的な観望で彗星のおおよその位置を探す用途では、簡易計算を目安として利用できます。精密な位置が必要な場合はJPL高精度を使用してください。&lt;/p&gt;
+
+          &lt;h4&gt;今夜の彗星&lt;/h4&gt;
+          &lt;p&gt;NASA/JPL由来のデータから、指定した観測地点・夜に見える彗星を取得します。一晩分の位置を取得すると、星図の時刻を動かした際に位置を補間して追跡できます。&lt;/p&gt;
+
+          &lt;h4&gt;長期軌道&lt;/h4&gt;
+          &lt;p&gt;選択した彗星について、観測日前後の長期軌道を取得して星図へ表示できます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;meteor&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;☄️&lt;/span&gt;&lt;span&gt;流星群&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;活動中の流星群と、その年の主な流星群を確認できます。活動期間、極大、ZHR、流星速度、母天体、放射点などを表示します。&lt;/p&gt;
+          &lt;p&gt;流星がどこに流れるかを表しているものではありません。&lt;/p&gt;
+
+          &lt;h4&gt;今夜活動中&lt;/h4&gt;
+          &lt;p&gt;夜間の代表時刻ごとに、放射点高度と月条件から観測目安を確認できます。&lt;/p&gt;
+
+          &lt;h4&gt;星図&lt;/h4&gt;
+          &lt;p&gt;「流星群放射点」をONにすると、活動中の流星群の放射点を星図へ表示できます。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/details&gt;
+
+      &lt;details class=&quot;panel&quot; id=&quot;reverse&quot;&gt;
+        &lt;summary&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🔎&lt;/span&gt;&lt;span&gt;いつ・どこで見る？&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;p&gt;天体・星座を基準に、「これを見るなら、いつ・どの場所がよいか」を逆方向から探す機能です。&lt;/p&gt;
+          &lt;p&gt;現在地点とお気に入り地点を比較し、検索期間、最低高度、夜の暗さ、月の状態などから候補日時を表示します。&lt;/p&gt;
+          &lt;p&gt;候補を選ぶと、その日時・場所を観測条件へ反映できます。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
@@ -3153,9 +3310,7 @@ footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;天体観測中に明るい画面を見ると、暗い場所に慣れた目が一時的に見えにくくなります。ニコルでは「赤色夜間モード」を使用できます。&lt;/p&gt;
-          &lt;p&gt;明かりを少し落として、夜の暗さに目を預けましょう。&lt;/p&gt;
-          &lt;p&gt;赤色夜間モードをONにすると、画面全体が赤を中心とした暗い表示になります。設定状態はブラウザに保存されるため、次回起動時にも引き継がれます。&lt;/p&gt;
+          &lt;p&gt;観測現場で暗順応への影響を抑えるため、画面全体を赤系の暗い表示へ切り替えます。設定はブラウザに保存されます。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
@@ -3167,59 +3322,48 @@ footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
         &lt;div class=&quot;panel-body&quot;&gt;
           &lt;div class=&quot;grid-2&quot;&gt;
             &lt;div class=&quot;mini-card&quot;&gt;
-              &lt;h4&gt;オンラインで必要になる機能&lt;/h4&gt;
+              &lt;h4&gt;オンライン接続が必要または推奨される機能&lt;/h4&gt;
               &lt;ul&gt;
-                &lt;li&gt;天候情報&lt;/li&gt;
-                &lt;li&gt;国土地理院の地図&lt;/li&gt;
-                &lt;li&gt;地名・施設名・住所検索&lt;/li&gt;
-                &lt;li&gt;地名の自動取得&lt;/li&gt;
+                &lt;li&gt;地図・地点検索・逆引き地名&lt;/li&gt;
                 &lt;li&gt;標高の新規取得&lt;/li&gt;
-                &lt;li&gt;今夜の彗星データ取得&lt;/li&gt;
+                &lt;li&gt;夜間光データ&lt;/li&gt;
+                &lt;li&gt;天候予報&lt;/li&gt;
+                &lt;li&gt;星の鳥の初回・更新取得&lt;/li&gt;
+                &lt;li&gt;今夜の彗星・JPL長期軌道&lt;/li&gt;
+                &lt;li&gt;天の川輪郭の初回取得&lt;/li&gt;
               &lt;/ul&gt;
             &lt;/div&gt;
             &lt;div class=&quot;mini-card&quot;&gt;
-              &lt;h4&gt;オフラインでも使える機能&lt;/h4&gt;
+              &lt;h4&gt;オフラインでも利用しやすい機能&lt;/h4&gt;
               &lt;ul&gt;
-                &lt;li&gt;星図&lt;/li&gt;
-                &lt;li&gt;恒星・星座表示&lt;/li&gt;
-                &lt;li&gt;太陽・月・惑星の位置&lt;/li&gt;
-                &lt;li&gt;天体カード&lt;/li&gt;
-                &lt;li&gt;月齢・日の出日の入り・薄明&lt;/li&gt;
-                &lt;li&gt;見頃の星座・月カレンダー&lt;/li&gt;
+                &lt;li&gt;基本的な星図・太陽・月・惑星計算&lt;/li&gt;
+                &lt;li&gt;天体・星座&lt;/li&gt;
+                &lt;li&gt;月齢・薄明・日の出入り&lt;/li&gt;
+                &lt;li&gt;撮影計算&lt;/li&gt;
+                &lt;li&gt;保存済みのお気に入り地点・カスタムカメラ&lt;/li&gt;
+                &lt;li&gt;取得済みの天の川・彗星データの一部&lt;/li&gt;
               &lt;/ul&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-          &lt;p&gt;彗星については、以前取得したデータが保存されていれば確認できます。天候については古い予報を誤表示しないため、オフライン時には表示しません。&lt;/p&gt;
+          &lt;p&gt;オンライン由来のデータは、取得済みでも用途によって有効範囲や鮮度が異なります。特に天候は古い予報を使わず、オフライン時は表示しません。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
       &lt;details class=&quot;panel&quot;&gt;
         &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;👣&lt;/span&gt;&lt;span&gt;観測現場でおすすめの使い方&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;👣&lt;/span&gt;&lt;span&gt;観測現場でのおすすめ手順&lt;/span&gt;&lt;/span&gt;
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
           &lt;ol&gt;
-            &lt;li&gt;現在地を取得します。&lt;/li&gt;
-            &lt;li&gt;現在時刻をセットします。&lt;/li&gt;
-            &lt;li&gt;「今夜の空情報」で天候、月齢、薄明などを確認します。&lt;/li&gt;
-            &lt;li&gt;赤色夜間モードをONにします。&lt;/li&gt;
-            &lt;li&gt;天体カードから見たい天体を探します。&lt;/li&gt;
-            &lt;li&gt;「星図で見る」または星図から位置を確認します。&lt;/li&gt;
-            &lt;li&gt;必要に応じて星図を拡大し、実際の空と見比べます。&lt;/li&gt;
-            &lt;li&gt;数時間後の状態を確認したい場合は時刻スライダーを使用します。&lt;/li&gt;
+            &lt;li&gt;現在時刻と観測場所を設定します。&lt;/li&gt;
+            &lt;li&gt;「天体を検索する」で結果を更新します。&lt;/li&gt;
+            &lt;li&gt;今夜の空情報と天候を確認します。&lt;/li&gt;
+            &lt;li&gt;必要なら赤色夜間モードをONにします。&lt;/li&gt;
+            &lt;li&gt;星図を地平表示へ切り替え、実際に向いている方角へ合わせます。&lt;/li&gt;
+            &lt;li&gt;見たい天体・星座を「星図で見る」で探します。&lt;/li&gt;
+            &lt;li&gt;時間を進めて良い状態を見つけたら「星図に合わせて更新」でカード類を再計算します。&lt;/li&gt;
           &lt;/ol&gt;
-        &lt;/div&gt;
-      &lt;/details&gt;
-
-      &lt;details class=&quot;panel&quot;&gt;
-        &lt;summary&gt;
-          &lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🗣️&lt;/span&gt;&lt;span&gt;同行者へ星空を案内するときの使い方&lt;/span&gt;&lt;/span&gt;
-          &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
-        &lt;/summary&gt;
-        &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;星空を誰かと一緒に見る場合は、まず星図で目印になる明るい星や星座を探します。次に、その星座や天体の解説を確認します。実際の空を指し示しながら、名前、見つけ方、天文学的な特徴、歴史や名前の由来などを紹介すると、より深く星空を楽しむことができます。&lt;/p&gt;
-          &lt;p&gt;知らないものを知ろうとした、その瞬間から観測は始まっています。望遠鏡を覗く前に、ニコルを開いてみましょう。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
@@ -3229,31 +3373,45 @@ footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
           &lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;h4&gt;地図が表示されない&lt;/h4&gt;
-          &lt;p&gt;地図の表示にはインターネット接続が必要です。通信状況を確認してください。&lt;/p&gt;
-          &lt;h4&gt;地名検索ができない&lt;/h4&gt;
-          &lt;p&gt;場所検索はオンライン通信を使用します。短時間に繰り返し検索した場合は、少し時間を空けて再度検索してください。&lt;/p&gt;
-          &lt;h4&gt;現在地が取得できない&lt;/h4&gt;
-          &lt;p&gt;端末の位置情報が有効になっていることを確認してください。iPhone・iPadの場合は、Safariまたは使用しているブラウザに位置情報の利用が許可されている必要があります。&lt;/p&gt;
-          &lt;h4&gt;現在地は取得できたが標高が表示されない&lt;/h4&gt;
-          &lt;p&gt;標高データの取得にはインターネット接続が必要です。また、場所によっては利用可能な標高データが存在しない場合があります。&lt;/p&gt;
-          &lt;h4&gt;天気が表示されない&lt;/h4&gt;
-          &lt;p&gt;インターネット接続を確認してください。また、緯度・経度が正しく入力されていることを確認してください。&lt;/p&gt;
-          &lt;h4&gt;天気予報と実際の空が違う&lt;/h4&gt;
-          &lt;p&gt;天候情報は数値予報モデルによる予報です。特に雲や霧は局地的な変化が大きいため、実際の空と異なる場合があります。3モデルの「予報一致度」も参考にしてください。&lt;/p&gt;
-          &lt;h4&gt;彗星が表示されない&lt;/h4&gt;
-          &lt;p&gt;彗星タブで「今夜の彗星を取得」を実行してください。一晩分の位置を取得すると、星図の時刻を動かした際もその時刻の位置へ自動的に移動します。&lt;/p&gt;
-          &lt;h4&gt;星座を見つけられない&lt;/h4&gt;
-          &lt;p&gt;「見頃の星座」から目的の星座を探し、「星図で見る」を使用してください。対象星座の星座線が強調表示されます。&lt;/p&gt;
-          &lt;h4&gt;星図を拡大したら元に戻せなくなった&lt;/h4&gt;
-          &lt;p&gt;星図のズームリセットを使用すると100%表示へ戻すことができます。&lt;/p&gt;
+          &lt;h4&gt;星図だけ時間を動かしたら、天体カードが同じままです&lt;/h4&gt;
+          &lt;p&gt;星図の時刻は独立して動かせます。結果もその時刻へ合わせたい場合は「星図に合わせて更新」を押してください。&lt;/p&gt;
+
+          &lt;h4&gt;昼光をONにすると暗い星が消えます&lt;/h4&gt;
+          &lt;p&gt;実際の薄明・昼空に近づけるため、太陽高度に応じて恒星の表示上限を変えています。昼光をOFFにすると、設定した恒星等級まで通常表示します。&lt;/p&gt;
+
+          &lt;h4&gt;月光をONにすると月の近くの星が減ります&lt;/h4&gt;
+          &lt;p&gt;月相・月高度・月からの角距離を使い、月明かりで暗い星が見えにくくなる様子を簡易的に再現しています。&lt;/p&gt;
+
+          &lt;h4&gt;写野をONにすると地平星図へ切り替わります&lt;/h4&gt;
+          &lt;p&gt;撮影方向を実際の空に近い表示で扱うための仕様です。写野は地平星図の視線方向と連動します。&lt;/p&gt;
+
+          &lt;h4&gt;F値を変えても「星像優先」「実用優先」が変わりません&lt;/h4&gt;
+          &lt;p&gt;正常です。F値はNPF参考値だけに使います。推奨SSは画素ピッチ、焦点距離、撮影方向、許容ピクセル移動量から計算します。&lt;/p&gt;
+
+          &lt;h4&gt;地図が表示されません&lt;/h4&gt;
+          &lt;p&gt;地図の表示にはオンライン接続が必要です。通信状況を確認してください。&lt;/p&gt;
+
+          &lt;h4&gt;現在地が取得できません&lt;/h4&gt;
+          &lt;p&gt;端末とブラウザの位置情報利用許可を確認してください。&lt;/p&gt;
+
+          &lt;h4&gt;天候が表示されません&lt;/h4&gt;
+          &lt;p&gt;天候はオンラインで取得します。通信状況と緯度・経度を確認してください。&lt;/p&gt;
+
+          &lt;h4&gt;彗星が表示されません&lt;/h4&gt;
+          &lt;p&gt;星図の「彗星」がONか確認してください。「今夜の彗星」は彗星タブからデータを取得する必要があります。星の鳥で選択した彗星は、選択状態と計算モードも確認してください。&lt;/p&gt;
+
+          &lt;h4&gt;星座を見つけられません&lt;/h4&gt;
+          &lt;p&gt;「✨ 星座」タブで目的の星座を探し、「星図で見る」を押してください。対象の星座線が強調されます。&lt;/p&gt;
+
+          &lt;h4&gt;星図を拡大したら戻せません&lt;/h4&gt;
+          &lt;p&gt;星図ズームの100%ボタンで元の倍率へ戻せます。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
     &lt;/section&gt;
-&lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;/p&gt;
+
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;/p&gt;
   &lt;/div&gt;
 
-  
 &lt;script&gt;
 function setAllDetails(open){
   document.querySelectorAll(&#x27;details.panel&#x27;).forEach(d =&gt; d.open = open);
@@ -3295,6 +3453,38 @@ document.addEventListener(&#x27;click&#x27;, event =&gt; {
   event.stopPropagation();
   scrollManualTarget(id);
 }, true);
+
+const MANUAL_NIGHT_KEY=&#x27;nicole_manual_night_mode_v1&#x27;;
+
+function setManualNightMode(enabled){
+  document.body.classList.toggle(&#x27;manual-night&#x27;, !!enabled);
+  const btn=document.getElementById(&#x27;manualNightModeBtn&#x27;);
+  if(btn){
+    btn.innerHTML=enabled?&#x27;&lt;span class=&quot;manual-emoji&quot;&gt;☀️&lt;/span&gt; 通常表示&#x27;:&#x27;&lt;span class=&quot;manual-emoji&quot;&gt;🔴&lt;/span&gt; 赤色夜間モード&#x27;;
+    btn.setAttribute(&#x27;aria-pressed&#x27;, enabled?&#x27;true&#x27;:&#x27;false&#x27;);
+  }
+  try{ localStorage.setItem(MANUAL_NIGHT_KEY, enabled?&#x27;1&#x27;:&#x27;0&#x27;); }catch(e){}
+}
+
+function initialManualNightMode(){
+  let enabled=false;
+  try{
+    const saved=localStorage.getItem(MANUAL_NIGHT_KEY);
+    if(saved!==null){
+      enabled=saved===&#x27;1&#x27;;
+    }else{
+      enabled=localStorage.getItem(&#x27;nicole_night_mode_v1&#x27;)===&#x27;1&#x27;;
+    }
+  }catch(e){}
+  setManualNightMode(enabled);
+}
+
+document.getElementById(&#x27;manualNightModeBtn&#x27;)?.addEventListener(&#x27;click&#x27;,()=&gt;{
+  setManualNightMode(!document.body.classList.contains(&#x27;manual-night&#x27;));
+});
+
+initialManualNightMode();
+
 &lt;/script&gt;
 
 &lt;/body&gt;
@@ -7257,7 +7447,31 @@ ctx.strokeStyle="#16283a";ctx.lineWidth=1;
 ctx.strokeStyle="#20364c";ctx.beginPath();ctx.moveTo(mapCx-mapR,mapCy);ctx.lineTo(mapCx+mapR,mapCy);ctx.moveTo(mapCx,mapCy-mapR);ctx.lineTo(mapCx,mapCy+mapR);ctx.stroke();
 ctx.fillStyle="#8ab4d4";ctx.font="bold 13px sans-serif";ctx.textAlign="center";ctx.textBaseline="middle";
 ctx.fillText("N",mapCx,mapCy-mapR-15);ctx.fillText("E",mapCx-mapR-15,mapCy);ctx.fillText("S",mapCx,mapCy+mapR+15);ctx.fillText("W",mapCx+mapR+15,mapCy);
-ctx.fillStyle="#4a6a8a";ctx.font="10px sans-serif";ctx.fillText("60°",mapCx+3,mapCy-mapR*(30/90));ctx.fillText("30°",mapCx+3,mapCy-mapR*(60/90));
+ctx.fillStyle="#4a6a8a";
+ctx.font="10px sans-serif";
+ctx.textBaseline="middle";
+
+/* 高度表示：北・東・南・西の各方向に30°刻みで表示 */
+[30,60].forEach(alt=>{
+  const rr=mapR*(90-alt)/90;
+  const label=`${alt}°`;
+
+  /* 北 */
+  ctx.textAlign="left";
+  ctx.fillText(label,mapCx+4,mapCy-rr);
+
+  /* 東（全天図では左側） */
+  ctx.textAlign="center";
+  ctx.fillText(label,mapCx-rr,mapCy-8);
+
+  /* 南 */
+  ctx.textAlign="left";
+  ctx.fillText(label,mapCx+4,mapCy+rr);
+
+  /* 西（全天図では右側） */
+  ctx.textAlign="center";
+  ctx.fillText(label,mapCx+rr,mapCy-8);
+});
 }
 
 if($("#skyShowMilkyWay")?.checked){
