@@ -1966,6 +1966,101 @@ footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
   font-weight:400;
 }
 
+
+
+/* ===== 一般公開情報（データ出典・プライバシー・免責事項） ===== */
+.footer-info-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.public-info-btn{
+  background:#0a1726;
+  border:1px solid #274765;
+  color:#8fbdda;
+  border-radius:8px;
+  padding:7px 12px;
+  font-size:12px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.public-info-btn:hover{background:#152b40;color:#fff;}
+.public-info-modal{
+  position:fixed;
+  inset:0;
+  z-index:12100;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  background:rgba(0,0,0,.80);
+}
+.public-info-modal.open{display:flex;}
+.public-info-dialog{
+  width:min(820px,100%);
+  max-height:min(88vh,900px);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  background:#091321;
+  border:1px solid #2a4a6a;
+  border-radius:14px;
+  box-shadow:0 22px 70px rgba(0,0,0,.55);
+}
+.public-info-head{
+  flex:0 0 auto;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:13px 15px;
+  background:linear-gradient(135deg,#0a1428,#0d2040);
+  border-bottom:1px solid #28445f;
+}
+.public-info-title{flex:1;font-size:15px;font-weight:bold;color:#d9ecff;}
+.public-info-close{
+  background:#0a1428;
+  border:1px solid #2a4a6a;
+  color:#9ccbf0;
+  border-radius:8px;
+  padding:7px 11px;
+  font-size:12px;
+  cursor:pointer;
+}
+.public-info-close:hover{background:#1a3a5c;color:#fff;}
+.public-info-body{
+  overflow:auto;
+  padding:16px 18px 20px;
+  color:#bed0df;
+  font-size:12px;
+  line-height:1.85;
+}
+.public-info-body h3{
+  margin:18px 0 7px;
+  color:#8ecdf2;
+  font-size:14px;
+}
+.public-info-body h3:first-child{margin-top:0;}
+.public-info-body p{margin:6px 0;}
+.public-info-body ul{margin:7px 0 7px 1.25em;padding:0;}
+.public-info-body li{margin:5px 0;}
+.public-info-body a{color:#8ecdf2;text-decoration:none;border-bottom:1px dotted #507a99;}
+.public-info-body a:hover{color:#dff3ff;}
+.public-info-note{
+  margin:10px 0;
+  padding:10px 12px;
+  border:1px solid #2a455e;
+  border-radius:9px;
+  background:#07101b;
+  color:#9cb7cc;
+}
+.public-info-date{color:#607f98;font-size:10px;margin-top:14px;}
+body.public-info-open{overflow:hidden;}
+@media(max-width:600px){
+  .public-info-modal{padding:8px;}
+  .public-info-dialog{max-height:94vh;border-radius:11px;}
+  .public-info-body{padding:14px 13px 18px;}
+}
 </style>
 </head>
 <body>
@@ -3493,9 +3588,49 @@ initialManualNightMode();
   </iframe>
 </div>
 
+
+<div class="public-info-modal" id="publicInfoModal" aria-hidden="true">
+  <div class="public-info-dialog" role="dialog" aria-modal="true" aria-labelledby="publicInfoTitle">
+    <div class="public-info-head">
+      <div class="public-info-title" id="publicInfoTitle">公開情報</div>
+      <button type="button" class="public-info-close" id="closePublicInfo">閉じる</button>
+    </div>
+    <div class="public-info-body">
+      <h3>プライバシー・位置情報について</h3>
+      <p>Nicole the Astronavigator は、アカウント登録を必要とせず、アプリ本体に独自の広告トラッキングや行動解析機能を組み込んでいません。</p>
+      <p>「現在地を取得」を使用した場合、ブラウザから取得した緯度・経度は、星図や観測条件の計算に使用されます。天候、地点検索、標高、夜間光、彗星・流星群などオンライン機能を利用すると、観測地点や地図表示に伴う情報が、それぞれの外部サービスまたは Nicole の中継サーバーへ送信される場合があります。</p>
+      <p>お気に入り地点、表示設定、取得済みの一部データなどは、原則として利用中のブラウザの localStorage に保存されます。ブラウザのサイトデータを削除すると消去されます。</p>
+      <div class="public-info-note">位置情報を外部へ送信したくない場合は「現在地を取得」を使わず、必要なオンライン機能を利用しないでください。ブラウザや各外部サービス側でアクセス記録等が保存される場合があります。</div>
+
+      <h3>データ出典・外部サービス</h3>
+      <ul>
+        <li><strong>天候：</strong><a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>。Free API を利用する場合は同サービスの利用条件および CC BY 4.0 に従います。</li>
+        <li><strong>背景地図・標高：</strong><a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener noreferrer">国土地理院・地理院タイル</a>。地理院タイルおよび標高タイルを利用しています。</li>
+        <li><strong>地点検索：</strong><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>／<a href="https://nominatim.org/" target="_blank" rel="noopener noreferrer">Nominatim</a>。</li>
+        <li><strong>夜間光：</strong><a href="https://earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA Earthdata / GIBS</a>、Suomi NPP/VIIRS Night Lights を参考表示します。</li>
+        <li><strong>彗星・軌道：</strong>独自データベース「星の鳥」と、必要に応じて <a href="https://ssd.jpl.nasa.gov/horizons/" target="_blank" rel="noopener noreferrer">NASA/JPL Horizons</a> 由来の位置情報を利用します。</li>
+        <li><strong>星座線データ：</strong><a href="https://github.com/creativival/hipparcos_planetarium_data_creator" target="_blank" rel="noopener noreferrer">hipparcos_planetarium_data_creator</a>（GPLv2。Stellarium 由来データを含む）。</li>
+        <li><strong>天の川輪郭：</strong><a href="https://github.com/ofrohn/d3-celestial" target="_blank" rel="noopener noreferrer">d3-celestial</a> およびその派生データ（d3-celestial は BSD-3-Clause）。</li>
+        <li><strong>地図表示ライブラリ：</strong><a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4。</li>
+      </ul>
+      <p>各データ・サービスの著作権、ライセンス、利用条件はそれぞれの提供元に帰属します。提供元の変更・停止等により、一部機能が利用できなくなる場合があります。</p>
+
+      <h3>免責事項</h3>
+      <p>Nicole が表示する天体位置、月齢、薄明、天候、夜間光、撮影設定、観測候補地、彗星・流星群情報などは、天体観測を楽しむための参考情報です。計算値、予報、外部データの正確性・完全性・継続提供を保証するものではありません。</p>
+      <p>道路状況、私有地、立入禁止区域、野生動物、気象災害その他の安全性は判定しません。実際の移動・観測では、現地の法令、施設管理者の指示、立入可否、気象情報、安全状況を利用者自身で確認してください。</p>
+      <p>本アプリは航法、救難、防災、医療その他の生命・身体・財産に重大な影響を与える用途を目的としていません。本アプリの情報を利用したこと、または利用できなかったことにより生じた損害について、制作者は法令上認められる範囲で責任を負いません。</p>
+
+      <div class="public-info-date">公開情報 最終更新：2026年9月23日</div>
+    </div>
+  </div>
+</div>
+
 <footer>
 <div>🔭 Nicole the Astronavigator ／ 制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
-<button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
+<div class="footer-info-actions">
+  <button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
+  <button type="button" class="public-info-btn" id="openPublicInfo">ⓘ データ出典・プライバシー・免責事項</button>
+</div>
 </footer>
 
 <script>
@@ -9822,6 +9957,38 @@ if(manualCloseBtn)manualCloseBtn.addEventListener("click",closeManual);
 document.addEventListener("keydown",event=>{
   if(event.key==="Escape" && document.getElementById("manualModal")?.classList.contains("open")){
     closeManual();
+  }
+});
+
+
+
+/* ===== 一般公開情報モーダル ===== */
+function openPublicInfo(){
+  const modal=document.getElementById("publicInfoModal");
+  if(!modal||modal.classList.contains("open"))return;
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden","false");
+  document.body.classList.add("public-info-open");
+  document.getElementById("closePublicInfo")?.focus();
+}
+function closePublicInfo(){
+  const modal=document.getElementById("publicInfoModal");
+  if(!modal||!modal.classList.contains("open"))return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden","true");
+  document.body.classList.remove("public-info-open");
+  document.getElementById("openPublicInfo")?.focus();
+}
+const publicInfoOpenBtn=document.getElementById("openPublicInfo");
+const publicInfoCloseBtn=document.getElementById("closePublicInfo");
+if(publicInfoOpenBtn)publicInfoOpenBtn.addEventListener("click",openPublicInfo);
+if(publicInfoCloseBtn)publicInfoCloseBtn.addEventListener("click",closePublicInfo);
+document.getElementById("publicInfoModal")?.addEventListener("click",event=>{
+  if(event.target===document.getElementById("publicInfoModal"))closePublicInfo();
+});
+document.addEventListener("keydown",event=>{
+  if(event.key==="Escape"&&document.getElementById("publicInfoModal")?.classList.contains("open")){
+    closePublicInfo();
   }
 });
 
