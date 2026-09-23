@@ -1,8 +1,7 @@
-# Nicole the Astronavigator — PWA + 端末連動版
+# Nicole the Astronavigator v1.2 deploy
 
-GitHub Pages の Nicole リポジトリ直下へ、このフォルダ内のファイルを配置してください。
+GitHub Pages の Nicole リポジトリ直下へ、以下を配置してください。
 
-必須:
 - index.html
 - manifest.webmanifest
 - sw.js
@@ -12,8 +11,12 @@ GitHub Pages の Nicole リポジトリ直下へ、このフォルダ内のフ�
 - icon-512.png
 - apple-touch-icon.png
 
-PWA の Service Worker は HTTPS（GitHub Pages は対応）で動作します。
-初回はオンラインで Nicole を1回開いてください。その後、アプリ本体はオフライン起動できます。
-天候・彗星などのAPIデータは、同じリクエストの直近応答がService Workerに保存されていればオフラインで参照できます。最新性は保証されません。
+Service Worker のキャッシュ世代は `nicole-pwa-v1.2.0` に更新済みです。
 
-端末連動は「星図 → 地平 → 📱 端末連動」から開始します。iPhone / iPad ではボタン操作をきっかけにセンサー利用許可が表示されます。
+今回の主な追加:
+- 現在時刻追従
+- 星図全画面モード
+- 月明かりを考慮した「今夜のおすすめ」
+- 月相カレンダーから観測日時へ反映
+- 星図の選択天体から天体カード / 星座カードへ移動
+- 有名なアステリズム表示

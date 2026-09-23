@@ -533,6 +533,47 @@ text-align:right;
 
 .skymap-canvas-wrap{display:flex;justify-content:center;overflow:hidden;background:#030711;border:1px solid #1e3a5f;border-radius:10px;padding:8px;}
 #skyMapCanvas{display:block;width:min(100%,760px);height:auto;aspect-ratio:1/1;touch-action:none;cursor:grab;}#skyMapCanvas.dragging{cursor:grabbing;}
+.skymap-head-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.sky-fullscreen-btn{white-space:nowrap;}
+.skymap-panel:fullscreen,
+.skymap-panel.sky-fullscreen-fallback{
+  background:#050914;
+  padding:12px;
+  overflow:auto;
+}
+.skymap-panel.sky-fullscreen-fallback{
+  position:fixed;
+  inset:0;
+  z-index:10000;
+  width:100vw;
+  height:100dvh;
+  max-width:none;
+  border-radius:0;
+}
+body.sky-fullscreen-open{overflow:hidden;}
+.skymap-panel:fullscreen .weather-panel,
+.skymap-panel:fullscreen .shooting-master,
+.skymap-panel.sky-fullscreen-fallback .weather-panel,
+.skymap-panel.sky-fullscreen-fallback .shooting-master{display:none!important;}
+.skymap-panel:fullscreen .skymap-canvas-wrap,
+.skymap-panel.sky-fullscreen-fallback .skymap-canvas-wrap{
+  min-height:min(72vh,900px);
+  align-items:center;
+}
+.skymap-object-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+.skymap-object-actions button{
+  appearance:none;border:1px solid #2e5c85;background:#10243a;color:#cfe8ff;
+  border-radius:7px;padding:6px 9px;font-size:11px;cursor:pointer;
+}
+.skymap-object-actions button:hover{background:#173554;}
+#btnNow.live-now{border-color:#34d399;color:#9ff7cf;box-shadow:0 0 0 1px rgba(52,211,153,.15) inset;}
+.mooncal-detail-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+.mooncal-detail-actions button{
+  appearance:none;border:1px solid #2d5d88;background:#10243a;color:#d7ebff;border-radius:8px;
+  padding:7px 10px;font-size:11px;cursor:pointer;
+}
+.asterism-note{font-size:10px;color:#7fa6c6;}
+
 .skymap-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;font-size:10px;color:#6a8aaa;}
 .skymap-object-info{margin-top:10px;background:#080c18;border:1px solid #1e3a5f;border-left:4px solid #4a9fd4;border-radius:0 8px 8px 0;padding:9px 12px;font-size:12px;color:#b8d0e8;line-height:1.7;min-height:40px;}
 .skymap-object-info b{color:#ffd54f;}
@@ -2227,7 +2268,10 @@ body.public-info-open{overflow:hidden;}
 <div class="skymap-title">🗺 全天星図</div>
 <div class="skymap-sub" id="skyMapInfo">観測日時と場所に合わせて星空を表示します（北が上・東が左）</div>
 </div>
+<div class="skymap-head-actions">
 <button class="action gray sm" id="skyRedraw">↻ 再描画</button>
+<button class="action gray sm sky-fullscreen-btn" id="skyFullscreen" type="button">⛶ 全画面</button>
+</div>
 </div>
 <div class="skymap-viewbar">
 <span class="label">🌌 星図表示</span>
@@ -2264,6 +2308,7 @@ body.public-info-open{overflow:hidden;}
 <div class="skymap-controls">
 <label><input type="checkbox" id="skyShowLines" checked> 星座線</label>
 <label><input type="checkbox" id="skyShowNames"> 星座名</label>
+<label><input type="checkbox" id="skyShowAsterisms"> アステリズム</label>
 <label><input type="checkbox" id="skyShowSun" checked> 太陽</label>
 <label class="sky-dependent"><input type="checkbox" id="skyShowEcliptic"> 黄道</label>
 <label title="太陽高度に応じて空の明るさ・見える恒星数・太陽方向の薄明を再現"><input type="checkbox" id="skyShowDaylight" checked> 昼光</label>
@@ -2287,7 +2332,7 @@ body.public-info-open{overflow:hidden;}
 <div class="skymap-section-label">星図本体</div>
 <div id="skyLineStatus" style="font-size:10px;color:#6f94b3;margin:2px 0 7px">星座線：内蔵簡易データ</div>
 <div class="skymap-canvas-wrap"><canvas id="skyMapCanvas" width="760" height="760"></canvas></div>
-<div class="skymap-legend"><span>★ 恒星</span><span style="color:#ffd54f">● 太陽</span><span style="color:#e8e8f0">● 月</span><span style="color:#c084fc">◇ 惑星</span><span style="color:#4ade80">□ 星雲・星団・銀河</span><span style="color:#67e8f9">○ 彗星</span><span style="color:#a78bfa">✦ 流星群放射点</span></div>
+<div class="skymap-legend"><span>★ 恒星</span><span>✧ アステリズム</span><span style="color:#ffd54f">● 太陽</span><span style="color:#e8e8f0">● 月</span><span style="color:#c084fc">◇ 惑星</span><span style="color:#4ade80">□ 星雲・星団・銀河</span><span style="color:#67e8f9">○ 彗星</span><span style="color:#a78bfa">✦ 流星群放射点</span></div>
 <div class="skymap-object-info" id="skyMapObjectInfo">星・惑星・月・主要天体をクリックすると、ここに情報を表示します。</div><div class="skymap-timebar">
 <span class="label">⏱ 星図の時刻</span>
 <button type="button" data-sky-shift="-1">−1h</button>
@@ -3144,7 +3189,7 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;ニコルは、基本的に「観測日時」と「観測場所」を基準にしています。&lt;/p&gt;
 
           &lt;h4&gt;観測日時&lt;/h4&gt;
-          &lt;p&gt;日時欄へ直接入力するほか、「&lt;span class=&quot;manual-emoji&quot;&gt;🌙&lt;/span&gt; 月の満ち欠けから選ぶ」で月相カレンダーから日を選んだり、「現在時刻をセット」で端末の現在時刻を反映したりできます。&lt;/p&gt;
+          &lt;p&gt;日時欄へ直接入力するほか、「&lt;span class=&quot;manual-emoji&quot;&gt;🌙&lt;/span&gt; 月の満ち欠けから選ぶ」で月相カレンダーから日を選べます。「現在時刻をセット」を押すと現在時刻への追従が始まり、星図も時間の進行に合わせて更新されます。もう一度押すか日時を手入力すると追従を終了します。&lt;/p&gt;
 
           &lt;h4&gt;観測場所&lt;/h4&gt;
           &lt;p&gt;「現在地を取得」「地図から選択」が使えます。場所名・緯度・経度・標高を直接入力する場合は「場所の詳細（手入力）」を開きます。天体の高度・方位計算では緯度・経度が使われます。&lt;/p&gt;
@@ -3227,7 +3272,7 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;実際に空を見上げる感覚に近い表示です。方角と見上げ角を選べるほか、ドラッグ／スワイプで向きを変更できます。「📱 端末連動」をONにすると、対応するスマートフォンやタブレットでは端末の方位・傾きを星図へ反映できます。iPhone / iPadでは初回にセンサー利用の許可が表示されます。磁気センサーの特性上、周囲の金属や磁石の影響で方位がずれる場合があります。&lt;/p&gt;
 
           &lt;h4&gt;表示設定&lt;/h4&gt;
-          &lt;p&gt;星座線、星座名、太陽、黄道、昼光、月、月光、白道、惑星、主要天体、彗星、流星群放射点、天の川、恒星の等級上限を個別に切り替えられます。&lt;/p&gt;
+          &lt;p&gt;星座線、星座名、アステリズム、太陽、黄道、昼光、月、月光、白道、惑星、主要天体、彗星、流星群放射点、天の川、恒星の等級上限を個別に切り替えられます。アステリズムでは北斗七星、季節の大三角、冬のダイヤモンド、ペガススの四辺形など代表的な星空の目印を表示します。&lt;/p&gt;
 
           &lt;h4&gt;太陽・黄道&lt;/h4&gt;
           &lt;p&gt;太陽と黄道は独立して表示できます。黄道は太陽が一年を通して移動して見える基準となる道筋です。&lt;/p&gt;
@@ -4413,6 +4458,7 @@ const SKY_EXTRA_STARS=[
 {id:"Shaula",name:"シャウラ",ra:263.402,dec:-37.104,mag:1.62},{id:"Sargas",name:"サルガス",ra:264.330,dec:-42.998,mag:1.86},{id:"Dschubba",name:"ジュバ",ra:240.083,dec:-22.622,mag:2.32},{id:"Acrab",name:"アクラブ",ra:241.359,dec:-19.805,mag:2.56},
 {id:"KausAust",name:"カウス・アウストラリス",ra:276.043,dec:-34.385,mag:1.79},{id:"Nunki",name:"ヌンキ",ra:283.816,dec:-26.297,mag:2.05},{id:"Ascella",name:"アスケラ",ra:285.653,dec:-29.880,mag:2.60},
 {id:"Alpheratz",name:"アルフェラッツ",ra:2.097,dec:29.090,mag:2.06},{id:"Mirach",name:"ミラク",ra:17.433,dec:35.621,mag:2.05},{id:"Markab",name:"マルカブ",ra:346.190,dec:15.205,mag:2.49},{id:"Scheat",name:"シェアト",ra:345.944,dec:28.083,mag:2.42},{id:"Algenib",name:"アルゲニブ",ra:3.309,dec:15.184,mag:2.84},
+{id:"Sadr",name:"サドル",ra:305.557,dec:40.257,mag:2.23},{id:"GienahCyg",name:"ギェナー",ra:311.553,dec:33.970,mag:2.48},
 {id:"Eltanin",name:"エルタニン",ra:269.152,dec:51.489,mag:2.24},{id:"Rastaban",name:"ラスタバン",ra:262.608,dec:52.301,mag:2.79},{id:"Kochab",name:"コカブ",ra:222.676,dec:74.156,mag:2.08},{id:"Pherkad",name:"フェルカド",ra:230.182,dec:71.834,mag:3.05},
 {id:"Hamal",name:"ハマル",ra:31.793,dec:23.462,mag:2.00},{id:"Sheratan",name:"シェラタン",ra:28.660,dec:20.809,mag:2.64},{id:"Mirfak",name:"ミルファク",ra:51.081,dec:49.861,mag:1.79},{id:"Algol",name:"アルゴル",ra:47.042,dec:40.956,mag:2.12}
 ];
@@ -4423,6 +4469,38 @@ let SKY_MAP_HITS=[];
 let SKY_FOCUS_CONSTELLATION_ID=null;
 let SKY_FOCUS_OBJECT_ID=null;
 let SKY_VIEW_DATE=null;
+
+/* 現在時刻追従 */
+let LIVE_NOW_MODE=false;
+let LIVE_NOW_TIMER=null;
+let LIVE_NOW_LAST_MINUTE_KEY=null;
+
+/* 星図上の有名なアステリズム */
+const SKY_ASTERISMS=[
+{name:"北斗七星",lines:[["Dubhe","Merak"],["Merak","Phecda"],["Phecda","Megrez"],["Megrez","Alioth"],["Alioth","Mizar"],["Mizar","Alkaid"]]},
+{name:"夏の大三角",lines:[["Vega","Deneb"],["Deneb","Altair"],["Altair","Vega"]]},
+{name:"冬の大三角",lines:[["Sirius","Procyon"],["Procyon","Betelgeuse"],["Betelgeuse","Sirius"]]},
+{name:"冬のダイヤモンド",lines:[["Sirius","Procyon"],["Procyon","Pollux"],["Pollux","Capella"],["Capella","Aldebaran"],["Aldebaran","Rigel"],["Rigel","Sirius"]]},
+{name:"春の大三角",lines:[["Arcturus","Spica"],["Spica","Denebola"],["Denebola","Arcturus"]]},
+{name:"ペガススの四辺形",lines:[["Alpheratz","Scheat"],["Scheat","Markab"],["Markab","Algenib"],["Algenib","Alpheratz"]]},
+{name:"オリオンの三つ星",lines:[["Alnitak","Alnilam"],["Alnilam","Mintaka"]]},
+{name:"北十字",lines:[["Deneb","Sadr"],["Sadr","Albireo"],["GienahCyg","Sadr"]]}
+];
+
+const SKY_STAR_CONSTELLATION_MAP={
+Sirius:"CMa",Canopus:"Car",Arcturus:"Boo",Vega:"Lyr",Capella:"Aur",Rigel:"Ori",Procyon:"CMi",
+Betelgeuse:"Ori",Altair:"Aql",Aldebaran:"Tau",Spica:"Vir",Antares:"Sco",Pollux:"Gem",Fomalhaut:"PsA",
+Deneb:"Cyg",Regulus:"Leo",Castor:"Gem",Polaris:"UMi",Albireo:"Cyg",EpsLyr:"Lyr",Mizar:"UMa",Almach:"And",
+Dubhe:"UMa",Merak:"UMa",Phecda:"UMa",Megrez:"UMa",Alioth:"UMa",Alkaid:"UMa",
+Schedar:"Cas",Caph:"Cas",GammaCas:"Cas",Ruchbah:"Cas",Segin:"Cas",
+Bellatrix:"Ori",Alnilam:"Ori",Alnitak:"Ori",Mintaka:"Ori",Saiph:"Ori",
+Denebola:"Leo",Algieba:"Leo",Zosma:"Leo",
+Shaula:"Sco",Sargas:"Sco",Dschubba:"Sco",Acrab:"Sco",
+KausAust:"Sgr",Nunki:"Sgr",Ascella:"Sgr",
+Alpheratz:"And",Mirach:"And",Markab:"Peg",Scheat:"Peg",Algenib:"Peg",
+Eltanin:"Dra",Rastaban:"Dra",Kochab:"UMi",Pherkad:"UMi",
+Hamal:"Ari",Sheratan:"Ari",Mirfak:"Per",Algol:"Per",Sadr:"Cyg",GienahCyg:"Cyg"
+};
 
 let SKY_PROJECTION="allsky";
 let SKY_PERSPECTIVE_AZ=180;
@@ -4546,6 +4624,100 @@ if(HOSHINOTORI_SELECTED)renderHoshinotoriSelected();
 renderSkyChart();
 }
 
+function setLiveNowButtonState(){
+const btn=$("#btnNow");
+if(!btn)return;
+btn.classList.toggle("live-now",LIVE_NOW_MODE);
+btn.textContent=LIVE_NOW_MODE?"🟢 現在時刻に追従中":"🕐 現在時刻をセット";
+}
+
+function stopLiveNowMode(){
+LIVE_NOW_MODE=false;
+if(LIVE_NOW_TIMER){clearInterval(LIVE_NOW_TIMER);LIVE_NOW_TIMER=null;}
+LIVE_NOW_LAST_MINUTE_KEY=null;
+setLiveNowButtonState();
+}
+
+function refreshLiveNow(force=false){
+if(!LIVE_NOW_MODE)return;
+const now=new Date();
+const resultVisible=$("#resultArea")&&$("#resultArea").style.display!=="none";
+let offset=0;
+if(currentDate instanceof Date&&!isNaN(currentDate) && SKY_VIEW_DATE instanceof Date&&!isNaN(SKY_VIEW_DATE)){
+offset=(SKY_VIEW_DATE-currentDate)/3600000;
+}
+$("#inDatetime").value=toDatetimeLocalValue(now);
+
+if(resultVisible && Number.isFinite(currentLat) && Number.isFinite(currentLon)){
+currentDate=new Date(now);
+SKY_VIEW_DATE=new Date(now.getTime()+offset*3600000);
+
+const minuteKey=`${now.getFullYear()}-${now.getMonth()}-${now.getDate()}-${now.getHours()}-${now.getMinutes()}`;
+if(force||minuteKey!==LIVE_NOW_LAST_MINUTE_KEY){
+LIVE_NOW_LAST_MINUTE_KEY=minuteKey;
+const minAlt=parseInt($("#inMinAlt").value)||20;
+const maxMag=parseFloat($("#inMaxMag").value)||11;
+currentResults=calcObjects(currentLat,currentLon,currentDate,minAlt,maxMag);
+renderRecommendations(currentResults);
+renderSkyInfo(currentLat,currentLon,currentDate);
+renderCards(currentResults);
+renderConstellations(currentDate.getMonth()+1,$("#constSearch")?.value||"");
+const p=n=>String(n).padStart(2,"0");
+$("#resDate").textContent=`${now.getFullYear()}年${p(now.getMonth()+1)}月${p(now.getDate())}日 ${p(now.getHours())}:${p(now.getMinutes())}（現在時刻に追従）`;
+}
+if(!document.hidden)renderSkyChart();
+}else{
+SKY_VIEW_DATE=new Date(now);
+}
+}
+
+function startLiveNowMode(){
+stopLiveNowMode();
+LIVE_NOW_MODE=true;
+SKY_VIEW_DATE=new Date();
+setLiveNowButtonState();
+refreshLiveNow(true);
+LIVE_NOW_TIMER=setInterval(()=>refreshLiveNow(false),5000);
+}
+
+function skyPanelIsFullscreen(){
+const panel=document.querySelector(".skymap-panel");
+return !!panel && (document.fullscreenElement===panel || panel.classList.contains("sky-fullscreen-fallback"));
+}
+
+function updateSkyFullscreenButton(){
+const btn=$("#skyFullscreen");
+if(!btn)return;
+btn.textContent=skyPanelIsFullscreen()?"⤢ 全画面終了":"⛶ 全画面";
+}
+
+async function toggleSkyFullscreen(){
+const panel=document.querySelector(".skymap-panel");
+if(!panel)return;
+
+if(document.fullscreenElement===panel){
+await document.exitFullscreen?.();
+return;
+}
+if(panel.classList.contains("sky-fullscreen-fallback")){
+panel.classList.remove("sky-fullscreen-fallback");
+document.body.classList.remove("sky-fullscreen-open");
+updateSkyFullscreenButton();
+setTimeout(()=>renderSkyChart(),60);
+return;
+}
+
+if(panel.requestFullscreen){
+try{
+await panel.requestFullscreen();
+return;
+}catch(e){}
+}
+panel.classList.add("sky-fullscreen-fallback");
+document.body.classList.add("sky-fullscreen-open");
+updateSkyFullscreenButton();
+setTimeout(()=>renderSkyChart(),60);
+}
 
 function updateSkyProjectionUI(){
 const allBtn=$("#skyViewAllSky");
@@ -7672,6 +7844,45 @@ const penalty=moonState.intensity*local;
 return Math.max(1.0,baseLimit-penalty);
 }
 
+function drawSkyAsterisms(ctx,pointMap){
+if(!$("#skyShowAsterisms")?.checked)return;
+ctx.save();
+ctx.strokeStyle="rgba(250,204,21,.82)";
+ctx.fillStyle="rgba(253,230,138,.92)";
+ctx.lineWidth=1.35;
+ctx.setLineDash([5,4]);
+ctx.font="10px sans-serif";
+ctx.textAlign="center";
+ctx.textBaseline="bottom";
+
+SKY_ASTERISMS.forEach(ast=>{
+const visible=[];
+ast.lines.forEach(([a,b])=>{
+const p1=pointMap[a],p2=pointMap[b];
+if(!p1||!p2)return;
+visible.push(p1,p2);
+ctx.beginPath();
+ctx.moveTo(p1.x,p1.y);
+ctx.lineTo(p2.x,p2.y);
+ctx.stroke();
+});
+if(visible.length>=2){
+const uniq=[];
+const seen=new Set();
+visible.forEach(p=>{
+const key=`${Math.round(p.x*10)}:${Math.round(p.y*10)}`;
+if(!seen.has(key)){seen.add(key);uniq.push(p);}
+});
+const x=uniq.reduce((s,p)=>s+p.x,0)/uniq.length;
+const y=uniq.reduce((s,p)=>s+p.y,0)/uniq.length;
+ctx.setLineDash([]);
+ctx.fillText(ast.name,x,y-5);
+ctx.setLineDash([5,4]);
+}
+});
+ctx.restore();
+}
+
 function renderSkyChart(interactive=false){
 const canvas=$("#skyMapCanvas");
 if(!canvas)return;
@@ -7681,7 +7892,10 @@ const dtVal=$("#inDatetime").value;
 const date=getSkyViewDate();
 if(!Number.isFinite(lat)||!Number.isFinite(lon)||!date||isNaN(date))return;
 
-const cssSize=Math.max(320,Math.min(760,canvas.parentElement.clientWidth-16||760));
+const fullscreen=skyPanelIsFullscreen();
+const fsMax=Math.max(320,Math.min(window.innerWidth-28,window.innerHeight-230));
+const maxCanvas=fullscreen?Math.max(320,fsMax):760;
+const cssSize=Math.max(320,Math.min(maxCanvas,canvas.parentElement.clientWidth-16||maxCanvas));
 const dpr=Math.min(window.devicePixelRatio||1,2);
 canvas.style.width=cssSize+"px";canvas.style.height=cssSize+"px";
 canvas.width=Math.round(cssSize*dpr);canvas.height=Math.round(cssSize*dpr);
@@ -7772,7 +7986,9 @@ ctx.stroke();
 });
 }
 
-SKY_STARS.forEach(star=>{const localMaxMag=moonlightMagnitudeLimit(maxMag,star.ra,star.dec,moonlightState);if(star.mag>localMaxMag)return;const p=pointMap[star.id];if(!p)return;const rad=Math.max(.7,3.4-(star.mag+1.5)*.45);ctx.fillStyle=star.id==="Betelgeuse"||star.id==="Antares"||star.id==="Aldebaran"?"#ffc0a0":"#f4f7ff";ctx.beginPath();ctx.arc(p.x,p.y,rad,0,Math.PI*2);ctx.fill();SKY_MAP_HITS.push({x:p.x,y:p.y,r:Math.max(7,rad+4),kind:"star",name:star.name,mag:star.mag,alt:p.alt,az:p.az});if(star.mag<=1.3){ctx.fillStyle="#a9bfd3";ctx.font="9px sans-serif";ctx.textAlign="left";ctx.fillText(star.name,p.x+5,p.y-4);}});
+drawSkyAsterisms(ctx,pointMap);
+
+SKY_STARS.forEach(star=>{const localMaxMag=moonlightMagnitudeLimit(maxMag,star.ra,star.dec,moonlightState);if(star.mag>localMaxMag)return;const p=pointMap[star.id];if(!p)return;const rad=Math.max(.7,3.4-(star.mag+1.5)*.45);ctx.fillStyle=star.id==="Betelgeuse"||star.id==="Antares"||star.id==="Aldebaran"?"#ffc0a0":"#f4f7ff";ctx.beginPath();ctx.arc(p.x,p.y,rad,0,Math.PI*2);ctx.fill();SKY_MAP_HITS.push({x:p.x,y:p.y,r:Math.max(7,rad+4),kind:"star",starId:star.id,objectId:ALL_OBJECTS.some(o=>o.id===star.id)?star.id:null,name:star.name,mag:star.mag,alt:p.alt,az:p.az});if(star.mag<=1.3){ctx.fillStyle="#a9bfd3";ctx.font="9px sans-serif";ctx.textAlign="left";ctx.fillText(star.name,p.x+5,p.y-4);}});
 
 /* Western星座線を構成するHIP恒星も表示 */
 Object.values(WESTERN_LINE_STARS).forEach(star=>{
@@ -7785,12 +8001,12 @@ ctx.fillStyle="rgba(225,235,255,.86)";
 ctx.beginPath();
 ctx.arc(p.x,p.y,rad,0,Math.PI*2);
 ctx.fill();
-SKY_MAP_HITS.push({x:p.x,y:p.y,r:Math.max(5,rad+3),kind:"star",name:`HIP ${star.hip}`,mag:star.mag,alt:p.alt,az:p.az});
+SKY_MAP_HITS.push({x:p.x,y:p.y,r:Math.max(5,rad+3),kind:"star",starId:star.id,name:`HIP ${star.hip}`,mag:star.mag,alt:p.alt,az:p.az});
 });
 
 if($("#skyShowNames").checked){
 ctx.fillStyle="rgba(126,184,232,.78)";ctx.font="10px sans-serif";ctx.textAlign="center";
-getSkyConstellationLabels().forEach(c=>{const p=skyProject(c.ra,c.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.fillText(c.name,p.x,p.y);SKY_MAP_HITS.push({x:p.x,y:p.y,r:12,kind:"constellation",name:c.name,alt:p.alt,az:p.az});});
+getSkyConstellationLabels().forEach(c=>{const p=skyProject(c.ra,c.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.fillText(c.name,p.x,p.y);SKY_MAP_HITS.push({x:p.x,y:p.y,r:12,kind:"constellation",constellationId:c.id,name:c.name,alt:p.alt,az:p.az});});
 }
 
 if($("#skyShowSun")?.checked&&$("#skyShowEcliptic")?.checked){
@@ -7801,7 +8017,7 @@ drawLunarPath(ctx,lat,lon,date,cx,cy,R);
 }
 
 if($("#skyShowDSO").checked){
-ALL_OBJECTS.filter(o=>o.type!=="planet"&&o.ra!==undefined&&o.dec!==undefined&&(o.mag||99)<=6.5&&!SKY_STAR_MAP[o.id]).forEach(o=>{const p=skyProject(o.ra,o.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.strokeStyle="#4ade80";ctx.lineWidth=1;ctx.strokeRect(p.x-2.5,p.y-2.5,5,5);ctx.fillStyle="#76d99a";ctx.font="9px sans-serif";ctx.textAlign="left";ctx.fillText(o.id,p.x+5,p.y+3);SKY_MAP_HITS.push({x:p.x,y:p.y,r:8,kind:"object",name:o.name||o.id,mag:o.mag,alt:p.alt,az:p.az,type:TYPE_LABEL[o.type]||o.type});});
+ALL_OBJECTS.filter(o=>o.type!=="planet"&&o.ra!==undefined&&o.dec!==undefined&&(o.mag||99)<=6.5&&!SKY_STAR_MAP[o.id]).forEach(o=>{const p=skyProject(o.ra,o.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.strokeStyle="#4ade80";ctx.lineWidth=1;ctx.strokeRect(p.x-2.5,p.y-2.5,5,5);ctx.fillStyle="#76d99a";ctx.font="9px sans-serif";ctx.textAlign="left";ctx.fillText(o.id,p.x+5,p.y+3);SKY_MAP_HITS.push({x:p.x,y:p.y,r:8,kind:"object",objectId:o.id,name:o.name||o.id,mag:o.mag,alt:p.alt,az:p.az,type:TYPE_LABEL[o.type]||o.type});});
 }
 
 if($("#skyShowCometTrack")?.checked&&COMET_TRACK_DATA){
@@ -7897,7 +8113,7 @@ if(!p)return;
 ctx.strokeStyle="#c084fc";ctx.lineWidth=1.4;
 ctx.beginPath();ctx.moveTo(p.x,p.y-4);ctx.lineTo(p.x+4,p.y);ctx.lineTo(p.x,p.y+4);ctx.lineTo(p.x-4,p.y);ctx.closePath();ctx.stroke();
 ctx.fillStyle="#d8b4fe";ctx.font="10px sans-serif";ctx.textAlign="left";ctx.fillText(o.name,p.x+7,p.y);
-SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"planet",name:o.name,mag:q.mag,alt:p.alt,az:p.az});
+SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"planet",objectId:o.id,name:o.name,mag:q.mag,alt:p.alt,az:p.az});
 });
 }
 
@@ -7934,6 +8150,103 @@ updateAstroPhotoTools();
 }
 }
 
+function constellationsForSkyHit(hit){
+const ids=new Set();
+if(hit?.constellationId)ids.add(hit.constellationId);
+
+if(hit?.starId){
+const mapped=SKY_STAR_CONSTELLATION_MAP[hit.starId];
+if(mapped){
+const c=constellationByAbbr(mapped);
+if(c)ids.add(c.id);
+}
+SKY_CONSTELLATION_LINES.forEach(line=>{
+if(line.lines.some(pair=>pair[0]===hit.starId||pair[1]===hit.starId)){
+const c=constellationByAbbr(line.abbr);
+if(c)ids.add(c.id);
+}
+});
+}
+return [...ids].map(id=>getConstellationById(id)).filter(Boolean);
+}
+
+function objectForSkyHit(hit){
+if(hit?.objectId){
+return currentResults.find(o=>o.id===hit.objectId)||ALL_OBJECTS.find(o=>o.id===hit.objectId)||null;
+}
+if(hit?.starId){
+return currentResults.find(o=>o.id===hit.starId)||ALL_OBJECTS.find(o=>o.id===hit.starId)||null;
+}
+return null;
+}
+
+function activateResultTab(name){
+const tab=document.querySelector(`[data-rtab="${name}"]`);
+if(tab)tab.click();
+}
+
+function goToObjectCard(objectId){
+const obj=currentResults.find(o=>o.id===objectId)||ALL_OBJECTS.find(o=>o.id===objectId);
+if(!obj)return;
+activateResultTab("cards");
+activeFilter="all";
+const allBtn=$("#filterBar")?.querySelector('[data-f="all"]');
+if(allBtn){
+$("#filterBar").querySelectorAll(".filter-btn").forEach(x=>x.classList.remove("on"));
+allBtn.classList.add("on");
+}
+renderCards(currentResults);
+setTimeout(()=>{
+const card=document.querySelector(`.obj-card[data-object-id="${CSS.escape(objectId)}"]`);
+if(card){
+card.scrollIntoView({behavior:"smooth",block:"center"});
+card.classList.add("active");
+showDetail(currentResults.find(o=>o.id===objectId)||obj,card);
+}else{
+showDetail(obj,null);
+}
+},40);
+}
+
+function goToConstellationCard(constellationId){
+const c=getConstellationById(constellationId);
+if(!c)return;
+activateResultTab("constellations");
+$("#constSearch").value=c.name;
+renderConstellations(currentDate?currentDate.getMonth()+1:null,c.name);
+setTimeout(()=>{
+const card=document.querySelector(`.const-card[data-constellation-id="${CSS.escape(constellationId)}"]`);
+if(card)card.scrollIntoView({behavior:"smooth",block:"center"});
+else $("#rtab-constellations")?.scrollIntoView({behavior:"smooth",block:"start"});
+},40);
+}
+
+function appendSkyHitActions(info,hit){
+const obj=objectForSkyHit(hit);
+const consts=constellationsForSkyHit(hit);
+if(!obj&&!consts.length)return;
+
+const actions=document.createElement("div");
+actions.className="skymap-object-actions";
+
+if(obj){
+const btn=document.createElement("button");
+btn.type="button";
+btn.textContent="✦ 天体カードを見る";
+btn.addEventListener("click",()=>goToObjectCard(obj.id));
+actions.appendChild(btn);
+}
+
+consts.slice(0,2).forEach(c=>{
+const btn=document.createElement("button");
+btn.type="button";
+btn.textContent=`✨ ${c.name}の星座カードを見る`;
+btn.addEventListener("click",()=>goToConstellationCard(c.id));
+actions.appendChild(btn);
+});
+info.appendChild(actions);
+}
+
 function showSkyMapHit(hit){
 const info=$("#skyMapObjectInfo");
 if(!info)return;
@@ -7967,6 +8280,7 @@ let extra="";
 if(Number.isFinite(hit.mag))extra+=` / 等級 ${Math.round(hit.mag*10)/10}`;
 if(hit.type)extra+=` / ${hit.type}`;
 info.innerHTML=`<b>${hit.name}</b>${hit.code?`（${hit.code}）`:""}<br>高度 ${alt}° / 方位 ${azToDir(az)}（${az}°）${extra}`;
+appendSkyHitActions(info,hit);
 }
 
 /* =====================================================
@@ -8853,8 +9167,11 @@ maximumAge:60000
 });
 });
 $("#btnNow").addEventListener("click",()=>{
-const now=new Date();const p=n=>String(n).padStart(2,"0");
-$("#inDatetime").value=`${now.getFullYear()}-${p(now.getMonth()+1)}-${p(now.getDate())}T${p(now.getHours())}:${p(now.getMinutes())}`;
+if(LIVE_NOW_MODE)stopLiveNowMode();
+else startLiveNowMode();
+});
+$("#inDatetime").addEventListener("input",()=>{
+if(LIVE_NOW_MODE)stopLiveNowMode();
 });
 
 $("#saveFavoriteLocation").addEventListener("click",()=>{
@@ -9017,7 +9334,7 @@ else renderMeteorShowers();
 }
 });
 });
-["skyShowLines","skyShowNames","skyShowSun","skyShowDaylight","skyShowMoon","skyShowMoonlight","skyShowPlanets","skyShowEcliptic","skyShowLunarPath","skyShowDSO","skyShowMeteors"].forEach(id=>{
+["skyShowLines","skyShowNames","skyShowAsterisms","skyShowSun","skyShowDaylight","skyShowMoon","skyShowMoonlight","skyShowPlanets","skyShowEcliptic","skyShowLunarPath","skyShowDSO","skyShowMeteors"].forEach(id=>{
 $("#"+id).addEventListener("change",()=>{
 syncSolarPathControls();
 renderSkyChart();
@@ -9103,6 +9420,23 @@ shiftSkyViewTime(Number(btn.dataset.skyShift));
 });
 
 $("#skyTimeReset").addEventListener("click",resetSkyViewTime);
+$("#skyFullscreen").addEventListener("click",toggleSkyFullscreen);
+document.addEventListener("fullscreenchange",()=>{
+document.body.classList.toggle("sky-fullscreen-open",!!document.fullscreenElement);
+updateSkyFullscreenButton();
+setTimeout(()=>renderSkyChart(),60);
+});
+document.addEventListener("keydown",event=>{
+if(event.key==="Escape"){
+const panel=document.querySelector(".skymap-panel");
+if(panel?.classList.contains("sky-fullscreen-fallback")){
+panel.classList.remove("sky-fullscreen-fallback");
+document.body.classList.remove("sky-fullscreen-open");
+updateSkyFullscreenButton();
+setTimeout(()=>renderSkyChart(),60);
+}
+}
+});
 
 $("#skyTimeSlider").addEventListener("input",event=>{
 setSkyViewOffsetHours(Number(event.target.value));
@@ -9411,7 +9745,7 @@ const sorted=sortResults(filtered);
 $("#noResult").style.display=sorted.length===0?"block":"none";
 sorted.forEach(obj=>{
 const vis=Math.min(100,Math.max(0,(obj.alt/90)*100));const dl=diffLabel(obj.difficulty);
-const card=document.createElement("div");card.className="obj-card";
+const card=document.createElement("div");card.className="obj-card";card.dataset.objectId=obj.id;
 card.innerHTML=`<div class="card-header"><div class="card-icon">${obj.icon}</div><div class="card-title"><div class="name">${obj.name}</div><div class="type-row"><span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type}</span><span style="font-size:11px;color:#5a7a9a">${obj.cat||""}</span><span class="diff-badge diff-${obj.difficulty}">${dl.stars} ${dl.text}</span></div></div></div><div class="card-body"><div class="card-row"><span class="badge b-alt">高度 ${obj.alt}°</span><span class="badge b-az">方位 ${obj.azDir}</span><span class="badge b-mag">等級 ${obj.magVal}</span><span class="badge b-dist">${obj.distStr}</span></div><div style="font-size:12px;color:#7ab4d4;margin-top:8px">🔭 ${obj.highlight}</div><div class="visibility-bar"><div class="visibility-fill" style="width:${vis}%"></div></div></div><div class="card-plan-actions"><button type="button" class="reverse-plan-btn object-sky-btn">星図で見る</button><button type="button" class="reverse-plan-btn object-reverse-btn">いつ・どこで見る？</button></div>`;
 card.addEventListener("click",()=>showDetail(obj,card));
 const skyBtn=card.querySelector(".object-sky-btn");
@@ -9438,20 +9772,73 @@ if(obj.type==="galaxy")return"宇宙の広がり";
 if(obj.type==="nebula")return"見栄え良好";
 return"おすすめ";
 }
+function moonRecommendationAdjustment(obj,date,lat,lon){
+if(!(date instanceof Date)||isNaN(date)||!Number.isFinite(lat)||!Number.isFinite(lon)){
+return{blocked:false,penalty:0,label:"月条件未計算",impact:0};
+}
+const moon=moonPosition(toJD(date));
+const maa=altAz(moon.ra,moon.dec,lat,lon,date);
+const phase=moonPhaseInfo(date);
+const illum=Math.max(0,Math.min(100,Number(phase.moonIllum)||0))/100;
+if(maa.alt<=-2||illum<0.10){
+return{blocked:false,penalty:0,label:maa.alt<=-2?"月は地平線下":"月明かり 小",impact:0};
+}
+
+let rd=null;
+if(obj.type==="planet"){
+const p=planetRaDec(obj.planet,toJD(date));
+rd={ra:p.ra,dec:p.dec};
+}else if(Number.isFinite(Number(obj.ra))&&Number.isFinite(Number(obj.dec))){
+rd={ra:Number(obj.ra),dec:Number(obj.dec)};
+}
+const sep=rd?angularSeparationDeg(rd.ra,rd.dec,moon.ra,moon.dec):120;
+const altitudeFactor=Math.max(0,Math.sin(Math.max(0,Math.min(90,maa.alt))*D2R));
+const brightness=Math.pow(illum,0.65)*Math.pow(altitudeFactor,0.70);
+const separationFactor=0.55+1.25*Math.exp(-sep/42);
+const sensitivity={
+planet:0.03,star:0.06,double:0.10,cluster:0.42,nebula:0.86,galaxy:1.00,snr:0.95
+}[obj.type]??0.55;
+const mag=Number.isFinite(Number(obj.magVal))?Number(obj.magVal):Number(obj.mag)||6;
+const faint=Math.max(0,Math.min(1,(mag-2)/8));
+const impact=brightness*separationFactor;
+const penalty=18*impact*sensitivity*(0.55+0.65*faint);
+
+const blocked=
+penalty>=9.0 ||
+(brightness>=0.72 && sensitivity>=0.85 && mag>=6.0) ||
+(brightness>=0.82 && sensitivity>=0.90 && sep<70 && mag>=5.0);
+
+let label="月明かり 小";
+if(impact>=0.95)label="月明かり 大";
+else if(impact>=0.48)label="月明かり 中";
+return{blocked,penalty,label,impact,moonAlt:maa.alt,illum:Math.round(illum*100),sep};
+}
+
 function renderRecommendations(results){
 const grid=$("#recommendGrid");
 if(!grid)return;
 grid.innerHTML="";
-const picks=sortResults(results).slice(0,4);
+const lat=Number.isFinite(currentLat)?currentLat:parseFloat($("#inLat").value);
+const lon=Number.isFinite(currentLon)?currentLon:parseFloat($("#inLon").value);
+const date=currentDate instanceof Date&&!isNaN(currentDate)?currentDate:new Date($("#inDatetime").value||Date.now());
+const weighted=results.map(obj=>{
+const moon=moonRecommendationAdjustment(obj,date,lat,lon);
+return{obj,moon,moonScore:obj.score-moon.penalty};
+});
+let usable=weighted.filter(x=>!x.moon.blocked).sort((a,b)=>b.moonScore-a.moonScore);
+if(!usable.length)usable=weighted.sort((a,b)=>b.moonScore-a.moonScore);
+const picks=usable.slice(0,4);
 if(picks.length===0){
 grid.innerHTML=`<div class="recommend-card"><div class="r-text">条件に合うおすすめ候補がありません。最低高度や等級上限を見直してみてください。</div></div>`;
 return;
 }
-picks.forEach((obj,idx)=>{
+picks.forEach((item,idx)=>{
+const obj=item.obj;
+const moon=item.moon;
 const dl=diffLabel(obj.difficulty);
 const div=document.createElement("div");
 div.className="recommend-card";
-div.innerHTML=`<div class="rec-tag">${getRecommendTag(obj,idx)}</div><div class="r-head"><div class="r-icon">${obj.icon}</div><div><div class="r-title">${obj.name}</div><div class="r-sub">${TYPE_LABEL[obj.type]||obj.type} / 高度 ${obj.alt}° / ${dl.text}</div></div></div><div class="r-text">🔭 ${obj.highlight}<br>${getRecommendComment(obj)}</div><div class="recommend-actions"><button type="button" class="reverse-plan-btn recommend-sky-btn">星図で表示</button></div>`;
+div.innerHTML=`<div class="rec-tag">${getRecommendTag(obj,idx)}</div><div class="r-head"><div class="r-icon">${obj.icon}</div><div><div class="r-title">${obj.name}</div><div class="r-sub">${TYPE_LABEL[obj.type]||obj.type} / 高度 ${obj.alt}° / ${dl.text}</div></div></div><div class="r-text">🔭 ${obj.highlight}<br>${getRecommendComment(obj)}<br>🌙 ${moon.label}${moon.blocked?"（暗い天体には不利）":""}</div><div class="recommend-actions"><button type="button" class="reverse-plan-btn recommend-sky-btn">星図で表示</button></div>`;
 div.addEventListener("click",()=>{
 const found=currentResults.find(r=>r.id===obj.id) || obj;
 showDetail(found,null);
@@ -9478,6 +9865,7 @@ return m?{hour:Number(m[1]),minute:Number(m[2])}:{hour:21,minute:0};
 }
 
 function setObservationDateToAstronomicalTwilightStart(date){
+stopLiveNowMode();
 const lat=parseFloat($("#inLat").value);
 const lon=parseFloat($("#inLon").value);
 const p=n=>String(n).padStart(2,"0");
@@ -9582,6 +9970,15 @@ modal.setAttribute("aria-hidden","true");
 document.body.classList.remove("manual-open");
 }
 
+function setObservationDateFromCalendar(date){
+stopLiveNowMode();
+const parts=currentObservationTimeParts();
+const target=new Date(date.getFullYear(),date.getMonth(),date.getDate(),parts.hour,parts.minute,0,0);
+$("#inDatetime").value=toDatetimeLocalValue(target);
+$("#btnCalc").click();
+activateResultTab("mooncalendar");
+}
+
 function renderMoonCalendar(baseDate){
 const grid=$("#moonCalGrid"),title=$("#moonCalTitle"),detail=$("#moonCalDetail");
 if(!grid||!title||!detail)return;
@@ -9652,7 +10049,10 @@ ${info.moonPhase} ${getMoonPhaseName(info.moonAge)}<br>
 🌅 天文薄明 開始（朝） ${astroEnd}<br>
 🌙 月の出 ${moonRise}<br>
 🌙 月の入り ${moonSet}
+<div class="mooncal-detail-actions"><button type="button" class="mooncal-apply-date">この日を観測日時に設定</button></div>
 `;
+const applyBtn=detail.querySelector(".mooncal-apply-date");
+if(applyBtn)applyBtn.addEventListener("click",()=>setObservationDateFromCalendar(c.date));
 });
 
 grid.appendChild(div);
@@ -9767,7 +10167,7 @@ if(q)list=list.filter(c=>c.name.toLowerCase().includes(q)||c.en.toLowerCase().in
 $("#constCount").textContent=hasContext?`現在この空に見えている星座：${list.length}件（高度の高い順）`:`${list.length}件の星座を表示中`;
 if(list.length===0){grid.innerHTML=`<div style="color:#4a6a8a;padding:20px">この条件で見えている星座が見つかりませんでした。時間帯や場所を変えてみてください。</div>`;return;}
 list.forEach((c,idx)=>{
-const card=document.createElement("div");card.className="const-card";
+const card=document.createElement("div");card.className="const-card";card.dataset.constellationId=c.id;
 let altBadge="";
 if(c._alt!==null && c._alt!==undefined){
 const col=c._alt>50?"#4ade80":c._alt>25?"#fbbf24":"#fb923c";
@@ -9821,6 +10221,7 @@ return`${date.getFullYear()}-${p(date.getMonth()+1)}-${p(date.getDate())}T${p(da
 }
 
 $("#syncResultsToSkyTime").addEventListener("click",()=>{
+stopLiveNowMode();
 const skyDate=getSkyViewDate();
 if(!(skyDate instanceof Date)||isNaN(skyDate))return;
 $("#inDatetime").value=toDatetimeLocalValue(skyDate);
