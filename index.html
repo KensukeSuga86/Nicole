@@ -1062,6 +1062,885 @@ body.manual-open{overflow:hidden;}
 .obs-row-location-actions > button{
   margin:0;
 }
+
+/* =========================================================
+   Nicole UI Refinement v1
+   1. ボタンサイズ統一
+   2. 入力欄サイズ統一
+   3. パネル余白統一
+   4. カード角丸・枠線統一
+   5. スマホ時の余白圧縮
+========================================================= */
+:root{
+  --nicole-control-h:42px;
+  --nicole-control-h-sm:34px;
+  --nicole-radius-panel:12px;
+  --nicole-radius-card:10px;
+  --nicole-border:#1e3a5f;
+  --nicole-border-sub:#17314d;
+  --nicole-panel-pad:16px;
+  --nicole-card-pad-y:12px;
+  --nicole-card-pad-x:14px;
+  --nicole-gap:10px;
+}
+
+/* ---- 入力欄 / セレクト ---- */
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+select{
+  height:var(--nicole-control-h);
+  min-height:var(--nicole-control-h);
+  padding:0 11px;
+  border-radius:8px;
+  box-sizing:border-box;
+  line-height:normal;
+}
+input[type="datetime-local"]{
+  min-height:var(--nicole-control-h);
+}
+textarea{
+  border-radius:8px;
+  border-color:var(--nicole-border);
+}
+
+/* ---- 標準ボタン ---- */
+button.action,
+.loc-btn,
+.map-select-btn,
+.moon-date-btn,
+.favorite-location-btn,
+.reverse-plan-btn,
+.const-sky-btn,
+.comet-track-btn,
+.darker-candidate-btn,
+.darker-search-btn,
+.map-search-btn,
+.map-use-btn,
+.reverse-search-btn,
+.reverse-set-btn{
+  min-height:var(--nicole-control-h);
+  height:var(--nicole-control-h);
+  padding:0 14px;
+  border-radius:8px;
+  box-sizing:border-box;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1.2;
+}
+
+/* 小型操作ボタンは小型サイズで統一 */
+button.action.sm,
+.skymap-timebar button,
+.skymap-zoom-bar button,
+.skymap-viewbar button,
+.skymap-perspective-controls button,
+.skymap-fov-controls button,
+.comet-track-clear,
+.moon-picker-close,
+.moon-picker-nav button,
+.map-close-btn,
+.object-popup-close,
+.reverse-close,
+.footer-manual-btn{
+  min-height:var(--nicole-control-h-sm);
+  height:var(--nicole-control-h-sm);
+  padding:0 10px;
+  border-radius:8px;
+  box-sizing:border-box;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1.2;
+}
+
+/* 観測条件の同一行は高さを完全に揃える */
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"],
+.obs-row-datetime .moon-date-btn,
+.obs-row-datetime #btnNow,
+.obs-row-location-actions #btnGPS,
+.obs-row-location-actions #openMapSelect{
+  height:var(--nicole-control-h);
+  min-height:var(--nicole-control-h);
+}
+
+/* ---- メインパネル ---- */
+.panel,
+.recommend-panel,
+.smallbody-panel,
+.meteor-panel,
+.skymap-panel,
+.mooncal-panel{
+  border:1px solid var(--nicole-border);
+  border-radius:var(--nicole-radius-panel);
+  padding:var(--nicole-panel-pad);
+  box-sizing:border-box;
+}
+
+/* ネストされた情報パネル */
+.weather-panel,
+.smallbody-controls,
+.skymap-timebar,
+.skymap-viewbar,
+.skymap-zoom-bar,
+.skymap-fov-controls,
+.skymap-perspective-controls,
+.favorite-location-box,
+.reverse-latitude{
+  border:1px solid var(--nicole-border-sub);
+  border-radius:10px;
+}
+
+/* ---- カード ---- */
+.obj-card,
+.const-card,
+.recommend-card,
+.smallbody-card,
+.meteor-card,
+.nav-card,
+.mini-card,
+.purpose-card,
+.sky-card,
+.reverse-result-card,
+.weather-cell,
+.darker-search-result,
+.ht-result,
+.ht-selected{
+  border:1px solid var(--nicole-border);
+  border-radius:var(--nicole-radius-card);
+  box-sizing:border-box;
+}
+
+/* カード内の余白を揃える */
+.const-card,
+.recommend-card,
+.smallbody-card,
+.meteor-card,
+.nav-card,
+.mini-card,
+.purpose-card,
+.sky-card,
+.reverse-result-card,
+.darker-search-result,
+.ht-result,
+.ht-selected{
+  padding:var(--nicole-card-pad-y) var(--nicole-card-pad-x);
+}
+.obj-card .card-header{
+  padding:var(--nicole-card-pad-y) var(--nicole-card-pad-x) 10px;
+}
+.obj-card .card-body{
+  padding:10px var(--nicole-card-pad-x) var(--nicole-card-pad-y);
+}
+.obj-card .card-plan-actions{
+  padding:0 var(--nicole-card-pad-x) var(--nicole-card-pad-y);
+}
+
+/* モーダル本体も同じ角丸ルール */
+.moon-picker-dialog,
+.object-popup-card,
+.reverse-dialog{
+  border-radius:var(--nicole-radius-panel);
+}
+
+/* グリッド間隔 */
+.obj-grid,
+.const-grid,
+.recommend-grid,
+.smallbody-grid,
+.meteor-grid,
+.sky-grid,
+.weather-grid,
+.reverse-results{
+  gap:var(--nicole-gap);
+}
+
+/* ---- スマホ：余白だけ圧縮し、操作領域は42pxを維持 ---- */
+@media(max-width:720px){
+  :root{
+    --nicole-panel-pad:13px;
+    --nicole-card-pad-y:10px;
+    --nicole-card-pad-x:11px;
+    --nicole-gap:8px;
+  }
+
+  header{
+    padding:11px 12px;
+  }
+
+  .panel{
+    margin:10px 8px;
+  }
+
+  #resultArea{
+    margin-left:8px;
+    margin-right:8px;
+  }
+
+  .recommend-panel,
+  .smallbody-panel,
+  .meteor-panel,
+  .skymap-panel,
+  .mooncal-panel{
+    margin-bottom:10px;
+  }
+
+  .obs-row{
+    margin-top:8px;
+    gap:8px;
+  }
+
+  .favorite-location-box{
+    margin-top:7px;
+    padding:9px;
+  }
+
+  .tabs{
+    gap:5px;
+  }
+
+  .rtab{
+    padding:8px 10px;
+  }
+
+  .smallbody-head,
+  .meteor-head,
+  .weather-head{
+    margin-bottom:8px;
+  }
+
+  .smallbody-controls,
+  .skymap-timebar,
+  .skymap-viewbar,
+  .skymap-zoom-bar,
+  .skymap-fov-controls,
+  .skymap-perspective-controls,
+  .weather-panel{
+    padding:9px;
+  }
+
+  .reverse-modal,
+  .moon-picker-modal,
+  .object-popup-modal{
+    padding:8px;
+  }
+}
+
+@media(max-width:520px){
+  header h1{
+    font-size:19px;
+    letter-spacing:1.2px;
+  }
+
+  .panel{
+    margin:8px 6px;
+    padding:11px;
+    border-radius:10px;
+  }
+
+  #resultArea{
+    margin-left:6px;
+    margin-right:6px;
+  }
+
+  .obj-grid,
+  .const-grid,
+  .recommend-grid,
+  .smallbody-grid,
+  .meteor-grid{
+    gap:7px;
+  }
+
+  .obj-card .card-header,
+  .const-card,
+  .recommend-card,
+  .smallbody-card,
+  .meteor-card,
+  .reverse-result-card,
+  .ht-result,
+  .ht-selected{
+    padding:10px;
+  }
+
+  .obj-card .card-body{
+    padding:9px 10px 10px;
+  }
+
+  .obj-card .card-plan-actions{
+    padding:0 10px 10px;
+  }
+
+  .moon-picker-dialog,
+  .object-popup-card,
+  .reverse-dialog{
+    border-radius:10px;
+  }
+
+  footer{
+    margin-top:12px;
+    padding:11px 8px;
+  }
+}
+
+/* =========================================================
+   Nicole Heading Hierarchy / Compact Groups
+========================================================= */
+.obs-section-title{
+  margin:18px 0 2px;
+  padding-left:9px;
+  border-left:3px solid #4f8fbd;
+  color:#a9d2ef;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:.03em;
+}
+.panel > h2{
+  font-size:19px;
+  line-height:1.3;
+  margin:0 0 12px;
+  color:#e1f1fc;
+}
+.skymap-title,
+.smallbody-title,
+.meteor-title,
+.mooncal-title,
+.schedule-title{
+  font-size:14px;
+  line-height:1.35;
+  font-weight:700;
+  color:#a9d2ef;
+}
+.skymap-section-label{
+  font-size:13px;
+  font-weight:700;
+  color:#8fc2e4;
+  letter-spacing:.03em;
+  margin-top:15px;
+}
+.obs-field > label,
+.ht-search-row label,
+.favorite-location-main label{
+  font-size:10px;
+  font-weight:500;
+  color:#6f93ae;
+}
+
+.compact-settings{
+  margin-top:9px;
+  border:1px solid var(--nicole-border-sub);
+  border-radius:10px;
+  background:#07121e;
+  overflow:hidden;
+}
+.compact-settings > summary{
+  min-height:40px;
+  padding:0 12px;
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+  list-style:none;
+  color:#91b8d3;
+  font-size:12px;
+  font-weight:700;
+  user-select:none;
+}
+.compact-settings > summary::-webkit-details-marker{display:none}
+.compact-settings > summary::before{
+  content:"›";
+  margin-right:8px;
+  font-size:18px;
+  color:#5f8cac;
+  transform:rotate(0deg);
+  transition:transform .15s ease;
+}
+.compact-settings[open] > summary::before{transform:rotate(90deg)}
+.compact-settings[open] > summary{
+  border-bottom:1px solid #152d43;
+}
+.compact-settings-body{padding:10px 11px 11px}
+.compact-settings .favorite-location-box{
+  margin:0;
+  border:0;
+  padding:0;
+  background:transparent;
+}
+.compact-settings .obs-limit-grid{margin-top:0}
+
+.sky-dependent{
+  padding-left:14px;
+  opacity:.82;
+}
+.sky-dependent:has(input:disabled){
+  opacity:.35;
+}
+
+footer a{
+  color:inherit;
+  text-decoration:none;
+  border-bottom:1px solid rgba(154,196,225,.35);
+}
+footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
+
+@media(max-width:720px){
+  .obs-section-title{
+    margin-top:14px;
+    font-size:13px;
+  }
+  .compact-settings > summary{min-height:38px}
+}
+
+/* =========================================================
+   撮影支援ツール
+========================================================= */
+.shooting-tools{
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+}
+.shooting-group{
+  border:1px solid var(--nicole-border-sub);
+  border-radius:10px;
+  background:#07111d;
+  overflow:hidden;
+}
+.shooting-group>summary{
+  min-height:42px;
+  padding:0 12px;
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+  list-style:none;
+  color:#9bc6e3;
+  font-size:13px;
+  font-weight:700;
+  user-select:none;
+}
+.shooting-group>summary::-webkit-details-marker{display:none}
+.shooting-group>summary::after{
+  content:"＋";
+  margin-left:auto;
+  color:#5e86a4;
+  font-size:15px;
+}
+.shooting-group[open]>summary::after{content:"−"}
+.shooting-group[open]>summary{border-bottom:1px solid #152b40}
+.shooting-group-body{padding:12px}
+.shooting-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(130px,1fr));
+  gap:9px;
+  align-items:end;
+}
+.shooting-grid label,
+.shooting-custom-camera label{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  color:#7096b6;
+  font-size:10px;
+}
+.shooting-grid .fov-check{
+  min-height:42px;
+  flex-direction:row;
+  align-items:center;
+  gap:6px;
+  padding:0 10px;
+  border:1px solid #233e59;
+  border-radius:8px;
+  color:#a9cde5;
+}
+.shooting-custom-camera{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(120px,1fr));
+  gap:8px;
+  padding:10px;
+  margin-top:9px;
+  border:1px dashed #24435f;
+  border-radius:9px;
+  background:#081522;
+}
+.shooting-custom-camera[hidden]{display:none}
+.shooting-readout{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px 15px;
+  margin-top:10px;
+  color:#85aac5;
+  font-size:11px;
+}
+.shooting-readout span:first-child{color:#d1e9f8}
+.astro-ss-hero{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(125px,1fr));
+  gap:8px;
+  margin-top:10px;
+}
+.astro-ss-card{
+  border:1px solid #27435d;
+  border-radius:10px;
+  padding:11px;
+  background:#0a1724;
+}
+.astro-ss-card.primary{
+  border-color:#477da5;
+  background:#0b1d2e;
+}
+.astro-ss-card.reference{opacity:.78}
+.astro-ss-label{
+  display:block;
+  color:#789bb5;
+  font-size:10px;
+  margin-bottom:5px;
+}
+.astro-ss-card strong{
+  display:block;
+  color:#e7f5ff;
+  font-size:21px;
+  line-height:1.15;
+}
+.astro-ss-card small{
+  display:block;
+  margin-top:5px;
+  color:#6f8ba2;
+  font-size:9px;
+}
+.shooting-analysis{
+  margin-top:10px;
+  padding:9px 10px;
+  border-radius:8px;
+  background:#081522;
+  color:#9ec2db;
+  font-size:11px;
+  line-height:1.55;
+}
+.shooting-subtitle{
+  margin:13px 0 7px;
+  color:#8fc2e4;
+  font-size:11px;
+  font-weight:700;
+}
+.focal-compare{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(86px,1fr));
+  gap:6px;
+}
+.focal-compare-item{
+  padding:8px;
+  border:1px solid #20384f;
+  border-radius:8px;
+  background:#081521;
+  text-align:center;
+}
+.focal-compare-item.current{
+  border-color:#4f83aa;
+  background:#0b1d2c;
+}
+.focal-compare-item b{display:block;color:#cfe9fa;font-size:11px}
+.focal-compare-item span{display:block;color:#8bb4cf;font-size:12px;margin-top:3px}
+.shooting-note{
+  margin-top:9px;
+  color:#647f94;
+  font-size:9px;
+  line-height:1.55;
+}
+.sky-condition-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(150px,1fr));
+  gap:8px;
+}
+.sky-condition-card{
+  border:1px solid #20384f;
+  border-radius:9px;
+  background:#081521;
+  padding:10px;
+}
+.sky-condition-card>span{
+  display:block;
+  color:#759ab5;
+  font-size:10px;
+}
+.sky-condition-card>strong{
+  display:block;
+  color:#d9effc;
+  font-size:16px;
+  margin:5px 0;
+}
+.sky-condition-card>small{
+  display:block;
+  color:#6f8da4;
+  font-size:9px;
+  line-height:1.45;
+}
+.shooting-mini-btn{
+  min-height:32px;
+  margin-top:8px;
+  padding:0 9px;
+  border:1px solid #345c7a;
+  border-radius:7px;
+  background:#0c2133;
+  color:#add3eb;
+  cursor:pointer;
+  font-size:10px;
+}
+.shooting-calc-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(250px,1fr));
+  gap:9px;
+}
+.shooting-calc-card{
+  border:1px solid #20384f;
+  border-radius:9px;
+  background:#081521;
+  padding:10px;
+}
+.shooting-calc-card h4{
+  margin:0 0 8px;
+  color:#9fc8e2;
+  font-size:11px;
+}
+.calc-input-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+.calc-input-row label{
+  flex:1 1 90px;
+  display:flex;
+  align-items:center;
+  gap:4px;
+  color:#7190a8;
+  font-size:9px;
+}
+.calc-input-row input{
+  min-width:0;
+  width:100%;
+}
+.calc-input-row label span{white-space:nowrap}
+.calc-result{
+  margin-top:9px;
+  color:#e2f3fd;
+  font-size:13px;
+  font-weight:700;
+  line-height:1.5;
+}
+.shooting-calc-card>small{
+  display:block;
+  margin-top:5px;
+  color:#627d92;
+  font-size:9px;
+}
+
+@media(max-width:800px){
+  .shooting-grid{grid-template-columns:repeat(2,minmax(120px,1fr))}
+  .shooting-custom-camera{grid-template-columns:repeat(2,minmax(120px,1fr))}
+  .astro-ss-hero{grid-template-columns:repeat(2,minmax(120px,1fr))}
+  .sky-condition-grid{grid-template-columns:1fr}
+  .shooting-calc-grid{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .shooting-group-body{padding:10px}
+  .shooting-grid{grid-template-columns:1fr 1fr}
+  .shooting-custom-camera{grid-template-columns:1fr 1fr}
+  .astro-ss-card strong{font-size:18px}
+  .calc-input-row{gap:5px}
+}
+
+/* =========================================================
+   UI refinement: clickable sky times / master shooting fold /
+   custom cameras / weather fold
+========================================================= */
+.sky-time-card{
+  width:100%;
+  font:inherit;
+  text-align:left;
+  cursor:default;
+}
+.sky-time-card.tappable{
+  cursor:pointer;
+  transition:border-color .14s ease, transform .14s ease, background .14s ease;
+}
+.sky-time-card.tappable:hover{
+  border-color:#4b7699;
+  background:#0c1a28;
+}
+.sky-time-card.tappable:active{transform:translateY(1px)}
+.sky-tap-hint{
+  margin-top:5px;
+  color:#55758e;
+  font-size:8px;
+}
+.recommend-actions{
+  display:flex;
+  justify-content:flex-end;
+  margin-top:9px;
+}
+
+.shooting-master{
+  margin-top:14px;
+  border:1px solid var(--nicole-border);
+  border-radius:var(--nicole-radius-panel);
+  background:#07111d;
+  overflow:hidden;
+}
+.shooting-master>summary{
+  min-height:46px;
+  display:flex;
+  align-items:center;
+  padding:0 13px;
+  color:#b6d9ef;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  list-style:none;
+  user-select:none;
+}
+.shooting-master>summary::-webkit-details-marker{display:none}
+.shooting-master>summary::after{
+  content:"＋";
+  margin-left:auto;
+  color:#658ba6;
+  font-size:17px;
+}
+.shooting-master[open]>summary{
+  border-bottom:1px solid #183149;
+}
+.shooting-master[open]>summary::after{content:"−"}
+.shooting-master>.shooting-tools{padding:10px}
+
+.shooting-toggle{
+  min-height:42px;
+  height:42px;
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:flex-start;
+  gap:8px !important;
+  padding:0 11px;
+  border:1px solid #2b4b68;
+  border-radius:8px;
+  background:#0b1a29;
+  color:#b7d6ea !important;
+  cursor:pointer;
+  box-sizing:border-box;
+}
+.shooting-toggle input{
+  width:17px;
+  height:17px;
+  min-height:0 !important;
+  margin:0;
+  flex:0 0 auto;
+}
+.shooting-toggle span{white-space:nowrap}
+
+.custom-camera-actions{
+  display:flex;
+  gap:7px;
+  align-items:flex-end;
+  flex-wrap:wrap;
+}
+.shooting-mini-btn.danger{
+  border-color:#63363d;
+  color:#e7a2a8;
+}
+
+.weather-details{
+  padding:0 !important;
+  overflow:hidden;
+}
+.weather-details>summary{
+  cursor:pointer;
+  list-style:none;
+  padding:10px 11px;
+  margin:0;
+}
+.weather-details>summary::-webkit-details-marker{display:none}
+.weather-details>summary::after{
+  content:"＋";
+  margin-left:auto;
+  color:#658ba6;
+}
+.weather-details[open]>summary{
+  border-bottom:1px solid #183149;
+}
+.weather-details[open]>summary::after{content:"−"}
+.weather-details-body{padding:10px}
+
+@media(max-width:520px){
+  .shooting-master>.shooting-tools{padding:7px}
+  .shooting-toggle span{white-space:normal}
+}
+
+/* 星図時刻からカードを再計算 */
+.result-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.result-summary{
+  flex:1 1 auto;
+  min-width:0;
+}
+.result-sync-btn{
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+@media(max-width:720px){
+  .result-header{
+    align-items:stretch;
+    flex-direction:column;
+    gap:8px;
+  }
+  .result-sync-btn{
+    width:100%;
+  }
+}
+
+/* 今夜の空情報：コンパクト化 */
+.sky-panel{
+  padding:13px 14px;
+  margin-bottom:12px;
+}
+.sky-panel h3{
+  margin:0 0 9px;
+}
+.sky-grid{
+  grid-template-columns:repeat(auto-fill,minmax(145px,1fr));
+  gap:7px;
+}
+.sky-card{
+  padding:8px 10px;
+  min-height:58px;
+  box-sizing:border-box;
+}
+.sky-label{
+  margin-bottom:2px;
+  line-height:1.25;
+}
+.sky-val{
+  font-size:16px;
+  line-height:1.15;
+}
+.sky-sub{
+  font-size:10px;
+  line-height:1.3;
+}
+.sky-tap-hint{
+  margin-top:3px;
+  line-height:1.15;
+}
+
+@media(max-width:520px){
+  .sky-panel{padding:11px}
+  .sky-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:6px;
+  }
+  .sky-card{
+    padding:7px 8px;
+    min-height:54px;
+  }
+  .sky-label{font-size:10px}
+  .sky-val{font-size:15px}
+}
 </style>
 </head>
 <body>
@@ -1075,10 +1954,10 @@ body.manual-open{overflow:hidden;}
 <div class="panel">
 <h2>📍 観測条件を設定</h2>
 
-<!-- 1行目：観測日時 / 月相 / 現在時刻 -->
+<div class="obs-section-title">観測日時</div>
 <div class="obs-row obs-row-datetime">
   <div class="obs-field obs-datetime-field">
-    <label>観測日時</label>
+    <label>日時</label>
     <input type="datetime-local" id="inDatetime">
   </div>
   <div class="obs-inline-action">
@@ -1089,13 +1968,12 @@ body.manual-open{overflow:hidden;}
   </div>
 </div>
 
-<!-- 2行目：現在地 / 地図 -->
+<div class="obs-section-title">観測場所</div>
 <div class="obs-row obs-row-location-actions">
   <button class="loc-btn" id="btnGPS">📡 現在地を取得</button>
   <button type="button" class="map-select-btn" id="openMapSelect">🗺 地図から選択</button>
 </div>
 
-<!-- 3行目：場所名 / 緯度 / 経度 / 標高 -->
 <div class="obs-row obs-location-grid">
   <div class="obs-field"><label>場所名（任意）</label><input type="text" id="inPlace" placeholder="例：帯広"></div>
   <div class="obs-field"><label>緯度（北緯）</label><input type="number" id="inLat" step="0.000001" placeholder="例：42.923600"></div>
@@ -1103,40 +1981,49 @@ body.manual-open{overflow:hidden;}
   <div class="obs-field"><label>標高（m）</label><input type="number" id="inAlt" step="0.1" placeholder="地図から自動取得"></div>
 </div>
 
-<div class="favorite-location-box">
-  <div class="favorite-location-main">
-    <label for="favoriteLocationSelect">☆ お気に入り地点</label>
-    <select id="favoriteLocationSelect">
-      <option value="">お気に入り地点を選択</option>
-    </select>
+<details class="compact-settings">
+  <summary>お気に入り地点</summary>
+  <div class="compact-settings-body">
+    <div class="favorite-location-box">
+      <div class="favorite-location-main">
+        <label for="favoriteLocationSelect">登録地点</label>
+        <select id="favoriteLocationSelect">
+          <option value="">お気に入り地点を選択</option>
+        </select>
+      </div>
+      <button type="button" class="favorite-location-btn" id="applyFavoriteLocation">この地点を使う</button>
+      <button type="button" class="favorite-location-btn" id="saveFavoriteLocation">☆ 現在の地点を登録</button>
+      <button type="button" class="favorite-location-btn danger" id="deleteFavoriteLocation">削除</button>
+    </div>
   </div>
-  <button type="button" class="favorite-location-btn" id="applyFavoriteLocation">この地点を使う</button>
-  <button type="button" class="favorite-location-btn" id="saveFavoriteLocation">☆ 現在の地点を登録</button>
-  <button type="button" class="favorite-location-btn danger" id="deleteFavoriteLocation">削除</button>
-</div>
+</details>
 
-<!-- 4行目：最低高度 / 等級上限 -->
-<div class="obs-row obs-limit-grid">
-  <div class="obs-field">
-    <label>最低高度（°）</label>
-    <select id="inMinAlt">
-      <option value="10">10°以上</option>
-      <option value="20" selected>20°以上</option>
-      <option value="30">30°以上</option>
-    </select>
+<details class="compact-settings">
+  <summary>星の見え方</summary>
+  <div class="compact-settings-body">
+    <div class="obs-row obs-limit-grid">
+      <div class="obs-field">
+        <label>最低高度（°）</label>
+        <select id="inMinAlt">
+          <option value="10">10°以上</option>
+          <option value="20" selected>20°以上</option>
+          <option value="30">30°以上</option>
+        </select>
+      </div>
+      <div class="obs-field">
+        <label>等級上限</label>
+        <select id="inMaxMag">
+          <option value="7">〜7等（明るめ）</option>
+          <option value="9">〜9等</option>
+          <option value="11" selected>〜11等（標準）</option>
+          <option value="14">〜14等（全て）</option>
+        </select>
+      </div>
+    </div>
   </div>
-  <div class="obs-field">
-    <label>等級上限</label>
-    <select id="inMaxMag">
-      <option value="7">〜7等（明るめ）</option>
-      <option value="9">〜9等</option>
-      <option value="11" selected>〜11等（標準）</option>
-      <option value="14">〜14等（全て）</option>
-    </select>
-  </div>
-</div>
+</details>
 
-<!-- 5行目：天体・星座を検索 -->
+<div class="obs-section-title">天体検索</div>
 <div class="obs-row obs-search-block">
   <label>🔍 天体・星座を検索（名前・カタログ番号・種類などで検索）</label>
   <div class="search-bar">
@@ -1160,18 +2047,21 @@ body.manual-open{overflow:hidden;}
 </div>
 
 <div class="result-header">
+<div class="result-summary">
 <div class="date" id="resDate"></div>
 <div class="loc" id="resLoc"></div>
 <div class="count" id="resCount"></div>
 </div>
+<button type="button" class="action gray result-sync-btn" id="syncResultsToSkyTime">星図に合わせて更新</button>
+</div>
 <div class="tabs">
 <button class="active" data-rtab="skymap">🗺 星図</button>
-<button data-rtab="constellations">🌠 見頃の星座</button>
-<button data-rtab="cards">🌌 天体カード</button>
+<button data-rtab="constellations">✨ 星座</button>
+<button data-rtab="cards">✦ 天体</button>
 <button data-rtab="mooncalendar">📅 カレンダー</button>
 <button data-rtab="schedule">⌚️ 観測スケジュール</button>
-<button data-rtab="smallbodies">☄️ 彗星</button>
-<button data-rtab="meteors">🌠 流星群</button>
+<button data-rtab="smallbodies">🧹 彗星</button>
+<button data-rtab="meteors">☄️ 流星群</button>
 </div>
 <div class="tab-content" id="rtab-cards">
 <div class="ctrl-bar" id="filterBar"></div>
@@ -1228,7 +2118,13 @@ body.manual-open{overflow:hidden;}
 <div class="skymap-controls">
 <label><input type="checkbox" id="skyShowLines" checked> 星座線</label>
 <label><input type="checkbox" id="skyShowNames"> 星座名</label>
-<label><input type="checkbox" id="skyShowPlanets" checked> 太陽・月・惑星</label>
+<label><input type="checkbox" id="skyShowSun" checked> 太陽</label>
+<label class="sky-dependent"><input type="checkbox" id="skyShowEcliptic"> 黄道</label>
+<label title="太陽高度に応じて空の明るさ・見える恒星数・太陽方向の薄明を再現"><input type="checkbox" id="skyShowDaylight" checked> 昼光</label>
+<label><input type="checkbox" id="skyShowMoon" checked> 月</label>
+<label title="月相・月高度・月からの角距離に応じて月明かりを星図へ反映"><input type="checkbox" id="skyShowMoonlight"> 月光</label>
+<label class="sky-dependent"><input type="checkbox" id="skyShowLunarPath"> 白道</label>
+<label><input type="checkbox" id="skyShowPlanets" checked> 惑星</label>
 <label><input type="checkbox" id="skyShowDSO"> 主要天体</label>
 <label><input type="checkbox" id="skyShowSmallBodies"> 彗星</label>
 <label><input type="checkbox" id="skyShowMeteors"> 流星群放射点</label>
@@ -1264,16 +2160,6 @@ body.manual-open{overflow:hidden;}
 </div>
 </div>
 
-<div class="weather-panel" id="weatherPanel">
-<div class="weather-head">
-<div class="weather-title">☁️ 観測地点の天候</div>
-<div class="weather-source">Open-Meteo</div>
-</div>
-<div class="weather-status" id="weatherStatus">天候情報を確認しています…</div>
-<div class="weather-grid" id="weatherGrid" style="display:none"></div>
-<div class="weather-eval" id="weatherEval" style="display:none"></div>
-</div>
-
 <div class="skymap-zoom-bar">
 <span class="label">🔎 星図ズーム</span>
 <button type="button" id="skyZoomOut" aria-label="縮小">−</button>
@@ -1283,18 +2169,36 @@ body.manual-open{overflow:hidden;}
 <span class="skymap-zoom-help">ホイール／ピンチで拡大、ドラッグで移動</span>
 </div>
 
-<div class="skymap-section-label">写野</div>
-<div class="skymap-fov-controls">
-<label class="fov-check"><input type="checkbox" id="skyShowFov"> 📷 写野を表示</label>
-<label>センサー
-<select id="skyFovSensor">
-<option value="36,24,1" selected>フルサイズ</option>
-<option value="23.5,15.6,1.5">APS-C</option>
-<option value="17.3,13,2">フォーサーズ</option>
+<details class="weather-panel weather-details" id="weatherPanel">
+<summary class="weather-head">
+<div class="weather-title">☁️ 観測地点の天候</div>
+<div class="weather-source">Open-Meteo</div>
+</summary>
+<div class="weather-details-body">
+<div class="weather-status" id="weatherStatus">天候情報を確認しています…</div>
+<div class="weather-grid" id="weatherGrid" style="display:none"></div>
+<div class="weather-eval" id="weatherEval" style="display:none"></div>
+</div>
+</details>
+
+<details class="shooting-master">
+<summary>📷 撮影</summary>
+<div class="shooting-tools">
+
+<details class="shooting-group" open>
+<summary>📷 写野・カメラ</summary>
+<div class="shooting-group-body">
+<div class="shooting-grid">
+<label>カメラ
+<select id="astroCameraPreset">
+<option value="z8" selected>Nikon Z8</option>
+<option value="d6">Nikon D6</option>
+<option value="zr">Nikon ZR</option>
+<option value="custom">カスタム</option>
 </select>
 </label>
 <label>焦点距離
-<span class="fov-number-wrap"><input type="number" id="skyFovFocal" min="4" max="3000" step="1" value="35"><span>mm</span></span>
+<span class="fov-number-wrap"><input type="number" id="skyFovFocal" min="4" max="3000" step="1" value="20"><span>mm</span></span>
 </label>
 <label>向き
 <select id="skyFovOrientation">
@@ -1302,10 +2206,176 @@ body.manual-open{overflow:hidden;}
 <option value="portrait">縦位置</option>
 </select>
 </label>
-<span class="skymap-fov-info" id="skyFovInfo">フルサイズ 35mm：54.4° × 37.8°</span>
-<span class="skymap-fov-500" id="skyFov500">500ルール：最大 約14.3秒</span>
+<label class="shooting-toggle"><input type="checkbox" id="skyShowFov"><span>写野を星図に表示</span></label>
 </div>
 
+<div class="shooting-custom-camera" id="astroCustomCamera" hidden>
+<label>設定名
+<input type="text" id="astroCustomName" maxlength="40" placeholder="例：Zf / X-Pro2 / 自分のカメラ">
+</label>
+<label>センサーサイズ
+<select id="astroCustomSensorFormat">
+<option value="full" selected>フルサイズ（36×24mm相当）</option>
+<option value="apsc">APS-C（23.5×15.6mm相当）</option>
+<option value="mft">フォーサーズ（17.3×13.0mm）</option>
+</select>
+</label>
+<label>画素数
+<span class="fov-number-wrap"><input type="number" id="astroCustomMP" min="1" max="200" step="0.1" value="24"><span>MP</span></span>
+</label>
+<div class="custom-camera-actions">
+<button type="button" class="shooting-mini-btn" id="astroSaveCustomCamera">この設定を保存</button>
+<button type="button" class="shooting-mini-btn danger" id="astroDeleteCustomCamera" hidden>保存設定を削除</button>
+</div>
+</div>
+
+<!-- 既存写野ロジック互換用。プリセットに応じて自動同期 -->
+<select id="skyFovSensor" hidden>
+<option value="35.9,23.9,1" selected>フルサイズ</option>
+<option value="23.5,15.6,1.5">APS-C</option>
+<option value="17.3,13,2">フォーサーズ</option>
+</select>
+
+<div class="shooting-readout">
+<span id="skyFovInfo">Nikon Z8 20mm：83.8° × 61.7°</span>
+<span id="astroCameraInfo">45.7MP / 8256×5504 / 画素ピッチ 約4.35µm</span>
+</div>
+</div>
+</details>
+
+<details class="shooting-group" open>
+<summary>✨ 星を点で写す</summary>
+<div class="shooting-group-body">
+<div class="shooting-grid">
+<label>絞り（NPF参考値のみ）
+<span class="fov-number-wrap"><span>F</span><input type="number" id="astroAperture" min="0.7" max="64" step="0.1" value="1.8"></span>
+</label>
+<label>判定対象
+<select id="astroTrailBasis">
+<option value="field">写野内で最も厳しい星</option>
+<option value="center" selected>写野中心</option>
+</select>
+</label>
+</div>
+
+<div class="astro-ss-hero">
+<div class="astro-ss-card primary">
+<span class="astro-ss-label">星像優先</span>
+<strong id="astroStrictSS">—</strong>
+<small id="astroStrictNote">1.5px以内の移動を目安</small>
+</div>
+<div class="astro-ss-card">
+<span class="astro-ss-label">実用優先</span>
+<strong id="astroPracticalSS">—</strong>
+<small>2.5px以内の移動を目安</small>
+</div>
+<div class="astro-ss-card reference">
+<span class="astro-ss-label">NPF参考</span>
+<strong id="astroNpfSS">—</strong>
+<small>赤道付近の一般的なNPF式</small>
+</div>
+<div class="astro-ss-card reference">
+<span class="astro-ss-label">500ルール参考</span>
+<strong id="astro500SS">—</strong>
+<small>焦点距離のみの旧来目安</small>
+</div>
+</div>
+
+<div class="shooting-analysis" id="astroDirectionInfo">星図の写野方向から推奨シャッタースピードを計算します。</div>
+
+<div class="shooting-subtitle">焦点距離別の推奨SS比較（実用優先）</div>
+<div class="focal-compare" id="astroFocalCompare"></div>
+<div class="shooting-note">Nicoleの「星像優先／実用優先」は、カメラの画素ピッチと焦点距離から1画素あたりの角度を求め、星図上の撮影方向に応じた日周運動の速さを加味した独自のピクセル移動モデルです。光学性能・ピント・回折・手ブレ等は含まないため、実写では安全側に調整してください。</div>
+</div>
+</details>
+
+<details class="shooting-group">
+<summary>🌌 空の条件</summary>
+<div class="shooting-group-body">
+<div class="sky-condition-grid">
+<div class="sky-condition-card">
+<span>天の川・銀河中心</span>
+<strong id="astroMilkyWayStatus">—</strong>
+<small id="astroMilkyWayDetail">—</small>
+<button type="button" class="shooting-mini-btn" id="astroShowMilkyWay">星図に天の川を表示</button>
+</div>
+<div class="sky-condition-card">
+<span>月明かりの影響</span>
+<strong id="astroMoonImpact">—</strong>
+<small id="astroMoonImpactDetail">—</small>
+</div>
+<div class="sky-condition-card">
+<span>月との角距離</span>
+<strong id="astroMoonSeparation">—</strong>
+<small id="astroMoonSeparationDetail">写野中心から月まで</small>
+</div>
+</div>
+<div class="shooting-note">月明かりは、月の輝面率・高度・写野中心との角距離を組み合わせた簡易目安です。大気透明度や薄雲、レンズ内反射、地上景の照明効果までは含みません。</div>
+</div>
+</details>
+
+<details class="shooting-group">
+<summary>⏱ 連続撮影・合成</summary>
+<div class="shooting-group-body">
+<div class="shooting-calc-grid">
+
+<div class="shooting-calc-card">
+<h4>インターバル撮影時間</h4>
+<div class="calc-input-row">
+<label>露光<input type="number" id="intervalExposure" min="0.1" step="0.1" value="8"><span>秒</span></label>
+<label>待機<input type="number" id="intervalGap" min="0" step="0.1" value="1"><span>秒</span></label>
+<label>枚数<input type="number" id="intervalFrames" min="1" step="1" value="360"><span>枚</span></label>
+</div>
+<div class="calc-result" id="intervalTotalResult">—</div>
+</div>
+
+<div class="shooting-calc-card">
+<h4>タイムラプス枚数</h4>
+<div class="calc-input-row">
+<label>完成尺<input type="number" id="timelapseLength" min="0.1" step="0.1" value="10"><span>秒</span></label>
+<label>fps<input type="number" id="timelapseFps" min="1" step="1" value="30"></label>
+<label>撮影間隔<input type="number" id="timelapseInterval" min="0.1" step="0.1" value="10"><span>秒</span></label>
+</div>
+<div class="calc-result" id="timelapseResult">—</div>
+</div>
+
+<div class="shooting-calc-card">
+<h4>比較明合成・星グル</h4>
+<div class="calc-input-row">
+<label>星の回転角<input type="number" id="trailDegrees" min="1" max="360" step="1" value="30"><span>°</span></label>
+<label>露光<input type="number" id="trailExposure" min="0.1" step="0.1" value="8"><span>秒</span></label>
+<label>待機<input type="number" id="trailGap" min="0" step="0.1" value="1"><span>秒</span></label>
+</div>
+<div class="calc-result" id="trailResult">—</div>
+<small>「回転角」は天の極を中心とした地球自転角の目安です。</small>
+</div>
+
+<div class="shooting-calc-card">
+<h4>総撮影時間 → 必要枚数</h4>
+<div class="calc-input-row">
+<label>総時間<input type="number" id="totalShootMinutes" min="0.1" step="1" value="120"><span>分</span></label>
+<label>露光<input type="number" id="totalExposure" min="0.1" step="0.1" value="8"><span>秒</span></label>
+<label>待機<input type="number" id="totalGap" min="0" step="0.1" value="1"><span>秒</span></label>
+</div>
+<div class="calc-result" id="totalFramesResult">—</div>
+</div>
+
+<div class="shooting-calc-card">
+<h4>スタッキング</h4>
+<div class="calc-input-row">
+<label>重ねる枚数<input type="number" id="stackFrames" min="1" step="1" value="16"><span>枚</span></label>
+<label>目標S/N改善<input type="number" id="stackTarget" min="1" step="0.1" value="4"><span>倍</span></label>
+</div>
+<div class="calc-result" id="stackResult">—</div>
+<small>独立したランダムノイズを仮定した理論値（S/N ∝ √N）。</small>
+</div>
+
+</div>
+</div>
+</details>
+
+</div>
+</details>
 
 </div>
 </div>
@@ -1315,7 +2385,7 @@ body.manual-open{overflow:hidden;}
 <div class="smallbody-panel hoshinotori-panel">
 <div class="smallbody-head">
 <div>
-<div class="smallbody-title">☄️ 星の鳥 — 彗星データベース</div>
+<div class="smallbody-title">🧹 星の鳥</div>
 <div class="smallbody-sub">簡易版の彗星軌道データを読み込みます。</div>
 </div>
 <button class="action gray sm" id="htReloadIndex">↻ 星の鳥を更新</button>
@@ -1347,7 +2417,7 @@ body.manual-open{overflow:hidden;}
 </div>
 
 <div class="smallbody-note">
-データ源：<b>星の鳥 — Comet Orbit Database for Nicole</b>（GitHub静的JSON） / NASA・JPL SBDB。<br>
+データ源：<b>星の鳥 — Comet Orbit Database for Nicole</b> / NASA・JPL SBDB。<br>
 「簡易計算」は基本軌道要素からNicole内で二体近似を行います。「精密計算」は星の鳥に保存済みの詳細JSON（不確かさ・共分散・非重力モデル等）を追加取得しますが、現段階の位置計算自体は二体近似です。「JPL高精度」はJPL Horizonsの見かけ位置を利用する長期軌道取得へ進みます。
 </div>
 </div>
@@ -1355,7 +2425,7 @@ body.manual-open{overflow:hidden;}
 <div class="smallbody-panel">
 <div class="smallbody-head">
 <div>
-<div class="smallbody-title">☄️ 今夜の彗星 — JPLライブ検索</div>
+<div class="smallbody-title">🧹 今夜の彗星</div>
 <div class="smallbody-sub">NASA/JPLから、選択した観測地点で今夜見られる彗星を一晩分取得します。星図の時刻を動かすと、彗星が昇り、空を移動し、沈む様子を追えます。</div>
 </div>
 <button class="action gray sm" id="sbRefresh">↻ 今夜の彗星を取得</button>
@@ -1389,7 +2459,7 @@ body.manual-open{overflow:hidden;}
 <div class="meteor-panel">
 <div class="meteor-head">
 <div>
-<div class="meteor-title">🌠 流星群 オンライン情報</div>
+<div class="meteor-title">☄️ 流星群 オンライン情報</div>
 <div class="meteor-sub">International Meteor Organization（IMO）の年次カレンダーから取得し、Nicoleが放射点高度と月明かりを計算します。</div>
 </div>
 <button class="action gray sm" id="meteorRefresh">↻ 最新データを取得</button>
@@ -2234,7 +3304,7 @@ document.addEventListener(&#x27;click&#x27;, event =&gt; {
 </div>
 
 <footer>
-<div>🔭 Nicole the Astronavigator ／ 制作者：<span>Kensuke Suga</span></div>
+<div>🔭 Nicole the Astronavigator ／ 制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
 <button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
 </footer>
 
@@ -3002,6 +4072,7 @@ const SKY_STARS=[...STARS_DB.map(s=>({id:s.id,name:s.name.split("（")[0],ra:s.r
 const SKY_STAR_MAP=Object.fromEntries(SKY_STARS.map(s=>[s.id,s]));
 let SKY_MAP_HITS=[];
 let SKY_FOCUS_CONSTELLATION_ID=null;
+let SKY_FOCUS_OBJECT_ID=null;
 let SKY_VIEW_DATE=null;
 
 let SKY_PROJECTION="allsky";
@@ -4378,6 +5449,115 @@ info.innerHTML=`<b>🌌 ${c.name}</b> <span style="color:#8b9db3">${c.en}（${c.
 });
 }
 
+function objectRaDecAt(obj,date){
+if(!obj)return null;
+if(obj.type==="planet"&&obj.planet){
+const q=planetRaDec(obj.planet,toJD(date));
+return{ra:q.ra,dec:q.dec};
+}
+if(Number.isFinite(Number(obj.ra))&&Number.isFinite(Number(obj.dec))){
+return{ra:Number(obj.ra),dec:Number(obj.dec)};
+}
+return null;
+}
+
+function focusObjectOnSky(obj){
+if(!obj)return;
+SKY_FOCUS_OBJECT_ID=obj.id||obj.name||null;
+SKY_FOCUS_CONSTELLATION_ID=null;
+
+if(obj.type==="planet"){
+$("#skyShowPlanets").checked=true;
+}else{
+$("#skyShowDSO").checked=true;
+}
+
+switchResultTab("skymap");
+requestAnimationFrame(()=>{
+renderSkyChart();
+const lat=Number.isFinite(currentLat)?currentLat:parseFloat($("#inLat").value);
+const lon=Number.isFinite(currentLon)?currentLon:parseFloat($("#inLon").value);
+const date=getSkyViewDate();
+const rd=objectRaDecAt(obj,date);
+const info=$("#skyMapObjectInfo");
+if(!rd||!Number.isFinite(lat)||!Number.isFinite(lon))return;
+const aa=altAz(rd.ra,rd.dec,lat,lon,date);
+if(info){
+if(aa.alt>=0){
+info.innerHTML=`<b>${escapeHTML(obj.name||obj.id||"天体")}</b><br>高度 ${aa.alt.toFixed(1)}° / 方位 ${azToDir(aa.az)}（${aa.az.toFixed(1)}°）<br><span style="color:#ffd54f">星図上で黄色いリングで強調表示しています。</span>`;
+}else{
+info.innerHTML=`<b>${escapeHTML(obj.name||obj.id||"天体")}</b><br>現在の星図時刻・場所では地平線下です。<br><span style="color:#fb923c">時間送り・時間戻しで見える時刻を探せます。</span>`;
+}
+}
+});
+}
+
+function eclipticRaDec(lonDeg,jd){
+const T=(jd-2451545.0)/36525;
+const eps=(23.439291-0.0130042*T)*D2R;
+const l=lonDeg*D2R;
+const x=Math.cos(l),y=Math.sin(l)*Math.cos(eps),z=Math.sin(l)*Math.sin(eps);
+return{ra:norm360(Math.atan2(y,x)*R2D),dec:Math.atan2(z,Math.hypot(x,y))*R2D};
+}
+
+function drawSkyPath(ctx,points,lat,lon,date,cx,cy,R,color,dash=[]){
+ctx.save();
+ctx.strokeStyle=color;
+ctx.lineWidth=1.1;
+ctx.setLineDash(dash);
+ctx.beginPath();
+let started=false;
+for(const rd of points){
+const p=skyProject(rd.ra,rd.dec,lat,lon,date,cx,cy,R);
+if(!p){started=false;continue;}
+if(!started){ctx.moveTo(p.x,p.y);started=true;}
+else ctx.lineTo(p.x,p.y);
+}
+ctx.stroke();
+ctx.restore();
+}
+
+function drawEcliptic(ctx,lat,lon,date,cx,cy,R){
+const jd=toJD(date);
+const pts=[];
+for(let l=0;l<=360;l+=2)pts.push(eclipticRaDec(l,jd));
+drawSkyPath(ctx,pts,lat,lon,date,cx,cy,R,"rgba(255,213,79,.62)",[5,4]);
+}
+
+function drawLunarPath(ctx,lat,lon,date,cx,cy,R){
+const pts=[];
+const center=date.getTime();
+for(let h=-336;h<=336;h+=12){
+const m=moonPosition(toJD(new Date(center+h*3600000)));
+pts.push({ra:m.ra,dec:m.dec});
+}
+drawSkyPath(ctx,pts,lat,lon,date,cx,cy,R,"rgba(225,232,240,.52)",[3,4]);
+}
+
+function drawFocusedObject(ctx,lat,lon,date,cx,cy,R){
+if(!SKY_FOCUS_OBJECT_ID)return;
+const obj=ALL_OBJECTS.find(o=>(o.id||o.name)===SKY_FOCUS_OBJECT_ID);
+if(!obj)return;
+const rd=objectRaDecAt(obj,date);
+if(!rd)return;
+const p=skyProject(rd.ra,rd.dec,lat,lon,date,cx,cy,R);
+if(!p)return;
+ctx.save();
+ctx.strokeStyle="#ffd54f";
+ctx.lineWidth=2;
+ctx.beginPath();
+ctx.arc(p.x,p.y,9,0,Math.PI*2);
+ctx.stroke();
+ctx.restore();
+}
+
+function syncSolarPathControls(){
+const sun=$("#skyShowSun"),moon=$("#skyShowMoon");
+const ecl=$("#skyShowEcliptic"),lun=$("#skyShowLunarPath");
+if(ecl)ecl.disabled=!(sun&&sun.checked);
+if(lun)lun.disabled=!(moon&&moon.checked);
+}
+
 function getSkyConstellationLabels(){
 return CONSTELLATIONS.map(c=>{
 const co=CONST_COORD[c.id];
@@ -4791,47 +5971,384 @@ drawMilkyWayRing(ctx,ring,lat,lon,date,cx,cy,R,style);
 /* =====================================================
 カメラ写野
 ===================================================== */
-function getFovSettings(){
-const sensorValue=$("#skyFovSensor")?$("#skyFovSensor").value:"36,24,1";
-let [sensorW,sensorH,cropFactor]=sensorValue.split(",").map(Number);
-let focal=parseFloat($("#skyFovFocal")?$("#skyFovFocal").value:"35");
+const ASTRO_CAMERA_PRESETS={
+z8:{name:"Nikon Z8",sensorW:35.9,sensorH:23.9,pixelsW:8256,pixelsH:5504,mp:45.7},
+d6:{name:"Nikon D6",sensorW:35.9,sensorH:23.9,pixelsW:5568,pixelsH:3712,mp:20.8},
+zr:{name:"Nikon ZR",sensorW:35.9,sensorH:23.9,pixelsW:6048,pixelsH:4032,mp:24.5}
+};
+const ASTRO_CUSTOM_CAMERA_KEY="nicole_astro_custom_cameras_v1";
+const ASTRO_SENSOR_FORMATS={
+full:{name:"フルサイズ",sensorW:36,sensorH:24,aspect:3/2},
+apsc:{name:"APS-C",sensorW:23.5,sensorH:15.6,aspect:3/2},
+mft:{name:"フォーサーズ",sensorW:17.3,sensorH:13.0,aspect:4/3}
+};
 
-if(!Number.isFinite(sensorW)||!Number.isFinite(sensorH)){
-sensorW=36;sensorH=24;
+function loadAstroCustomCameras(){
+try{
+const x=JSON.parse(localStorage.getItem(ASTRO_CUSTOM_CAMERA_KEY)||"[]");
+return Array.isArray(x)?x.filter(v=>v&&v.id&&v.name):[];
+}catch(e){return[];}
 }
-if(!Number.isFinite(cropFactor)||cropFactor<=0)cropFactor=1;
-if(!Number.isFinite(focal)||focal<=0)focal=35;
+function saveAstroCustomCameras(items){
+try{localStorage.setItem(ASTRO_CUSTOM_CAMERA_KEY,JSON.stringify(items));}catch(e){}
+}
+function approximatePixelsFromMP(mp,format){
+const f=ASTRO_SENSOR_FORMATS[format]||ASTRO_SENSOR_FORMATS.full;
+const total=Math.max(1,Number(mp)||24)*1e6;
+const w=Math.sqrt(total*f.aspect);
+const h=w/f.aspect;
+return{pixelsW:Math.round(w),pixelsH:Math.round(h)};
+}
+function cameraFromCustomData(data){
+const f=ASTRO_SENSOR_FORMATS[data.sensorFormat]||ASTRO_SENSOR_FORMATS.full;
+const px=approximatePixelsFromMP(data.mp,data.sensorFormat);
+return{
+name:data.name||"カスタム",
+sensorW:f.sensorW,
+sensorH:f.sensorH,
+pixelsW:px.pixelsW,
+pixelsH:px.pixelsH,
+mp:Number(data.mp)||24,
+customId:data.id||null,
+sensorFormat:data.sensorFormat||"full"
+};
+}
+function refreshAstroCameraPresetOptions(selectedValue=null){
+const sel=$("#astroCameraPreset");
+if(!sel)return;
+const current=selectedValue||sel.value||"z8";
+[...sel.querySelectorAll('option[data-custom-saved="1"]')].forEach(o=>o.remove());
+const customs=loadAstroCustomCameras();
+for(const c of customs){
+const o=document.createElement("option");
+o.value="saved:"+c.id;
+o.dataset.customSaved="1";
+o.textContent=c.name;
+sel.appendChild(o);
+}
+sel.value=[...sel.options].some(o=>o.value===current)?current:"z8";
+}
+function fillCustomCameraEditor(data=null){
+const d=data||{name:"",sensorFormat:"full",mp:24,id:null};
+$("#astroCustomName").value=d.name||"";
+$("#astroCustomSensorFormat").value=d.sensorFormat||"full";
+$("#astroCustomMP").value=Number(d.mp)||24;
+$("#astroCustomCamera").dataset.editId=d.id||"";
+$("#astroDeleteCustomCamera").hidden=!d.id;
+}
+function selectedCustomCameraData(){
+const value=$("#astroCameraPreset")?.value||"z8";
+if(value==="custom"){
+return{
+id:$("#astroCustomCamera")?.dataset.editId||null,
+name:($("#astroCustomName")?.value||"カスタム").trim()||"カスタム",
+sensorFormat:$("#astroCustomSensorFormat")?.value||"full",
+mp:parseFloat($("#astroCustomMP")?.value)||24
+};
+}
+if(value.startsWith("saved:")){
+const id=value.slice(6);
+return loadAstroCustomCameras().find(x=>x.id===id)||null;
+}
+return null;
+}
+function getAstroCameraSettings(){
+const preset=$("#astroCameraPreset")?.value||"z8";
+let c;
+if(preset==="custom"||preset.startsWith("saved:")){
+c=cameraFromCustomData(selectedCustomCameraData()||{name:"カスタム",sensorFormat:"full",mp:24});
+}else{
+c={...(ASTRO_CAMERA_PRESETS[preset]||ASTRO_CAMERA_PRESETS.z8)};
+}
+c.pitchMicron=(c.sensorW/c.pixelsW)*1000;
+return c;
+}
+function showAstroCustomEditorForSelection(){
+const value=$("#astroCameraPreset")?.value||"z8";
+const custom=value==="custom"||value.startsWith("saved:");
+$("#astroCustomCamera").hidden=!custom;
+if(value==="custom"){
+if(!$("#astroCustomCamera").dataset.editId)fillCustomCameraEditor();
+}else if(value.startsWith("saved:")){
+const d=selectedCustomCameraData();
+if(d)fillCustomCameraEditor(d);
+}
+}
+function persistCurrentAstroCustomCamera(){
+const name=($("#astroCustomName")?.value||"").trim();
+if(!name){alert("カスタム設定の名前を入力してください。");return;}
+const mp=parseFloat($("#astroCustomMP")?.value);
+if(!Number.isFinite(mp)||mp<=0){alert("画素数（MP）を入力してください。");return;}
+const items=loadAstroCustomCameras();
+let id=$("#astroCustomCamera")?.dataset.editId||"";
+if(!id)id="cam_"+Date.now().toString(36);
+const data={id,name,sensorFormat:$("#astroCustomSensorFormat")?.value||"full",mp};
+const idx=items.findIndex(x=>x.id===id);
+if(idx>=0)items[idx]=data;else items.push(data);
+saveAstroCustomCameras(items);
+refreshAstroCameraPresetOptions("saved:"+id);
+fillCustomCameraEditor(data);
+updateFovInfo();
+renderSkyChart();
+}
+function deleteCurrentAstroCustomCamera(){
+const id=$("#astroCustomCamera")?.dataset.editId||"";
+if(!id)return;
+saveAstroCustomCameras(loadAstroCustomCameras().filter(x=>x.id!==id));
+$("#astroCustomCamera").dataset.editId="";
+refreshAstroCameraPresetOptions("custom");
+fillCustomCameraEditor();
+showAstroCustomEditorForSelection();
+updateFovInfo();
+renderSkyChart();
+}
 
+function getFovSettings(){
+const c=getAstroCameraSettings();
+let sensorW=c.sensorW,sensorH=c.sensorH;
+let focal=parseFloat($("#skyFovFocal")?$("#skyFovFocal").value:"20");
+if(!Number.isFinite(focal)||focal<=0)focal=20;
 if($("#skyFovOrientation")?.value==="portrait"){
 [sensorW,sensorH]=[sensorH,sensorW];
 }
-
 const hFov=2*Math.atan(sensorW/(2*focal))/D2R;
 const vFov=2*Math.atan(sensorH/(2*focal))/D2R;
-const maxExposure500=500/(focal*cropFactor);
-
-return{sensorW,sensorH,cropFactor,focal,hFov,vFov,maxExposure500};
+const maxExposure500=500/focal;
+return{sensorW,sensorH,cropFactor:1,focal,hFov,vFov,maxExposure500,camera:c};
 }
 
 function updateFovInfo(){
 const info=$("#skyFovInfo");
-const rule=$("#skyFov500");
-const sensor=$("#skyFovSensor");
+const camInfo=$("#astroCameraInfo");
 const f=getFovSettings();
-
 if(info){
-const sensorName=sensor&&sensor.selectedOptions&&sensor.selectedOptions[0]
-?sensor.selectedOptions[0].textContent
-:"";
-info.textContent=`${sensorName} ${f.focal}mm：${f.hFov.toFixed(1)}° × ${f.vFov.toFixed(1)}°`;
+info.textContent=`${f.camera.name} ${f.focal}mm：${f.hFov.toFixed(1)}° × ${f.vFov.toFixed(1)}°`;
+}
+if(camInfo){
+const mp=f.camera.mp?`${f.camera.mp}MP / `:"";
+camInfo.textContent=`${mp}${f.camera.pixelsW}×${f.camera.pixelsH} / 画素ピッチ 約${f.camera.pitchMicron.toFixed(2)}µm`;
+}
 }
 
-if(rule){
-const sec=f.maxExposure500;
-const secText=sec>=10?sec.toFixed(1):sec.toFixed(2);
-rule.textContent=`500ルール：最大 約${secText}秒`;
-rule.title="目安：500 ÷（焦点距離 × クロップファクター）。星の流れを完全に保証するものではありません。";
+function shootingCenterAltAz(){
+return SKY_PROJECTION==="perspective"
+?{alt:SKY_PERSPECTIVE_ALT,az:SKY_PERSPECTIVE_AZ}
+:{alt:SKY_FOV_ALLSKY_ALT,az:SKY_FOV_ALLSKY_AZ};
 }
+
+function declinationFromAltAz(altDeg,azDeg,latDeg){
+const a=altDeg*D2R,A=azDeg*D2R,p=latDeg*D2R;
+const s=Math.sin(a)*Math.sin(p)+Math.cos(a)*Math.cos(p)*Math.cos(A);
+return Math.asin(Math.max(-1,Math.min(1,s)))*R2D;
+}
+
+function angleSepAltAz(a1,z1,a2,z2){
+const r1=a1*D2R,r2=a2*D2R,dz=(z1-z2)*D2R;
+const c=Math.sin(r1)*Math.sin(r2)+Math.cos(r1)*Math.cos(r2)*Math.cos(dz);
+return Math.acos(Math.max(-1,Math.min(1,c)))*R2D;
+}
+
+function sampledFovDeclinations(){
+const lat=Number.isFinite(currentLat)?currentLat:parseFloat($("#inLat")?.value);
+if(!Number.isFinite(lat))return[];
+const f=getFovSettings();
+const center=shootingCenterAltAz();
+const tx=Math.tan((f.hFov/2)*D2R);
+const ty=Math.tan((f.vFov/2)*D2R);
+const vals=[];
+for(let iy=-2;iy<=2;iy++){
+for(let ix=-2;ix<=2;ix++){
+const aa=viewTangentPoint(center.alt,center.az,tx*(ix/2),ty*(iy/2));
+if(aa.alt<0)continue;
+vals.push({dec:declinationFromAltAz(aa.alt,aa.az,lat),alt:aa.alt,az:aa.az});
+}
+}
+return vals;
+}
+
+function trailDeclinationDeg(){
+const lat=Number.isFinite(currentLat)?currentLat:parseFloat($("#inLat")?.value);
+if(!Number.isFinite(lat))return 0;
+const center=shootingCenterAltAz();
+if($("#astroTrailBasis")?.value==="center"){
+return declinationFromAltAz(center.alt,center.az,lat);
+}
+const vals=sampledFovDeclinations();
+if(!vals.length)return declinationFromAltAz(center.alt,center.az,lat);
+let best=vals[0].dec;
+for(const v of vals){
+if(Math.abs(v.dec)<Math.abs(best))best=v.dec;
+}
+return best;
+}
+
+function pointStarExposureFor(focal,allowedPixels,decDeg){
+const c=getAstroCameraSettings();
+const pixelScale=206.265*c.pitchMicron/focal;
+const speed=15.041067*Math.max(0.03,Math.cos(Math.abs(decDeg)*D2R));
+return allowedPixels*pixelScale/speed;
+}
+
+const ASTRO_SHUTTER_STEPS=[
+1/8000,1/6400,1/5000,1/4000,1/3200,1/2500,1/2000,1/1600,1/1250,1/1000,
+1/800,1/640,1/500,1/400,1/320,1/250,1/200,1/160,1/125,1/100,1/80,1/60,
+1/50,1/40,1/30,1/25,1/20,1/15,1/13,1/10,1/8,1/6,1/5,1/4,0.3,0.4,0.5,
+0.6,0.8,1,1.3,1.6,2,2.5,3,4,5,6,8,10,13,15,20,25,30,60,90,120,180,240,300,600,900
+];
+
+function safeShutterStep(seconds){
+let out=ASTRO_SHUTTER_STEPS[0];
+for(const s of ASTRO_SHUTTER_STEPS){
+if(s<=seconds+1e-9)out=s;else break;
+}
+return out;
+}
+
+function formatShutter(s){
+if(!Number.isFinite(s)||s<=0)return"—";
+if(s<1){
+const d=Math.round(1/s);
+return `1/${d}秒`;
+}
+if(s<10&&Math.abs(s-Math.round(s))>.05)return `${s.toFixed(1)}秒`;
+return `${Math.round(s)}秒`;
+}
+
+function formatDuration(sec){
+if(!Number.isFinite(sec)||sec<0)return"—";
+const s=Math.round(sec);
+const h=Math.floor(s/3600),m=Math.floor((s%3600)/60),ss=s%60;
+if(h)return `${h}時間${m}分${ss?ss+"秒":""}`;
+if(m)return `${m}分${ss?ss+"秒":""}`;
+return `${ss}秒`;
+}
+
+function npfExposureSeconds(focal,aperture){
+const c=getAstroCameraSettings();
+return (35*aperture+30*c.pitchMicron)/focal;
+}
+
+function angularSeparationRaDec(ra1,dec1,ra2,dec2){
+const d1=dec1*D2R,d2=dec2*D2R,dr=(ra1-ra2)*D2R;
+const c=Math.sin(d1)*Math.sin(d2)+Math.cos(d1)*Math.cos(d2)*Math.cos(dr);
+return Math.acos(Math.max(-1,Math.min(1,c)))*R2D;
+}
+
+function updateAstroPhotoTools(){
+const f=getFovSettings();
+const dec=trailDeclinationDeg();
+const aperture=Math.max(.7,parseFloat($("#astroAperture")?.value)||1.8);
+const strict=pointStarExposureFor(f.focal,1.5,dec);
+const practical=pointStarExposureFor(f.focal,2.5,dec);
+const npf=npfExposureSeconds(f.focal,aperture);
+const rule500=500/f.focal;
+
+const strictStep=safeShutterStep(strict);
+const practicalStep=safeShutterStep(practical);
+
+if($("#astroStrictSS"))$("#astroStrictSS").textContent=formatShutter(strictStep);
+if($("#astroPracticalSS"))$("#astroPracticalSS").textContent=formatShutter(practicalStep);
+if($("#astroNpfSS"))$("#astroNpfSS").textContent=formatShutter(safeShutterStep(npf));
+if($("#astro500SS"))$("#astro500SS").textContent=formatShutter(safeShutterStep(rule500));
+
+const c=getAstroCameraSettings();
+const center=shootingCenterAltAz();
+const centerLat=Number.isFinite(currentLat)?currentLat:parseFloat($("#inLat")?.value);
+const centerDec=Number.isFinite(centerLat)?declinationFromAltAz(center.alt,center.az,centerLat):0;
+const basis=$("#astroTrailBasis")?.value==="center"?"写野中心":"写野内で最も日周運動が速い領域";
+if($("#astroDirectionInfo")){
+$("#astroDirectionInfo").innerHTML=`${c.name} / ${f.focal}mm / F${aperture.toFixed(1)} / 画素ピッチ ${c.pitchMicron.toFixed(2)}µm<br>撮影方向：${azToDir(center.az)}・高度 ${center.alt.toFixed(1)}° / 中心赤緯 ${centerDec.toFixed(1)}° / 判定赤緯 ${dec.toFixed(1)}°（${basis}）<br>計算上限：星像優先 ${strict.toFixed(2)}秒 → 安全側 ${formatShutter(strictStep)}、実用優先 ${practical.toFixed(2)}秒 → ${formatShutter(practicalStep)}`;
+}
+
+const focalSet=[14,20,24,28,35,50,85,105,135];
+if(!focalSet.includes(Math.round(f.focal)))focalSet.push(Math.round(f.focal));
+focalSet.sort((a,b)=>a-b);
+if($("#astroFocalCompare")){
+$("#astroFocalCompare").innerHTML=focalSet.map(mm=>{
+const t=pointStarExposureFor(mm,2.5,dec);
+const s=safeShutterStep(t);
+return `<div class="focal-compare-item ${Math.abs(mm-f.focal)<.5?"current":""}"><b>${mm}mm</b><span>${formatShutter(s)}</span></div>`;
+}).join("");
+}
+
+updateAstroSkyConditions();
+updateContinuousShootingTools();
+}
+
+function updateAstroSkyConditions(){
+const lat=Number.isFinite(currentLat)?currentLat:parseFloat($("#inLat")?.value);
+const lon=Number.isFinite(currentLon)?currentLon:parseFloat($("#inLon")?.value);
+const date=getSkyViewDate();
+if(!Number.isFinite(lat)||!Number.isFinite(lon)||!date||isNaN(date))return;
+const center=shootingCenterAltAz();
+
+const gc={ra:266.41683,dec:-29.00781};
+const gcAA=altAz(gc.ra,gc.dec,lat,lon,date);
+const gcSep=angleSepAltAz(center.alt,center.az,gcAA.alt,gcAA.az);
+if($("#astroMilkyWayStatus")){
+$("#astroMilkyWayStatus").textContent=gcAA.alt>=0?`銀河中心：高度 ${gcAA.alt.toFixed(1)}°`:"銀河中心：地平線下";
+}
+if($("#astroMilkyWayDetail")){
+const near=gcAA.alt<0?"現在は撮影方向に出ていません":gcSep<=Math.max(getFovSettings().hFov,getFovSettings().vFov)/2?"写野付近に銀河中心があります":`写野中心から ${gcSep.toFixed(1)}°`;
+$("#astroMilkyWayDetail").textContent=`${azToDir(gcAA.az)}（${gcAA.az.toFixed(1)}°） / ${near}`;
+}
+
+const moon=moonPosition(toJD(date));
+const moonAA=altAz(moon.ra,moon.dec,lat,lon,date);
+const sep=angleSepAltAz(center.alt,center.az,moonAA.alt,moonAA.az);
+const ph=moonPhaseInfo(date);
+if($("#astroMoonSeparation"))$("#astroMoonSeparation").textContent=`${sep.toFixed(1)}°`;
+if($("#astroMoonSeparationDetail"))$("#astroMoonSeparationDetail").textContent=`月：高度 ${moonAA.alt.toFixed(1)}° / 輝面 ${ph.moonIllum}%`;
+
+let impactScore=0;
+if(moonAA.alt>0){
+const altFactor=Math.max(0,Math.sin(moonAA.alt*D2R));
+const sepFactor=.18+.82*Math.max(0,1-Math.min(sep,120)/120);
+impactScore=(ph.moonIllum/100)*altFactor*sepFactor;
+}
+let label,color,detail;
+if(moonAA.alt<=0){label="ほぼなし";color="#84d0a5";detail="月は地平線下";}
+else if(impactScore<.10){label="小";color="#84d0a5";detail="星景撮影への影響は比較的小さい目安";}
+else if(impactScore<.28){label="中";color="#ffd166";detail="空の明るさやコントラスト低下に注意";}
+else{label="大";color="#f59e8b";detail="淡い天の川・星雲には不利な条件";}
+if($("#astroMoonImpact")){$("#astroMoonImpact").textContent=label;$("#astroMoonImpact").style.color=color;}
+if($("#astroMoonImpactDetail"))$("#astroMoonImpactDetail").textContent=`${detail} / 月齢 ${ph.moonAge}・輝面 ${ph.moonIllum}%・高度 ${moonAA.alt.toFixed(1)}°`;
+}
+
+function updateContinuousShootingTools(){
+const expo=Math.max(.1,parseFloat($("#intervalExposure")?.value)||0);
+const gap=Math.max(0,parseFloat($("#intervalGap")?.value)||0);
+const frames=Math.max(1,Math.floor(parseFloat($("#intervalFrames")?.value)||1));
+const total=frames*expo+Math.max(0,frames-1)*gap;
+if($("#intervalTotalResult"))$("#intervalTotalResult").textContent=`${frames.toLocaleString()}枚 → 約 ${formatDuration(total)}`;
+
+const tlLen=Math.max(.1,parseFloat($("#timelapseLength")?.value)||0);
+const fps=Math.max(1,parseFloat($("#timelapseFps")?.value)||1);
+const interval=Math.max(.1,parseFloat($("#timelapseInterval")?.value)||1);
+const tlFrames=Math.ceil(tlLen*fps);
+const tlSpan=Math.max(0,(tlFrames-1)*interval);
+if($("#timelapseResult"))$("#timelapseResult").textContent=`必要 ${tlFrames.toLocaleString()}枚 / 撮影スパン 約 ${formatDuration(tlSpan)}`;
+
+const deg=Math.max(1,parseFloat($("#trailDegrees")?.value)||1);
+const trailExpo=Math.max(.1,parseFloat($("#trailExposure")?.value)||0);
+const trailGap=Math.max(0,parseFloat($("#trailGap")?.value)||0);
+const trailSec=(deg/15.041067)*3600;
+const trailCycle=trailExpo+trailGap;
+const trailFrames=Math.ceil(trailSec/trailCycle);
+if($("#trailResult"))$("#trailResult").textContent=`${deg.toFixed(0)}° → 約 ${formatDuration(trailSec)} / 約 ${trailFrames.toLocaleString()}枚`;
+
+const mins=Math.max(.1,parseFloat($("#totalShootMinutes")?.value)||0);
+const totalExpo=Math.max(.1,parseFloat($("#totalExposure")?.value)||0);
+const totalGap=Math.max(0,parseFloat($("#totalGap")?.value)||0);
+const cycle=totalExpo+totalGap;
+const possible=Math.max(1,Math.floor((mins*60+totalGap)/cycle));
+if($("#totalFramesResult"))$("#totalFramesResult").textContent=`約 ${possible.toLocaleString()}枚（1サイクル ${cycle.toFixed(1)}秒）`;
+
+const n=Math.max(1,Math.floor(parseFloat($("#stackFrames")?.value)||1));
+const target=Math.max(1,parseFloat($("#stackTarget")?.value)||1);
+const gain=Math.sqrt(n);
+const need=Math.ceil(target*target);
+if($("#stackResult"))$("#stackResult").textContent=`${n}枚 → 理論S/N 約${gain.toFixed(2)}倍 / ${target.toFixed(1)}倍を目指すなら約${need}枚`;
 }
 
 
@@ -5414,6 +6931,302 @@ alt:cp.alt,az:cp.az
 });
 }
 
+function clamp01(v){return Math.max(0,Math.min(1,v));}
+function smoothstep01(v){
+const t=clamp01(v);
+return t*t*(3-2*t);
+}
+function smootherstep01(v){
+const t=clamp01(v);
+return t*t*t*(t*(t*6-15)+10);
+}
+function lerp(a,b,t){return a+(b-a)*clamp01(t);}
+function mixRGB(c1,c2,t){
+const k=smootherstep01(t);
+return[
+Math.round(lerp(c1[0],c2[0],k)),
+Math.round(lerp(c1[1],c2[1],k)),
+Math.round(lerp(c1[2],c2[2],k))
+];
+}
+function rgbCss(c){return`rgb(${c[0]},${c[1]},${c[2]})`;}
+
+function daylightBaseColor(sunAltDeg){
+/*
+  太陽高度に対する空の基調色。
+  -18°以下は天文夜として完全な夜色。
+  -18〜-12°は天文薄明だが、-18°へ近づくほど急速に夜色へ収束。
+  -12〜-6° 航海薄明
+  -6〜0° 市民薄明
+  0°以上 昼光
+*/
+const night=[3,7,17];
+const astroEdge=[4,10,22];
+const nautical=[10,29,55];
+const civil=[25,68,108];
+const day=[61,132,184];
+
+if(sunAltDeg<=-18)return night;
+if(sunAltDeg<=-12){
+/* 天文薄明は「まだ青い空」ではなく、夜色にかなり近い */
+return mixRGB(night,astroEdge,(sunAltDeg+18)/6);
+}
+if(sunAltDeg<=-6)return mixRGB(astroEdge,nautical,(sunAltDeg+12)/6);
+if(sunAltDeg<=0)return mixRGB(nautical,civil,(sunAltDeg+6)/6);
+return mixRGB(civil,day,Math.min(1,sunAltDeg/12));
+}
+
+function daylightLimitingMagnitude(sunAltDeg,userMaxMag){
+/*
+  視覚表現用の簡易モデル。
+  昼でも1等級以上（mag <= 1.0）の星は残す。
+  -18°以下ではユーザー設定上限まで完全復帰。
+*/
+if(sunAltDeg<=-18)return userMaxMag;
+
+let skyLimit;
+if(sunAltDeg<=-12){
+  /* -18°で完全復帰、-12°でも4等級前後まで */
+  skyLimit=lerp(userMaxMag,4.0,smootherstep01((sunAltDeg+18)/6));
+}else if(sunAltDeg<=-6){
+  skyLimit=lerp(4.0,2.2,smootherstep01((sunAltDeg+12)/6));
+}else if(sunAltDeg<=0){
+  skyLimit=lerp(2.2,1.0,smootherstep01((sunAltDeg+6)/6));
+}else{
+  /* 日中も1等級以上は残す */
+  skyLimit=1.0;
+}
+return Math.min(userMaxMag,skyLimit);
+}
+
+function daylightTwilightStrength(sunAltDeg){
+/* -18°以下は昼光効果ゼロ。境界をなめらかに立ち上げる。 */
+if(sunAltDeg<=-18)return 0;
+if(sunAltDeg>=0)return 1;
+return smootherstep01((sunAltDeg+18)/18);
+}
+
+function beginDaylightSkyClip(ctx,cx,cy,R){
+ctx.save();
+
+if(SKY_PROJECTION==="allsky"){
+  const mapCx=cx+SKY_PAN_X;
+  const mapCy=cy+SKY_PAN_Y;
+  const mapR=R*SKY_ZOOM;
+  ctx.beginPath();
+  ctx.arc(mapCx,mapCy,mapR,0,Math.PI*2);
+  ctx.clip();
+  return;
+}
+
+/* 地平星図：地平線より上だけを昼光対象にする */
+const viewportHalf=R*1.06;
+const left=cx-viewportHalf;
+const right=cx+viewportHalf;
+const top=cy-viewportHalf;
+const bottom=cy+viewportHalf;
+
+const horizon=[];
+for(let d=-120;d<=120;d+=1){
+  const az=SKY_PERSPECTIVE_AZ+d;
+  const p=skyProjectAltAz(0,az,cx,cy,R,false);
+  if(p && Number.isFinite(p.x) && Number.isFinite(p.y)){
+    horizon.push({x:p.x,y:p.y});
+  }
+}
+
+if(horizon.length>=2){
+  horizon.sort((a,b)=>a.x-b.x);
+  ctx.beginPath();
+  ctx.moveTo(left,top);
+  ctx.lineTo(right,top);
+  ctx.lineTo(right,Math.min(bottom,horizon[horizon.length-1].y));
+  for(let i=horizon.length-1;i>=0;i--){
+    ctx.lineTo(horizon[i].x,horizon[i].y);
+  }
+  ctx.lineTo(left,Math.min(bottom,horizon[0].y));
+  ctx.closePath();
+  ctx.clip();
+}else{
+  /*
+    地平線が画面外なら、視線中心高度で判定。
+    高く向いている場合は画面全域が空。
+    低く向いていて地平線が画面外上側なら昼光を描かない。
+  */
+  if(SKY_PERSPECTIVE_ALT>=(SKY_PERSPECTIVE_FOV/2)){
+    ctx.beginPath();
+    ctx.rect(left,top,right-left,bottom-top);
+    ctx.clip();
+  }else{
+    ctx.beginPath();
+    ctx.rect(0,0,0,0);
+    ctx.clip();
+  }
+}
+}
+
+function endDaylightSkyClip(ctx){ctx.restore();}
+
+function drawDaylightBackground(ctx,lat,lon,date,w,h,cx,cy,R){
+const sun=sunPosition(toJD(date));
+const aa=altAz(sun.ra,sun.dec,lat,lon,date);
+const enabled=$("#skyShowDaylight")?.checked;
+
+/* まず円外・地面側を常に従来の夜色で塗る */
+ctx.fillStyle="#030711";
+ctx.fillRect(0,0,w,h);
+
+if(!enabled){
+return{sunAlt:aa.alt,sunAz:aa.az};
+}
+
+const strength=daylightTwilightStrength(aa.alt);
+if(strength<=0){
+return{sunAlt:aa.alt,sunAz:aa.az};
+}
+
+beginDaylightSkyClip(ctx,cx,cy,R);
+
+const base=daylightBaseColor(aa.alt);
+ctx.fillStyle=rgbCss(base);
+ctx.fillRect(0,0,w,h);
+
+/*
+  太陽方向の局所的な明るさ。
+  日没後は太陽高度が下がるほど急速に弱め、
+  -18°で完全に消える。
+*/
+let gx=cx,gy=cy;
+if(SKY_PROJECTION==="allsky"){
+  const edgeR=R*SKY_ZOOM;
+  const a=aa.az*D2R;
+  gx=cx+SKY_PAN_X-edgeR*Math.sin(a);
+  gy=cy+SKY_PAN_Y-edgeR*Math.cos(a);
+}else{
+  const d=((aa.az-SKY_PERSPECTIVE_AZ+540)%360)-180;
+  const horizontal=Math.max(-1.25,Math.min(1.25,d/(SKY_PERSPECTIVE_FOV/2)));
+  gx=cx+horizontal*R*.82;
+  const altVisual=Math.max(-18,Math.min(40,aa.alt));
+  gy=cy+R*.78-(altVisual/58)*R*1.15;
+}
+
+const sunAbove=Math.max(0,Math.min(1,(aa.alt+1)/13));
+const twilightWarm=Math.max(0,1-Math.abs(aa.alt+3)/15);
+const alpha=(0.04+0.26*strength)*(0.35+0.65*Math.max(sunAbove,twilightWarm));
+const radius=Math.max(w,h)*(aa.alt>0?.72:.58);
+
+const grad=ctx.createRadialGradient(gx,gy,0,gx,gy,radius);
+if(aa.alt<=3){
+  grad.addColorStop(0,`rgba(255,181,103,${alpha.toFixed(3)})`);
+  grad.addColorStop(.28,`rgba(255,205,143,${(alpha*.55).toFixed(3)})`);
+  grad.addColorStop(.68,`rgba(132,171,207,${(alpha*.16).toFixed(3)})`);
+  grad.addColorStop(1,"rgba(80,130,180,0)");
+}else{
+  grad.addColorStop(0,`rgba(151,210,255,${alpha.toFixed(3)})`);
+  grad.addColorStop(.42,`rgba(113,184,239,${(alpha*.48).toFixed(3)})`);
+  grad.addColorStop(1,"rgba(90,170,230,0)");
+}
+ctx.fillStyle=grad;
+ctx.fillRect(0,0,w,h);
+
+endDaylightSkyClip(ctx);
+return{sunAlt:aa.alt,sunAz:aa.az};
+}
+
+function moonPhaseBrightnessRelative(date){
+/*
+  月相による明るさは輝面率に比例しない。
+  月の位相角 alpha を使った簡易的な月面位相関数で、
+  満月を1とした相対光量を求める。
+*/
+const ph=moonPhaseInfo(date);
+const k=clamp01((ph.moonIllum||0)/100);
+const alpha=Math.acos(Math.max(-1,Math.min(1,2*k-1)))*R2D;
+const deltaMag=0.026*Math.abs(alpha)+4e-9*Math.pow(alpha,4);
+const relative=Math.pow(10,-0.4*deltaMag);
+return{relative,illum:ph.moonIllum,age:ph.moonAge,phase:ph.moonPhase,alpha};
+}
+
+function drawMoonlightBackground(ctx,lat,lon,date,w,h,cx,cy,R,sunAltDeg){
+const moon=moonPosition(toJD(date));
+const aa=altAz(moon.ra,moon.dec,lat,lon,date);
+const enabled=$("#skyShowMoonlight")?.checked;
+const phase=moonPhaseBrightnessRelative(date);
+
+const darkness=sunAltDeg<=-18
+?1
+:sunAltDeg>=-6
+?0
+:smootherstep01((-sunAltDeg-6)/12);
+
+const altitudeFactor=aa.alt>0
+?Math.pow(Math.max(0,Math.sin(aa.alt*D2R)),0.65)
+:0;
+
+const intensity=phase.relative*altitudeFactor*darkness;
+
+if(!enabled||intensity<=0.001){
+return{
+enabled:false,ra:moon.ra,dec:moon.dec,
+alt:aa.alt,az:aa.az,intensity:0,
+illum:phase.illum,relative:phase.relative
+};
+}
+
+/* 昼光と同様に、全天円内／地平線より上だけに月光を描く */
+beginDaylightSkyClip(ctx,cx,cy,R);
+
+let gx=cx,gy=cy;
+const moonPoint=skyProject(moon.ra,moon.dec,lat,lon,date,cx,cy,R);
+if(moonPoint){
+gx=moonPoint.x;gy=moonPoint.y;
+}else if(SKY_PROJECTION==="allsky"){
+const edgeR=R*SKY_ZOOM;
+const a=aa.az*D2R;
+gx=cx+SKY_PAN_X-edgeR*.92*Math.sin(a);
+gy=cy+SKY_PAN_Y-edgeR*.92*Math.cos(a);
+}else{
+const d=((aa.az-SKY_PERSPECTIVE_AZ+540)%360)-180;
+gx=cx+Math.max(-1.2,Math.min(1.2,d/(SKY_PERSPECTIVE_FOV/2)))*R*.78;
+gy=cy;
+}
+
+/*
+  満月・高高度で最大。
+  月の近傍ほど強く、離れるにつれて緩やかに減衰。
+*/
+const alpha=Math.min(.26,.035+.23*intensity);
+const radius=Math.max(w,h)*(.34+.24*Math.sqrt(intensity));
+const grad=ctx.createRadialGradient(gx,gy,0,gx,gy,radius);
+grad.addColorStop(0,`rgba(205,220,238,${alpha.toFixed(3)})`);
+grad.addColorStop(.18,`rgba(177,202,226,${(alpha*.68).toFixed(3)})`);
+grad.addColorStop(.48,`rgba(121,157,195,${(alpha*.30).toFixed(3)})`);
+grad.addColorStop(1,"rgba(80,115,160,0)");
+ctx.fillStyle=grad;
+ctx.fillRect(0,0,w,h);
+
+endDaylightSkyClip(ctx);
+
+return{
+enabled:true,ra:moon.ra,dec:moon.dec,
+alt:aa.alt,az:aa.az,intensity,
+illum:phase.illum,relative:phase.relative
+};
+}
+
+function moonlightMagnitudeLimit(baseLimit,starRa,starDec,moonState){
+if(!moonState||!moonState.enabled||moonState.intensity<=0)return baseLimit;
+const sep=angularSeparationRaDec(starRa,starDec,moonState.ra,moonState.dec);
+
+/*
+  満月近傍ほど暗い星を隠す。
+  遠く離れた空にも弱い全体的な明るさを残す。
+*/
+const local=0.55+2.55*Math.exp(-sep/34);
+const penalty=moonState.intensity*local;
+return Math.max(1.0,baseLimit-penalty);
+}
+
 function renderSkyChart(interactive=false){
 const canvas=$("#skyMapCanvas");
 if(!canvas)return;
@@ -5430,7 +7243,9 @@ canvas.width=Math.round(cssSize*dpr);canvas.height=Math.round(cssSize*dpr);
 const ctx=canvas.getContext("2d");ctx.setTransform(dpr,0,0,dpr,0,0);
 const w=cssSize,h=cssSize,cx=w/2,cy=h/2,R=Math.min(w,h)*0.44;
 SKY_MAP_HITS=[];
-ctx.clearRect(0,0,w,h);ctx.fillStyle="#030711";ctx.fillRect(0,0,w,h);
+ctx.clearRect(0,0,w,h);
+const daylightState=drawDaylightBackground(ctx,lat,lon,date,w,h,cx,cy,R);
+const moonlightState=drawMoonlightBackground(ctx,lat,lon,date,w,h,cx,cy,R,daylightState.sunAlt);
 
 if(SKY_PROJECTION==="perspective"){
 drawPerspectiveGuide(ctx,cx,cy,R);
@@ -5453,7 +7268,10 @@ loadMilkyWayOutline();
 }
 }
 
-const maxMag=parseFloat($("#skyMag").value||"5");
+const userMaxMag=parseFloat($("#skyMag").value||"5");
+const maxMag=$("#skyShowDaylight")?.checked
+?daylightLimitingMagnitude(daylightState.sunAlt,Math.max(userMaxMag,1.0))
+:userMaxMag;
 const pointMap={};
 SKY_STARS.forEach(star=>{
 const p=skyProject(star.ra,star.dec,lat,lon,date,cx,cy,R);
@@ -5485,11 +7303,12 @@ ctx.stroke();
 });
 }
 
-SKY_STARS.forEach(star=>{if(star.mag>maxMag)return;const p=pointMap[star.id];if(!p)return;const rad=Math.max(.7,3.4-(star.mag+1.5)*.45);ctx.fillStyle=star.id==="Betelgeuse"||star.id==="Antares"||star.id==="Aldebaran"?"#ffc0a0":"#f4f7ff";ctx.beginPath();ctx.arc(p.x,p.y,rad,0,Math.PI*2);ctx.fill();SKY_MAP_HITS.push({x:p.x,y:p.y,r:Math.max(7,rad+4),kind:"star",name:star.name,mag:star.mag,alt:p.alt,az:p.az});if(star.mag<=1.3){ctx.fillStyle="#a9bfd3";ctx.font="9px sans-serif";ctx.textAlign="left";ctx.fillText(star.name,p.x+5,p.y-4);}});
+SKY_STARS.forEach(star=>{const localMaxMag=moonlightMagnitudeLimit(maxMag,star.ra,star.dec,moonlightState);if(star.mag>localMaxMag)return;const p=pointMap[star.id];if(!p)return;const rad=Math.max(.7,3.4-(star.mag+1.5)*.45);ctx.fillStyle=star.id==="Betelgeuse"||star.id==="Antares"||star.id==="Aldebaran"?"#ffc0a0":"#f4f7ff";ctx.beginPath();ctx.arc(p.x,p.y,rad,0,Math.PI*2);ctx.fill();SKY_MAP_HITS.push({x:p.x,y:p.y,r:Math.max(7,rad+4),kind:"star",name:star.name,mag:star.mag,alt:p.alt,az:p.az});if(star.mag<=1.3){ctx.fillStyle="#a9bfd3";ctx.font="9px sans-serif";ctx.textAlign="left";ctx.fillText(star.name,p.x+5,p.y-4);}});
 
 /* Western星座線を構成するHIP恒星も表示 */
 Object.values(WESTERN_LINE_STARS).forEach(star=>{
-if(star.mag>maxMag)return;
+const localMaxMag=moonlightMagnitudeLimit(maxMag,star.ra,star.dec,moonlightState);
+if(star.mag>localMaxMag)return;
 const p=pointMap[star.id];
 if(!p)return;
 const rad=Math.max(.55,3.0-(star.mag+1.5)*.38);
@@ -5503,6 +7322,13 @@ SKY_MAP_HITS.push({x:p.x,y:p.y,r:Math.max(5,rad+3),kind:"star",name:`HIP ${star.
 if($("#skyShowNames").checked){
 ctx.fillStyle="rgba(126,184,232,.78)";ctx.font="10px sans-serif";ctx.textAlign="center";
 getSkyConstellationLabels().forEach(c=>{const p=skyProject(c.ra,c.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.fillText(c.name,p.x,p.y);SKY_MAP_HITS.push({x:p.x,y:p.y,r:12,kind:"constellation",name:c.name,alt:p.alt,az:p.az});});
+}
+
+if($("#skyShowSun")?.checked&&$("#skyShowEcliptic")?.checked){
+drawEcliptic(ctx,lat,lon,date,cx,cy,R);
+}
+if($("#skyShowMoon")?.checked&&$("#skyShowLunarPath")?.checked){
+drawLunarPath(ctx,lat,lon,date,cx,cy,R);
 }
 
 if($("#skyShowDSO").checked){
@@ -5574,11 +7400,39 @@ type:"彗星"
 });
 }
 
-if($("#skyShowPlanets").checked){
-const sun=sunPosition(toJD(date)),moon=moonPosition(toJD(date));
-[{name:"太陽",ra:sun.ra,dec:sun.dec,color:"#ffd54f",r:5},{name:"月",ra:moon.ra,dec:moon.dec,color:"#e8e8f0",r:5}].forEach(o=>{const p=skyProject(o.ra,o.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.fillStyle=o.color;ctx.beginPath();ctx.arc(p.x,p.y,o.r,0,Math.PI*2);ctx.fill();ctx.font="10px sans-serif";ctx.textAlign="left";ctx.fillText(o.name,p.x+7,p.y);SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"solar",name:o.name,alt:p.alt,az:p.az});});
-DSO_DB.filter(o=>o.type==="planet").forEach(o=>{const q=planetRaDec(o.planet,toJD(date));const p=skyProject(q.ra,q.dec,lat,lon,date,cx,cy,R);if(!p)return;ctx.strokeStyle="#c084fc";ctx.lineWidth=1.4;ctx.beginPath();ctx.moveTo(p.x,p.y-4);ctx.lineTo(p.x+4,p.y);ctx.lineTo(p.x,p.y+4);ctx.lineTo(p.x-4,p.y);ctx.closePath();ctx.stroke();ctx.fillStyle="#d8b4fe";ctx.font="10px sans-serif";ctx.textAlign="left";ctx.fillText(o.name,p.x+7,p.y);SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"planet",name:o.name,mag:q.mag,alt:p.alt,az:p.az});});
+if($("#skyShowSun")?.checked){
+const sun=sunPosition(toJD(date));
+const p=skyProject(sun.ra,sun.dec,lat,lon,date,cx,cy,R);
+if(p){
+ctx.fillStyle="#ffd54f";ctx.beginPath();ctx.arc(p.x,p.y,5,0,Math.PI*2);ctx.fill();
+ctx.font="10px sans-serif";ctx.textAlign="left";ctx.fillText("太陽",p.x+7,p.y);
+SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"solar",name:"太陽",alt:p.alt,az:p.az});
 }
+}
+
+if($("#skyShowMoon")?.checked){
+const moon=moonPosition(toJD(date));
+const p=skyProject(moon.ra,moon.dec,lat,lon,date,cx,cy,R);
+if(p){
+ctx.fillStyle="#e8e8f0";ctx.beginPath();ctx.arc(p.x,p.y,5,0,Math.PI*2);ctx.fill();
+ctx.font="10px sans-serif";ctx.textAlign="left";ctx.fillText("月",p.x+7,p.y);
+SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"solar",name:"月",alt:p.alt,az:p.az});
+}
+}
+
+if($("#skyShowPlanets")?.checked){
+DSO_DB.filter(o=>o.type==="planet").forEach(o=>{
+const q=planetRaDec(o.planet,toJD(date));
+const p=skyProject(q.ra,q.dec,lat,lon,date,cx,cy,R);
+if(!p)return;
+ctx.strokeStyle="#c084fc";ctx.lineWidth=1.4;
+ctx.beginPath();ctx.moveTo(p.x,p.y-4);ctx.lineTo(p.x+4,p.y);ctx.lineTo(p.x,p.y+4);ctx.lineTo(p.x-4,p.y);ctx.closePath();ctx.stroke();
+ctx.fillStyle="#d8b4fe";ctx.font="10px sans-serif";ctx.textAlign="left";ctx.fillText(o.name,p.x+7,p.y);
+SKY_MAP_HITS.push({x:p.x,y:p.y,r:10,kind:"planet",name:o.name,mag:q.mag,alt:p.alt,az:p.az});
+});
+}
+
+drawFocusedObject(ctx,lat,lon,date,cx,cy,R);
 
 if($("#skyShowFov")?.checked){
 drawCameraFov(ctx,cx,cy,R);
@@ -5590,7 +7444,14 @@ const place=$("#inPlace").value||"指定場所";
 const projectionInfo=SKY_PROJECTION==="perspective"
 ?`地平 / ${azToDir(SKY_PERSPECTIVE_AZ)}向き・仰角${Math.round(SKY_PERSPECTIVE_ALT)}°`
 :"全天 / 北が上・東が左";
-$("#skyMapInfo").textContent=`${date.getFullYear()}年${pad(date.getMonth()+1)}月${pad(date.getDate())}日 ${pad(date.getHours())}:${pad(date.getMinutes())} / ${place} / ${projectionInfo}`;
+const daylightLabel=$("#skyShowDaylight")?.checked
+?daylightState.sunAlt>=0?"昼"
+:daylightState.sunAlt>=-6?"市民薄明"
+:daylightState.sunAlt>=-12?"航海薄明"
+:daylightState.sunAlt>=-18?"天文薄明"
+:"夜"
+:"昼光OFF";
+$("#skyMapInfo").textContent=`${date.getFullYear()}年${pad(date.getMonth()+1)}月${pad(date.getDate())}日 ${pad(date.getHours())}:${pad(date.getMinutes())} / ${place} / ${projectionInfo} / ${daylightLabel}`;
 if($("#skyViewTimeLabel")){
 const offset=getSkyTimeOffsetHours();
 const sign=offset>0?"+":"";
@@ -5600,6 +7461,7 @@ if($("#skyZoomLabel"))$("#skyZoomLabel").textContent=`${Math.round(SKY_ZOOM*100)
 if($("#skyZoomReset"))$("#skyZoomReset").textContent=`${Math.round(SKY_ZOOM*100)}%`;
 syncSkyTimeSlider();
 renderWeatherForDate(date);
+updateAstroPhotoTools();
 }
 }
 
@@ -6687,7 +8549,13 @@ else renderMeteorShowers();
 }
 });
 });
-["skyShowLines","skyShowNames","skyShowPlanets","skyShowDSO","skyShowMeteors"].forEach(id=>{$("#"+id).addEventListener("change",renderSkyChart);});
+["skyShowLines","skyShowNames","skyShowSun","skyShowDaylight","skyShowMoon","skyShowMoonlight","skyShowPlanets","skyShowEcliptic","skyShowLunarPath","skyShowDSO","skyShowMeteors"].forEach(id=>{
+$("#"+id).addEventListener("change",()=>{
+syncSolarPathControls();
+renderSkyChart();
+});
+});
+syncSolarPathControls();
 $("#skyShowSmallBodies").addEventListener("change",function(){
 if(this.checked&&!NIGHT_COMETS.length&&$("#skyMapObjectInfo")){
 $("#skyMapObjectInfo").innerHTML='<b>彗星</b><br>「彗星」タブで「今夜の彗星を取得」を押すと、その夜の彗星を時刻に合わせて星図へ表示できます。';
@@ -6701,11 +8569,44 @@ $("#skyShowMilkyWay").addEventListener("change",()=>{
 if($("#skyShowMilkyWay").checked && !MILKYWAY_OUTLINE_DATA)loadMilkyWayOutline();
 renderSkyChart();
 });
-$("#skyShowFov").addEventListener("change",()=>{updateFovInfo();renderSkyChart();});
+$("#skyShowFov").addEventListener("change",()=>{
+updateFovInfo();
+if($("#skyShowFov").checked&&SKY_PROJECTION!=="perspective"){
+setSkyProjection("perspective");
+}else{
+renderSkyChart();
+}
+});
 $("#skyFovSensor").addEventListener("change",()=>{updateFovInfo();renderSkyChart();});
 $("#skyFovFocal").addEventListener("input",()=>{updateFovInfo();renderSkyChart();});
 $("#skyFovOrientation").addEventListener("change",()=>{updateFovInfo();renderSkyChart();});
+
+refreshAstroCameraPresetOptions();
+$("#astroCameraPreset").addEventListener("change",()=>{
+showAstroCustomEditorForSelection();
 updateFovInfo();
+renderSkyChart();
+});
+["astroCustomName","astroCustomSensorFormat","astroCustomMP","astroAperture","astroTrailBasis"].forEach(id=>{
+$("#"+id)?.addEventListener("input",()=>{updateFovInfo();renderSkyChart();});
+$("#"+id)?.addEventListener("change",()=>{updateFovInfo();renderSkyChart();});
+});
+$("#astroSaveCustomCamera")?.addEventListener("click",persistCurrentAstroCustomCamera);
+$("#astroDeleteCustomCamera")?.addEventListener("click",deleteCurrentAstroCustomCamera);
+showAstroCustomEditorForSelection();
+["intervalExposure","intervalGap","intervalFrames","timelapseLength","timelapseFps","timelapseInterval","trailDegrees","trailExposure","trailGap","totalShootMinutes","totalExposure","totalGap","stackFrames","stackTarget"].forEach(id=>{
+$("#"+id)?.addEventListener("input",updateContinuousShootingTools);
+});
+$("#astroShowMilkyWay")?.addEventListener("click",()=>{
+const cb=$("#skyShowMilkyWay");
+if(cb){
+cb.checked=true;
+if(!MILKYWAY_OUTLINE_DATA)loadMilkyWayOutline();
+renderSkyChart();
+}
+});
+updateFovInfo();
+updateAstroPhotoTools();
 
 $("#skyViewAllSky").addEventListener("click",()=>setSkyProjection("allsky"));
 $("#skyViewPerspective").addEventListener("click",()=>setSkyProjection("perspective"));
@@ -7042,9 +8943,11 @@ $("#noResult").style.display=sorted.length===0?"block":"none";
 sorted.forEach(obj=>{
 const vis=Math.min(100,Math.max(0,(obj.alt/90)*100));const dl=diffLabel(obj.difficulty);
 const card=document.createElement("div");card.className="obj-card";
-card.innerHTML=`<div class="card-header"><div class="card-icon">${obj.icon}</div><div class="card-title"><div class="name">${obj.name}</div><div class="type-row"><span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type}</span><span style="font-size:11px;color:#5a7a9a">${obj.cat||""}</span><span class="diff-badge diff-${obj.difficulty}">${dl.stars} ${dl.text}</span></div></div></div><div class="card-body"><div class="card-row"><span class="badge b-alt">高度 ${obj.alt}°</span><span class="badge b-az">方位 ${obj.azDir}</span><span class="badge b-mag">等級 ${obj.magVal}</span><span class="badge b-dist">${obj.distStr}</span></div><div style="font-size:12px;color:#7ab4d4;margin-top:8px">🔭 ${obj.highlight}</div><div class="visibility-bar"><div class="visibility-fill" style="width:${vis}%"></div></div></div><div class="card-plan-actions"><button type="button" class="reverse-plan-btn">いつ・どこで見る？</button></div>`;
+card.innerHTML=`<div class="card-header"><div class="card-icon">${obj.icon}</div><div class="card-title"><div class="name">${obj.name}</div><div class="type-row"><span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type}</span><span style="font-size:11px;color:#5a7a9a">${obj.cat||""}</span><span class="diff-badge diff-${obj.difficulty}">${dl.stars} ${dl.text}</span></div></div></div><div class="card-body"><div class="card-row"><span class="badge b-alt">高度 ${obj.alt}°</span><span class="badge b-az">方位 ${obj.azDir}</span><span class="badge b-mag">等級 ${obj.magVal}</span><span class="badge b-dist">${obj.distStr}</span></div><div style="font-size:12px;color:#7ab4d4;margin-top:8px">🔭 ${obj.highlight}</div><div class="visibility-bar"><div class="visibility-fill" style="width:${vis}%"></div></div></div><div class="card-plan-actions"><button type="button" class="reverse-plan-btn object-sky-btn">星図で見る</button><button type="button" class="reverse-plan-btn object-reverse-btn">いつ・どこで見る？</button></div>`;
 card.addEventListener("click",()=>showDetail(obj,card));
-const planBtn=card.querySelector(".reverse-plan-btn");
+const skyBtn=card.querySelector(".object-sky-btn");
+skyBtn.addEventListener("click",e=>{e.stopPropagation();focusObjectOnSky(obj);});
+const planBtn=card.querySelector(".object-reverse-btn");
 planBtn.addEventListener("click",e=>{e.stopPropagation();openReversePlanner("object",obj);});
 grid.appendChild(card);
 });
@@ -7079,10 +8982,15 @@ picks.forEach((obj,idx)=>{
 const dl=diffLabel(obj.difficulty);
 const div=document.createElement("div");
 div.className="recommend-card";
-div.innerHTML=`<div class="rec-tag">${getRecommendTag(obj,idx)}</div><div class="r-head"><div class="r-icon">${obj.icon}</div><div><div class="r-title">${obj.name}</div><div class="r-sub">${TYPE_LABEL[obj.type]||obj.type} / 高度 ${obj.alt}° / ${dl.text}</div></div></div><div class="r-text">🔭 ${obj.highlight}<br>${getRecommendComment(obj)}</div>`;
+div.innerHTML=`<div class="rec-tag">${getRecommendTag(obj,idx)}</div><div class="r-head"><div class="r-icon">${obj.icon}</div><div><div class="r-title">${obj.name}</div><div class="r-sub">${TYPE_LABEL[obj.type]||obj.type} / 高度 ${obj.alt}° / ${dl.text}</div></div></div><div class="r-text">🔭 ${obj.highlight}<br>${getRecommendComment(obj)}</div><div class="recommend-actions"><button type="button" class="reverse-plan-btn recommend-sky-btn">星図で表示</button></div>`;
 div.addEventListener("click",()=>{
 const found=currentResults.find(r=>r.id===obj.id) || obj;
 showDetail(found,null);
+});
+div.querySelector(".recommend-sky-btn").addEventListener("click",e=>{
+e.stopPropagation();
+const found=currentResults.find(r=>r.id===obj.id) || obj;
+focusObjectOnSky(found);
 });
 grid.appendChild(div);
 });
@@ -7349,19 +9257,34 @@ ${compareHtml}
 ${extra.length?`<div class="sky-sub">${extra.join(" / ")}</div>`:""}`;
 }
 
+function skyTimeCard(cls,label,dt,sub=""){
+const valid=dt instanceof Date&&!isNaN(dt);
+return `<button type="button" class="sky-card ${cls} sky-time-card${valid?" tappable":""}" ${valid?`data-sky-time="${dt.getTime()}"`:"disabled"}><div class="sky-label">${label}</div><div class="sky-val">${fmtTime(dt)}</div>${sub?`<div class="sky-sub">${sub}</div>`:""}${valid?'<div class="sky-tap-hint">タップで星図をこの時刻へ</div>':""}</button>`;
+}
+
 function renderSkyInfo(lat,lon,date){
 const info=calcSkyInfo(lat,lon,date);
 $("#skyGrid").innerHTML=`
-<div class="sky-card sun"><div class="sky-label">☀️ 日の出</div><div class="sky-val">${fmtTime(info.sunrise)}</div></div>
-<div class="sky-card sun"><div class="sky-label">🌇 日の入り</div><div class="sky-val">${fmtTime(info.sunset)}</div></div>
-<div class="sky-card twilight"><div class="sky-label">🌆 天文薄明 終了（夕）</div><div class="sky-val">${fmtTime(info.astroStart)}</div><div class="sky-sub">この時刻以降が本当の夜</div></div>
-<div class="sky-card twilight"><div class="sky-label">🌅 天文薄明 開始（朝）</div><div class="sky-val">${fmtTime(info.astroEnd)}</div><div class="sky-sub">この時刻まで暗い夜空</div></div>
-<div class="sky-card moon"><div class="sky-label">${info.moonPhase||"🌙"} 月の出</div><div class="sky-val">${fmtTime(info.moonRise)}</div></div>
-<div class="sky-card moon"><div class="sky-label">${info.moonPhase||"🌙"} 月の入り</div><div class="sky-val">${fmtTime(info.moonSet)}</div></div>
+${skyTimeCard("sun","☀️ 日の出",info.sunrise)}
+${skyTimeCard("sun","🌇 日の入り",info.sunset)}
+${skyTimeCard("twilight","🌆 天文薄明 終了（夕）",info.astroStart)}
+${skyTimeCard("twilight","🌅 天文薄明 開始（朝）",info.astroEnd)}
+${skyTimeCard("moon",`${info.moonPhase||"🌙"} 月の出`,info.moonRise)}
+${skyTimeCard("moon",`${info.moonPhase||"🌙"} 月の入り`,info.moonSet)}
 <div class="sky-card moon"><div class="sky-label">🌙 月齢</div><div class="sky-val">${info.moonAge!==null?info.moonAge+"日":"—"}</div><div class="sky-sub">輝面比 ${info.moonIllum!==null?info.moonIllum+"%":"—"}</div></div>
 <div class="sky-card moon"><div class="sky-label">月相</div><div class="sky-val" style="font-size:28px">${info.moonPhase||"—"}</div><div class="sky-sub">${getMoonPhaseName(info.moonAge)}</div></div>
 <div class="sky-card weather" id="skyTonightWeather"></div>
 <div class="sky-card weather-grade" id="skyTonightWeatherGrade"></div>`;
+
+$("#skyGrid").querySelectorAll("[data-sky-time]").forEach(card=>{
+card.addEventListener("click",()=>{
+const ms=Number(card.dataset.skyTime);
+if(!Number.isFinite(ms))return;
+SKY_VIEW_DATE=new Date(ms);
+switchResultTab("skymap");
+requestAnimationFrame(()=>renderSkyChart());
+});
+});
 renderTonightSkyWeather(date);
 }
 const SEASON_CLASS={spring:"s-spring",summer:"s-summer",autumn:"s-autumn",winter:"s-winter",circumpolar:"s-circumpolar"};
@@ -7401,7 +9324,6 @@ card.innerHTML=`
 <button type="button" class="const-sky-btn" data-sky-const="${c.id}">🗺 星図で見る</button>
 <button type="button" class="reverse-plan-btn const-reverse-btn" data-reverse-const="${c.id}">いつ・どこで見る？</button>
 </div>
-<div class="sky-focus-hint">Nicoleの星図へ移動するか、この星座が見やすい日時・場所を逆引きできます。</div>
 `;
 grid.appendChild(card);
 });
@@ -7429,6 +9351,19 @@ if(c)openReversePlanner("constellation",c);
 });
 });
 }
+function toDatetimeLocalValue(date){
+if(!(date instanceof Date)||isNaN(date))return"";
+const p=n=>String(n).padStart(2,"0");
+return`${date.getFullYear()}-${p(date.getMonth()+1)}-${p(date.getDate())}T${p(date.getHours())}:${p(date.getMinutes())}`;
+}
+
+$("#syncResultsToSkyTime").addEventListener("click",()=>{
+const skyDate=getSkyViewDate();
+if(!(skyDate instanceof Date)||isNaN(skyDate))return;
+$("#inDatetime").value=toDatetimeLocalValue(skyDate);
+$("#btnCalc").click();
+});
+
 $("#btnCalc").addEventListener("click",()=>{
 const dtVal=$("#inDatetime").value;
 const lat=parseFloat($("#inLat").value);const lon=parseFloat($("#inLon").value);
