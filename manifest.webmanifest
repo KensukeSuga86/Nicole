@@ -1,0 +1,25 @@
+{
+  "name": "Nicole the Astronavigator",
+  "short_name": "Nicole",
+  "description": "星空の案内人・ニコル。天体観測と星景撮影を支援するWebアプリ。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080c18",
+  "theme_color": "#050b13",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
