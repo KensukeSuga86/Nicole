@@ -2094,12 +2094,17 @@ body.public-info-open{overflow:hidden;}
   <button type="button" class="map-select-btn" id="openMapSelect">🗺 地図から選択</button>
 </div>
 
-<div class="obs-row obs-location-grid">
-  <div class="obs-field"><label>場所名（任意）</label><input type="text" id="inPlace" placeholder="例：帯広"></div>
-  <div class="obs-field"><label>緯度（北緯）</label><input type="number" id="inLat" step="0.000001" placeholder="例：42.923600"></div>
-  <div class="obs-field"><label>経度（東経）</label><input type="number" id="inLon" step="0.000001" placeholder="例：143.196500"></div>
-  <div class="obs-field"><label>標高（m）</label><input type="number" id="inAlt" step="0.1" placeholder="地図から自動取得"></div>
-</div>
+<details class="compact-settings">
+  <summary>場所の詳細（手入力）</summary>
+  <div class="compact-settings-body">
+    <div class="obs-row obs-location-grid">
+      <div class="obs-field"><label>場所名（任意）</label><input type="text" id="inPlace" placeholder="例：帯広"></div>
+      <div class="obs-field"><label>緯度（北緯）</label><input type="number" id="inLat" step="0.000001" placeholder="例：42.923600"></div>
+      <div class="obs-field"><label>経度（東経）</label><input type="number" id="inLon" step="0.000001" placeholder="例：143.196500"></div>
+      <div class="obs-field"><label>標高（m）</label><input type="number" id="inAlt" step="0.1" placeholder="地図から自動取得"></div>
+    </div>
+  </div>
+</details>
 
 <details class="compact-settings">
   <summary>お気に入り地点</summary>
@@ -2264,13 +2269,9 @@ body.public-info-open{overflow:hidden;}
 <div class="skymap-legend"><span>★ 恒星</span><span style="color:#ffd54f">● 太陽</span><span style="color:#e8e8f0">● 月</span><span style="color:#c084fc">◇ 惑星</span><span style="color:#4ade80">□ 星雲・星団・銀河</span><span style="color:#67e8f9">○ 彗星</span><span style="color:#a78bfa">✦ 流星群放射点</span></div>
 <div class="skymap-object-info" id="skyMapObjectInfo">星・惑星・月・主要天体をクリックすると、ここに情報を表示します。</div><div class="skymap-timebar">
 <span class="label">⏱ 星図の時刻</span>
-<button type="button" data-sky-shift="-6">−6h</button>
-<button type="button" data-sky-shift="-3">−3h</button>
 <button type="button" data-sky-shift="-1">−1h</button>
 <button type="button" class="reset" id="skyTimeReset">設定時刻へ戻す</button>
 <button type="button" data-sky-shift="1">+1h</button>
-<button type="button" data-sky-shift="3">+3h</button>
-<button type="button" data-sky-shift="6">+6h</button>
 <span class="skymap-time-now" id="skyViewTimeLabel">—</span>
 
 <div class="skymap-slider-wrap">
@@ -2286,7 +2287,7 @@ body.public-info-open{overflow:hidden;}
 <button type="button" id="skyZoomReset">100%</button>
 <button type="button" id="skyZoomIn" aria-label="拡大">＋</button>
 <span class="skymap-zoom-label" id="skyZoomLabel">100%</span>
-<span class="skymap-zoom-help">ホイール／ピンチで拡大、ドラッグで移動</span>
+<span class="skymap-zoom-help">50〜500%／ホイール・ピンチ対応</span>
 </div>
 
 <details class="weather-panel weather-details" id="weatherPanel">
@@ -3125,7 +3126,7 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;日時欄へ直接入力するほか、「&lt;span class=&quot;manual-emoji&quot;&gt;🌙&lt;/span&gt; 月の満ち欠けから選ぶ」で月相カレンダーから日を選んだり、「現在時刻をセット」で端末の現在時刻を反映したりできます。&lt;/p&gt;
 
           &lt;h4&gt;観測場所&lt;/h4&gt;
-          &lt;p&gt;「現在地を取得」「地図から選択」、または場所名・緯度・経度・標高の手入力が使えます。天体の高度・方位計算では緯度・経度が使われます。&lt;/p&gt;
+          &lt;p&gt;「現在地を取得」「地図から選択」が使えます。場所名・緯度・経度・標高を直接入力する場合は「場所の詳細（手入力）」を開きます。天体の高度・方位計算では緯度・経度が使われます。&lt;/p&gt;
 
           &lt;h4&gt;お気に入り地点&lt;/h4&gt;
           &lt;p&gt;現在の地点へ名前を付けて保存し、あとから呼び出せます。「いつ・どこで見る？」の比較対象にも利用されます。&lt;/p&gt;
@@ -3224,13 +3225,13 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;天の川の輪郭を星図へ投影します。初回取得にはオンライン接続が必要ですが、一度オンラインで接続すれば次回からはオフラインでも使えます。&lt;/p&gt;
 
           &lt;h4&gt;星図の時刻&lt;/h4&gt;
-          &lt;p&gt;−6h、−3h、−1h、+1h、+3h、+6hのボタンと、前後24時間のスライダーで星図だけの時刻を動かせます。「設定時刻へ戻す」で観測条件の時刻へ戻ります。&lt;/p&gt;
+          &lt;p&gt;−1h、+1hのボタンと、前後24時間のスライダーで星図だけの時刻を動かせます。「設定時刻へ戻す」で観測条件の時刻へ戻ります。&lt;/p&gt;
 
           &lt;h4&gt;星図に合わせて更新&lt;/h4&gt;
           &lt;p&gt;星図で時刻を動かしたあと、結果上部の「星図に合わせて更新」を押すと、その星図時刻を観測日時へ反映し、天体・星座・おすすめ・観測スケジュールなどを再計算します。&lt;/p&gt;
 
           &lt;h4&gt;星図ズーム&lt;/h4&gt;
-          &lt;p&gt;＋／−、ホイール、ピンチで拡大・縮小できます。100%表示へ戻すこともできます。&lt;/p&gt;
+          &lt;p&gt;＋／−、ホイール、ピンチで50%〜500%の範囲を拡大・縮小できます。100%表示へ戻すこともできます。&lt;/p&gt;
 
           &lt;h4&gt;星図上の天体&lt;/h4&gt;
           &lt;p&gt;星、惑星、月、主要天体、彗星、流星群放射点などをタップすると、星図下の情報欄へ詳細を表示します。&lt;/p&gt;
@@ -4407,7 +4408,7 @@ const SKY_PERSPECTIVE_FOV=100;
 let SKY_ZOOM=1;
 let SKY_PAN_X=0;
 let SKY_PAN_Y=0;
-const SKY_ZOOM_MIN=1;
+const SKY_ZOOM_MIN=0.5;
 const SKY_ZOOM_MAX=5;
 const SKY_POINTERS=new Map();
 let SKY_GESTURE=null;
