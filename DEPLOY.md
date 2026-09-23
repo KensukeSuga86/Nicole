@@ -1,7 +1,6 @@
-# Nicole the Astronavigator v1.2 deploy
+# Nicole the Astronavigator v1.3 deploy
 
-GitHub Pages の Nicole リポジトリ直下へ、以下を配置してください。
-
+GitHub Pages の Nicole リポジトリ直下へ配置:
 - index.html
 - manifest.webmanifest
 - sw.js
@@ -11,12 +10,11 @@ GitHub Pages の Nicole リポジトリ直下へ、以下を配置してくだ�
 - icon-512.png
 - apple-touch-icon.png
 
-Service Worker のキャッシュ世代は `nicole-pwa-v1.2.0` に更新済みです。
+Service Worker cache: nicole-pwa-v1.3.0
 
-今回の主な追加:
-- 現在時刻追従
-- 星図全画面モード
-- 月明かりを考慮した「今夜のおすすめ」
-- 月相カレンダーから観測日時へ反映
-- 星図の選択天体から天体カード / 星座カードへ移動
-- 有名なアステリズム表示
+v1.3.0 主な変更:
+- 観測条件パネルを現場向けクイックスタート化
+- 起動時から現在時刻を自動設定・追従
+- 現在地取得後、そのまま観測結果を表示
+- 地名・施設名・住所を地図なしで検索して観測地点へ設定
+- 極軸望遠鏡用レクチル表示（北極星時計位置 / 時角 / 極軸高度）

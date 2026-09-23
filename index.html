@@ -1524,6 +1524,183 @@ button.action.sm,
 }
 .compact-settings .obs-limit-grid{margin-top:0}
 
+/* ===== 観測現場向けクイックスタート ===== */
+.obs-quick-start{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-top:4px;
+}
+.obs-quick-note{
+  font-size:11px;
+  color:#7899b3;
+  line-height:1.55;
+}
+.obs-quick-gps{
+  min-height:46px;
+  font-size:14px;
+  font-weight:700;
+}
+.obs-detail-settings{margin-top:10px}
+.obs-detail-settings > summary{
+  min-height:44px;
+  color:#a8cce5;
+  font-size:13px;
+}
+.obs-place-search{
+  margin-bottom:11px;
+  padding:10px;
+  border:1px solid #15324a;
+  border-radius:9px;
+  background:#081521;
+}
+.obs-place-search label{
+  display:block;
+  margin-bottom:6px;
+  font-size:10px;
+  color:#789bb5;
+}
+.obs-place-search-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:7px;
+}
+.obs-place-search-row input{
+  min-width:0;
+}
+.obs-place-search-btn{
+  appearance:none;
+  border:1px solid #315f83;
+  background:#112941;
+  color:#d8efff;
+  border-radius:8px;
+  padding:0 13px;
+  cursor:pointer;
+  font-weight:700;
+}
+.obs-place-search-results{
+  display:none;
+  margin-top:8px;
+  border:1px solid #1b3a54;
+  border-radius:8px;
+  overflow:hidden;
+}
+.obs-place-search-results.show{display:block}
+.obs-place-search-result{
+  display:block;
+  width:100%;
+  text-align:left;
+  padding:9px 10px;
+  border:0;
+  border-bottom:1px solid #152f45;
+  background:#091827;
+  color:#d9edfb;
+  cursor:pointer;
+}
+.obs-place-search-result:last-child{border-bottom:0}
+.obs-place-search-result:hover{background:#10273b}
+.obs-place-search-result .main{font-size:12px;font-weight:700}
+.obs-place-search-result .sub{margin-top:2px;font-size:10px;color:#7799b2;line-height:1.35}
+.obs-place-search-msg{padding:9px 10px;font-size:11px;color:#83a6bd}
+.obs-place-selected{
+  margin-top:7px;
+  min-height:16px;
+  font-size:11px;
+  color:#8fb8d3;
+}
+
+/* ===== 極軸望遠鏡ガイド ===== */
+.polar-panel{
+  margin:12px 0;
+  border:1px solid #1e3b55;
+  border-radius:12px;
+  background:#07121e;
+  overflow:hidden;
+}
+.polar-panel > summary{
+  min-height:46px;
+  display:flex;
+  align-items:center;
+  padding:0 13px;
+  list-style:none;
+  cursor:pointer;
+  color:#a8cfe9;
+  font-weight:700;
+  font-size:13px;
+}
+.polar-panel > summary::-webkit-details-marker{display:none}
+.polar-panel > summary::before{
+  content:"›";
+  margin-right:8px;
+  font-size:20px;
+  color:#5f8cac;
+  transition:transform .15s ease;
+}
+.polar-panel[open] > summary::before{transform:rotate(90deg)}
+.polar-panel[open] > summary{border-bottom:1px solid #163149}
+.polar-body{
+  display:grid;
+  grid-template-columns:minmax(230px,360px) minmax(240px,1fr);
+  gap:14px;
+  padding:12px;
+  align-items:start;
+}
+.polar-reticle-wrap{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#02070c;
+  border:1px solid #18364e;
+  border-radius:12px;
+  padding:10px;
+}
+#polarReticleCanvas{
+  display:block;
+  width:min(100%,340px);
+  height:auto;
+  aspect-ratio:1/1;
+}
+.polar-readout{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+}
+.polar-card{
+  border:1px solid #17334a;
+  border-radius:9px;
+  background:#091724;
+  padding:9px 10px;
+}
+.polar-card .label{font-size:9px;color:#6f92aa}
+.polar-card .value{margin-top:3px;font-size:16px;font-weight:700;color:#d8f0ff}
+.polar-help{
+  grid-column:1/-1;
+  margin-top:2px;
+  padding:9px 10px;
+  border-radius:9px;
+  background:#0b1925;
+  color:#88a9be;
+  font-size:10px;
+  line-height:1.6;
+}
+.polar-controls{
+  grid-column:1/-1;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+  font-size:10px;
+  color:#88a8bd;
+}
+.polar-controls label{
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+@media(max-width:720px){
+  .polar-body{grid-template-columns:1fr}
+}
+
 .sky-dependent{
   padding-left:14px;
   opacity:.82;
@@ -2134,97 +2311,140 @@ body.public-info-open{overflow:hidden;}
 <div class="panel">
 <h2>📍 観測条件を設定</h2>
 
-<div class="obs-section-title">観測日時</div>
-<div class="obs-row obs-row-datetime">
-  <div class="obs-field obs-datetime-field">
-    <label>日時</label>
-    <input type="datetime-local" id="inDatetime">
-  </div>
-  <div class="obs-inline-action">
-    <button type="button" class="moon-date-btn" id="openMoonDatePicker">🌙 月の満ち欠けから選ぶ</button>
-  </div>
-  <div class="obs-inline-action">
-    <button class="action gray" id="btnNow">🕐 現在時刻をセット</button>
-  </div>
+<div class="obs-quick-start">
+  <div class="obs-quick-note">現在時刻を自動設定します。観測現場では現在地を取得するだけで、すぐに今夜の空を表示できます。</div>
+  <button class="loc-btn obs-quick-gps" id="btnGPS">📡 現在地を取得して観測開始</button>
 </div>
 
-<div class="obs-section-title">観測場所</div>
-<div class="obs-row obs-row-location-actions">
-  <button class="loc-btn" id="btnGPS">📡 現在地を取得</button>
-  <button type="button" class="map-select-btn" id="openMapSelect">🗺 地図から選択</button>
-</div>
-
-<details class="compact-settings">
-  <summary>場所の詳細（手入力）</summary>
+<details class="compact-settings obs-detail-settings" id="obsDetailSettings">
+  <summary>⚙️ 詳細設定</summary>
   <div class="compact-settings-body">
-    <div class="obs-row obs-location-grid">
-      <div class="obs-field"><label>場所名（任意）</label><input type="text" id="inPlace" placeholder="例：帯広"></div>
-      <div class="obs-field"><label>緯度（北緯）</label><input type="number" id="inLat" step="0.000001" placeholder="例：42.923600"></div>
-      <div class="obs-field"><label>経度（東経）</label><input type="number" id="inLon" step="0.000001" placeholder="例：143.196500"></div>
-      <div class="obs-field"><label>標高（m）</label><input type="number" id="inAlt" step="0.1" placeholder="地図から自動取得"></div>
-    </div>
-  </div>
-</details>
 
-<details class="compact-settings">
-  <summary>お気に入り地点</summary>
-  <div class="compact-settings-body">
-    <div class="favorite-location-box">
-      <div class="favorite-location-main">
-        <label for="favoriteLocationSelect">登録地点</label>
-        <select id="favoriteLocationSelect">
-          <option value="">お気に入り地点を選択</option>
-        </select>
+    <div class="obs-section-title">観測日時</div>
+    <div class="obs-row obs-row-datetime">
+      <div class="obs-field obs-datetime-field">
+        <label>日時</label>
+        <input type="datetime-local" id="inDatetime">
       </div>
-      <button type="button" class="favorite-location-btn" id="applyFavoriteLocation">この地点を使う</button>
-      <button type="button" class="favorite-location-btn" id="saveFavoriteLocation">☆ 現在の地点を登録</button>
-      <button type="button" class="favorite-location-btn danger" id="deleteFavoriteLocation">削除</button>
-    </div>
-  </div>
-</details>
-
-<details class="compact-settings">
-  <summary>星の見え方</summary>
-  <div class="compact-settings-body">
-    <div class="obs-row obs-limit-grid">
-      <div class="obs-field">
-        <label>最低高度（°）</label>
-        <select id="inMinAlt">
-          <option value="10">10°以上</option>
-          <option value="20" selected>20°以上</option>
-          <option value="30">30°以上</option>
-        </select>
+      <div class="obs-inline-action">
+        <button type="button" class="moon-date-btn" id="openMoonDatePicker">🌙 月の満ち欠けから選ぶ</button>
       </div>
-      <div class="obs-field">
-        <label>等級上限</label>
-        <select id="inMaxMag">
-          <option value="7">〜7等（明るめ）</option>
-          <option value="9">〜9等</option>
-          <option value="11" selected>〜11等（標準）</option>
-          <option value="14">〜14等（全て）</option>
-        </select>
+      <div class="obs-inline-action">
+        <button class="action gray" id="btnNow">🕐 現在時刻をセット</button>
       </div>
     </div>
+
+    <div class="obs-section-title">観測場所</div>
+
+    <div class="obs-place-search">
+      <label for="obsPlaceSearchInput">地名・施設名・住所から選ぶ（地図を開かずに検索）</label>
+      <div class="obs-place-search-row">
+        <input type="search" id="obsPlaceSearchInput" placeholder="例：然別湖 / 十勝岳望岳台 / 帯広駅" autocomplete="off" enterkeyhint="search">
+        <button type="button" class="obs-place-search-btn" id="obsPlaceSearchBtn">検索</button>
+      </div>
+      <div class="obs-place-selected" id="obsPlaceSelected"></div>
+      <div class="obs-place-search-results" id="obsPlaceSearchResults"></div>
+    </div>
+
+    <div class="obs-row obs-row-location-actions">
+      <button type="button" class="map-select-btn" id="openMapSelect">🗺 地図から選択</button>
+    </div>
+
+    <details class="compact-settings">
+      <summary>場所の座標を直接入力</summary>
+      <div class="compact-settings-body">
+        <div class="obs-row obs-location-grid">
+          <div class="obs-field"><label>場所名</label><input type="text" id="inPlace" placeholder="例：帯広"></div>
+          <div class="obs-field"><label>緯度（北緯）</label><input type="number" id="inLat" step="0.000001" placeholder="例：42.923600"></div>
+          <div class="obs-field"><label>経度（東経）</label><input type="number" id="inLon" step="0.000001" placeholder="例：143.196500"></div>
+          <div class="obs-field"><label>標高（m）</label><input type="number" id="inAlt" step="0.1" placeholder="自動取得または手入力"></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="compact-settings">
+      <summary>お気に入り地点</summary>
+      <div class="compact-settings-body">
+        <div class="favorite-location-box">
+          <div class="favorite-location-main">
+            <label for="favoriteLocationSelect">登録地点</label>
+            <select id="favoriteLocationSelect">
+              <option value="">お気に入り地点を選択</option>
+            </select>
+          </div>
+          <button type="button" class="favorite-location-btn" id="applyFavoriteLocation">この地点を使う</button>
+          <button type="button" class="favorite-location-btn" id="saveFavoriteLocation">☆ 現在の地点を登録</button>
+          <button type="button" class="favorite-location-btn danger" id="deleteFavoriteLocation">削除</button>
+        </div>
+      </div>
+    </details>
+
+    <details class="compact-settings">
+      <summary>星の見え方</summary>
+      <div class="compact-settings-body">
+        <div class="obs-row obs-limit-grid">
+          <div class="obs-field">
+            <label>最低高度（°）</label>
+            <select id="inMinAlt">
+              <option value="10">10°以上</option>
+              <option value="20" selected>20°以上</option>
+              <option value="30">30°以上</option>
+            </select>
+          </div>
+          <div class="obs-field">
+            <label>等級上限</label>
+            <select id="inMaxMag">
+              <option value="7">〜7等（明るめ）</option>
+              <option value="9">〜9等</option>
+              <option value="11" selected>〜11等（標準）</option>
+              <option value="14">〜14等（全て）</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <div class="obs-section-title">天体検索</div>
+    <div class="obs-row obs-search-block">
+      <label>🔍 天体・星座を検索（名前・カタログ番号・種類などで検索）</label>
+      <div class="search-bar">
+        <input type="text" id="objSearch" placeholder="例：M13 / アンドロメダ / オリオン座 / 球状星団 ...">
+        <span class="search-count" id="searchCount"></span>
+      </div>
+      <div id="objSearchResult" style="display:none" class="obj-search-result">
+        <h4>🔍 検索結果</h4>
+        <div class="obj-search-list" id="objSearchList"></div>
+      </div>
+    </div>
+
+    <button class="action obs-search-submit" id="btnCalc">🔭 この条件で観測開始</button>
   </div>
 </details>
-
-<div class="obs-section-title">天体検索</div>
-<div class="obs-row obs-search-block">
-  <label>🔍 天体・星座を検索（名前・カタログ番号・種類などで検索）</label>
-  <div class="search-bar">
-    <input type="text" id="objSearch" placeholder="例：M13 / アンドロメダ / オリオン座 / 球状星団 ...">
-    <span class="search-count" id="searchCount"></span>
-  </div>
-  <div id="objSearchResult" style="display:none" class="obj-search-result">
-    <h4>🔍 検索結果</h4>
-    <div class="obj-search-list" id="objSearchList"></div>
-  </div>
-  <button class="action obs-search-submit" id="btnCalc">🔭 天体を検索する</button>
-</div>
 </div>
 
 <div id="resultArea" style="display:none">
 <div class="sky-panel"><h3>🌙 今夜の空情報</h3><div class="sky-grid" id="skyGrid"></div></div>
+
+<details class="polar-panel" id="polarScopePanel">
+  <summary>🧭 極軸望遠鏡ガイド</summary>
+  <div class="polar-body">
+    <div class="polar-reticle-wrap">
+      <canvas id="polarReticleCanvas" width="680" height="680" aria-label="極軸望遠鏡レクチル"></canvas>
+    </div>
+    <div class="polar-readout">
+      <div class="polar-card"><div class="label">北極星 時計位置</div><div class="value" id="polarClockPosition">—</div></div>
+      <div class="polar-card"><div class="label">北極星 時角</div><div class="value" id="polarHourAngle">—</div></div>
+      <div class="polar-card"><div class="label">極軸高度の目安</div><div class="value" id="polarAxisAltitude">—</div></div>
+      <div class="polar-card"><div class="label">観測地点標高</div><div class="value" id="polarSiteElevation">—</div></div>
+      <div class="polar-controls">
+        <label><input type="checkbox" id="polarReticleInvert"> レクチル像を180°反転</label>
+      </div>
+      <div class="polar-help" id="polarGuideText">
+        観測日時・緯度・経度から北極星の位置を計算します。レクチルの0時（12時）を上に合わせ、表示された時計位置へ北極星を置くためのガイドです。
+      </div>
+    </div>
+  </div>
+</details>
 
 <div class="recommend-panel">
 <h3>⭐ 今夜のおすすめ</h3>
@@ -3189,10 +3409,10 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;ニコルは、基本的に「観測日時」と「観測場所」を基準にしています。&lt;/p&gt;
 
           &lt;h4&gt;観測日時&lt;/h4&gt;
-          &lt;p&gt;日時欄へ直接入力するほか、「&lt;span class=&quot;manual-emoji&quot;&gt;🌙&lt;/span&gt; 月の満ち欠けから選ぶ」で月相カレンダーから日を選べます。「現在時刻をセット」を押すと現在時刻への追従が始まり、星図も時間の進行に合わせて更新されます。もう一度押すか日時を手入力すると追従を終了します。&lt;/p&gt;
+          &lt;p&gt;起動時は端末の現在時刻が自動で入り、そのまま現在時刻へ追従します。観測現場では「現在地を取得して観測開始」を押すだけで今夜の空を表示できます。別日時を使う場合は「詳細設定」を開き、日時を直接入力するか、「&lt;span class=&quot;manual-emoji&quot;&gt;🌙&lt;/span&gt; 月の満ち欠けから選ぶ」を使用します。&lt;/p&gt;
 
           &lt;h4&gt;観測場所&lt;/h4&gt;
-          &lt;p&gt;「現在地を取得」「地図から選択」が使えます。場所名・緯度・経度・標高を直接入力する場合は「場所の詳細（手入力）」を開きます。天体の高度・方位計算では緯度・経度が使われます。&lt;/p&gt;
+          &lt;p&gt;観測現場では「現在地を取得して観測開始」が最短です。詳細設定では、地名・施設名・住所を入力して候補から地点を選ぶ方法、地図から選ぶ方法、お気に入り地点、緯度・経度・標高の直接入力が使えます。地名検索は地図を開かずに地点を選べます。&lt;/p&gt;
 
           &lt;h4&gt;お気に入り地点&lt;/h4&gt;
           &lt;p&gt;現在の地点へ名前を付けて保存し、あとから呼び出せます。「いつ・どこで見る？」の比較対象にも利用されます。&lt;/p&gt;
@@ -3675,7 +3895,7 @@ initialManualNightMode();
       <ul>
         <li><strong>天候：</strong><a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>。Free API を利用する場合は同サービスの利用条件および CC BY 4.0 に従います。</li>
         <li><strong>背景地図・標高：</strong><a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener noreferrer">国土地理院・地理院タイル</a>。地理院タイルおよび標高タイルを利用しています。</li>
-        <li><strong>地点検索：</strong><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>／<a href="https://nominatim.org/" target="_blank" rel="noopener noreferrer">Nominatim</a>。</li>
+        <li><strong>地点検索：</strong><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>／<a href="https://nominatim.org/" target="_blank" rel="noopener noreferrer">Nominatim</a>。地図画面だけでなく、観測条件の地名検索にも使用します。</li>
         <li><strong>夜間光：</strong><a href="https://earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA Earthdata / GIBS</a>、Suomi NPP/VIIRS Night Lights を参考表示します。</li>
         <li><strong>彗星・軌道：</strong>独自データベース「星の鳥」と、必要に応じて <a href="https://ssd.jpl.nasa.gov/horizons/" target="_blank" rel="noopener noreferrer">NASA/JPL Horizons</a> 由来の位置情報を利用します。</li>
         <li><strong>星座線データ：</strong><a href="https://github.com/creativival/hipparcos_planetarium_data_creator" target="_blank" rel="noopener noreferrer">hipparcos_planetarium_data_creator</a>（GPLv2。Stellarium 由来データを含む）。</li>
@@ -3715,6 +3935,176 @@ const T=(jd-2451545.0)/36525;
 let g=280.46061837+360.98564736629*(jd-2451545.0)+0.000387933*T*T-T*T*T/38710000;
 return norm360(g);
 }
+function precessJ2000ToDate(raDeg,decDeg,jd){
+const t=(jd-2451545.0)/36525;
+const zeta=(2306.2181*t+0.30188*t*t+0.017998*t*t*t)/3600*D2R;
+const z=(2306.2181*t+1.09468*t*t+0.018203*t*t*t)/3600*D2R;
+const theta=(2004.3109*t-0.42665*t*t-0.041833*t*t*t)/3600*D2R;
+const ra=raDeg*D2R,dec=decDeg*D2R;
+const A=Math.cos(dec)*Math.sin(ra+zeta);
+const B=Math.cos(theta)*Math.cos(dec)*Math.cos(ra+zeta)-Math.sin(theta)*Math.sin(dec);
+const C=Math.sin(theta)*Math.cos(dec)*Math.cos(ra+zeta)+Math.cos(theta)*Math.sin(dec);
+return{
+ra:norm360((Math.atan2(A,B)+z)*R2D),
+dec:Math.asin(Math.max(-1,Math.min(1,C)))*R2D
+};
+}
+
+function formatHourAngle(hours){
+hours=((hours%24)+24)%24;
+let h=Math.floor(hours);
+let m=Math.round((hours-h)*60);
+if(m>=60){h=(h+1)%24;m=0;}
+return`${String(h).padStart(2,"0")}:${String(m).padStart(2,"0")}`;
+}
+
+function formatClock12(hours){
+hours=((hours%12)+12)%12;
+if(hours<1e-8)hours=12;
+let h=Math.floor(hours);
+let m=Math.round((hours-h)*60);
+if(m>=60){h+=1;m=0;}
+if(h>12)h-=12;
+if(h===0)h=12;
+return`${String(h).padStart(2,"0")}:${String(m).padStart(2,"0")}`;
+}
+
+function polarisReticleInfo(date,lat,lon,invert=false){
+const jd=toJD(date);
+/* Polaris J2000.0: α UMi */
+const polaris=precessJ2000ToDate(37.95456067,89.26410897,jd);
+const lst=norm360(gmst(jd)+lon);
+const haDeg=norm360(lst-polaris.ra);
+const haHours=haDeg/15;
+
+/* 北天の空を正立の時計盤として見た時計位置。
+   HA 0h = 12時、6h = 9時、12h = 6時、18h = 3時。 */
+let clockHours=((24-haHours)/2)%12;
+if(invert)clockHours=(clockHours+6)%12;
+const clockAngle=clockHours/12*Math.PI*2;
+
+return{
+ra:polaris.ra,
+dec:polaris.dec,
+lst,
+haHours,
+clockHours,
+clockAngle,
+axisAltitude:Math.abs(lat)
+};
+}
+
+function drawPolarReticle(info){
+const canvas=$("#polarReticleCanvas");
+if(!canvas||!info)return;
+const ctx=canvas.getContext("2d");
+const w=canvas.width,h=canvas.height,cx=w/2,cy=h/2;
+const R=Math.min(w,h)*0.385;
+ctx.clearRect(0,0,w,h);
+ctx.fillStyle="#02070c";
+ctx.fillRect(0,0,w,h);
+
+ctx.save();
+ctx.translate(cx,cy);
+
+/* outer field */
+ctx.strokeStyle="rgba(130,191,224,.55)";
+ctx.lineWidth=3;
+ctx.beginPath();ctx.arc(0,0,R*1.13,0,Math.PI*2);ctx.stroke();
+
+/* Polaris orbit circles: generic Sky-Watcher/SynScan-style clock guide */
+[1,0.88,0.76].forEach((f,i)=>{
+ctx.strokeStyle=i===1?"rgba(117,211,255,.55)":"rgba(93,152,184,.28)";
+ctx.lineWidth=i===1?3:2;
+ctx.beginPath();ctx.arc(0,0,R*f,0,Math.PI*2);ctx.stroke();
+});
+
+/* cross hair */
+ctx.strokeStyle="rgba(106,169,200,.35)";
+ctx.lineWidth=2;
+ctx.beginPath();ctx.moveTo(-R*1.05,0);ctx.lineTo(R*1.05,0);ctx.stroke();
+ctx.beginPath();ctx.moveTo(0,-R*1.05);ctx.lineTo(0,R*1.05);ctx.stroke();
+
+ctx.font="600 30px sans-serif";
+ctx.fillStyle="#8fc8e8";
+ctx.textAlign="center";
+ctx.textBaseline="middle";
+const labels=[
+{t:"12",a:0},{t:"3",a:Math.PI/2},{t:"6",a:Math.PI},{t:"9",a:Math.PI*1.5}
+];
+labels.forEach(o=>{
+const rr=R*1.28;
+const x=Math.sin(o.a)*rr,y=-Math.cos(o.a)*rr;
+ctx.fillText(o.t,x,y);
+});
+
+/* minute/hour ticks */
+for(let i=0;i<60;i++){
+const a=i/60*Math.PI*2;
+const isHour=i%5===0;
+const r1=R*(isHour?1.03:1.07),r2=R*1.12;
+ctx.strokeStyle=isHour?"rgba(149,209,237,.7)":"rgba(100,154,181,.38)";
+ctx.lineWidth=isHour?2.4:1.2;
+ctx.beginPath();
+ctx.moveTo(Math.sin(a)*r1,-Math.cos(a)*r1);
+ctx.lineTo(Math.sin(a)*r2,-Math.cos(a)*r2);
+ctx.stroke();
+}
+
+/* NCP */
+ctx.fillStyle="#d9f4ff";
+ctx.beginPath();ctx.arc(0,0,5,0,Math.PI*2);ctx.fill();
+ctx.font="20px sans-serif";
+ctx.fillStyle="#8ab7ce";
+ctx.fillText("NCP",0,28);
+
+/* Polaris position */
+const pr=R*0.88;
+const x=Math.sin(info.clockAngle)*pr;
+const y=-Math.cos(info.clockAngle)*pr;
+ctx.shadowColor="rgba(255,224,108,.8)";
+ctx.shadowBlur=18;
+ctx.fillStyle="#ffe47c";
+ctx.beginPath();ctx.arc(x,y,12,0,Math.PI*2);ctx.fill();
+ctx.shadowBlur=0;
+ctx.strokeStyle="#fff5b8";
+ctx.lineWidth=3;
+ctx.beginPath();ctx.arc(x,y,18,0,Math.PI*2);ctx.stroke();
+ctx.font="700 24px sans-serif";
+ctx.fillStyle="#ffeaa0";
+ctx.textAlign=x>=0?"left":"right";
+ctx.fillText("Polaris",x+(x>=0?24:-24),y-20);
+
+ctx.restore();
+}
+
+function renderPolarScopeGuide(lat=currentLat,lon=currentLon,date=currentDate){
+const panel=$("#polarScopePanel");
+if(!panel)return;
+if(!Number.isFinite(lat)||!Number.isFinite(lon)||!(date instanceof Date)||isNaN(date)){
+$("#polarClockPosition").textContent="—";
+$("#polarHourAngle").textContent="—";
+return;
+}
+const invert=!!$("#polarReticleInvert")?.checked;
+const info=polarisReticleInfo(date,lat,lon,invert);
+const elev=parseFloat($("#inAlt").value);
+$("#polarClockPosition").textContent=formatClock12(info.clockHours);
+$("#polarHourAngle").textContent=formatHourAngle(info.haHours);
+$("#polarAxisAltitude").textContent=`${info.axisAltitude.toFixed(2)}°`;
+$("#polarSiteElevation").textContent=Number.isFinite(elev)?`${elev.toFixed(0)} m`:"—";
+const place=$("#inPlace").value||"指定場所";
+const p=n=>String(n).padStart(2,"0");
+$("#polarGuideText").innerHTML=
+`<b>${escapeHTML(place)}</b> / 緯度 ${lat.toFixed(5)}° / 経度 ${lon.toFixed(5)}°`
++`${Number.isFinite(elev)?` / 標高 ${elev.toFixed(0)} m`:""}`
++`<br>${date.getFullYear()}-${p(date.getMonth()+1)}-${p(date.getDate())} ${p(date.getHours())}:${p(date.getMinutes())}`
++`<br>レクチルの12時を上に合わせ、北極星を <b>${formatClock12(info.clockHours)}</b> の方向へ置く目安です。`
++` 極軸高度は緯度と同じ約 <b>${info.axisAltitude.toFixed(2)}°</b>。`
++`<br><span style="color:#6f91a8">※ 極軸望遠鏡の像の向き・レクチル仕様は機種や世代で異なります。必要に応じて「180°反転」を使用してください。</span>`;
+drawPolarReticle(info);
+}
+
 function sunPosition(jd){
 const T=(jd-2451545.0)/36525;
 const L0=norm360(280.46646+36000.76983*T+0.0003032*T*T);
@@ -4665,7 +5055,7 @@ renderConstellations(currentDate.getMonth()+1,$("#constSearch")?.value||"");
 const p=n=>String(n).padStart(2,"0");
 $("#resDate").textContent=`${now.getFullYear()}年${p(now.getMonth()+1)}月${p(now.getDate())}日 ${p(now.getHours())}:${p(now.getMinutes())}（現在時刻に追従）`;
 }
-if(!document.hidden)renderSkyChart();
+if(!document.hidden){renderSkyChart();renderPolarScopeGuide(currentLat,currentLon,currentDate);}
 }else{
 SKY_VIEW_DATE=new Date(now);
 }
@@ -5849,6 +6239,105 @@ const box=$("#mapSearchResults");
 if(!box)return;
 box.className="map-search-results";
 box.innerHTML="";
+}
+
+let OBS_PLACE_SEARCH_BUSY=false;
+
+function renderObsPlaceSearchMessage(message,isError=false){
+const box=$("#obsPlaceSearchResults");
+if(!box)return;
+box.className="obs-place-search-results show";
+box.innerHTML=`<div class="obs-place-search-msg"${isError?' style="color:#f87171"':""}>${escapeHTML(message)}</div>`;
+}
+
+function clearObsPlaceSearchResults(){
+const box=$("#obsPlaceSearchResults");
+if(!box)return;
+box.className="obs-place-search-results";
+box.innerHTML="";
+}
+
+async function applyObservationPlaceSearchResult(result){
+const lat=Number(result.lat),lon=Number(result.lon);
+if(!Number.isFinite(lat)||!Number.isFinite(lon))return;
+
+const names=compactSearchName(result);
+$("#inLat").value=lat.toFixed(6);
+$("#inLon").value=lon.toFixed(6);
+$("#inPlace").value=names.main;
+$("#inAlt").value="";
+$("#obsPlaceSelected").textContent=`📍 ${names.main}${names.sub?`（${names.sub}）`:""}`;
+$("#obsPlaceSearchInput").value=names.main;
+clearObsPlaceSearchResults();
+
+if(navigator.onLine){
+try{
+const elev=await fetchGsiElevation(lat,lon);
+$("#inAlt").value=elev.elevation.toFixed(1);
+}catch(e){
+console.warn("地名検索後の標高取得失敗:",e);
+}
+loadWeatherForecast(lat,lon);
+}
+}
+
+async function searchObservationPlace(query){
+query=String(query||"").trim();
+if(!query){
+renderObsPlaceSearchMessage("検索する地名・施設名・住所を入力してください。",true);
+return;
+}
+if(!navigator.onLine){
+renderObsPlaceSearchMessage("地名検索にはインターネット接続が必要です。",true);
+return;
+}
+if(OBS_PLACE_SEARCH_BUSY)return;
+
+OBS_PLACE_SEARCH_BUSY=true;
+const btn=$("#obsPlaceSearchBtn");
+if(btn){btn.disabled=true;btn.textContent="検索中…";}
+renderObsPlaceSearchMessage("検索しています…");
+
+try{
+await waitForNominatimInterval();
+const params=new URLSearchParams({
+q:query,
+format:"jsonv2",
+addressdetails:"1",
+limit:"6",
+countrycodes:"jp",
+"accept-language":"ja"
+});
+const res=await fetch(`${MAP_SEARCH_ENDPOINT}?${params.toString()}`);
+if(!res.ok)throw new Error(`HTTP ${res.status}`);
+const data=await res.json();
+
+if(!Array.isArray(data)||data.length===0){
+renderObsPlaceSearchMessage("該当する場所が見つかりませんでした。");
+return;
+}
+
+const box=$("#obsPlaceSearchResults");
+box.className="obs-place-search-results show";
+box.innerHTML="";
+
+data.forEach(result=>{
+const lat=Number(result.lat),lon=Number(result.lon);
+if(!Number.isFinite(lat)||!Number.isFinite(lon))return;
+const names=compactSearchName(result);
+const b=document.createElement("button");
+b.type="button";
+b.className="obs-place-search-result";
+b.innerHTML=`<div class="main">${escapeHTML(names.main)}</div><div class="sub">${escapeHTML(names.sub)}</div>`;
+b.addEventListener("click",()=>applyObservationPlaceSearchResult(result));
+box.appendChild(b);
+});
+}catch(err){
+renderObsPlaceSearchMessage(`場所検索に失敗しました：${String(err.message||err)}`,true);
+}finally{
+OBS_PLACE_SEARCH_BUSY=false;
+if(btn){btn.disabled=false;btn.textContent="検索";}
+}
 }
 
 async function searchMapLocation(query){
@@ -9089,13 +9578,16 @@ let moonCalBaseDate=new Date();
 let moonDatePickerBaseDate=new Date();
 
 (function(){
-const now=new Date();const p=n=>String(n).padStart(2,"0");
-$("#inDatetime").value=`${now.getFullYear()}-${p(now.getMonth()+1)}-${p(now.getDate())}T21:00`;
+const now=new Date();
+$("#inDatetime").value=toDatetimeLocalValue(now);
 $("#inLat").value=42.9236;
 $("#inLon").value=143.1965;
 $("#inPlace").value="帯広";
 $("#inAlt").value="";
 loadFavoriteLocations();
+
+/* 観測現場では現在時刻を初期値とし、そのまま追従させる */
+setTimeout(()=>startLiveNowMode(),0);
 })();
 
 const LOCS={
@@ -9115,6 +9607,14 @@ $("#inAlt").value="";
 if(navigator.onLine)loadWeatherForecast(l.lat,l.lon);
 });
 });
+$("#obsPlaceSearchBtn").addEventListener("click",()=>searchObservationPlace($("#obsPlaceSearchInput").value));
+$("#obsPlaceSearchInput").addEventListener("keydown",event=>{
+if(event.key==="Enter"){
+event.preventDefault();
+searchObservationPlace($("#obsPlaceSearchInput").value);
+}
+});
+
 $("#btnGPS").addEventListener("click",async()=>{
 if(!navigator.geolocation){
 alert("GPSに対応していません。");
@@ -9150,6 +9650,10 @@ loadWeatherForecast(lat,lon);
 
 btn.disabled=false;
 btn.textContent=originalText;
+
+/* 現場用クイックスタート：取得できた地点でそのまま観測開始 */
+$("#btnCalc").click();
+setTimeout(()=>$("#resultArea")?.scrollIntoView({behavior:"smooth",block:"start"}),80);
 },err=>{
 btn.disabled=false;
 btn.textContent=originalText;
@@ -9173,6 +9677,7 @@ else startLiveNowMode();
 $("#inDatetime").addEventListener("input",()=>{
 if(LIVE_NOW_MODE)stopLiveNowMode();
 });
+$("#polarReticleInvert").addEventListener("change",()=>renderPolarScopeGuide());
 
 $("#saveFavoriteLocation").addEventListener("click",()=>{
 const loc=currentInputLocation();
@@ -10149,6 +10654,7 @@ requestAnimationFrame(()=>renderSkyChart());
 });
 });
 renderTonightSkyWeather(date);
+renderPolarScopeGuide(lat,lon,date);
 }
 const SEASON_CLASS={spring:"s-spring",summer:"s-summer",autumn:"s-autumn",winter:"s-winter",circumpolar:"s-circumpolar"};
 function renderConstellations(month,query){
