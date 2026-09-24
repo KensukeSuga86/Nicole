@@ -1,24 +1,14 @@
-# Nicole the Astronavigator v1.7 deploy
+# Nicole the Astronavigator v1.8.0
+更新対象: index.html / sw.js
+sw.txt は保存しやすい同内容コピーです。
 
-GitHub Pages の Nicole リポジトリ直下へ配置:
-- index.html
-- manifest.webmanifest
-- sw.js
-- favicon.ico
-- icon-32.png
-- icon-192.png
-- icon-512.png
-- apple-touch-icon.png
+※ アイコン類はZIPに含めていません。既存のGitHub上のアイコンをそのまま使用してください。
 
-Service Worker cache: nicole-pwa-v1.7.0
-
-v1.7.0 主な変更:
-- Open-Meteo通常予報を地点ごとに30分キャッシュ
-- JMA MSM / ECMWF IFS / NOAA GFS 比較を地点ごとに2時間キャッシュ
-- 緯度経度を0.001°へ丸め、ほぼ同一地点の重複API通信を抑制
-- 同一地点への同時リクエストを1本へまとめる
-- ブラウザ保存は最大10エントリで古いものから整理
-- 通信失敗時は期限切れキャッシュを「保存済み予報（更新待ち）」として利用
-- クライアント側の自動多重リトライを廃止し、1回の取得に限定
-- Service Worker の保存済み応答もNicole側キャッシュへ取り込み
-- v1.6で発生していた「雨注意文」の変数参照順による実行時エラーを修正
+変更:
+- 追尾モードの高仰角180°反転対策を再設計
+- 画面回転補正
+- 180°ジャンプを直前視線との連続性から補正
+- 追尾専用「⛶ 追尾を全画面」
+- 全天星図は地平円の内側だけ星図操作
+- 円の外側はページスクロール可能
+Service Worker cache: nicole-pwa-v1.8.0
