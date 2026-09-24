@@ -1,4 +1,4 @@
-const CACHE_VERSION="nicole-pwa-v1.5.0";
+const CACHE_VERSION="nicole-pwa-v1.7.0";
 const APP_CACHE=`${CACHE_VERSION}-app`;
 const DATA_CACHE=`${CACHE_VERSION}-data`;
 
@@ -51,15 +51,24 @@ async function markOfflineCache(response){
 
 async function networkFirstData(request){
   const cache=await caches.open(DATA_CACHE);
+  const url=new URL(request.url);
+  const timeoutMs=url.hostname==="api.open-meteo.com"?18000:10000;
   try{
     const controller=new AbortController();
-    const timer=setTimeout(()=>controller.abort(),5000);
-    const fresh=await fetch(request,{signal:controller.signal});
-    clearTimeout(timer);
+    const timer=setTimeout(()=>controller.abort(),timeoutMs);
+    let fresh;
+    try{
+      fresh=await fetch(request,{signal:controller.signal});
+    }finally{
+      clearTimeout(timer);
+    }
     if(fresh && fresh.ok){
       const stored=await withCacheMetadata(fresh);
       if(stored)await cache.put(request,stored.clone());
+      return fresh;
     }
+    const cached=await cache.match(request);
+    if(cached)return markOfflineCache(cached);
     return fresh;
   }catch(error){
     const cached=await cache.match(request);

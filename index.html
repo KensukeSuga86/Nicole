@@ -137,7 +137,7 @@ ul.tips{padding-left:1.4em;margin:6px 0;line-height:1.9;font-size:13px;color:#b8
 
 .skymap-timebar{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:8px 0 10px;padding:8px 10px;background:#081120;border:1px solid #17314d;border-radius:8px;}
 .skymap-timebar .label{font-size:11px;color:#8ab4d4;margin-right:2px;}
-.skymap-timebar button{background:#0d2040;border:1px solid #2a5a8c;color:#9ccbf0;border-radius:6px;padding:5px 9px;font-size:11px;cursor:pointer;}
+.skymap-timebar button{background:#0d2040;border:1px solid #2a5a8c;color:#9ccbf0;border-radius:6px;padding:5px 9px;font-size:11px;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;}
 .skymap-timebar button:hover{background:#1a3a5c;color:#fff;}
 .skymap-timebar .reset{border-color:#4a6a8a;color:#c8dff0;}
 .skymap-time-now{font-size:11px;color:#ffd54f;font-weight:bold;margin-left:auto;}
@@ -479,6 +479,15 @@ footer span{color:#7eb8e8;}
 .skymap-controls .sky-control-mag{
   color:#a9bfd3;
 }
+.sky-outline-status{
+  flex-basis:100%;
+  width:100%;
+  margin-top:1px;
+  font-size:9px;
+  line-height:1.4;
+  color:#6f94b3;
+  text-align:left;
+}
 
 
 .skymap-viewbar{
@@ -514,6 +523,23 @@ text-align:right;
 
 .sky-device-btn.active{background:#173f2c!important;border-color:#4ade80!important;color:#d9ffe8!important;}
 .sky-device-status{font-size:9px;color:#6a8aaa;white-space:nowrap;}
+.skymap-tracking-controls{
+  display:none;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:7px;
+  padding:4px 7px;
+  border:1px solid rgba(74,222,128,.22);
+  border-radius:8px;
+  background:rgba(74,222,128,.045);
+}
+.skymap-tracking-controls.show{display:flex;}
+.sky-tracking-note{font-size:9px;color:#7398ad;}
+#skyViewTracking.active{
+  background:#173f2c!important;
+  border-color:#4ade80!important;
+  color:#d9ffe8!important;
+}
 .pwa-offline-banner{
   display:none;position:sticky;top:0;z-index:5000;
   padding:7px 12px;text-align:center;font-size:11px;
@@ -1588,7 +1614,16 @@ button.action.sm,
   min-height:46px;
   font-size:14px;
   font-weight:700;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  line-height:1.25;
 }
+.obs-start-main{display:block;font-size:14px;font-weight:700;}
+.obs-start-sub{display:block;font-size:9px;font-weight:400;color:#8fb6d0;letter-spacing:.02em;}
+.obs-quick-gps:disabled .obs-start-sub{display:none;}
 .obs-detail-settings{margin-top:10px}
 .obs-detail-settings > summary{
   min-height:44px;
@@ -1746,10 +1781,22 @@ button.action.sm,
   gap:6px;
 }
 .polar-invert-option{
-  white-space:normal;
-  line-height:1.4;
+  display:inline-flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:7px!important;
+  width:auto!important;
+  white-space:nowrap;
+  line-height:1.35;
 }
-.polar-invert-option input{flex:0 0 auto;}
+.polar-invert-option input{
+  flex:0 0 auto;
+  width:16px!important;
+  height:16px!important;
+  margin:0!important;
+}
+.polar-invert-option span{display:inline-block;white-space:nowrap;}
 @media(max-width:720px){
   .polar-body{grid-template-columns:1fr}
 }
@@ -2373,7 +2420,10 @@ body.public-info-open{overflow:hidden;}
       <input type="datetime-local" id="inDatetime">
     </div>
   </div>
-  <button class="loc-btn obs-quick-gps" id="btnGPS">はじめようか天体観測🔭</button>
+  <button class="loc-btn obs-quick-gps" id="btnGPS">
+  <span class="obs-start-main">はじめようか天体観測🔭</span>
+  <span class="obs-start-sub">現在地で観測する</span>
+</button>
 </div>
 
 <details class="compact-settings obs-detail-settings" id="obsDetailSettings">
@@ -2534,6 +2584,7 @@ body.public-info-open{overflow:hidden;}
 <span class="label">🌌 星図表示</span>
 <button type="button" id="skyViewAllSky" class="active">全天</button>
 <button type="button" id="skyViewPerspective">地平</button>
+<button type="button" id="skyViewTracking" class="sky-device-btn" title="端末を空へ向けて星図を追尾">📱 追尾</button>
 <div class="skymap-perspective-controls" id="skyPerspectiveControls">
 <label>向き
 <select id="skyPerspectiveAz">
@@ -2556,8 +2607,10 @@ body.public-info-open{overflow:hidden;}
 <option value="75">75°</option>
 </select>
 </label>
-<button type="button" id="skyDeviceOrientation" class="sky-device-btn" title="端末の向きと見上げ角を星図へ反映">📱 端末連動</button>
-<span class="sky-device-status" id="skyDeviceStatus">手動</span>
+</div>
+<div class="skymap-tracking-controls" id="skyTrackingControls">
+  <span class="sky-device-status" id="skyDeviceStatus">センサー待機中…</span>
+  <span class="sky-tracking-note">端末を空へ向けてください</span>
 </div>
 <span class="skymap-view-hint" id="skyViewHint">天頂を中心に地平線まで表示</span>
 </div>
@@ -2570,7 +2623,6 @@ body.public-info-open{overflow:hidden;}
   <label><input type="checkbox" id="skyShowAsterisms"> 星の目印</label>
   <label><input type="checkbox" id="skyShowMilkyWay"> 天の川</label>
 </div>
-<span id="skyMilkyWayStatus" style="font-size:9px;color:#6f94b3"></span>
 
 <div class="sky-control-group sky-group-solar">
   <label><input type="checkbox" id="skyShowSun" checked> 太陽</label>
@@ -2595,6 +2647,7 @@ body.public-info-open{overflow:hidden;}
 </div>
 
 <label class="sky-control-mag">恒星 <select id="skyMag"><option value="2">2等まで</option><option value="3">3等まで</option><option value="4">4等まで</option><option value="5" selected>5等まで</option><option value="6">6等まで</option></select></label>
+<div class="sky-outline-status" id="skyMilkyWayStatus"></div>
 </div>
 
 <div class="comet-track-bar">
@@ -2850,7 +2903,7 @@ body.public-info-open{overflow:hidden;}
       <div class="polar-card"><div class="label">極軸高度の目安</div><div class="value" id="polarAxisAltitude">—</div></div>
       <div class="polar-card"><div class="label">観測地点標高</div><div class="value" id="polarSiteElevation">—</div></div>
       <div class="polar-controls">
-        <label class="polar-invert-option"><input type="checkbox" id="polarReticleInvert"> レクチル表示を180°回転</label>
+        <label class="polar-invert-option" for="polarReticleInvert"><input type="checkbox" id="polarReticleInvert"><span>レクチルを反転</span></label>
       </div>
       <div class="polar-help" id="polarGuideText">
         観測日時・緯度・経度から北極星の位置を計算します。レクチルの0時（12時）を上に合わせ、表示された時計位置へ北極星を置くためのガイドです。
@@ -3564,7 +3617,7 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;天頂を中心に地平線までを円形に表示します。北が上、東が左です。ズーム時はドラッグして表示位置を移動できます。&lt;/p&gt;
 
           &lt;h4&gt;地平&lt;/h4&gt;
-          &lt;p&gt;実際に空を見上げる感覚に近い表示です。方角と見上げ角を選べるほか、ドラッグ／スワイプで向きを変更できます。「📱 端末連動」をONにすると、対応するスマートフォンやタブレットでは端末の方位・傾きを星図へ反映できます。iPhone / iPadでは初回にセンサー利用の許可が表示されます。磁気センサーの特性上、周囲の金属や磁石の影響で方位がずれる場合があります。高仰角では方位センサーを優先して反転を抑え、約75°までの追尾を想定しています。天頂付近では方位そのものが不安定になりやすいため、完全な追尾は保証されません。&lt;/p&gt;
+          &lt;p&gt;実際に空を見上げる感覚に近い表示です。方角と見上げ角を選べるほか、ドラッグ／スワイプで向きを変更できます。「📱 端末連動」をONにすると、対応するスマートフォンやタブレットでは端末の方位・傾きを星図へ反映できます。iPhone / iPadでは初回にセンサー利用の許可が表示されます。磁気センサーの特性上、周囲の金属や磁石の影響で方位がずれる場合があります。追尾は地平モードとは独立した専用モードです。端末の3次元姿勢から視線方向を連続計算し、低〜中仰角で得たコンパス補正を高仰角でも引き継ぐことで、途中で方位基準が切り替わることによる反転を抑えます。75°付近までを実用範囲として想定し、天頂近くでは方位そのものが不定になりやすい点に注意してください。&lt;/p&gt;
 
           &lt;h4&gt;表示設定&lt;/h4&gt;
           &lt;p&gt;星座線、星座名、星の目印、太陽、黄道、昼光、月、月光、白道、惑星、主要天体、彗星、流星群放射点、天の川、恒星の等級上限を個別に切り替えられます。星の目印では北斗七星、季節の大三角、冬のダイヤモンド、ペガススの四辺形など代表的な星空の目印を表示します。&lt;/p&gt;
@@ -3606,7 +3659,7 @@ body.public-info-open{overflow:hidden;}
         &lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
           &lt;p&gt;星図内の「観測地点の天候」は折りたたみ式です。必要なときだけ展開できます。&lt;/p&gt;
-          &lt;p&gt;Open-Meteoから総雲量、低層・中層・高層雲、降水確率、降水量、気温、湿度、風速、視程などを取得し、観測目安を表示します。&lt;/p&gt;
+          &lt;p&gt;Open-Meteoから総雲量、低層・中層・高層雲、降水確率、降水量、気温、湿度、風速、視程などを取得し、観測目安を表示します。&lt;/p&gt;&lt;p&gt;同じ観測地点では通常予報を30分間、JMA・ECMWF・GFSのモデル比較を2時間保存して再利用し、不要な通信を減らします。通信に失敗した場合は、取得済みデータがあれば「保存済み予報（更新待ち）」として表示します。&lt;/p&gt;
           &lt;p class=&quot;muted&quot;&gt;（オンライン環境でしか使用できません）&lt;/p&gt;
 
           &lt;h4&gt;予報モデル比較&lt;/h4&gt;
@@ -3962,7 +4015,7 @@ initialManualNightMode();
       <h3>プライバシー・位置情報について</h3>
       <p>Nicole the Astronavigator は、アカウント登録を必要とせず、アプリ本体に独自の広告トラッキングや行動解析機能を組み込んでいません。</p>
       <p>「現在地を取得」を使用した場合、ブラウザから取得した緯度・経度は、星図や観測条件の計算に使用されます。天候、地点検索、標高、夜間光、彗星・流星群などオンライン機能を利用すると、観測地点や地図表示に伴う情報が、それぞれの外部サービスまたは Nicole の中継サーバーへ送信される場合があります。</p>
-      <p>お気に入り地点、表示設定、取得済みの一部データなどは、原則として利用中のブラウザの localStorage に保存されます。PWAのオフライン機能では、Service Worker / Cache Storage にアプリ本体や取得済みAPI応答の一部も保存します。ブラウザのサイトデータを削除すると消去されます。</p>
+      <p>お気に入り地点、表示設定、取得済みの一部データなどは、原則として利用中のブラウザの localStorage に保存されます。天候データは同一地点への不要なAPI通信を減らすため、通常予報を30分、予報モデル比較を2時間を目安に再利用します。PWAのオフライン機能では、Service Worker / Cache Storage にアプリ本体や取得済みAPI応答の一部も保存します。ブラウザのサイトデータを削除すると消去されます。</p>
       <p>「端末連動」を使用する場合、ブラウザの端末方位・傾きセンサーを読み取り、星図の表示方向に利用します。Nicoleはこのセンサー値を独自サーバーへ送信する処理を行いません。</p>
       <div class="public-info-note">位置情報を外部へ送信したくない場合は「現在地を取得」を使わず、必要なオンライン機能を利用しないでください。ブラウザや各外部サービス側でアクセス記録等が保存される場合があります。</div>
 
@@ -4176,7 +4229,7 @@ $("#polarGuideText").innerHTML=
 +`<br>${date.getFullYear()}-${p(date.getMonth()+1)}-${p(date.getDate())} ${p(date.getHours())}:${p(date.getMinutes())}`
 +`<br>レクチルの12時を上に合わせ、北極星を <b>${formatClock12(info.clockHours)}</b> の方向へ置く目安です。`
 +` 極軸高度は緯度と同じ約 <b>${info.axisAltitude.toFixed(2)}°</b>。`
-+`<br><span style="color:#6f91a8">※ 極軸望遠鏡の像の向き・レクチル仕様は機種や世代で異なります。必要に応じて「レクチル表示を180°回転」を使用してください。</span>`;
++`<br><span style="color:#6f91a8">※ 極軸望遠鏡の像の向き・レクチル仕様は機種や世代で異なります。必要に応じて「レクチルを反転」を使用してください。</span>`;
 drawPolarReticle(info);
 }
 
@@ -5009,6 +5062,8 @@ let SKY_DEVICE_LISTENER_ATTACHED=false;
 let SKY_DEVICE_SMOOTH_AZ=null;
 let SKY_DEVICE_SMOOTH_ALT=null;
 let SKY_DEVICE_LAST_EVENT_AT=0;
+let SKY_TRACKING_AZ_OFFSET=null;
+let SKY_TRACKING_LAST_RAW_AZ=null;
 const SKY_PERSPECTIVE_FOV=100;
 let SKY_ZOOM=1;
 let SKY_PAN_X=0;
@@ -5054,8 +5109,95 @@ let WEATHER_DATA=null;
 let WEATHER_META=null;
 let WEATHER_LOADING=false;
 let WEATHER_MODEL_DATA={};
+let WEATHER_MODEL_META=null;
 let WEATHER_MODEL_LOADING=false;
+
 const WEATHER_ENDPOINT="https://api.open-meteo.com/v1/forecast";
+const WEATHER_FORECAST_CACHE_TTL=30*60*1000;      // 30分
+const WEATHER_MODEL_CACHE_TTL=2*60*60*1000;       // 2時間
+const WEATHER_CACHE_PREFIX="nicole_weather_cache_v3:";
+const WEATHER_CACHE_INDEX_KEY="nicole_weather_cache_index_v3";
+const WEATHER_CACHE_MAX_ENTRIES=10;
+const WEATHER_FORECAST_INFLIGHT=new Map();
+const WEATHER_MODEL_INFLIGHT=new Map();
+
+function weatherLocationKey(lat,lon){
+return `${Number(lat).toFixed(3)},${Number(lon).toFixed(3)}`;
+}
+
+function weatherModelLocationKey(lat,lon,altM){
+const alt=Number.isFinite(Number(altM))?Math.round(Number(altM)/50)*50:0;
+return `${weatherLocationKey(lat,lon)},${alt}`;
+}
+
+function weatherCacheStorageKey(kind,key){
+return `${WEATHER_CACHE_PREFIX}${kind}:${key}`;
+}
+
+function touchWeatherCacheKey(storageKey){
+try{
+  const raw=localStorage.getItem(WEATHER_CACHE_INDEX_KEY);
+  let list=raw?JSON.parse(raw):[];
+  if(!Array.isArray(list))list=[];
+  list=list.filter(x=>x&&x.key!==storageKey);
+  list.push({key:storageKey,touchedAt:Date.now()});
+  while(list.length>WEATHER_CACHE_MAX_ENTRIES){
+    const old=list.shift();
+    if(old?.key)localStorage.removeItem(old.key);
+  }
+  localStorage.setItem(WEATHER_CACHE_INDEX_KEY,JSON.stringify(list));
+}catch(e){}
+}
+
+function writeWeatherCache(kind,key,payload){
+try{
+  const storageKey=weatherCacheStorageKey(kind,key);
+  localStorage.setItem(storageKey,JSON.stringify({
+    savedAt:Date.now(),
+    payload
+  }));
+  touchWeatherCacheKey(storageKey);
+}catch(e){
+  console.warn("weather local cache write failed",e);
+}
+}
+
+function readWeatherCache(kind,key,ttlMs,{allowStale=false}={}){
+try{
+  const storageKey=weatherCacheStorageKey(kind,key);
+  const raw=localStorage.getItem(storageKey);
+  if(!raw)return null;
+  const parsed=JSON.parse(raw);
+  if(!parsed||!Number.isFinite(Number(parsed.savedAt))||!parsed.payload)return null;
+  const ageMs=Math.max(0,Date.now()-Number(parsed.savedAt));
+  const fresh=ageMs<=ttlMs;
+  if(!fresh&&!allowStale)return null;
+  touchWeatherCacheKey(storageKey);
+  return{payload:parsed.payload,savedAt:Number(parsed.savedAt),ageMs,fresh};
+}catch(e){
+  return null;
+}
+}
+
+function weatherSavedLabel(meta){
+if(!meta)return"";
+if(meta.stale)return"保存済み予報（更新待ち） / ";
+if(meta.fromLocalCache||meta.fromOfflineCache)return"保存済み予報 / ";
+return"";
+}
+
+async function fetchWeatherJSON(url,timeoutMs=18000){
+const controller=new AbortController();
+const timer=setTimeout(()=>controller.abort(),timeoutMs);
+try{
+  const res=await fetch(url,{cache:"no-store",signal:controller.signal});
+  if(!res.ok)throw new Error(`HTTP ${res.status}`);
+  const data=await res.json();
+  return{res,data};
+}finally{
+  clearTimeout(timer);
+}
+}
 const WEATHER_COMPARE_MODELS=[
 {id:"jma_msm",label:"JMA MSM"},
 {id:"ecmwf_ifs",label:"ECMWF IFS"},
@@ -5218,23 +5360,33 @@ updateSkyFullscreenButton();
 setTimeout(()=>renderSkyChart(),60);
 }
 
+function isHorizonProjection(){
+return SKY_PROJECTION==="perspective"||SKY_PROJECTION==="tracking";
+}
+
 function updateSkyProjectionUI(){
 const allBtn=$("#skyViewAllSky");
 const pBtn=$("#skyViewPerspective");
+const tBtn=$("#skyViewTracking");
 const controls=$("#skyPerspectiveControls");
+const tracking=$("#skyTrackingControls");
 const hint=$("#skyViewHint");
+
 if(allBtn)allBtn.classList.toggle("active",SKY_PROJECTION==="allsky");
 if(pBtn)pBtn.classList.toggle("active",SKY_PROJECTION==="perspective");
+if(tBtn)tBtn.classList.toggle("active",SKY_PROJECTION==="tracking");
 if(controls)controls.classList.toggle("show",SKY_PROJECTION==="perspective");
+if(tracking)tracking.classList.toggle("show",SKY_PROJECTION==="tracking");
+
 if(hint){
-hint.textContent=SKY_PROJECTION==="perspective"
-?(SKY_DEVICE_MODE?"端末の向き・傾きと連動中":"ドラッグ／スワイプで向き変更")
-:"天頂を中心に地平線まで表示／写野は枠内をドラッグして移動";
+  if(SKY_PROJECTION==="tracking")hint.textContent="端末の姿勢を専用追尾モードで星図へ反映";
+  else if(SKY_PROJECTION==="perspective")hint.textContent="ドラッグ／スワイプで向き変更";
+  else hint.textContent="天頂を中心に地平線まで表示／写野は枠内をドラッグして移動";
 }
 }
 
 function setSkyProjection(mode){
-SKY_PROJECTION=mode==="perspective"?"perspective":"allsky";
+SKY_PROJECTION=(mode==="perspective"||mode==="tracking")?mode:"allsky";
 SKY_ZOOM=1;
 SKY_PAN_X=0;
 SKY_PAN_Y=0;
@@ -5244,14 +5396,9 @@ renderSkyChart();
 
 
 function updateSkyDeviceUI(message=""){
-const btn=$("#skyDeviceOrientation");
 const status=$("#skyDeviceStatus");
-if(btn){
-  btn.classList.toggle("active",SKY_DEVICE_MODE);
-  btn.textContent=SKY_DEVICE_MODE?"📱 端末連動 ON":"📱 端末連動";
-}
 if(status){
-  status.textContent=message||(SKY_DEVICE_MODE?"センサー待機中…":"手動");
+  status.textContent=message||(SKY_DEVICE_MODE?"センサー待機中…":"停止中");
   status.style.color=SKY_DEVICE_MODE?"#86efac":"#6a8aaa";
 }
 updateSkyProjectionUI();
@@ -5264,51 +5411,42 @@ return normalizeAzimuthDeg(previous+d*weight);
 }
 
 function deviceViewingDirection(event){
-let alpha=Number(event.alpha), beta=Number(event.beta), gamma=Number(event.gamma);
-if(!Number.isFinite(beta)||!Number.isFinite(gamma))return null;
+const alpha=Number(event.alpha), beta=Number(event.beta), gamma=Number(event.gamma);
+if(!Number.isFinite(alpha)||!Number.isFinite(beta)||!Number.isFinite(gamma))return null;
 
-const webkitHeading=Number(event.webkitCompassHeading);
-const compassAz=Number.isFinite(webkitHeading)
-  ? normalizeAzimuthDeg(webkitHeading)
-  : (Number.isFinite(alpha)?normalizeAzimuthDeg(360-alpha):null);
-
-if(!Number.isFinite(alpha) && !Number.isFinite(compassAz))return null;
-/* ベクトル計算用alpha。iOSではwebkitCompassHeadingと整合する形へ変換 */
-if(Number.isFinite(webkitHeading))alpha=360-webkitHeading;
-if(!Number.isFinite(alpha))alpha=0;
-
-const a=alpha*Math.PI/180;
-const b=beta*Math.PI/180;
-const g=gamma*Math.PI/180;
+const a=alpha*D2R,b=beta*D2R,g=gamma*D2R;
 const ca=Math.cos(a),sa=Math.sin(a),cb=Math.cos(b),sb=Math.sin(b),cg=Math.cos(g),sg=Math.sin(g);
 
-/* DeviceOrientation の Z-X-Y 回転で端末背面方向を算出。
-   仰角はこのベクトルを使う。 */
+/* 端末背面方向を3次元の視線ベクトルとして直接計算 */
 const east=-(ca*sg + sa*sb*cg);
 const north=-(sa*sg - ca*sb*cg);
 const up=-(cb*cg);
 const len=Math.hypot(east,north,up)||1;
-const z=Math.max(-1,Math.min(1,up/len));
-const alt=Math.asin(z)*180/Math.PI;
-const vectorAz=normalizeAzimuthDeg(Math.atan2(east,north)*180/Math.PI);
 
-/* 天頂へ近づくほど水平投影が小さくなり、ベクトル方位は180°反転しやすい。
-   40°までは従来の投影方位、45°以上はコンパス方位を優先し、間を滑らかにつなぐ。 */
-let az=vectorAz;
-if(Number.isFinite(compassAz)){
-  if(alt>=45){
-    az=compassAz;
-  }else if(alt>40){
-    const t=(alt-40)/5;
-    const d=((compassAz-vectorAz+540)%360)-180;
-    az=normalizeAzimuthDeg(vectorAz+d*t);
+const alt=Math.asin(Math.max(-1,Math.min(1,up/len)))*R2D;
+const rawAz=normalizeAzimuthDeg(Math.atan2(east,north)*R2D);
+
+/*
+  iOSのコンパス値は低〜中仰角で方位補正値を作るためだけに使用。
+  高仰角で別の方位計算へ切り替えないので、途中の180°反転を抑える。
+*/
+const compass=Number(event.webkitCompassHeading);
+if(Number.isFinite(compass)&&alt>=-5&&alt<=50&&Math.abs(gamma)<=55){
+  const target=((normalizeAzimuthDeg(compass)-rawAz+540)%360)-180;
+  if(!Number.isFinite(SKY_TRACKING_AZ_OFFSET))SKY_TRACKING_AZ_OFFSET=target;
+  else{
+    const d=((target-SKY_TRACKING_AZ_OFFSET+540)%360)-180;
+    SKY_TRACKING_AZ_OFFSET+=d*0.035;
   }
 }
-return{az,alt};
+
+const az=normalizeAzimuthDeg(rawAz+(Number.isFinite(SKY_TRACKING_AZ_OFFSET)?SKY_TRACKING_AZ_OFFSET:0));
+SKY_TRACKING_LAST_RAW_AZ=rawAz;
+return{az,alt,rawAz};
 }
 
 function handleSkyDeviceOrientation(event){
-if(!SKY_DEVICE_MODE)return;
+if(!SKY_DEVICE_MODE||SKY_PROJECTION!=="tracking")return;
 const dir=deviceViewingDirection(event);
 if(!dir)return;
 
@@ -5317,7 +5455,7 @@ if(!Number.isFinite(SKY_DEVICE_SMOOTH_ALT))SKY_DEVICE_SMOOTH_ALT=dir.alt;
 else SKY_DEVICE_SMOOTH_ALT+=(dir.alt-SKY_DEVICE_SMOOTH_ALT)*0.20;
 
 SKY_PERSPECTIVE_AZ=normalizeAzimuthDeg(SKY_DEVICE_SMOOTH_AZ);
-SKY_PERSPECTIVE_ALT=Math.max(5,Math.min(75,SKY_DEVICE_SMOOTH_ALT));
+SKY_PERSPECTIVE_ALT=Math.max(0,Math.min(85,SKY_DEVICE_SMOOTH_ALT));
 SKY_DEVICE_LAST_EVENT_AT=Date.now();
 syncPerspectiveSelectors();
 updateSkyDeviceUI(`${azToDir(SKY_PERSPECTIVE_AZ)} ${Math.round(SKY_PERSPECTIVE_AZ)}° / 仰角 ${Math.round(SKY_PERSPECTIVE_ALT)}°`);
@@ -5334,11 +5472,14 @@ function disableSkyDeviceOrientation(message="手動"){
 SKY_DEVICE_MODE=false;
 SKY_DEVICE_SMOOTH_AZ=null;
 SKY_DEVICE_SMOOTH_ALT=null;
+SKY_TRACKING_AZ_OFFSET=null;
+SKY_TRACKING_LAST_RAW_AZ=null;
 updateSkyDeviceUI(message);
 }
 
-async function enableSkyDeviceOrientation(){
+async function enableSkyTrackingMode(){
 if(!("DeviceOrientationEvent" in window)){
+  setSkyProjection("perspective");
   updateSkyDeviceUI("この端末ではセンサーを利用できません");
   return;
 }
@@ -5346,28 +5487,25 @@ try{
   if(typeof DeviceOrientationEvent.requestPermission==="function"){
     const permission=await DeviceOrientationEvent.requestPermission();
     if(permission!=="granted"){
+      setSkyProjection("perspective");
       updateSkyDeviceUI("センサー利用が許可されていません");
       return;
     }
   }
-  setSkyProjection("perspective");
   SKY_DEVICE_MODE=true;
   SKY_DEVICE_SMOOTH_AZ=null;
   SKY_DEVICE_SMOOTH_ALT=null;
+  SKY_TRACKING_AZ_OFFSET=null;
+  SKY_TRACKING_LAST_RAW_AZ=null;
   attachSkyDeviceOrientation();
-  updateSkyDeviceUI("端末を空へ向けてください");
+  setSkyProjection("tracking");
+  updateSkyDeviceUI("センサー待機中…");
 }catch(error){
   console.warn("Device orientation permission failed",error);
-  disableSkyDeviceOrientation("センサーを開始できませんでした");
+  SKY_DEVICE_MODE=false;
+  setSkyProjection("perspective");
+  updateSkyDeviceUI("センサーを開始できませんでした");
 }
-}
-
-async function toggleSkyDeviceOrientation(){
-if(SKY_DEVICE_MODE){
-  disableSkyDeviceOrientation();
-  return;
-}
-await enableSkyDeviceOrientation();
 }
 
 function normalizeAzimuthDeg(v){
@@ -5664,43 +5802,88 @@ return result;
 }
 
 async function loadWeatherModelComparison(lat,lon,altM=0){
-WEATHER_MODEL_LOADING=true;
+if(!Number.isFinite(lat)||!Number.isFinite(lon))return;
 
-const common={
-latitude:String(lat),
-longitude:String(lon),
-hourly:"cloud_cover",
-forecast_days:"4",
-timezone:"auto",
-timeformat:"unixtime"
-};
+const locKey=weatherModelLocationKey(lat,lon,altM);
+const cached=readWeatherCache("models",locKey,WEATHER_MODEL_CACHE_TTL);
 
-if(Number.isFinite(Number(altM)))common.elevation=String(Number(altM));
-
-const jobs=WEATHER_COMPARE_MODELS.map(async model=>{
-try{
-const params=new URLSearchParams({...common,models:model.id});
-const res=await fetch(`${WEATHER_ENDPOINT}?${params.toString()}`,{cache:"no-store"});
-if(!res.ok)throw new Error(`HTTP ${res.status}`);
-const servedFromOfflineCache=res.headers.get("X-Nicole-Offline-Cache")==="1";
-const cachedAtHeader=res.headers.get("X-Nicole-Cached-At");
-const data=await res.json();
-if(!data||!data.hourly||!Array.isArray(data.hourly.time))throw new Error("invalid model data");
-return[model.id,data.hourly];
-}catch(e){
-return[model.id,null];
-}
-});
-
-const entries=await Promise.all(jobs);
-WEATHER_MODEL_DATA=Object.fromEntries(entries.filter(([,v])=>v));
-WEATHER_MODEL_LOADING=false;
-
-if(currentDate instanceof Date&&!isNaN(currentDate)){
-renderTonightSkyWeather(currentDate);
-}
+if(cached){
+  WEATHER_MODEL_DATA=cached.payload.data||{};
+  WEATHER_MODEL_META={
+    savedAt:new Date(cached.savedAt),
+    fromLocalCache:true,
+    stale:false,
+    key:locKey
+  };
+  WEATHER_MODEL_LOADING=false;
+  if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
+  return;
 }
 
+if(WEATHER_MODEL_INFLIGHT.has(locKey)){
+  await WEATHER_MODEL_INFLIGHT.get(locKey);
+  return;
+}
+
+const task=(async()=>{
+  WEATHER_MODEL_LOADING=true;
+  const common={
+    latitude:String(Number(lat).toFixed(3)),
+    longitude:String(Number(lon).toFixed(3)),
+    hourly:"cloud_cover",
+    forecast_days:"4",
+    timezone:"auto",
+    timeformat:"unixtime"
+  };
+  if(Number.isFinite(Number(altM)))common.elevation=String(Math.round(Number(altM)));
+
+  try{
+    const jobs=WEATHER_COMPARE_MODELS.map(async model=>{
+      try{
+        const params=new URLSearchParams({...common,models:model.id});
+        const {data}=await fetchWeatherJSON(`${WEATHER_ENDPOINT}?${params.toString()}`,18000);
+        if(!data||!data.hourly||!Array.isArray(data.hourly.time))throw new Error("invalid model data");
+        return[model.id,data.hourly];
+      }catch(e){
+        return[model.id,null];
+      }
+    });
+
+    const entries=await Promise.all(jobs);
+    const usable=Object.fromEntries(entries.filter(([,v])=>v));
+    if(!Object.keys(usable).length)throw new Error("all model requests failed");
+
+    WEATHER_MODEL_DATA=usable;
+    WEATHER_MODEL_META={
+      savedAt:new Date(),
+      fromLocalCache:false,
+      stale:false,
+      key:locKey
+    };
+    writeWeatherCache("models",locKey,{data:usable});
+  }catch(error){
+    const stale=readWeatherCache("models",locKey,WEATHER_MODEL_CACHE_TTL,{allowStale:true});
+    if(stale){
+      WEATHER_MODEL_DATA=stale.payload.data||{};
+      WEATHER_MODEL_META={
+        savedAt:new Date(stale.savedAt),
+        fromLocalCache:true,
+        stale:true,
+        key:locKey
+      };
+    }else{
+      WEATHER_MODEL_DATA={};
+      WEATHER_MODEL_META=null;
+    }
+  }finally{
+    WEATHER_MODEL_LOADING=false;
+    if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
+  }
+})();
+
+WEATHER_MODEL_INFLIGHT.set(locKey,task);
+try{await task;}finally{WEATHER_MODEL_INFLIGHT.delete(locKey);}
+}
 function renderWeatherForDate(date){
 const status=$("#weatherStatus");
 const grid=$("#weatherGrid");
@@ -5745,7 +5928,7 @@ const temp=fmt(row.temperature_2m);
 const rh=fmt(row.relative_humidity_2m);
 
 status.className="weather-status";
-status.textContent=`${WEATHER_META?.fromOfflineCache?"保存済み予報 / ":""}${formatSkyViewDate(date)} に最も近い1時間予報：${weatherCodeJa(row.weather_code)}`;
+status.textContent=`${weatherSavedLabel(WEATHER_META)}${formatSkyViewDate(date)} に最も近い1時間予報：${weatherCodeJa(row.weather_code)}`;
 
 const cells=[
 ["総雲量",cloud===null?"—":`${Math.round(cloud)}%`],
@@ -5778,68 +5961,133 @@ evalEl.style.display="flex";
 
 async function loadWeatherForecast(lat,lon){
 if(!Number.isFinite(lat)||!Number.isFinite(lon)){
-clearWeatherData("緯度・経度を設定すると天候情報を取得します。");
-return;
+  clearWeatherData("緯度・経度を設定すると天候情報を取得します。");
+  return;
 }
 
-WEATHER_LOADING=true;
-renderWeatherForDate(getSkyViewDate());
-
+const locKey=weatherLocationKey(lat,lon);
 const altM=parseFloat($("#inAlt")?$("#inAlt").value:"0");
+
+/* モデル比較も独立した2時間キャッシュを使用 */
 loadWeatherModelComparison(lat,lon,Number.isFinite(altM)?altM:0);
 
-try{
-const params=new URLSearchParams({
-latitude:String(lat),
-longitude:String(lon),
-hourly:[
-"temperature_2m",
-"relative_humidity_2m",
-"precipitation_probability",
-"precipitation",
-"cloud_cover",
-"cloud_cover_low",
-"cloud_cover_mid",
-"cloud_cover_high",
-"visibility",
-"wind_speed_10m",
-"weather_code"
-].join(","),
-wind_speed_unit:"ms",
-forecast_days:"16",
-timezone:"auto",
-timeformat:"unixtime"
-});
-
-const res=await fetch(`${WEATHER_ENDPOINT}?${params.toString()}`,{cache:"no-store"});
-if(!res.ok)throw new Error(`HTTP ${res.status}`);
-const servedFromOfflineCache=res.headers.get("X-Nicole-Offline-Cache")==="1";
-const cachedAtHeader=res.headers.get("X-Nicole-Cached-At");
-const data=await res.json();
-
-if(!data||!data.hourly||!Array.isArray(data.hourly.time)){
-throw new Error("予報データの形式が不正です");
+/* 同一地点の30分以内の予報はOpen-Meteoへ再通信しない */
+const cached=readWeatherCache("forecast",locKey,WEATHER_FORECAST_CACHE_TTL);
+if(cached){
+  const saved=cached.payload;
+  WEATHER_DATA=saved.hourly||null;
+  WEATHER_META={
+    lat,
+    lon,
+    timezone:saved.timezone||"",
+    utcOffset:saved.utcOffset||0,
+    fetchedAt:new Date(cached.savedAt),
+    fromOfflineCache:false,
+    fromLocalCache:true,
+    stale:false,
+    key:locKey
+  };
+  WEATHER_LOADING=false;
+  renderWeatherForDate(getSkyViewDate());
+  if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
+  return;
 }
 
-WEATHER_DATA=data.hourly;
-WEATHER_META={
-lat,
-lon,
-timezone:data.timezone||"",
-utcOffset:data.utc_offset_seconds||0,
-fetchedAt:cachedAtHeader?new Date(cachedAtHeader):new Date(),
-fromOfflineCache:servedFromOfflineCache
-};
-WEATHER_LOADING=false;
-renderWeatherForDate(getSkyViewDate());
-if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
-}catch(err){
-WEATHER_LOADING=false;
-clearWeatherData("天候情報の取得に失敗しました。ネット接続を確認してください。","weather-error");
-if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
-}
+/* 同じ丸め地点への重複通信を1本にまとめる */
+if(WEATHER_FORECAST_INFLIGHT.has(locKey)){
+  await WEATHER_FORECAST_INFLIGHT.get(locKey);
+  return;
 }
 
+const task=(async()=>{
+  WEATHER_LOADING=true;
+  renderWeatherForDate(getSkyViewDate());
+
+  try{
+    const params=new URLSearchParams({
+      latitude:String(Number(lat).toFixed(3)),
+      longitude:String(Number(lon).toFixed(3)),
+      hourly:[
+        "temperature_2m",
+        "relative_humidity_2m",
+        "precipitation_probability",
+        "precipitation",
+        "cloud_cover",
+        "cloud_cover_low",
+        "cloud_cover_mid",
+        "cloud_cover_high",
+        "visibility",
+        "wind_speed_10m",
+        "weather_code"
+      ].join(","),
+      wind_speed_unit:"ms",
+      forecast_days:"16",
+      timezone:"auto",
+      timeformat:"unixtime"
+    });
+
+    const {res,data}=await fetchWeatherJSON(`${WEATHER_ENDPOINT}?${params.toString()}`,18000);
+    const servedFromOfflineCache=res.headers.get("X-Nicole-Offline-Cache")==="1";
+    const cachedAtHeader=res.headers.get("X-Nicole-Cached-At");
+
+    if(!data||!data.hourly||!Array.isArray(data.hourly.time)){
+      throw new Error("予報データの形式が不正です");
+    }
+
+    WEATHER_DATA=data.hourly;
+    WEATHER_META={
+      lat,
+      lon,
+      timezone:data.timezone||"",
+      utcOffset:data.utc_offset_seconds||0,
+      fetchedAt:cachedAtHeader?new Date(cachedAtHeader):new Date(),
+      fromOfflineCache:servedFromOfflineCache,
+      fromLocalCache:false,
+      stale:false,
+      key:locKey
+    };
+
+    /* SWから返った保存済み応答でも、Nicole側キャッシュへコピーして次回通信を減らす */
+    writeWeatherCache("forecast",locKey,{
+      hourly:data.hourly,
+      timezone:data.timezone||"",
+      utcOffset:data.utc_offset_seconds||0
+    });
+  }catch(err){
+    /* 30分を超えた保存済み予報でも、通信失敗時は明確に古いと表示して利用 */
+    const stale=readWeatherCache("forecast",locKey,WEATHER_FORECAST_CACHE_TTL,{allowStale:true});
+    if(stale){
+      const saved=stale.payload;
+      WEATHER_DATA=saved.hourly||null;
+      WEATHER_META={
+        lat,
+        lon,
+        timezone:saved.timezone||"",
+        utcOffset:saved.utcOffset||0,
+        fetchedAt:new Date(stale.savedAt),
+        fromOfflineCache:false,
+        fromLocalCache:true,
+        stale:true,
+        key:locKey
+      };
+    }else{
+      WEATHER_DATA=null;
+      WEATHER_META=null;
+    }
+  }finally{
+    WEATHER_LOADING=false;
+    if(WEATHER_DATA){
+      renderWeatherForDate(getSkyViewDate());
+    }else{
+      clearWeatherData("天候情報の取得に失敗しました。再度「観測開始」または地点設定を行うと再取得します。","weather-error");
+    }
+    if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
+  }
+})();
+
+WEATHER_FORECAST_INFLIGHT.set(locKey,task);
+try{await task;}finally{WEATHER_FORECAST_INFLIGHT.delete(locKey);}
+}
 function loadWeatherFromInputs(){
 const lat=parseFloat($("#inLat").value);
 const lon=parseFloat($("#inLon").value);
@@ -7025,7 +7273,7 @@ az:((az%360)+360)%360
 }
 
 function skyProjectAltAz(alt,az,cx,cy,radius,allowBelowHorizon=false){
-if(SKY_PROJECTION==="perspective"){
+if(isHorizonProjection()){
 return perspectiveProjectAltAz(alt,az,cx,cy,radius,allowBelowHorizon);
 }
 if(alt<0)return null;
@@ -7375,7 +7623,7 @@ camInfo.textContent=`${mp}${f.camera.pixelsW}×${f.camera.pixelsH} / 画素ピ�
 }
 
 function shootingCenterAltAz(){
-return SKY_PROJECTION==="perspective"
+return isHorizonProjection()
 ?{alt:SKY_PERSPECTIVE_ALT,az:SKY_PERSPECTIVE_AZ}
 :{alt:SKY_FOV_ALLSKY_ALT,az:SKY_FOV_ALLSKY_AZ};
 }
@@ -7658,7 +7906,7 @@ const aa=viewTangentPoint(centerAlt,centerAz,q.tx,q.ty);
 /* 地平モードでは写野枠のみ地平線下も描く */
 const p=skyProjectAltAz(
 aa.alt,aa.az,cx,cy,R,
-SKY_PROJECTION==="perspective"
+isHorizonProjection()
 );
 
 if(!p){prev=null;continue;}
@@ -7681,8 +7929,8 @@ const tx=Math.tan((f.hFov/2)*D2R);
 const ty=Math.tan((f.vFov/2)*D2R);
 
 /* 全天では独立した写野中心、地平では現在の視線中心 */
-const centerAlt=SKY_PROJECTION==="perspective"?SKY_PERSPECTIVE_ALT:SKY_FOV_ALLSKY_ALT;
-const centerAz=SKY_PROJECTION==="perspective"?SKY_PERSPECTIVE_AZ:SKY_FOV_ALLSKY_AZ;
+const centerAlt=isHorizonProjection()?SKY_PERSPECTIVE_ALT:SKY_FOV_ALLSKY_ALT;
+const centerAz=isHorizonProjection()?SKY_PERSPECTIVE_AZ:SKY_FOV_ALLSKY_AZ;
 
 ctx.save();
 ctx.strokeStyle="rgba(244,114,182,.95)";
@@ -7701,7 +7949,7 @@ SKY_FOV_HIT_POLYGON=SKY_PROJECTION==="allsky"?hitPoly:[];
 ctx.setLineDash([]);
 const center=skyProjectAltAz(
 centerAlt,centerAz,cx,cy,R,
-SKY_PROJECTION==="perspective"
+isHorizonProjection()
 );
 if(center){
 ctx.strokeStyle="rgba(244,114,182,.8)";
@@ -8530,7 +8778,7 @@ ctx.clearRect(0,0,w,h);
 const daylightState=drawDaylightBackground(ctx,lat,lon,date,w,h,cx,cy,R);
 const moonlightState=drawMoonlightBackground(ctx,lat,lon,date,w,h,cx,cy,R,daylightState.sunAlt);
 
-if(SKY_PROJECTION==="perspective"){
+if(isHorizonProjection()){
 drawPerspectiveGuide(ctx,cx,cy,R);
 }else{
 const mapCx=cx+SKY_PAN_X,mapCy=cy+SKY_PAN_Y,mapR=R*SKY_ZOOM;
@@ -8754,8 +9002,10 @@ drawCameraFov(ctx,cx,cy,R);
 if(!interactive){
 const pad=n=>String(n).padStart(2,"0");
 const place=$("#inPlace").value||"指定場所";
-const projectionInfo=SKY_PROJECTION==="perspective"
-?`地平 / ${azToDir(SKY_PERSPECTIVE_AZ)}向き・仰角${Math.round(SKY_PERSPECTIVE_ALT)}°`
+const projectionInfo=isHorizonProjection()
+?(SKY_PROJECTION==="tracking"
+  ?`追尾 / ${azToDir(SKY_PERSPECTIVE_AZ)}向き・仰角${Math.round(SKY_PERSPECTIVE_ALT)}°`
+  :`地平 / ${azToDir(SKY_PERSPECTIVE_AZ)}向き・仰角${Math.round(SKY_PERSPECTIVE_ALT)}°`)
 :"全天 / 北が上・東が左";
 const daylightLabel=$("#skyShowDaylight")?.checked
 ?daylightState.sunAlt>=0?"昼"
@@ -9761,7 +10011,7 @@ return;
 }
 
 const btn=$("#btnGPS");
-const originalText=btn.textContent;
+const originalHTML=btn.innerHTML;
 btn.disabled=true;
 btn.textContent="📡 現在地を取得中…";
 
@@ -9788,14 +10038,14 @@ loadWeatherForecast(lat,lon);
 }
 
 btn.disabled=false;
-btn.textContent=originalText;
+btn.innerHTML=originalHTML;
 
 /* 現場用クイックスタート：取得できた地点でそのまま観測開始 */
 $("#btnCalc").click();
 setTimeout(()=>$("#resultArea")?.scrollIntoView({behavior:"smooth",block:"start"}),80);
 },err=>{
 btn.disabled=false;
-btn.textContent=originalText;
+btn.innerHTML=originalHTML;
 
 let msg="位置情報の取得に失敗しました。";
 if(err&&err.code===1)msg="位置情報の利用が許可されていません。Safariの位置情報設定を確認してください。";
@@ -10000,7 +10250,7 @@ renderSkyChart();
 });
 $("#skyShowFov").addEventListener("change",()=>{
 updateFovInfo();
-if($("#skyShowFov").checked&&SKY_PROJECTION!=="perspective"){
+if($("#skyShowFov").checked&&!isHorizonProjection()){
 setSkyProjection("perspective");
 }else{
 renderSkyChart();
@@ -10038,8 +10288,15 @@ updateFovInfo();
 updateAstroPhotoTools();
 
 $("#skyViewAllSky").addEventListener("click",()=>{disableSkyDeviceOrientation();setSkyProjection("allsky");});
-$("#skyViewPerspective").addEventListener("click",()=>setSkyProjection("perspective"));
-$("#skyDeviceOrientation")?.addEventListener("click",toggleSkyDeviceOrientation);
+$("#skyViewPerspective").addEventListener("click",()=>{disableSkyDeviceOrientation();setSkyProjection("perspective");});
+$("#skyViewTracking")?.addEventListener("click",async()=>{
+  if(SKY_PROJECTION==="tracking"&&SKY_DEVICE_MODE){
+    disableSkyDeviceOrientation();
+    setSkyProjection("perspective");
+    return;
+  }
+  await enableSkyTrackingMode();
+});
 updateSkyDeviceUI();
 $("#skyPerspectiveAz").addEventListener("change",event=>{
 disableSkyDeviceOrientation();
@@ -10061,6 +10318,7 @@ document.querySelectorAll("[data-sky-shift]").forEach(btn=>{
 btn.addEventListener("click",()=>{
 shiftSkyViewTime(Number(btn.dataset.skyShift));
 });
+btn.addEventListener("dblclick",event=>event.preventDefault());
 });
 
 $("#skyTimeReset").addEventListener("click",resetSkyViewTime);
@@ -10178,14 +10436,15 @@ setSkyZoom(SKY_ZOOM*factor,x,y);
 },{passive:false});
 
 skyCanvas.addEventListener("pointerdown",event=>{
-if(SKY_DEVICE_MODE&&SKY_PROJECTION==="perspective")disableSkyDeviceOrientation("手動操作へ切替");
 skyCanvas.setPointerCapture(event.pointerId);
 SKY_POINTERS.set(event.pointerId,{x:event.offsetX,y:event.offsetY});
 SKY_POINTER_MOVED=false;
 skyCanvas.classList.add("dragging");
 
 if(SKY_POINTERS.size===1){
-if(SKY_PROJECTION==="perspective"){
+if(SKY_PROJECTION==="tracking"){
+SKY_GESTURE={type:"trackingtap",startX:event.offsetX,startY:event.offsetY};
+}else if(SKY_PROJECTION==="perspective"){
 SKY_GESTURE={
 type:"rotate",
 startX:event.offsetX,
@@ -10295,7 +10554,7 @@ return;
 SKY_POINTER_MOVED=true;
 const newZoom=clampSkyZoom(SKY_GESTURE.zoom*(dist/SKY_GESTURE.distance));
 
-if(SKY_PROJECTION==="perspective"){
+if(isHorizonProjection()){
 SKY_ZOOM=newZoom;
 requestSkyInteractiveRender();
 }else{
@@ -10318,17 +10577,18 @@ skyCanvas.classList.remove("dragging");
 const finishedGesture=SKY_GESTURE?SKY_GESTURE.type:"";
 SKY_GESTURE=null;
 
-if(SKY_PROJECTION==="perspective"){
-syncPerspectiveSelectors();
+if(isHorizonProjection()){
+if(SKY_PROJECTION==="perspective")syncPerspectiveSelectors();
 updateSkyProjectionUI();
-/* 操作終了時にだけ方角・仰角表示などを更新 */
 renderSkyChart();
 }else if(finishedGesture==="fovmove"){
 renderSkyChart();
 }
 }else if(SKY_POINTERS.size===1){
 const p=[...SKY_POINTERS.values()][0];
-if(SKY_PROJECTION==="perspective"){
+if(SKY_PROJECTION==="tracking"){
+SKY_GESTURE={type:"trackingtap",startX:p.x,startY:p.y};
+}else if(SKY_PROJECTION==="perspective"){
 SKY_GESTURE={
 type:"rotate",
 startX:p.x,
@@ -10796,18 +11056,18 @@ const temp=num(row.temperature_2m);
 const rh=num(row.relative_humidity_2m);
 const vis=num(row.visibility);
 
-weatherCard.innerHTML=`
-<div class="sky-label">☁️ 天気</div>
-<div class="sky-val">${weatherCodeJa(row.weather_code)}</div>
-<div class="sky-sub">${WEATHER_META?.fromOfflineCache?"保存済み予報 / ":""}雲量 ${cloud===null?"—":Math.round(cloud)+"%"} / 降水 ${pp===null?"—":Math.round(pp)+"%"}</div>
-<div class="sky-sub">気温 ${temp===null?"—":temp.toFixed(1)+"℃"} / 風 ${wind===null?"—":wind.toFixed(1)+"m/s"}</div>
-${rainMismatchWarning}`;
-
 const comparison=getModelComparison(date);
 const ev=integratedWeatherGrade(row,comparison);
 const rainMismatchWarning=(comparison.agreement==="低" && pp!==null && pp>=20)
   ? `<div class="sky-weather-caution">予報外れの雨に打たれるかもしれません</div>`
   : "";
+
+weatherCard.innerHTML=`
+<div class="sky-label">☁️ 天気</div>
+<div class="sky-val">${weatherCodeJa(row.weather_code)}</div>
+<div class="sky-sub">${weatherSavedLabel(WEATHER_META)}雲量 ${cloud===null?"—":Math.round(cloud)+"%"} / 降水 ${pp===null?"—":Math.round(pp)+"%"}</div>
+<div class="sky-sub">気温 ${temp===null?"—":temp.toFixed(1)+"℃"} / 風 ${wind===null?"—":wind.toFixed(1)+"m/s"}</div>
+${rainMismatchWarning}`;
 const extra=[];
 if(vis!==null)extra.push(`視程 ${(vis/1000).toFixed(1)}km`);
 if(rh!==null)extra.push(`湿度 ${Math.round(rh)}%`);
@@ -10820,9 +11080,12 @@ const modelLines=comparison.rows.map(m=>
 `<span><b>${m.label}</b> ${Number.isFinite(m.cloud)?Math.round(m.cloud)+"%":"—"}</span>`
 ).join(" / ");
 
+const modelSaved=WEATHER_MODEL_META?.fromLocalCache
+  ? (WEATHER_MODEL_META?.stale?" / 保存済み比較（更新待ち）":" / 保存済み比較")
+  : "";
 compareHtml=`
 <div class="sky-sub">雲量中央値 ${comparison.medianCloud===null?"—":Math.round(comparison.medianCloud)+"%"}</div>
-<div class="sky-sub">予報一致度：<span class="${comparison.agreementClass||""}">${comparison.agreement||"—"}</span></div>
+<div class="sky-sub">予報一致度：<span class="${comparison.agreementClass||""}">${comparison.agreement||"—"}</span>${modelSaved}</div>
 <div class="model-compare">${modelLines}</div>`;
 }else{
 compareHtml=`<div class="sky-sub">3モデル比較データなし</div>`;
