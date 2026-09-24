@@ -434,6 +434,52 @@ footer span{color:#7eb8e8;}
 .skymap-controls label{display:flex;align-items:center;gap:5px;margin:0;color:#9fc2dc;font-size:12px;white-space:nowrap;}
 .skymap-controls input[type="checkbox"]{width:auto;margin:0;}
 .skymap-controls select{width:auto;min-width:90px;padding:4px 8px;font-size:12px;}
+.skymap-controls .sky-control-group{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:4px 6px;
+  padding:5px 6px;
+  border:1px solid;
+  border-radius:9px;
+}
+.skymap-controls .sky-control-group label{
+  padding:3px 5px;
+  border-radius:6px;
+  margin:0;
+}
+.skymap-controls .sky-control-group label:has(input:checked){
+  background:rgba(255,255,255,.055);
+}
+.skymap-controls .sky-group-constellation{
+  color:#a8e8ff;
+  background:rgba(56,189,248,.055);
+  border-color:rgba(56,189,248,.28);
+}
+.skymap-controls .sky-group-solar{
+  color:#ffe48a;
+  background:rgba(250,204,21,.055);
+  border-color:rgba(250,204,21,.28);
+}
+.skymap-controls .sky-group-lunar{
+  color:#e8eaf0;
+  background:rgba(203,213,225,.055);
+  border-color:rgba(203,213,225,.25);
+}
+.skymap-controls .sky-group-object{
+  color:#a9e9be;
+  background:rgba(74,222,128,.05);
+  border-color:rgba(74,222,128,.25);
+}
+.skymap-controls .sky-group-meteor{
+  color:#c4b5fd;
+  background:rgba(167,139,250,.05);
+  border-color:rgba(167,139,250,.24);
+}
+.skymap-controls .sky-control-mag{
+  color:#a9bfd3;
+}
+
 
 .skymap-viewbar{
   display:flex;align-items:center;gap:7px;flex-wrap:wrap;
@@ -1528,9 +1574,11 @@ button.action.sm,
 .obs-quick-start{
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:9px;
   margin-top:4px;
 }
+.obs-quick-datetime{margin:0!important;}
+.obs-quick-gps{width:100%;}
 .obs-quick-note{
   font-size:11px;
   color:#7899b3;
@@ -1695,8 +1743,13 @@ button.action.sm,
 .polar-controls label{
   display:flex;
   align-items:center;
-  gap:5px;
+  gap:6px;
 }
+.polar-invert-option{
+  white-space:normal;
+  line-height:1.4;
+}
+.polar-invert-option input{flex:0 0 auto;}
 @media(max-width:720px){
   .polar-body{grid-template-columns:1fr}
 }
@@ -2297,6 +2350,8 @@ body.public-info-open{overflow:hidden;}
   .public-info-dialog{max-height:94vh;border-radius:11px;}
   .public-info-body{padding:14px 13px 18px;}
 }
+
+.sky-weather-caution{margin-top:4px;font-size:9px;line-height:1.35;color:#e8a5a5;opacity:.88;}
 </style>
 </head>
 <body>
@@ -2312,20 +2367,21 @@ body.public-info-open{overflow:hidden;}
 <h2>📍 観測条件を設定</h2>
 
 <div class="obs-quick-start">
-  <div class="obs-quick-note">現在時刻を自動設定します。観測現場では現在地を取得するだけで、すぐに今夜の空を表示できます。</div>
-  <button class="loc-btn obs-quick-gps" id="btnGPS">📡 現在地を取得して観測開始</button>
+  <div class="obs-row obs-row-datetime obs-quick-datetime">
+    <div class="obs-field obs-datetime-field">
+      <label>日時</label>
+      <input type="datetime-local" id="inDatetime">
+    </div>
+  </div>
+  <button class="loc-btn obs-quick-gps" id="btnGPS">はじめようか天体観測🔭</button>
 </div>
 
 <details class="compact-settings obs-detail-settings" id="obsDetailSettings">
-  <summary>⚙️ 詳細設定</summary>
+  <summary>詳細な観測条件を設定</summary>
   <div class="compact-settings-body">
 
     <div class="obs-section-title">観測日時</div>
     <div class="obs-row obs-row-datetime">
-      <div class="obs-field obs-datetime-field">
-        <label>日時</label>
-        <input type="datetime-local" id="inDatetime">
-      </div>
       <div class="obs-inline-action">
         <button type="button" class="moon-date-btn" id="openMoonDatePicker">🌙 月の満ち欠けから選ぶ</button>
       </div>
@@ -2425,26 +2481,7 @@ body.public-info-open{overflow:hidden;}
 <div id="resultArea" style="display:none">
 <div class="sky-panel"><h3>🌙 今夜の空情報</h3><div class="sky-grid" id="skyGrid"></div></div>
 
-<details class="polar-panel" id="polarScopePanel">
-  <summary>🧭 極軸望遠鏡ガイド</summary>
-  <div class="polar-body">
-    <div class="polar-reticle-wrap">
-      <canvas id="polarReticleCanvas" width="680" height="680" aria-label="極軸望遠鏡レクチル"></canvas>
-    </div>
-    <div class="polar-readout">
-      <div class="polar-card"><div class="label">北極星 時計位置</div><div class="value" id="polarClockPosition">—</div></div>
-      <div class="polar-card"><div class="label">北極星 時角</div><div class="value" id="polarHourAngle">—</div></div>
-      <div class="polar-card"><div class="label">極軸高度の目安</div><div class="value" id="polarAxisAltitude">—</div></div>
-      <div class="polar-card"><div class="label">観測地点標高</div><div class="value" id="polarSiteElevation">—</div></div>
-      <div class="polar-controls">
-        <label><input type="checkbox" id="polarReticleInvert"> レクチル像を180°反転</label>
-      </div>
-      <div class="polar-help" id="polarGuideText">
-        観測日時・緯度・経度から北極星の位置を計算します。レクチルの0時（12時）を上に合わせ、表示された時計位置へ北極星を置くためのガイドです。
-      </div>
-    </div>
-  </div>
-</details>
+
 
 <div class="recommend-panel">
 <h3>⭐ 今夜のおすすめ</h3>
@@ -2516,6 +2553,7 @@ body.public-info-open{overflow:hidden;}
 <option value="35" selected>35°</option>
 <option value="50">50°</option>
 <option value="65">65°</option>
+<option value="75">75°</option>
 </select>
 </label>
 <button type="button" id="skyDeviceOrientation" class="sky-device-btn" title="端末の向きと見上げ角を星図へ反映">📱 端末連動</button>
@@ -2526,21 +2564,37 @@ body.public-info-open{overflow:hidden;}
 
 <div class="skymap-section-label">表示設定</div>
 <div class="skymap-controls">
-<label><input type="checkbox" id="skyShowLines" checked> 星座線</label>
-<label><input type="checkbox" id="skyShowNames"> 星座名</label>
-<label><input type="checkbox" id="skyShowAsterisms"> アステリズム</label>
-<label><input type="checkbox" id="skyShowSun" checked> 太陽</label>
-<label class="sky-dependent"><input type="checkbox" id="skyShowEcliptic"> 黄道</label>
-<label title="太陽高度に応じて空の明るさ・見える恒星数・太陽方向の薄明を再現"><input type="checkbox" id="skyShowDaylight" checked> 昼光</label>
-<label><input type="checkbox" id="skyShowMoon" checked> 月</label>
-<label title="月相・月高度・月からの角距離に応じて月明かりを星図へ反映"><input type="checkbox" id="skyShowMoonlight"> 月光</label>
-<label class="sky-dependent"><input type="checkbox" id="skyShowLunarPath"> 白道</label>
-<label><input type="checkbox" id="skyShowPlanets" checked> 惑星</label>
-<label><input type="checkbox" id="skyShowDSO"> 主要天体</label>
-<label><input type="checkbox" id="skyShowSmallBodies"> 彗星</label>
-<label><input type="checkbox" id="skyShowMeteors"> 流星群放射点</label>
-<label><input type="checkbox" id="skyShowMilkyWay"> 天の川</label><span id="skyMilkyWayStatus" style="font-size:9px;color:#6f94b3"></span>
-<label>恒星 <select id="skyMag"><option value="2">2等まで</option><option value="3">3等まで</option><option value="4">4等まで</option><option value="5" selected>5等まで</option><option value="6">6等まで</option></select></label>
+<div class="sky-control-group sky-group-constellation">
+  <label><input type="checkbox" id="skyShowLines" checked> 星座線</label>
+  <label><input type="checkbox" id="skyShowNames"> 星座名</label>
+  <label><input type="checkbox" id="skyShowAsterisms"> 星の目印</label>
+  <label><input type="checkbox" id="skyShowMilkyWay"> 天の川</label>
+</div>
+<span id="skyMilkyWayStatus" style="font-size:9px;color:#6f94b3"></span>
+
+<div class="sky-control-group sky-group-solar">
+  <label><input type="checkbox" id="skyShowSun" checked> 太陽</label>
+  <label class="sky-dependent"><input type="checkbox" id="skyShowEcliptic"> 黄道</label>
+  <label title="太陽高度に応じて空の明るさ・見える恒星数・太陽方向の薄明を再現"><input type="checkbox" id="skyShowDaylight" checked> 昼光</label>
+</div>
+
+<div class="sky-control-group sky-group-lunar">
+  <label><input type="checkbox" id="skyShowMoon" checked> 月</label>
+  <label class="sky-dependent"><input type="checkbox" id="skyShowLunarPath"> 白道</label>
+  <label title="月相・月高度・月からの角距離に応じて月明かりを星図へ反映"><input type="checkbox" id="skyShowMoonlight"> 月光</label>
+</div>
+
+<div class="sky-control-group sky-group-object">
+  <label><input type="checkbox" id="skyShowPlanets" checked> 惑星</label>
+  <label><input type="checkbox" id="skyShowDSO"> 主要天体</label>
+  <label><input type="checkbox" id="skyShowSmallBodies"> 彗星</label>
+</div>
+
+<div class="sky-control-group sky-group-meteor">
+  <label><input type="checkbox" id="skyShowMeteors"> 流星群放射点</label>
+</div>
+
+<label class="sky-control-mag">恒星 <select id="skyMag"><option value="2">2等まで</option><option value="3">3等まで</option><option value="4">4等まで</option><option value="5" selected>5等まで</option><option value="6">6等まで</option></select></label>
 </div>
 
 <div class="comet-track-bar">
@@ -2552,7 +2606,7 @@ body.public-info-open{overflow:hidden;}
 <div class="skymap-section-label">星図本体</div>
 <div id="skyLineStatus" style="font-size:10px;color:#6f94b3;margin:2px 0 7px">星座線：内蔵簡易データ</div>
 <div class="skymap-canvas-wrap"><canvas id="skyMapCanvas" width="760" height="760"></canvas></div>
-<div class="skymap-legend"><span>★ 恒星</span><span>✧ アステリズム</span><span style="color:#ffd54f">● 太陽</span><span style="color:#e8e8f0">● 月</span><span style="color:#c084fc">◇ 惑星</span><span style="color:#4ade80">□ 星雲・星団・銀河</span><span style="color:#67e8f9">○ 彗星</span><span style="color:#a78bfa">✦ 流星群放射点</span></div>
+<div class="skymap-legend"><span>★ 恒星</span><span>✧ 星の目印</span><span style="color:#ffd54f">● 太陽</span><span style="color:#e8e8f0">● 月</span><span style="color:#c084fc">◇ 惑星</span><span style="color:#4ade80">□ 星雲・星団・銀河</span><span style="color:#67e8f9">○ 彗星</span><span style="color:#a78bfa">✦ 流星群放射点</span></div>
 <div class="skymap-object-info" id="skyMapObjectInfo">星・惑星・月・主要天体をクリックすると、ここに情報を表示します。</div><div class="skymap-timebar">
 <span class="label">⏱ 星図の時刻</span>
 <button type="button" data-sky-shift="-1">−1h</button>
@@ -2561,9 +2615,9 @@ body.public-info-open{overflow:hidden;}
 <span class="skymap-time-now" id="skyViewTimeLabel">—</span>
 
 <div class="skymap-slider-wrap">
-<span class="skymap-slider-edge">−24h</span>
-<input type="range" id="skyTimeSlider" min="-24" max="24" step="0.25" value="0" aria-label="星図の時刻を前後24時間で変更">
-<span class="skymap-slider-edge">+24h</span>
+<span class="skymap-slider-edge">−7日</span>
+<input type="range" id="skyTimeSlider" min="-168" max="168" step="0.5" value="0" aria-label="星図の時刻を前後7日間で変更">
+<span class="skymap-slider-edge">+7日</span>
 </div>
 </div>
 
@@ -2782,6 +2836,27 @@ body.public-info-open{overflow:hidden;}
 </details>
 
 </div>
+</details>
+
+<details class="polar-panel" id="polarScopePanel">
+  <summary>🧭 極軸望遠鏡ガイド</summary>
+  <div class="polar-body">
+    <div class="polar-reticle-wrap">
+      <canvas id="polarReticleCanvas" width="680" height="680" aria-label="極軸望遠鏡レクチル"></canvas>
+    </div>
+    <div class="polar-readout">
+      <div class="polar-card"><div class="label">北極星 時計位置</div><div class="value" id="polarClockPosition">—</div></div>
+      <div class="polar-card"><div class="label">北極星 時角</div><div class="value" id="polarHourAngle">—</div></div>
+      <div class="polar-card"><div class="label">極軸高度の目安</div><div class="value" id="polarAxisAltitude">—</div></div>
+      <div class="polar-card"><div class="label">観測地点標高</div><div class="value" id="polarSiteElevation">—</div></div>
+      <div class="polar-controls">
+        <label class="polar-invert-option"><input type="checkbox" id="polarReticleInvert"> レクチル表示を180°回転</label>
+      </div>
+      <div class="polar-help" id="polarGuideText">
+        観測日時・緯度・経度から北極星の位置を計算します。レクチルの0時（12時）を上に合わせ、表示された時計位置へ北極星を置くためのガイドです。
+      </div>
+    </div>
+  </div>
 </details>
 
 </div>
@@ -3409,10 +3484,10 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;ニコルは、基本的に「観測日時」と「観測場所」を基準にしています。&lt;/p&gt;
 
           &lt;h4&gt;観測日時&lt;/h4&gt;
-          &lt;p&gt;起動時は端末の現在時刻が自動で入り、そのまま現在時刻へ追従します。観測現場では「現在地を取得して観測開始」を押すだけで今夜の空を表示できます。別日時を使う場合は「詳細設定」を開き、日時を直接入力するか、「&lt;span class=&quot;manual-emoji&quot;&gt;🌙&lt;/span&gt; 月の満ち欠けから選ぶ」を使用します。&lt;/p&gt;
+          &lt;p&gt;起動時は日時入力欄へ端末の現在時刻が自動で入り、そのまま現在時刻へ追従します。観測現場では日時を確認して「はじめようか天体観測🔭」を押すだけで今の空を表示できます。別日時や詳細条件を使う場合は「詳細な観測条件を設定」を開きます。&lt;/p&gt;
 
           &lt;h4&gt;観測場所&lt;/h4&gt;
-          &lt;p&gt;観測現場では「現在地を取得して観測開始」が最短です。詳細設定では、地名・施設名・住所を入力して候補から地点を選ぶ方法、地図から選ぶ方法、お気に入り地点、緯度・経度・標高の直接入力が使えます。地名検索は地図を開かずに地点を選べます。&lt;/p&gt;
+          &lt;p&gt;観測現場では「はじめようか天体観測🔭」が最短です。詳細設定では、地名・施設名・住所を入力して候補から地点を選ぶ方法、地図から選ぶ方法、お気に入り地点、緯度・経度・標高の直接入力が使えます。地名検索は地図を開かずに地点を選べます。&lt;/p&gt;
 
           &lt;h4&gt;お気に入り地点&lt;/h4&gt;
           &lt;p&gt;現在の地点へ名前を付けて保存し、あとから呼び出せます。「いつ・どこで見る？」の比較対象にも利用されます。&lt;/p&gt;
@@ -3489,10 +3564,10 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;天頂を中心に地平線までを円形に表示します。北が上、東が左です。ズーム時はドラッグして表示位置を移動できます。&lt;/p&gt;
 
           &lt;h4&gt;地平&lt;/h4&gt;
-          &lt;p&gt;実際に空を見上げる感覚に近い表示です。方角と見上げ角を選べるほか、ドラッグ／スワイプで向きを変更できます。「📱 端末連動」をONにすると、対応するスマートフォンやタブレットでは端末の方位・傾きを星図へ反映できます。iPhone / iPadでは初回にセンサー利用の許可が表示されます。磁気センサーの特性上、周囲の金属や磁石の影響で方位がずれる場合があります。&lt;/p&gt;
+          &lt;p&gt;実際に空を見上げる感覚に近い表示です。方角と見上げ角を選べるほか、ドラッグ／スワイプで向きを変更できます。「📱 端末連動」をONにすると、対応するスマートフォンやタブレットでは端末の方位・傾きを星図へ反映できます。iPhone / iPadでは初回にセンサー利用の許可が表示されます。磁気センサーの特性上、周囲の金属や磁石の影響で方位がずれる場合があります。高仰角では方位センサーを優先して反転を抑え、約75°までの追尾を想定しています。天頂付近では方位そのものが不安定になりやすいため、完全な追尾は保証されません。&lt;/p&gt;
 
           &lt;h4&gt;表示設定&lt;/h4&gt;
-          &lt;p&gt;星座線、星座名、アステリズム、太陽、黄道、昼光、月、月光、白道、惑星、主要天体、彗星、流星群放射点、天の川、恒星の等級上限を個別に切り替えられます。アステリズムでは北斗七星、季節の大三角、冬のダイヤモンド、ペガススの四辺形など代表的な星空の目印を表示します。&lt;/p&gt;
+          &lt;p&gt;星座線、星座名、星の目印、太陽、黄道、昼光、月、月光、白道、惑星、主要天体、彗星、流星群放射点、天の川、恒星の等級上限を個別に切り替えられます。星の目印では北斗七星、季節の大三角、冬のダイヤモンド、ペガススの四辺形など代表的な星空の目印を表示します。&lt;/p&gt;
 
           &lt;h4&gt;太陽・黄道&lt;/h4&gt;
           &lt;p&gt;太陽と黄道は独立して表示できます。黄道は太陽が一年を通して移動して見える基準となる道筋です。&lt;/p&gt;
@@ -3511,7 +3586,7 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;天の川の輪郭を星図へ投影します。初回取得にはオンライン接続が必要ですが、一度オンラインで接続すれば次回からはオフラインでも使えます。&lt;/p&gt;
 
           &lt;h4&gt;星図の時刻&lt;/h4&gt;
-          &lt;p&gt;−1h、+1hのボタンと、前後24時間のスライダーで星図だけの時刻を動かせます。「設定時刻へ戻す」で観測条件の時刻へ戻ります。&lt;/p&gt;
+          &lt;p&gt;−1h、+1hのボタンと、前後7日間（±168時間）のスライダーで星図だけの時刻を動かせます。「設定時刻へ戻す」で観測条件の時刻へ戻ります。&lt;/p&gt;
 
           &lt;h4&gt;星図に合わせて更新&lt;/h4&gt;
           &lt;p&gt;星図で時刻を動かしたあと、結果上部の「星図に合わせて更新」を押すと、その星図時刻を観測日時へ反映し、天体・星座・おすすめ・観測スケジュールなどを再計算します。&lt;/p&gt;
@@ -4101,7 +4176,7 @@ $("#polarGuideText").innerHTML=
 +`<br>${date.getFullYear()}-${p(date.getMonth()+1)}-${p(date.getDate())} ${p(date.getHours())}:${p(date.getMinutes())}`
 +`<br>レクチルの12時を上に合わせ、北極星を <b>${formatClock12(info.clockHours)}</b> の方向へ置く目安です。`
 +` 極軸高度は緯度と同じ約 <b>${info.axisAltitude.toFixed(2)}°</b>。`
-+`<br><span style="color:#6f91a8">※ 極軸望遠鏡の像の向き・レクチル仕様は機種や世代で異なります。必要に応じて「180°反転」を使用してください。</span>`;
++`<br><span style="color:#6f91a8">※ 極軸望遠鏡の像の向き・レクチル仕様は機種や世代で異なります。必要に応じて「レクチル表示を180°回転」を使用してください。</span>`;
 drawPolarReticle(info);
 }
 
@@ -4866,15 +4941,49 @@ let LIVE_NOW_TIMER=null;
 let LIVE_NOW_LAST_MINUTE_KEY=null;
 
 /* 星図上の有名なアステリズム */
+const SKY_ASTERISM_STARS={
+Dubhe:{name:"ドゥーベ",ra:165.9320,dec:61.7510},
+Merak:{name:"メラク",ra:165.4603,dec:56.3824},
+Phecda:{name:"フェクダ",ra:178.4577,dec:53.6948},
+Megrez:{name:"メグレズ",ra:183.8565,dec:57.0326},
+Alioth:{name:"アリオト",ra:193.5073,dec:55.9598},
+Mizar:{name:"ミザール",ra:200.9814,dec:54.9254},
+Alkaid:{name:"アルカイド",ra:206.8852,dec:49.3133},
+Vega:{name:"ベガ",ra:279.2347,dec:38.7837},
+Deneb:{name:"デネブ",ra:310.3580,dec:45.2803},
+Altair:{name:"アルタイル",ra:297.6958,dec:8.8683},
+Sirius:{name:"シリウス",ra:101.2872,dec:-16.7161},
+Procyon:{name:"プロキオン",ra:114.8255,dec:5.2250},
+Betelgeuse:{name:"ベテルギウス",ra:88.7929,dec:7.4071},
+Pollux:{name:"ポルックス",ra:116.3289,dec:28.0262},
+Capella:{name:"カペラ",ra:79.1723,dec:45.9980},
+Aldebaran:{name:"アルデバラン",ra:68.9802,dec:16.5093},
+Rigel:{name:"リゲル",ra:78.6345,dec:-8.2016},
+Arcturus:{name:"アルクトゥルス",ra:213.9153,dec:19.1822},
+Spica:{name:"スピカ",ra:201.2983,dec:-11.1613},
+Denebola:{name:"デネボラ",ra:177.2649,dec:14.5721},
+Alpheratz:{name:"アルフェラッツ",ra:2.0969,dec:29.0904},
+Scheat:{name:"シェアト",ra:345.9436,dec:28.0828},
+Markab:{name:"マルカブ",ra:346.1902,dec:15.2053},
+Algenib:{name:"アルゲニブ",ra:3.3089,dec:15.1836},
+Alnitak:{name:"アルニタク",ra:85.1897,dec:-1.9426},
+Alnilam:{name:"アルニラム",ra:84.0534,dec:-1.2019},
+Mintaka:{name:"ミンタカ",ra:83.0017,dec:-0.2991},
+Sadr:{name:"サドル",ra:305.5571,dec:40.2567},
+Albireo:{name:"アルビレオ",ra:292.6803,dec:27.9597},
+Fawaris:{name:"ファワリス",ra:296.2436,dec:45.1308},
+GienahCyg:{name:"ギェナー",ra:311.5528,dec:33.9703}
+};
+
 const SKY_ASTERISMS=[
-{name:"北斗七星",lines:[["Dubhe","Merak"],["Merak","Phecda"],["Phecda","Megrez"],["Megrez","Alioth"],["Alioth","Mizar"],["Mizar","Alkaid"]]},
-{name:"夏の大三角",lines:[["Vega","Deneb"],["Deneb","Altair"],["Altair","Vega"]]},
-{name:"冬の大三角",lines:[["Sirius","Procyon"],["Procyon","Betelgeuse"],["Betelgeuse","Sirius"]]},
-{name:"冬のダイヤモンド",lines:[["Sirius","Procyon"],["Procyon","Pollux"],["Pollux","Capella"],["Capella","Aldebaran"],["Aldebaran","Rigel"],["Rigel","Sirius"]]},
-{name:"春の大三角",lines:[["Arcturus","Spica"],["Spica","Denebola"],["Denebola","Arcturus"]]},
-{name:"ペガススの四辺形",lines:[["Alpheratz","Scheat"],["Scheat","Markab"],["Markab","Algenib"],["Algenib","Alpheratz"]]},
-{name:"オリオンの三つ星",lines:[["Alnitak","Alnilam"],["Alnilam","Mintaka"]]},
-{name:"北十字",lines:[["Deneb","Sadr"],["Sadr","Albireo"],["GienahCyg","Sadr"]]}
+{name:"北斗七星",stars:["Dubhe","Merak","Phecda","Megrez","Alioth","Mizar","Alkaid"],lines:[["Dubhe","Merak"],["Merak","Phecda"],["Phecda","Megrez"],["Megrez","Alioth"],["Alioth","Mizar"],["Mizar","Alkaid"]]},
+{name:"夏の大三角",stars:["Vega","Deneb","Altair"],lines:[["Vega","Deneb"],["Deneb","Altair"],["Altair","Vega"]]},
+{name:"冬の大三角",stars:["Betelgeuse","Sirius","Procyon"],lines:[["Betelgeuse","Sirius"],["Sirius","Procyon"],["Procyon","Betelgeuse"]]},
+{name:"冬のダイヤモンド",stars:["Capella","Aldebaran","Rigel","Sirius","Procyon","Pollux"],lines:[["Capella","Aldebaran"],["Aldebaran","Rigel"],["Rigel","Sirius"],["Sirius","Procyon"],["Procyon","Pollux"],["Pollux","Capella"]]},
+{name:"春の大三角",stars:["Arcturus","Spica","Denebola"],lines:[["Arcturus","Spica"],["Spica","Denebola"],["Denebola","Arcturus"]]},
+{name:"ペガススの四辺形（秋の四辺形）",stars:["Alpheratz","Scheat","Markab","Algenib"],lines:[["Alpheratz","Scheat"],["Scheat","Markab"],["Markab","Algenib"],["Algenib","Alpheratz"]]},
+{name:"オリオンの三つ星",stars:["Mintaka","Alnilam","Alnitak"],lines:[["Mintaka","Alnilam"],["Alnilam","Alnitak"]]},
+{name:"北十字",stars:["Deneb","Sadr","Albireo","Fawaris","GienahCyg"],lines:[["Deneb","Sadr"],["Sadr","Albireo"],["Fawaris","Sadr"],["Sadr","GienahCyg"]]}
 ];
 
 const SKY_STAR_CONSTELLATION_MAP={
@@ -5158,26 +5267,43 @@ function deviceViewingDirection(event){
 let alpha=Number(event.alpha), beta=Number(event.beta), gamma=Number(event.gamma);
 if(!Number.isFinite(beta)||!Number.isFinite(gamma))return null;
 
-/* iOS Safari は webkitCompassHeading を真北基準の方位として提供する。
-   DeviceOrientation の alpha に合わせて 360-heading に変換する。 */
-if(Number.isFinite(Number(event.webkitCompassHeading))){
-  alpha=360-Number(event.webkitCompassHeading);
-}
-if(!Number.isFinite(alpha))return null;
+const webkitHeading=Number(event.webkitCompassHeading);
+const compassAz=Number.isFinite(webkitHeading)
+  ? normalizeAzimuthDeg(webkitHeading)
+  : (Number.isFinite(alpha)?normalizeAzimuthDeg(360-alpha):null);
+
+if(!Number.isFinite(alpha) && !Number.isFinite(compassAz))return null;
+/* ベクトル計算用alpha。iOSではwebkitCompassHeadingと整合する形へ変換 */
+if(Number.isFinite(webkitHeading))alpha=360-webkitHeading;
+if(!Number.isFinite(alpha))alpha=0;
 
 const a=alpha*Math.PI/180;
 const b=beta*Math.PI/180;
 const g=gamma*Math.PI/180;
 const ca=Math.cos(a),sa=Math.sin(a),cb=Math.cos(b),sb=Math.sin(b),cg=Math.cos(g),sg=Math.sin(g);
 
-/* DeviceOrientation の Z-X-Y 回転で、端末背面カメラ方向（画面法線の反対）を地球座標へ。 */
+/* DeviceOrientation の Z-X-Y 回転で端末背面方向を算出。
+   仰角はこのベクトルを使う。 */
 const east=-(ca*sg + sa*sb*cg);
 const north=-(sa*sg - ca*sb*cg);
 const up=-(cb*cg);
 const len=Math.hypot(east,north,up)||1;
 const z=Math.max(-1,Math.min(1,up/len));
 const alt=Math.asin(z)*180/Math.PI;
-const az=normalizeAzimuthDeg(Math.atan2(east,north)*180/Math.PI);
+const vectorAz=normalizeAzimuthDeg(Math.atan2(east,north)*180/Math.PI);
+
+/* 天頂へ近づくほど水平投影が小さくなり、ベクトル方位は180°反転しやすい。
+   40°までは従来の投影方位、45°以上はコンパス方位を優先し、間を滑らかにつなぐ。 */
+let az=vectorAz;
+if(Number.isFinite(compassAz)){
+  if(alt>=45){
+    az=compassAz;
+  }else if(alt>40){
+    const t=(alt-40)/5;
+    const d=((compassAz-vectorAz+540)%360)-180;
+    az=normalizeAzimuthDeg(vectorAz+d*t);
+  }
+}
 return{az,alt};
 }
 
@@ -5191,7 +5317,7 @@ if(!Number.isFinite(SKY_DEVICE_SMOOTH_ALT))SKY_DEVICE_SMOOTH_ALT=dir.alt;
 else SKY_DEVICE_SMOOTH_ALT+=(dir.alt-SKY_DEVICE_SMOOTH_ALT)*0.20;
 
 SKY_PERSPECTIVE_AZ=normalizeAzimuthDeg(SKY_DEVICE_SMOOTH_AZ);
-SKY_PERSPECTIVE_ALT=clampPerspectiveAltitudeDeg(SKY_DEVICE_SMOOTH_ALT);
+SKY_PERSPECTIVE_ALT=Math.max(5,Math.min(75,SKY_DEVICE_SMOOTH_ALT));
 SKY_DEVICE_LAST_EVENT_AT=Date.now();
 syncPerspectiveSelectors();
 updateSkyDeviceUI(`${azToDir(SKY_PERSPECTIVE_AZ)} ${Math.round(SKY_PERSPECTIVE_AZ)}° / 仰角 ${Math.round(SKY_PERSPECTIVE_ALT)}°`);
@@ -5262,7 +5388,7 @@ const azPreset=(Math.round(SKY_PERSPECTIVE_AZ/45)*45)%360;
 azSel.value=String(azPreset);
 }
 if(altSel){
-const presets=[20,35,50,65];
+const presets=[20,35,50,65,75];
 let closest=presets[0];
 for(const v of presets){
 if(Math.abs(v-SKY_PERSPECTIVE_ALT)<Math.abs(closest-SKY_PERSPECTIVE_ALT))closest=v;
@@ -6283,6 +6409,15 @@ loadWeatherForecast(lat,lon);
 
 async function searchObservationPlace(query){
 query=String(query||"").trim();
+
+/* おふざけ機能：2:00 AM に「フミキリ」 */
+const easterRaw=$("#inDatetime")?.value||"";
+const easterDate=easterRaw?new Date(easterRaw):null;
+if(query==="フミキリ" && easterDate instanceof Date && !isNaN(easterDate) &&
+   easterDate.getHours()===2 && easterDate.getMinutes()===0){
+  alert("オーイエーヘイアハーン");
+}
+
 if(!query){
 renderObsPlaceSearchMessage("検索する地名・施設名・住所を入力してください。",true);
 return;
@@ -8336,8 +8471,8 @@ return Math.max(1.0,baseLimit-penalty);
 function drawSkyAsterisms(ctx,pointMap){
 if(!$("#skyShowAsterisms")?.checked)return;
 ctx.save();
-ctx.strokeStyle="rgba(250,204,21,.82)";
-ctx.fillStyle="rgba(253,230,138,.92)";
+ctx.strokeStyle="rgba(103,232,249,.80)";
+ctx.fillStyle="rgba(165,243,252,.94)";
 ctx.lineWidth=1.35;
 ctx.setLineDash([5,4]);
 ctx.font="10px sans-serif";
@@ -8452,6 +8587,10 @@ if(p)pointMap[star.id]=p;
 Object.values(WESTERN_LINE_STARS).forEach(star=>{
 const p=skyProject(star.ra,star.dec,lat,lon,date,cx,cy,R);
 if(p)pointMap[star.id]=p;
+});
+Object.entries(SKY_ASTERISM_STARS).forEach(([id,star])=>{
+const p=skyProject(star.ra,star.dec,lat,lon,date,cx,cy,R);
+if(p)pointMap[id]=p;
 });
 
 if($("#skyShowLines").checked){
@@ -10277,6 +10416,76 @@ if(obj.type==="galaxy")return"宇宙の広がり";
 if(obj.type==="nebula")return"見栄え良好";
 return"おすすめ";
 }
+function recommendationRaDec(obj,date){
+if(!obj||!(date instanceof Date)||isNaN(date))return null;
+if(obj.type==="planet"){
+const p=planetRaDec(obj.planet,toJD(date));
+return p&&Number.isFinite(p.ra)&&Number.isFinite(p.dec)?{ra:p.ra,dec:p.dec}:null;
+}
+if(Number.isFinite(Number(obj.ra))&&Number.isFinite(Number(obj.dec))){
+return{ra:Number(obj.ra),dec:Number(obj.dec)};
+}
+return null;
+}
+
+function solarRecommendationAdjustment(obj,date,lat,lon){
+if(!(date instanceof Date)||isNaN(date)||!Number.isFinite(lat)||!Number.isFinite(lon)){
+return{blocked:false,penalty:0,label:"太陽条件未計算",sunAlt:null,sep:null};
+}
+const jd=toJD(date);
+const sun=sunPosition(jd);
+const saa=altAz(sun.ra,sun.dec,lat,lon,date);
+const rd=recommendationRaDec(obj,date);
+const sep=rd?angularSeparationDeg(rd.ra,rd.dec,sun.ra,sun.dec):180;
+const mag=Number.isFinite(Number(obj.magVal))?Number(obj.magVal):Number(obj.mag)||6;
+
+if(saa.alt<=-18){
+return{blocked:false,penalty:0,label:"夜空",sunAlt:saa.alt,sep};
+}
+
+const sensitivity={
+planet:0.10,star:0.20,double:0.25,cluster:0.58,nebula:0.95,galaxy:1.00,snr:0.98
+}[obj.type]??0.60;
+
+let stageLabel,brightness;
+if(saa.alt<=-12){stageLabel="天文薄明";brightness=(saa.alt+18)/6*0.18;}
+else if(saa.alt<=-6){stageLabel="航海薄明";brightness=0.18+(saa.alt+12)/6*0.28;}
+else if(saa.alt<=0){stageLabel="市民薄明";brightness=0.46+(saa.alt+6)/6*0.34;}
+else{stageLabel="昼光";brightness=0.80+Math.min(0.20,saa.alt/60);}
+
+/* 太陽から離れるほど散乱光の影響が相対的に小さい、という簡易補正 */
+const sepRelief=Math.max(0,Math.min(1,(sep-12)/108));
+const penalty=22*brightness*sensitivity*(1-0.42*sepRelief);
+
+/* 星図の昼光モデルを基準にし、太陽離角が大きい場合だけ少し緩和 */
+let limit=daylightLimitingMagnitude(saa.alt,7);
+if(saa.alt>0)limit+=1.25*sepRelief;
+else if(saa.alt>-6)limit+=0.85*sepRelief;
+else limit+=0.45*sepRelief;
+
+let blocked=false;
+if(saa.alt>0){
+/* 日中の深宇宙天体はおすすめから外す。明るい恒星・惑星等は離角と等級で残す */
+if(!["planet","star","double"].includes(obj.type))blocked=true;
+if(sep<8)blocked=true;
+if(mag>limit)blocked=true;
+}else if(saa.alt>-6){
+if(["galaxy","nebula","snr"].includes(obj.type)&&mag>1.5)blocked=true;
+if(mag>limit+1.5&&sensitivity>=0.55)blocked=true;
+}else if(saa.alt>-12){
+if(mag>limit+2.0&&sensitivity>=0.9)blocked=true;
+}
+
+let label=stageLabel;
+if(saa.alt>0){
+label=`昼光 / 太陽離角 ${Math.round(sep)}°${blocked?"":" / 明るい天体候補"}`;
+}else if(saa.alt>-18){
+label=`${stageLabel} / 太陽高度 ${saa.alt.toFixed(0)}°`;
+}
+
+return{blocked,penalty,label,sunAlt:saa.alt,sep,limit};
+}
+
 function moonRecommendationAdjustment(obj,date,lat,lon){
 if(!(date instanceof Date)||isNaN(date)||!Number.isFinite(lat)||!Number.isFinite(lon)){
 return{blocked:false,penalty:0,label:"月条件未計算",impact:0};
@@ -10289,13 +10498,7 @@ if(maa.alt<=-2||illum<0.10){
 return{blocked:false,penalty:0,label:maa.alt<=-2?"月は地平線下":"月明かり 小",impact:0};
 }
 
-let rd=null;
-if(obj.type==="planet"){
-const p=planetRaDec(obj.planet,toJD(date));
-rd={ra:p.ra,dec:p.dec};
-}else if(Number.isFinite(Number(obj.ra))&&Number.isFinite(Number(obj.dec))){
-rd={ra:Number(obj.ra),dec:Number(obj.dec)};
-}
+const rd=recommendationRaDec(obj,date);
 const sep=rd?angularSeparationDeg(rd.ra,rd.dec,moon.ra,moon.dec):120;
 const altitudeFactor=Math.max(0,Math.sin(Math.max(0,Math.min(90,maa.alt))*D2R));
 const brightness=Math.pow(illum,0.65)*Math.pow(altitudeFactor,0.70);
@@ -10328,22 +10531,25 @@ const lon=Number.isFinite(currentLon)?currentLon:parseFloat($("#inLon").value);
 const date=currentDate instanceof Date&&!isNaN(currentDate)?currentDate:new Date($("#inDatetime").value||Date.now());
 const weighted=results.map(obj=>{
 const moon=moonRecommendationAdjustment(obj,date,lat,lon);
-return{obj,moon,moonScore:obj.score-moon.penalty};
+const solar=solarRecommendationAdjustment(obj,date,lat,lon);
+return{obj,moon,solar,visibilityScore:obj.score-moon.penalty-solar.penalty};
 });
-let usable=weighted.filter(x=>!x.moon.blocked).sort((a,b)=>b.moonScore-a.moonScore);
-if(!usable.length)usable=weighted.sort((a,b)=>b.moonScore-a.moonScore);
+const usable=weighted
+.filter(x=>!x.moon.blocked&&!x.solar.blocked)
+.sort((a,b)=>b.visibilityScore-a.visibilityScore);
 const picks=usable.slice(0,4);
 if(picks.length===0){
-grid.innerHTML=`<div class="recommend-card"><div class="r-text">条件に合うおすすめ候補がありません。最低高度や等級上限を見直してみてください。</div></div>`;
+grid.innerHTML=`<div class="recommend-card"><div class="r-text">現在の太陽光・薄明・月明かり・高度条件を合わせると、おすすめできる候補がありません。時間帯を変えるか、最低高度・等級上限を見直してください。</div></div>`;
 return;
 }
 picks.forEach((item,idx)=>{
 const obj=item.obj;
 const moon=item.moon;
+const solar=item.solar;
 const dl=diffLabel(obj.difficulty);
 const div=document.createElement("div");
 div.className="recommend-card";
-div.innerHTML=`<div class="rec-tag">${getRecommendTag(obj,idx)}</div><div class="r-head"><div class="r-icon">${obj.icon}</div><div><div class="r-title">${obj.name}</div><div class="r-sub">${TYPE_LABEL[obj.type]||obj.type} / 高度 ${obj.alt}° / ${dl.text}</div></div></div><div class="r-text">🔭 ${obj.highlight}<br>${getRecommendComment(obj)}<br>🌙 ${moon.label}${moon.blocked?"（暗い天体には不利）":""}</div><div class="recommend-actions"><button type="button" class="reverse-plan-btn recommend-sky-btn">星図で表示</button></div>`;
+div.innerHTML=`<div class="rec-tag">${getRecommendTag(obj,idx)}</div><div class="r-head"><div class="r-icon">${obj.icon}</div><div><div class="r-title">${obj.name}</div><div class="r-sub">${TYPE_LABEL[obj.type]||obj.type} / 高度 ${obj.alt}° / ${dl.text}</div></div></div><div class="r-text">🔭 ${obj.highlight}<br>${getRecommendComment(obj)}<br>☀️ ${solar.label}<br>🌙 ${moon.label}</div><div class="recommend-actions"><button type="button" class="reverse-plan-btn recommend-sky-btn">星図で表示</button></div>`;
 div.addEventListener("click",()=>{
 const found=currentResults.find(r=>r.id===obj.id) || obj;
 showDetail(found,null);
@@ -10594,10 +10800,14 @@ weatherCard.innerHTML=`
 <div class="sky-label">☁️ 天気</div>
 <div class="sky-val">${weatherCodeJa(row.weather_code)}</div>
 <div class="sky-sub">${WEATHER_META?.fromOfflineCache?"保存済み予報 / ":""}雲量 ${cloud===null?"—":Math.round(cloud)+"%"} / 降水 ${pp===null?"—":Math.round(pp)+"%"}</div>
-<div class="sky-sub">気温 ${temp===null?"—":temp.toFixed(1)+"℃"} / 風 ${wind===null?"—":wind.toFixed(1)+"m/s"}</div>`;
+<div class="sky-sub">気温 ${temp===null?"—":temp.toFixed(1)+"℃"} / 風 ${wind===null?"—":wind.toFixed(1)+"m/s"}</div>
+${rainMismatchWarning}`;
 
 const comparison=getModelComparison(date);
 const ev=integratedWeatherGrade(row,comparison);
+const rainMismatchWarning=(comparison.agreement==="低" && pp!==null && pp>=20)
+  ? `<div class="sky-weather-caution">予報外れの雨に打たれるかもしれません</div>`
+  : "";
 const extra=[];
 if(vis!==null)extra.push(`視程 ${(vis/1000).toFixed(1)}km`);
 if(rh!==null)extra.push(`湿度 ${Math.round(rh)}%`);
