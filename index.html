@@ -643,6 +643,12 @@ text-align:right;
   inset:0;
   z-index:10000;
 }
+/* 全画面の地平／追尾モードは端末の横幅をそのまま星図の視野として使う */
+#skyMapCanvasWrap.sky-wide-landscape #skyMapCanvas{
+  max-width:none;
+  max-height:none;
+  aspect-ratio:auto;
+}
 body.sky-fullscreen-open{overflow:hidden;}
 .skymap-object-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
 .skymap-object-actions button{
@@ -5080,6 +5086,15 @@ let SKY_TRACKING_LAST_RAW_AZ=null;
 let SKY_TRACKING_LAST_CONTINUOUS_AZ=null;
 let SKY_TRACKING_SCREEN_ORIENTATION=0;
 const SKY_PERSPECTIVE_FOV=100;
+/* 地平／追尾星図の描画アスペクト比。renderSkyChart()で更新する。 */
+let SKY_PERSPECTIVE_ASPECT=1;
+
+function getSkyPerspectiveViewport(radius){
+const halfY=radius*1.06;
+const aspect=Math.max(.45,Math.min(3.2,Number(SKY_PERSPECTIVE_ASPECT)||1));
+const halfX=halfY*aspect;
+return{halfX,halfY};
+}
 let SKY_ZOOM=1;
 let SKY_PAN_X=0;
 let SKY_PAN_Y=0;
@@ -7310,9 +7325,10 @@ const Z=v.x*forward.x+v.y*forward.y+v.z*forward.z;
 /* カメラ背面は表示しない */
 if(Z<=0.001)return null;
 
-const viewportHalf=radius*1.06;
+const {halfX:viewportHalfX,halfY:viewportHalfY}=getSkyPerspectiveViewport(radius);
 const halfFov=(SKY_PERSPECTIVE_FOV/2)*D2R;
-const scale=viewportHalf/Math.tan(halfFov);
+/* 縦方向のFOVを基準に投影し、横長画面では左右の視野を自然に拡張する */
+const scale=viewportHalfY/Math.tan(halfFov);
 
 let x=cx+(X/Z)*scale;
 let y=cy-(Y/Z)*scale;
@@ -7322,8 +7338,8 @@ y=cy+(y-cy)*SKY_ZOOM+SKY_PAN_Y;
 
 const margin=14;
 if(
-x<cx-viewportHalf-margin||x>cx+viewportHalf+margin||
-y<cy-viewportHalf-margin||y>cy+viewportHalf+margin
+x<cx-viewportHalfX-margin||x>cx+viewportHalfX+margin||
+y<cy-viewportHalfY-margin||y>cy+viewportHalfY+margin
 )return null;
 
 return{
@@ -8026,7 +8042,8 @@ ctx.restore();
 }
 
 function drawPerspectiveGuide(ctx,cx,cy,R){
-const half=R*1.06,left=cx-half,right=cx+half,top=cy-half,bottom=cy+half;
+const {halfX,halfY}=getSkyPerspectiveViewport(R);
+const left=cx-halfX,right=cx+halfX,top=cy-halfY,bottom=cy+halfY;
 ctx.save();
 ctx.strokeStyle="#35506b";ctx.lineWidth=1.2;
 ctx.strokeRect(left,top,right-left,bottom-top);
@@ -8570,11 +8587,11 @@ if(SKY_PROJECTION==="allsky"){
 }
 
 /* 地平星図：地平線より上だけを昼光対象にする */
-const viewportHalf=R*1.06;
-const left=cx-viewportHalf;
-const right=cx+viewportHalf;
-const top=cy-viewportHalf;
-const bottom=cy+viewportHalf;
+const {halfX:viewportHalfX,halfY:viewportHalfY}=getSkyPerspectiveViewport(R);
+const left=cx-viewportHalfX;
+const right=cx+viewportHalfX;
+const top=cy-viewportHalfY;
+const bottom=cy+viewportHalfY;
 
 const horizon=[];
 for(let d=-120;d<=120;d+=1){
@@ -8655,7 +8672,8 @@ if(SKY_PROJECTION==="allsky"){
 }else{
   const d=((aa.az-SKY_PERSPECTIVE_AZ+540)%360)-180;
   const horizontal=Math.max(-1.25,Math.min(1.25,d/(SKY_PERSPECTIVE_FOV/2)));
-  gx=cx+horizontal*R*.82;
+  const {halfX}=getSkyPerspectiveViewport(R);
+  gx=cx+horizontal*halfX*.78;
   const altVisual=Math.max(-18,Math.min(40,aa.alt));
   gy=cy+R*.78-(altVisual/58)*R*1.15;
 }
@@ -8737,7 +8755,8 @@ gx=cx+SKY_PAN_X-edgeR*.92*Math.sin(a);
 gy=cy+SKY_PAN_Y-edgeR*.92*Math.cos(a);
 }else{
 const d=((aa.az-SKY_PERSPECTIVE_AZ+540)%360)-180;
-gx=cx+Math.max(-1.2,Math.min(1.2,d/(SKY_PERSPECTIVE_FOV/2)))*R*.78;
+const {halfX}=getSkyPerspectiveViewport(R);
+gx=cx+Math.max(-1.2,Math.min(1.2,d/(SKY_PERSPECTIVE_FOV/2)))*halfX*.74;
 gy=cy;
 }
 
@@ -8826,15 +8845,37 @@ const date=getSkyViewDate();
 if(!Number.isFinite(lat)||!Number.isFinite(lon)||!date||isNaN(date))return;
 
 const fullscreen=skyPanelIsFullscreen();
-const fsMax=Math.max(320,Math.min(window.innerWidth-8,window.innerHeight-8));
-const maxCanvas=fullscreen?fsMax:760;
-const parentPad=fullscreen?0:16;
-const cssSize=Math.max(320,Math.min(maxCanvas,canvas.parentElement.clientWidth-parentPad||maxCanvas));
+const wrap=canvas.parentElement;
+const landscape=window.innerWidth>window.innerHeight;
+const wideFullscreen=fullscreen&&isHorizonProjection()&&landscape;
+
+let cssWidth,cssHeight;
+if(wideFullscreen){
+  /*
+    横向き全画面の地平／追尾モード:
+    高さを基準に従来と同じ縦方向FOVを保ち、横幅分だけ左右の視野を拡張する。
+  */
+  cssWidth=Math.max(320,Math.floor(wrap.clientWidth||window.innerWidth));
+  cssHeight=Math.max(220,Math.floor(wrap.clientHeight||window.innerHeight));
+}else{
+  const fsMax=Math.max(320,Math.min(window.innerWidth-8,window.innerHeight-8));
+  const maxCanvas=fullscreen?fsMax:760;
+  const parentPad=fullscreen?0:16;
+  const cssSize=Math.max(320,Math.min(maxCanvas,wrap.clientWidth-parentPad||maxCanvas));
+  cssWidth=cssSize;
+  cssHeight=cssSize;
+}
+
+wrap.classList.toggle("sky-wide-landscape",wideFullscreen);
+SKY_PERSPECTIVE_ASPECT=isHorizonProjection()?cssWidth/cssHeight:1;
+
 const dpr=Math.min(window.devicePixelRatio||1,2);
-canvas.style.width=cssSize+"px";canvas.style.height=cssSize+"px";
-canvas.width=Math.round(cssSize*dpr);canvas.height=Math.round(cssSize*dpr);
+canvas.style.width=cssWidth+"px";
+canvas.style.height=cssHeight+"px";
+canvas.width=Math.round(cssWidth*dpr);
+canvas.height=Math.round(cssHeight*dpr);
 const ctx=canvas.getContext("2d");ctx.setTransform(dpr,0,0,dpr,0,0);
-const w=cssSize,h=cssSize,cx=w/2,cy=h/2,R=Math.min(w,h)*0.44;
+const w=cssWidth,h=cssHeight,cx=w/2,cy=h/2,R=Math.min(w,h)*0.44;
 SKY_MAP_HITS=[];
 ctx.clearRect(0,0,w,h);
 const daylightState=drawDaylightBackground(ctx,lat,lon,date,w,h,cx,cy,R);
@@ -10719,7 +10760,19 @@ if(d<=hit.r&&d<bestDist){best=hit;bestDist=d;}
 });
 showSkyMapHit(best);
 });
-let skyResizeTimer;window.addEventListener("resize",()=>{clearTimeout(skyResizeTimer);skyResizeTimer=setTimeout(()=>{if($("#rtab-skymap").classList.contains("active")){renderSkyChart();syncSkyInteractionLayer();}},120);});
+let skyResizeTimer;
+function scheduleSkyViewportRefresh(delay=120){
+clearTimeout(skyResizeTimer);
+skyResizeTimer=setTimeout(()=>{
+  if($("#rtab-skymap").classList.contains("active")){
+    renderSkyChart();
+    syncSkyInteractionLayer();
+  }
+},delay);
+}
+window.addEventListener("resize",()=>scheduleSkyViewportRefresh(100));
+window.addEventListener("orientationchange",()=>scheduleSkyViewportRefresh(180));
+window.visualViewport?.addEventListener("resize",()=>scheduleSkyViewportRefresh(80));
 document.querySelectorAll("[data-dtab]").forEach(b=>{
 b.addEventListener("click",()=>{
 document.querySelectorAll("[data-dtab]").forEach(x=>x.classList.remove("active"));
