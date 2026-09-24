@@ -3890,7 +3890,7 @@ body.public-info-open{overflow:hidden;}
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.9.3&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.9.4&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -5400,11 +5400,6 @@ const legacy=Number(window.orientation);
 return Number.isFinite(legacy)?((legacy%360)+360)%360:0;
 }
 
-function rotateVectorAroundZ(v,deg){
-const a=deg*D2R,c=Math.cos(a),s=Math.sin(a);
-return{x:v.x*c-v.y*s,y:v.x*s+v.y*c,z:v.z};
-}
-
 function deviceViewingDirection(event){
 const alpha=Number(event.alpha),beta=Number(event.beta),gamma=Number(event.gamma);
 if(!Number.isFinite(alpha)||!Number.isFinite(beta)||!Number.isFinite(gamma))return null;
@@ -5417,13 +5412,14 @@ let x=-(ca*sg + sa*sb*cg); // east
 let y=-(sa*sg - ca*sb*cg); // north
 let z=-(cb*cg);             // up
 
-/* portrait / landscape 切替を補正 */
+/*
+  画面の portrait / landscape はUIの回転角であり、ここで方位ベクトルへ
+  もう一度加えると横持ち時に90°の二重補正になる。
+  DeviceOrientation の beta / gamma には端末の物理的な回転が既に反映されるため、
+  screen.orientation は診断・レイアウト用に保持するだけで方位計算には適用しない。
+*/
 const orient=currentScreenOrientationDeg();
 SKY_TRACKING_SCREEN_ORIENTATION=orient;
-if(orient){
-  const r=rotateVectorAroundZ({x,y,z},-orient);
-  x=r.x;y=r.y;z=r.z;
-}
 
 const len=Math.hypot(x,y,z)||1;
 const alt=Math.asin(Math.max(-1,Math.min(1,z/len)))*R2D;
