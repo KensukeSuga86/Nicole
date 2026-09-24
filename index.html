@@ -610,37 +610,40 @@ text-align:right;
   .skymap-view-hint{width:100%;min-width:0;margin-left:0;text-align:left;}
 }
 
-.skymap-canvas-wrap{position:relative;display:flex;justify-content:center;overflow:hidden;background:#030711;border:1px solid #1e3a5f;border-radius:10px;padding:8px;}
+.skymap-canvas-wrap{position:relative;display:flex;justify-content:center;align-items:center;overflow:hidden;background:#030711;border:1px solid #1e3a5f;border-radius:10px;padding:8px;}
 #skyMapCanvas{display:block;width:min(100%,760px);height:auto;aspect-ratio:1/1;pointer-events:none;}
 .sky-map-interaction{position:absolute;z-index:3;touch-action:none;cursor:grab;-webkit-tap-highlight-color:transparent;}
 .sky-map-interaction.dragging{cursor:grabbing;}
 .skymap-head-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
 .sky-fullscreen-btn{white-space:nowrap;}
-.skymap-panel:fullscreen,
-.skymap-panel.sky-fullscreen-fallback{
-  background:#050914;
-  padding:12px;
-  overflow:auto;
+.sky-canvas-fullscreen-exit{
+  display:none;position:absolute;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));
+  z-index:8;appearance:none;border:1px solid rgba(126,184,232,.55);background:rgba(5,11,19,.82);
+  color:#d9ecff;border-radius:8px;padding:8px 11px;font-size:11px;font-weight:700;cursor:pointer;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);touch-action:manipulation;
 }
-.skymap-panel.sky-fullscreen-fallback{
+#skyMapCanvasWrap:fullscreen,
+#skyMapCanvasWrap.sky-fullscreen-fallback{
+  background:#030711;
+  border:0;
+  border-radius:0;
+  padding:0;
+  width:100vw;
+  height:100vh;
+  height:100dvh;
+  max-width:none;
+  max-height:none;
+  align-items:center;
+  justify-content:center;
+}
+#skyMapCanvasWrap:fullscreen .sky-canvas-fullscreen-exit,
+#skyMapCanvasWrap.sky-fullscreen-fallback .sky-canvas-fullscreen-exit{display:block;}
+#skyMapCanvasWrap.sky-fullscreen-fallback{
   position:fixed;
   inset:0;
   z-index:10000;
-  width:100vw;
-  height:100dvh;
-  max-width:none;
-  border-radius:0;
 }
 body.sky-fullscreen-open{overflow:hidden;}
-.skymap-panel:fullscreen .weather-panel,
-.skymap-panel:fullscreen .shooting-master,
-.skymap-panel.sky-fullscreen-fallback .weather-panel,
-.skymap-panel.sky-fullscreen-fallback .shooting-master{display:none!important;}
-.skymap-panel:fullscreen .skymap-canvas-wrap,
-.skymap-panel.sky-fullscreen-fallback .skymap-canvas-wrap{
-  min-height:min(72vh,900px);
-  align-items:center;
-}
 .skymap-object-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
 .skymap-object-actions button{
   appearance:none;border:1px solid #2e5c85;background:#10243a;color:#cfe8ff;
@@ -2668,7 +2671,7 @@ body.public-info-open{overflow:hidden;}
 
 <div class="skymap-section-label">星図本体</div>
 <div id="skyLineStatus" style="font-size:10px;color:#6f94b3;margin:2px 0 7px">星座線：内蔵簡易データ</div>
-<div class="skymap-canvas-wrap" id="skyMapCanvasWrap"><canvas id="skyMapCanvas" width="760" height="760"></canvas><div id="skyMapInteraction" class="sky-map-interaction" aria-label="星図操作領域"></div></div>
+<div class="skymap-canvas-wrap" id="skyMapCanvasWrap"><canvas id="skyMapCanvas" width="760" height="760"></canvas><div id="skyMapInteraction" class="sky-map-interaction" aria-label="星図操作領域"></div><button type="button" class="sky-canvas-fullscreen-exit" id="skyCanvasFullscreenExit" aria-label="星図の全画面表示を終了">⤢ 全画面終了</button></div>
 <div class="skymap-legend"><span>★ 恒星</span><span>✧ 星の目印</span><span style="color:#ffd54f">● 太陽</span><span style="color:#e8e8f0">● 月</span><span style="color:#c084fc">◇ 惑星</span><span style="color:#4ade80">□ 星雲・星団・銀河</span><span style="color:#67e8f9">○ 彗星</span><span style="color:#a78bfa">✦ 流星群放射点</span></div>
 <div class="skymap-object-info" id="skyMapObjectInfo">星・惑星・月・主要天体をクリックすると、ここに情報を表示します。</div><div class="skymap-timebar">
 <span class="label">⏱ 星図の時刻</span>
@@ -5334,8 +5337,8 @@ LIVE_NOW_TIMER=setInterval(()=>refreshLiveNow(false),5000);
 }
 
 function skyPanelIsFullscreen(){
-const panel=document.querySelector(".skymap-panel");
-return !!panel && (document.fullscreenElement===panel || panel.classList.contains("sky-fullscreen-fallback"));
+const wrap=$("#skyMapCanvasWrap");
+return !!wrap && (document.fullscreenElement===wrap || wrap.classList.contains("sky-fullscreen-fallback"));
 }
 
 function updateSkyFullscreenButton(){
@@ -5347,28 +5350,28 @@ if(trackingBtn)trackingBtn.textContent=isFull?"⤢ 全画面終了":"⛶ 追尾�
 }
 
 async function toggleSkyFullscreen(){
-const panel=document.querySelector(".skymap-panel");
-if(!panel)return;
+const wrap=$("#skyMapCanvasWrap");
+if(!wrap)return;
 
-if(document.fullscreenElement===panel){
+if(document.fullscreenElement===wrap){
 await document.exitFullscreen?.();
 return;
 }
-if(panel.classList.contains("sky-fullscreen-fallback")){
-panel.classList.remove("sky-fullscreen-fallback");
+if(wrap.classList.contains("sky-fullscreen-fallback")){
+wrap.classList.remove("sky-fullscreen-fallback");
 document.body.classList.remove("sky-fullscreen-open");
 updateSkyFullscreenButton();
 setTimeout(()=>{renderSkyChart();syncSkyInteractionLayer();},60);
 return;
 }
 
-if(panel.requestFullscreen){
+if(wrap.requestFullscreen){
 try{
-await panel.requestFullscreen();
+await wrap.requestFullscreen();
 return;
 }catch(e){}
 }
-panel.classList.add("sky-fullscreen-fallback");
+wrap.classList.add("sky-fullscreen-fallback");
 document.body.classList.add("sky-fullscreen-open");
 updateSkyFullscreenButton();
 setTimeout(()=>{renderSkyChart();syncSkyInteractionLayer();},60);
@@ -8823,9 +8826,10 @@ const date=getSkyViewDate();
 if(!Number.isFinite(lat)||!Number.isFinite(lon)||!date||isNaN(date))return;
 
 const fullscreen=skyPanelIsFullscreen();
-const fsMax=Math.max(320,Math.min(window.innerWidth-28,window.innerHeight-230));
-const maxCanvas=fullscreen?Math.max(320,fsMax):760;
-const cssSize=Math.max(320,Math.min(maxCanvas,canvas.parentElement.clientWidth-16||maxCanvas));
+const fsMax=Math.max(320,Math.min(window.innerWidth-8,window.innerHeight-8));
+const maxCanvas=fullscreen?fsMax:760;
+const parentPad=fullscreen?0:16;
+const cssSize=Math.max(320,Math.min(maxCanvas,canvas.parentElement.clientWidth-parentPad||maxCanvas));
 const dpr=Math.min(window.devicePixelRatio||1,2);
 canvas.style.width=cssSize+"px";canvas.style.height=cssSize+"px";
 canvas.width=Math.round(cssSize*dpr);canvas.height=Math.round(cssSize*dpr);
@@ -10382,16 +10386,17 @@ btn.addEventListener("dblclick",event=>event.preventDefault());
 $("#skyTimeReset").addEventListener("click",resetSkyViewTime);
 $("#skyFullscreen").addEventListener("click",toggleSkyFullscreen);
 $("#skyTrackingFullscreen")?.addEventListener("click",toggleSkyFullscreen);
+$("#skyCanvasFullscreenExit")?.addEventListener("click",toggleSkyFullscreen);
 document.addEventListener("fullscreenchange",()=>{
-document.body.classList.toggle("sky-fullscreen-open",!!document.fullscreenElement);
+document.body.classList.toggle("sky-fullscreen-open",skyPanelIsFullscreen());
 updateSkyFullscreenButton();
 setTimeout(()=>{renderSkyChart();syncSkyInteractionLayer();},60);
 });
 document.addEventListener("keydown",event=>{
 if(event.key==="Escape"){
-const panel=document.querySelector(".skymap-panel");
-if(panel?.classList.contains("sky-fullscreen-fallback")){
-panel.classList.remove("sky-fullscreen-fallback");
+const wrap=$("#skyMapCanvasWrap");
+if(wrap?.classList.contains("sky-fullscreen-fallback")){
+wrap.classList.remove("sky-fullscreen-fallback");
 document.body.classList.remove("sky-fullscreen-open");
 updateSkyFullscreenButton();
 setTimeout(()=>{renderSkyChart();syncSkyInteractionLayer();},60);
