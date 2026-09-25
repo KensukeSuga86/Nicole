@@ -1,4 +1,4 @@
-const CACHE_VERSION="nicole-pwa-v1.9.5";
+const CACHE_VERSION="nicole-pwa-v1.10.0";
 const APP_CACHE=`${CACHE_VERSION}-app`;
 const DATA_CACHE=`${CACHE_VERSION}-data`;
 

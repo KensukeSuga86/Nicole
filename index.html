@@ -53,13 +53,15 @@ button.action.sm{padding:5px 12px;font-size:12px;}
 .sky-card .sky-label{font-size:11px;color:#6a8aaa;margin-bottom:4px;}
 .sky-card .sky-val{font-size:17px;font-weight:bold;color:#e0eaf5;}
 .sky-card .sky-sub{font-size:11px;color:#8ab4d4;margin-top:2px;}
-.sky-card.sun{border-color:#f59e0b55;}
-.sky-card.moon{border-color:#c084fc55;}
-.sky-card.twilight{border-color:#4a9fd455;}
-.sky-card.weather{border-color:#38bdf855;}
-.sky-card.weather-grade{border-color:#4ade8055;}
-.sky-card.weather .sky-val{font-size:16px;}
-.sky-card.weather-grade .sky-val{font-size:16px;}
+.sky-card.sun,.sky-card.twilight{border-color:rgba(250,204,21,.42);background:rgba(250,204,21,.035);}
+.sky-card.sun .sky-label,.sky-card.twilight .sky-label{color:#e8c85f;}
+.sky-card.sun .sky-val,.sky-card.twilight .sky-val{color:#fff0b0;}
+.sky-card.moon{border-color:rgba(226,232,240,.38);background:rgba(226,232,240,.025);}
+.sky-card.moon .sky-label{color:#cbd5e1;}
+.sky-card.moon .sky-val{color:#f8fafc;}
+.sky-card.weather,.sky-card.weather-grade{border-color:rgba(192,132,252,.42);background:rgba(168,85,247,.035);}
+.sky-card.weather .sky-label,.sky-card.weather-grade .sky-label{color:#c4b5fd;}
+.sky-card.weather .sky-val,.sky-card.weather-grade .sky-val{font-size:16px;color:#e9d5ff;}
 .model-compare{margin-top:5px;padding-top:5px;border-top:1px solid #17314d;font-size:9px;line-height:1.55;color:#7896af;}
 .model-compare b{color:#c8dff0;font-weight:600;}
 .agreement-high{color:#4ade80;}
@@ -395,8 +397,14 @@ header{align-items:flex-start;}
 footer{background:#080c18;border-top:1px solid #1e3a5f;color:#4a6a8a;text-align:center;padding:14px;font-size:12px;margin-top:20px;}
 footer span{color:#7eb8e8;}
 
-.recommend-panel{background:linear-gradient(135deg,#10192d,#13233f);border:1px solid #2a5a8c;border-radius:12px;padding:16px 18px;margin-bottom:14px;}
-.recommend-panel h3{font-size:14px;color:#ffd54f;margin:0 0 12px;}
+.recommend-panel{background:linear-gradient(135deg,#10192d,#13233f);border:1px solid #2a5a8c;border-radius:12px;margin-bottom:14px;overflow:hidden;}
+.recommend-panel > summary{min-height:46px;padding:0 16px;display:flex;align-items:center;gap:8px;cursor:pointer;list-style:none;color:#ffd54f;font-size:14px;font-weight:700;user-select:none;}
+.recommend-panel > summary::-webkit-details-marker{display:none;}
+.recommend-panel > summary::after{content:"＋";margin-left:auto;color:#8ca9bf;font-size:17px;line-height:1;}
+.recommend-panel[open] > summary::after{content:"−";}
+.recommend-panel[open] > summary{border-bottom:1px solid #1e3a5f;}
+.recommend-panel .recommend-grid{padding:12px 16px 16px;}
+.recommend-panel h3{font-size:14px;color:#ffd54f;margin:0;}
 .recommend-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;}
 .recommend-card{background:#080c18;border:1px solid #1e3a5f;border-radius:10px;padding:12px 14px;}
 .recommend-card .r-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
@@ -535,6 +543,8 @@ text-align:right;
 }
 .skymap-tracking-controls.show{display:flex;}
 .sky-tracking-note{font-size:9px;color:#7398ad;}
+.sky-tracking-target{display:none;font-size:10px;font-weight:700;color:#ffd54f;padding:3px 7px;border:1px solid rgba(255,213,79,.28);border-radius:999px;background:rgba(255,213,79,.06);}
+.sky-tracking-target.show{display:inline-flex;}
 #skyViewTracking.active{
   background:#173f2c!important;
   border-color:#4ade80!important;
@@ -612,7 +622,7 @@ text-align:right;
 
 .skymap-canvas-wrap{position:relative;display:flex;justify-content:center;align-items:center;overflow:hidden;background:#030711;border:1px solid #1e3a5f;border-radius:10px;padding:8px;}
 #skyMapCanvas{display:block;width:min(100%,760px);height:auto;aspect-ratio:1/1;pointer-events:none;}
-.sky-map-interaction{position:absolute;z-index:3;touch-action:none;cursor:grab;-webkit-tap-highlight-color:transparent;}
+.sky-map-interaction{position:absolute;z-index:3;touch-action:none;overscroll-behavior:none;cursor:grab;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;}
 .sky-map-interaction.dragging{cursor:grabbing;}
 .skymap-head-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
 .sky-fullscreen-btn{white-space:nowrap;}
@@ -643,8 +653,8 @@ text-align:right;
   inset:0;
   z-index:10000;
 }
-/* 全画面の地平／追尾モードは端末の横幅をそのまま星図の視野として使う */
-#skyMapCanvasWrap.sky-wide-landscape #skyMapCanvas{
+/* 全画面の地平／追尾モードは縦横どちらでも画面全体を星図の視野として使う */
+#skyMapCanvasWrap.sky-full-horizon #skyMapCanvas{
   max-width:none;
   max-height:none;
   aspect-ratio:auto;
@@ -1565,6 +1575,27 @@ button.action.sm,
   letter-spacing:.03em;
   margin-top:15px;
 }
+.sky-settings-details{
+  margin:10px 0;
+  border:1px solid #17314d;
+  border-radius:9px;
+  background:#081120;
+  overflow:hidden;
+}
+.sky-settings-details>summary{
+  min-height:44px;
+  padding:0 11px;
+  display:flex;align-items:center;
+  cursor:pointer;list-style:none;
+  color:#9ccbf0;font-size:12px;font-weight:700;user-select:none;
+}
+.sky-settings-details>summary::-webkit-details-marker{display:none;}
+.sky-settings-details>summary::after{content:"＋";margin-left:auto;color:#658ba6;font-size:17px;line-height:1;}
+.sky-settings-details[open]>summary::after{content:"−";}
+.sky-settings-details[open]>summary{border-bottom:1px solid #17314d;}
+.sky-settings-details-body{padding:8px 9px 9px;}
+.sky-settings-details .skymap-controls{margin:0;}
+.sky-settings-details .comet-track-bar{margin-top:8px;}
 .obs-field > label,
 .ht-search-row label,
 .favorite-location-main label{
@@ -1593,15 +1624,15 @@ button.action.sm,
   user-select:none;
 }
 .compact-settings > summary::-webkit-details-marker{display:none}
-.compact-settings > summary::before{
-  content:"›";
-  margin-right:8px;
-  font-size:18px;
-  color:#5f8cac;
-  transform:rotate(0deg);
-  transition:transform .15s ease;
+.compact-settings > summary::before{content:none;}
+.compact-settings > summary::after{
+  content:"＋";
+  margin-left:auto;
+  color:#658ba6;
+  font-size:15px;
+  line-height:1;
 }
-.compact-settings[open] > summary::before{transform:rotate(90deg)}
+.compact-settings[open] > summary::after{content:"−";}
 .compact-settings[open] > summary{
   border-bottom:1px solid #152d43;
 }
@@ -1730,14 +1761,15 @@ button.action.sm,
   font-size:13px;
 }
 .polar-panel > summary::-webkit-details-marker{display:none}
-.polar-panel > summary::before{
-  content:"›";
-  margin-right:8px;
-  font-size:20px;
-  color:#5f8cac;
-  transition:transform .15s ease;
+.polar-panel > summary::before{content:none;}
+.polar-panel > summary::after{
+  content:"＋";
+  margin-left:auto;
+  color:#658ba6;
+  font-size:17px;
+  line-height:1;
 }
-.polar-panel[open] > summary::before{transform:rotate(90deg)}
+.polar-panel[open] > summary::after{content:"−";}
 .polar-panel[open] > summary{border-bottom:1px solid #163149}
 .polar-body{
   display:grid;
@@ -2551,10 +2583,10 @@ body.public-info-open{overflow:hidden;}
 
 
 
-<div class="recommend-panel">
-<h3>⭐ 今夜のおすすめ</h3>
+<details class="recommend-panel recommend-details" id="recommendPanel" open>
+<summary>⭐ 今夜のおすすめ</summary>
 <div class="recommend-grid" id="recommendGrid"></div>
-</div>
+</details>
 
 <div class="result-header">
 <div class="result-summary">
@@ -2629,12 +2661,15 @@ body.public-info-open{overflow:hidden;}
 <div class="skymap-tracking-controls" id="skyTrackingControls">
   <span class="sky-device-status" id="skyDeviceStatus">センサー待機中…</span>
   <span class="sky-tracking-note">端末を空へ向けてください</span>
+  <span class="sky-tracking-target" id="skyTrackingTargetStatus"></span>
   <button type="button" class="sky-tracking-fullscreen-btn" id="skyTrackingFullscreen">⛶ 追尾を全画面</button>
 </div>
 <span class="skymap-view-hint" id="skyViewHint">天頂を中心に地平線まで表示</span>
 </div>
 
-<div class="skymap-section-label">表示設定</div>
+<details class="sky-settings-details" id="skyDisplaySettings" open>
+<summary>⚙️ 表示設定</summary>
+<div class="sky-settings-details-body">
 <div class="skymap-controls">
 <div class="sky-control-group sky-group-constellation">
   <label><input type="checkbox" id="skyShowLines" checked> 星座線</label>
@@ -2674,6 +2709,8 @@ body.public-info-open{overflow:hidden;}
 <button type="button" class="comet-track-clear" id="clearCometTrack" disabled>軌道を消す</button>
 <span class="comet-track-status" id="cometTrackStatus">彗星カードの「長期軌道を追う」から選択できます。</span>
 </div>
+</div>
+</details>
 
 <div class="skymap-section-label">星図本体</div>
 <div id="skyLineStatus" style="font-size:10px;color:#6f94b3;margin:2px 0 7px">星座線：内蔵簡易データ</div>
@@ -3555,6 +3592,7 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;起動時は端末の現在時刻が入り、現在時刻へ追従します。「🟢 現在時刻に追従中」を押すと追従を停止でき、もう一度「🕐 現在時刻をセット」を押すと現在時刻へ戻って追従を再開します。日時欄を直接変更した場合も追従は停止します。&lt;/p&gt;
           &lt;h4&gt;詳細な観測条件&lt;/h4&gt;
           &lt;p&gt;別日時や別地点を調べる場合は「詳細な観測条件を設定」を開きます。観測場所、最低高度、等級上限、天体・星座検索などを指定できます。&lt;/p&gt;
+          &lt;p&gt;折りたたみ可能な機能は、閉じているとき「＋」、開いているとき「−」で統一しています。&lt;/p&gt;
           &lt;h4&gt;この条件で観測開始&lt;/h4&gt;
           &lt;p&gt;手動で条件を設定した場合は、最後に&lt;strong&gt;「🔭 この条件で観測開始」&lt;/strong&gt;を押して結果を更新します。&lt;/p&gt;
           &lt;h4&gt;星の見え方&lt;/h4&gt;
@@ -3615,7 +3653,7 @@ body.public-info-open{overflow:hidden;}
       &lt;details class=&quot;panel&quot; id=&quot;chart&quot; open&gt;
         &lt;summary&gt;&lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🗺️&lt;/span&gt;&lt;span&gt;星図&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;&lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;星図は、指定した日時・場所の空を表示する中心機能です。&lt;strong&gt;「全天」「地平」「📱 追尾」&lt;/strong&gt;の3つの表示を切り替えられます。&lt;/p&gt;
+          &lt;p&gt;星図は、指定した日時・場所の空を表示する中心機能です。&lt;strong&gt;「全天」「地平」「📱 追尾」&lt;/strong&gt;の3つの表示を切り替えられます。「⚙️ 表示設定」は＋／−で折りたためます。&lt;/p&gt;
           &lt;h4&gt;全天&lt;/h4&gt;
           &lt;p&gt;天頂を中心に地平線までを円形に表示します。北が上、東が左です。ズーム時は地平円の内側をドラッグして表示位置を移動できます。円の外側はページスクロールとして使えます。&lt;/p&gt;
           &lt;h4&gt;地平&lt;/h4&gt;
@@ -3623,6 +3661,7 @@ body.public-info-open{overflow:hidden;}
           &lt;h4&gt;📱 追尾&lt;/h4&gt;
           &lt;p&gt;対応するスマートフォンやタブレットでは、端末の方位・傾きセンサーを使い、端末を向けた方向へ星図が追従します。iPhone / iPadでは初回にセンサー利用の許可が必要になる場合があります。&lt;/p&gt;
           &lt;p&gt;追尾は画面回転を補正し、高仰角で方位が約180°飛ぶ端末では直前の視線方向との連続性から補正します。天頂付近では方位そのものが不定になりやすく、周囲の金属や磁石の影響でも方位がずれることがあります。&lt;/p&gt;
+          &lt;p&gt;「今夜のおすすめ」や天体カードの「星図で見る」で対象を選んでから追尾モードにすると、対象が画面外にある場合は黄色い矢印が方向を案内します。対象が画面内に入ると対象位置へラベルを表示します。&lt;/p&gt;
           &lt;h4&gt;全画面表示&lt;/h4&gt;
           &lt;p&gt;&lt;strong&gt;「⛶ 全画面」&lt;/strong&gt;または追尾時の&lt;strong&gt;「⛶ 追尾を全画面」&lt;/strong&gt;を押すと、星図パネル全体ではなく&lt;strong&gt;星空が描画されている「星図本体」だけ&lt;/strong&gt;を全画面表示します。全画面中は右上の「⤢ 全画面終了」で戻れます。&lt;/p&gt;
           &lt;p&gt;地平・追尾モードでスマートフォンを横向きにすると、縦方向の見え方を保ったまま左右の視野を広げ、横長の画面をより広く使います。単純な横方向の引き伸ばしではありません。全天表示は地平円を保つため円形表示のままです。&lt;/p&gt;
@@ -3853,6 +3892,10 @@ body.public-info-open{overflow:hidden;}
 
           &lt;h4&gt;横向きにすると星が横に伸びませんか？&lt;/h4&gt;
           &lt;p&gt;地平・追尾の横向き全画面は画像を引き伸ばしているのではなく、縦方向の見え方を保ちながら左右の視野を広げています。&lt;/p&gt;
+          &lt;p&gt;v1.10.0では縦向きの地平・追尾全画面も画面高を使うようになり、上下の余白を減らしています。全天表示は地平円を保つため円形表示です。&lt;/p&gt;
+
+          &lt;h4&gt;iPhoneで星図をピンチ拡大したあと戻せません&lt;/h4&gt;
+          &lt;p&gt;星図上のピンチはNicole側の50〜500%ズームとして処理します。中央の倍率ボタンを押すと100%へ戻せます。v1.10.0ではiOS Safariのページ拡大ジェスチャーが星図操作へ混ざらないよう補正しています。&lt;/p&gt;
 
           &lt;h4&gt;追尾の方位がずれます&lt;/h4&gt;
           &lt;p&gt;端末の方位センサーは周囲の金属・磁石・車体などの影響を受けます。端末側のコンパス校正を確認し、磁気を発する物から離れて使用してください。天頂付近では方位そのものも不安定になります。&lt;/p&gt;
@@ -3890,7 +3933,7 @@ body.public-info-open{overflow:hidden;}
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.9.5&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.0&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -5040,10 +5083,11 @@ const SKY_PERSPECTIVE_FOV=100;
 let SKY_PERSPECTIVE_ASPECT=1;
 
 function getSkyPerspectiveViewport(radius){
-const halfY=radius*1.06;
+const base=radius*1.06;
 const aspect=Math.max(.45,Math.min(3.2,Number(SKY_PERSPECTIVE_ASPECT)||1));
-const halfX=halfY*aspect;
-return{halfX,halfY};
+/* 横長では高さ、縦長では幅を基準にし、どちらの向きでも描画領域を有効利用する */
+if(aspect>=1)return{halfX:base*aspect,halfY:base};
+return{halfX:base,halfY:base/aspect};
 }
 let SKY_ZOOM=1;
 let SKY_PAN_X=0;
@@ -5373,6 +5417,7 @@ SKY_ZOOM=1;
 SKY_PAN_X=0;
 SKY_PAN_Y=0;
 updateSkyProjectionUI();
+updateSkyTrackingTargetStatus();
 renderSkyChart();
 requestAnimationFrame(syncSkyInteractionLayer);
 }
@@ -5385,6 +5430,7 @@ if(status){
   status.style.color=SKY_DEVICE_MODE?"#86efac":"#6a8aaa";
 }
 updateSkyProjectionUI();
+updateSkyTrackingTargetStatus();
 }
 
 function circularSmoothDeg(previous,next,weight=0.22){
@@ -6934,6 +6980,8 @@ const co=CONST_COORD[constellationId];
 if(!c||!co)return;
 
 SKY_FOCUS_CONSTELLATION_ID=constellationId;
+SKY_FOCUS_OBJECT_ID=null;
+updateSkyTrackingTargetStatus();
 switchResultTab("skymap");
 
 requestAnimationFrame(()=>{
@@ -6979,6 +7027,7 @@ function focusObjectOnSky(obj){
 if(!obj)return;
 SKY_FOCUS_OBJECT_ID=obj.id||obj.name||null;
 SKY_FOCUS_CONSTELLATION_ID=null;
+updateSkyTrackingTargetStatus();
 
 if(obj.type==="planet"){
 $("#skyShowPlanets").checked=true;
@@ -7062,6 +7111,111 @@ ctx.lineWidth=2;
 ctx.beginPath();
 ctx.arc(p.x,p.y,9,0,Math.PI*2);
 ctx.stroke();
+ctx.restore();
+}
+
+function getSkyFocusTarget(date){
+if(SKY_FOCUS_OBJECT_ID){
+  const obj=ALL_OBJECTS.find(o=>(o.id||o.name)===SKY_FOCUS_OBJECT_ID);
+  const rd=objectRaDecAt(obj,date);
+  if(obj&&rd)return{kind:"object",name:obj.name||obj.id,ra:rd.ra,dec:rd.dec};
+}
+if(SKY_FOCUS_CONSTELLATION_ID){
+  const c=getConstellationById(SKY_FOCUS_CONSTELLATION_ID);
+  const co=CONST_COORD[SKY_FOCUS_CONSTELLATION_ID];
+  if(c&&co)return{kind:"constellation",name:c.name,ra:co[0],dec:co[1]};
+}
+return null;
+}
+
+function updateSkyTrackingTargetStatus(){
+const el=$("#skyTrackingTargetStatus");
+if(!el)return;
+const target=getSkyFocusTarget(getSkyViewDate());
+if(target){
+  el.textContent=`目標：${target.name}`;
+  el.classList.add("show");
+}else{
+  el.textContent="";
+  el.classList.remove("show");
+}
+}
+
+function drawTrackingTargetGuide(ctx,lat,lon,date,cx,cy,R,w,h){
+if(SKY_PROJECTION!=="tracking")return;
+const target=getSkyFocusTarget(date);
+if(!target)return;
+const aa=altAz(target.ra,target.dec,lat,lon,date);
+if(!Number.isFinite(aa.alt)||!Number.isFinite(aa.az))return;
+
+const p=skyProjectAltAz(aa.alt,aa.az,cx,cy,R,true);
+ctx.save();
+ctx.lineWidth=2;
+ctx.strokeStyle="#ffd54f";
+ctx.fillStyle="#ffd54f";
+ctx.font="bold 11px sans-serif";
+ctx.textBaseline="middle";
+
+if(aa.alt<0){
+  const text=`${target.name}：地平線下`;
+  const tw=ctx.measureText(text).width;
+  ctx.fillStyle="rgba(3,7,17,.78)";
+  ctx.fillRect(Math.max(8,cx-tw/2-7),h-34,tw+14,24);
+  ctx.fillStyle="#ffd54f";
+  ctx.textAlign="center";
+  ctx.fillText(text,cx,h-22);
+  ctx.restore();
+  return;
+}
+
+/* 対象が画面内なら、小さな矢印とラベルで位置を示す */
+if(p){
+  const labelY=Math.max(18,p.y-18);
+  ctx.beginPath();
+  ctx.moveTo(p.x,p.y-11);ctx.lineTo(p.x-5,p.y-18);ctx.lineTo(p.x+5,p.y-18);ctx.closePath();ctx.fill();
+  ctx.textAlign="center";
+  const label=target.name;
+  const tw=ctx.measureText(label).width;
+  ctx.fillStyle="rgba(3,7,17,.76)";ctx.fillRect(p.x-tw/2-5,labelY-9,tw+10,18);
+  ctx.fillStyle="#ffd54f";ctx.fillText(label,p.x,labelY);
+  ctx.restore();
+  return;
+}
+
+/* 画面外なら、カメラ座標で対象方向を求めて画面端へ矢印を置く */
+const v=horizontalUnitVector(aa.alt,aa.az);
+const forward=horizontalUnitVector(SKY_PERSPECTIVE_ALT,SKY_PERSPECTIVE_AZ);
+const camAz=SKY_PERSPECTIVE_AZ*D2R;
+const right={x:Math.cos(camAz),y:-Math.sin(camAz),z:0};
+const up={
+  x:right.y*forward.z-right.z*forward.y,
+  y:right.z*forward.x-right.x*forward.z,
+  z:right.x*forward.y-right.y*forward.x
+};
+let dx=v.x*right.x+v.y*right.y+v.z*right.z;
+let dy=-(v.x*up.x+v.y*up.y+v.z*up.z);
+if(Math.hypot(dx,dy)<0.03){
+  const da=((aa.az-SKY_PERSPECTIVE_AZ+540)%360)-180;
+  dx=da>=0?1:-1;dy=0;
+}
+const {halfX,halfY}=getSkyPerspectiveViewport(R);
+const maxX=Math.max(24,halfX-28),maxY=Math.max(24,halfY-28);
+const k=Math.min(maxX/Math.max(.0001,Math.abs(dx)),maxY/Math.max(.0001,Math.abs(dy)));
+const ax=cx+dx*k,ay=cy+dy*k;
+const angle=Math.atan2(dy,dx);
+ctx.save();ctx.translate(ax,ay);ctx.rotate(angle);
+ctx.beginPath();ctx.moveTo(12,0);ctx.lineTo(-7,-7);ctx.lineTo(-3,0);ctx.lineTo(-7,7);ctx.closePath();ctx.fill();ctx.restore();
+
+const dot=Math.max(-1,Math.min(1,v.x*forward.x+v.y*forward.y+v.z*forward.z));
+const sep=Math.acos(dot)*R2D;
+const label=`${target.name}  ${Math.round(sep)}°`;
+ctx.textAlign=ax>cx?"right":"left";
+const lx=ax+(ax>cx?-18:18);
+const ly=Math.max(18,Math.min(h-18,ay));
+const tw=ctx.measureText(label).width;
+ctx.fillStyle="rgba(3,7,17,.78)";
+ctx.fillRect(ax>cx?lx-tw-5:lx-5,ly-9,tw+10,18);
+ctx.fillStyle="#ffd54f";ctx.fillText(label,lx,ly);
 ctx.restore();
 }
 
@@ -8792,17 +8946,14 @@ if(!Number.isFinite(lat)||!Number.isFinite(lon)||!date||isNaN(date))return;
 
 const fullscreen=skyPanelIsFullscreen();
 const wrap=canvas.parentElement;
-const landscape=window.innerWidth>window.innerHeight;
-const wideFullscreen=fullscreen&&isHorizonProjection()&&landscape;
+const horizonFullscreen=fullscreen&&isHorizonProjection();
 
 let cssWidth,cssHeight;
-if(wideFullscreen){
-  /*
-    横向き全画面の地平／追尾モード:
-    高さを基準に従来と同じ縦方向FOVを保ち、横幅分だけ左右の視野を拡張する。
-  */
-  cssWidth=Math.max(320,Math.floor(wrap.clientWidth||window.innerWidth));
-  cssHeight=Math.max(220,Math.floor(wrap.clientHeight||window.innerHeight));
+if(horizonFullscreen){
+  /* 地平／追尾の全画面は縦横とも利用可能領域いっぱいを使う。
+     投影アスペクト比で実視野を広げるため、画像の引き伸ばしにはならない。 */
+  cssWidth=Math.max(280,Math.floor(wrap.clientWidth||window.innerWidth));
+  cssHeight=Math.max(280,Math.floor(wrap.clientHeight||window.innerHeight));
 }else{
   const fsMax=Math.max(320,Math.min(window.innerWidth-8,window.innerHeight-8));
   const maxCanvas=fullscreen?fsMax:760;
@@ -8812,7 +8963,7 @@ if(wideFullscreen){
   cssHeight=cssSize;
 }
 
-wrap.classList.toggle("sky-wide-landscape",wideFullscreen);
+wrap.classList.toggle("sky-full-horizon",horizonFullscreen);
 SKY_PERSPECTIVE_ASPECT=isHorizonProjection()?cssWidth/cssHeight:1;
 
 const dpr=Math.min(window.devicePixelRatio||1,2);
@@ -9048,6 +9199,9 @@ if($("#skyShowFov")?.checked){
 drawCameraFov(ctx,cx,cy,R);
 }
 
+/* 追尾ナビは他の星図オーバーレイより前面に描画する */
+drawTrackingTargetGuide(ctx,lat,lon,date,cx,cy,R,w,h);
+
 if(!interactive){
 const pad=n=>String(n).padStart(2,"0");
 const place=$("#inPlace").value||"指定場所";
@@ -9162,6 +9316,15 @@ btn.type="button";
 btn.textContent="✦ 天体カードを見る";
 btn.addEventListener("click",()=>goToObjectCard(obj.id));
 actions.appendChild(btn);
+
+const trackBtn=document.createElement("button");
+trackBtn.type="button";
+trackBtn.textContent="📱 追尾で探す";
+trackBtn.addEventListener("click",async()=>{
+  focusObjectOnSky(obj);
+  await enableSkyTrackingMode();
+});
+actions.appendChild(trackBtn);
 }
 
 consts.slice(0,2).forEach(c=>{
@@ -9178,6 +9341,16 @@ function showSkyMapHit(hit){
 const info=$("#skyMapObjectInfo");
 if(!info)return;
 if(!hit){info.textContent="この位置には選択できる天体がありません。";return;}
+
+/* 星図で選択した対象も「探す対象」として保持する。
+   対応する天体カード／星座カードへの導線は下のアクションに表示する。 */
+const hitObj=objectForSkyHit(hit);
+const hitConsts=constellationsForSkyHit(hit);
+if(hitObj){SKY_FOCUS_OBJECT_ID=hitObj.id||hitObj.name;SKY_FOCUS_CONSTELLATION_ID=null;}
+else if(hit.constellationId){SKY_FOCUS_CONSTELLATION_ID=hit.constellationId;SKY_FOCUS_OBJECT_ID=null;}
+else if(hitConsts.length){SKY_FOCUS_CONSTELLATION_ID=hitConsts[0].id;SKY_FOCUS_OBJECT_ID=null;}
+else{SKY_FOCUS_OBJECT_ID=null;SKY_FOCUS_CONSTELLATION_ID=null;}
+updateSkyTrackingTargetStatus();
 
 const alt=Math.round(hit.alt*10)/10;
 const az=Math.round(hit.az*10)/10;
@@ -10518,6 +10691,33 @@ const factor=event.deltaY<0?1.16:1/1.16;
 setSkyZoom(SKY_ZOOM*factor,x,y);
 },{passive:false});
 
+/* iOS Safariではネイティブのページ拡大 gesture がPointer Eventsより優先される場合がある。
+   星図上のピンチは常に星図ズームとして処理し、ページ自体の拡大を抑止する。 */
+let SKY_IOS_GESTURE_ACTIVE=false;
+let SKY_IOS_GESTURE_START_ZOOM=1;
+skyInteraction.addEventListener("touchmove",event=>{
+  if(event.touches&&event.touches.length>=2)event.preventDefault();
+},{passive:false});
+skyInteraction.addEventListener("gesturestart",event=>{
+  event.preventDefault();
+  SKY_IOS_GESTURE_ACTIVE=true;
+  SKY_IOS_GESTURE_START_ZOOM=SKY_ZOOM;
+},{passive:false});
+skyInteraction.addEventListener("gesturechange",event=>{
+  if(!SKY_IOS_GESTURE_ACTIVE)return;
+  event.preventDefault();
+  const scale=Number(event.scale)||1;
+  SKY_ZOOM=clampSkyZoom(SKY_IOS_GESTURE_START_ZOOM*scale);
+  if(SKY_ZOOM<=1.001){SKY_PAN_X=0;SKY_PAN_Y=0;}
+  requestSkyInteractiveRender();
+},{passive:false});
+skyInteraction.addEventListener("gestureend",event=>{
+  event.preventDefault();
+  SKY_IOS_GESTURE_ACTIVE=false;
+  if(Math.abs(SKY_ZOOM-1)<0.035)resetSkyZoom();
+  else{limitSkyPan();renderSkyChart();}
+},{passive:false});
+
 skyInteraction.addEventListener("pointerdown",event=>{
 const p0=skyEventPoint(event);
 skyInteraction.setPointerCapture(event.pointerId);
@@ -10557,6 +10757,7 @@ panY:SKY_PAN_Y
 }
 }
 }else if(SKY_POINTERS.size===2){
+if(SKY_IOS_GESTURE_ACTIVE)return;
 const pts=[...SKY_POINTERS.values()];
 const dx=pts[1].x-pts[0].x,dy=pts[1].y-pts[0].y;
 const midX=(pts[0].x+pts[1].x)/2,midY=(pts[0].y+pts[1].y)/2;
@@ -10617,6 +10818,7 @@ SKY_PAN_Y=SKY_GESTURE.panY+dy;
 limitSkyPan();
 renderSkyChart();
 }else if(SKY_POINTERS.size===2){
+if(SKY_IOS_GESTURE_ACTIVE)return;
 const pts=[...SKY_POINTERS.values()];
 const dx=pts[1].x-pts[0].x,dy=pts[1].y-pts[0].y;
 const dist=Math.hypot(dx,dy)||1;
