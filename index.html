@@ -25,6 +25,8 @@
 body{font-family:"Meiryo","Yu Gothic",sans-serif;color:#e0eaf5;margin:0;background:#080c18;}
 header{background:linear-gradient(135deg,#0a1428,#0d2040);color:#fff;padding:14px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;border-bottom:2px solid #1e4a7a;}
 header h1{font-family:"Trajan Pro 3","Trajan Pro","Trajan","Times New Roman",serif;font-weight:400;font-size:22px;margin:0;letter-spacing:2px;background:linear-gradient(90deg,#7eb8e8,#ffd54f,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.app-title-block{display:flex;flex-direction:column;gap:2px;}
+.app-version{font-size:9px;line-height:1.2;color:#6686a0;letter-spacing:.08em;padding-left:2px;}
 .panel{background:#0d1525;border:1px solid #1e3a5f;border-radius:12px;padding:18px 20px;margin:14px;}
 .panel h2{font-size:15px;color:#7eb8e8;border-left:4px solid #2a7abf;padding-left:10px;margin:0 0 14px;}
 label{font-size:13px;color:#8ab4c4;display:block;margin-bottom:4px;}
@@ -53,9 +55,12 @@ button.action.sm{padding:5px 12px;font-size:12px;}
 .sky-card .sky-label{font-size:11px;color:#6a8aaa;margin-bottom:4px;}
 .sky-card .sky-val{font-size:17px;font-weight:bold;color:#e0eaf5;}
 .sky-card .sky-sub{font-size:11px;color:#8ab4d4;margin-top:2px;}
-.sky-card.sun,.sky-card.twilight{border-color:rgba(250,204,21,.42);background:rgba(250,204,21,.035);}
-.sky-card.sun .sky-label,.sky-card.twilight .sky-label{color:#e8c85f;}
-.sky-card.sun .sky-val,.sky-card.twilight .sky-val{color:#fff0b0;}
+.sky-card.sun{border-color:rgba(250,204,21,.42);background:rgba(250,204,21,.035);}
+.sky-card.sun .sky-label{color:#e8c85f;}
+.sky-card.sun .sky-val{color:#fff0b0;}
+.sky-card.twilight{border-color:rgba(251,146,60,.46);background:rgba(251,146,60,.045);}
+.sky-card.twilight .sky-label{color:#fdba74;}
+.sky-card.twilight .sky-val{color:#ffedd5;}
 .sky-card.moon{border-color:rgba(226,232,240,.38);background:rgba(226,232,240,.025);}
 .sky-card.moon .sky-label{color:#cbd5e1;}
 .sky-card.moon .sky-val{color:#f8fafc;}
@@ -1741,7 +1746,7 @@ button.action.sm,
   color:#8fb8d3;
 }
 
-/* ===== 極軸望遠鏡ガイド ===== */
+/* ===== 赤道儀 ===== */
 .polar-panel{
   margin:12px 0;
   border:1px solid #1e3b55;
@@ -2280,7 +2285,7 @@ footer a:hover{color:#dff3ff;border-bottom-color:#8ecdf2}
   }
 }
 
-/* 今夜の空情報：コンパクト化 */
+/* 空の情報：コンパクト化 */
 .sky-panel{
   padding:13px 14px;
   margin-bottom:12px;
@@ -2449,12 +2454,69 @@ body.public-info-open{overflow:hidden;}
 }
 
 .sky-weather-caution{margin-top:4px;font-size:9px;line-height:1.35;color:#e8a5a5;opacity:.88;}
+
+/* ===== v1.10.1 折りたたみ階層・パネル整理 ===== */
+.sky-info-details,
+.skymap-details{
+  padding:0 !important;
+  overflow:hidden;
+}
+.sky-info-details>summary,
+.skymap-details>.skymap-main-summary{
+  min-height:46px;
+  padding:0 14px;
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+  list-style:none;
+  user-select:none;
+  color:#a9d2ef;
+  font-size:14px;
+  font-weight:700;
+}
+.sky-info-details>summary::-webkit-details-marker,
+.skymap-details>.skymap-main-summary::-webkit-details-marker{display:none;}
+.sky-info-details>summary::after,
+.skymap-details>.skymap-main-summary::after{
+  content:"＋";
+  margin-left:auto;
+  color:#8ca9bf;
+  font-size:17px;
+  line-height:1;
+}
+.sky-info-details[open]>summary::after,
+.skymap-details[open]>.skymap-main-summary::after{content:"−";}
+.sky-info-details[open]>summary,
+.skymap-details[open]>.skymap-main-summary{border-bottom:1px solid #1e3a5f;}
+.sky-info-details-body{padding:11px 14px 14px;}
+.skymap-panel-body{padding:14px 16px;}
+.sky-focus-clear[hidden]{display:none !important;}
+.polar-reticle-wrap{flex-direction:column;}
+.polar-reticle-title{
+  width:100%;
+  margin:0 0 8px;
+  color:#91b8d3;
+  font-size:12px;
+  font-weight:700;
+  text-align:left;
+}
+/* 追尾全画面では終了ボタンを右下へ。通常全画面は従来どおり右上。 */
+#skyMapCanvasWrap.sky-full-tracking .sky-canvas-fullscreen-exit{
+  top:auto;
+  right:max(12px,env(safe-area-inset-right));
+  bottom:max(12px,env(safe-area-inset-bottom));
+}
+@media(max-width:520px){
+  .sky-info-details-body{padding:9px 10px 11px;}
+  .skymap-panel-body{padding:11px 10px;}
+}
+
 </style>
 </head>
 <body>
 <div id="pwaOfflineBanner" class="pwa-offline-banner" role="status">📡 オフライン：保存済みデータを利用できる機能のみ使用できます</div>
 <header>
-<div><h1>🔭 Nicole the Astronavigator</h1></div>
+<div class="app-title-block"><h1>🔭 Nicole the Astronavigator</h1><div class="app-version">Version 1.10.1</div></div>
 <div class="header-actions">
 <button type="button" class="night-mode-toggle" id="nightModeToggle" aria-pressed="false">🔴 赤色夜間モード</button>
 </div>
@@ -2579,15 +2641,6 @@ body.public-info-open{overflow:hidden;}
 </div>
 
 <div id="resultArea" style="display:none">
-<div class="sky-panel"><h3>🌙 今夜の空情報</h3><div class="sky-grid" id="skyGrid"></div></div>
-
-
-
-<details class="recommend-panel recommend-details" id="recommendPanel" open>
-<summary>⭐ 今夜のおすすめ</summary>
-<div class="recommend-grid" id="recommendGrid"></div>
-</details>
-
 <div class="result-header">
 <div class="result-summary">
 <div class="date" id="resDate"></div>
@@ -2596,6 +2649,16 @@ body.public-info-open{overflow:hidden;}
 </div>
 <button type="button" class="action gray result-sync-btn" id="syncResultsToSkyTime">星図に合わせて更新</button>
 </div>
+
+<details class="sky-panel sky-info-details" id="skyInfoPanel">
+<summary>🌌 空の情報</summary>
+<div class="sky-info-details-body"><div class="sky-grid" id="skyGrid"></div></div>
+</details>
+
+<details class="recommend-panel recommend-details" id="recommendPanel">
+<summary>⭐ 今夜のおすすめ</summary>
+<div class="recommend-grid" id="recommendGrid"></div>
+</details>
 <div class="tabs">
 <button class="active" data-rtab="skymap">🗺 星図</button>
 <button data-rtab="constellations">✨ 星座</button>
@@ -2619,13 +2682,15 @@ body.public-info-open{overflow:hidden;}
 </div>
 
 <div class="tab-content active" id="rtab-skymap">
-<div class="skymap-panel">
+<details class="skymap-panel skymap-details" id="skyMapPanel">
+<summary class="skymap-main-summary">🗺 星図</summary>
+<div class="skymap-panel-body">
 <div class="skymap-head">
 <div>
-<div class="skymap-title">🗺 全天星図</div>
 <div class="skymap-sub" id="skyMapInfo">観測日時と場所に合わせて星空を表示します（北が上・東が左）</div>
 </div>
 <div class="skymap-head-actions">
+<button class="action gray sm sky-focus-clear" id="clearSkyFocusTarget" type="button" hidden>✕ 選択解除</button>
 <button class="action gray sm" id="skyRedraw">↻ 再描画</button>
 <button class="action gray sm sky-fullscreen-btn" id="skyFullscreen" type="button">⛶ 全画面</button>
 </div>
@@ -2667,8 +2732,8 @@ body.public-info-open{overflow:hidden;}
 <span class="skymap-view-hint" id="skyViewHint">天頂を中心に地平線まで表示</span>
 </div>
 
-<details class="sky-settings-details" id="skyDisplaySettings" open>
-<summary>⚙️ 表示設定</summary>
+<details class="sky-settings-details" id="skyDisplaySettings">
+<summary>⚙️ 表示する情報</summary>
 <div class="sky-settings-details-body">
 <div class="skymap-controls">
 <div class="sky-control-group sky-group-constellation">
@@ -2712,7 +2777,6 @@ body.public-info-open{overflow:hidden;}
 </div>
 </details>
 
-<div class="skymap-section-label">星図本体</div>
 <div id="skyLineStatus" style="font-size:10px;color:#6f94b3;margin:2px 0 7px">星座線：内蔵簡易データ</div>
 <div class="skymap-canvas-wrap" id="skyMapCanvasWrap"><canvas id="skyMapCanvas" width="760" height="760"></canvas><div id="skyMapInteraction" class="sky-map-interaction" aria-label="星図操作領域"></div><button type="button" class="sky-canvas-fullscreen-exit" id="skyCanvasFullscreenExit" aria-label="星図の全画面表示を終了">⤢ 全画面終了</button></div>
 <div class="skymap-legend"><span>★ 恒星</span><span>✧ 星の目印</span><span style="color:#ffd54f">● 太陽</span><span style="color:#e8e8f0">● 月</span><span style="color:#c084fc">◇ 惑星</span><span style="color:#4ade80">□ 星雲・星団・銀河</span><span style="color:#67e8f9">○ 彗星</span><span style="color:#a78bfa">✦ 流星群放射点</span></div>
@@ -2755,7 +2819,7 @@ body.public-info-open{overflow:hidden;}
 <summary>📷 撮影</summary>
 <div class="shooting-tools">
 
-<details class="shooting-group" open>
+<details class="shooting-group">
 <summary>📷 写野・カメラ</summary>
 <div class="shooting-group-body">
 <div class="shooting-grid">
@@ -2813,7 +2877,7 @@ body.public-info-open{overflow:hidden;}
 </div>
 </details>
 
-<details class="shooting-group" open>
+<details class="shooting-group">
 <summary>✨ 星を点で写す</summary>
 <div class="shooting-group-body">
 <div class="shooting-grid">
@@ -2948,10 +3012,11 @@ body.public-info-open{overflow:hidden;}
 </details>
 
 <details class="polar-panel" id="polarScopePanel">
-  <summary>🧭 極軸望遠鏡ガイド</summary>
+  <summary>🧭 赤道儀</summary>
   <div class="polar-body">
     <div class="polar-reticle-wrap">
-      <canvas id="polarReticleCanvas" width="680" height="680" aria-label="極軸望遠鏡レクチル"></canvas>
+      <div class="polar-reticle-title">レクチル</div>
+      <canvas id="polarReticleCanvas" width="680" height="680" aria-label="赤道儀用レクチル"></canvas>
     </div>
     <div class="polar-readout">
       <div class="polar-card"><div class="label">北極星 時計位置</div><div class="value" id="polarClockPosition">—</div></div>
@@ -2969,6 +3034,7 @@ body.public-info-open{overflow:hidden;}
 </details>
 
 </div>
+</details>
 </div>
 
 <div class="tab-content" id="rtab-smallbodies">
@@ -3545,14 +3611,14 @@ body.public-info-open{overflow:hidden;}
 
     &lt;section id=&quot;quickstart&quot; class=&quot;anchor-pad&quot;&gt;
       &lt;h2 class=&quot;section-title&quot;&gt;はじめて使う&lt;/h2&gt;
-      &lt;details class=&quot;panel&quot; open&gt;
+      &lt;details class=&quot;panel&quot;&gt;
         &lt;summary&gt;&lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🌌&lt;/span&gt;&lt;span&gt;今いる場所で、今見える空を調べる&lt;span class=&quot;summary-sub&quot;&gt;最短の使い方&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;&lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
           &lt;ol&gt;
             &lt;li&gt;起動すると日時は現在時刻へ自動追従します。&lt;/li&gt;
             &lt;li&gt;&lt;strong&gt;「現在地で観測する🔭」&lt;/strong&gt;を押します。ボタン下部の「はじめようか天体観測」はNicoleらしい誘い文句です。&lt;/li&gt;
             &lt;li&gt;位置情報を許可すると、現在地の緯度・経度を取得し、オンライン時は標高と天候も取得して、そのまま観測結果を表示します。&lt;/li&gt;
-            &lt;li&gt;「今夜の空情報」と「今夜のおすすめ」を確認し、&lt;strong&gt;「🗺 星図」&lt;/strong&gt;で実際の空と見比べます。&lt;/li&gt;
+            &lt;li&gt;「空の情報」と「今夜のおすすめ」を確認し、&lt;strong&gt;「🗺 星図」&lt;/strong&gt;で実際の空と見比べます。&lt;/li&gt;
             &lt;li&gt;スマートフォンを空へ向けて使う場合は、星図を&lt;strong&gt;「📱 追尾」&lt;/strong&gt;へ切り替えます。&lt;/li&gt;
           &lt;/ol&gt;
           &lt;div class=&quot;note-box&quot;&gt;位置情報を使わない場合や、別の日・別の場所を調べる場合は「詳細な観測条件を設定」を開いてください。&lt;/div&gt;
@@ -3566,12 +3632,12 @@ body.public-info-open{overflow:hidden;}
         &lt;a href=&quot;#obs-conditions&quot;&gt;観測条件&lt;/a&gt;
         &lt;a href=&quot;#place-setting&quot;&gt;観測場所&lt;/a&gt;
         &lt;a href=&quot;#moon-date&quot;&gt;月相から日付を選ぶ&lt;/a&gt;
-        &lt;a href=&quot;#tonight-sky&quot;&gt;今夜の空情報&lt;/a&gt;
+        &lt;a href=&quot;#tonight-sky&quot;&gt;空の情報&lt;/a&gt;
         &lt;a href=&quot;#recommend&quot;&gt;今夜のおすすめ&lt;/a&gt;
         &lt;a href=&quot;#chart&quot;&gt;星図&lt;/a&gt;
         &lt;a href=&quot;#weather-info&quot;&gt;観測地点の天候&lt;/a&gt;
         &lt;a href=&quot;#shooting&quot;&gt;撮影&lt;/a&gt;
-        &lt;a href=&quot;#polar&quot;&gt;極軸望遠鏡ガイド&lt;/a&gt;
+        &lt;a href=&quot;#polar&quot;&gt;赤道儀&lt;/a&gt;
         &lt;a href=&quot;#objects&quot;&gt;天体&lt;/a&gt;
         &lt;a href=&quot;#constellations&quot;&gt;星座&lt;/a&gt;
         &lt;a href=&quot;#moon-calendar&quot;&gt;カレンダー&lt;/a&gt;
@@ -3584,7 +3650,7 @@ body.public-info-open{overflow:hidden;}
         &lt;a href=&quot;#faq&quot;&gt;よくある質問&lt;/a&gt;
       &lt;/div&gt;
 
-      &lt;details class=&quot;panel&quot; id=&quot;obs-conditions&quot; open&gt;
+      &lt;details class=&quot;panel&quot; id=&quot;obs-conditions&quot;&gt;
         &lt;summary&gt;&lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;⚙️&lt;/span&gt;&lt;span&gt;観測条件&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;&lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
           &lt;p&gt;Nicoleは、基本的に&lt;strong&gt;観測日時・観測場所・星の見え方&lt;/strong&gt;を基準に、その場所から見える天体や星図を計算します。&lt;/p&gt;
@@ -3633,7 +3699,7 @@ body.public-info-open{overflow:hidden;}
       &lt;/details&gt;
 
       &lt;details class=&quot;panel&quot; id=&quot;tonight-sky&quot;&gt;
-        &lt;summary&gt;&lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🌙&lt;/span&gt;&lt;span&gt;今夜の空情報&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;&lt;/summary&gt;
+        &lt;summary&gt;&lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🌙&lt;/span&gt;&lt;span&gt;空の情報&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;&lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
           &lt;p&gt;日の出、日の入り、夕方・朝の薄明、月の出、月の入り、月齢、月相、天候の概要を一覧で確認できます。&lt;/p&gt;
           &lt;h4&gt;時刻カードから星図へ移動&lt;/h4&gt;
@@ -3646,14 +3712,14 @@ body.public-info-open{overflow:hidden;}
       &lt;details class=&quot;panel&quot; id=&quot;recommend&quot;&gt;
         &lt;summary&gt;&lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;⭐&lt;/span&gt;&lt;span&gt;今夜のおすすめ&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;&lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;設定した条件で観測しやすい天体を上位から表示します。「星図で表示」を押すと対象を星図へ移し、位置を確認できます。&lt;/p&gt;
+          &lt;p&gt;設定した条件で観測しやすい天体を上位から表示します。「星図で表示」を押すと対象を星図へ移し、位置を確認できます。対象を解除するときは星図パネルの「✕ 選択解除」を使います。&lt;/p&gt;
         &lt;/div&gt;
       &lt;/details&gt;
 
-      &lt;details class=&quot;panel&quot; id=&quot;chart&quot; open&gt;
+      &lt;details class=&quot;panel&quot; id=&quot;chart&quot;&gt;
         &lt;summary&gt;&lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🗺️&lt;/span&gt;&lt;span&gt;星図&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;&lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;星図は、指定した日時・場所の空を表示する中心機能です。&lt;strong&gt;「全天」「地平」「📱 追尾」&lt;/strong&gt;の3つの表示を切り替えられます。「⚙️ 表示設定」は＋／−で折りたためます。&lt;/p&gt;
+          &lt;p&gt;星図は、指定した日時・場所の空を表示する中心機能です。主要な折りたたみパネルは起動時に閉じた状態から始まります。&lt;strong&gt;「全天」「地平」「📱 追尾」&lt;/strong&gt;の3つの表示を切り替えられます。「⚙️ 表示する情報」は＋／−で折りたためます。&lt;/p&gt;
           &lt;h4&gt;全天&lt;/h4&gt;
           &lt;p&gt;天頂を中心に地平線までを円形に表示します。北が上、東が左です。ズーム時は地平円の内側をドラッグして表示位置を移動できます。円の外側はページスクロールとして使えます。&lt;/p&gt;
           &lt;h4&gt;地平&lt;/h4&gt;
@@ -3663,9 +3729,9 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;追尾は画面回転を補正し、高仰角で方位が約180°飛ぶ端末では直前の視線方向との連続性から補正します。天頂付近では方位そのものが不定になりやすく、周囲の金属や磁石の影響でも方位がずれることがあります。&lt;/p&gt;
           &lt;p&gt;「今夜のおすすめ」や天体カードの「星図で見る」で対象を選んでから追尾モードにすると、対象が画面外にある場合は黄色い矢印が方向を案内します。対象が画面内に入ると対象位置へラベルを表示します。&lt;/p&gt;
           &lt;h4&gt;全画面表示&lt;/h4&gt;
-          &lt;p&gt;&lt;strong&gt;「⛶ 全画面」&lt;/strong&gt;または追尾時の&lt;strong&gt;「⛶ 追尾を全画面」&lt;/strong&gt;を押すと、星図パネル全体ではなく&lt;strong&gt;星空が描画されている「星図本体」だけ&lt;/strong&gt;を全画面表示します。全画面中は右上の「⤢ 全画面終了」で戻れます。&lt;/p&gt;
+          &lt;p&gt;&lt;strong&gt;「⛶ 全画面」&lt;/strong&gt;または追尾時の&lt;strong&gt;「⛶ 追尾を全画面」&lt;/strong&gt;を押すと、星図パネル全体ではなく&lt;strong&gt;星空が描画されている星図だけ&lt;/strong&gt;を全画面表示します。全画面中は「⤢ 全画面終了」で戻れます。追尾の全画面では終了ボタンを画面右下に表示します。&lt;/p&gt;
           &lt;p&gt;地平・追尾モードでスマートフォンを横向きにすると、縦方向の見え方を保ったまま左右の視野を広げ、横長の画面をより広く使います。単純な横方向の引き伸ばしではありません。全天表示は地平円を保つため円形表示のままです。&lt;/p&gt;
-          &lt;h4&gt;表示設定&lt;/h4&gt;
+          &lt;h4&gt;表示する情報&lt;/h4&gt;
           &lt;p&gt;星座線、星座名、星の目印、天の川、太陽、黄道、昼光、月、白道、月光、惑星、主要天体、彗星、流星群放射点、恒星の等級上限を個別に切り替えられます。&lt;/p&gt;
           &lt;h4&gt;星の目印&lt;/h4&gt;
           &lt;p&gt;北斗七星、季節の大三角、冬のダイヤモンド、ペガススの四辺形など、星空を案内するときに使いやすい代表的な並びを表示します。&lt;/p&gt;
@@ -3730,9 +3796,9 @@ body.public-info-open{overflow:hidden;}
       &lt;/details&gt;
 
       &lt;details class=&quot;panel&quot; id=&quot;polar&quot;&gt;
-        &lt;summary&gt;&lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🧭&lt;/span&gt;&lt;span&gt;極軸望遠鏡ガイド&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;&lt;/summary&gt;
+        &lt;summary&gt;&lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🧭&lt;/span&gt;&lt;span&gt;赤道儀&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;&lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;観測日時・緯度・経度から北極星の位置を計算し、極軸望遠鏡の時計盤形式のレクチルへ表示します。&lt;/p&gt;
+          &lt;p&gt;観測日時・緯度・経度から北極星の位置を計算し、「レクチル」と表示された時計盤へ北極星の位置を表示します。&lt;/p&gt;
           &lt;p&gt;「北極星 時計位置」「北極星 時角」「極軸高度の目安」「観測地点標高」を確認できます。レクチルの12時を上に合わせ、表示された時計位置へ北極星を置くための目安として使います。&lt;/p&gt;
           &lt;p&gt;極軸高度の目安は観測地点の緯度から表示します。極軸望遠鏡の像の向きやレクチル仕様は機種・世代で異なるため、必要に応じて「レクチルを反転」を使用してください。&lt;/p&gt;
         &lt;/div&gt;
@@ -3839,7 +3905,7 @@ body.public-info-open{overflow:hidden;}
                 &lt;li&gt;基本的な星図・太陽・月・惑星計算&lt;/li&gt;
                 &lt;li&gt;天体・星座&lt;/li&gt;
                 &lt;li&gt;月齢・薄明・日の出入り&lt;/li&gt;
-                &lt;li&gt;撮影計算・極軸望遠鏡ガイド&lt;/li&gt;
+                &lt;li&gt;撮影計算・赤道儀&lt;/li&gt;
                 &lt;li&gt;保存済みのお気に入り地点・カスタムカメラ&lt;/li&gt;
                 &lt;li&gt;取得済みの天の川・彗星・流星群・天候データの一部&lt;/li&gt;
                 &lt;li&gt;PWAとして保存されたNicole本体&lt;/li&gt;
@@ -3865,11 +3931,11 @@ body.public-info-open{overflow:hidden;}
         &lt;div class=&quot;panel-body&quot;&gt;
           &lt;ol&gt;
             &lt;li&gt;現在地なら「現在地で観測する🔭」、別地点なら詳細な観測条件を設定します。&lt;/li&gt;
-            &lt;li&gt;「今夜の空情報」と「観測地点の天候」を確認します。&lt;/li&gt;
+            &lt;li&gt;「空の情報」と「観測地点の天候」を確認します。&lt;/li&gt;
             &lt;li&gt;「今夜のおすすめ」や「天体」「星座」から見たい対象を選びます。&lt;/li&gt;
             &lt;li&gt;必要なら赤色夜間モードをONにします。&lt;/li&gt;
             &lt;li&gt;空と見比べるなら「地平」、スマートフォンを向けて探すなら「📱 追尾」を使います。&lt;/li&gt;
-            &lt;li&gt;追尾時は「⛶ 追尾を全画面」にすると星図本体だけを大きく表示できます。横向きでは左右の視野も広がります。&lt;/li&gt;
+            &lt;li&gt;追尾時は「⛶ 追尾を全画面」にすると星図だけを大きく表示できます。横向きでは左右の視野も広がります。&lt;/li&gt;
             &lt;li&gt;星図の時刻を動かして良い状態を見つけたら「星図に合わせて更新」で結果全体を再計算します。&lt;/li&gt;
           &lt;/ol&gt;
         &lt;/div&gt;
@@ -3888,7 +3954,7 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;星図の時刻は独立して動かせます。結果もその時刻へ合わせたい場合は「星図に合わせて更新」を押してください。&lt;/p&gt;
 
           &lt;h4&gt;全画面にすると設定ボタンが見えません&lt;/h4&gt;
-          &lt;p&gt;現在の全画面表示は「星図本体だけ」を表示する仕様です。右上の「⤢ 全画面終了」で戻ると、表示設定や時刻操作などのパネルへ戻れます。&lt;/p&gt;
+          &lt;p&gt;現在の全画面表示は星図だけを表示する仕様です。「⤢ 全画面終了」で戻ると、「表示する情報」や時刻操作などのパネルへ戻れます。&lt;/p&gt;
 
           &lt;h4&gt;横向きにすると星が横に伸びませんか？&lt;/h4&gt;
           &lt;p&gt;地平・追尾の横向き全画面は画像を引き伸ばしているのではなく、縦方向の見え方を保ちながら左右の視野を広げています。&lt;/p&gt;
@@ -3933,7 +3999,7 @@ body.public-info-open{overflow:hidden;}
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.0&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.1&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -6972,6 +7038,10 @@ if(x.id.startsWith("rtab-"))x.classList.remove("active");
 
 btn.classList.add("active");
 panel.classList.add("active");
+if(tabName==="skymap"){
+  const skyPanel=$("#skyMapPanel");
+  if(skyPanel)skyPanel.open=true;
+}
 }
 
 function focusConstellationOnSky(constellationId){
@@ -7128,17 +7198,34 @@ if(SKY_FOCUS_CONSTELLATION_ID){
 return null;
 }
 
+function updateSkyFocusClearButton(){
+const btn=$("#clearSkyFocusTarget");
+if(!btn)return;
+btn.hidden=!(SKY_FOCUS_OBJECT_ID||SKY_FOCUS_CONSTELLATION_ID);
+}
+
+function clearSkyFocusTarget(){
+SKY_FOCUS_OBJECT_ID=null;
+SKY_FOCUS_CONSTELLATION_ID=null;
+updateSkyTrackingTargetStatus();
+const info=$("#skyMapObjectInfo");
+if(info)info.textContent="星・惑星・月・主要天体をクリックすると、ここに情報を表示します。";
+renderSkyChart();
+}
+
 function updateSkyTrackingTargetStatus(){
 const el=$("#skyTrackingTargetStatus");
-if(!el)return;
 const target=getSkyFocusTarget(getSkyViewDate());
-if(target){
-  el.textContent=`目標：${target.name}`;
-  el.classList.add("show");
-}else{
-  el.textContent="";
-  el.classList.remove("show");
+if(el){
+  if(target){
+    el.textContent=`目標：${target.name}`;
+    el.classList.add("show");
+  }else{
+    el.textContent="";
+    el.classList.remove("show");
+  }
 }
+updateSkyFocusClearButton();
 }
 
 function drawTrackingTargetGuide(ctx,lat,lon,date,cx,cy,R,w,h){
@@ -8964,6 +9051,7 @@ if(horizonFullscreen){
 }
 
 wrap.classList.toggle("sky-full-horizon",horizonFullscreen);
+wrap.classList.toggle("sky-full-tracking",fullscreen&&SKY_PROJECTION==="tracking");
 SKY_PERSPECTIVE_ASPECT=isHorizonProjection()?cssWidth/cssHeight:1;
 
 const dpr=Math.min(window.devicePixelRatio||1,2);
@@ -10547,6 +10635,10 @@ $("#skyTimeReset").addEventListener("click",resetSkyViewTime);
 $("#skyFullscreen").addEventListener("click",toggleSkyFullscreen);
 $("#skyTrackingFullscreen")?.addEventListener("click",toggleSkyFullscreen);
 $("#skyCanvasFullscreenExit")?.addEventListener("click",toggleSkyFullscreen);
+$("#clearSkyFocusTarget")?.addEventListener("click",clearSkyFocusTarget);
+$("#skyMapPanel")?.addEventListener("toggle",function(){
+  if(this.open)setTimeout(()=>{renderSkyChart();syncSkyInteractionLayer();},30);
+});
 document.addEventListener("fullscreenchange",()=>{
 document.body.classList.toggle("sky-fullscreen-open",skyPanelIsFullscreen());
 updateSkyFullscreenButton();
