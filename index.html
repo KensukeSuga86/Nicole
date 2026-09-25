@@ -2511,12 +2511,71 @@ body.public-info-open{overflow:hidden;}
   .skymap-panel-body{padding:11px 10px;}
 }
 
+
+/* ===== v1.10.2 UI structure fixes ===== */
+
+/* 折りたたみ記号の見た目を全階層で統一 */
+.recommend-panel > summary::after,
+.sky-settings-details > summary::after,
+.compact-settings > summary::after,
+.polar-panel > summary::after,
+.shooting-group > summary::after,
+.shooting-master > summary::after,
+.weather-details > summary::after,
+.sky-info-details > summary::after,
+.skymap-details > .skymap-main-summary::after{
+  width:20px !important;
+  min-width:20px !important;
+  margin-left:auto !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  font-family:Arial,"Helvetica Neue",sans-serif !important;
+  font-size:18px !important;
+  font-weight:400 !important;
+  line-height:1 !important;
+  letter-spacing:0 !important;
+  font-variant:normal !important;
+}
+
+/* 観測日時欄：Safari / iPhoneを含め文字を上下中央に揃える */
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"]{
+  height:42px;
+  min-height:42px;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+  line-height:42px;
+}
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"]::-webkit-datetime-edit{
+  display:flex;
+  align-items:center;
+  height:100%;
+  padding:0;
+}
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper{
+  display:flex;
+  align-items:center;
+  height:100%;
+}
+.obs-row-datetime .obs-datetime-field input[type="datetime-local"]::-webkit-date-and-time-value{
+  margin:0;
+  min-height:42px;
+  line-height:42px;
+  text-align:left;
+}
+
+/* 赤道儀は星図パネルとは独立した同階層パネル */
+#rtab-skymap > .polar-panel{
+  margin-top:12px;
+  margin-bottom:0;
+}
+
 </style>
 </head>
 <body>
 <div id="pwaOfflineBanner" class="pwa-offline-banner" role="status">📡 オフライン：保存済みデータを利用できる機能のみ使用できます</div>
 <header>
-<div class="app-title-block"><h1>🔭 Nicole the Astronavigator</h1><div class="app-version">Version 1.10.1</div></div>
+<div class="app-title-block"><h1>🔭 Nicole the Astronavigator</h1><div class="app-version">Version 1.10.2</div></div>
 <div class="header-actions">
 <button type="button" class="night-mode-toggle" id="nightModeToggle" aria-pressed="false">🔴 赤色夜間モード</button>
 </div>
@@ -2682,7 +2741,7 @@ body.public-info-open{overflow:hidden;}
 </div>
 
 <div class="tab-content active" id="rtab-skymap">
-<details class="skymap-panel skymap-details" id="skyMapPanel">
+<details class="skymap-panel skymap-details" id="skyMapPanel" open>
 <summary class="skymap-main-summary">🗺 星図</summary>
 <div class="skymap-panel-body">
 <div class="skymap-head">
@@ -3011,6 +3070,10 @@ body.public-info-open{overflow:hidden;}
 </div>
 </details>
 
+
+</div>
+</details>
+
 <details class="polar-panel" id="polarScopePanel">
   <summary>🧭 赤道儀</summary>
   <div class="polar-body">
@@ -3031,9 +3094,6 @@ body.public-info-open{overflow:hidden;}
       </div>
     </div>
   </div>
-</details>
-
-</div>
 </details>
 </div>
 
@@ -3719,7 +3779,7 @@ body.public-info-open{overflow:hidden;}
       &lt;details class=&quot;panel&quot; id=&quot;chart&quot;&gt;
         &lt;summary&gt;&lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🗺️&lt;/span&gt;&lt;span&gt;星図&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;&lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;星図は、指定した日時・場所の空を表示する中心機能です。主要な折りたたみパネルは起動時に閉じた状態から始まります。&lt;strong&gt;「全天」「地平」「📱 追尾」&lt;/strong&gt;の3つの表示を切り替えられます。「⚙️ 表示する情報」は＋／−で折りたためます。&lt;/p&gt;
+          &lt;p&gt;星図は、指定した日時・場所の空を表示する中心機能です。星図パネルだけは起動時から開いた状態で表示し、それ以外の折りたたみ可能な主要パネルは閉じた状態から始まります。&lt;strong&gt;「全天」「地平」「📱 追尾」&lt;/strong&gt;の3つの表示を切り替えられます。「⚙️ 表示する情報」は＋／−で折りたためます。&lt;/p&gt;
           &lt;h4&gt;全天&lt;/h4&gt;
           &lt;p&gt;天頂を中心に地平線までを円形に表示します。北が上、東が左です。ズーム時は地平円の内側をドラッグして表示位置を移動できます。円の外側はページスクロールとして使えます。&lt;/p&gt;
           &lt;h4&gt;地平&lt;/h4&gt;
@@ -3798,7 +3858,7 @@ body.public-info-open{overflow:hidden;}
       &lt;details class=&quot;panel&quot; id=&quot;polar&quot;&gt;
         &lt;summary&gt;&lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🧭&lt;/span&gt;&lt;span&gt;赤道儀&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;&lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;観測日時・緯度・経度から北極星の位置を計算し、「レクチル」と表示された時計盤へ北極星の位置を表示します。&lt;/p&gt;
+          &lt;p&gt;赤道儀は星図パネルとは独立したパネルです。観測日時・緯度・経度から北極星の位置を計算し、「レクチル」と表示された時計盤へ北極星の位置を表示します。&lt;/p&gt;
           &lt;p&gt;「北極星 時計位置」「北極星 時角」「極軸高度の目安」「観測地点標高」を確認できます。レクチルの12時を上に合わせ、表示された時計位置へ北極星を置くための目安として使います。&lt;/p&gt;
           &lt;p&gt;極軸高度の目安は観測地点の緯度から表示します。極軸望遠鏡の像の向きやレクチル仕様は機種・世代で異なるため、必要に応じて「レクチルを反転」を使用してください。&lt;/p&gt;
         &lt;/div&gt;
@@ -3999,7 +4059,7 @@ body.public-info-open{overflow:hidden;}
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.1&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.2&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
