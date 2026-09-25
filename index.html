@@ -2500,11 +2500,13 @@ body.public-info-open{overflow:hidden;}
   font-weight:700;
   text-align:left;
 }
-/* 追尾全画面では終了ボタンを右下へ。通常全画面は従来どおり右上。 */
+/* 追尾全画面では終了ボタンを画面下部中央へ。通常全画面は従来どおり右上。 */
 #skyMapCanvasWrap.sky-full-tracking .sky-canvas-fullscreen-exit{
   top:auto;
-  right:max(12px,env(safe-area-inset-right));
-  bottom:max(12px,env(safe-area-inset-bottom));
+  right:auto;
+  left:50%;
+  bottom:max(18px,calc(env(safe-area-inset-bottom) + 10px));
+  transform:translateX(-50%);
 }
 @media(max-width:520px){
   .sky-info-details-body{padding:9px 10px 11px;}
@@ -2575,7 +2577,7 @@ body.public-info-open{overflow:hidden;}
 <body>
 <div id="pwaOfflineBanner" class="pwa-offline-banner" role="status">📡 オフライン：保存済みデータを利用できる機能のみ使用できます</div>
 <header>
-<div class="app-title-block"><h1>🔭 Nicole the Astronavigator</h1><div class="app-version">Version 1.10.2</div></div>
+<div class="app-title-block"><h1>🔭 Nicole the Astronavigator</h1><div class="app-version">Version 1.10.3</div></div>
 <div class="header-actions">
 <button type="button" class="night-mode-toggle" id="nightModeToggle" aria-pressed="false">🔴 赤色夜間モード</button>
 </div>
@@ -3789,7 +3791,7 @@ body.public-info-open{overflow:hidden;}
           &lt;p&gt;追尾は画面回転を補正し、高仰角で方位が約180°飛ぶ端末では直前の視線方向との連続性から補正します。天頂付近では方位そのものが不定になりやすく、周囲の金属や磁石の影響でも方位がずれることがあります。&lt;/p&gt;
           &lt;p&gt;「今夜のおすすめ」や天体カードの「星図で見る」で対象を選んでから追尾モードにすると、対象が画面外にある場合は黄色い矢印が方向を案内します。対象が画面内に入ると対象位置へラベルを表示します。&lt;/p&gt;
           &lt;h4&gt;全画面表示&lt;/h4&gt;
-          &lt;p&gt;&lt;strong&gt;「⛶ 全画面」&lt;/strong&gt;または追尾時の&lt;strong&gt;「⛶ 追尾を全画面」&lt;/strong&gt;を押すと、星図パネル全体ではなく&lt;strong&gt;星空が描画されている星図だけ&lt;/strong&gt;を全画面表示します。全画面中は「⤢ 全画面終了」で戻れます。追尾の全画面では終了ボタンを画面右下に表示します。&lt;/p&gt;
+          &lt;p&gt;&lt;strong&gt;「⛶ 全画面」&lt;/strong&gt;または追尾時の&lt;strong&gt;「⛶ 追尾を全画面」&lt;/strong&gt;を押すと、星図パネル全体ではなく&lt;strong&gt;星空が描画されている星図だけ&lt;/strong&gt;を全画面表示します。全画面中は「⤢ 全画面終了」で戻れます。追尾の全画面では終了ボタンを画面下部中央に表示します。&lt;/p&gt;
           &lt;p&gt;地平・追尾モードでスマートフォンを横向きにすると、縦方向の見え方を保ったまま左右の視野を広げ、横長の画面をより広く使います。単純な横方向の引き伸ばしではありません。全天表示は地平円を保つため円形表示のままです。&lt;/p&gt;
           &lt;h4&gt;表示する情報&lt;/h4&gt;
           &lt;p&gt;星座線、星座名、星の目印、天の川、太陽、黄道、昼光、月、白道、月光、惑星、主要天体、彗星、流星群放射点、恒星の等級上限を個別に切り替えられます。&lt;/p&gt;
@@ -4059,7 +4061,7 @@ body.public-info-open{overflow:hidden;}
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.2&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.3&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
