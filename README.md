@@ -10,17 +10,19 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 1.11.1**
+**Current Version: 1.11.2**
 
 ---
 
-## v1.11.1 の変更点
+## v1.11.2 の変更点
 
-- 「赤道儀」を星図パネルから分離し、流星群の下に独立した折りたたみパネルとして配置
-- カメラ星図を全画面表示している間も、画面下部にカメラ補正パネルを表示
-- 全画面用カメラ補正パネルは折りたたみ可能
-- 全画面中も、星図の濃さ、方位・高度補正、基準天体による中央合わせ、補正リセット、カメラ終了を操作可能
-- Service Worker のキャッシュ名前空間を `nicole-pwa-v1.11.1` に更新
+- 「空の情報」パネルの最上部に表示対象の日付を追加
+- 「空の情報」を横方向へスワイプして前日・翌日の情報へ切り替えられるよう変更
+  - 左スワイプ：翌日
+  - 右スワイプ：前日
+- 現在時刻追従中でも、スワイプした日付差を維持するよう調整
+- 「天体」パネルのアイコンを `⭐️` に変更
+- Service Worker のキャッシュ名前空間を `nicole-pwa-v1.11.2` に更新
 
 ---
 
@@ -456,7 +458,7 @@ Service Workerを変更した場合はキャッシュ名前空間も更新し、
 現在のキャッシュ名前空間：
 
 ```text
-nicole-pwa-v1.11.1
+nicole-pwa-v1.11.2
 ```
 
 ---
@@ -471,4 +473,4 @@ https://kensuke-suga.myportfolio.com
 
 ## Version
 
-**Nicole the Astronavigator v1.11.1**
+**Nicole the Astronavigator v1.11.2**

@@ -2589,7 +2589,7 @@ body.public-info-open{overflow:hidden;}
 
 
 
-/* ===== v1.11.1 OBJECT DETAIL MODAL ===== */
+/* ===== v1.11.2 OBJECT DETAIL MODAL ===== */
 .detail-popup-modal{
   display:none;
   position:fixed;
@@ -2621,12 +2621,12 @@ body.detail-popup-open{overflow:hidden;}
 }
 
 
-/* ===== v1.11.1 DETAIL ACTIONS ===== */
+/* ===== v1.11.2 DETAIL ACTIONS ===== */
 .recommend-actions{gap:6px;flex-wrap:wrap;}
 .card-plan-actions{gap:6px;flex-wrap:wrap;}
 
 
-/* ===== v1.11.1 footer / planetarium easter egg ===== */
+/* ===== v1.11.2 footer / planetarium easter egg ===== */
 .footer-app-title{
   color:#7eb8e8;
   font-size:12px;
@@ -2784,7 +2784,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v1.11.1 constellation detail modal ===== */
+/* ===== v1.11.2 constellation detail modal ===== */
 .constellation-popup-card{
   width:min(640px,100%);
 }
@@ -2857,7 +2857,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v1.11.1 今夜のおすすめ 折りたたみ見出し統一 ===== */
+/* ===== v1.11.2 今夜のおすすめ 折りたたみ見出し統一 ===== */
 .recommend-details{
   padding:0 !important;
   overflow:hidden;
@@ -2883,11 +2883,11 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* v1.11.1: 隠し星設定はモード有効化前に確実に非表示 */
+/* v1.11.2: 隠し星設定はモード有効化前に確実に非表示 */
 #skyMyStarOption[hidden]{display:none !important;}
 
 
-/* ===== v1.11.1 カメラ星図 ===== */
+/* ===== v1.11.2 カメラ星図 ===== */
 .skymap-camera-controls{
   display:none;
   width:100%;
@@ -2928,7 +2928,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v1.11.1 result sections / calendar / star-map layout ===== */
+/* ===== v1.11.2 result sections / calendar / star-map layout ===== */
 .result-section-panel{
   margin:10px 0;
   padding:0;
@@ -3031,7 +3031,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v1.11.1 赤道儀独立パネル ===== */
+/* ===== v1.11.2 赤道儀独立パネル ===== */
 .standalone-polar-panel{
   margin:10px 0;
 }
@@ -3045,7 +3045,7 @@ body.planetarium-picking #skyMapCanvasWrap{
   background:transparent;
 }
 
-/* ===== v1.11.1 カメラ全画面補正パネル ===== */
+/* ===== v1.11.2 カメラ全画面補正パネル ===== */
 .camera-fullscreen-controls{
   display:none;
   position:absolute;
@@ -3156,6 +3156,59 @@ body.planetarium-picking #skyMapCanvasWrap{
     min-height:32px;
     padding:5px 4px;
     font-size:9px;
+  }
+}
+
+
+/* ===== v1.11.2 空の情報 日付スワイプ ===== */
+.sky-info-datebar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin:0 0 9px;
+  padding:0 1px 8px;
+  border-bottom:1px solid #17314d;
+  touch-action:pan-y;
+}
+.sky-info-date{
+  color:#ffd54f;
+  font-size:14px;
+  font-weight:700;
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+.sky-info-swipe-hint{
+  color:#6687a1;
+  font-size:9px;
+  line-height:1.2;
+  text-align:right;
+}
+.sky-info-details-body{
+  touch-action:pan-y;
+  transition:opacity .12s ease,transform .12s ease;
+}
+.sky-info-details-body.sky-info-swipe-left{
+  opacity:.55;
+  transform:translateX(-10px);
+}
+.sky-info-details-body.sky-info-swipe-right{
+  opacity:.55;
+  transform:translateX(10px);
+}
+@media(max-width:520px){
+  .sky-info-datebar{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:2px;
+    margin-bottom:7px;
+    padding-bottom:7px;
+  }
+  .sky-info-date{font-size:13px;}
+  .sky-info-swipe-hint{
+    width:100%;
+    text-align:left;
+    font-size:8px;
   }
 }
 
@@ -3304,7 +3357,13 @@ body.planetarium-picking #skyMapCanvasWrap{
 
 <details class="sky-panel sky-info-details" id="skyInfoPanel">
 <summary>🌌 空の情報</summary>
-<div class="sky-info-details-body"><div class="sky-grid" id="skyGrid"></div></div>
+<div class="sky-info-details-body">
+  <div class="sky-info-datebar" id="skyInfoDateBar">
+    <div class="sky-info-date" id="skyInfoDate"></div>
+    <div class="sky-info-swipe-hint">← 前日　左右にスワイプ　翌日 →</div>
+  </div>
+  <div class="sky-grid" id="skyGrid"></div>
+</div>
 </details>
 
 <details class="recommend-panel recommend-details" id="recommendPanel">
@@ -3702,7 +3761,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 </details>
 
 <details class="result-section-panel" id="resultPanel-cards" data-result-section="cards">
-<summary>✦ 天体</summary>
+<summary>⭐️ 天体</summary>
 <div class="result-section-body">
 <div class="tab-content result-section-content" id="rtab-cards">
 <div class="ctrl-bar" id="filterBar"></div>
@@ -4739,7 +4798,7 @@ body.planetarium-picking #skyMapCanvasWrap{
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.11.1&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.11.2&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -4942,7 +5001,7 @@ initialManualNightMode();
 
 <footer>
 <div class="footer-app-title">🔭 Nicole the Astronavigator</div>
-<div class="footer-app-version">Version 1.11.1</div>
+<div class="footer-app-version">Version 1.11.2</div>
 <div class="footer-creator">制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
 <div class="footer-info-actions">
   <button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
@@ -6951,7 +7010,7 @@ if(cached){
     key:locKey
   };
   WEATHER_MODEL_LOADING=false;
-  if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
+  if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(skyInfoDisplayDate(currentDate));
   return;
 }
 
@@ -7012,7 +7071,7 @@ const task=(async()=>{
     }
   }finally{
     WEATHER_MODEL_LOADING=false;
-    if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
+    if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(skyInfoDisplayDate(currentDate));
   }
 })();
 
@@ -7124,7 +7183,7 @@ if(cached){
   };
   WEATHER_LOADING=false;
   renderWeatherForDate(getSkyViewDate());
-  if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
+  if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(skyInfoDisplayDate(currentDate));
   return;
 }
 
@@ -7216,7 +7275,7 @@ const task=(async()=>{
     }else{
       clearWeatherData("天候情報の取得に失敗しました。再度「観測開始」または地点設定を行うと再取得します。","weather-error");
     }
-    if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
+    if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(skyInfoDisplayDate(currentDate));
   }
 })();
 
@@ -11152,7 +11211,7 @@ return pts;
 
 const $=s=>document.querySelector(s);
 
-// v1.11.1: constellation modal listeners are registered only after DOM helpers are initialized.
+// v1.11.2: constellation modal listeners are registered only after DOM helpers are initialized.
 document.getElementById("closeConstellationDetail")?.addEventListener("click",closeConstellationDetailModal);
 document.getElementById("constellationDetailModal")?.addEventListener("click",event=>{
   if(event.target===document.getElementById("constellationDetailModal"))closeConstellationDetailModal();
@@ -12181,7 +12240,7 @@ loadWeatherFromInputs();
 window.addEventListener("offline",()=>{
 updatePwaConnectivityUI();
 loadWeatherFromInputs();
-if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(currentDate);
+if(currentDate instanceof Date&&!isNaN(currentDate))renderTonightSkyWeather(skyInfoDisplayDate(currentDate));
 });
 
 $("#sbRefresh").addEventListener("click",loadSmallBodies);
@@ -12998,8 +13057,64 @@ const valid=dt instanceof Date&&!isNaN(dt);
 return `<button type="button" class="sky-card ${cls} sky-time-card${valid?" tappable":""}" ${valid?`data-sky-time="${dt.getTime()}"`:"disabled"}><div class="sky-label">${label}</div><div class="sky-val">${fmtTime(dt)}</div>${sub?`<div class="sky-sub">${sub}</div>`:""}${valid?'<div class="sky-tap-hint">タップで星図をこの時刻へ</div>':""}</button>`;
 }
 
+
+let SKY_INFO_DAY_OFFSET=0;
+let SKY_INFO_TOUCH_START=null;
+
+function skyInfoDisplayDate(baseDate=currentDate){
+  const base=(baseDate instanceof Date&&!isNaN(baseDate))?baseDate:new Date();
+  const d=new Date(base);
+  d.setDate(d.getDate()+SKY_INFO_DAY_OFFSET);
+  return d;
+}
+function formatSkyInfoDate(date){
+  if(!(date instanceof Date)||isNaN(date))return "";
+  const wd=["日","月","火","水","木","金","土"];
+  return `${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日（${wd[date.getDay()]}）`;
+}
+function setSkyInfoDayOffset(nextOffset,direction=0){
+  SKY_INFO_DAY_OFFSET=Number.isFinite(nextOffset)?Math.trunc(nextOffset):0;
+  const body=$("#skyInfoPanel .sky-info-details-body");
+  if(body&&direction){
+    const cls=direction>0?"sky-info-swipe-left":"sky-info-swipe-right";
+    body.classList.add(cls);
+    setTimeout(()=>body.classList.remove(cls),130);
+  }
+  if(Number.isFinite(currentLat)&&Number.isFinite(currentLon)&&currentDate instanceof Date&&!isNaN(currentDate)){
+    renderSkyInfo(currentLat,currentLon,currentDate);
+  }
+}
+function changeSkyInfoDay(delta){
+  if(!Number.isFinite(delta)||!delta)return;
+  setSkyInfoDayOffset(SKY_INFO_DAY_OFFSET+delta,delta);
+}
+function installSkyInfoSwipe(){
+  const body=$("#skyInfoPanel .sky-info-details-body");
+  if(!body||body.dataset.swipeReady==="1")return;
+  body.dataset.swipeReady="1";
+  body.addEventListener("touchstart",event=>{
+    if(event.touches.length!==1){SKY_INFO_TOUCH_START=null;return;}
+    const t=event.touches[0];
+    SKY_INFO_TOUCH_START={x:t.clientX,y:t.clientY,time:Date.now()};
+  },{passive:true});
+  body.addEventListener("touchend",event=>{
+    if(!SKY_INFO_TOUCH_START||event.changedTouches.length!==1)return;
+    const t=event.changedTouches[0];
+    const dx=t.clientX-SKY_INFO_TOUCH_START.x;
+    const dy=t.clientY-SKY_INFO_TOUCH_START.y;
+    const dt=Date.now()-SKY_INFO_TOUCH_START.time;
+    SKY_INFO_TOUCH_START=null;
+    if(dt>800||Math.abs(dx)<55||Math.abs(dx)<Math.abs(dy)*1.25)return;
+    if(dx<0)changeSkyInfoDay(1);
+    else changeSkyInfoDay(-1);
+  },{passive:true});
+}
+
 function renderSkyInfo(lat,lon,date){
-const info=calcSkyInfo(lat,lon,date);
+const displayDate=skyInfoDisplayDate(date);
+const info=calcSkyInfo(lat,lon,displayDate);
+const dateEl=$("#skyInfoDate");
+if(dateEl)dateEl.textContent=formatSkyInfoDate(displayDate);
 $("#skyGrid").innerHTML=`
 ${skyTimeCard("sun","☀️ 日の出",info.sunrise)}
 ${skyTimeCard("sun","🌇 日の入り",info.sunset)}
@@ -13021,8 +13136,9 @@ switchResultTab("skymap");
 requestAnimationFrame(()=>renderSkyChart());
 });
 });
-renderTonightSkyWeather(date);
+renderTonightSkyWeather(displayDate);
 renderPolarScopeGuide(lat,lon,date);
+installSkyInfoSwipe();
 }
 const SEASON_CLASS={spring:"s-spring",summer:"s-summer",autumn:"s-autumn",winter:"s-winter",circumpolar:"s-circumpolar"};
 function renderConstellations(month,query){
@@ -13110,6 +13226,7 @@ const place=$("#inPlace").value||"指定場所";
 if(!dtVal||isNaN(lat)||isNaN(lon)){alert("日時・緯度・経度を正しく入力してください。");return;}
 const date=new Date(dtVal);
 currentLat=lat;currentLon=lon;currentDate=date;
+SKY_INFO_DAY_OFFSET=0;
 SKY_VIEW_DATE=new Date(date);
 
 /* 観測地点確定時に天候予報を取得。オフライン時は保存済みAPI応答を利用できる場合がある。 */
