@@ -10,21 +10,20 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 1.10.5**
+**Current Version: 1.10.6**
 
 ---
 
-## v1.10.5 の変更点
+## v1.10.6 の変更点
 
-- **赤色夜間モード中の全画面表示処理を再設計**
-  - 赤色夜間モード中はアプリ内の全画面フォールバックを使用
-  - 全画面へ入る際、`body` 全体の赤色 `filter` を一時的に解除
-  - 同じ赤色 `filter` を全画面の星図要素そのものへ移して表示
-  - iPhone / Safariで `filter` 付き祖先が `position: fixed` の基準を変える影響を回避
-- 全画面終了時は通常の赤色夜間モードへ自動復帰
-- 全画面中に赤色夜間モードをON/OFFした場合にも表示状態を同期
-- アプリ上部および組み込みマニュアルのバージョン表示を **1.10.5** に更新
-- Service Worker のキャッシュ名前空間を `nicole-pwa-v1.10.5` に更新
+- ヘッダーロゴを新しいデザインへ差し替え
+- ヘッダーの「Nicole the Astronavigator」文字表示とバージョン表示を削除し、ロゴ画像のみ表示
+- バージョン情報をフッターのアプリ名右側へ移動
+- 追尾 / 地平表示で天頂付近を向いた際も、高度線を全方位360°分描画するよう改善
+- カードや「今夜のおすすめ」の「星図で表示」から、星図パネルを開いて自動スクロールするよう変更
+- 天体カードの詳細表示を、ページ下部への移動から現在画面上のモーダル表示へ変更
+  - データ / 解説 / 高度グラフは従来どおり利用可能
+- Service Worker のキャッシュ名前空間を `nicole-pwa-v1.10.6` に更新
 
 ---
 
@@ -460,7 +459,7 @@ Service Workerを変更した場合はキャッシュ名前空間も更新し、
 現在のキャッシュ名前空間：
 
 ```text
-nicole-pwa-v1.10.5
+nicole-pwa-v1.10.6
 ```
 
 ---
@@ -475,4 +474,4 @@ https://kensuke-suga.myportfolio.com
 
 ## Version
 
-**Nicole the Astronavigator v1.10.5**
+**Nicole the Astronavigator v1.10.6**
