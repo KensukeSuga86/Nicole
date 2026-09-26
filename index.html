@@ -2587,7 +2587,7 @@ body.public-info-open{overflow:hidden;}
 
 
 
-/* ===== v1.10.9 OBJECT DETAIL MODAL ===== */
+/* ===== v1.10.10 OBJECT DETAIL MODAL ===== */
 .detail-popup-modal{
   display:none;
   position:fixed;
@@ -2619,12 +2619,12 @@ body.detail-popup-open{overflow:hidden;}
 }
 
 
-/* ===== v1.10.9 DETAIL ACTIONS ===== */
+/* ===== v1.10.10 DETAIL ACTIONS ===== */
 .recommend-actions{gap:6px;flex-wrap:wrap;}
 .card-plan-actions{gap:6px;flex-wrap:wrap;}
 
 
-/* ===== v1.10.9 footer / planetarium easter egg ===== */
+/* ===== v1.10.10 footer / planetarium easter egg ===== */
 .footer-app-title{
   color:#7eb8e8;
   font-size:12px;
@@ -2779,6 +2779,79 @@ body.planetarium-picking #skyMapCanvasWrap{
 @media(max-width:480px){
   .planetarium-form{grid-template-columns:1fr;}
   .my-star-row{grid-template-columns:auto minmax(0,1fr);}
+}
+
+
+/* ===== v1.10.10 constellation detail modal ===== */
+.constellation-popup-card{
+  width:min(640px,100%);
+}
+.constellation-modal-section{
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid #172b40;
+}
+.constellation-modal-section h4{
+  margin:0 0 7px;
+  color:#ffd54f;
+  font-size:13px;
+}
+.constellation-modal-section p{
+  margin:0;
+  color:#c8dff0;
+  font-size:12px;
+  line-height:1.85;
+}
+
+
+.planetarium-extra-details{
+  margin-top:12px;
+  border:1px solid #1d3855;
+  border-radius:9px;
+  background:#08111f;
+}
+.planetarium-extra-details > summary{
+  list-style:none;
+  cursor:pointer;
+  padding:10px 12px;
+  color:#9ab8d1;
+  font-size:12px;
+  font-weight:700;
+}
+.planetarium-extra-details > summary::-webkit-details-marker{display:none;}
+.planetarium-extra-details > summary::after{
+  content:"+";
+  float:right;
+  font-family:Arial,sans-serif;
+  font-size:16px;
+  line-height:1;
+}
+.planetarium-extra-details[open] > summary::after{content:"−";}
+.planetarium-extra-body{
+  padding:0 12px 12px;
+  border-top:1px solid #162d45;
+}
+.planetarium-extra-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(120px,1fr));
+  gap:9px;
+  margin-top:10px;
+}
+.planetarium-extra-body textarea{
+  width:100%;
+  resize:vertical;
+  padding:8px 10px;
+  border:1px solid #2a4a6a;
+  border-radius:6px;
+  background:#080c18;
+  color:#e0eaf5;
+  font:inherit;
+}
+@media(max-width:700px){
+  .planetarium-extra-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .planetarium-extra-grid{grid-template-columns:1fr;}
 }
 
 </style>
@@ -3465,6 +3538,18 @@ body.planetarium-picking #skyMapCanvasWrap{
       <button type="button" class="object-popup-close" id="closeScheduleObject">閉じる</button>
     </div>
     <div class="object-popup-body" id="scheduleObjectBody"></div>
+  </div>
+</div>
+
+
+<div class="object-popup-modal" id="constellationDetailModal" aria-hidden="true">
+  <div class="object-popup-card constellation-popup-card" role="dialog" aria-modal="true" aria-labelledby="constellationDetailTitle">
+    <div class="object-popup-head">
+      <div class="object-popup-icon">✨</div>
+      <div class="object-popup-title" id="constellationDetailTitle"></div>
+      <button type="button" class="object-popup-close" id="closeConstellationDetail">閉じる</button>
+    </div>
+    <div class="object-popup-body" id="constellationDetailBody"></div>
   </div>
 </div>
 
@@ -4273,7 +4358,7 @@ body.planetarium-picking #skyMapCanvasWrap{
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.9&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.10&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -4419,6 +4504,44 @@ initialManualNightMode();
     </label>
   </div>
 
+  <details class="planetarium-extra-details">
+    <summary>星の情報を入れる</summary>
+    <div class="planetarium-extra-body">
+      <div class="planetarium-extra-grid">
+        <label>分類
+          <input type="text" id="myStarTypeLabel" maxlength="40" value="恒星" placeholder="例：恒星">
+        </label>
+        <label>カタログ / 区分
+          <input type="text" id="myStarCat" maxlength="60" placeholder="例：僕しか知らない星">
+        </label>
+        <label>距離
+          <input type="text" id="myStarDist" maxlength="80" placeholder="例：42光年">
+        </label>
+        <label>見かけの大きさ
+          <input type="text" id="myStarSize" maxlength="80" placeholder="例：点像">
+        </label>
+        <label>推奨倍率
+          <input type="text" id="myStarScope" maxlength="80" placeholder="例：肉眼 / 低倍率">
+        </label>
+        <label>難易度
+          <select id="myStarDifficulty">
+            <option value="1">★☆☆☆☆ 易しい</option>
+            <option value="2">★★☆☆☆</option>
+            <option value="3" selected>★★★☆☆</option>
+            <option value="4">★★★★☆</option>
+            <option value="5">★★★★★ 難しい</option>
+          </select>
+        </label>
+      </div>
+      <label>見どころ
+        <textarea id="myStarHighlight" rows="2" maxlength="300" placeholder="天体カードに表示する短い見どころ"></textarea>
+      </label>
+      <label>解説
+        <textarea id="myStarStory" rows="5" maxlength="3000" placeholder="詳しく見るで表示する解説"></textarea>
+      </label>
+    </div>
+  </details>
+
   <div class="planetarium-actions">
     <button type="button" class="action gray" id="pickMyStarFromSky">🗺 星図から座標を選ぶ</button>
     <button type="button" class="action" id="saveMyStar">✦ 星を登録</button>
@@ -4438,7 +4561,7 @@ initialManualNightMode();
 
 <footer>
 <div class="footer-app-title">🔭 Nicole the Astronavigator</div>
-<div class="footer-app-version">Version 1.10.9</div>
+<div class="footer-app-version">Version 1.10.10</div>
 <div class="footer-creator">制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
 <div class="footer-info-actions">
   <button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
@@ -7128,7 +7251,7 @@ const easterRaw=$("#inDatetime")?.value||"";
 const easterDate=easterRaw?new Date(easterRaw):null;
 if(query==="フミキリ" && easterDate instanceof Date && !isNaN(easterDate) &&
    easterDate.getHours()===2 && easterDate.getMinutes()===0){
-  alert("オーイエーヘイアハーン");
+  alert("おーいえーあはーん");
 }
 
 if(!query){
@@ -9764,6 +9887,58 @@ else $("#rtab-constellations")?.scrollIntoView({behavior:"smooth",block:"start"}
 },40);
 }
 
+
+function openConstellationDetailModal(constellationId){
+  const c=CONSTELLATIONS_ENRICHED.find(x=>x.id===constellationId);
+  const modal=$("#constellationDetailModal");
+  const title=$("#constellationDetailTitle");
+  const body=$("#constellationDetailBody");
+  if(!c||!modal||!title||!body)return;
+
+  const co=CONST_COORD[c.id];
+  let altText="—";
+  if(co && Number.isFinite(currentLat) && Number.isFinite(currentLon) && currentDate instanceof Date && !isNaN(currentDate)){
+    altText=`${altitude(co[0],co[1],currentLat,currentLon,currentDate).toFixed(1)}°`;
+  }
+
+  title.textContent=`${c.name} ${c.en?`（${c.en}）`:""}`;
+  body.innerHTML=`
+    <div class="object-popup-badges">
+      <span class="season-badge ${SEASON_CLASS[c.season]||""}">${SEASON_LABEL[c.season]||c.season||"—"}</span>
+      <span class="season-badge" style="background:#0a1e2e;color:#9ccbf0">現在の高度 ${altText}</span>
+    </div>
+    <table class="object-popup-table">
+      <tr><th>略符</th><td>${escapeHTML(c.abbr||"—")}</td></tr>
+      <tr><th>主な星</th><td>${escapeHTML(c.stars||"—")}</td></tr>
+    </table>
+    <div class="constellation-modal-section">
+      <h4>🔬 科学</h4>
+      <p>${c.science||"—"}</p>
+    </div>
+    <div class="constellation-modal-section">
+      <h4>🏛 神話・由来</h4>
+      <p>${c.myth||"—"}</p>
+    </div>
+  `;
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden","false");
+  document.body.classList.add("detail-popup-open");
+  $("#closeConstellationDetail")?.focus();
+}
+function closeConstellationDetailModal(){
+  const modal=$("#constellationDetailModal");
+  if(!modal)return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden","true");
+  if(!$("#detailPopupModal")?.classList.contains("open")){
+    document.body.classList.remove("detail-popup-open");
+  }
+}
+$("#closeConstellationDetail")?.addEventListener("click",closeConstellationDetailModal);
+$("#constellationDetailModal")?.addEventListener("click",event=>{
+  if(event.target===$("#constellationDetailModal"))closeConstellationDetailModal();
+});
+
 function appendSkyHitActions(info,hit){
 const obj=objectForSkyHit(hit);
 const consts=constellationsForSkyHit(hit);
@@ -9779,12 +9954,6 @@ detailBtn.textContent="詳しく見る";
 detailBtn.addEventListener("click",()=>showDetail(obj,null));
 actions.appendChild(detailBtn);
 
-const btn=document.createElement("button");
-btn.type="button";
-btn.textContent="✦ 天体カードを見る";
-btn.addEventListener("click",()=>goToObjectCard(obj.id));
-actions.appendChild(btn);
-
 const trackBtn=document.createElement("button");
 trackBtn.type="button";
 trackBtn.textContent="📱 追尾で探す";
@@ -9798,11 +9967,47 @@ actions.appendChild(trackBtn);
 consts.slice(0,2).forEach(c=>{
 const btn=document.createElement("button");
 btn.type="button";
-btn.textContent=`✨ ${c.name}の星座カードを見る`;
-btn.addEventListener("click",()=>goToConstellationCard(c.id));
+btn.textContent=`${c.name}を見る`;
+btn.addEventListener("click",()=>openConstellationDetailModal(c.id));
 actions.appendChild(btn);
 });
 info.appendChild(actions);
+}
+
+
+function customStarToObject(star){
+  const lat=Number.isFinite(currentLat)?currentLat:parseFloat($("#inLat")?.value);
+  const lon=Number.isFinite(currentLon)?currentLon:parseFloat($("#inLon")?.value);
+  const date=getSkyViewDate();
+  let alt="—",az="—",azDir="—";
+  if(Number.isFinite(lat)&&Number.isFinite(lon)&&date instanceof Date&&!isNaN(date)){
+    const aa=altAz(star.ra,star.dec,lat,lon,date);
+    alt=Math.round(aa.alt*10)/10;
+    az=Math.round(aa.az*10)/10;
+    azDir=azToDir(aa.az);
+  }
+  const safeStory=star.story
+    ? `<div class="story-topic"><h4>解説</h4><p>${escapeHTML(star.story).replace(/\n/g,"<br>")}</p></div>`
+    : "";
+  return{
+    id:star.id,
+    name:star.name,
+    icon:"✦",
+    type:"star",
+    cat:star.cat||star.typeLabel||"—",
+    ra:star.ra,
+    dec:star.dec,
+    mag:Number(star.mag),
+    magVal:Number(star.mag),
+    dist:star.dist||"—",
+    distStr:star.dist||"—",
+    size:star.size||"—",
+    scope:star.scope||"—",
+    difficulty:star.difficulty||3,
+    highlight:star.highlight||"",
+    story:safeStory,
+    alt,az,azDir
+  };
 }
 
 function showSkyMapHit(hit){
@@ -9824,7 +10029,18 @@ const alt=Math.round(hit.alt*10)/10;
 const az=Math.round(hit.az*10)/10;
 
 if(hit.kind==="custom-star"){
-info.innerHTML=`<b>${escapeHTML(hit.name)}</b><br>高度 ${alt}° / 方位 ${azToDir(az)}（${az}°） / 等級 ${Number(hit.mag).toFixed(1)}<br><span style="color:#f4dba2">僕しか知らない星</span>`;
+const star=MY_STARS.find(s=>s.id===hit.customStarId);
+info.innerHTML=`<b>${escapeHTML(hit.name)}</b><br>高度 ${alt}° / 方位 ${azToDir(az)}（${az}°） / 等級 ${Number(hit.mag).toFixed(1)}<br><span style="color:#f4dba2">${escapeHTML(star?.typeLabel||"僕しか知らない星")}</span>${star?.highlight?`<br><span style="color:#d8c18c">${escapeHTML(star.highlight)}</span>`:""}`;
+if(star){
+  const actions=document.createElement("div");
+  actions.className="skymap-object-actions";
+  const detailBtn=document.createElement("button");
+  detailBtn.type="button";
+  detailBtn.textContent="詳しく見る";
+  detailBtn.addEventListener("click",()=>showDetail(customStarToObject(star),null));
+  actions.appendChild(detailBtn);
+  info.appendChild(actions);
+}
 return;
 }
 
@@ -10824,8 +11040,16 @@ function loadMyStars(){
       name:String(s.name).slice(0,80),
       mag:Number.isFinite(Number(s.mag))?Number(s.mag):5,
       ra:norm360(Number(s.ra)),
-      dec:Math.max(-90,Math.min(90,Number(s.dec)))
-    })):[];
+      dec:Math.max(-90,Math.min(90,Number(s.dec))),
+      typeLabel:String(s.typeLabel||"恒星").slice(0,40),
+      cat:String(s.cat||"").slice(0,60),
+      dist:String(s.dist||"").slice(0,80),
+      size:String(s.size||"").slice(0,80),
+      scope:String(s.scope||"").slice(0,80),
+      difficulty:Math.max(1,Math.min(5,Number(s.difficulty)||3)),
+      highlight:String(s.highlight||"").slice(0,300),
+      story:String(s.story||"").slice(0,3000)
+    })) :[];
   }catch(e){MY_STARS=[];}
 }
 function saveMyStars(){
@@ -10846,7 +11070,7 @@ function renderMyStarList(){
       <input type="checkbox" class="my-star-delete-check" value="${escapeHTML(star.id)}">
       <div>
         <div class="my-star-name">${escapeHTML(star.name)}</div>
-        <div class="my-star-meta">等級 ${Number(star.mag).toFixed(1)} ／ 赤経 ${Number(star.ra).toFixed(6)}° ／ 赤緯 ${Number(star.dec).toFixed(6)}°</div>
+        <div class="my-star-meta">${escapeHTML(star.typeLabel||"恒星")} ／ 等級 ${Number(star.mag).toFixed(1)} ／ 赤経 ${Number(star.ra).toFixed(6)}° ／ 赤緯 ${Number(star.dec).toFixed(6)}°${star.dist?` ／ ${escapeHTML(star.dist)}`:""}</div>
       </div>`;
     list.appendChild(row);
   });
@@ -10900,6 +11124,14 @@ function saveMyStarFromForm(){
   const mag=Number($("#myStarMag")?.value);
   const ra=Number($("#myStarRa")?.value);
   const dec=Number($("#myStarDec")?.value);
+  const typeLabel=String($("#myStarTypeLabel")?.value||"恒星").trim()||"恒星";
+  const cat=String($("#myStarCat")?.value||"").trim();
+  const dist=String($("#myStarDist")?.value||"").trim();
+  const size=String($("#myStarSize")?.value||"").trim();
+  const scope=String($("#myStarScope")?.value||"").trim();
+  const difficulty=Math.max(1,Math.min(5,Number($("#myStarDifficulty")?.value)||3));
+  const highlight=String($("#myStarHighlight")?.value||"").trim();
+  const story=String($("#myStarStory")?.value||"").trim();
   if(!name){setPlanetariumStatus("星の名前を入力してください。","#fb923c");return;}
   if(!Number.isFinite(mag)){setPlanetariumStatus("等級を入力してください。","#fb923c");return;}
   if(!Number.isFinite(ra)||ra<0||ra>360){setPlanetariumStatus("赤経は0〜360°で入力してください。","#fb923c");return;}
@@ -10909,7 +11141,15 @@ function saveMyStarFromForm(){
     name,
     mag,
     ra:norm360(ra),
-    dec
+    dec,
+    typeLabel,
+    cat,
+    dist,
+    size,
+    scope,
+    difficulty,
+    highlight,
+    story
   });
   saveMyStars();
   renderMyStarList();
@@ -11097,7 +11337,7 @@ item.innerHTML=`
   <div class="osi-meta"><span class="badge ${TYPE_BADGE[obj.type]||""}">${TYPE_LABEL[obj.type]||obj.type}</span> ${obj.cat||""} ／ ${obj.dist||""} ／ 等級 ${obj.mag}</div>
   <div class="osi-meta" style="color:#8ab4d4;margin-top:2px">🔭 ${obj.highlight||""}</div>
   <div class="obj-search-actions">
-    <button type="button" class="reverse-plan-btn search-detail-btn">天体カードを見る</button>
+    <button type="button" class="reverse-plan-btn search-detail-btn">詳しく見る</button>
     <button type="button" class="reverse-plan-btn search-reverse-btn">いつ・どこで見る？</button>
   </div>
 </div>`;
@@ -11651,6 +11891,12 @@ document.querySelectorAll(".tab-content").forEach(x=>{if(x.id.startsWith("dtab-"
 b.classList.add("active");$("#dtab-"+b.dataset.dtab).classList.add("active");
 });
 });
+document.addEventListener("keydown",event=>{
+  if(event.key==="Escape"&&$("#constellationDetailModal")?.classList.contains("open")){
+    closeConstellationDetailModal();
+  }
+});
+
 function closeDetailPopup(){
 const modal=$("#detailPopupModal");
 if(modal){modal.classList.remove("open");modal.setAttribute("aria-hidden","true");}
