@@ -2589,7 +2589,7 @@ body.public-info-open{overflow:hidden;}
 
 
 
-/* ===== v1.10.12 OBJECT DETAIL MODAL ===== */
+/* ===== v1.10.13 OBJECT DETAIL MODAL ===== */
 .detail-popup-modal{
   display:none;
   position:fixed;
@@ -2621,12 +2621,12 @@ body.detail-popup-open{overflow:hidden;}
 }
 
 
-/* ===== v1.10.12 DETAIL ACTIONS ===== */
+/* ===== v1.10.13 DETAIL ACTIONS ===== */
 .recommend-actions{gap:6px;flex-wrap:wrap;}
 .card-plan-actions{gap:6px;flex-wrap:wrap;}
 
 
-/* ===== v1.10.12 footer / planetarium easter egg ===== */
+/* ===== v1.10.13 footer / planetarium easter egg ===== */
 .footer-app-title{
   color:#7eb8e8;
   font-size:12px;
@@ -2784,7 +2784,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v1.10.12 constellation detail modal ===== */
+/* ===== v1.10.13 constellation detail modal ===== */
 .constellation-popup-card{
   width:min(640px,100%);
 }
@@ -2857,7 +2857,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v1.10.12 今夜のおすすめ 折りたたみ見出し統一 ===== */
+/* ===== v1.10.13 今夜のおすすめ 折りたたみ見出し統一 ===== */
 .recommend-details{
   padding:0 !important;
   overflow:hidden;
@@ -2883,8 +2883,49 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* v1.10.12: 隠し星設定はモード有効化前に確実に非表示 */
+/* v1.10.13: 隠し星設定はモード有効化前に確実に非表示 */
 #skyMyStarOption[hidden]{display:none !important;}
+
+
+/* ===== v1.10.13 カメラ星図 ===== */
+.skymap-camera-controls{
+  display:none;
+  width:100%;
+  gap:8px;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:7px 9px;
+  margin-top:4px;
+  border:1px solid #214563;
+  border-radius:8px;
+  background:#08131f;
+}
+.skymap-camera-controls.show{display:flex;}
+.camera-opacity-label{display:flex!important;align-items:center!important;gap:7px!important;margin:0!important;color:#9cc5df!important;font-size:11px!important;white-space:nowrap;}
+.camera-opacity-label input{width:110px;}
+.camera-adjust-row{display:flex;gap:5px;flex-wrap:wrap;align-items:center;}
+.camera-adjust-row button{appearance:none;border:1px solid #2b587c;background:#10253a;color:#cfe9ff;border-radius:7px;padding:6px 8px;font-size:10px;cursor:pointer;}
+.camera-adjust-row button:hover{background:#173754;}
+.camera-correction-readout{font-size:10px;color:#7fa7c3;white-space:nowrap;}
+.sky-camera-video{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000;z-index:0;}
+#skyMapCanvas{position:relative;z-index:2;}
+#skyMapCanvasWrap.camera-active{background:#000;padding:0;}
+#skyMapCanvasWrap.camera-active .sky-camera-video{display:block;}
+#skyMapCanvasWrap.camera-active #skyMapCanvas{max-width:none;max-height:none;aspect-ratio:auto;background:transparent;}
+.sky-camera-crosshair{display:none;position:absolute;left:50%;top:50%;width:24px;height:24px;transform:translate(-50%,-50%);z-index:4;pointer-events:none;}
+#skyMapCanvasWrap.camera-active .sky-camera-crosshair{display:block;}
+.sky-camera-crosshair::before,.sky-camera-crosshair::after{content:"";position:absolute;background:rgba(255,213,79,.9);box-shadow:0 0 3px #000;}
+.sky-camera-crosshair::before{left:11px;top:0;width:2px;height:24px;}
+.sky-camera-crosshair::after{left:0;top:11px;width:24px;height:2px;}
+#skyMapCanvasWrap.camera-active .sky-map-interaction{z-index:5;}
+#skyMapCanvasWrap.camera-active .sky-canvas-fullscreen-exit{z-index:9;}
+@media(max-width:600px){
+  .skymap-camera-controls{align-items:flex-start;}
+  .camera-adjust-row{width:100%;}
+  .camera-adjust-row button{flex:1 1 auto;}
+  .camera-opacity-label{width:100%;}
+  .camera-opacity-label input{flex:1;width:auto;}
+}
 
 </style>
 </head>
@@ -3079,6 +3120,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 <button type="button" id="skyViewAllSky" class="active">全天</button>
 <button type="button" id="skyViewPerspective">地平</button>
 <button type="button" id="skyViewTracking" class="sky-device-btn" title="端末を空へ向けて星図を追尾">📱 追尾</button>
+<button type="button" id="skyViewCamera" class="sky-device-btn" title="iPhoneの背面カメラ映像へ星図を重ねる">📷 カメラ</button>
 <div class="skymap-perspective-controls" id="skyPerspectiveControls">
 <label>向き
 <select id="skyPerspectiveAz">
@@ -3107,6 +3149,21 @@ body.planetarium-picking #skyMapCanvasWrap{
   <span class="sky-tracking-note">端末を空へ向けてください</span>
   <span class="sky-tracking-target" id="skyTrackingTargetStatus"></span>
   <button type="button" class="sky-tracking-fullscreen-btn" id="skyTrackingFullscreen">⛶ 追尾を全画面</button>
+</div>
+<div class="skymap-camera-controls" id="skyCameraControls">
+  <span class="sky-device-status" id="skyCameraStatus">カメラ停止中</span>
+  <label class="camera-opacity-label">星図の濃さ <input type="range" id="skyCameraOverlayOpacity" min="20" max="100" step="5" value="80"></label>
+  <div class="camera-adjust-row">
+    <button type="button" id="cameraAzMinus">← 方位 −1°</button>
+    <button type="button" id="cameraAzPlus">方位 ＋1° →</button>
+    <button type="button" id="cameraAltMinus">↓ 高度 −1°</button>
+    <button type="button" id="cameraAltPlus">高度 ＋1° ↑</button>
+    <button type="button" id="cameraAlignTarget">◎ 選択中の天体を中央に合わせる</button>
+    <button type="button" id="cameraResetAlign">補正リセット</button>
+    <button type="button" id="skyCameraFullscreen">⛶ カメラを全画面</button>
+    <button type="button" id="stopSkyCamera">カメラ終了</button>
+  </div>
+  <span class="camera-correction-readout" id="cameraCorrectionReadout">補正 方位 0.0° / 高度 0.0°</span>
 </div>
 <span class="skymap-view-hint" id="skyViewHint">天頂を中心に地平線まで表示</span>
 </div>
@@ -3158,7 +3215,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 </details>
 
 <div id="skyLineStatus" style="font-size:10px;color:#6f94b3;margin:2px 0 7px">星座線：内蔵簡易データ</div>
-<div class="skymap-canvas-wrap" id="skyMapCanvasWrap"><canvas id="skyMapCanvas" width="760" height="760"></canvas><div id="skyMapInteraction" class="sky-map-interaction" aria-label="星図操作領域"></div><button type="button" class="sky-canvas-fullscreen-exit" id="skyCanvasFullscreenExit" aria-label="星図の全画面表示を終了">⤢ 全画面終了</button></div>
+<div class="skymap-canvas-wrap" id="skyMapCanvasWrap"><video id="skyCameraVideo" class="sky-camera-video" autoplay muted playsinline></video><canvas id="skyMapCanvas" width="760" height="760"></canvas><div class="sky-camera-crosshair" id="skyCameraCrosshair" aria-hidden="true"></div><div id="skyMapInteraction" class="sky-map-interaction" aria-label="星図操作領域"></div><button type="button" class="sky-canvas-fullscreen-exit" id="skyCanvasFullscreenExit" aria-label="星図の全画面表示を終了">⤢ 全画面終了</button></div>
 <div class="skymap-legend"><span>★ 恒星</span><span>✧ 星の目印</span><span style="color:#ffd54f">● 太陽</span><span style="color:#e8e8f0">● 月</span><span style="color:#c084fc">◇ 惑星</span><span style="color:#4ade80">□ 星雲・星団・銀河</span><span style="color:#67e8f9">○ 彗星</span><span style="color:#a78bfa">✦ 流星群放射点</span></div>
 <div class="skymap-object-info" id="skyMapObjectInfo">星・惑星・月・主要天体をクリックすると、ここに情報を表示します。</div><div class="skymap-timebar">
 <span class="label">⏱ 星図の時刻</span>
@@ -4114,11 +4171,14 @@ body.planetarium-picking #skyMapCanvasWrap{
       &lt;details class=&quot;panel&quot; id=&quot;chart&quot;&gt;
         &lt;summary&gt;&lt;span class=&quot;summary-left&quot;&gt;&lt;span class=&quot;summary-icon&quot;&gt;🗺️&lt;/span&gt;&lt;span&gt;星図&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chev&quot;&gt;▼&lt;/span&gt;&lt;/summary&gt;
         &lt;div class=&quot;panel-body&quot;&gt;
-          &lt;p&gt;星図は、指定した日時・場所の空を表示する中心機能です。星図パネルだけは起動時から開いた状態で表示し、それ以外の折りたたみ可能な主要パネルは閉じた状態から始まります。&lt;strong&gt;「全天」「地平」「📱 追尾」&lt;/strong&gt;の3つの表示を切り替えられます。「⚙️ 表示する情報」は＋／−で折りたためます。&lt;/p&gt;
+          &lt;p&gt;星図は、指定した日時・場所の空を表示する中心機能です。星図パネルだけは起動時から開いた状態で表示し、それ以外の折りたたみ可能な主要パネルは閉じた状態から始まります。&lt;strong&gt;「全天」「地平」「📱 追尾」「📷 カメラ」&lt;/strong&gt;の4つの表示を切り替えられます。「⚙️ 表示する情報」は＋／−で折りたためます。&lt;/p&gt;
           &lt;h4&gt;全天&lt;/h4&gt;
           &lt;p&gt;天頂を中心に地平線までを円形に表示します。北が上、東が左です。ズーム時は地平円の内側をドラッグして表示位置を移動できます。円の外側はページスクロールとして使えます。&lt;/p&gt;
           &lt;h4&gt;地平&lt;/h4&gt;
           &lt;p&gt;実際に空を見上げる感覚に近い表示です。「向き」と「見上げ角」を選べるほか、星図をドラッグ／スワイプして視線方向を変更できます。&lt;/p&gt;
+          &lt;h4&gt;📷 カメラ&lt;/h4&gt;
+          &lt;p&gt;iPhoneの背面カメラ映像を背景にし、その上へ星図を透明オーバーレイします。初回はカメラと「モーションと方向」の利用許可が必要です。1×相当の背面メインカメラを基本として使用します。&lt;/p&gt;
+          &lt;p&gt;実際の星と星図がずれる場合は、方位・高度の±1°補正を使うか、天体を「星図で見る」で選択してから「選択中の天体を中央に合わせる」を押してください。コンパスは周囲の金属・磁石などでずれることがあります。&lt;/p&gt;
           &lt;h4&gt;📱 追尾&lt;/h4&gt;
           &lt;p&gt;対応するスマートフォンやタブレットでは、端末の方位・傾きセンサーを使い、端末を向けた方向へ星図が追従します。iPhone / iPadでは初回にセンサー利用の許可が必要になる場合があります。&lt;/p&gt;
           &lt;p&gt;追尾は画面回転を補正し、高仰角で方位が約180°飛ぶ端末では直前の視線方向との連続性から補正します。天頂付近では方位そのものが不定になりやすく、周囲の金属や磁石の影響でも方位がずれることがあります。&lt;/p&gt;
@@ -4394,7 +4454,7 @@ body.planetarium-picking #skyMapCanvasWrap{
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.12&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.13&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -4597,7 +4657,7 @@ initialManualNightMode();
 
 <footer>
 <div class="footer-app-title">🔭 Nicole the Astronavigator</div>
-<div class="footer-app-version">Version 1.10.12</div>
+<div class="footer-app-version">Version 1.10.13</div>
 <div class="footer-creator">制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
 <div class="footer-info-actions">
   <button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
@@ -4761,6 +4821,17 @@ ctx.fillText("Polaris",x+(x>=0?24:-24),y-20);
 ctx.restore();
 }
 
+function formatCoordDegMin(value,positiveLetter,negativeLetter){
+const n=Number(value);
+if(!Number.isFinite(n))return"—";
+const letter=n>=0?positiveLetter:negativeLetter;
+const abs=Math.abs(n);
+let deg=Math.floor(abs);
+let min=Math.round((abs-deg)*60);
+if(min>=60){deg+=1;min=0;}
+return`${letter} ${String(deg).padStart(3,"0")}° ${String(min).padStart(2,"0")}′`;
+}
+
 function renderPolarScopeGuide(lat=currentLat,lon=currentLon,date=currentDate){
 const panel=$("#polarScopePanel");
 if(!panel)return;
@@ -4779,7 +4850,7 @@ $("#polarSiteElevation").textContent=Number.isFinite(elev)?`${elev.toFixed(0)} m
 const place=$("#inPlace").value||"指定場所";
 const p=n=>String(n).padStart(2,"0");
 $("#polarGuideText").innerHTML=
-`<b>${escapeHTML(place)}</b> / 緯度 ${lat.toFixed(5)}° / 経度 ${lon.toFixed(5)}°`
+`<b>${escapeHTML(place)}</b> / ${formatCoordDegMin(lon,"E","W")} / ${formatCoordDegMin(lat,"N","S")}`
 +`${Number.isFinite(elev)?` / 標高 ${elev.toFixed(0)} m`:""}`
 +`<br>${date.getFullYear()}-${p(date.getMonth()+1)}-${p(date.getDate())} ${p(date.getHours())}:${p(date.getMinutes())}`
 +`<br>レクチルの12時を上に合わせ、北極星を <b>${formatClock12(info.clockHours)}</b> の方向へ置く目安です。`
@@ -5622,6 +5693,16 @@ let SKY_TRACKING_LAST_RAW_AZ=null;
 let SKY_TRACKING_LAST_CONTINUOUS_AZ=null;
 let SKY_TRACKING_SCREEN_ORIENTATION=0;
 const SKY_PERSPECTIVE_FOV=100;
+const SKY_CAMERA_LANDSCAPE_VFOV=53;
+const SKY_CAMERA_PORTRAIT_VFOV=73;
+let SKY_CAMERA_STREAM=null;
+let SKY_CAMERA_AZ_CORRECTION=0;
+let SKY_CAMERA_ALT_CORRECTION=0;
+let SKY_CAMERA_LAST_ERROR="";
+function getActivePerspectiveFov(){
+  if(SKY_PROJECTION!=="camera")return SKY_PERSPECTIVE_FOV;
+  return SKY_PERSPECTIVE_ASPECT<1?SKY_CAMERA_PORTRAIT_VFOV:SKY_CAMERA_LANDSCAPE_VFOV;
+}
 /* 地平／追尾星図の描画アスペクト比。renderSkyChart()で更新する。 */
 let SKY_PERSPECTIVE_ASPECT=1;
 
@@ -5899,6 +5980,8 @@ const btn=$("#skyFullscreen");
 if(btn)btn.textContent=isFull?"⤢ 全画面終了":"⛶ 全画面";
 const trackingBtn=$("#skyTrackingFullscreen");
 if(trackingBtn)trackingBtn.textContent=isFull?"⤢ 全画面終了":"⛶ 追尾を全画面";
+const cameraBtn=$("#skyCameraFullscreen");
+if(cameraBtn)cameraBtn.textContent=isFull?"⤢ 全画面終了":"⛶ カメラを全画面";
 }
 
 function syncNightFullscreenFilter(){
@@ -5942,32 +6025,37 @@ setTimeout(()=>{renderSkyChart();syncSkyInteractionLayer();},60);
 }
 
 function isHorizonProjection(){
-return SKY_PROJECTION==="perspective"||SKY_PROJECTION==="tracking";
+return SKY_PROJECTION==="perspective"||SKY_PROJECTION==="tracking"||SKY_PROJECTION==="camera";
 }
 
 function updateSkyProjectionUI(){
 const allBtn=$("#skyViewAllSky");
 const pBtn=$("#skyViewPerspective");
 const tBtn=$("#skyViewTracking");
+const cBtn=$("#skyViewCamera");
 const controls=$("#skyPerspectiveControls");
 const tracking=$("#skyTrackingControls");
+const camera=$("#skyCameraControls");
 const hint=$("#skyViewHint");
 
 if(allBtn)allBtn.classList.toggle("active",SKY_PROJECTION==="allsky");
 if(pBtn)pBtn.classList.toggle("active",SKY_PROJECTION==="perspective");
 if(tBtn)tBtn.classList.toggle("active",SKY_PROJECTION==="tracking");
+if(cBtn)cBtn.classList.toggle("active",SKY_PROJECTION==="camera");
 if(controls)controls.classList.toggle("show",SKY_PROJECTION==="perspective");
 if(tracking)tracking.classList.toggle("show",SKY_PROJECTION==="tracking");
+if(camera)camera.classList.toggle("show",SKY_PROJECTION==="camera");
 
 if(hint){
-  if(SKY_PROJECTION==="tracking")hint.textContent="端末の姿勢を専用追尾モードで星図へ反映";
+  if(SKY_PROJECTION==="camera")hint.textContent="背面カメラ映像に星図を重ねます。中央の＋で位置合わせできます";
+  else if(SKY_PROJECTION==="tracking")hint.textContent="端末の姿勢を専用追尾モードで星図へ反映";
   else if(SKY_PROJECTION==="perspective")hint.textContent="ドラッグ／スワイプで向き変更";
   else hint.textContent="天頂を中心に地平線まで表示／写野は枠内をドラッグして移動";
 }
 }
 
 function setSkyProjection(mode){
-SKY_PROJECTION=(mode==="perspective"||mode==="tracking")?mode:"allsky";
+SKY_PROJECTION=(mode==="perspective"||mode==="tracking"||mode==="camera")?mode:"allsky";
 SKY_ZOOM=1;
 SKY_PAN_X=0;
 SKY_PAN_Y=0;
@@ -6056,7 +6144,7 @@ return{az,alt,rawAz,screenOrientation:orient};
 }
 
 function handleSkyDeviceOrientation(event){
-if(!SKY_DEVICE_MODE||SKY_PROJECTION!=="tracking")return;
+if(!SKY_DEVICE_MODE||(SKY_PROJECTION!=="tracking"&&SKY_PROJECTION!=="camera"))return;
 const dir=deviceViewingDirection(event);
 if(!dir)return;
 
@@ -6064,11 +6152,16 @@ SKY_DEVICE_SMOOTH_AZ=circularSmoothDeg(SKY_DEVICE_SMOOTH_AZ,dir.az,0.20);
 if(!Number.isFinite(SKY_DEVICE_SMOOTH_ALT))SKY_DEVICE_SMOOTH_ALT=dir.alt;
 else SKY_DEVICE_SMOOTH_ALT+=(dir.alt-SKY_DEVICE_SMOOTH_ALT)*0.20;
 
-SKY_PERSPECTIVE_AZ=normalizeAzimuthDeg(SKY_DEVICE_SMOOTH_AZ);
-SKY_PERSPECTIVE_ALT=Math.max(0,Math.min(85,SKY_DEVICE_SMOOTH_ALT));
+const cameraMode=SKY_PROJECTION==="camera";
+SKY_PERSPECTIVE_AZ=normalizeAzimuthDeg(SKY_DEVICE_SMOOTH_AZ+(cameraMode?SKY_CAMERA_AZ_CORRECTION:0));
+SKY_PERSPECTIVE_ALT=Math.max(0,Math.min(89,SKY_DEVICE_SMOOTH_ALT+(cameraMode?SKY_CAMERA_ALT_CORRECTION:0)));
 SKY_DEVICE_LAST_EVENT_AT=Date.now();
 syncPerspectiveSelectors();
 updateSkyDeviceUI(`${azToDir(SKY_PERSPECTIVE_AZ)} ${Math.round(SKY_PERSPECTIVE_AZ)}° / 仰角 ${Math.round(SKY_PERSPECTIVE_ALT)}°`);
+if(SKY_PROJECTION==="camera"){
+  const s=$("#skyCameraStatus");
+  if(s)s.textContent=`📷 ${azToDir(SKY_PERSPECTIVE_AZ)} ${Math.round(SKY_PERSPECTIVE_AZ)}° / 仰角 ${Math.round(SKY_PERSPECTIVE_ALT)}°`;
+}
 requestSkyInteractiveRender();
 }
 
@@ -6129,6 +6222,117 @@ try{
   setSkyProjection("perspective");
   updateSkyDeviceUI("センサーを開始できませんでした");
 }
+}
+
+
+function updateCameraCorrectionReadout(){
+  const el=$("#cameraCorrectionReadout");
+  if(el)el.textContent=`補正 方位 ${SKY_CAMERA_AZ_CORRECTION>=0?"+":""}${SKY_CAMERA_AZ_CORRECTION.toFixed(1)}° / 高度 ${SKY_CAMERA_ALT_CORRECTION>=0?"+":""}${SKY_CAMERA_ALT_CORRECTION.toFixed(1)}°`;
+}
+function stopSkyCameraStream(){
+  if(SKY_CAMERA_STREAM){
+    SKY_CAMERA_STREAM.getTracks().forEach(track=>track.stop());
+    SKY_CAMERA_STREAM=null;
+  }
+  const video=$("#skyCameraVideo");
+  if(video){video.pause();video.srcObject=null;}
+  $("#skyMapCanvasWrap")?.classList.remove("camera-active");
+  const status=$("#skyCameraStatus");
+  if(status)status.textContent="カメラ停止中";
+  const canvas=$("#skyMapCanvas");
+  if(canvas)canvas.style.opacity="1";
+}
+async function requestSkyCameraStream(){
+  if(!navigator.mediaDevices?.getUserMedia)throw new Error("このブラウザではカメラを利用できません");
+  stopSkyCameraStream();
+  const stream=await navigator.mediaDevices.getUserMedia({
+    video:{facingMode:{ideal:"environment"}},
+    audio:false
+  });
+  SKY_CAMERA_STREAM=stream;
+  const video=$("#skyCameraVideo");
+  if(!video)throw new Error("カメラ表示領域を初期化できません");
+  video.srcObject=stream;
+  video.muted=true;
+  video.setAttribute("playsinline","");
+  await video.play();
+  /* 対応端末では倍率を1x付近へ固定する。非対応でも通常の背面メインカメラを使う。 */
+  const track=stream.getVideoTracks()[0];
+  try{
+    const caps=track.getCapabilities?.();
+    if(caps?.zoom){
+      const z=Math.max(caps.zoom.min,Math.min(caps.zoom.max,1));
+      await track.applyConstraints({advanced:[{zoom:z}]});
+    }
+  }catch(e){console.warn("Camera zoom constraint skipped",e);}
+  $("#skyMapCanvasWrap")?.classList.add("camera-active");
+  const opacity=Number($("#skyCameraOverlayOpacity")?.value||80)/100;
+  const canvas=$("#skyMapCanvas");
+  if(canvas)canvas.style.opacity=String(Math.max(.2,Math.min(1,opacity)));
+}
+async function enableSkyCameraMode(){
+  try{
+    if(!("DeviceOrientationEvent" in window))throw new Error("この端末では方向センサーを利用できません");
+    if(typeof DeviceOrientationEvent.requestPermission==="function"){
+      const permission=await DeviceOrientationEvent.requestPermission();
+      if(permission!=="granted")throw new Error("方向センサーの利用が許可されていません");
+    }
+    await requestSkyCameraStream();
+    SKY_DEVICE_MODE=true;
+    SKY_DEVICE_SMOOTH_AZ=null;
+    SKY_DEVICE_SMOOTH_ALT=null;
+    SKY_TRACKING_AZ_OFFSET=null;
+    SKY_TRACKING_LAST_RAW_AZ=null;
+    SKY_TRACKING_LAST_CONTINUOUS_AZ=null;
+    attachSkyDeviceOrientation();
+    setSkyProjection("camera");
+    updateCameraCorrectionReadout();
+    const status=$("#skyCameraStatus");
+    if(status)status.textContent="📷 カメラ起動中：端末を空へ向けてください";
+  }catch(error){
+    console.warn("Sky camera start failed",error);
+    SKY_CAMERA_LAST_ERROR=String(error?.message||error||"カメラを開始できませんでした");
+    stopSkyCameraStream();
+    disableSkyDeviceOrientation();
+    setSkyProjection("perspective");
+    alert(`カメラ星図を開始できませんでした。\n${SKY_CAMERA_LAST_ERROR}\n\nSafariのカメラ・モーションと方向の利用許可を確認してください。`);
+  }
+}
+function exitSkyCameraMode(){
+  stopSkyCameraStream();
+  disableSkyDeviceOrientation("停止中");
+  setSkyProjection("perspective");
+}
+function adjustCameraAlignment(azDelta=0,altDelta=0){
+  SKY_CAMERA_AZ_CORRECTION+=Number(azDelta)||0;
+  SKY_CAMERA_ALT_CORRECTION+=Number(altDelta)||0;
+  if(Number.isFinite(SKY_DEVICE_SMOOTH_AZ))SKY_PERSPECTIVE_AZ=normalizeAzimuthDeg(SKY_DEVICE_SMOOTH_AZ+SKY_CAMERA_AZ_CORRECTION);
+  if(Number.isFinite(SKY_DEVICE_SMOOTH_ALT))SKY_PERSPECTIVE_ALT=Math.max(0,Math.min(89,SKY_DEVICE_SMOOTH_ALT+SKY_CAMERA_ALT_CORRECTION));
+  updateCameraCorrectionReadout();
+  renderSkyChart();
+}
+function resetCameraAlignment(){
+  SKY_CAMERA_AZ_CORRECTION=0;
+  SKY_CAMERA_ALT_CORRECTION=0;
+  adjustCameraAlignment(0,0);
+}
+function alignCameraToSelectedTarget(){
+  const date=getSkyViewDate();
+  const target=getSkyFocusTarget(date);
+  const lat=Number.isFinite(currentLat)?currentLat:parseFloat($("#inLat")?.value);
+  const lon=Number.isFinite(currentLon)?currentLon:parseFloat($("#inLon")?.value);
+  if(!target){alert("先に天体カードや今夜のおすすめから「星図で見る」で基準天体を選択してください。");return;}
+  if(!Number.isFinite(lat)||!Number.isFinite(lon)){alert("観測地点を設定してください。");return;}
+  if(!Number.isFinite(SKY_DEVICE_SMOOTH_AZ)||!Number.isFinite(SKY_DEVICE_SMOOTH_ALT)){alert("端末の方向センサーをまだ取得できていません。端末を空へ向けて少し待ってください。");return;}
+  const aa=altAz(target.ra,target.dec,lat,lon,date);
+  SKY_CAMERA_AZ_CORRECTION=((aa.az-SKY_DEVICE_SMOOTH_AZ+540)%360)-180;
+  SKY_CAMERA_ALT_CORRECTION=aa.alt-SKY_DEVICE_SMOOTH_ALT;
+  SKY_PERSPECTIVE_AZ=normalizeAzimuthDeg(aa.az);
+  SKY_PERSPECTIVE_ALT=Math.max(0,Math.min(89,aa.alt));
+  updateCameraCorrectionReadout();
+  renderSkyChart();
+  const status=$("#skyCameraStatus");
+  if(status)status.textContent=`◎ ${target.name} を画面中央の基準に設定しました`;
 }
 
 function normalizeAzimuthDeg(v){
@@ -7731,7 +7935,7 @@ updateSkyFocusClearButton();
 }
 
 function drawTrackingTargetGuide(ctx,lat,lon,date,cx,cy,R,w,h){
-if(SKY_PROJECTION!=="tracking")return;
+if(SKY_PROJECTION!=="tracking"&&SKY_PROJECTION!=="camera")return;
 const target=getSkyFocusTarget(date);
 if(!target)return;
 const aa=altAz(target.ra,target.dec,lat,lon,date);
@@ -8015,7 +8219,7 @@ const Z=v.x*forward.x+v.y*forward.y+v.z*forward.z;
 if(Z<=0.001)return null;
 
 const {halfX:viewportHalfX,halfY:viewportHalfY}=getSkyPerspectiveViewport(radius);
-const halfFov=(SKY_PERSPECTIVE_FOV/2)*D2R;
+const halfFov=(getActivePerspectiveFov()/2)*D2R;
 /* 縦方向のFOVを基準に投影し、横長画面では左右の視野を自然に拡張する */
 const scale=viewportHalfY/Math.tan(halfFov);
 
@@ -9311,7 +9515,7 @@ if(horizon.length>=2){
     高く向いている場合は画面全域が空。
     低く向いていて地平線が画面外上側なら昼光を描かない。
   */
-  if(SKY_PERSPECTIVE_ALT>=(SKY_PERSPECTIVE_FOV/2)){
+  if(SKY_PERSPECTIVE_ALT>=(getActivePerspectiveFov()/2)){
     ctx.beginPath();
     ctx.rect(left,top,right-left,bottom-top);
     ctx.clip();
@@ -9362,7 +9566,7 @@ if(SKY_PROJECTION==="allsky"){
   gy=cy+SKY_PAN_Y-edgeR*Math.cos(a);
 }else{
   const d=((aa.az-SKY_PERSPECTIVE_AZ+540)%360)-180;
-  const horizontal=Math.max(-1.25,Math.min(1.25,d/(SKY_PERSPECTIVE_FOV/2)));
+  const horizontal=Math.max(-1.25,Math.min(1.25,d/(getActivePerspectiveFov()/2)));
   const {halfX}=getSkyPerspectiveViewport(R);
   gx=cx+horizontal*halfX*.78;
   const altVisual=Math.max(-18,Math.min(40,aa.alt));
@@ -9447,7 +9651,7 @@ gy=cy+SKY_PAN_Y-edgeR*.92*Math.cos(a);
 }else{
 const d=((aa.az-SKY_PERSPECTIVE_AZ+540)%360)-180;
 const {halfX}=getSkyPerspectiveViewport(R);
-gx=cx+Math.max(-1.2,Math.min(1.2,d/(SKY_PERSPECTIVE_FOV/2)))*halfX*.74;
+gx=cx+Math.max(-1.2,Math.min(1.2,d/(getActivePerspectiveFov()/2)))*halfX*.74;
 gy=cy;
 }
 
@@ -9537,10 +9741,18 @@ if(!Number.isFinite(lat)||!Number.isFinite(lon)||!date||isNaN(date))return;
 
 const fullscreen=skyPanelIsFullscreen();
 const wrap=canvas.parentElement;
+const cameraMode=SKY_PROJECTION==="camera";
 const horizonFullscreen=fullscreen&&isHorizonProjection();
 
 let cssWidth,cssHeight;
-if(horizonFullscreen){
+if(cameraMode&&!fullscreen){
+  cssWidth=Math.max(280,Math.floor((wrap.clientWidth||760)));
+  const portrait=window.innerHeight>window.innerWidth;
+  const cameraAspect=portrait?3/4:4/3;
+  cssHeight=Math.round(cssWidth/cameraAspect);
+  const maxH=Math.max(360,Math.floor(window.innerHeight*0.72));
+  if(cssHeight>maxH){cssHeight=maxH;cssWidth=Math.round(cssHeight*cameraAspect);}
+}else if(horizonFullscreen){
   /* 地平／追尾の全画面は縦横とも利用可能領域いっぱいを使う。
      投影アスペクト比で実視野を広げるため、画像の引き伸ばしにはならない。 */
   cssWidth=Math.max(280,Math.floor(wrap.clientWidth||window.innerWidth));
@@ -9555,7 +9767,8 @@ if(horizonFullscreen){
 }
 
 wrap.classList.toggle("sky-full-horizon",horizonFullscreen);
-wrap.classList.toggle("sky-full-tracking",fullscreen&&SKY_PROJECTION==="tracking");
+wrap.classList.toggle("sky-full-tracking",fullscreen&&(SKY_PROJECTION==="tracking"||SKY_PROJECTION==="camera"));
+wrap.classList.toggle("camera-active",cameraMode&&!!SKY_CAMERA_STREAM);
 SKY_PERSPECTIVE_ASPECT=isHorizonProjection()?cssWidth/cssHeight:1;
 
 const dpr=Math.min(window.devicePixelRatio||1,2);
@@ -9567,8 +9780,18 @@ const ctx=canvas.getContext("2d");ctx.setTransform(dpr,0,0,dpr,0,0);
 const w=cssWidth,h=cssHeight,cx=w/2,cy=h/2,R=Math.min(w,h)*0.44;
 SKY_MAP_HITS=[];
 ctx.clearRect(0,0,w,h);
-const daylightState=drawDaylightBackground(ctx,lat,lon,date,w,h,cx,cy,R);
-const moonlightState=drawMoonlightBackground(ctx,lat,lon,date,w,h,cx,cy,R,daylightState.sunAlt);
+let daylightState,moonlightState;
+if(cameraMode){
+  const sun=sunPosition(toJD(date));
+  const sunAA=altAz(sun.ra,sun.dec,lat,lon,date);
+  daylightState={sunAlt:sunAA.alt,sunAz:sunAA.az};
+  const moon=moonPosition(toJD(date));
+  const moonAA=altAz(moon.ra,moon.dec,lat,lon,date);
+  moonlightState={enabled:false,ra:moon.ra,dec:moon.dec,alt:moonAA.alt,az:moonAA.az,intensity:0,illum:0,relative:0};
+}else{
+  daylightState=drawDaylightBackground(ctx,lat,lon,date,w,h,cx,cy,R);
+  moonlightState=drawMoonlightBackground(ctx,lat,lon,date,w,h,cx,cy,R,daylightState.sunAlt);
+}
 
 if(isHorizonProjection()){
 drawPerspectiveGuide(ctx,cx,cy,R);
@@ -9829,6 +10052,8 @@ const place=$("#inPlace").value||"指定場所";
 const projectionInfo=isHorizonProjection()
 ?(SKY_PROJECTION==="tracking"
   ?`追尾 / ${azToDir(SKY_PERSPECTIVE_AZ)}向き・仰角${Math.round(SKY_PERSPECTIVE_ALT)}°`
+  :SKY_PROJECTION==="camera"
+  ?`カメラ / ${azToDir(SKY_PERSPECTIVE_AZ)}向き・仰角${Math.round(SKY_PERSPECTIVE_ALT)}°`
   :`地平 / ${azToDir(SKY_PERSPECTIVE_AZ)}向き・仰角${Math.round(SKY_PERSPECTIVE_ALT)}°`)
 :"全天 / 北が上・東が左";
 const daylightLabel=$("#skyShowDaylight")?.checked
@@ -10610,7 +10835,7 @@ return pts;
 
 const $=s=>document.querySelector(s);
 
-// v1.10.12: constellation modal listeners are registered only after DOM helpers are initialized.
+// v1.10.13: constellation modal listeners are registered only after DOM helpers are initialized.
 document.getElementById("closeConstellationDetail")?.addEventListener("click",closeConstellationDetailModal);
 document.getElementById("constellationDetailModal")?.addEventListener("click",event=>{
   if(event.target===document.getElementById("constellationDetailModal"))closeConstellationDetailModal();
@@ -11226,7 +11451,7 @@ function skyPointToAltAz(x,y){
   if(isHorizonProjection()){
     const {halfX,halfY}=getSkyPerspectiveViewport(R);
     if(x<cx-halfX||x>cx+halfX||y<cy-halfY||y>cy+halfY)return null;
-    const halfFov=(SKY_PERSPECTIVE_FOV/2)*D2R;
+    const halfFov=(getActivePerspectiveFov()/2)*D2R;
     const scale=halfY/Math.tan(halfFov);
     const x0=cx+(x-cx-SKY_PAN_X)/SKY_ZOOM;
     const y0=cy+(y-cy-SKY_PAN_Y)/SKY_ZOOM;
@@ -11498,9 +11723,10 @@ renderSkyChart();
 updateFovInfo();
 updateAstroPhotoTools();
 
-$("#skyViewAllSky").addEventListener("click",()=>{disableSkyDeviceOrientation();setSkyProjection("allsky");});
-$("#skyViewPerspective").addEventListener("click",()=>{disableSkyDeviceOrientation();setSkyProjection("perspective");});
+$("#skyViewAllSky").addEventListener("click",()=>{stopSkyCameraStream();disableSkyDeviceOrientation();setSkyProjection("allsky");});
+$("#skyViewPerspective").addEventListener("click",()=>{stopSkyCameraStream();disableSkyDeviceOrientation();setSkyProjection("perspective");});
 $("#skyViewTracking")?.addEventListener("click",async()=>{
+  stopSkyCameraStream();
   if(SKY_PROJECTION==="tracking"&&SKY_DEVICE_MODE){
     disableSkyDeviceOrientation();
     setSkyProjection("perspective");
@@ -11508,6 +11734,23 @@ $("#skyViewTracking")?.addEventListener("click",async()=>{
   }
   await enableSkyTrackingMode();
 });
+$("#skyViewCamera")?.addEventListener("click",async()=>{
+  if(SKY_PROJECTION==="camera"&&SKY_CAMERA_STREAM){exitSkyCameraMode();return;}
+  await enableSkyCameraMode();
+});
+$("#stopSkyCamera")?.addEventListener("click",exitSkyCameraMode);
+$("#cameraAzMinus")?.addEventListener("click",()=>adjustCameraAlignment(-1,0));
+$("#cameraAzPlus")?.addEventListener("click",()=>adjustCameraAlignment(1,0));
+$("#cameraAltMinus")?.addEventListener("click",()=>adjustCameraAlignment(0,-1));
+$("#cameraAltPlus")?.addEventListener("click",()=>adjustCameraAlignment(0,1));
+$("#cameraResetAlign")?.addEventListener("click",resetCameraAlignment);
+$("#cameraAlignTarget")?.addEventListener("click",alignCameraToSelectedTarget);
+$("#skyCameraFullscreen")?.addEventListener("click",toggleSkyFullscreen);
+$("#skyCameraOverlayOpacity")?.addEventListener("input",event=>{
+  const canvas=$("#skyMapCanvas");
+  if(canvas)canvas.style.opacity=String(Math.max(.2,Math.min(1,Number(event.target.value)/100)));
+});
+window.addEventListener("pagehide",stopSkyCameraStream);
 updateSkyDeviceUI();
 $("#skyPerspectiveAz").addEventListener("change",event=>{
 disableSkyDeviceOrientation();
