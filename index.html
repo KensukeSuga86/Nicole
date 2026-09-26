@@ -2,33 +2,27 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#050b13">
-<link rel="manifest" href="manifest.webmanifest">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#081120">
+<meta name="color-scheme" content="dark">
 <meta name="application-name" content="Nicole the Astronavigator">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Nicole">
-
+<meta name="format-detection" content="telephone=no">
 <title>Nicole the Astronavigator</title>
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<meta name="theme-color" content="#081120">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="./icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
 <style>
 *{box-sizing:border-box;}
-body{font-family:"Meiryo","Yu Gothic",sans-serif;color:#e0eaf5;margin:0;background:#080c18;}
+html{min-height:100%;background:#080c18;color-scheme:dark;}
+body{font-family:"Meiryo","Yu Gothic",sans-serif;color:#e0eaf5;margin:0;min-height:100%;background:#080c18;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);}
 header{background:linear-gradient(135deg,#0a1428,#0d2040);color:#fff;padding:14px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;border-bottom:2px solid #1e4a7a;}
 header h1{font-family:"Trajan Pro 3","Trajan Pro","Trajan","Times New Roman",serif;font-weight:400;font-size:22px;margin:0;letter-spacing:2px;background:linear-gradient(90deg,#7eb8e8,#ffd54f,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.app-brand{display:flex;align-items:center;gap:14px;min-width:0;flex:1 1 auto;}
-.app-header-logo{display:block;height:56px;width:auto;max-width:min(42vw,210px);object-fit:contain;filter:drop-shadow(0 1px 2px rgba(0,0,0,.35));}
-.app-title-block{display:flex;flex-direction:column;gap:2px;min-width:0;}
-.app-version{font-size:9px;line-height:1.2;color:#6686a0;letter-spacing:.08em;padding-left:2px;}
 .panel{background:#0d1525;border:1px solid #1e3a5f;border-radius:12px;padding:18px 20px;margin:14px;}
 .panel h2{font-size:15px;color:#7eb8e8;border-left:4px solid #2a7abf;padding-left:10px;margin:0 0 14px;}
 label{font-size:13px;color:#8ab4c4;display:block;margin-bottom:4px;}
@@ -376,15 +370,25 @@ max-inline-size:100%;
 @media(max-width:700px){.weather-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
 .night-mode-toggle{margin-left:auto;background:#160000;border:1px solid #6b1b1b;color:#ff8a80;border-radius:8px;padding:7px 12px;font-size:12px;cursor:pointer;white-space:nowrap;}
 .night-mode-toggle:hover{background:#260000;color:#ffb4ad;}
-body.night-mode{filter:grayscale(1) sepia(1) saturate(8) hue-rotate(305deg) brightness(.52) contrast(1.08);}
-/* v1.10.5: 全画面中はbodyのfilterを外し、星図要素自身へ赤色化を移す。
-   Safariでfilter付き祖先がfixed/fullscreenの基準を変える問題を避ける。 */
-body.night-mode.sky-fullscreen-night{filter:none !important;-webkit-filter:none !important;background:#000;}
-body.night-mode.sky-fullscreen-night #skyMapCanvasWrap.sky-fullscreen-fallback,
-body.night-mode.sky-fullscreen-night #skyMapCanvasWrap:fullscreen{
-  filter:grayscale(1) sepia(1) saturate(8) hue-rotate(305deg) brightness(.52) contrast(1.08);
-  -webkit-filter:grayscale(1) sepia(1) saturate(8) hue-rotate(305deg) brightness(.52) contrast(1.08);
-  background:#000;
+body.night-mode{background:#000;}
+/*
+  v1.12.0: body 自体には filter を掛けない。
+  fixed / fullscreen の containing block を変えず、iOS Safari の全画面・モーダルと干渉しないよう
+  viewport 上の backdrop-filter オーバーレイで赤色化する。
+*/
+body.night-mode::after{
+  content:"";position:fixed;inset:0;z-index:2147483000;pointer-events:none;
+  background:rgba(80,0,0,.06);mix-blend-mode:multiply;
+  -webkit-backdrop-filter:grayscale(1) sepia(1) saturate(8) hue-rotate(305deg) brightness(.52) contrast(1.08);
+  backdrop-filter:grayscale(1) sepia(1) saturate(8) hue-rotate(305deg) brightness(.52) contrast(1.08);
+}
+/* native Fullscreen は top layer に出るため、その内側にも同じ赤色オーバーレイを置く。 */
+body.night-mode #skyMapCanvasWrap:fullscreen::after,
+body.night-mode #skyMapCanvasWrap:-webkit-full-screen::after{
+  content:"";position:absolute;inset:0;z-index:2147483000;pointer-events:none;
+  background:rgba(80,0,0,.06);mix-blend-mode:multiply;
+  -webkit-backdrop-filter:grayscale(1) sepia(1) saturate(8) hue-rotate(305deg) brightness(.52) contrast(1.08);
+  backdrop-filter:grayscale(1) sepia(1) saturate(8) hue-rotate(305deg) brightness(.52) contrast(1.08);
 }
 body.night-mode .night-mode-toggle{background:#220000;border-color:#ff4d4d;color:#ffb0a8;}
 @media(max-width:600px){
@@ -393,7 +397,6 @@ body.night-mode .night-mode-toggle{background:#220000;border-color:#ff4d4d;color
 .skymap-zoom-help{width:100%;margin-left:0;}
 header{align-items:flex-start;}
 .app-brand{width:100%;gap:10px;}
-.app-header-logo{height:42px;max-width:min(58vw,180px);}
 .night-mode-toggle{margin-left:0;}
 }
 .season-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:bold;}
@@ -2589,7 +2592,7 @@ body.public-info-open{overflow:hidden;}
 
 
 
-/* ===== v1.11.2 OBJECT DETAIL MODAL ===== */
+/* ===== v1.12.0 OBJECT DETAIL MODAL ===== */
 .detail-popup-modal{
   display:none;
   position:fixed;
@@ -2621,12 +2624,12 @@ body.detail-popup-open{overflow:hidden;}
 }
 
 
-/* ===== v1.11.2 DETAIL ACTIONS ===== */
+/* ===== v1.12.0 DETAIL ACTIONS ===== */
 .recommend-actions{gap:6px;flex-wrap:wrap;}
 .card-plan-actions{gap:6px;flex-wrap:wrap;}
 
 
-/* ===== v1.11.2 footer / planetarium easter egg ===== */
+/* ===== v1.12.0 footer / planetarium easter egg ===== */
 .footer-app-title{
   color:#7eb8e8;
   font-size:12px;
@@ -2784,7 +2787,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v1.11.2 constellation detail modal ===== */
+/* ===== v1.12.0 constellation detail modal ===== */
 .constellation-popup-card{
   width:min(640px,100%);
 }
@@ -2857,7 +2860,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v1.11.2 今夜のおすすめ 折りたたみ見出し統一 ===== */
+/* ===== v1.12.0 今夜のおすすめ 折りたたみ見出し統一 ===== */
 .recommend-details{
   padding:0 !important;
   overflow:hidden;
@@ -2883,11 +2886,11 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* v1.11.2: 隠し星設定はモード有効化前に確実に非表示 */
+/* v1.12.0: 隠し星設定はモード有効化前に確実に非表示 */
 #skyMyStarOption[hidden]{display:none !important;}
 
 
-/* ===== v1.11.2 カメラ星図 ===== */
+/* ===== v1.12.0 カメラ星図 ===== */
 .skymap-camera-controls{
   display:none;
   width:100%;
@@ -2928,7 +2931,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v1.11.2 result sections / calendar / star-map layout ===== */
+/* ===== v1.12.0 result sections / calendar / star-map layout ===== */
 .result-section-panel{
   margin:10px 0;
   padding:0;
@@ -3031,7 +3034,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v1.11.2 赤道儀独立パネル ===== */
+/* ===== v1.12.0 赤道儀独立パネル ===== */
 .standalone-polar-panel{
   margin:10px 0;
 }
@@ -3045,7 +3048,7 @@ body.planetarium-picking #skyMapCanvasWrap{
   background:transparent;
 }
 
-/* ===== v1.11.2 カメラ全画面補正パネル ===== */
+/* ===== v1.12.0 カメラ全画面補正パネル ===== */
 .camera-fullscreen-controls{
   display:none;
   position:absolute;
@@ -3160,7 +3163,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v1.11.2 空の情報 日付スワイプ ===== */
+/* ===== v1.12.0 空の情報 日付スワイプ ===== */
 .sky-info-datebar{
   display:flex;
   align-items:center;
@@ -3212,10 +3215,41 @@ body.planetarium-picking #skyMapCanvasWrap{
   }
 }
 
+
+/* ===== v1.12.0 iOS Safe Area / PWA base ===== */
+header{padding-top:calc(14px + env(safe-area-inset-top));}
+footer{padding-bottom:calc(10px + env(safe-area-inset-bottom));}
+@media(display-mode:standalone){html,body{background:#080c18;}}
+
+
+/* ===== v1.12.0 PWA update / boot diagnostics ===== */
+.pwa-update-banner{
+  position:fixed;left:50%;top:max(10px,calc(env(safe-area-inset-top) + 8px));transform:translateX(-50%);
+  z-index:2147482900;display:flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);
+  padding:9px 10px;border:1px solid #2f648d;border-radius:10px;background:rgba(7,21,36,.96);
+  color:#dceeff;font-size:11px;box-shadow:0 10px 32px rgba(0,0,0,.45);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+}
+.pwa-update-banner[hidden]{display:none!important;}
+.pwa-update-banner span{min-width:0;flex:1;}
+.pwa-update-banner button{border:1px solid #3974a1;border-radius:7px;background:#174a70;color:#fff;padding:6px 10px;font-size:10px;white-space:nowrap;}
+.pwa-update-banner button.subtle{background:#101d2b;color:#9db8ce;border-color:#2b465e;}
+.nicole-boot-error{
+  position:fixed;left:12px;right:12px;bottom:max(12px,calc(env(safe-area-inset-bottom) + 8px));z-index:2147482950;
+  padding:10px 12px;border:1px solid #8a3131;border-radius:10px;background:rgba(40,4,4,.96);color:#ffc4bd;font-size:11px;line-height:1.5;
+}
+.nicole-boot-error[hidden]{display:none!important;}
+
 </style>
 </head>
 <body>
 <div id="pwaOfflineBanner" class="pwa-offline-banner" role="status">📡 オフライン：保存済みデータを利用できる機能のみ使用できます</div>
+<div id="pwaUpdateBanner" class="pwa-update-banner" role="status" aria-live="polite" hidden>
+  <span>Nicoleの新しいバージョンがあります。</span>
+  <button type="button" id="pwaApplyUpdate">更新</button>
+  <button type="button" id="pwaDismissUpdate" class="subtle">あとで</button>
+</div>
+<div id="nicoleBootError" class="nicole-boot-error" role="alert" hidden></div>
 <header>
 <div><h1>🔭 Nicole the Astronavigator</h1></div>
 <div class="header-actions">
@@ -4798,7 +4832,7 @@ body.planetarium-picking #skyMapCanvasWrap{
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.11.2&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.12.0&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -4914,7 +4948,7 @@ initialManualNightMode();
       <p>道路状況、私有地、立入禁止区域、野生動物、気象災害その他の安全性は判定しません。実際の移動・観測では、現地の法令、施設管理者の指示、立入可否、気象情報、安全状況を利用者自身で確認してください。</p>
       <p>本アプリは航法、救難、防災、医療その他の生命・身体・財産に重大な影響を与える用途を目的としていません。本アプリの情報を利用したこと、または利用できなかったことにより生じた損害について、制作者は法令上認められる範囲で責任を負いません。</p>
 
-      <div class="public-info-date">公開情報 最終更新：2026年9月23日</div>
+      <div class="public-info-date">公開情報 最終更新：2026年9月26日</div>
     </div>
   </div>
 </div>
@@ -5001,7 +5035,7 @@ initialManualNightMode();
 
 <footer>
 <div class="footer-app-title">🔭 Nicole the Astronavigator</div>
-<div class="footer-app-version">Version 1.11.2</div>
+<div class="footer-app-version">Version 1.12.0</div>
 <div class="footer-creator">制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
 <div class="footer-info-actions">
   <button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
@@ -6043,6 +6077,7 @@ let SKY_CAMERA_STREAM=null;
 let SKY_CAMERA_AZ_CORRECTION=0;
 let SKY_CAMERA_ALT_CORRECTION=0;
 let SKY_CAMERA_LAST_ERROR="";
+let SKY_CAMERA_SETTINGS=null;
 function getActivePerspectiveFov(){
   if(SKY_PROJECTION!=="camera")return SKY_PERSPECTIVE_FOV;
   return SKY_PERSPECTIVE_ASPECT<1?SKY_CAMERA_PORTRAIT_VFOV:SKY_CAMERA_LANDSCAPE_VFOV;
@@ -6329,41 +6364,36 @@ if(cameraBtn)cameraBtn.textContent=isFull?"⤢ 全画面終了":"⛶ カメラ�
 }
 
 function syncNightFullscreenFilter(){
-const wrap=$("#skyMapCanvasWrap");
-const active=!!wrap && skyPanelIsFullscreen() && document.body.classList.contains("night-mode");
-document.body.classList.toggle("sky-fullscreen-night",active);
+/* v1.12.0: red mode is an overlay; no filtered ancestor/fullscreen handoff is required. */
 }
 
 async function toggleSkyFullscreen(){
 const wrap=$("#skyMapCanvasWrap");
 if(!wrap)return;
-const useFallbackOnly=document.body.classList.contains("night-mode");
 
 if(document.fullscreenElement===wrap){
-await document.exitFullscreen?.();
-return;
+  await document.exitFullscreen?.();
+  return;
 }
 if(wrap.classList.contains("sky-fullscreen-fallback")){
-wrap.classList.remove("sky-fullscreen-fallback");
-document.body.classList.remove("sky-fullscreen-open","sky-fullscreen-night");
-updateSkyFullscreenButton();
-setTimeout(()=>{renderSkyChart();syncSkyInteractionLayer();},60);
-return;
+  wrap.classList.remove("sky-fullscreen-fallback");
+  document.body.classList.remove("sky-fullscreen-open");
+  updateSkyFullscreenButton();
+  setTimeout(()=>{renderSkyChart();syncSkyInteractionLayer();},60);
+  return;
 }
 
-if(!useFallbackOnly && wrap.requestFullscreen){
-try{
-await wrap.requestFullscreen();
-return;
-}catch(e){}
+if(wrap.requestFullscreen){
+  try{
+    await wrap.requestFullscreen();
+    return;
+  }catch(e){
+    console.info("Native fullscreen unavailable; using Nicole fallback.",e);
+  }
 }
 
-/* 赤色夜間モードではbodyのfilterがfixed配置を壊さないよう、
-   先にbody側filterを解除してから疑似全画面へ切り替える。 */
-if(useFallbackOnly)document.body.classList.add("sky-fullscreen-night");
 wrap.classList.add("sky-fullscreen-fallback");
 document.body.classList.add("sky-fullscreen-open");
-syncNightFullscreenFilter();
 updateSkyFullscreenButton();
 setTimeout(()=>{renderSkyChart();syncSkyInteractionLayer();},60);
 }
@@ -6582,6 +6612,7 @@ function stopSkyCameraStream(){
   if(SKY_CAMERA_STREAM){
     SKY_CAMERA_STREAM.getTracks().forEach(track=>track.stop());
     SKY_CAMERA_STREAM=null;
+    SKY_CAMERA_SETTINGS=null;
   }
   const video=$("#skyCameraVideo");
   if(video){video.pause();video.srcObject=null;}
@@ -6626,6 +6657,8 @@ async function requestSkyCameraStream(){
       await track.applyConstraints({advanced:[{zoom:z}]});
     }
   }catch(e){console.warn("Camera zoom constraint skipped",e);}
+  SKY_CAMERA_SETTINGS=track.getSettings?.()||null;
+  console.info("Nicole camera settings",SKY_CAMERA_SETTINGS);
   $("#skyMapCanvasWrap")?.classList.add("camera-active");
   setCameraOverlayOpacity($("#skyCameraOverlayOpacity")?.value||80);
 }
@@ -8114,12 +8147,13 @@ requestAnimationFrame(()=>section.scrollIntoView({behavior:"smooth",block}));
 }
 
 function scrollToSkyPanel(){
-const skyPanel=$("#skyMapPanel");
 const section=$("#resultPanel-skymap");
-if(section)section.open=true;
-if(!skyPanel)return;
+if(!section)return;
+section.open=true;
 requestAnimationFrame(()=>{
-  skyPanel.scrollIntoView({behavior:"smooth",block:"start"});
+  section.scrollIntoView({behavior:"smooth",block:"start"});
+  renderSkyChart();
+  syncSkyInteractionLayer();
 });
 }
 
@@ -11211,7 +11245,7 @@ return pts;
 
 const $=s=>document.querySelector(s);
 
-// v1.11.2: constellation modal listeners are registered only after DOM helpers are initialized.
+// v1.12.0: constellation modal listeners are registered only after DOM helpers are initialized.
 document.getElementById("closeConstellationDetail")?.addEventListener("click",closeConstellationDetailModal);
 document.getElementById("constellationDetailModal")?.addEventListener("click",event=>{
   if(event.target===document.getElementById("constellationDetailModal"))closeConstellationDetailModal();
@@ -11891,8 +11925,6 @@ function startMyStarCoordinatePicker(){
   PLANETARIUM_PICKING_COORDS=true;
   document.body.classList.add("planetarium-picking");
   switchResultTab("skymap");
-  const panel=$("#skyMapPanel");
-  if(panel)panel.open=true;
   const info=$("#skyMapObjectInfo");
   if(info)info.innerHTML='<b>僕しか知らない星の座標を選択中</b><br>星図上の好きな場所をタップしてください。';
   setPlanetariumStatus("星図上の好きな場所をタップしてください。");
@@ -12174,14 +12206,10 @@ $("#skyFullscreen").addEventListener("click",toggleSkyFullscreen);
 $("#skyTrackingFullscreen")?.addEventListener("click",toggleSkyFullscreen);
 $("#skyCanvasFullscreenExit")?.addEventListener("click",toggleSkyFullscreen);
 $("#clearSkyFocusTarget")?.addEventListener("click",clearSkyFocusTarget);
-$("#skyMapPanel")?.addEventListener("toggle",function(){
-  if(this.open)setTimeout(()=>{renderSkyChart();syncSkyInteractionLayer();},30);
-});
 document.addEventListener("fullscreenchange",()=>{
 const active=skyPanelIsFullscreen();
 document.body.classList.toggle("sky-fullscreen-open",active);
-if(!active)document.body.classList.remove("sky-fullscreen-night");
-else syncNightFullscreenFilter();
+if(active)syncNightFullscreenFilter();
 updateSkyFullscreenButton();
 setTimeout(()=>{renderSkyChart();syncSkyInteractionLayer();},60);
 });
@@ -12190,7 +12218,7 @@ if(event.key==="Escape"){
 const wrap=$("#skyMapCanvasWrap");
 if(wrap?.classList.contains("sky-fullscreen-fallback")){
 wrap.classList.remove("sky-fullscreen-fallback");
-document.body.classList.remove("sky-fullscreen-open","sky-fullscreen-night");
+document.body.classList.remove("sky-fullscreen-open");
 updateSkyFullscreenButton();
 setTimeout(()=>{renderSkyChart();syncSkyInteractionLayer();},60);
 }
@@ -13504,22 +13532,112 @@ document.addEventListener("keydown",event=>{
 });
 
 
-/* ===== PWA / Service Worker ===== */
+/* ===== v1.12.0 PWA / Startup Stability ===== */
+let NICOLE_SW_REGISTRATION=null;
+let NICOLE_SW_REFRESHING=false;
+let NICOLE_SW_DISMISSED=false;
+
 function updatePwaConnectivityUI(){
   const banner=document.getElementById("pwaOfflineBanner");
   if(banner)banner.classList.toggle("show",!navigator.onLine);
 }
-updatePwaConnectivityUI();
-window.addEventListener("online",updatePwaConnectivityUI);
-window.addEventListener("offline",updatePwaConnectivityUI);
 
-if("serviceWorker" in navigator && (location.protocol==="https:" || location.hostname==="localhost")){
-  window.addEventListener("load",()=>{
-    navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(error=>{
-      console.warn("Nicole Service Worker registration failed",error);
-    });
+function showPwaUpdateBanner(registration){
+  if(!registration||NICOLE_SW_DISMISSED)return;
+  NICOLE_SW_REGISTRATION=registration;
+  const banner=document.getElementById("pwaUpdateBanner");
+  if(banner)banner.hidden=false;
+}
+function hidePwaUpdateBanner(){
+  const banner=document.getElementById("pwaUpdateBanner");
+  if(banner)banner.hidden=true;
+}
+async function applyPwaUpdate(){
+  const waiting=NICOLE_SW_REGISTRATION?.waiting;
+  if(!waiting){
+    hidePwaUpdateBanner();
+    return;
+  }
+  NICOLE_SW_REFRESHING=true;
+  waiting.postMessage({type:"SKIP_WAITING"});
+}
+
+function initPwaUpdateUI(){
+  document.getElementById("pwaApplyUpdate")?.addEventListener("click",applyPwaUpdate);
+  document.getElementById("pwaDismissUpdate")?.addEventListener("click",()=>{
+    NICOLE_SW_DISMISSED=true;
+    hidePwaUpdateBanner();
   });
 }
+
+async function registerNicoleServiceWorker(){
+  if(!("serviceWorker" in navigator) || !(location.protocol==="https:" || location.hostname==="localhost"))return null;
+  try{
+    const registration=await navigator.serviceWorker.register("./sw.js",{scope:"./",updateViaCache:"none"});
+    NICOLE_SW_REGISTRATION=registration;
+    if(registration.waiting&&navigator.serviceWorker.controller)showPwaUpdateBanner(registration);
+
+    registration.addEventListener("updatefound",()=>{
+      const worker=registration.installing;
+      if(!worker)return;
+      worker.addEventListener("statechange",()=>{
+        if(worker.state==="installed"&&navigator.serviceWorker.controller){
+          showPwaUpdateBanner(registration);
+        }
+      });
+    });
+
+    navigator.serviceWorker.addEventListener("controllerchange",()=>{
+      if(!NICOLE_SW_REFRESHING)return;
+      location.reload();
+    });
+
+    const requestUpdate=()=>registration.update().catch(()=>{});
+    document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")requestUpdate();});
+    setInterval(()=>{if(document.visibilityState==="visible")requestUpdate();},60*60*1000);
+    return registration;
+  }catch(error){
+    console.warn("Nicole Service Worker registration failed",error);
+    return null;
+  }
+}
+
+function runNicoleSelfCheck(){
+  const requiredIds=[
+    "nightModeToggle","inDatetime","inLat","inLon","btnCalc","resultArea",
+    "resultPanel-skymap","skyMapCanvasWrap","skyMapCanvas","skyMapInteraction"
+  ];
+  const missing=requiredIds.filter(id=>!document.getElementById(id));
+  const seen=new Set(),duplicates=[];
+  document.querySelectorAll("[id]").forEach(el=>{
+    if(seen.has(el.id))duplicates.push(el.id); else seen.add(el.id);
+  });
+  const report={version:"1.12.0",missing,duplicates:[...new Set(duplicates)],standalone:!!(window.navigator.standalone||matchMedia("(display-mode: standalone)").matches)};
+  window.NicoleDiagnostics=Object.assign(window.NicoleDiagnostics||{},report,{cameraSettings:()=>SKY_CAMERA_SETTINGS});
+  if(missing.length||report.duplicates.length){
+    console.error("Nicole startup self-check failed",report);
+    const error=document.getElementById("nicoleBootError");
+    if(error){
+      error.hidden=false;
+      error.textContent=`起動チェックで問題を検出しました。missing: ${missing.join(", ")||"なし"} / duplicate IDs: ${report.duplicates.join(", ")||"なし"}`;
+    }
+  }else{
+    console.info("Nicole startup self-check OK",report);
+  }
+  return report;
+}
+
+function initNicoleSystem(){
+  updatePwaConnectivityUI();
+  window.addEventListener("online",updatePwaConnectivityUI);
+  window.addEventListener("offline",updatePwaConnectivityUI);
+  initPwaUpdateUI();
+  runNicoleSelfCheck();
+  registerNicoleServiceWorker();
+}
+
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initNicoleSystem,{once:true});
+else initNicoleSystem();
 
 </script>
 </body>

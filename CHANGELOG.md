@@ -12,6 +12,36 @@ Nicole the Astronavigator の主な変更履歴です。
 
 ---
 
+## [1.12.0]
+
+### Added
+- PWA更新通知を追加。新しいService Workerが待機した場合、アプリ内から更新できるようにした。
+- 起動時セルフチェックを追加し、主要DOM欠落・ID重複を診断できるようにした。
+- PWA用のmanifest、通常アイコン、maskableアイコン、iOS用apple-touch-icon、faviconを完全版パッケージへ同梱。
+
+### Changed
+- `<head>` のPWA関連設定を整理し、重複していたfavicon・apple-touch-icon・theme-color定義を統合。
+- `viewport-fit=cover` とSafe Area対応を追加。
+- manifest / HTML / CSSの起動背景色とテーマ色を統一。
+- PWAアイコンを、透明な角丸を画像側に持たない全面不透明の正方形素材へ再生成。
+- Service Workerのインストールを耐障害化し、任意アイコン等の取得失敗で更新全体が止まらない構造へ変更。
+- オフラインHTMLキャッシュを `index.html` の単一キーへ統一。
+- 動的データキャッシュをアプリ本体のバージョンから分離し、通常アップデートで不要に破棄しない構造へ変更。
+- 赤色夜間モードをbody全体filter方式からbackdrop-filterオーバーレイ方式へ変更。
+- 星図パネル再構成前の不要なopen/toggle処理を整理。
+- カメラ開始時に実際のMediaStream設定を取得する診断情報を追加。
+- アプリ内バージョンを1.12.0へ更新。
+
+### Maintained
+- カメラ星図モードと位置補正。
+- 星図・追尾・全画面表示。
+- 赤道儀。
+- 天体詳細・星座詳細モーダル。
+- 空の情報の日付スワイプ。
+- Nicole Cache Managerのデータ種別・TTL方針。
+
+---
+
 ## [1.11.2]
 
 ### Added

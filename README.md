@@ -10,19 +10,29 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 1.11.2**
+**Current Version: 1.12.0**
 
 ---
 
-## v1.11.2 の変更点
+## v1.12.0 の変更点
 
-- 「空の情報」パネルの最上部に表示対象の日付を追加
-- 「空の情報」を横方向へスワイプして前日・翌日の情報へ切り替えられるよう変更
-  - 左スワイプ：翌日
-  - 右スワイプ：前日
-- 現在時刻追従中でも、スワイプした日付差を維持するよう調整
-- 「天体」パネルのアイコンを `⭐️` に変更
-- Service Worker のキャッシュ名前空間を `nicole-pwa-v1.11.2` に更新
+- PWA / iPhoneホーム画面起動まわりを全面整理
+  - `<head>` 内の重複した favicon / apple-touch-icon / theme-color を統合
+  - `viewport-fit=cover` と Safe Area 対応を追加
+  - manifest の `theme_color` / `background_color` とアプリ背景色を統一
+- PWAアイコン一式を再生成
+  - 角丸・透明コーナーを画像側に持たせず、OS側のマスクに任せる構成へ変更
+  - iOS用180px、PWA用192px / 512px、maskable用192px / 512px、faviconを同梱
+- Service Workerを安定化
+  - アイコン等の任意資産が欠けてもService Worker更新全体が失敗しないよう変更
+  - HTMLのオフラインキャッシュキーを `index.html` に統一
+  - 天候・彗星等の動的データキャッシュをアプリ更新のたびに消さない構成へ変更
+- 新しいService Workerが待機した場合に「新しいバージョンがあります」通知を表示し、利用者が更新できるよう変更
+- 起動時セルフチェックを追加し、主要DOM欠落・ID重複をコンソールと診断情報から確認可能にした
+- 赤色夜間モードを `body` 全体のCSS filter方式からオーバーレイ方式へ変更し、Fullscreen / fixed UIとの干渉を低減
+- 星図パネルの旧折りたたみ構造に由来する不要な処理を整理
+- カメラ起動時に実際のMediaStream設定を取得し、`window.NicoleDiagnostics.cameraSettings()` から確認可能にした
+- Service Worker のキャッシュ名前空間を `nicole-pwa-v1.12.0` に更新
 
 ---
 
@@ -442,7 +452,14 @@ manifest.webmanifest
 favicon.ico
 icon-32.png
 icon-192.png
+icon-512.png
+icon-maskable-192.png
+icon-maskable-512.png
 apple-touch-icon.png
+icon-master-1024.png
+RELEASE.md
+README.md
+CHANGELOG.md
 ```
 
 `index.html` にアプリ本体、天文計算、UI、組み込み使用マニュアルなどを収録しています。
@@ -451,6 +468,13 @@ apple-touch-icon.png
 
 ---
 
+
+### v1.12.0をGitHubへ反映するとき
+
+v1.12.0ではPWA資産も更新しているため、**初回のv1.12.0反映時は `Nicole-v1.12.0-full.zip` の内容をすべてGitHub Pagesの同じ階層へ配置してください。**
+
+`manifest.webmanifest` とアイコン一式を配置した後、これらに変更がない通常アップデートでは従来どおり `index.html / RELEASE.md / README.md / CHANGELOG.md / sw.js` の更新だけでも運用できます。
+
 ## 更新時の注意
 
 Service Workerを変更した場合はキャッシュ名前空間も更新し、旧キャッシュが適切に整理されるようにします。
@@ -458,7 +482,7 @@ Service Workerを変更した場合はキャッシュ名前空間も更新し、
 現在のキャッシュ名前空間：
 
 ```text
-nicole-pwa-v1.11.2
+nicole-pwa-v1.12.0
 ```
 
 ---
@@ -473,4 +497,4 @@ https://kensuke-suga.myportfolio.com
 
 ## Version
 
-**Nicole the Astronavigator v1.11.2**
+**Nicole the Astronavigator v1.12.0**
