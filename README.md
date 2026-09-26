@@ -10,22 +10,16 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 1.10.8**
+**Current Version: 1.10.9**
 
 ---
 
-## v1.10.8 の変更点
+## v1.10.9 の変更点
 
-- ヘッダーを **v1.10.0 相当の仕様**へ戻し、`🔭 Nicole the Astronavigator` のテキストタイトル表示に変更
-  - ヘッダーロゴ画像を撤去
-  - ヘッダー内のバージョン表示を撤去
-- 天体詳細モーダルへの操作を **「詳しく見る」** に統一
-- 天体カードに「詳しく見る」ボタンを追加
-- 「今夜のおすすめ」に「詳しく見る」ボタンを追加
-- 星図で選択した天体の情報エリアに「詳しく見る」ボタンを追加
-- 既存のカード本体タップによる詳細表示も維持
-- 組み込みマニュアルのバージョン表示を **1.10.8** に更新
-- Service Worker のキャッシュ名前空間を `nicole-pwa-v1.10.8` に更新
+- 赤道儀レクチルを、初期状態で180°反転表示するよう変更
+- バージョン情報をフッターのアプリ名直下へ移動
+- 「星図で見る / 星図で表示」を押した時点で、星図の選択情報欄へ **「詳しく見る」** を表示
+- Service Worker のキャッシュ名前空間を `nicole-pwa-v1.10.9` に更新
 
 ---
 
@@ -461,7 +455,7 @@ Service Workerを変更した場合はキャッシュ名前空間も更新し、
 現在のキャッシュ名前空間：
 
 ```text
-nicole-pwa-v1.10.8
+nicole-pwa-v1.10.9
 ```
 
 ---
@@ -476,4 +470,4 @@ https://kensuke-suga.myportfolio.com
 
 ## Version
 
-**Nicole the Astronavigator v1.10.8**
+**Nicole the Astronavigator v1.10.9**

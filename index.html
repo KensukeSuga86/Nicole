@@ -2587,7 +2587,7 @@ body.public-info-open{overflow:hidden;}
 
 
 
-/* ===== v1.10.8 OBJECT DETAIL MODAL ===== */
+/* ===== v1.10.9 OBJECT DETAIL MODAL ===== */
 .detail-popup-modal{
   display:none;
   position:fixed;
@@ -2619,9 +2619,167 @@ body.detail-popup-open{overflow:hidden;}
 }
 
 
-/* ===== v1.10.8 DETAIL ACTIONS ===== */
+/* ===== v1.10.9 DETAIL ACTIONS ===== */
 .recommend-actions{gap:6px;flex-wrap:wrap;}
 .card-plan-actions{gap:6px;flex-wrap:wrap;}
+
+
+/* ===== v1.10.9 footer / planetarium easter egg ===== */
+.footer-app-title{
+  color:#7eb8e8;
+  font-size:12px;
+}
+.footer-app-version{
+  margin-top:-4px;
+  color:#5f7c96;
+  font-size:10px;
+  letter-spacing:.06em;
+}
+.footer-creator{
+  color:#4a6a8a;
+  font-size:11px;
+}
+
+.planetarium-panel{
+  margin:14px;
+  padding:16px 18px;
+  border:1px solid #2a4f73;
+  border-radius:12px;
+  background:linear-gradient(180deg,#0b1627,#09111f);
+}
+.planetarium-panel[hidden]{display:none !important;}
+.planetarium-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:14px;
+}
+.planetarium-title{
+  color:#ffd98a;
+  font-size:15px;
+  font-weight:700;
+}
+.planetarium-sub{
+  margin-top:4px;
+  color:#829db8;
+  font-size:11px;
+}
+.planetarium-exit-btn{
+  flex:0 0 auto;
+  min-height:36px;
+  padding:0 11px;
+  border:1px solid #385e82;
+  border-radius:8px;
+  background:#101f31;
+  color:#a7c7df;
+  font-size:11px;
+  cursor:pointer;
+}
+.planetarium-form{
+  display:grid;
+  grid-template-columns:minmax(160px,1.5fr) repeat(3,minmax(110px,1fr));
+  gap:10px;
+}
+.planetarium-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:12px;
+}
+.planetarium-status{
+  min-height:18px;
+  margin-top:9px;
+  color:#7eb8e8;
+  font-size:11px;
+}
+.planetarium-star-list{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  margin-top:10px;
+}
+.my-star-row{
+  display:grid;
+  grid-template-columns:auto minmax(120px,1fr) auto;
+  gap:9px;
+  align-items:center;
+  padding:9px 10px;
+  border:1px solid #1d3855;
+  border-radius:8px;
+  background:#08111f;
+}
+.my-star-row input[type="checkbox"]{
+  width:18px;
+  height:18px;
+}
+.my-star-name{
+  color:#e4edf5;
+  font-weight:700;
+  font-size:12px;
+}
+.my-star-meta{
+  margin-top:2px;
+  color:#7594af;
+  font-size:10px;
+}
+.my-star-empty{
+  padding:10px;
+  color:#607e99;
+  font-size:11px;
+}
+
+.planetarium-unlock-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:10120;
+  padding:18px;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.78);
+}
+.planetarium-unlock-modal.open{display:flex;}
+.planetarium-unlock-dialog{
+  width:min(480px,100%);
+  padding:25px 20px 18px;
+  text-align:center;
+  border:1px solid #725c32;
+  border-radius:14px;
+  background:#0b111b;
+  box-shadow:0 20px 70px rgba(0,0,0,.65);
+}
+#planetariumUnlockText{
+  color:#f1ddad;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:16px;
+  line-height:1.8;
+}
+#closePlanetariumUnlock{
+  margin-top:18px;
+  min-height:38px;
+  padding:0 16px;
+  border:1px solid #6a5732;
+  border-radius:8px;
+  background:#1a1720;
+  color:#e9d7ae;
+  cursor:pointer;
+}
+body.planetarium-picking #skyMapInteraction{
+  cursor:crosshair;
+}
+body.planetarium-picking #skyMapCanvasWrap{
+  box-shadow:0 0 0 2px rgba(255,213,79,.45);
+}
+
+@media(max-width:760px){
+  .planetarium-head{flex-direction:column;}
+  .planetarium-form{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .planetarium-form{grid-template-columns:1fr;}
+  .my-star-row{grid-template-columns:auto minmax(0,1fr);}
+}
 
 </style>
 </head>
@@ -2871,6 +3029,7 @@ body.detail-popup-open{overflow:hidden;}
   <label><input type="checkbox" id="skyShowPlanets" checked> 惑星</label>
   <label><input type="checkbox" id="skyShowDSO"> 主要天体</label>
   <label><input type="checkbox" id="skyShowSmallBodies"> 彗星</label>
+  <label id="skyMyStarOption" hidden><input type="checkbox" id="skyShowMyStars" checked> 僕しか知らない星</label>
 </div>
 
 <div class="sky-control-group sky-group-meteor">
@@ -3140,7 +3299,7 @@ body.detail-popup-open{overflow:hidden;}
       <div class="polar-card"><div class="label">極軸高度の目安</div><div class="value" id="polarAxisAltitude">—</div></div>
       <div class="polar-card"><div class="label">観測地点標高</div><div class="value" id="polarSiteElevation">—</div></div>
       <div class="polar-controls">
-        <label class="polar-invert-option" for="polarReticleInvert"><input type="checkbox" id="polarReticleInvert"><span>レクチルを反転</span></label>
+        <label class="polar-invert-option" for="polarReticleInvert"><input type="checkbox" id="polarReticleInvert" checked><span>レクチルを反転</span></label>
       </div>
       <div class="polar-help" id="polarGuideText">
         観測日時・緯度・経度から北極星の位置を計算します。レクチルの0時（12時）を上に合わせ、表示された時計位置へ北極星を置くためのガイドです。
@@ -4114,7 +4273,7 @@ body.detail-popup-open{overflow:hidden;}
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.8&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.9&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -4235,8 +4394,52 @@ initialManualNightMode();
   </div>
 </div>
 
+
+<section class="planetarium-panel" id="planetariumPanel" hidden>
+  <div class="planetarium-head">
+    <div>
+      <div class="planetarium-title">🌌 プラネタリウム</div>
+      <div class="planetarium-sub">ここにある星には、あなたが好きな名前を付けられます。</div>
+    </div>
+    <button type="button" class="planetarium-exit-btn" id="planetariumExit">四畳半の窓を開ける</button>
+  </div>
+
+  <div class="planetarium-form">
+    <label>星の名前
+      <input type="text" id="myStarName" maxlength="80" placeholder="僕しか知らない名前">
+    </label>
+    <label>等級
+      <input type="number" id="myStarMag" min="-10" max="30" step="0.1" value="5.0">
+    </label>
+    <label>赤経（°）
+      <input type="number" id="myStarRa" min="0" max="360" step="0.000001" placeholder="0〜360">
+    </label>
+    <label>赤緯（°）
+      <input type="number" id="myStarDec" min="-90" max="90" step="0.000001" placeholder="-90〜+90">
+    </label>
+  </div>
+
+  <div class="planetarium-actions">
+    <button type="button" class="action gray" id="pickMyStarFromSky">🗺 星図から座標を選ぶ</button>
+    <button type="button" class="action" id="saveMyStar">✦ 星を登録</button>
+    <button type="button" class="action gray" id="deleteSelectedMyStars">選択した星を削除</button>
+  </div>
+
+  <div class="planetarium-status" id="planetariumStatus"></div>
+  <div class="planetarium-star-list" id="myStarList"></div>
+</section>
+
+<div class="planetarium-unlock-modal" id="planetariumUnlockModal" aria-hidden="true">
+  <div class="planetarium-unlock-dialog" role="dialog" aria-modal="true" aria-labelledby="planetariumUnlockText">
+    <div id="planetariumUnlockText">一番眩しいあの星の名前は僕しか知らない</div>
+    <button type="button" id="closePlanetariumUnlock">星空を拡げる</button>
+  </div>
+</div>
+
 <footer>
-<div>🔭 Nicole the Astronavigator ／ 制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
+<div class="footer-app-title">🔭 Nicole the Astronavigator</div>
+<div class="footer-app-version">Version 1.10.9</div>
+<div class="footer-creator">制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
 <div class="footer-info-actions">
   <button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
   <button type="button" class="public-info-btn" id="openPublicInfo">ⓘ データ出典・プライバシー・免責事項</button>
@@ -7260,6 +7463,7 @@ info.innerHTML=`<b>${escapeHTML(obj.name||obj.id||"天体")}</b><br>高度 ${aa.
 }else{
 info.innerHTML=`<b>${escapeHTML(obj.name||obj.id||"天体")}</b><br>現在の星図時刻・場所では地平線下です。<br><span style="color:#fb923c">時間送り・時間戻しで見える時刻を探せます。</span>`;
 }
+appendSkyHitActions(info,{kind:"object",objectId:obj.id,starId:obj.id,name:obj.name});
 }
 });
 }
@@ -9295,6 +9499,35 @@ drawSkyAsterisms(ctx,pointMap);
 
 SKY_STARS.forEach(star=>{const localMaxMag=moonlightMagnitudeLimit(maxMag,star.ra,star.dec,moonlightState);if(star.mag>localMaxMag)return;const p=pointMap[star.id];if(!p)return;const rad=Math.max(.7,3.4-(star.mag+1.5)*.45);ctx.fillStyle=star.id==="Betelgeuse"||star.id==="Antares"||star.id==="Aldebaran"?"#ffc0a0":"#f4f7ff";ctx.beginPath();ctx.arc(p.x,p.y,rad,0,Math.PI*2);ctx.fill();SKY_MAP_HITS.push({x:p.x,y:p.y,r:Math.max(7,rad+4),kind:"star",starId:star.id,objectId:ALL_OBJECTS.some(o=>o.id===star.id)?star.id:null,name:star.name,mag:star.mag,alt:p.alt,az:p.az});if(star.mag<=1.3){ctx.fillStyle="#a9bfd3";ctx.font="9px sans-serif";ctx.textAlign="left";ctx.fillText(star.name,p.x+5,p.y-4);}});
 
+/* 僕しか知らない星：隠しモード中だけ表示 */
+if(PLANETARIUM_MODE_ACTIVE && $("#skyShowMyStars")?.checked){
+  MY_STARS.forEach(star=>{
+    const p=skyProject(star.ra,star.dec,lat,lon,date,cx,cy,R);
+    if(!p)return;
+    const mag=Number.isFinite(Number(star.mag))?Number(star.mag):5;
+    const rad=Math.max(1.2,4.2-(mag+1.5)*.38);
+    ctx.save();
+    ctx.shadowColor="rgba(255,218,140,.65)";
+    ctx.shadowBlur=8;
+    ctx.fillStyle="#ffe7b0";
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,rad,0,Math.PI*2);
+    ctx.fill();
+    ctx.shadowBlur=0;
+    ctx.fillStyle="#f4dba2";
+    ctx.font="10px sans-serif";
+    ctx.textAlign="left";
+    ctx.fillText(star.name,p.x+6,p.y-5);
+    ctx.restore();
+    SKY_MAP_HITS.push({
+      x:p.x,y:p.y,r:Math.max(9,rad+5),
+      kind:"custom-star",customStarId:star.id,
+      name:star.name,mag,ra:star.ra,dec:star.dec,
+      alt:p.alt,az:p.az,type:"僕しか知らない星"
+    });
+  });
+}
+
 /* Western星座線を構成するHIP恒星も表示 */
 Object.values(WESTERN_LINE_STARS).forEach(star=>{
 const localMaxMag=moonlightMagnitudeLimit(maxMag,star.ra,star.dec,moonlightState);
@@ -9589,6 +9822,11 @@ updateSkyTrackingTargetStatus();
 
 const alt=Math.round(hit.alt*10)/10;
 const az=Math.round(hit.az*10)/10;
+
+if(hit.kind==="custom-star"){
+info.innerHTML=`<b>${escapeHTML(hit.name)}</b><br>高度 ${alt}° / 方位 ${azToDir(az)}（${az}°） / 等級 ${Number(hit.mag).toFixed(1)}<br><span style="color:#f4dba2">僕しか知らない星</span>`;
+return;
+}
 
 if(hit.kind==="comet-track"){
 info.innerHTML=`<b>${escapeHTML(hit.name)}</b><br>選択した観測日時付近の位置：高度 ${alt}° / 方位 ${azToDir(az)}（${az}°）<br><span style="color:#9debf5">破線＝過去 / 実線＝未来 / 日付は5日ごと</span>`;
@@ -10524,6 +10762,15 @@ $("#inDatetime").addEventListener("input",()=>{
 if(LIVE_NOW_MODE)stopLiveNowMode();
 });
 $("#polarReticleInvert").addEventListener("change",()=>renderPolarScopeGuide());
+$("#skyShowMyStars")?.addEventListener("change",()=>renderSkyChart());
+$("#saveMyStar")?.addEventListener("click",saveMyStarFromForm);
+$("#deleteSelectedMyStars")?.addEventListener("click",deleteSelectedMyStars);
+$("#pickMyStarFromSky")?.addEventListener("click",startMyStarCoordinatePicker);
+$("#planetariumExit")?.addEventListener("click",deactivatePlanetariumMode);
+$("#closePlanetariumUnlock")?.addEventListener("click",closePlanetariumUnlock);
+$("#planetariumUnlockModal")?.addEventListener("click",event=>{
+  if(event.target===$("#planetariumUnlockModal"))closePlanetariumUnlock();
+});
 
 $("#saveFavoriteLocation").addEventListener("click",()=>{
 const loc=currentInputLocation();
@@ -10555,6 +10802,227 @@ FAVORITE_LOCATIONS.splice(idx,1);
 persistFavoriteLocations();
 });
 
+
+/* =====================================================
+プラネタリウム — 隠しモード
+登録星はlocalStorageに保存。モード自体はページを閉じると終了。
+===================================================== */
+const MY_STAR_STORAGE_KEY="nicole_my_private_stars_v1";
+let MY_STARS=[];
+let PLANETARIUM_MODE_ACTIVE=false;
+let PLANETARIUM_PICKING_COORDS=false;
+
+function loadMyStars(){
+  try{
+    const raw=localStorage.getItem(MY_STAR_STORAGE_KEY);
+    const data=raw?JSON.parse(raw):[];
+    MY_STARS=Array.isArray(data)?data.filter(s=>
+      s&&typeof s.name==="string"&&
+      Number.isFinite(Number(s.ra))&&Number.isFinite(Number(s.dec))
+    ).map(s=>({
+      id:String(s.id||`my-${Date.now()}-${Math.random().toString(36).slice(2,8)}`),
+      name:String(s.name).slice(0,80),
+      mag:Number.isFinite(Number(s.mag))?Number(s.mag):5,
+      ra:norm360(Number(s.ra)),
+      dec:Math.max(-90,Math.min(90,Number(s.dec)))
+    })):[];
+  }catch(e){MY_STARS=[];}
+}
+function saveMyStars(){
+  try{localStorage.setItem(MY_STAR_STORAGE_KEY,JSON.stringify(MY_STARS));}catch(e){}
+}
+function renderMyStarList(){
+  const list=$("#myStarList");
+  if(!list)return;
+  list.innerHTML="";
+  if(!MY_STARS.length){
+    list.innerHTML='<div class="my-star-empty">まだ名前を付けた星はありません。</div>';
+    return;
+  }
+  MY_STARS.forEach(star=>{
+    const row=document.createElement("label");
+    row.className="my-star-row";
+    row.innerHTML=`
+      <input type="checkbox" class="my-star-delete-check" value="${escapeHTML(star.id)}">
+      <div>
+        <div class="my-star-name">${escapeHTML(star.name)}</div>
+        <div class="my-star-meta">等級 ${Number(star.mag).toFixed(1)} ／ 赤経 ${Number(star.ra).toFixed(6)}° ／ 赤緯 ${Number(star.dec).toFixed(6)}°</div>
+      </div>`;
+    list.appendChild(row);
+  });
+}
+function setPlanetariumStatus(message,color="#7eb8e8"){
+  const el=$("#planetariumStatus");
+  if(el){el.textContent=message||"";el.style.color=color;}
+}
+function openPlanetariumUnlock(){
+  const modal=$("#planetariumUnlockModal");
+  if(!modal)return;
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden","false");
+}
+function closePlanetariumUnlock(){
+  const modal=$("#planetariumUnlockModal");
+  if(!modal)return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden","true");
+}
+function activatePlanetariumMode(){
+  PLANETARIUM_MODE_ACTIVE=true;
+  PLANETARIUM_PICKING_COORDS=false;
+  document.body.classList.remove("planetarium-picking");
+  const panel=$("#planetariumPanel");
+  const option=$("#skyMyStarOption");
+  const toggle=$("#skyShowMyStars");
+  if(panel)panel.hidden=false;
+  if(option)option.hidden=false;
+  if(toggle)toggle.checked=true;
+  renderMyStarList();
+  setPlanetariumStatus("");
+  openPlanetariumUnlock();
+  renderSkyChart();
+}
+function deactivatePlanetariumMode(){
+  PLANETARIUM_MODE_ACTIVE=false;
+  PLANETARIUM_PICKING_COORDS=false;
+  document.body.classList.remove("planetarium-picking");
+  const panel=$("#planetariumPanel");
+  const option=$("#skyMyStarOption");
+  const toggle=$("#skyShowMyStars");
+  if(panel)panel.hidden=true;
+  if(option)option.hidden=true;
+  if(toggle)toggle.checked=false;
+  setPlanetariumStatus("");
+  renderSkyChart();
+}
+function saveMyStarFromForm(){
+  const name=String($("#myStarName")?.value||"").trim();
+  const mag=Number($("#myStarMag")?.value);
+  const ra=Number($("#myStarRa")?.value);
+  const dec=Number($("#myStarDec")?.value);
+  if(!name){setPlanetariumStatus("星の名前を入力してください。","#fb923c");return;}
+  if(!Number.isFinite(mag)){setPlanetariumStatus("等級を入力してください。","#fb923c");return;}
+  if(!Number.isFinite(ra)||ra<0||ra>360){setPlanetariumStatus("赤経は0〜360°で入力してください。","#fb923c");return;}
+  if(!Number.isFinite(dec)||dec<-90||dec>90){setPlanetariumStatus("赤緯は-90〜+90°で入力してください。","#fb923c");return;}
+  MY_STARS.push({
+    id:`my-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
+    name,
+    mag,
+    ra:norm360(ra),
+    dec
+  });
+  saveMyStars();
+  renderMyStarList();
+  setPlanetariumStatus(`「${name}」を星図へ登録しました。`,"#86efac");
+  $("#myStarName").value="";
+  renderSkyChart();
+}
+function deleteSelectedMyStars(){
+  const checks=[...document.querySelectorAll(".my-star-delete-check:checked")];
+  if(!checks.length){setPlanetariumStatus("削除する星を選択してください。","#fb923c");return;}
+  const ids=new Set(checks.map(c=>c.value));
+  const removed=MY_STARS.filter(s=>ids.has(s.id)).length;
+  MY_STARS=MY_STARS.filter(s=>!ids.has(s.id));
+  saveMyStars();
+  renderMyStarList();
+  setPlanetariumStatus(`${removed}件の星を削除しました。`,"#86efac");
+  renderSkyChart();
+}
+function horizontalToRaDec(altDeg,azDeg,latDeg,lonDeg,date){
+  const alt=altDeg*D2R,az=azDeg*D2R,lat=latDeg*D2R;
+  const sinDec=Math.sin(alt)*Math.sin(lat)+Math.cos(alt)*Math.cos(lat)*Math.cos(az);
+  const dec=Math.asin(Math.max(-1,Math.min(1,sinDec)));
+  const cosDec=Math.max(1e-12,Math.cos(dec));
+  const sinH=-Math.sin(az)*Math.cos(alt)/cosDec;
+  const cosH=(Math.sin(alt)-Math.sin(lat)*Math.sin(dec))/(Math.cos(lat)*cosDec);
+  const H=Math.atan2(sinH,cosH)*R2D;
+  const lst=norm360(gmst(toJD(date))+lonDeg);
+  return{ra:norm360(lst-H),dec:dec*R2D};
+}
+function skyPointToAltAz(x,y){
+  const canvas=$("#skyMapCanvas");
+  if(!canvas)return null;
+  const w=canvas.getBoundingClientRect().width;
+  const h=canvas.getBoundingClientRect().height;
+  const cx=w/2,cy=h/2,R=Math.min(w,h)*0.44;
+
+  if(isHorizonProjection()){
+    const {halfX,halfY}=getSkyPerspectiveViewport(R);
+    if(x<cx-halfX||x>cx+halfX||y<cy-halfY||y>cy+halfY)return null;
+    const halfFov=(SKY_PERSPECTIVE_FOV/2)*D2R;
+    const scale=halfY/Math.tan(halfFov);
+    const x0=cx+(x-cx-SKY_PAN_X)/SKY_ZOOM;
+    const y0=cy+(y-cy-SKY_PAN_Y)/SKY_ZOOM;
+    const nx=(x0-cx)/scale;
+    const ny=-(y0-cy)/scale;
+
+    const forward=horizontalUnitVector(SKY_PERSPECTIVE_ALT,SKY_PERSPECTIVE_AZ);
+    const camAz=SKY_PERSPECTIVE_AZ*D2R;
+    const right={x:Math.cos(camAz),y:-Math.sin(camAz),z:0};
+    const up={
+      x:right.y*forward.z-right.z*forward.y,
+      y:right.z*forward.x-right.x*forward.z,
+      z:right.x*forward.y-right.y*forward.x
+    };
+    let v={
+      x:forward.x+nx*right.x+ny*up.x,
+      y:forward.y+nx*right.y+ny*up.y,
+      z:forward.z+nx*right.z+ny*up.z
+    };
+    const len=Math.hypot(v.x,v.y,v.z)||1;
+    v={x:v.x/len,y:v.y/len,z:v.z/len};
+    const alt=Math.asin(Math.max(-1,Math.min(1,v.z)))*R2D;
+    const az=norm360(Math.atan2(v.x,v.y)*R2D);
+    return{alt,az};
+  }
+
+  const bx=cx+(x-cx-SKY_PAN_X)/SKY_ZOOM;
+  const by=cy+(y-cy-SKY_PAN_Y)/SKY_ZOOM;
+  const dx=bx-cx,dy=by-cy;
+  const r=Math.hypot(dx,dy);
+  if(r>R)return null;
+  const alt=90-(r/R)*90;
+  const az=r<1e-8?0:norm360(Math.atan2(-dx,-dy)*R2D);
+  return{alt,az};
+}
+function selectMyStarCoordinateFromSky(x,y){
+  const lat=Number.isFinite(currentLat)?currentLat:parseFloat($("#inLat").value);
+  const lon=Number.isFinite(currentLon)?currentLon:parseFloat($("#inLon").value);
+  const date=getSkyViewDate();
+  if(!Number.isFinite(lat)||!Number.isFinite(lon)||!(date instanceof Date)||isNaN(date)){
+    setPlanetariumStatus("観測日時と場所を先に設定してください。","#fb923c");
+    return false;
+  }
+  const aa=skyPointToAltAz(x,y);
+  if(!aa){
+    const info=$("#skyMapObjectInfo");
+    if(info)info.innerHTML='<b>座標を選択できませんでした。</b><br>星図の内側をタップしてください。';
+    return false;
+  }
+  const rd=horizontalToRaDec(aa.alt,aa.az,lat,lon,date);
+  $("#myStarRa").value=rd.ra.toFixed(6);
+  $("#myStarDec").value=rd.dec.toFixed(6);
+  PLANETARIUM_PICKING_COORDS=false;
+  document.body.classList.remove("planetarium-picking");
+  setPlanetariumStatus(`星図から座標を選びました：赤経 ${rd.ra.toFixed(6)}° / 赤緯 ${rd.dec.toFixed(6)}°`,"#86efac");
+  $("#planetariumPanel")?.scrollIntoView({behavior:"smooth",block:"center"});
+  return true;
+}
+function startMyStarCoordinatePicker(){
+  if(!PLANETARIUM_MODE_ACTIVE)return;
+  PLANETARIUM_PICKING_COORDS=true;
+  document.body.classList.add("planetarium-picking");
+  switchResultTab("skymap");
+  const panel=$("#skyMapPanel");
+  if(panel)panel.open=true;
+  const info=$("#skyMapObjectInfo");
+  if(info)info.innerHTML='<b>僕しか知らない星の座標を選択中</b><br>星図上の好きな場所をタップしてください。';
+  setPlanetariumStatus("星図上の好きな場所をタップしてください。");
+  $("#skyMapPanel")?.scrollIntoView({behavior:"smooth",block:"start"});
+}
+loadMyStars();
+
+
 $("#runReversePlanner").addEventListener("click",runReversePlanner);
 $("#closeReversePlanner").addEventListener("click",closeReversePlanner);
 $("#reversePlannerModal").addEventListener("click",e=>{
@@ -10565,10 +11033,19 @@ if(REVERSE_TARGET)renderReverseLatitudeHint(REVERSE_TARGET,parseInt($("#reverseM
 });
 
 $("#objSearch").addEventListener("input",function(){
-const q=this.value.trim().toLowerCase();
+const rawQuery=this.value.trim();
+const q=rawQuery.toLowerCase();
 const resultDiv=$("#objSearchResult");
 const list=$("#objSearchList");
 const countEl=$("#searchCount");
+
+if(rawQuery==="四畳半を拡げる"){
+  activatePlanetariumMode();
+  this.value="";
+  resultDiv.style.display="none";
+  countEl.textContent="";
+  return;
+}
 
 if(!q){
 resultDiv.style.display="none";
@@ -11143,6 +11620,10 @@ SKY_POINTER_MOVED=false;
 return;
 }
 const {x,y}=skyEventPoint(event);
+if(PLANETARIUM_MODE_ACTIVE&&PLANETARIUM_PICKING_COORDS){
+  selectMyStarCoordinateFromSky(x,y);
+  return;
+}
 let best=null,bestDist=Infinity;
 SKY_MAP_HITS.forEach(hit=>{
 const d=Math.hypot(x-hit.x,y-hit.y);
