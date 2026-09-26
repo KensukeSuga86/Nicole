@@ -939,11 +939,13 @@ body.manual-open{overflow:hidden;}
   max-width:520px;
 }
 .obs-search-block{
-  margin-top:16px;
+  margin-top:0;
 }
 .obs-search-submit{
+  display:block;
   margin-top:10px;
 }
+.obs-object-search-settings{margin-top:10px;}
 @media(max-width:900px){
   .obs-location-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
 }
@@ -2587,7 +2589,7 @@ body.public-info-open{overflow:hidden;}
 
 
 
-/* ===== v1.10.11 OBJECT DETAIL MODAL ===== */
+/* ===== v1.10.12 OBJECT DETAIL MODAL ===== */
 .detail-popup-modal{
   display:none;
   position:fixed;
@@ -2619,12 +2621,12 @@ body.detail-popup-open{overflow:hidden;}
 }
 
 
-/* ===== v1.10.11 DETAIL ACTIONS ===== */
+/* ===== v1.10.12 DETAIL ACTIONS ===== */
 .recommend-actions{gap:6px;flex-wrap:wrap;}
 .card-plan-actions{gap:6px;flex-wrap:wrap;}
 
 
-/* ===== v1.10.11 footer / planetarium easter egg ===== */
+/* ===== v1.10.12 footer / planetarium easter egg ===== */
 .footer-app-title{
   color:#7eb8e8;
   font-size:12px;
@@ -2782,7 +2784,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v1.10.11 constellation detail modal ===== */
+/* ===== v1.10.12 constellation detail modal ===== */
 .constellation-popup-card{
   width:min(640px,100%);
 }
@@ -2853,6 +2855,36 @@ body.planetarium-picking #skyMapCanvasWrap{
 @media(max-width:480px){
   .planetarium-extra-grid{grid-template-columns:1fr;}
 }
+
+
+/* ===== v1.10.12 今夜のおすすめ 折りたたみ見出し統一 ===== */
+.recommend-details{
+  padding:0 !important;
+  overflow:hidden;
+}
+.recommend-details > summary{
+  min-height:46px;
+  padding:0 14px;
+  display:flex;
+  align-items:center;
+  gap:0;
+  cursor:pointer;
+  list-style:none;
+  user-select:none;
+  line-height:1.2;
+  white-space:normal;
+}
+.recommend-details > summary::-webkit-details-marker{display:none;}
+.recommend-details .recommend-grid{
+  padding:11px 14px 14px;
+}
+@media(max-width:520px){
+  .recommend-details .recommend-grid{padding:9px 10px 11px;}
+}
+
+
+/* v1.10.12: 隠し星設定はモード有効化前に確実に非表示 */
+#skyMyStarOption[hidden]{display:none !important;}
 
 </style>
 </head>
@@ -2965,7 +2997,13 @@ body.planetarium-picking #skyMapCanvasWrap{
       </div>
     </details>
 
-    <div class="obs-section-title">天体検索</div>
+    <button class="action obs-search-submit" id="btnCalc">🔭 この条件で観測開始</button>
+  </div>
+</details>
+
+<details class="compact-settings obs-object-search-settings" id="obsObjectSearchSettings">
+  <summary>天体検索</summary>
+  <div class="compact-settings-body">
     <div class="obs-row obs-search-block">
       <label>🔍 天体・星座を検索（名前・カタログ番号・種類などで検索）</label>
       <div class="search-bar">
@@ -2977,8 +3015,6 @@ body.planetarium-picking #skyMapCanvasWrap{
         <div class="obj-search-list" id="objSearchList"></div>
       </div>
     </div>
-
-    <button class="action obs-search-submit" id="btnCalc">🔭 この条件で観測開始</button>
   </div>
 </details>
 </div>
@@ -4358,7 +4394,7 @@ body.planetarium-picking #skyMapCanvasWrap{
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.11&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 1.10.12&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -4561,7 +4597,7 @@ initialManualNightMode();
 
 <footer>
 <div class="footer-app-title">🔭 Nicole the Astronavigator</div>
-<div class="footer-app-version">Version 1.10.11</div>
+<div class="footer-app-version">Version 1.10.12</div>
 <div class="footer-creator">制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
 <div class="footer-info-actions">
   <button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
@@ -10574,7 +10610,7 @@ return pts;
 
 const $=s=>document.querySelector(s);
 
-// v1.10.11: constellation modal listeners are registered only after DOM helpers are initialized.
+// v1.10.12: constellation modal listeners are registered only after DOM helpers are initialized.
 document.getElementById("closeConstellationDetail")?.addEventListener("click",closeConstellationDetailModal);
 document.getElementById("constellationDetailModal")?.addEventListener("click",event=>{
   if(event.target===document.getElementById("constellationDetailModal"))closeConstellationDetailModal();

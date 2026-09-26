@@ -10,15 +10,18 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 1.10.11**
+**Current Version: 1.10.12**
 
 ---
 
-## v1.10.11 の変更点
+## v1.10.12 の変更点
 
-- v1.10.10で発生した、起動時にJavaScriptが停止してアプリ全体が操作できなくなる問題を修正
-- 星座詳細モーダルのイベント初期化順序を修正
-- Service Worker のキャッシュ名前空間を `nicole-pwa-v1.10.11` に更新
+- 「今夜のおすすめ」を折りたたんだときの見出しサイズを、他の折りたたみパネルと統一
+- 見出しの高さ、左右余白、文字の縦位置、開閉記号の配置を調整
+- 展開時のカード領域の余白も他パネルと揃うよう調整
+- 「天体検索」を「詳細な観測条件を設定」から独立させ、その直下の折りたたみパネルへ移動
+- 「この条件で観測開始」ボタンを「星の見え方」のすぐ下へ移動
+- Service Worker のキャッシュ名前空間を `nicole-pwa-v1.10.12` に更新
 
 ---
 
@@ -454,7 +457,7 @@ Service Workerを変更した場合はキャッシュ名前空間も更新し、
 現在のキャッシュ名前空間：
 
 ```text
-nicole-pwa-v1.10.11
+nicole-pwa-v1.10.12
 ```
 
 ---
@@ -469,4 +472,4 @@ https://kensuke-suga.myportfolio.com
 
 ## Version
 
-**Nicole the Astronavigator v1.10.11**
+**Nicole the Astronavigator v1.10.12**
