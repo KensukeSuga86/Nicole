@@ -1,0 +1,6599 @@
+[
+  {
+    "id": "M1",
+    "name": {
+      "ja": "M1 かに星雲",
+      "en": "Crab Nebula"
+    },
+    "type": "snr",
+    "icon": "🦀",
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.4,
+    "distance_text": "約6,500光年",
+    "size_text": "約7'×5'",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "1054年の超新星爆発の残骸。中心にパルサーが存在",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M1 かに星雲は、1054年の超新星爆発の残骸。中心にパルサーが存在天体です。距離は約6,500光年。見かけの大きさは約7'×5'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "非常に淡い広がりを持つため、暗い空と低〜中倍率が有利です。50〜100倍を目安に、直接注視せずそらし目を使うと細い構造が浮かびやすくなります。",
+      "science": "超新星爆発で吹き飛ばされたガスが現在も膨張しており、中心には高速自転する中性子星（かにパルサー）があります。",
+      "history": "1054年に東アジアなどで記録された「客星」と関連付けられています。メシエが彗星と紛らわしい天体を整理するきっかけの一つでもあります。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M1 かに星雲は、1054年の超新星爆発の残骸。中心にパルサーが存在天体です。距離は約6,500光年。見かけの大きさは約7&#x27;×5&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>非常に淡い広がりを持つため、暗い空と低〜中倍率が有利です。50〜100倍を目安に、直接注視せずそらし目を使うと細い構造が浮かびやすくなります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>超新星爆発で吹き飛ばされたガスが現在も膨張しており、中心には高速自転する中性子星（かにパルサー）があります。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>1054年に東アジアなどで記録された「客星」と関連付けられています。メシエが彗星と紛らわしい天体を整理するきっかけの一つでもあります。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 83.6331,
+      "dec_deg": 22.0145
+    },
+    "constellation_id": "Tau",
+    "relationship_status": "catalog_verified",
+    "messier_number": 1,
+    "aliases": [
+      "NGC 1952"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 1,
+      "source_type_code": "SN",
+      "source_type_label_ja": "超新星残骸",
+      "visual_magnitude": 8.4,
+      "angular_size_text": "6x4",
+      "common_name_en": "Crab Nebula",
+      "aliases": [
+        "NGC 1952"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.0,
+      "minor_arcmin": 5.0,
+      "source_text": "約7'×5'"
+    }
+  },
+  {
+    "id": "M2",
+    "name": {
+      "ja": "M2 球状星団",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": "⭐",
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.3,
+    "distance_text": "約3万7,500光年",
+    "size_text": "約16'",
+    "recommended_magnification": "100〜200倍",
+    "highlight": "みずがめ座の大型球状星団",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "M2 球状星団は、みずがめ座の大型球状星団天体です。距離は約3万7,500光年。見かけの大きさは約16'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
+      "history": "メシエ天体M2としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M2 球状星団は、みずがめ座の大型球状星団天体です。距離は約3万7,500光年。見かけの大きさは約16&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M2としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 323.3625,
+      "dec_deg": -0.8233
+    },
+    "constellation_id": "Aqr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 2,
+    "aliases": [
+      "NGC 7089"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 2,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 6.5,
+      "angular_size_text": "12.9",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 7089"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 16.0,
+      "minor_arcmin": 16.0,
+      "source_text": "約16'"
+    }
+  },
+  {
+    "id": "M3",
+    "name": {
+      "ja": "M3 球状星団",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": "⭐",
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.4,
+    "distance_text": "約3万3,900光年",
+    "size_text": "約18'",
+    "recommended_magnification": "100〜200倍",
+    "highlight": "春の空の大型球状星団。約50万個の星",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "explanation": {
+      "overview": "M3 球状星団は、春の空の大型球状星団。約50万個の星天体です。距離は約3万3,900光年。見かけの大きさは約18'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
+      "history": "メシエ天体M3としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M3 球状星団は、春の空の大型球状星団。約50万個の星天体です。距離は約3万3,900光年。見かけの大きさは約18&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M3としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 205.5483,
+      "dec_deg": 28.3775
+    },
+    "constellation_id": "CVn",
+    "relationship_status": "catalog_verified",
+    "messier_number": 3,
+    "aliases": [
+      "NGC 5272"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 3,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 6.2,
+      "angular_size_text": "16.2",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 5272"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 18.0,
+      "minor_arcmin": 18.0,
+      "source_text": "約18'"
+    }
+  },
+  {
+    "id": "M4",
+    "name": {
+      "ja": "M4 球状星団",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": "⭐",
+    "catalog_category": "メシエ",
+    "magnitude_v": 5.6,
+    "distance_text": "約7,200光年",
+    "size_text": "約26'",
+    "recommended_magnification": "50〜150倍",
+    "highlight": "最も近い球状星団の一つ",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M4 球状星団は、最も近い球状星団の一つ天体です。距離は約7,200光年。見かけの大きさは約26'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "50〜150倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
+      "history": "メシエ天体M4としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M4 球状星団は、最も近い球状星団の一つ天体です。距離は約7,200光年。見かけの大きさは約26&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>50〜150倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M4としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 245.8967,
+      "dec_deg": -26.5258
+    },
+    "constellation_id": "Sco",
+    "relationship_status": "catalog_verified",
+    "messier_number": 4,
+    "aliases": [
+      "NGC 6121"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 4,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 5.6,
+      "angular_size_text": "26.3",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6121"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 26.0,
+      "minor_arcmin": 26.0,
+      "source_text": "約26'"
+    }
+  },
+  {
+    "id": "M5",
+    "name": {
+      "ja": "M5 球状星団",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": "⭐",
+    "catalog_category": "メシエ",
+    "magnitude_v": 5.7,
+    "distance_text": "約2万4,500光年",
+    "size_text": "約17'",
+    "recommended_magnification": "100〜200倍",
+    "highlight": "M13に匹敵する北天の大型球状星団",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M5 球状星団は、M13に匹敵する北天の大型球状星団天体です。距離は約2万4,500光年。見かけの大きさは約17'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
+      "history": "メシエ天体M5としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M5 球状星団は、M13に匹敵する北天の大型球状星団天体です。距離は約2万4,500光年。見かけの大きさは約17&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M5としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 229.6383,
+      "dec_deg": 2.0808
+    },
+    "constellation_id": "Ser",
+    "relationship_status": "catalog_verified",
+    "messier_number": 5,
+    "aliases": [
+      "NGC 5904"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 5,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 5.6,
+      "angular_size_text": "17.4",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 5904"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 17.0,
+      "minor_arcmin": 17.0,
+      "source_text": "約17'"
+    }
+  },
+  {
+    "id": "M6",
+    "name": {
+      "ja": "M6 バタフライ星団",
+      "en": "Butterfly Cluster"
+    },
+    "type": "cluster",
+    "icon": "🦋",
+    "catalog_category": "メシエ",
+    "magnitude_v": 4.2,
+    "distance_text": "約1,600光年",
+    "size_text": "約25'",
+    "recommended_magnification": "10〜30倍",
+    "highlight": "蝶の形に見える散開星団",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M6 バタフライ星団は、蝶の形に見える散開星団天体です。距離は約1,600光年。見かけの大きさは約25'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "広がりを楽しむため低倍率が基本です。10〜30倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
+      "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
+      "history": "メシエ天体M6としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M6 バタフライ星団は、蝶の形に見える散開星団天体です。距離は約1,600光年。見かけの大きさは約25&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>広がりを楽しむため低倍率が基本です。10〜30倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M6としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 265.0833,
+      "dec_deg": -32.2167
+    },
+    "constellation_id": "Sco",
+    "relationship_status": "catalog_verified",
+    "messier_number": 6,
+    "aliases": [
+      "NGC 6405"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 6,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 4.2,
+      "angular_size_text": "25",
+      "common_name_en": "Butterfly Cluster",
+      "aliases": [
+        "NGC 6405"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 25.0,
+      "minor_arcmin": 25.0,
+      "source_text": "約25'"
+    }
+  },
+  {
+    "id": "M7",
+    "name": {
+      "ja": "M7 プトレマイオス星団",
+      "en": "Ptolemy's Cluster"
+    },
+    "type": "cluster",
+    "icon": "🌟",
+    "catalog_category": "メシエ",
+    "magnitude_v": 3.3,
+    "distance_text": "約800光年",
+    "size_text": "約80'",
+    "recommended_magnification": "肉眼〜10倍",
+    "highlight": "全天最明の散開星団の一つ",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M7 プトレマイオス星団は、全天最明の散開星団の一つ天体です。距離は約800光年。見かけの大きさは約80'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "広がりを楽しむため低倍率が基本です。肉眼〜10倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
+      "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
+      "history": "メシエ天体M7としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M7 プトレマイオス星団は、全天最明の散開星団の一つ天体です。距離は約800光年。見かけの大きさは約80&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>広がりを楽しむため低倍率が基本です。肉眼〜10倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M7としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 268.46,
+      "dec_deg": -34.7933
+    },
+    "constellation_id": "Sco",
+    "relationship_status": "catalog_verified",
+    "messier_number": 7,
+    "aliases": [
+      "NGC 6475"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 7,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 3.3,
+      "angular_size_text": "80",
+      "common_name_en": "Ptolemy's Cluster",
+      "aliases": [
+        "NGC 6475"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 80.0,
+      "minor_arcmin": 80.0,
+      "source_text": "約80'"
+    }
+  },
+  {
+    "id": "M8",
+    "name": {
+      "ja": "M8 干潟星雲",
+      "en": "Lagoon Nebula"
+    },
+    "type": "nebula",
+    "icon": "🌊",
+    "catalog_category": "メシエ",
+    "magnitude_v": 6,
+    "distance_text": "約5,200光年",
+    "size_text": "約90'×40'",
+    "recommended_magnification": "20〜60倍",
+    "highlight": "肉眼でも見える！現役の星形成領域",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M8 干潟星雲は、肉眼でも見える！現役の星形成領域天体です。距離は約5,200光年。見かけの大きさは約90'×40'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "20〜60倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。",
+      "science": "電離水素が光る巨大な星形成領域で、暗黒帯と明るい散光部が複雑な形を作ります。若い星団NGC 6530も同じ視野で楽しめます。",
+      "history": "「干潟」の名は、明るい星雲を横切る暗黒帯が入り江や干潟のように見えることに由来します。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M8 干潟星雲は、肉眼でも見える！現役の星形成領域天体です。距離は約5,200光年。見かけの大きさは約90&#x27;×40&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>20〜60倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>電離水素が光る巨大な星形成領域で、暗黒帯と明るい散光部が複雑な形を作ります。若い星団NGC 6530も同じ視野で楽しめます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>「干潟」の名は、明るい星雲を横切る暗黒帯が入り江や干潟のように見えることに由来します。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 270.9167,
+      "dec_deg": -24.3833
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 8,
+    "aliases": [
+      "NGC 6523"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 8,
+      "source_type_code": "DN",
+      "source_type_label_ja": "散光星雲",
+      "visual_magnitude": 6.0,
+      "angular_size_text": "90x40",
+      "common_name_en": "Lagoon Nebula",
+      "aliases": [
+        "NGC 6523"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 90.0,
+      "minor_arcmin": 40.0,
+      "source_text": "約90'×40'"
+    }
+  },
+  {
+    "id": "M9",
+    "name": {
+      "ja": "M9",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.7,
+    "distance_text": null,
+    "size_text": "9.3",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 259.8,
+      "dec_deg": -18.516667
+    },
+    "constellation_id": "Oph",
+    "relationship_status": "catalog_verified",
+    "messier_number": 9,
+    "aliases": [
+      "NGC 6333"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 9,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 7.7,
+      "angular_size_text": "9.3",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6333"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 9.3,
+      "minor_arcmin": 9.3,
+      "source_text": "9.3"
+    }
+  },
+  {
+    "id": "M10",
+    "name": {
+      "ja": "M10",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.6,
+    "distance_text": null,
+    "size_text": "15.1",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 254.275,
+      "dec_deg": -4.1
+    },
+    "constellation_id": "Oph",
+    "relationship_status": "catalog_verified",
+    "messier_number": 10,
+    "aliases": [
+      "NGC 6254"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 10,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 6.6,
+      "angular_size_text": "15.1",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6254"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 15.1,
+      "minor_arcmin": 15.1,
+      "source_text": "15.1"
+    }
+  },
+  {
+    "id": "M11",
+    "name": {
+      "ja": "M11 野鴨星団",
+      "en": "Wild Duck Cluster"
+    },
+    "type": "cluster",
+    "icon": "🦆",
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.3,
+    "distance_text": "約6,200光年",
+    "size_text": "約14'",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "密集した美しい散開星団",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "M11 野鴨星団は、密集した美しい散開星団天体です。距離は約6,200光年。見かけの大きさは約14'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "30〜100倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
+      "history": "メシエ天体M11としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M11 野鴨星団は、密集した美しい散開星団天体です。距離は約6,200光年。見かけの大きさは約14&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>30〜100倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M11としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 282.7667,
+      "dec_deg": -6.2667
+    },
+    "constellation_id": "Sct",
+    "relationship_status": "catalog_verified",
+    "messier_number": 11,
+    "aliases": [
+      "NGC 6705"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 11,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 6.3,
+      "angular_size_text": "14",
+      "common_name_en": "Wild Duck Cluster",
+      "aliases": [
+        "NGC 6705"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 14.0,
+      "minor_arcmin": 14.0,
+      "source_text": "約14'"
+    }
+  },
+  {
+    "id": "M12",
+    "name": {
+      "ja": "M12",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.7,
+    "distance_text": null,
+    "size_text": "14.5",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 251.8,
+      "dec_deg": -1.95
+    },
+    "constellation_id": "Oph",
+    "relationship_status": "catalog_verified",
+    "messier_number": 12,
+    "aliases": [
+      "NGC 6218"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 12,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 6.7,
+      "angular_size_text": "14.5",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6218"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 14.5,
+      "minor_arcmin": 14.5,
+      "source_text": "14.5"
+    }
+  },
+  {
+    "id": "M13",
+    "name": {
+      "ja": "M13 ヘルクレス座大球状星団",
+      "en": "Great Hercules Globular"
+    },
+    "type": "cluster",
+    "icon": "⭐",
+    "catalog_category": "メシエ",
+    "magnitude_v": 5.8,
+    "distance_text": "約2万5,000光年",
+    "size_text": "約20'",
+    "recommended_magnification": "100〜200倍",
+    "highlight": "アレシボメッセージの宛先。約30万個の星の集団",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M13 ヘルクレス座大球状星団は、アレシボメッセージの宛先。約30万個の星の集団天体です。距離は約2万5,000光年。見かけの大きさは約20'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "銀河系ハローに属する古い球状星団で、数十万個規模の恒星が重力で密集しています。中心に向かうほど星の密度が急激に高くなります。",
+      "history": "1974年、アレシボ電波望遠鏡から送信された有名なメッセージの方向として選ばれました。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M13 ヘルクレス座大球状星団は、アレシボメッセージの宛先。約30万個の星の集団天体です。距離は約2万5,000光年。見かけの大きさは約20&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>銀河系ハローに属する古い球状星団で、数十万個規模の恒星が重力で密集しています。中心に向かうほど星の密度が急激に高くなります。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>1974年、アレシボ電波望遠鏡から送信された有名なメッセージの方向として選ばれました。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 250.423,
+      "dec_deg": 36.4613
+    },
+    "constellation_id": "Her",
+    "relationship_status": "catalog_verified",
+    "messier_number": 13,
+    "aliases": [
+      "NGC 6205"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 13,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 5.8,
+      "angular_size_text": "16.6",
+      "common_name_en": "Great Hercules Globular",
+      "aliases": [
+        "NGC 6205"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 20.0,
+      "minor_arcmin": 20.0,
+      "source_text": "約20'"
+    }
+  },
+  {
+    "id": "M14",
+    "name": {
+      "ja": "M14",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.6,
+    "distance_text": null,
+    "size_text": "11.7",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 264.4,
+      "dec_deg": -3.25
+    },
+    "constellation_id": "Oph",
+    "relationship_status": "catalog_verified",
+    "messier_number": 14,
+    "aliases": [
+      "NGC 6402"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 14,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 7.6,
+      "angular_size_text": "11.7",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6402"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 11.7,
+      "minor_arcmin": 11.7,
+      "source_text": "11.7"
+    }
+  },
+  {
+    "id": "M15",
+    "name": {
+      "ja": "M15 球状星団",
+      "en": "Great Pegasus Globular"
+    },
+    "type": "cluster",
+    "icon": "⭐",
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.3,
+    "distance_text": "約3万3,600光年",
+    "size_text": "約18'",
+    "recommended_magnification": "100〜200倍",
+    "highlight": "中心核崩壊を起こした超高密度な球状星団",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "M15 球状星団は、中心核崩壊を起こした超高密度な球状星団天体です。距離は約3万3,600光年。見かけの大きさは約18'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
+      "history": "メシエ天体M15としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M15 球状星団は、中心核崩壊を起こした超高密度な球状星団天体です。距離は約3万3,600光年。見かけの大きさは約18&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M15としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 322.4933,
+      "dec_deg": 12.167
+    },
+    "constellation_id": "Peg",
+    "relationship_status": "catalog_verified",
+    "messier_number": 15,
+    "aliases": [
+      "NGC 7078"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 15,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 6.2,
+      "angular_size_text": "12.3",
+      "common_name_en": "Great Pegasus Globular",
+      "aliases": [
+        "NGC 7078"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 18.0,
+      "minor_arcmin": 18.0,
+      "source_text": "約18'"
+    }
+  },
+  {
+    "id": "M16",
+    "name": {
+      "ja": "M16 わし星雲",
+      "en": "Eagle Nebula"
+    },
+    "type": "nebula",
+    "icon": "🦅",
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.4,
+    "distance_text": "約7,000光年",
+    "size_text": "約7'",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "ハッブルの「創造の柱」で有名な星形成領域",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M16 わし星雲は、ハッブルの「創造の柱」で有名な星形成領域天体です。距離は約7,000光年。見かけの大きさは約7'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "30〜100倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。",
+      "science": "若い星団と電離ガスからなる星形成領域で、濃い分子雲の柱の内部では新しい星が形成されています。",
+      "history": "ハッブル宇宙望遠鏡が撮影した「創造の柱」で世界的に有名になりました。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M16 わし星雲は、ハッブルの「創造の柱」で有名な星形成領域天体です。距離は約7,000光年。見かけの大きさは約7&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>30〜100倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>若い星団と電離ガスからなる星形成領域で、濃い分子雲の柱の内部では新しい星が形成されています。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>ハッブル宇宙望遠鏡が撮影した「創造の柱」で世界的に有名になりました。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 274.7,
+      "dec_deg": -13.8067
+    },
+    "constellation_id": "Ser",
+    "relationship_status": "catalog_verified",
+    "messier_number": 16,
+    "aliases": [
+      "NGC 6611"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 16,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 6.4,
+      "angular_size_text": "7",
+      "common_name_en": "Eagle Nebula",
+      "aliases": [
+        "NGC 6611"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.0,
+      "minor_arcmin": 7.0,
+      "source_text": "約7'"
+    }
+  },
+  {
+    "id": "M17",
+    "name": {
+      "ja": "M17 オメガ星雲",
+      "en": "Omega Nebula"
+    },
+    "type": "nebula",
+    "icon": "Ω",
+    "catalog_category": "メシエ",
+    "magnitude_v": 6,
+    "distance_text": "約5,500光年",
+    "size_text": "約46'×37'",
+    "recommended_magnification": "20〜60倍",
+    "highlight": "Ω形・白鳥形に見える美しい散光星雲",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M17 オメガ星雲は、Ω形・白鳥形に見える美しい散光星雲天体です。距離は約5,500光年。見かけの大きさは約46'×37'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "20〜60倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。",
+      "science": "若い大質量星の紫外線で輝く星形成領域です。明るい中心部は比較的見やすく、淡い外縁まで含めると非常に大きな星雲です。",
+      "history": "見る向きによって「オメガ」「白鳥」「馬蹄」など複数の愛称があります。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M17 オメガ星雲は、Ω形・白鳥形に見える美しい散光星雲天体です。距離は約5,500光年。見かけの大きさは約46&#x27;×37&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>20〜60倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>若い大質量星の紫外線で輝く星形成領域です。明るい中心部は比較的見やすく、淡い外縁まで含めると非常に大きな星雲です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>見る向きによって「オメガ」「白鳥」「馬蹄」など複数の愛称があります。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 275.1917,
+      "dec_deg": -16.1833
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 17,
+    "aliases": [
+      "NGC 6618"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 17,
+      "source_type_code": "DN",
+      "source_type_label_ja": "散光星雲",
+      "visual_magnitude": 7.0,
+      "angular_size_text": "11",
+      "common_name_en": "Omega Nebula",
+      "aliases": [
+        "NGC 6618"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 46.0,
+      "minor_arcmin": 37.0,
+      "source_text": "約46'×37'"
+    }
+  },
+  {
+    "id": "M18",
+    "name": {
+      "ja": "M18",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.5,
+    "distance_text": null,
+    "size_text": "9",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 274.975,
+      "dec_deg": -17.133333
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 18,
+    "aliases": [
+      "NGC 6613"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 18,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 7.5,
+      "angular_size_text": "9",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6613"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 9.0,
+      "minor_arcmin": 9.0,
+      "source_text": "9"
+    }
+  },
+  {
+    "id": "M19",
+    "name": {
+      "ja": "M19",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.8,
+    "distance_text": null,
+    "size_text": "13.5",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 255.65,
+      "dec_deg": -26.266667
+    },
+    "constellation_id": "Oph",
+    "relationship_status": "catalog_verified",
+    "messier_number": 19,
+    "aliases": [
+      "NGC 6273"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 19,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 6.8,
+      "angular_size_text": "13.5",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6273"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 13.5,
+      "minor_arcmin": 13.5,
+      "source_text": "13.5"
+    }
+  },
+  {
+    "id": "M20",
+    "name": {
+      "ja": "M20 三裂星雲",
+      "en": "Trifid Nebula"
+    },
+    "type": "nebula",
+    "icon": "🌿",
+    "catalog_category": "メシエ",
+    "magnitude_v": 9,
+    "distance_text": "約5,200光年",
+    "size_text": "約28'",
+    "recommended_magnification": "30〜80倍",
+    "highlight": "3つに裂けて見える美しい散光星雲",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M20 三裂星雲は、3つに裂けて見える美しい散光星雲天体です。距離は約5,200光年。見かけの大きさは約28'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "30〜80倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。",
+      "science": "赤い放射星雲、青い反射星雲、暗黒帯が一つの領域に共存する複合的な星形成領域です。",
+      "history": "暗黒帯が明るい星雲を三つに分けて見せることから「三裂星雲」と呼ばれます。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M20 三裂星雲は、3つに裂けて見える美しい散光星雲天体です。距離は約5,200光年。見かけの大きさは約28&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>30〜80倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>赤い放射星雲、青い反射星雲、暗黒帯が一つの領域に共存する複合的な星形成領域です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>暗黒帯が明るい星雲を三つに分けて見せることから「三裂星雲」と呼ばれます。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 270.625,
+      "dec_deg": -23.0333
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 20,
+    "aliases": [
+      "NGC 6514"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 20,
+      "source_type_code": "DN",
+      "source_type_label_ja": "散光星雲",
+      "visual_magnitude": 9.0,
+      "angular_size_text": "28",
+      "common_name_en": "Trifid Nebula",
+      "aliases": [
+        "NGC 6514"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 28.0,
+      "minor_arcmin": 28.0,
+      "source_text": "約28'"
+    }
+  },
+  {
+    "id": "M21",
+    "name": {
+      "ja": "M21",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.5,
+    "distance_text": null,
+    "size_text": "13",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 271.15,
+      "dec_deg": -22.5
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 21,
+    "aliases": [
+      "NGC 6531"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 21,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 6.5,
+      "angular_size_text": "13",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6531"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 13.0,
+      "minor_arcmin": 13.0,
+      "source_text": "13"
+    }
+  },
+  {
+    "id": "M22",
+    "name": {
+      "ja": "M22 球状星団",
+      "en": "Sagittarius Cluster"
+    },
+    "type": "cluster",
+    "icon": "⭐",
+    "catalog_category": "メシエ",
+    "magnitude_v": 5.1,
+    "distance_text": "約1万600光年",
+    "size_text": "約24'",
+    "recommended_magnification": "50〜150倍",
+    "highlight": "南天の大型球状星団。肉眼でも見える",
+    "visible_months_legacy": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M22 球状星団は、南天の大型球状星団。肉眼でも見える天体です。距離は約1万600光年。見かけの大きさは約24'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "50〜150倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
+      "history": "メシエ天体M22としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M22 球状星団は、南天の大型球状星団。肉眼でも見える天体です。距離は約1万600光年。見かけの大きさは約24&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>50〜150倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M22としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 279.0997,
+      "dec_deg": -23.9047
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 22,
+    "aliases": [
+      "NGC 6656"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 22,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 5.1,
+      "angular_size_text": "24",
+      "common_name_en": "Sagittarius Cluster",
+      "aliases": [
+        "NGC 6656"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 24.0,
+      "minor_arcmin": 24.0,
+      "source_text": "約24'"
+    }
+  },
+  {
+    "id": "M23",
+    "name": {
+      "ja": "M23",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.9,
+    "distance_text": null,
+    "size_text": "27",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 269.2,
+      "dec_deg": -19.016667
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 23,
+    "aliases": [
+      "NGC 6494"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 23,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 6.9,
+      "angular_size_text": "27",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6494"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 27.0,
+      "minor_arcmin": 27.0,
+      "source_text": "27"
+    }
+  },
+  {
+    "id": "M24",
+    "name": {
+      "ja": "M24",
+      "en": "Sagittarius Star Cloud"
+    },
+    "type": "star_cloud",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 4.6,
+    "distance_text": null,
+    "size_text": "90",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 274.225,
+      "dec_deg": -18.5
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 24,
+    "aliases": [],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 24,
+      "source_type_code": "MW",
+      "source_type_label_ja": "星雲状の星野",
+      "visual_magnitude": 4.6,
+      "angular_size_text": "90",
+      "common_name_en": "Sagittarius Star Cloud",
+      "aliases": [],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 90.0,
+      "minor_arcmin": 90.0,
+      "source_text": "90"
+    }
+  },
+  {
+    "id": "M25",
+    "name": {
+      "ja": "M25",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.5,
+    "distance_text": null,
+    "size_text": "40",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 277.9,
+      "dec_deg": -19.25
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 25,
+    "aliases": [
+      "IC 4725"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 25,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 6.5,
+      "angular_size_text": "40",
+      "common_name_en": null,
+      "aliases": [
+        "IC 4725"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 40.0,
+      "minor_arcmin": 40.0,
+      "source_text": "40"
+    }
+  },
+  {
+    "id": "M26",
+    "name": {
+      "ja": "M26",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.0,
+    "distance_text": null,
+    "size_text": "15",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 281.3,
+      "dec_deg": -9.4
+    },
+    "constellation_id": "Sct",
+    "relationship_status": "catalog_verified",
+    "messier_number": 26,
+    "aliases": [
+      "NGC 6694"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 26,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 8.0,
+      "angular_size_text": "15",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6694"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 15.0,
+      "minor_arcmin": 15.0,
+      "source_text": "15"
+    }
+  },
+  {
+    "id": "M27",
+    "name": {
+      "ja": "M27 亜鈴状星雲",
+      "en": "Dumbbell Nebula"
+    },
+    "type": "nebula",
+    "icon": "🏋️",
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.5,
+    "distance_text": "約1,000〜1,360光年",
+    "size_text": "約8'×6'",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "惑星状星雲で最も明るい",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "M27 亜鈴状星雲は、惑星状星雲で最も明るい天体です。距離は約1,000〜1,360光年。見かけの大きさは約8'×6'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "惑星状星雲は比較的小さく表面輝度が高いものが多いため、50〜100倍で倍率を上げても形を保ちやすい対象です。OIIIフィルターがコントラスト改善に有効な場合があります。",
+      "science": "太陽程度の質量の恒星が晩年に外層を放出してできた惑星状星雲です。中心には高温の白色矮星が残っています。",
+      "history": "1764年にメシエが記録した最初期の惑星状星雲の一つで、形が鉄亜鈴に似ることから愛称が付きました。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M27 亜鈴状星雲は、惑星状星雲で最も明るい天体です。距離は約1,000〜1,360光年。見かけの大きさは約8&#x27;×6&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>惑星状星雲は比較的小さく表面輝度が高いものが多いため、50〜100倍で倍率を上げても形を保ちやすい対象です。OIIIフィルターがコントラスト改善に有効な場合があります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>太陽程度の質量の恒星が晩年に外層を放出してできた惑星状星雲です。中心には高温の白色矮星が残っています。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>1764年にメシエが記録した最初期の惑星状星雲の一つで、形が鉄亜鈴に似ることから愛称が付きました。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 299.9013,
+      "dec_deg": 22.7214
+    },
+    "constellation_id": "Vul",
+    "relationship_status": "catalog_verified",
+    "messier_number": 27,
+    "aliases": [
+      "NGC 6853"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 27,
+      "source_type_code": "PN",
+      "source_type_label_ja": "惑星状星雲",
+      "visual_magnitude": 7.4,
+      "angular_size_text": "8.0x5.7",
+      "common_name_en": "Dumbbell Nebula",
+      "aliases": [
+        "NGC 6853"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 8.0,
+      "minor_arcmin": 6.0,
+      "source_text": "約8'×6'"
+    }
+  },
+  {
+    "id": "M28",
+    "name": {
+      "ja": "M28",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.8,
+    "distance_text": null,
+    "size_text": "11.2",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 276.125,
+      "dec_deg": -24.866667
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 28,
+    "aliases": [
+      "NGC 6626"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 28,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 6.8,
+      "angular_size_text": "11.2",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6626"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 11.2,
+      "minor_arcmin": 11.2,
+      "source_text": "11.2"
+    }
+  },
+  {
+    "id": "M29",
+    "name": {
+      "ja": "M29",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.1,
+    "distance_text": null,
+    "size_text": "7",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 305.975,
+      "dec_deg": 38.533333
+    },
+    "constellation_id": "Cyg",
+    "relationship_status": "catalog_verified",
+    "messier_number": 29,
+    "aliases": [
+      "NGC 6913"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 29,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 7.1,
+      "angular_size_text": "7",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6913"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.0,
+      "minor_arcmin": 7.0,
+      "source_text": "7"
+    }
+  },
+  {
+    "id": "M30",
+    "name": {
+      "ja": "M30",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.2,
+    "distance_text": null,
+    "size_text": "11",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 325.1,
+      "dec_deg": -23.183333
+    },
+    "constellation_id": "Cap",
+    "relationship_status": "catalog_verified",
+    "messier_number": 30,
+    "aliases": [
+      "NGC 7099"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 30,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 7.2,
+      "angular_size_text": "11",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 7099"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 11.0,
+      "minor_arcmin": 11.0,
+      "source_text": "11"
+    }
+  },
+  {
+    "id": "M31",
+    "name": {
+      "ja": "M31 アンドロメダ銀河",
+      "en": "Andromeda Galaxy"
+    },
+    "type": "galaxy",
+    "icon": "🌌",
+    "catalog_category": "メシエ",
+    "magnitude_v": 3.4,
+    "distance_text": "約254万光年",
+    "size_text": "約3°×1°",
+    "recommended_magnification": "20〜40倍",
+    "highlight": "肉眼でも見える！254万年前の光",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "explanation": {
+      "overview": "M31 アンドロメダ銀河は、肉眼でも見える！254万年前の光天体です。距離は約254万光年。見かけの大きさは約3°×1°。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。20〜40倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "天の川銀河に近い大型渦巻銀河で、恒星・ガス・塵・球状星団などを含む巨大な銀河系です。伴銀河M32とM110も周囲にあります。",
+      "history": "肉眼で見える最遠級の天体として知られます。アンドロメダ銀河の「星雲」ではなく独立した銀河だと理解されたことは、宇宙観の拡大につながりました。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M31 アンドロメダ銀河は、肉眼でも見える！254万年前の光天体です。距離は約254万光年。見かけの大きさは約3°×1°。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。20〜40倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>天の川銀河に近い大型渦巻銀河で、恒星・ガス・塵・球状星団などを含む巨大な銀河系です。伴銀河M32とM110も周囲にあります。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>肉眼で見える最遠級の天体として知られます。アンドロメダ銀河の「星雲」ではなく独立した銀河だと理解されたことは、宇宙観の拡大につながりました。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 10.6848,
+      "dec_deg": 41.2691
+    },
+    "constellation_id": "And",
+    "relationship_status": "catalog_verified",
+    "messier_number": 31,
+    "aliases": [
+      "NGC 224"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 31,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 3.4,
+      "angular_size_text": "178x63",
+      "common_name_en": "Andromeda Galaxy",
+      "aliases": [
+        "NGC 224"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 180.0,
+      "minor_arcmin": 60.0,
+      "source_text": "約3°×1°"
+    }
+  },
+  {
+    "id": "M32",
+    "name": {
+      "ja": "M32",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.1,
+    "distance_text": null,
+    "size_text": "8x6",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 10.7,
+      "dec_deg": 40.866667
+    },
+    "constellation_id": "And",
+    "relationship_status": "catalog_verified",
+    "messier_number": 32,
+    "aliases": [
+      "NGC 221"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 32,
+      "source_type_code": "EG",
+      "source_type_label_ja": "楕円銀河",
+      "visual_magnitude": 8.1,
+      "angular_size_text": "8x6",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 221"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 8.0,
+      "minor_arcmin": 6.0,
+      "source_text": "8x6"
+    }
+  },
+  {
+    "id": "M33",
+    "name": {
+      "ja": "M33 さんかく座銀河",
+      "en": "Triangulum Galaxy"
+    },
+    "type": "galaxy",
+    "icon": "🌀",
+    "catalog_category": "メシエ",
+    "magnitude_v": 5.7,
+    "distance_text": "約273万光年",
+    "size_text": "約70'×40'",
+    "recommended_magnification": "20〜30倍",
+    "highlight": "正面向きの渦巻き",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "explanation": {
+      "overview": "M33 さんかく座銀河は、正面向きの渦巻き天体です。距離は約273万光年。見かけの大きさは約70'×40'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。20〜30倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "局所銀河群の渦巻銀河で、正面に近い向きのため腕構造や星形成領域を研究しやすい銀河です。",
+      "history": "非常に淡く広がるため、総合等級の数字より観測が難しい「低表面輝度天体」の好例です。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M33 さんかく座銀河は、正面向きの渦巻き天体です。距離は約273万光年。見かけの大きさは約70&#x27;×40&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。20〜30倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>局所銀河群の渦巻銀河で、正面に近い向きのため腕構造や星形成領域を研究しやすい銀河です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>非常に淡く広がるため、総合等級の数字より観測が難しい「低表面輝度天体」の好例です。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 23.4621,
+      "dec_deg": 30.66
+    },
+    "constellation_id": "Tri",
+    "relationship_status": "catalog_verified",
+    "messier_number": 33,
+    "aliases": [
+      "NGC 598"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 33,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 5.7,
+      "angular_size_text": "73x45",
+      "common_name_en": "Triangulum Galaxy",
+      "aliases": [
+        "NGC 598"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 70.0,
+      "minor_arcmin": 40.0,
+      "source_text": "約70'×40'"
+    }
+  },
+  {
+    "id": "M34",
+    "name": {
+      "ja": "M34",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 5.5,
+    "distance_text": null,
+    "size_text": "35",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 40.5,
+      "dec_deg": 42.783333
+    },
+    "constellation_id": "Per",
+    "relationship_status": "catalog_verified",
+    "messier_number": 34,
+    "aliases": [
+      "NGC 1039"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 34,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 5.5,
+      "angular_size_text": "35",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 1039"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 35.0,
+      "minor_arcmin": 35.0,
+      "source_text": "35"
+    }
+  },
+  {
+    "id": "M35",
+    "name": {
+      "ja": "M35 散開星団",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": "🌟",
+    "catalog_category": "メシエ",
+    "magnitude_v": 5.3,
+    "distance_text": "約2,800光年",
+    "size_text": "約28'",
+    "recommended_magnification": "20〜60倍",
+    "highlight": "ふたご座の大型散開星団",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M35 散開星団は、ふたご座の大型散開星団天体です。距離は約2,800光年。見かけの大きさは約28'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "広がりを楽しむため低倍率が基本です。20〜60倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
+      "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
+      "history": "メシエ天体M35としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M35 散開星団は、ふたご座の大型散開星団天体です。距離は約2,800光年。見かけの大きさは約28&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>広がりを楽しむため低倍率が基本です。20〜60倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M35としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 92.2667,
+      "dec_deg": 24.3333
+    },
+    "constellation_id": "Gem",
+    "relationship_status": "catalog_verified",
+    "messier_number": 35,
+    "aliases": [
+      "NGC 2168"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 35,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 5.3,
+      "angular_size_text": "28",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 2168"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 28.0,
+      "minor_arcmin": 28.0,
+      "source_text": "約28'"
+    }
+  },
+  {
+    "id": "M36",
+    "name": {
+      "ja": "M36 散開星団",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": "🌟",
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.3,
+    "distance_text": "約4,100光年",
+    "size_text": "約12'",
+    "recommended_magnification": "30〜80倍",
+    "highlight": "ぎょしゃ座の散開星団トリオの一つ",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M36 散開星団は、ぎょしゃ座の散開星団トリオの一つ天体です。距離は約4,100光年。見かけの大きさは約12'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "30〜80倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
+      "history": "メシエ天体M36としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M36 散開星団は、ぎょしゃ座の散開星団トリオの一つ天体です。距離は約4,100光年。見かけの大きさは約12&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>30〜80倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M36としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 84.0667,
+      "dec_deg": 34.1333
+    },
+    "constellation_id": "Aur",
+    "relationship_status": "catalog_verified",
+    "messier_number": 36,
+    "aliases": [
+      "NGC 1960"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 36,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 6.3,
+      "angular_size_text": "12",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 1960"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 12.0,
+      "minor_arcmin": 12.0,
+      "source_text": "約12'"
+    }
+  },
+  {
+    "id": "M37",
+    "name": {
+      "ja": "M37 散開星団",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": "🌟",
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.2,
+    "distance_text": "約4,500光年",
+    "size_text": "約24'",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "ぎょしゃ座三散開星団の中で最大・最明",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M37 散開星団は、ぎょしゃ座三散開星団の中で最大・最明天体です。距離は約4,500光年。見かけの大きさは約24'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "30〜100倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
+      "history": "メシエ天体M37としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M37 散開星団は、ぎょしゃ座三散開星団の中で最大・最明天体です。距離は約4,500光年。見かけの大きさは約24&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>30〜100倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M37としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 88.0667,
+      "dec_deg": 35.8333
+    },
+    "constellation_id": "Aur",
+    "relationship_status": "catalog_verified",
+    "messier_number": 37,
+    "aliases": [
+      "NGC 2099"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 37,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 6.2,
+      "angular_size_text": "24",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 2099"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 24.0,
+      "minor_arcmin": 24.0,
+      "source_text": "約24'"
+    }
+  },
+  {
+    "id": "M38",
+    "name": {
+      "ja": "M38 散開星団",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": "🌟",
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.4,
+    "distance_text": "約4,200光年",
+    "size_text": "約21'",
+    "recommended_magnification": "30〜80倍",
+    "highlight": "ぎょしゃ座三散開星団の一つ",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M38 散開星団は、ぎょしゃ座三散開星団の一つ天体です。距離は約4,200光年。見かけの大きさは約21'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "30〜80倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
+      "history": "メシエ天体M38としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M38 散開星団は、ぎょしゃ座三散開星団の一つ天体です。距離は約4,200光年。見かけの大きさは約21&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>30〜80倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M38としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 82.1833,
+      "dec_deg": 35.8333
+    },
+    "constellation_id": "Aur",
+    "relationship_status": "catalog_verified",
+    "messier_number": 38,
+    "aliases": [
+      "NGC 1912"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 38,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 7.4,
+      "angular_size_text": "21",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 1912"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 21.0,
+      "minor_arcmin": 21.0,
+      "source_text": "約21'"
+    }
+  },
+  {
+    "id": "M39",
+    "name": {
+      "ja": "M39",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 4.6,
+    "distance_text": null,
+    "size_text": "32",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 323.05,
+      "dec_deg": 48.433333
+    },
+    "constellation_id": "Cyg",
+    "relationship_status": "catalog_verified",
+    "messier_number": 39,
+    "aliases": [
+      "NGC 7092"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 39,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 4.6,
+      "angular_size_text": "32",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 7092"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 32.0,
+      "minor_arcmin": 32.0,
+      "source_text": "32"
+    }
+  },
+  {
+    "id": "M40",
+    "name": {
+      "ja": "M40",
+      "en": "Winnecke 4"
+    },
+    "type": "double_star",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.4,
+    "distance_text": null,
+    "size_text": "0.8",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 185.552083,
+      "dec_deg": 58.083056
+    },
+    "constellation_id": "UMa",
+    "relationship_status": "catalog_verified",
+    "messier_number": 40,
+    "aliases": [
+      "Winnecke 4"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 40,
+      "source_type_code": "DS",
+      "source_type_label_ja": "二重星",
+      "visual_magnitude": 8.4,
+      "angular_size_text": "0.8",
+      "common_name_en": "Winnecke 4",
+      "aliases": [
+        "Winnecke 4"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 0.8,
+      "minor_arcmin": 0.8,
+      "source_text": "0.8"
+    }
+  },
+  {
+    "id": "M41",
+    "name": {
+      "ja": "M41 散開星団",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": "🌟",
+    "catalog_category": "メシエ",
+    "magnitude_v": 4.5,
+    "distance_text": "約2,300光年",
+    "size_text": "約38'",
+    "recommended_magnification": "肉眼〜20倍",
+    "highlight": "シリウスの近くの明るい散開星団",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "explanation": {
+      "overview": "M41 散開星団は、シリウスの近くの明るい散開星団天体です。距離は約2,300光年。見かけの大きさは約38'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "広がりを楽しむため低倍率が基本です。肉眼〜20倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
+      "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
+      "history": "メシエ天体M41としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M41 散開星団は、シリウスの近くの明るい散開星団天体です。距離は約2,300光年。見かけの大きさは約38&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>広がりを楽しむため低倍率が基本です。肉眼〜20倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M41としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 101.5,
+      "dec_deg": -20.7167
+    },
+    "constellation_id": "CMa",
+    "relationship_status": "catalog_verified",
+    "messier_number": 41,
+    "aliases": [
+      "NGC 2287"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 41,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 4.6,
+      "angular_size_text": "38",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 2287"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 38.0,
+      "minor_arcmin": 38.0,
+      "source_text": "約38'"
+    }
+  },
+  {
+    "id": "M42",
+    "name": {
+      "ja": "M42 オリオン大星雲",
+      "en": "Great Nebula in Orion"
+    },
+    "type": "nebula",
+    "icon": "✨",
+    "catalog_category": "メシエ",
+    "magnitude_v": 4,
+    "distance_text": "約1,344光年",
+    "size_text": "約65'×60'",
+    "recommended_magnification": "20〜100倍",
+    "highlight": "肉眼でも見える！現在進行形の星の産院",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M42 オリオン大星雲は、肉眼でも見える！現在進行形の星の産院天体です。距離は約1,344光年。見かけの大きさは約65'×60'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "20〜100倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。",
+      "science": "巨大分子雲の一部が若い大質量星からの紫外線で電離されて輝く星形成領域です。中心のトラペジウム星団は、生まれたばかりの星々が集まる場所です。",
+      "history": "古くから肉眼で存在が知られていましたが、望遠鏡時代以降に複雑なガス構造と若い星の集団が詳しく研究されるようになりました。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M42 オリオン大星雲は、肉眼でも見える！現在進行形の星の産院天体です。距離は約1,344光年。見かけの大きさは約65&#x27;×60&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>20〜100倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>巨大分子雲の一部が若い大質量星からの紫外線で電離されて輝く星形成領域です。中心のトラペジウム星団は、生まれたばかりの星々が集まる場所です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>古くから肉眼で存在が知られていましたが、望遠鏡時代以降に複雑なガス構造と若い星の集団が詳しく研究されるようになりました。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 83.8221,
+      "dec_deg": -5.3911
+    },
+    "constellation_id": "Ori",
+    "relationship_status": "catalog_verified",
+    "messier_number": 42,
+    "aliases": [
+      "NGC 1976"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 42,
+      "source_type_code": "DN",
+      "source_type_label_ja": "散光星雲",
+      "visual_magnitude": 4.0,
+      "angular_size_text": "85x60",
+      "common_name_en": "Great Nebula in Orion",
+      "aliases": [
+        "NGC 1976"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 65.0,
+      "minor_arcmin": 60.0,
+      "source_text": "約65'×60'"
+    }
+  },
+  {
+    "id": "M43",
+    "name": {
+      "ja": "M43",
+      "en": "De Mairan's Nebula"
+    },
+    "type": "nebula",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.0,
+    "distance_text": null,
+    "size_text": "20x15",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 83.9,
+      "dec_deg": -5.266667
+    },
+    "constellation_id": "Ori",
+    "relationship_status": "catalog_verified",
+    "messier_number": 43,
+    "aliases": [
+      "NGC 1982"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 43,
+      "source_type_code": "DN",
+      "source_type_label_ja": "散光星雲",
+      "visual_magnitude": 9.0,
+      "angular_size_text": "20x15",
+      "common_name_en": "De Mairan's Nebula",
+      "aliases": [
+        "NGC 1982"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 20.0,
+      "minor_arcmin": 15.0,
+      "source_text": "20x15"
+    }
+  },
+  {
+    "id": "M44",
+    "name": {
+      "ja": "M44 プレセペ星団（蜂の巣）",
+      "en": "Beehive Cluster"
+    },
+    "type": "cluster",
+    "icon": "🐝",
+    "catalog_category": "メシエ",
+    "magnitude_v": 3.1,
+    "distance_text": "約577光年",
+    "size_text": "約95'",
+    "recommended_magnification": "10〜30倍",
+    "highlight": "かに座の蜂の巣星団",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "explanation": {
+      "overview": "M44 プレセペ星団（蜂の巣）は、かに座の蜂の巣星団天体です。距離は約577光年。見かけの大きさは約95'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "広がりを楽しむため低倍率が基本です。10〜30倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
+      "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
+      "history": "メシエ天体M44としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M44 プレセペ星団（蜂の巣）は、かに座の蜂の巣星団天体です。距離は約577光年。見かけの大きさは約95&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>広がりを楽しむため低倍率が基本です。10〜30倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M44としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 130.05,
+      "dec_deg": 19.9833
+    },
+    "constellation_id": "Cnc",
+    "relationship_status": "catalog_verified",
+    "messier_number": 44,
+    "aliases": [
+      "NGC 2632"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 44,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 3.7,
+      "angular_size_text": "95",
+      "common_name_en": "Beehive Cluster",
+      "aliases": [
+        "NGC 2632"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 95.0,
+      "minor_arcmin": 95.0,
+      "source_text": "約95'"
+    }
+  },
+  {
+    "id": "M45",
+    "name": {
+      "ja": "M45 プレアデス星団（すばる）",
+      "en": "Pleiades"
+    },
+    "type": "cluster",
+    "icon": "🌸",
+    "catalog_category": "メシエ",
+    "magnitude_v": 1.6,
+    "distance_text": "約440光年",
+    "size_text": "約110'",
+    "recommended_magnification": "20〜30倍",
+    "highlight": "日本古来の「すばる」",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M45 プレアデス星団（すばる）は、日本古来の「すばる」天体です。距離は約440光年。見かけの大きさは約110'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "広がりを楽しむため低倍率が基本です。20〜30倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
+      "science": "比較的若い散開星団で、青白い高温星が目立ちます。写真で見える青い星雲は、星団形成時の残りではなく周囲の塵を照らす反射星雲と考えられています。",
+      "history": "日本では「すばる」として古くから親しまれ、世界各地にも多様な神話・名称があります。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M45 プレアデス星団（すばる）は、日本古来の「すばる」天体です。距離は約440光年。見かけの大きさは約110&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>広がりを楽しむため低倍率が基本です。20〜30倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>比較的若い散開星団で、青白い高温星が目立ちます。写真で見える青い星雲は、星団形成時の残りではなく周囲の塵を照らす反射星雲と考えられています。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>日本では「すばる」として古くから親しまれ、世界各地にも多様な神話・名称があります。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 56.85,
+      "dec_deg": 24.1167
+    },
+    "constellation_id": "Tau",
+    "relationship_status": "catalog_verified",
+    "messier_number": 45,
+    "aliases": [],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 45,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 1.6,
+      "angular_size_text": "110",
+      "common_name_en": "Pleiades",
+      "aliases": [],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 110.0,
+      "minor_arcmin": 110.0,
+      "source_text": "約110'"
+    }
+  },
+  {
+    "id": "M46",
+    "name": {
+      "ja": "M46",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.0,
+    "distance_text": null,
+    "size_text": "27",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 115.45,
+      "dec_deg": -14.816667
+    },
+    "constellation_id": "Pup",
+    "relationship_status": "catalog_verified",
+    "messier_number": 46,
+    "aliases": [
+      "NGC 2437"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 46,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 6.0,
+      "angular_size_text": "27",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 2437"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 27.0,
+      "minor_arcmin": 27.0,
+      "source_text": "27"
+    }
+  },
+  {
+    "id": "M47",
+    "name": {
+      "ja": "M47",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 5.2,
+    "distance_text": null,
+    "size_text": "30",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 114.15,
+      "dec_deg": -14.5
+    },
+    "constellation_id": "Pup",
+    "relationship_status": "catalog_verified",
+    "messier_number": 47,
+    "aliases": [
+      "NGC 2422"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 47,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 5.2,
+      "angular_size_text": "30",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 2422"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 30.0,
+      "minor_arcmin": 30.0,
+      "source_text": "30"
+    }
+  },
+  {
+    "id": "M48",
+    "name": {
+      "ja": "M48",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 5.5,
+    "distance_text": null,
+    "size_text": "54",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 123.45,
+      "dec_deg": -5.8
+    },
+    "constellation_id": "Hya",
+    "relationship_status": "catalog_verified",
+    "messier_number": 48,
+    "aliases": [
+      "NGC 2548"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 48,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 5.5,
+      "angular_size_text": "54",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 2548"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 54.0,
+      "minor_arcmin": 54.0,
+      "source_text": "54"
+    }
+  },
+  {
+    "id": "M49",
+    "name": {
+      "ja": "M49",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.4,
+    "distance_text": null,
+    "size_text": "9x7.5",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 187.45,
+      "dec_deg": 8.0
+    },
+    "constellation_id": "Vir",
+    "relationship_status": "catalog_verified",
+    "messier_number": 49,
+    "aliases": [
+      "NGC 4472"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 49,
+      "source_type_code": "EG",
+      "source_type_label_ja": "楕円銀河",
+      "visual_magnitude": 8.4,
+      "angular_size_text": "9x7.5",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4472"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 9.0,
+      "minor_arcmin": 7.5,
+      "source_text": "9x7.5"
+    }
+  },
+  {
+    "id": "M50",
+    "name": {
+      "ja": "M50",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.3,
+    "distance_text": null,
+    "size_text": "16",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 105.8,
+      "dec_deg": -8.333333
+    },
+    "constellation_id": "Mon",
+    "relationship_status": "catalog_verified",
+    "messier_number": 50,
+    "aliases": [
+      "NGC 2323"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 50,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 6.3,
+      "angular_size_text": "16",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 2323"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 16.0,
+      "minor_arcmin": 16.0,
+      "source_text": "16"
+    }
+  },
+  {
+    "id": "M51",
+    "name": {
+      "ja": "M51 子持ち銀河",
+      "en": "Whirlpool Galaxy"
+    },
+    "type": "galaxy",
+    "icon": "🌀",
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.4,
+    "distance_text": "約2,300万光年",
+    "size_text": "約11'×7'",
+    "recommended_magnification": "50〜150倍",
+    "highlight": "渦巻き構造が美しい",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "explanation": {
+      "overview": "M51 子持ち銀河は、渦巻き構造が美しい天体です。距離は約2,300万光年。見かけの大きさは約11'×7'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜150倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "典型的なグランドデザイン渦巻銀河で、伴銀河NGC 5195との重力相互作用が腕構造や星形成に影響しています。",
+      "history": "渦巻構造が望遠鏡で認識された最初期の銀河として天文学史上も重要です。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M51 子持ち銀河は、渦巻き構造が美しい天体です。距離は約2,300万光年。見かけの大きさは約11&#x27;×7&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜150倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>典型的なグランドデザイン渦巻銀河で、伴銀河NGC 5195との重力相互作用が腕構造や星形成に影響しています。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>渦巻構造が望遠鏡で認識された最初期の銀河として天文学史上も重要です。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 202.4696,
+      "dec_deg": 47.1952
+    },
+    "constellation_id": "CVn",
+    "relationship_status": "catalog_verified",
+    "messier_number": 51,
+    "aliases": [
+      "NGC 5194"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 51,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 8.4,
+      "angular_size_text": "11x7",
+      "common_name_en": "Whirlpool Galaxy",
+      "aliases": [
+        "NGC 5194"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 11.0,
+      "minor_arcmin": 7.0,
+      "source_text": "約11'×7'"
+    }
+  },
+  {
+    "id": "M52",
+    "name": {
+      "ja": "M52",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.3,
+    "distance_text": null,
+    "size_text": "13",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 351.05,
+      "dec_deg": 61.583333
+    },
+    "constellation_id": "Cas",
+    "relationship_status": "catalog_verified",
+    "messier_number": 52,
+    "aliases": [
+      "NGC 7654"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 52,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 7.3,
+      "angular_size_text": "13",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 7654"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 13.0,
+      "minor_arcmin": 13.0,
+      "source_text": "13"
+    }
+  },
+  {
+    "id": "M53",
+    "name": {
+      "ja": "M53",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.6,
+    "distance_text": null,
+    "size_text": "12.6",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 198.225,
+      "dec_deg": 18.166667
+    },
+    "constellation_id": "Com",
+    "relationship_status": "catalog_verified",
+    "messier_number": 53,
+    "aliases": [
+      "NGC 5024"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 53,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 7.6,
+      "angular_size_text": "12.6",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 5024"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 12.6,
+      "minor_arcmin": 12.6,
+      "source_text": "12.6"
+    }
+  },
+  {
+    "id": "M54",
+    "name": {
+      "ja": "M54",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.6,
+    "distance_text": null,
+    "size_text": "9.1",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 283.775,
+      "dec_deg": -30.483333
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 54,
+    "aliases": [
+      "NGC 6715"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 54,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 7.6,
+      "angular_size_text": "9.1",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6715"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 9.1,
+      "minor_arcmin": 9.1,
+      "source_text": "9.1"
+    }
+  },
+  {
+    "id": "M55",
+    "name": {
+      "ja": "M55",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.3,
+    "distance_text": null,
+    "size_text": "19",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 295.0,
+      "dec_deg": -30.966667
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 55,
+    "aliases": [
+      "NGC 6809"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 55,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 6.3,
+      "angular_size_text": "19",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6809"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 19.0,
+      "minor_arcmin": 19.0,
+      "source_text": "19"
+    }
+  },
+  {
+    "id": "M56",
+    "name": {
+      "ja": "M56",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.3,
+    "distance_text": null,
+    "size_text": "7.1",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 289.15,
+      "dec_deg": 30.183333
+    },
+    "constellation_id": "Lyr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 56,
+    "aliases": [
+      "NGC 6779"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 56,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 8.3,
+      "angular_size_text": "7.1",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6779"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.1,
+      "minor_arcmin": 7.1,
+      "source_text": "7.1"
+    }
+  },
+  {
+    "id": "M57",
+    "name": {
+      "ja": "M57 リング星雲",
+      "en": "Ring Nebula"
+    },
+    "type": "nebula",
+    "icon": "💍",
+    "catalog_category": "メシエ",
+    "magnitude_v": 9,
+    "distance_text": "約2,300〜2,600光年",
+    "size_text": "約2.5'",
+    "recommended_magnification": "100〜200倍",
+    "highlight": "ドーナツ形のリング。太陽の未来の姿",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M57 リング星雲は、ドーナツ形のリング。太陽の未来の姿天体です。距離は約2,300〜2,600光年。見かけの大きさは約2.5'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "惑星状星雲は比較的小さく表面輝度が高いものが多いため、100〜200倍で倍率を上げても形を保ちやすい対象です。OIIIフィルターがコントラスト改善に有効な場合があります。",
+      "science": "中心星が放出したガス殻をほぼ軸方向から見ている惑星状星雲です。リング状に見えますが、実際には三次元的なガス構造を持ちます。",
+      "history": "こと座のβ星とγ星の間にあり、小型望遠鏡でも探しやすい惑星状星雲として定番です。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M57 リング星雲は、ドーナツ形のリング。太陽の未来の姿天体です。距離は約2,300〜2,600光年。見かけの大きさは約2.5&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>惑星状星雲は比較的小さく表面輝度が高いものが多いため、100〜200倍で倍率を上げても形を保ちやすい対象です。OIIIフィルターがコントラスト改善に有効な場合があります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>中心星が放出したガス殻をほぼ軸方向から見ている惑星状星雲です。リング状に見えますが、実際には三次元的なガス構造を持ちます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>こと座のβ星とγ星の間にあり、小型望遠鏡でも探しやすい惑星状星雲として定番です。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 283.3962,
+      "dec_deg": 33.0294
+    },
+    "constellation_id": "Lyr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 57,
+    "aliases": [
+      "NGC 6720"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 57,
+      "source_type_code": "PN",
+      "source_type_label_ja": "惑星状星雲",
+      "visual_magnitude": 8.8,
+      "angular_size_text": "1.4x1.0",
+      "common_name_en": "Ring Nebula",
+      "aliases": [
+        "NGC 6720"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 2.5,
+      "minor_arcmin": 2.5,
+      "source_text": "約2.5'"
+    }
+  },
+  {
+    "id": "M58",
+    "name": {
+      "ja": "M58",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.7,
+    "distance_text": null,
+    "size_text": "5.5x4.5",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 189.425,
+      "dec_deg": 11.816667
+    },
+    "constellation_id": "Vir",
+    "relationship_status": "catalog_verified",
+    "messier_number": 58,
+    "aliases": [
+      "NGC 4579"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 58,
+      "source_type_code": "BG",
+      "source_type_label_ja": "棒渦巻銀河",
+      "visual_magnitude": 9.7,
+      "angular_size_text": "5.5x4.5",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4579"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 5.5,
+      "minor_arcmin": 4.5,
+      "source_text": "5.5x4.5"
+    }
+  },
+  {
+    "id": "M59",
+    "name": {
+      "ja": "M59",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.6,
+    "distance_text": null,
+    "size_text": "5x3.5",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 190.5,
+      "dec_deg": 11.65
+    },
+    "constellation_id": "Vir",
+    "relationship_status": "catalog_verified",
+    "messier_number": 59,
+    "aliases": [
+      "NGC 4621"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 59,
+      "source_type_code": "EG",
+      "source_type_label_ja": "楕円銀河",
+      "visual_magnitude": 9.6,
+      "angular_size_text": "5x3.5",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4621"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 5.0,
+      "minor_arcmin": 3.5,
+      "source_text": "5x3.5"
+    }
+  },
+  {
+    "id": "M60",
+    "name": {
+      "ja": "M60",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.8,
+    "distance_text": null,
+    "size_text": "7x6",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 190.925,
+      "dec_deg": 11.55
+    },
+    "constellation_id": "Vir",
+    "relationship_status": "catalog_verified",
+    "messier_number": 60,
+    "aliases": [
+      "NGC 4649"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 60,
+      "source_type_code": "EG",
+      "source_type_label_ja": "楕円銀河",
+      "visual_magnitude": 8.8,
+      "angular_size_text": "7x6",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4649"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.0,
+      "minor_arcmin": 6.0,
+      "source_text": "7x6"
+    }
+  },
+  {
+    "id": "M61",
+    "name": {
+      "ja": "M61",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.7,
+    "distance_text": null,
+    "size_text": "6x5.5",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 185.475,
+      "dec_deg": 4.466667
+    },
+    "constellation_id": "Vir",
+    "relationship_status": "catalog_verified",
+    "messier_number": 61,
+    "aliases": [
+      "NGC 4303"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 61,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 9.7,
+      "angular_size_text": "6x5.5",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4303"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 6.0,
+      "minor_arcmin": 5.5,
+      "source_text": "6x5.5"
+    }
+  },
+  {
+    "id": "M62",
+    "name": {
+      "ja": "M62",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.5,
+    "distance_text": null,
+    "size_text": "14.1",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 255.3,
+      "dec_deg": -30.116667
+    },
+    "constellation_id": "Oph",
+    "relationship_status": "catalog_verified",
+    "messier_number": 62,
+    "aliases": [
+      "NGC 6266"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 62,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 6.5,
+      "angular_size_text": "14.1",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6266"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 14.1,
+      "minor_arcmin": 14.1,
+      "source_text": "14.1"
+    }
+  },
+  {
+    "id": "M63",
+    "name": {
+      "ja": "M63 ひまわり銀河",
+      "en": "Sunflower Galaxy"
+    },
+    "type": "galaxy",
+    "icon": "🌻",
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.6,
+    "distance_text": "約2,700万光年",
+    "size_text": "約12'×7.5'",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "ひまわりのような渦巻き構造",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "explanation": {
+      "overview": "M63 ひまわり銀河は、ひまわりのような渦巻き構造天体です。距離は約2,700万光年。見かけの大きさは約12'×7.5'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "銀河は数十億〜数千億規模の恒星、星間ガス、塵、暗黒物質などからなる巨大な系です。形や星形成活動の違いは、銀河の進化や周囲との相互作用を反映します。",
+      "history": "メシエ天体M63としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M63 ひまわり銀河は、ひまわりのような渦巻き構造天体です。距離は約2,700万光年。見かけの大きさは約12&#x27;×7.5&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>銀河は数十億〜数千億規模の恒星、星間ガス、塵、暗黒物質などからなる巨大な系です。形や星形成活動の違いは、銀河の進化や周囲との相互作用を反映します。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M63としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 198.9558,
+      "dec_deg": 42.0294
+    },
+    "constellation_id": "CVn",
+    "relationship_status": "catalog_verified",
+    "messier_number": 63,
+    "aliases": [
+      "NGC 5055"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 63,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 8.6,
+      "angular_size_text": "10x6",
+      "common_name_en": "Sunflower Galaxy",
+      "aliases": [
+        "NGC 5055"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 12.0,
+      "minor_arcmin": 7.5,
+      "source_text": "約12'×7.5'"
+    }
+  },
+  {
+    "id": "M64",
+    "name": {
+      "ja": "M64 黒眼銀河",
+      "en": "Black Eye Galaxy"
+    },
+    "type": "galaxy",
+    "icon": "👁️",
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.5,
+    "distance_text": "約1,700万光年",
+    "size_text": "約10'×5'",
+    "recommended_magnification": "50〜150倍",
+    "highlight": "中心部に大きな暗黒帯",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explanation": {
+      "overview": "M64 黒眼銀河は、中心部に大きな暗黒帯天体です。距離は約1,700万光年。見かけの大きさは約10'×5'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜150倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "中心近くの目立つ暗黒帯は塵による吸収です。内外でガスの回転方向が異なる領域があり、過去の銀河合体との関連が考えられています。",
+      "history": "暗黒帯が片目のように見えることから「黒眼銀河」と呼ばれます。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M64 黒眼銀河は、中心部に大きな暗黒帯天体です。距離は約1,700万光年。見かけの大きさは約10&#x27;×5&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜150倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>中心近くの目立つ暗黒帯は塵による吸収です。内外でガスの回転方向が異なる領域があり、過去の銀河合体との関連が考えられています。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>暗黒帯が片目のように見えることから「黒眼銀河」と呼ばれます。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 194.1825,
+      "dec_deg": 21.6828
+    },
+    "constellation_id": "Com",
+    "relationship_status": "catalog_verified",
+    "messier_number": 64,
+    "aliases": [
+      "NGC 4826"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 64,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 8.5,
+      "angular_size_text": "9.3x5.4",
+      "common_name_en": "Black Eye Galaxy",
+      "aliases": [
+        "NGC 4826"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 10.0,
+      "minor_arcmin": 5.0,
+      "source_text": "約10'×5'"
+    }
+  },
+  {
+    "id": "M65",
+    "name": {
+      "ja": "M65 渦巻銀河",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": "🌀",
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.3,
+    "distance_text": "約3,500万光年",
+    "size_text": "約10'×3'",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "レオトリプレットの一つ",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M65 渦巻銀河は、レオトリプレットの一つ天体です。距離は約3,500万光年。見かけの大きさは約10'×3'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "銀河は数十億〜数千億規模の恒星、星間ガス、塵、暗黒物質などからなる巨大な系です。形や星形成活動の違いは、銀河の進化や周囲との相互作用を反映します。",
+      "history": "メシエ天体M65としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M65 渦巻銀河は、レオトリプレットの一つ天体です。距離は約3,500万光年。見かけの大きさは約10&#x27;×3&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>銀河は数十億〜数千億規模の恒星、星間ガス、塵、暗黒物質などからなる巨大な系です。形や星形成活動の違いは、銀河の進化や周囲との相互作用を反映します。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M65としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 169.7333,
+      "dec_deg": 13.0922
+    },
+    "constellation_id": "Leo",
+    "relationship_status": "catalog_verified",
+    "messier_number": 65,
+    "aliases": [
+      "NGC 3623"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 65,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 9.3,
+      "angular_size_text": "8x1.5",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 3623"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 10.0,
+      "minor_arcmin": 3.0,
+      "source_text": "約10'×3'"
+    }
+  },
+  {
+    "id": "M66",
+    "name": {
+      "ja": "M66 渦巻銀河",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": "🌀",
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.9,
+    "distance_text": "約3,600万光年",
+    "size_text": "約9'×4'",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "レオトリプレットの一つ",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M66 渦巻銀河は、レオトリプレットの一つ天体です。距離は約3,600万光年。見かけの大きさは約9'×4'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "銀河は数十億〜数千億規模の恒星、星間ガス、塵、暗黒物質などからなる巨大な系です。形や星形成活動の違いは、銀河の進化や周囲との相互作用を反映します。",
+      "history": "メシエ天体M66としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M66 渦巻銀河は、レオトリプレットの一つ天体です。距離は約3,600万光年。見かけの大きさは約9&#x27;×4&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>銀河は数十億〜数千億規模の恒星、星間ガス、塵、暗黒物質などからなる巨大な系です。形や星形成活動の違いは、銀河の進化や周囲との相互作用を反映します。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M66としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 170.0625,
+      "dec_deg": 12.9917
+    },
+    "constellation_id": "Leo",
+    "relationship_status": "catalog_verified",
+    "messier_number": 66,
+    "aliases": [
+      "NGC 3627"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 66,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 8.9,
+      "angular_size_text": "8x2.5",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 3627"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 9.0,
+      "minor_arcmin": 4.0,
+      "source_text": "約9'×4'"
+    }
+  },
+  {
+    "id": "M67",
+    "name": {
+      "ja": "M67",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.1,
+    "distance_text": null,
+    "size_text": "30",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 132.6,
+      "dec_deg": 11.816667
+    },
+    "constellation_id": "Cnc",
+    "relationship_status": "catalog_verified",
+    "messier_number": 67,
+    "aliases": [
+      "NGC 2682"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 67,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 6.1,
+      "angular_size_text": "30",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 2682"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 30.0,
+      "minor_arcmin": 30.0,
+      "source_text": "30"
+    }
+  },
+  {
+    "id": "M68",
+    "name": {
+      "ja": "M68",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.8,
+    "distance_text": null,
+    "size_text": "12",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 189.875,
+      "dec_deg": -26.75
+    },
+    "constellation_id": "Hya",
+    "relationship_status": "catalog_verified",
+    "messier_number": 68,
+    "aliases": [
+      "NGC 4590"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 68,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 7.8,
+      "angular_size_text": "12",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4590"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 12.0,
+      "minor_arcmin": 12.0,
+      "source_text": "12"
+    }
+  },
+  {
+    "id": "M69",
+    "name": {
+      "ja": "M69",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.6,
+    "distance_text": null,
+    "size_text": "7.1",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 277.85,
+      "dec_deg": -32.35
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 69,
+    "aliases": [
+      "NGC 6637"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 69,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 7.6,
+      "angular_size_text": "7.1",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6637"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.1,
+      "minor_arcmin": 7.1,
+      "source_text": "7.1"
+    }
+  },
+  {
+    "id": "M70",
+    "name": {
+      "ja": "M70",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.9,
+    "distance_text": null,
+    "size_text": "7.8",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 280.8,
+      "dec_deg": -32.3
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 70,
+    "aliases": [
+      "NGC 6681"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 70,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 7.9,
+      "angular_size_text": "7.8",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6681"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.8,
+      "minor_arcmin": 7.8,
+      "source_text": "7.8"
+    }
+  },
+  {
+    "id": "M71",
+    "name": {
+      "ja": "M71",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.2,
+    "distance_text": null,
+    "size_text": "7.2",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 298.45,
+      "dec_deg": 18.783333
+    },
+    "constellation_id": "Sge",
+    "relationship_status": "catalog_verified",
+    "messier_number": 71,
+    "aliases": [
+      "NGC 6838"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 71,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 8.2,
+      "angular_size_text": "7.2",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6838"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.2,
+      "minor_arcmin": 7.2,
+      "source_text": "7.2"
+    }
+  },
+  {
+    "id": "M72",
+    "name": {
+      "ja": "M72",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.3,
+    "distance_text": null,
+    "size_text": "5.9",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 313.375,
+      "dec_deg": -12.533333
+    },
+    "constellation_id": "Aqr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 72,
+    "aliases": [
+      "NGC 6981"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 72,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 9.3,
+      "angular_size_text": "5.9",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6981"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 5.9,
+      "minor_arcmin": 5.9,
+      "source_text": "5.9"
+    }
+  },
+  {
+    "id": "M73",
+    "name": {
+      "ja": "M73",
+      "en": null
+    },
+    "type": "asterism",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.0,
+    "distance_text": null,
+    "size_text": "2.8",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 314.75,
+      "dec_deg": -12.633333
+    },
+    "constellation_id": "Aqr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 73,
+    "aliases": [
+      "NGC 6994"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 73,
+      "source_type_code": "AS",
+      "source_type_label_ja": "アステリズム",
+      "visual_magnitude": 9.0,
+      "angular_size_text": "2.8",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6994"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 2.8,
+      "minor_arcmin": 2.8,
+      "source_text": "2.8"
+    }
+  },
+  {
+    "id": "M74",
+    "name": {
+      "ja": "M74",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.4,
+    "distance_text": null,
+    "size_text": "10.2x9.5",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 24.175,
+      "dec_deg": 15.783333
+    },
+    "constellation_id": "Psc",
+    "relationship_status": "catalog_verified",
+    "messier_number": 74,
+    "aliases": [
+      "NGC 628"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 74,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 9.4,
+      "angular_size_text": "10.2x9.5",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 628"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 10.2,
+      "minor_arcmin": 9.5,
+      "source_text": "10.2x9.5"
+    }
+  },
+  {
+    "id": "M75",
+    "name": {
+      "ja": "M75",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.5,
+    "distance_text": null,
+    "size_text": "6",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 301.525,
+      "dec_deg": -21.916667
+    },
+    "constellation_id": "Sgr",
+    "relationship_status": "catalog_verified",
+    "messier_number": 75,
+    "aliases": [
+      "NGC 6864"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 75,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 8.5,
+      "angular_size_text": "6",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6864"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 6.0,
+      "minor_arcmin": 6.0,
+      "source_text": "6"
+    }
+  },
+  {
+    "id": "M76",
+    "name": {
+      "ja": "M76",
+      "en": "Little Dumbbell Nebula"
+    },
+    "type": "nebula",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 10.1,
+    "distance_text": null,
+    "size_text": "2.7x1.8",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 25.6,
+      "dec_deg": 51.566667
+    },
+    "constellation_id": "Per",
+    "relationship_status": "catalog_verified",
+    "messier_number": 76,
+    "aliases": [
+      "NGC 650"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 76,
+      "source_type_code": "PN",
+      "source_type_label_ja": "惑星状星雲",
+      "visual_magnitude": 10.1,
+      "angular_size_text": "2.7x1.8",
+      "common_name_en": "Little Dumbbell Nebula",
+      "aliases": [
+        "NGC 650"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 2.7,
+      "minor_arcmin": 1.8,
+      "source_text": "2.7x1.8"
+    }
+  },
+  {
+    "id": "M77",
+    "name": {
+      "ja": "M77",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.9,
+    "distance_text": null,
+    "size_text": "7x6",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 40.675,
+      "dec_deg": 0.033333
+    },
+    "constellation_id": "Cet",
+    "relationship_status": "catalog_verified",
+    "messier_number": 77,
+    "aliases": [
+      "NGC 1068"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 77,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 8.9,
+      "angular_size_text": "7x6",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 1068"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.0,
+      "minor_arcmin": 6.0,
+      "source_text": "7x6"
+    }
+  },
+  {
+    "id": "M78",
+    "name": {
+      "ja": "M78",
+      "en": null
+    },
+    "type": "nebula",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.3,
+    "distance_text": null,
+    "size_text": "8x6",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 86.675,
+      "dec_deg": 0.05
+    },
+    "constellation_id": "Ori",
+    "relationship_status": "catalog_verified",
+    "messier_number": 78,
+    "aliases": [
+      "NGC 2068"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 78,
+      "source_type_code": "DN",
+      "source_type_label_ja": "散光星雲",
+      "visual_magnitude": 8.3,
+      "angular_size_text": "8x6",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 2068"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 8.0,
+      "minor_arcmin": 6.0,
+      "source_text": "8x6"
+    }
+  },
+  {
+    "id": "M79",
+    "name": {
+      "ja": "M79",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.7,
+    "distance_text": null,
+    "size_text": "8.7",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 81.125,
+      "dec_deg": -24.55
+    },
+    "constellation_id": "Lep",
+    "relationship_status": "catalog_verified",
+    "messier_number": 79,
+    "aliases": [
+      "NGC 1904"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 79,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 7.7,
+      "angular_size_text": "8.7",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 1904"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 8.7,
+      "minor_arcmin": 8.7,
+      "source_text": "8.7"
+    }
+  },
+  {
+    "id": "M80",
+    "name": {
+      "ja": "M80",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.3,
+    "distance_text": null,
+    "size_text": "8.9",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 244.25,
+      "dec_deg": -22.983333
+    },
+    "constellation_id": "Sco",
+    "relationship_status": "catalog_verified",
+    "messier_number": 80,
+    "aliases": [
+      "NGC 6093"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 80,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 7.3,
+      "angular_size_text": "8.9",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6093"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 8.9,
+      "minor_arcmin": 8.9,
+      "source_text": "8.9"
+    }
+  },
+  {
+    "id": "M81",
+    "name": {
+      "ja": "M81 ボーデ銀河",
+      "en": "Bode's Galaxy"
+    },
+    "type": "galaxy",
+    "icon": "🌀",
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.9,
+    "distance_text": "約1,160万光年",
+    "size_text": "約26'×14'",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "整った渦巻き。M82とペアで比較観測",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "M81 ボーデ銀河は、整った渦巻き。M82とペアで比較観測天体です。距離は約1,160万光年。見かけの大きさは約26'×14'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "大きく整った渦巻構造を持つ銀河で、近くのM82などと重力相互作用をしています。",
+      "history": "M82と同一視野に入る低倍率観測は、性質の異なる銀河を比較する定番の楽しみ方です。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M81 ボーデ銀河は、整った渦巻き。M82とペアで比較観測天体です。距離は約1,160万光年。見かけの大きさは約26&#x27;×14&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>大きく整った渦巻構造を持つ銀河で、近くのM82などと重力相互作用をしています。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>M82と同一視野に入る低倍率観測は、性質の異なる銀河を比較する定番の楽しみ方です。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 148.8882,
+      "dec_deg": 69.0653
+    },
+    "constellation_id": "UMa",
+    "relationship_status": "catalog_verified",
+    "messier_number": 81,
+    "aliases": [
+      "NGC 3031"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 81,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 6.9,
+      "angular_size_text": "21x10",
+      "common_name_en": "Bode's Galaxy",
+      "aliases": [
+        "NGC 3031"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 26.0,
+      "minor_arcmin": 14.0,
+      "source_text": "約26'×14'"
+    }
+  },
+  {
+    "id": "M82",
+    "name": {
+      "ja": "M82 葉巻銀河",
+      "en": "Cigar Galaxy"
+    },
+    "type": "galaxy",
+    "icon": "💫",
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.4,
+    "distance_text": "約1,200万光年",
+    "size_text": "約11'×4'",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "スターバースト銀河",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "M82 葉巻銀河は、スターバースト銀河天体です。距離は約1,200万光年。見かけの大きさは約11'×4'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "中心部で非常に活発な星形成が起きているスターバースト銀河です。星形成と超新星活動によって銀河面の上下へガスが吹き出しています。",
+      "history": "細長い形から「葉巻銀河」と呼ばれ、M81との相互作用が活発な星形成を促したと考えられています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M82 葉巻銀河は、スターバースト銀河天体です。距離は約1,200万光年。見かけの大きさは約11&#x27;×4&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>中心部で非常に活発な星形成が起きているスターバースト銀河です。星形成と超新星活動によって銀河面の上下へガスが吹き出しています。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>細長い形から「葉巻銀河」と呼ばれ、M81との相互作用が活発な星形成を促したと考えられています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 148.9696,
+      "dec_deg": 69.6797
+    },
+    "constellation_id": "UMa",
+    "relationship_status": "catalog_verified",
+    "messier_number": 82,
+    "aliases": [
+      "NGC 3034"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 82,
+      "source_type_code": "IG",
+      "source_type_label_ja": "不規則銀河",
+      "visual_magnitude": 8.4,
+      "angular_size_text": "9x4",
+      "common_name_en": "Cigar Galaxy",
+      "aliases": [
+        "NGC 3034"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 11.0,
+      "minor_arcmin": 4.0,
+      "source_text": "約11'×4'"
+    }
+  },
+  {
+    "id": "M83",
+    "name": {
+      "ja": "M83",
+      "en": "Southern Pinwheel"
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.6,
+    "distance_text": null,
+    "size_text": "11x10",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 204.25,
+      "dec_deg": -29.866667
+    },
+    "constellation_id": "Hya",
+    "relationship_status": "catalog_verified",
+    "messier_number": 83,
+    "aliases": [
+      "NGC 5236"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 83,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 7.6,
+      "angular_size_text": "11x10",
+      "common_name_en": "Southern Pinwheel",
+      "aliases": [
+        "NGC 5236"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 11.0,
+      "minor_arcmin": 10.0,
+      "source_text": "11x10"
+    }
+  },
+  {
+    "id": "M84",
+    "name": {
+      "ja": "M84",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.1,
+    "distance_text": null,
+    "size_text": "5",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 186.275,
+      "dec_deg": 12.883333
+    },
+    "constellation_id": "Vir",
+    "relationship_status": "catalog_verified",
+    "messier_number": 84,
+    "aliases": [
+      "NGC 4374"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 84,
+      "source_type_code": "LG",
+      "source_type_label_ja": "レンズ状銀河",
+      "visual_magnitude": 9.1,
+      "angular_size_text": "5",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4374"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 5.0,
+      "minor_arcmin": 5.0,
+      "source_text": "5"
+    }
+  },
+  {
+    "id": "M85",
+    "name": {
+      "ja": "M85",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.1,
+    "distance_text": null,
+    "size_text": "7.1x5.2",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 186.375,
+      "dec_deg": 18.2
+    },
+    "constellation_id": "Com",
+    "relationship_status": "catalog_verified",
+    "messier_number": 85,
+    "aliases": [
+      "NGC 4382"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 85,
+      "source_type_code": "LG",
+      "source_type_label_ja": "レンズ状銀河",
+      "visual_magnitude": 9.1,
+      "angular_size_text": "7.1x5.2",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4382"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.1,
+      "minor_arcmin": 5.2,
+      "source_text": "7.1x5.2"
+    }
+  },
+  {
+    "id": "M86",
+    "name": {
+      "ja": "M86",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.9,
+    "distance_text": null,
+    "size_text": "7.5x5.5",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 186.55,
+      "dec_deg": 12.95
+    },
+    "constellation_id": "Vir",
+    "relationship_status": "catalog_verified",
+    "messier_number": 86,
+    "aliases": [
+      "NGC 4406"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 86,
+      "source_type_code": "LG",
+      "source_type_label_ja": "レンズ状銀河",
+      "visual_magnitude": 8.9,
+      "angular_size_text": "7.5x5.5",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4406"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.5,
+      "minor_arcmin": 5.5,
+      "source_text": "7.5x5.5"
+    }
+  },
+  {
+    "id": "M87",
+    "name": {
+      "ja": "M87 楕円銀河（乙女座A）",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": "🔵",
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.6,
+    "distance_text": "約5,400万光年",
+    "size_text": "約7'×7'",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "2019年に人類初のブラックホール撮影に成功",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explanation": {
+      "overview": "M87 楕円銀河（乙女座A）は、2019年に人類初のブラックホール撮影に成功天体です。距離は約5,400万光年。見かけの大きさは約7'×7'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "巨大楕円銀河で、中心には超大質量ブラックホールがあります。相対論的ジェットを放ち、銀河団中心の活動銀河として重要です。",
+      "history": "Event Horizon Telescopeにより、2019年に中心ブラックホール周辺の画像が初めて公開されました。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M87 楕円銀河（乙女座A）は、2019年に人類初のブラックホール撮影に成功天体です。距離は約5,400万光年。見かけの大きさは約7&#x27;×7&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>巨大楕円銀河で、中心には超大質量ブラックホールがあります。相対論的ジェットを放ち、銀河団中心の活動銀河として重要です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>Event Horizon Telescopeにより、2019年に中心ブラックホール周辺の画像が初めて公開されました。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 187.7059,
+      "dec_deg": 12.3911
+    },
+    "constellation_id": "Vir",
+    "relationship_status": "catalog_verified",
+    "messier_number": 87,
+    "aliases": [
+      "NGC 4486"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 87,
+      "source_type_code": "EG",
+      "source_type_label_ja": "楕円銀河",
+      "visual_magnitude": 8.6,
+      "angular_size_text": "7",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4486"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.0,
+      "minor_arcmin": 7.0,
+      "source_text": "約7'×7'"
+    }
+  },
+  {
+    "id": "M88",
+    "name": {
+      "ja": "M88",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.6,
+    "distance_text": null,
+    "size_text": "7x4",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 188.025,
+      "dec_deg": 14.433333
+    },
+    "constellation_id": "Com",
+    "relationship_status": "catalog_verified",
+    "messier_number": 88,
+    "aliases": [
+      "NGC 4501"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 88,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 9.6,
+      "angular_size_text": "7x4",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4501"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.0,
+      "minor_arcmin": 4.0,
+      "source_text": "7x4"
+    }
+  },
+  {
+    "id": "M89",
+    "name": {
+      "ja": "M89",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.8,
+    "distance_text": null,
+    "size_text": "4",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 188.925,
+      "dec_deg": 12.55
+    },
+    "constellation_id": "Vir",
+    "relationship_status": "catalog_verified",
+    "messier_number": 89,
+    "aliases": [
+      "NGC 4552"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 89,
+      "source_type_code": "EG",
+      "source_type_label_ja": "楕円銀河",
+      "visual_magnitude": 9.8,
+      "angular_size_text": "4",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4552"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 4.0,
+      "minor_arcmin": 4.0,
+      "source_text": "4"
+    }
+  },
+  {
+    "id": "M90",
+    "name": {
+      "ja": "M90",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.5,
+    "distance_text": null,
+    "size_text": "9.5x4.5",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 189.2,
+      "dec_deg": 13.166667
+    },
+    "constellation_id": "Vir",
+    "relationship_status": "catalog_verified",
+    "messier_number": 90,
+    "aliases": [
+      "NGC 4569"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 90,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 9.5,
+      "angular_size_text": "9.5x4.5",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4569"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 9.5,
+      "minor_arcmin": 4.5,
+      "source_text": "9.5x4.5"
+    }
+  },
+  {
+    "id": "M91",
+    "name": {
+      "ja": "M91",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 10.2,
+    "distance_text": null,
+    "size_text": "5.4x4.4",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 188.875,
+      "dec_deg": 14.5
+    },
+    "constellation_id": "Com",
+    "relationship_status": "catalog_verified",
+    "messier_number": 91,
+    "aliases": [
+      "NGC 4548"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 91,
+      "source_type_code": "BG",
+      "source_type_label_ja": "棒渦巻銀河",
+      "visual_magnitude": 10.2,
+      "angular_size_text": "5.4x4.4",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4548"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 5.4,
+      "minor_arcmin": 4.4,
+      "source_text": "5.4x4.4"
+    }
+  },
+  {
+    "id": "M92",
+    "name": {
+      "ja": "M92 球状星団",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": "⭐",
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.5,
+    "distance_text": "約2万6,700光年",
+    "size_text": "約14'",
+    "recommended_magnification": "100〜200倍",
+    "highlight": "M13の近くのヘルクレス座球状星団",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M92 球状星団は、M13の近くのヘルクレス座球状星団天体です。距離は約2万6,700光年。見かけの大きさは約14'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
+      "history": "メシエ天体M92としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M92 球状星団は、M13の近くのヘルクレス座球状星団天体です。距離は約2万6,700光年。見かけの大きさは約14&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>メシエ天体M92としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 259.2808,
+      "dec_deg": 43.1358
+    },
+    "constellation_id": "Her",
+    "relationship_status": "catalog_verified",
+    "messier_number": 92,
+    "aliases": [
+      "NGC 6341"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 92,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 6.4,
+      "angular_size_text": "11.2",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6341"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 14.0,
+      "minor_arcmin": 14.0,
+      "source_text": "約14'"
+    }
+  },
+  {
+    "id": "M93",
+    "name": {
+      "ja": "M93",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 6.0,
+    "distance_text": null,
+    "size_text": "22",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 116.15,
+      "dec_deg": -23.866667
+    },
+    "constellation_id": "Pup",
+    "relationship_status": "catalog_verified",
+    "messier_number": 93,
+    "aliases": [
+      "NGC 2447"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 93,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 6.0,
+      "angular_size_text": "22",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 2447"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 22.0,
+      "minor_arcmin": 22.0,
+      "source_text": "22"
+    }
+  },
+  {
+    "id": "M94",
+    "name": {
+      "ja": "M94",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.2,
+    "distance_text": null,
+    "size_text": "7x3",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 192.725,
+      "dec_deg": 41.133333
+    },
+    "constellation_id": "CVn",
+    "relationship_status": "catalog_verified",
+    "messier_number": 94,
+    "aliases": [
+      "NGC 4736"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 94,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 8.2,
+      "angular_size_text": "7x3",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4736"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.0,
+      "minor_arcmin": 3.0,
+      "source_text": "7x3"
+    }
+  },
+  {
+    "id": "M95",
+    "name": {
+      "ja": "M95",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.7,
+    "distance_text": null,
+    "size_text": "4.4x3.3",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 161.0,
+      "dec_deg": 11.7
+    },
+    "constellation_id": "Leo",
+    "relationship_status": "catalog_verified",
+    "messier_number": 95,
+    "aliases": [
+      "NGC 3351"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 95,
+      "source_type_code": "BG",
+      "source_type_label_ja": "棒渦巻銀河",
+      "visual_magnitude": 9.7,
+      "angular_size_text": "4.4x3.3",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 3351"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 4.4,
+      "minor_arcmin": 3.3,
+      "source_text": "4.4x3.3"
+    }
+  },
+  {
+    "id": "M96",
+    "name": {
+      "ja": "M96",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.2,
+    "distance_text": null,
+    "size_text": "6x4",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 161.7,
+      "dec_deg": 11.816667
+    },
+    "constellation_id": "Leo",
+    "relationship_status": "catalog_verified",
+    "messier_number": 96,
+    "aliases": [
+      "NGC 3368"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 96,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 9.2,
+      "angular_size_text": "6x4",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 3368"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 6.0,
+      "minor_arcmin": 4.0,
+      "source_text": "6x4"
+    }
+  },
+  {
+    "id": "M97",
+    "name": {
+      "ja": "M97",
+      "en": "Owl Nebula"
+    },
+    "type": "nebula",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.9,
+    "distance_text": null,
+    "size_text": "3.4x3.3",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 168.7,
+      "dec_deg": 55.016667
+    },
+    "constellation_id": "UMa",
+    "relationship_status": "catalog_verified",
+    "messier_number": 97,
+    "aliases": [
+      "NGC 3587"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 97,
+      "source_type_code": "PN",
+      "source_type_label_ja": "惑星状星雲",
+      "visual_magnitude": 9.9,
+      "angular_size_text": "3.4x3.3",
+      "common_name_en": "Owl Nebula",
+      "aliases": [
+        "NGC 3587"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 3.4,
+      "minor_arcmin": 3.3,
+      "source_text": "3.4x3.3"
+    }
+  },
+  {
+    "id": "M98",
+    "name": {
+      "ja": "M98",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 10.1,
+    "distance_text": null,
+    "size_text": "9.5x3.2",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 183.475,
+      "dec_deg": 14.916667
+    },
+    "constellation_id": "Com",
+    "relationship_status": "catalog_verified",
+    "messier_number": 98,
+    "aliases": [
+      "NGC 4192"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 98,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 10.1,
+      "angular_size_text": "9.5x3.2",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4192"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 9.5,
+      "minor_arcmin": 3.2,
+      "source_text": "9.5x3.2"
+    }
+  },
+  {
+    "id": "M99",
+    "name": {
+      "ja": "M99",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.9,
+    "distance_text": null,
+    "size_text": "5.4x4.8",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 184.725,
+      "dec_deg": 14.433333
+    },
+    "constellation_id": "Com",
+    "relationship_status": "catalog_verified",
+    "messier_number": 99,
+    "aliases": [
+      "NGC 4254"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 99,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 9.9,
+      "angular_size_text": "5.4x4.8",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4254"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 5.4,
+      "minor_arcmin": 4.8,
+      "source_text": "5.4x4.8"
+    }
+  },
+  {
+    "id": "M100",
+    "name": {
+      "ja": "M100",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.3,
+    "distance_text": null,
+    "size_text": "7x6",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 185.75,
+      "dec_deg": 15.833333
+    },
+    "constellation_id": "Com",
+    "relationship_status": "catalog_verified",
+    "messier_number": 100,
+    "aliases": [
+      "NGC 4321"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 100,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 9.3,
+      "angular_size_text": "7x6",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4321"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.0,
+      "minor_arcmin": 6.0,
+      "source_text": "7x6"
+    }
+  },
+  {
+    "id": "M101",
+    "name": {
+      "ja": "M101 風車銀河",
+      "en": "Pinwheel Galaxy"
+    },
+    "type": "galaxy",
+    "icon": "🌀",
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.9,
+    "distance_text": "約2,700万光年",
+    "size_text": "約29'×27'",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "正面向きの大型渦巻銀河",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M101 風車銀河は、正面向きの大型渦巻銀河天体です。距離は約2,700万光年。見かけの大きさは約29'×27'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。30〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "正面向きに近い大型渦巻銀河で、腕に多数のHII領域が見られます。非対称な構造は周辺銀河との相互作用の影響も受けています。",
+      "history": "「風車銀河」の名の通り渦巻腕が大きく広がりますが、表面輝度が低いため暗い空が重要です。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M101 風車銀河は、正面向きの大型渦巻銀河天体です。距離は約2,700万光年。見かけの大きさは約29&#x27;×27&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。30〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>正面向きに近い大型渦巻銀河で、腕に多数のHII領域が見られます。非対称な構造は周辺銀河との相互作用の影響も受けています。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>「風車銀河」の名の通り渦巻腕が大きく広がりますが、表面輝度が低いため暗い空が重要です。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 210.8025,
+      "dec_deg": 54.3492
+    },
+    "constellation_id": "UMa",
+    "relationship_status": "catalog_verified",
+    "messier_number": 101,
+    "aliases": [
+      "NGC 5457"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 101,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 7.9,
+      "angular_size_text": "22",
+      "common_name_en": "Pinwheel Galaxy",
+      "aliases": [
+        "NGC 5457"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 29.0,
+      "minor_arcmin": 27.0,
+      "source_text": "約29'×27'"
+    }
+  },
+  {
+    "id": "M102",
+    "name": {
+      "ja": "M102",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.9,
+    "distance_text": null,
+    "size_text": "5.2x2.3",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 226.625,
+      "dec_deg": 55.766667
+    },
+    "constellation_id": "Dra",
+    "relationship_status": "catalog_verified",
+    "messier_number": 102,
+    "aliases": [
+      "NGC 5866"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 102,
+      "source_type_code": "LG",
+      "source_type_label_ja": "レンズ状銀河",
+      "visual_magnitude": 9.9,
+      "angular_size_text": "5.2x2.3",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 5866"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "identity_note": "M102の同定には歴史的な議論がある。本DBでは実用上広く用いられるNGC 5866をM102として収録。",
+    "identity_status": "conventional_ngc5866",
+    "angular_size": {
+      "major_arcmin": 5.2,
+      "minor_arcmin": 2.3,
+      "source_text": "5.2x2.3"
+    }
+  },
+  {
+    "id": "M103",
+    "name": {
+      "ja": "M103",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.4,
+    "distance_text": null,
+    "size_text": "6",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 23.3,
+      "dec_deg": 60.7
+    },
+    "constellation_id": "Cas",
+    "relationship_status": "catalog_verified",
+    "messier_number": 103,
+    "aliases": [
+      "NGC 581"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 103,
+      "source_type_code": "OC",
+      "source_type_label_ja": "散開星団",
+      "visual_magnitude": 7.4,
+      "angular_size_text": "6",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 581"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 6.0,
+      "minor_arcmin": 6.0,
+      "source_text": "6"
+    }
+  },
+  {
+    "id": "M104",
+    "name": {
+      "ja": "M104 ソンブレロ銀河",
+      "en": "Sombrero Galaxy"
+    },
+    "type": "galaxy",
+    "icon": "🎩",
+    "catalog_category": "メシエ",
+    "magnitude_v": 8,
+    "distance_text": "約2,800万光年",
+    "size_text": "約9'×4'",
+    "recommended_magnification": "50〜150倍",
+    "highlight": "ソンブレロ帽のような形",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explanation": {
+      "overview": "M104 ソンブレロ銀河は、ソンブレロ帽のような形天体です。距離は約2,800万光年。見かけの大きさは約9'×4'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜150倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "大きなバルジと濃いダストレーンを持つ銀河で、ほぼ横向きに近い角度から見ています。巨大な球状星団系も知られます。",
+      "history": "帽子のつばのような暗黒帯と明るい中心部から「ソンブレロ銀河」と呼ばれます。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>M104 ソンブレロ銀河は、ソンブレロ帽のような形天体です。距離は約2,800万光年。見かけの大きさは約9&#x27;×4&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜150倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>大きなバルジと濃いダストレーンを持つ銀河で、ほぼ横向きに近い角度から見ています。巨大な球状星団系も知られます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>帽子のつばのような暗黒帯と明るい中心部から「ソンブレロ銀河」と呼ばれます。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 189.9977,
+      "dec_deg": -11.6231
+    },
+    "constellation_id": "Vir",
+    "relationship_status": "catalog_verified",
+    "messier_number": 104,
+    "aliases": [
+      "NGC 4594"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 104,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 8.0,
+      "angular_size_text": "9x4",
+      "common_name_en": "Sombrero Galaxy",
+      "aliases": [
+        "NGC 4594"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 9.0,
+      "minor_arcmin": 4.0,
+      "source_text": "約9'×4'"
+    }
+  },
+  {
+    "id": "M105",
+    "name": {
+      "ja": "M105",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.3,
+    "distance_text": null,
+    "size_text": "2",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 161.95,
+      "dec_deg": 12.583333
+    },
+    "constellation_id": "Leo",
+    "relationship_status": "catalog_verified",
+    "messier_number": 105,
+    "aliases": [
+      "NGC 3379"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 105,
+      "source_type_code": "EG",
+      "source_type_label_ja": "楕円銀河",
+      "visual_magnitude": 9.3,
+      "angular_size_text": "2",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 3379"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 2.0,
+      "minor_arcmin": 2.0,
+      "source_text": "2"
+    }
+  },
+  {
+    "id": "M106",
+    "name": {
+      "ja": "M106",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.4,
+    "distance_text": null,
+    "size_text": "19x8",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 184.725,
+      "dec_deg": 47.316667
+    },
+    "constellation_id": "CVn",
+    "relationship_status": "catalog_verified",
+    "messier_number": 106,
+    "aliases": [
+      "NGC 4258"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 106,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 8.4,
+      "angular_size_text": "19x8",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 4258"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 19.0,
+      "minor_arcmin": 8.0,
+      "source_text": "19x8"
+    }
+  },
+  {
+    "id": "M107",
+    "name": {
+      "ja": "M107",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 7.9,
+    "distance_text": null,
+    "size_text": "10",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 248.125,
+      "dec_deg": -13.05
+    },
+    "constellation_id": "Oph",
+    "relationship_status": "catalog_verified",
+    "messier_number": 107,
+    "aliases": [
+      "NGC 6171"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 107,
+      "source_type_code": "GC",
+      "source_type_label_ja": "球状星団",
+      "visual_magnitude": 7.9,
+      "angular_size_text": "10",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 6171"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 10.0,
+      "minor_arcmin": 10.0,
+      "source_text": "10"
+    }
+  },
+  {
+    "id": "M108",
+    "name": {
+      "ja": "M108",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 10.0,
+    "distance_text": null,
+    "size_text": "8x1",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 167.875,
+      "dec_deg": 55.666667
+    },
+    "constellation_id": "UMa",
+    "relationship_status": "catalog_verified",
+    "messier_number": 108,
+    "aliases": [
+      "NGC 3556"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 108,
+      "source_type_code": "SG",
+      "source_type_label_ja": "渦巻銀河",
+      "visual_magnitude": 10.0,
+      "angular_size_text": "8x1",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 3556"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 8.0,
+      "minor_arcmin": 1.0,
+      "source_text": "8x1"
+    }
+  },
+  {
+    "id": "M109",
+    "name": {
+      "ja": "M109",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 9.8,
+    "distance_text": null,
+    "size_text": "7x4",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 179.4,
+      "dec_deg": 53.383333
+    },
+    "constellation_id": "UMa",
+    "relationship_status": "catalog_verified",
+    "messier_number": 109,
+    "aliases": [
+      "NGC 3992"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 109,
+      "source_type_code": "BG",
+      "source_type_label_ja": "棒渦巻銀河",
+      "visual_magnitude": 9.8,
+      "angular_size_text": "7x4",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 3992"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 7.0,
+      "minor_arcmin": 4.0,
+      "source_text": "7x4"
+    }
+  },
+  {
+    "id": "M110",
+    "name": {
+      "ja": "M110",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": null,
+    "catalog_category": "メシエ",
+    "magnitude_v": 8.5,
+    "distance_text": null,
+    "size_text": "17x10",
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "explanation_status": "catalog_only",
+    "source": {
+      "dataset": "Messier catalog enrichment",
+      "version": "0.1.1"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 10.1,
+      "dec_deg": 41.683333
+    },
+    "constellation_id": "And",
+    "relationship_status": "catalog_verified",
+    "messier_number": 110,
+    "aliases": [
+      "NGC 205"
+    ],
+    "catalog_metadata": {
+      "catalog": "Messier",
+      "messier_number": 110,
+      "source_type_code": "EG",
+      "source_type_label_ja": "楕円銀河",
+      "visual_magnitude": 8.5,
+      "angular_size_text": "17x10",
+      "common_name_en": null,
+      "aliases": [
+        "NGC 205"
+      ],
+      "source": "brettonw/YaleBrightStarCatalog messier.json"
+    },
+    "angular_size": {
+      "major_arcmin": 17.0,
+      "minor_arcmin": 10.0,
+      "source_text": "17x10"
+    }
+  },
+  {
+    "id": "IC434",
+    "name": {
+      "ja": "IC434 馬頭星雲",
+      "en": null
+    },
+    "type": "nebula",
+    "icon": "🐴",
+    "catalog_category": "IC",
+    "magnitude_v": 6.8,
+    "distance_text": "約1,500光年",
+    "size_text": "約60'×10'",
+    "recommended_magnification": "50〜100倍（Hβフィルター推奨）",
+    "highlight": "馬の頭の形をした暗黒星雲",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "IC434 馬頭星雲は、馬の頭の形をした暗黒星雲天体です。距離は約1,500光年。見かけの大きさは約60'×10'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "眼視難度の高い暗黒星雲です。50〜100倍（Hβフィルター推奨）を目安に大口径・十分な暗順応・Hβフィルターを組み合わせ、背景のIC434とのわずかな明暗差を探します。",
+      "science": "IC434という淡い発光星雲を背景に、前景の冷たい暗黒雲Barnard 33がシルエットとして浮かぶことで馬頭形が見えます。",
+      "history": "写真では有名ですが眼視では非常に難しく、暗い空・大口径・Hβフィルターが大きな助けになります。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>IC434 馬頭星雲は、馬の頭の形をした暗黒星雲天体です。距離は約1,500光年。見かけの大きさは約60&#x27;×10&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>眼視難度の高い暗黒星雲です。50〜100倍（Hβフィルター推奨）を目安に大口径・十分な暗順応・Hβフィルターを組み合わせ、背景のIC434とのわずかな明暗差を探します。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>IC434という淡い発光星雲を背景に、前景の冷たい暗黒雲Barnard 33がシルエットとして浮かぶことで馬頭形が見えます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>写真では有名ですが眼視では非常に難しく、暗い空・大口径・Hβフィルターが大きな助けになります。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 85.25,
+      "dec_deg": -2.4583
+    },
+    "constellation_id": "Ori",
+    "relationship_status": "catalog_verified",
+    "constellation_source": "OpenNGC Const field",
+    "angular_size": {
+      "major_arcmin": 60.0,
+      "minor_arcmin": 10.0,
+      "source_text": "約60'×10'"
+    }
+  },
+  {
+    "id": "NGC3628",
+    "name": {
+      "ja": "NGC3628 ハンバーガー銀河",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": "🍔",
+    "catalog_category": "NGC",
+    "magnitude_v": 9.5,
+    "distance_text": "約3,500万光年",
+    "size_text": "約15'×3.5'",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "レオトリプレットの3番目",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "NGC3628 ハンバーガー銀河は、レオトリプレットの3番目天体です。距離は約3,500万光年。見かけの大きさは約15'×3.5'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "ほぼ横向きの渦巻銀河で、濃いダストレーンが円盤を二分して見せます。M65・M66との重力相互作用で長い潮汐尾も形成されています。",
+      "history": "M65、M66と合わせて「レオトリプレット」を構成し、3銀河を同一視野で比較できます。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>NGC3628 ハンバーガー銀河は、レオトリプレットの3番目天体です。距離は約3,500万光年。見かけの大きさは約15&#x27;×3.5&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>ほぼ横向きの渦巻銀河で、濃いダストレーンが円盤を二分して見せます。M65・M66との重力相互作用で長い潮汐尾も形成されています。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>M65、M66と合わせて「レオトリプレット」を構成し、3銀河を同一視野で比較できます。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 170.07,
+      "dec_deg": 13.5892
+    },
+    "constellation_id": "Leo",
+    "relationship_status": "catalog_verified",
+    "constellation_source": "OpenNGC Const field",
+    "angular_size": {
+      "major_arcmin": 15.0,
+      "minor_arcmin": 3.5,
+      "source_text": "約15'×3.5'"
+    }
+  },
+  {
+    "id": "NGC4565",
+    "name": {
+      "ja": "NGC4565 針銀河",
+      "en": null
+    },
+    "type": "galaxy",
+    "icon": "🪡",
+    "catalog_category": "NGC",
+    "magnitude_v": 9.6,
+    "distance_text": "約4,200万光年",
+    "size_text": "約16'×2'",
+    "recommended_magnification": "50〜150倍",
+    "highlight": "完全な横向き銀河の代表例",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explanation": {
+      "overview": "NGC4565 針銀河は、完全な横向き銀河の代表例天体です。距離は約4,200万光年。見かけの大きさは約16'×2'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜150倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
+      "science": "薄い円盤をほぼ真横から見ている渦巻銀河で、中央バルジと細いダストレーンが目立ちます。銀河円盤の厚みを視覚的に理解しやすい天体です。",
+      "history": "針のように細長い外観から「針銀河」と呼ばれます。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>NGC4565 針銀河は、完全な横向き銀河の代表例天体です。距離は約4,200万光年。見かけの大きさは約16&#x27;×2&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜150倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>薄い円盤をほぼ真横から見ている渦巻銀河で、中央バルジと細いダストレーンが目立ちます。銀河円盤の厚みを視覚的に理解しやすい天体です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>針のように細長い外観から「針銀河」と呼ばれます。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 189.0867,
+      "dec_deg": 25.9878
+    },
+    "constellation_id": "Com",
+    "relationship_status": "catalog_verified",
+    "constellation_source": "OpenNGC Const field",
+    "angular_size": {
+      "major_arcmin": 16.0,
+      "minor_arcmin": 2.0,
+      "source_text": "約16'×2'"
+    }
+  },
+  {
+    "id": "NGC6543",
+    "name": {
+      "ja": "NGC6543 キャッツアイ星雲",
+      "en": null
+    },
+    "type": "nebula",
+    "icon": "👁️",
+    "catalog_category": "NGC",
+    "magnitude_v": 8.1,
+    "distance_text": "約3,300光年",
+    "size_text": "約0.3'",
+    "recommended_magnification": "150〜300倍",
+    "highlight": "複雑な多重構造を持つ惑星状星雲",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "NGC6543 キャッツアイ星雲は、複雑な多重構造を持つ惑星状星雲天体です。距離は約3,300光年。見かけの大きさは約0.3'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "惑星状星雲は比較的小さく表面輝度が高いものが多いため、150〜300倍で倍率を上げても形を保ちやすい対象です。OIIIフィルターがコントラスト改善に有効な場合があります。",
+      "science": "中心星が複数回にわたって放出したガスや恒星風が複雑な殻を作る惑星状星雲です。高倍率・高解像度ほど細部が現れます。",
+      "history": "中心部の模様が猫の目のように見えることから「キャッツアイ星雲」の名があります。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>NGC6543 キャッツアイ星雲は、複雑な多重構造を持つ惑星状星雲天体です。距離は約3,300光年。見かけの大きさは約0.3&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>惑星状星雲は比較的小さく表面輝度が高いものが多いため、150〜300倍で倍率を上げても形を保ちやすい対象です。OIIIフィルターがコントラスト改善に有効な場合があります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>中心星が複数回にわたって放出したガスや恒星風が複雑な殻を作る惑星状星雲です。高倍率・高解像度ほど細部が現れます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>中心部の模様が猫の目のように見えることから「キャッツアイ星雲」の名があります。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 269.6392,
+      "dec_deg": 66.6333
+    },
+    "constellation_id": "Dra",
+    "relationship_status": "catalog_verified",
+    "constellation_source": "OpenNGC Const field",
+    "angular_size": {
+      "major_arcmin": 0.3,
+      "minor_arcmin": 0.3,
+      "source_text": "約0.3'"
+    }
+  },
+  {
+    "id": "NGC6992",
+    "name": {
+      "ja": "NGC6992 網状星雲",
+      "en": null
+    },
+    "type": "snr",
+    "icon": "🕸️",
+    "catalog_category": "NGC",
+    "magnitude_v": 7,
+    "distance_text": "約2,100光年",
+    "size_text": "約60'×8'",
+    "recommended_magnification": "20〜50倍",
+    "highlight": "約5,000〜8,000年前の超新星爆発の残骸",
+    "visible_months_legacy": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "NGC6992 網状星雲は、約5,000〜8,000年前の超新星爆発の残骸天体です。距離は約2,100光年。見かけの大きさは約60'×8'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "非常に淡い広がりを持つため、暗い空と低〜中倍率が有利です。20〜50倍を目安に、直接注視せずそらし目を使うと細い構造が浮かびやすくなります。",
+      "science": "はくちょう座ループと呼ばれる巨大な超新星残骸の一部です。衝撃波が星間ガスを加熱・電離し、細いフィラメント状に光ります。",
+      "history": "網のような繊細な構造から「網状星雲」と呼ばれ、OIIIフィルターが特に有効な対象として有名です。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>NGC6992 網状星雲は、約5,000〜8,000年前の超新星爆発の残骸天体です。距離は約2,100光年。見かけの大きさは約60&#x27;×8&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>非常に淡い広がりを持つため、暗い空と低〜中倍率が有利です。20〜50倍を目安に、直接注視せずそらし目を使うと細い構造が浮かびやすくなります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>はくちょう座ループと呼ばれる巨大な超新星残骸の一部です。衝撃波が星間ガスを加熱・電離し、細いフィラメント状に光ります。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>網のような繊細な構造から「網状星雲」と呼ばれ、OIIIフィルターが特に有効な対象として有名です。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 314.2,
+      "dec_deg": 31.7167
+    },
+    "constellation_id": "Cyg",
+    "relationship_status": "catalog_verified",
+    "constellation_source": "OpenNGC Const field",
+    "angular_size": {
+      "major_arcmin": 60.0,
+      "minor_arcmin": 8.0,
+      "source_text": "約60'×8'"
+    }
+  },
+  {
+    "id": "NGC7000",
+    "name": {
+      "ja": "NGC7000 北アメリカ星雲",
+      "en": null
+    },
+    "type": "nebula",
+    "icon": "🌎",
+    "catalog_category": "NGC",
+    "magnitude_v": 4,
+    "distance_text": "約2,600光年",
+    "size_text": "約120'×100'",
+    "recommended_magnification": "肉眼〜10倍",
+    "highlight": "北アメリカ大陸の形をした巨大散光星雲",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "NGC7000 北アメリカ星雲は、北アメリカ大陸の形をした巨大散光星雲天体です。距離は約2,600光年。見かけの大きさは約120'×100'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼〜10倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。",
+      "science": "巨大なHII領域で、星間ガスが電離して赤く輝きます。非常に広いため望遠鏡より双眼鏡や低倍率、写真撮影との相性が良い対象です。",
+      "history": "外形が北アメリカ大陸に似ることからこの愛称が付きました。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>NGC7000 北アメリカ星雲は、北アメリカ大陸の形をした巨大散光星雲天体です。距離は約2,600光年。見かけの大きさは約120&#x27;×100&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼〜10倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>巨大なHII領域で、星間ガスが電離して赤く輝きます。非常に広いため望遠鏡より双眼鏡や低倍率、写真撮影との相性が良い対象です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>外形が北アメリカ大陸に似ることからこの愛称が付きました。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 314.7333,
+      "dec_deg": 44.3167
+    },
+    "constellation_id": "Cyg",
+    "relationship_status": "catalog_verified",
+    "constellation_source": "OpenNGC Const field",
+    "angular_size": {
+      "major_arcmin": 120.0,
+      "minor_arcmin": 100.0,
+      "source_text": "約120'×100'"
+    }
+  },
+  {
+    "id": "NGC7293",
+    "name": {
+      "ja": "NGC7293 らせん星雲",
+      "en": null
+    },
+    "type": "nebula",
+    "icon": "🌀",
+    "catalog_category": "NGC",
+    "magnitude_v": 7.6,
+    "distance_text": "約655光年",
+    "size_text": "約16'",
+    "recommended_magnification": "30〜80倍",
+    "highlight": "地球に最も近い惑星状星雲",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "NGC7293 らせん星雲は、地球に最も近い惑星状星雲天体です。距離は約655光年。見かけの大きさは約16'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "惑星状星雲は比較的小さく表面輝度が高いものが多いため、30〜80倍で倍率を上げても形を保ちやすい対象です。OIIIフィルターがコントラスト改善に有効な場合があります。",
+      "science": "太陽に比較的近い惑星状星雲で、中心星から放出されたガス殻をほぼ正面から見ています。写真では複雑な環状構造が分かります。",
+      "history": "大きく淡い姿から「らせん星雲」と呼ばれ、写真では「神の目」の愛称で紹介されることもあります。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>NGC7293 らせん星雲は、地球に最も近い惑星状星雲天体です。距離は約655光年。見かけの大きさは約16&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>惑星状星雲は比較的小さく表面輝度が高いものが多いため、30〜80倍で倍率を上げても形を保ちやすい対象です。OIIIフィルターがコントラスト改善に有効な場合があります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>太陽に比較的近い惑星状星雲で、中心星から放出されたガス殻をほぼ正面から見ています。写真では複雑な環状構造が分かります。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>大きく淡い姿から「らせん星雲」と呼ばれ、写真では「神の目」の愛称で紹介されることもあります。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 337.4108,
+      "dec_deg": -20.8372
+    },
+    "constellation_id": "Aqr",
+    "relationship_status": "catalog_verified",
+    "constellation_source": "OpenNGC Const field",
+    "angular_size": {
+      "major_arcmin": 16.0,
+      "minor_arcmin": 16.0,
+      "source_text": "約16'"
+    }
+  },
+  {
+    "id": "NGC7789",
+    "name": {
+      "ja": "NGC7789 カロリーンのバラ",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": "🌹",
+    "catalog_category": "NGC",
+    "magnitude_v": 6.7,
+    "distance_text": "約8,000光年",
+    "size_text": "約25'",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "カシオペヤ座の豪華な散開星団",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "explanation": {
+      "overview": "NGC7789 カロリーンのバラは、カシオペヤ座の豪華な散開星団天体です。距離は約8,000光年。見かけの大きさは約25'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "30〜100倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
+      "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
+      "history": "NGC（New General Catalogue）に収録された天体です。NGCは19世紀末にまとめられ、星雲・星団・銀河などを整理した代表的な深宇宙天体カタログです。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>NGC7789 カロリーンのバラは、カシオペヤ座の豪華な散開星団天体です。距離は約8,000光年。見かけの大きさは約25&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>30〜100倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>NGC（New General Catalogue）に収録された天体です。NGCは19世紀末にまとめられ、星雲・星団・銀河などを整理した代表的な深宇宙天体カタログです。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 359.3333,
+      "dec_deg": 56.7167
+    },
+    "constellation_id": "Cas",
+    "relationship_status": "catalog_verified",
+    "constellation_source": "OpenNGC Const field",
+    "angular_size": {
+      "major_arcmin": 25.0,
+      "minor_arcmin": 25.0,
+      "source_text": "約25'"
+    }
+  },
+  {
+    "id": "NGC869",
+    "name": {
+      "ja": "NGC869/884 ペルセウス二重星団",
+      "en": null
+    },
+    "type": "cluster",
+    "icon": "💫",
+    "catalog_category": "NGC",
+    "magnitude_v": 4.3,
+    "distance_text": "約7,500光年",
+    "size_text": "約30'×30'",
+    "recommended_magnification": "20〜40倍",
+    "highlight": "2つの星団が並ぶ絶景",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "explanation": {
+      "overview": "NGC869/884 ペルセウス二重星団は、2つの星団が並ぶ絶景天体です。距離は約7,500光年。見かけの大きさは約30'×30'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "広がりを楽しむため低倍率が基本です。20〜40倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
+      "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
+      "history": "NGC（New General Catalogue）に収録された天体です。NGCは19世紀末にまとめられ、星雲・星団・銀河などを整理した代表的な深宇宙天体カタログです。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>NGC869/884 ペルセウス二重星団は、2つの星団が並ぶ絶景天体です。距離は約7,500光年。見かけの大きさは約30&#x27;×30&#x27;。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>広がりを楽しむため低倍率が基本です。20〜40倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>NGC（New General Catalogue）に収録された天体です。NGCは19世紀末にまとめられ、星雲・星団・銀河などを整理した代表的な深宇宙天体カタログです。</p></div>"
+    },
+    "source": {
+      "dataset": "DSO_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    },
+    "position": {
+      "mode": "fixed",
+      "ra_deg": 34.75,
+      "dec_deg": 57.1333
+    },
+    "constellation_id": "Per",
+    "relationship_status": "catalog_verified",
+    "constellation_source": "OpenNGC Const field",
+    "angular_size": {
+      "major_arcmin": 30.0,
+      "minor_arcmin": 30.0,
+      "source_text": "約30'×30'"
+    }
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "milky_way": {
+    "cache_key": "nicole_milkyway_outline_v1",
+    "format": "GeoJSON FeatureCollection",
+    "urls": [
+      "https://raw.githubusercontent.com/sergio-dr/mw_geojson/main/mw_simplified_43p.json",
+      "https://raw.githubusercontent.com/ofrohn/d3-celestial/master/data/mw.json"
+    ],
+    "source_app": "Nicole the Astronavigator v1.12.0"
+  },
+  "western_constellation_lines": {
+    "line_urls": [
+      "https://raw.githubusercontent.com/creativival/hipparcos_planetarium_data_creator/main/data/hip_constellation_line.csv",
+      "https://creativival.github.io/hipparcos_planetarium_data_creator/data/hip_constellation_line.csv"
+    ],
+    "star_urls": [
+      "https://raw.githubusercontent.com/creativival/hipparcos_planetarium_data_creator/main/data/hip_constellation_line_star.csv",
+      "https://creativival.github.io/hipparcos_planetarium_data_creator/data/hip_constellation_line_star.csv"
+    ],
+    "source_app": "Nicole the Astronavigator v1.12.0"
+  },
+  "comets": {
+    "night_comets_endpoint": "https://astro-nicole.hideld12.workers.dev/night-comets",
+    "track_endpoint": "https://astro-nicole.hideld12.workers.dev/comet-track",
+    "hoshinotori_base": "https://kensukesuga86.github.io/Hoshinotori",
+    "source_app": "Nicole the Astronavigator v1.12.0"
+  },
+  "meteor_showers": {
+    "endpoint_template": "https://astro-nicole.hideld12.workers.dev/meteors?year={year}",
+    "source_app": "Nicole the Astronavigator v1.12.0"
+  }
+}

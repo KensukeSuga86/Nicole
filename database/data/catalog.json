@@ -1,0 +1,1724 @@
+[
+  {
+    "id": "Sirius",
+    "kind": "star",
+    "name_ja": "シリウス",
+    "file": "stars.json"
+  },
+  {
+    "id": "Canopus",
+    "kind": "star",
+    "name_ja": "カノープス",
+    "file": "stars.json"
+  },
+  {
+    "id": "Arcturus",
+    "kind": "star",
+    "name_ja": "アルクトゥルス",
+    "file": "stars.json"
+  },
+  {
+    "id": "Vega",
+    "kind": "star",
+    "name_ja": "ベガ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Capella",
+    "kind": "star",
+    "name_ja": "カペラ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Rigel",
+    "kind": "star",
+    "name_ja": "リゲル",
+    "file": "stars.json"
+  },
+  {
+    "id": "Procyon",
+    "kind": "star",
+    "name_ja": "プロキオン",
+    "file": "stars.json"
+  },
+  {
+    "id": "Betelgeuse",
+    "kind": "star",
+    "name_ja": "ベテルギウス",
+    "file": "stars.json"
+  },
+  {
+    "id": "Altair",
+    "kind": "star",
+    "name_ja": "アルタイル",
+    "file": "stars.json"
+  },
+  {
+    "id": "Aldebaran",
+    "kind": "star",
+    "name_ja": "アルデバラン",
+    "file": "stars.json"
+  },
+  {
+    "id": "Spica",
+    "kind": "star",
+    "name_ja": "スピカ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Antares",
+    "kind": "star",
+    "name_ja": "アンタレス",
+    "file": "stars.json"
+  },
+  {
+    "id": "Pollux",
+    "kind": "star",
+    "name_ja": "ポルックス",
+    "file": "stars.json"
+  },
+  {
+    "id": "Fomalhaut",
+    "kind": "star",
+    "name_ja": "フォーマルハウト",
+    "file": "stars.json"
+  },
+  {
+    "id": "Deneb",
+    "kind": "star",
+    "name_ja": "デネブ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Regulus",
+    "kind": "star",
+    "name_ja": "レグルス",
+    "file": "stars.json"
+  },
+  {
+    "id": "Castor",
+    "kind": "star",
+    "name_ja": "カストル",
+    "file": "stars.json"
+  },
+  {
+    "id": "Polaris",
+    "kind": "star",
+    "name_ja": "ポラリス",
+    "file": "stars.json"
+  },
+  {
+    "id": "Albireo",
+    "kind": "star",
+    "name_ja": "アルビレオ",
+    "file": "stars.json"
+  },
+  {
+    "id": "EpsLyr",
+    "kind": "star",
+    "name_ja": "こと座ε星",
+    "file": "stars.json"
+  },
+  {
+    "id": "Mizar",
+    "kind": "star",
+    "name_ja": "ミザール",
+    "file": "stars.json"
+  },
+  {
+    "id": "Almach",
+    "kind": "star",
+    "name_ja": "アルマク",
+    "file": "stars.json"
+  },
+  {
+    "id": "Dubhe",
+    "kind": "star",
+    "name_ja": "ドゥーベ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Merak",
+    "kind": "star",
+    "name_ja": "メラク",
+    "file": "stars.json"
+  },
+  {
+    "id": "Phecda",
+    "kind": "star",
+    "name_ja": "フェクダ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Megrez",
+    "kind": "star",
+    "name_ja": "メグレズ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Alioth",
+    "kind": "star",
+    "name_ja": "アリオト",
+    "file": "stars.json"
+  },
+  {
+    "id": "Alkaid",
+    "kind": "star",
+    "name_ja": "アルカイド",
+    "file": "stars.json"
+  },
+  {
+    "id": "Schedar",
+    "kind": "star",
+    "name_ja": "シェダル",
+    "file": "stars.json"
+  },
+  {
+    "id": "Caph",
+    "kind": "star",
+    "name_ja": "カフ",
+    "file": "stars.json"
+  },
+  {
+    "id": "GammaCas",
+    "kind": "star",
+    "name_ja": "カシオペヤ座γ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Ruchbah",
+    "kind": "star",
+    "name_ja": "ルクバ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Segin",
+    "kind": "star",
+    "name_ja": "セギン",
+    "file": "stars.json"
+  },
+  {
+    "id": "Bellatrix",
+    "kind": "star",
+    "name_ja": "ベラトリックス",
+    "file": "stars.json"
+  },
+  {
+    "id": "Alnilam",
+    "kind": "star",
+    "name_ja": "アルニラム",
+    "file": "stars.json"
+  },
+  {
+    "id": "Alnitak",
+    "kind": "star",
+    "name_ja": "アルニタク",
+    "file": "stars.json"
+  },
+  {
+    "id": "Mintaka",
+    "kind": "star",
+    "name_ja": "ミンタカ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Saiph",
+    "kind": "star",
+    "name_ja": "サイフ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Denebola",
+    "kind": "star",
+    "name_ja": "デネボラ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Algieba",
+    "kind": "star",
+    "name_ja": "アルギエバ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Zosma",
+    "kind": "star",
+    "name_ja": "ゾスマ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Shaula",
+    "kind": "star",
+    "name_ja": "シャウラ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Sargas",
+    "kind": "star",
+    "name_ja": "サルガス",
+    "file": "stars.json"
+  },
+  {
+    "id": "Dschubba",
+    "kind": "star",
+    "name_ja": "ジュバ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Acrab",
+    "kind": "star",
+    "name_ja": "アクラブ",
+    "file": "stars.json"
+  },
+  {
+    "id": "KausAust",
+    "kind": "star",
+    "name_ja": "カウス・アウストラリス",
+    "file": "stars.json"
+  },
+  {
+    "id": "Nunki",
+    "kind": "star",
+    "name_ja": "ヌンキ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Ascella",
+    "kind": "star",
+    "name_ja": "アスケラ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Alpheratz",
+    "kind": "star",
+    "name_ja": "アルフェラッツ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Mirach",
+    "kind": "star",
+    "name_ja": "ミラク",
+    "file": "stars.json"
+  },
+  {
+    "id": "Markab",
+    "kind": "star",
+    "name_ja": "マルカブ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Scheat",
+    "kind": "star",
+    "name_ja": "シェアト",
+    "file": "stars.json"
+  },
+  {
+    "id": "Algenib",
+    "kind": "star",
+    "name_ja": "アルゲニブ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Sadr",
+    "kind": "star",
+    "name_ja": "サドル",
+    "file": "stars.json"
+  },
+  {
+    "id": "GienahCyg",
+    "kind": "star",
+    "name_ja": "ギェナー",
+    "file": "stars.json"
+  },
+  {
+    "id": "Eltanin",
+    "kind": "star",
+    "name_ja": "エルタニン",
+    "file": "stars.json"
+  },
+  {
+    "id": "Rastaban",
+    "kind": "star",
+    "name_ja": "ラスタバン",
+    "file": "stars.json"
+  },
+  {
+    "id": "Kochab",
+    "kind": "star",
+    "name_ja": "コカブ",
+    "file": "stars.json"
+  },
+  {
+    "id": "Pherkad",
+    "kind": "star",
+    "name_ja": "フェルカド",
+    "file": "stars.json"
+  },
+  {
+    "id": "Hamal",
+    "kind": "star",
+    "name_ja": "ハマル",
+    "file": "stars.json"
+  },
+  {
+    "id": "Sheratan",
+    "kind": "star",
+    "name_ja": "シェラタン",
+    "file": "stars.json"
+  },
+  {
+    "id": "Mirfak",
+    "kind": "star",
+    "name_ja": "ミルファク",
+    "file": "stars.json"
+  },
+  {
+    "id": "Algol",
+    "kind": "star",
+    "name_ja": "アルゴル",
+    "file": "stars.json"
+  },
+  {
+    "id": "Fawaris",
+    "kind": "star",
+    "name_ja": "ファワリス",
+    "file": "stars.json"
+  },
+  {
+    "id": "Mercury",
+    "kind": "planet",
+    "name_ja": "水星",
+    "file": "planets.json"
+  },
+  {
+    "id": "Venus",
+    "kind": "planet",
+    "name_ja": "金星",
+    "file": "planets.json"
+  },
+  {
+    "id": "Mars",
+    "kind": "planet",
+    "name_ja": "火星",
+    "file": "planets.json"
+  },
+  {
+    "id": "Jupiter",
+    "kind": "planet",
+    "name_ja": "木星",
+    "file": "planets.json"
+  },
+  {
+    "id": "Saturn",
+    "kind": "planet",
+    "name_ja": "土星",
+    "file": "planets.json"
+  },
+  {
+    "id": "Uranus",
+    "kind": "planet",
+    "name_ja": "天王星",
+    "file": "planets.json"
+  },
+  {
+    "id": "Neptune",
+    "kind": "planet",
+    "name_ja": "海王星",
+    "file": "planets.json"
+  },
+  {
+    "id": "M1",
+    "kind": "snr",
+    "name_ja": "M1 かに星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M2",
+    "kind": "cluster",
+    "name_ja": "M2 球状星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M3",
+    "kind": "cluster",
+    "name_ja": "M3 球状星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M4",
+    "kind": "cluster",
+    "name_ja": "M4 球状星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M5",
+    "kind": "cluster",
+    "name_ja": "M5 球状星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M6",
+    "kind": "cluster",
+    "name_ja": "M6 バタフライ星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M7",
+    "kind": "cluster",
+    "name_ja": "M7 プトレマイオス星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M8",
+    "kind": "nebula",
+    "name_ja": "M8 干潟星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M9",
+    "kind": "cluster",
+    "name_ja": "M9",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M10",
+    "kind": "cluster",
+    "name_ja": "M10",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M11",
+    "kind": "cluster",
+    "name_ja": "M11 野鴨星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M12",
+    "kind": "cluster",
+    "name_ja": "M12",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M13",
+    "kind": "cluster",
+    "name_ja": "M13 ヘルクレス座大球状星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M14",
+    "kind": "cluster",
+    "name_ja": "M14",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M15",
+    "kind": "cluster",
+    "name_ja": "M15 球状星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M16",
+    "kind": "nebula",
+    "name_ja": "M16 わし星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M17",
+    "kind": "nebula",
+    "name_ja": "M17 オメガ星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M18",
+    "kind": "cluster",
+    "name_ja": "M18",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M19",
+    "kind": "cluster",
+    "name_ja": "M19",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M20",
+    "kind": "nebula",
+    "name_ja": "M20 三裂星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M21",
+    "kind": "cluster",
+    "name_ja": "M21",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M22",
+    "kind": "cluster",
+    "name_ja": "M22 球状星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M23",
+    "kind": "cluster",
+    "name_ja": "M23",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M24",
+    "kind": "star_cloud",
+    "name_ja": "M24",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M25",
+    "kind": "cluster",
+    "name_ja": "M25",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M26",
+    "kind": "cluster",
+    "name_ja": "M26",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M27",
+    "kind": "nebula",
+    "name_ja": "M27 亜鈴状星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M28",
+    "kind": "cluster",
+    "name_ja": "M28",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M29",
+    "kind": "cluster",
+    "name_ja": "M29",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M30",
+    "kind": "cluster",
+    "name_ja": "M30",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M31",
+    "kind": "galaxy",
+    "name_ja": "M31 アンドロメダ銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M32",
+    "kind": "galaxy",
+    "name_ja": "M32",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M33",
+    "kind": "galaxy",
+    "name_ja": "M33 さんかく座銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M34",
+    "kind": "cluster",
+    "name_ja": "M34",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M35",
+    "kind": "cluster",
+    "name_ja": "M35 散開星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M36",
+    "kind": "cluster",
+    "name_ja": "M36 散開星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M37",
+    "kind": "cluster",
+    "name_ja": "M37 散開星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M38",
+    "kind": "cluster",
+    "name_ja": "M38 散開星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M39",
+    "kind": "cluster",
+    "name_ja": "M39",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M40",
+    "kind": "double_star",
+    "name_ja": "M40",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M41",
+    "kind": "cluster",
+    "name_ja": "M41 散開星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M42",
+    "kind": "nebula",
+    "name_ja": "M42 オリオン大星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M43",
+    "kind": "nebula",
+    "name_ja": "M43",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M44",
+    "kind": "cluster",
+    "name_ja": "M44 プレセペ星団（蜂の巣）",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M45",
+    "kind": "cluster",
+    "name_ja": "M45 プレアデス星団（すばる）",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M46",
+    "kind": "cluster",
+    "name_ja": "M46",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M47",
+    "kind": "cluster",
+    "name_ja": "M47",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M48",
+    "kind": "cluster",
+    "name_ja": "M48",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M49",
+    "kind": "galaxy",
+    "name_ja": "M49",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M50",
+    "kind": "cluster",
+    "name_ja": "M50",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M51",
+    "kind": "galaxy",
+    "name_ja": "M51 子持ち銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M52",
+    "kind": "cluster",
+    "name_ja": "M52",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M53",
+    "kind": "cluster",
+    "name_ja": "M53",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M54",
+    "kind": "cluster",
+    "name_ja": "M54",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M55",
+    "kind": "cluster",
+    "name_ja": "M55",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M56",
+    "kind": "cluster",
+    "name_ja": "M56",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M57",
+    "kind": "nebula",
+    "name_ja": "M57 リング星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M58",
+    "kind": "galaxy",
+    "name_ja": "M58",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M59",
+    "kind": "galaxy",
+    "name_ja": "M59",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M60",
+    "kind": "galaxy",
+    "name_ja": "M60",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M61",
+    "kind": "galaxy",
+    "name_ja": "M61",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M62",
+    "kind": "cluster",
+    "name_ja": "M62",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M63",
+    "kind": "galaxy",
+    "name_ja": "M63 ひまわり銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M64",
+    "kind": "galaxy",
+    "name_ja": "M64 黒眼銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M65",
+    "kind": "galaxy",
+    "name_ja": "M65 渦巻銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M66",
+    "kind": "galaxy",
+    "name_ja": "M66 渦巻銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M67",
+    "kind": "cluster",
+    "name_ja": "M67",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M68",
+    "kind": "cluster",
+    "name_ja": "M68",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M69",
+    "kind": "cluster",
+    "name_ja": "M69",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M70",
+    "kind": "cluster",
+    "name_ja": "M70",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M71",
+    "kind": "cluster",
+    "name_ja": "M71",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M72",
+    "kind": "cluster",
+    "name_ja": "M72",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M73",
+    "kind": "asterism",
+    "name_ja": "M73",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M74",
+    "kind": "galaxy",
+    "name_ja": "M74",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M75",
+    "kind": "cluster",
+    "name_ja": "M75",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M76",
+    "kind": "nebula",
+    "name_ja": "M76",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M77",
+    "kind": "galaxy",
+    "name_ja": "M77",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M78",
+    "kind": "nebula",
+    "name_ja": "M78",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M79",
+    "kind": "cluster",
+    "name_ja": "M79",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M80",
+    "kind": "cluster",
+    "name_ja": "M80",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M81",
+    "kind": "galaxy",
+    "name_ja": "M81 ボーデ銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M82",
+    "kind": "galaxy",
+    "name_ja": "M82 葉巻銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M83",
+    "kind": "galaxy",
+    "name_ja": "M83",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M84",
+    "kind": "galaxy",
+    "name_ja": "M84",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M85",
+    "kind": "galaxy",
+    "name_ja": "M85",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M86",
+    "kind": "galaxy",
+    "name_ja": "M86",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M87",
+    "kind": "galaxy",
+    "name_ja": "M87 楕円銀河（乙女座A）",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M88",
+    "kind": "galaxy",
+    "name_ja": "M88",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M89",
+    "kind": "galaxy",
+    "name_ja": "M89",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M90",
+    "kind": "galaxy",
+    "name_ja": "M90",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M91",
+    "kind": "galaxy",
+    "name_ja": "M91",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M92",
+    "kind": "cluster",
+    "name_ja": "M92 球状星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M93",
+    "kind": "cluster",
+    "name_ja": "M93",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M94",
+    "kind": "galaxy",
+    "name_ja": "M94",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M95",
+    "kind": "galaxy",
+    "name_ja": "M95",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M96",
+    "kind": "galaxy",
+    "name_ja": "M96",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M97",
+    "kind": "nebula",
+    "name_ja": "M97",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M98",
+    "kind": "galaxy",
+    "name_ja": "M98",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M99",
+    "kind": "galaxy",
+    "name_ja": "M99",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M100",
+    "kind": "galaxy",
+    "name_ja": "M100",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M101",
+    "kind": "galaxy",
+    "name_ja": "M101 風車銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M102",
+    "kind": "galaxy",
+    "name_ja": "M102",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M103",
+    "kind": "cluster",
+    "name_ja": "M103",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M104",
+    "kind": "galaxy",
+    "name_ja": "M104 ソンブレロ銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M105",
+    "kind": "galaxy",
+    "name_ja": "M105",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M106",
+    "kind": "galaxy",
+    "name_ja": "M106",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M107",
+    "kind": "cluster",
+    "name_ja": "M107",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M108",
+    "kind": "galaxy",
+    "name_ja": "M108",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M109",
+    "kind": "galaxy",
+    "name_ja": "M109",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "M110",
+    "kind": "galaxy",
+    "name_ja": "M110",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "IC434",
+    "kind": "nebula",
+    "name_ja": "IC434 馬頭星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "NGC3628",
+    "kind": "galaxy",
+    "name_ja": "NGC3628 ハンバーガー銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "NGC4565",
+    "kind": "galaxy",
+    "name_ja": "NGC4565 針銀河",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "NGC6543",
+    "kind": "nebula",
+    "name_ja": "NGC6543 キャッツアイ星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "NGC6992",
+    "kind": "snr",
+    "name_ja": "NGC6992 網状星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "NGC7000",
+    "kind": "nebula",
+    "name_ja": "NGC7000 北アメリカ星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "NGC7293",
+    "kind": "nebula",
+    "name_ja": "NGC7293 らせん星雲",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "NGC7789",
+    "kind": "cluster",
+    "name_ja": "NGC7789 カロリーンのバラ",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "NGC869",
+    "kind": "cluster",
+    "name_ja": "NGC869/884 ペルセウス二重星団",
+    "file": "deep-sky.json"
+  },
+  {
+    "id": "UMa",
+    "kind": "constellation",
+    "name_ja": "おおぐま座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "UMi",
+    "kind": "constellation",
+    "name_ja": "こぐま座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Dra",
+    "kind": "constellation",
+    "name_ja": "りゅう座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Cas",
+    "kind": "constellation",
+    "name_ja": "カシオペヤ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Cep",
+    "kind": "constellation",
+    "name_ja": "ケフェウス座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Cam",
+    "kind": "constellation",
+    "name_ja": "きりん座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Lyn",
+    "kind": "constellation",
+    "name_ja": "やまねこ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Cnc",
+    "kind": "constellation",
+    "name_ja": "かに座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Leo",
+    "kind": "constellation",
+    "name_ja": "しし座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "LMi",
+    "kind": "constellation",
+    "name_ja": "こじし座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Vir",
+    "kind": "constellation",
+    "name_ja": "おとめ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Com",
+    "kind": "constellation",
+    "name_ja": "かみのけ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "CVn",
+    "kind": "constellation",
+    "name_ja": "りょうけん座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Boo",
+    "kind": "constellation",
+    "name_ja": "うしかい座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "CrB",
+    "kind": "constellation",
+    "name_ja": "かんむり座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Ser",
+    "kind": "constellation",
+    "name_ja": "へび座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Lib",
+    "kind": "constellation",
+    "name_ja": "てんびん座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Hya",
+    "kind": "constellation",
+    "name_ja": "うみへび座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Crt",
+    "kind": "constellation",
+    "name_ja": "コップ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Crv",
+    "kind": "constellation",
+    "name_ja": "からす座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Ant",
+    "kind": "constellation",
+    "name_ja": "ポンプ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Sex",
+    "kind": "constellation",
+    "name_ja": "ろくぶんぎ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Her",
+    "kind": "constellation",
+    "name_ja": "ヘルクレス座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Oph",
+    "kind": "constellation",
+    "name_ja": "へびつかい座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Sco",
+    "kind": "constellation",
+    "name_ja": "さそり座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Sgr",
+    "kind": "constellation",
+    "name_ja": "いて座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "CrA",
+    "kind": "constellation",
+    "name_ja": "みなみのかんむり座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Tel",
+    "kind": "constellation",
+    "name_ja": "望遠鏡座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Ara",
+    "kind": "constellation",
+    "name_ja": "さいだん座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Sct",
+    "kind": "constellation",
+    "name_ja": "たて座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Aql",
+    "kind": "constellation",
+    "name_ja": "わし座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Sge",
+    "kind": "constellation",
+    "name_ja": "や座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Vul",
+    "kind": "constellation",
+    "name_ja": "こぎつね座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Lyr",
+    "kind": "constellation",
+    "name_ja": "こと座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Cyg",
+    "kind": "constellation",
+    "name_ja": "はくちょう座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Del",
+    "kind": "constellation",
+    "name_ja": "いるか座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Equ",
+    "kind": "constellation",
+    "name_ja": "こうま座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "And",
+    "kind": "constellation",
+    "name_ja": "アンドロメダ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Per",
+    "kind": "constellation",
+    "name_ja": "ペルセウス座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Peg",
+    "kind": "constellation",
+    "name_ja": "ペガスス座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Tri",
+    "kind": "constellation",
+    "name_ja": "さんかく座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Ari",
+    "kind": "constellation",
+    "name_ja": "おひつじ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Psc",
+    "kind": "constellation",
+    "name_ja": "うお座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Cet",
+    "kind": "constellation",
+    "name_ja": "くじら座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Phe",
+    "kind": "constellation",
+    "name_ja": "ほうおう座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Scl",
+    "kind": "constellation",
+    "name_ja": "ちょうこくしつ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "For",
+    "kind": "constellation",
+    "name_ja": "ろ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Eri",
+    "kind": "constellation",
+    "name_ja": "エリダヌス座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Hor",
+    "kind": "constellation",
+    "name_ja": "とけい座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Cae",
+    "kind": "constellation",
+    "name_ja": "ちょうこくぐ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Col",
+    "kind": "constellation",
+    "name_ja": "はと座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Lac",
+    "kind": "constellation",
+    "name_ja": "とかげ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Aqr",
+    "kind": "constellation",
+    "name_ja": "みずがめ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Cap",
+    "kind": "constellation",
+    "name_ja": "やぎ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "PsA",
+    "kind": "constellation",
+    "name_ja": "みなみのうお座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Mic",
+    "kind": "constellation",
+    "name_ja": "けんびきょう座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Gru",
+    "kind": "constellation",
+    "name_ja": "つる座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Tuc",
+    "kind": "constellation",
+    "name_ja": "きょしちょう座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Ind",
+    "kind": "constellation",
+    "name_ja": "インディアン座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Pav",
+    "kind": "constellation",
+    "name_ja": "くじゃく座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Ori",
+    "kind": "constellation",
+    "name_ja": "オリオン座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Tau",
+    "kind": "constellation",
+    "name_ja": "おうし座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Gem",
+    "kind": "constellation",
+    "name_ja": "ふたご座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Aur",
+    "kind": "constellation",
+    "name_ja": "ぎょしゃ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "CMa",
+    "kind": "constellation",
+    "name_ja": "おおいぬ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "CMi",
+    "kind": "constellation",
+    "name_ja": "こいぬ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Mon",
+    "kind": "constellation",
+    "name_ja": "いっかくじゅう座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Lep",
+    "kind": "constellation",
+    "name_ja": "うさぎ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Pup",
+    "kind": "constellation",
+    "name_ja": "とも座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Pyx",
+    "kind": "constellation",
+    "name_ja": "らしんばん座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Car",
+    "kind": "constellation",
+    "name_ja": "りゅうこつ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Vel",
+    "kind": "constellation",
+    "name_ja": "ほ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Pic",
+    "kind": "constellation",
+    "name_ja": "がか座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Dor",
+    "kind": "constellation",
+    "name_ja": "かじき座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Ret",
+    "kind": "constellation",
+    "name_ja": "レチクル座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Men",
+    "kind": "constellation",
+    "name_ja": "テーブルさん座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Cen",
+    "kind": "constellation",
+    "name_ja": "ケンタウルス座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Cru",
+    "kind": "constellation",
+    "name_ja": "みなみじゅうじ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Lup",
+    "kind": "constellation",
+    "name_ja": "おおかみ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Nor",
+    "kind": "constellation",
+    "name_ja": "じょうぎ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Cir",
+    "kind": "constellation",
+    "name_ja": "コンパス座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Mus",
+    "kind": "constellation",
+    "name_ja": "はえ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Cha",
+    "kind": "constellation",
+    "name_ja": "カメレオン座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Vol",
+    "kind": "constellation",
+    "name_ja": "とびうお座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "TrA",
+    "kind": "constellation",
+    "name_ja": "みなみのさんかく座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Hyi",
+    "kind": "constellation",
+    "name_ja": "みずへび座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Oct",
+    "kind": "constellation",
+    "name_ja": "はちぶんぎ座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "Aps",
+    "kind": "constellation",
+    "name_ja": "ふうちょう座",
+    "file": "constellations.json"
+  },
+  {
+    "id": "big_dipper",
+    "kind": "asterism",
+    "name_ja": "北斗七星",
+    "file": "asterisms.json"
+  },
+  {
+    "id": "spring_arc",
+    "kind": "asterism",
+    "name_ja": "春の大曲線",
+    "file": "asterisms.json"
+  },
+  {
+    "id": "spring_triangle",
+    "kind": "asterism",
+    "name_ja": "春の大三角",
+    "file": "asterisms.json"
+  },
+  {
+    "id": "summer_triangle",
+    "kind": "asterism",
+    "name_ja": "夏の大三角",
+    "file": "asterisms.json"
+  },
+  {
+    "id": "northern_cross",
+    "kind": "asterism",
+    "name_ja": "北十字",
+    "file": "asterisms.json"
+  },
+  {
+    "id": "autumn_great_square",
+    "kind": "asterism",
+    "name_ja": "秋の四辺形",
+    "file": "asterisms.json"
+  },
+  {
+    "id": "orion_belt",
+    "kind": "asterism",
+    "name_ja": "オリオンの三つ星",
+    "file": "asterisms.json"
+  },
+  {
+    "id": "winter_triangle",
+    "kind": "asterism",
+    "name_ja": "冬の大三角",
+    "file": "asterisms.json"
+  },
+  {
+    "id": "winter_diamond",
+    "kind": "asterism",
+    "name_ja": "冬のダイヤモンド",
+    "file": "asterisms.json"
+  }
+]

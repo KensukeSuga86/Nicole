@@ -1,0 +1,173 @@
+[
+  {
+    "id": "Sun",
+    "name": {
+      "ja": "太陽",
+      "en": "Sun"
+    },
+    "type": "star",
+    "physical_diameter_km": 1391400,
+    "distance_model": "earth_heliocentric_distance",
+    "rendering": {
+      "apparent_diameter_model": "physical_diameter_over_dynamic_distance",
+      "color": "#ffd85a"
+    },
+    "source": {
+      "provider": "NASA/NSSDC",
+      "reference": "Sun Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html"
+    }
+  },
+  {
+    "id": "Moon",
+    "name": {
+      "ja": "月",
+      "en": "Moon"
+    },
+    "type": "moon",
+    "physical_diameter_km": 3475,
+    "distance_model": "truncated_lunar_distance_series",
+    "rendering": {
+      "apparent_diameter_model": "physical_diameter_over_dynamic_distance",
+      "color": "#e8e8f0"
+    },
+    "source": {
+      "provider": "NASA/NSSDC",
+      "reference": "Planetary Fact Sheet / Moon",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+    }
+  },
+  {
+    "id": "Mercury",
+    "name": {
+      "ja": "水星",
+      "en": null
+    },
+    "type": "planet",
+    "physical_diameter_km": 4879,
+    "distance_model": "keplerian_geocentric_distance",
+    "rendering": {
+      "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
+      "minimum_display_px": 1.0
+    },
+    "source": {
+      "provider": "NASA/NSSDC",
+      "reference": "Planetary Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+    }
+  },
+  {
+    "id": "Venus",
+    "name": {
+      "ja": "金星",
+      "en": null
+    },
+    "type": "planet",
+    "physical_diameter_km": 12104,
+    "distance_model": "keplerian_geocentric_distance",
+    "rendering": {
+      "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
+      "minimum_display_px": 1.0
+    },
+    "source": {
+      "provider": "NASA/NSSDC",
+      "reference": "Planetary Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+    }
+  },
+  {
+    "id": "Mars",
+    "name": {
+      "ja": "火星",
+      "en": null
+    },
+    "type": "planet",
+    "physical_diameter_km": 6792,
+    "distance_model": "keplerian_geocentric_distance",
+    "rendering": {
+      "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
+      "minimum_display_px": 1.0
+    },
+    "source": {
+      "provider": "NASA/NSSDC",
+      "reference": "Planetary Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+    }
+  },
+  {
+    "id": "Jupiter",
+    "name": {
+      "ja": "木星",
+      "en": null
+    },
+    "type": "planet",
+    "physical_diameter_km": 142984,
+    "distance_model": "keplerian_geocentric_distance",
+    "rendering": {
+      "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
+      "minimum_display_px": 1.0
+    },
+    "source": {
+      "provider": "NASA/NSSDC",
+      "reference": "Planetary Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+    }
+  },
+  {
+    "id": "Saturn",
+    "name": {
+      "ja": "土星",
+      "en": null
+    },
+    "type": "planet",
+    "physical_diameter_km": 120536,
+    "distance_model": "keplerian_geocentric_distance",
+    "rendering": {
+      "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
+      "minimum_display_px": 1.0
+    },
+    "source": {
+      "provider": "NASA/NSSDC",
+      "reference": "Planetary Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+    }
+  },
+  {
+    "id": "Uranus",
+    "name": {
+      "ja": "天王星",
+      "en": null
+    },
+    "type": "planet",
+    "physical_diameter_km": 51118,
+    "distance_model": "keplerian_geocentric_distance",
+    "rendering": {
+      "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
+      "minimum_display_px": 1.0
+    },
+    "source": {
+      "provider": "NASA/NSSDC",
+      "reference": "Planetary Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+    }
+  },
+  {
+    "id": "Neptune",
+    "name": {
+      "ja": "海王星",
+      "en": null
+    },
+    "type": "planet",
+    "physical_diameter_km": 49528,
+    "distance_model": "keplerian_geocentric_distance",
+    "rendering": {
+      "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
+      "minimum_display_px": 1.0
+    },
+    "source": {
+      "provider": "NASA/NSSDC",
+      "reference": "Planetary Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+    }
+  }
+]

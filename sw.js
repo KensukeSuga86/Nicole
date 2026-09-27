@@ -1,4 +1,4 @@
-const CACHE_VERSION="nicole-pwa-v1.12.0";
+const CACHE_VERSION="nicole-pwa-v2.0.0";
 const APP_CACHE=`${CACHE_VERSION}-app`;
 // Dynamic astronomical/weather data survives ordinary app releases; TTL policies expire it safely.
 const DATA_CACHE="nicole-data-v1";
@@ -21,6 +21,8 @@ let cacheMaintenancePromise=null;
 
 const APP_SHELL_CRITICAL=["./index.html"];
 const APP_SHELL_OPTIONAL=[
+  "./app.js",
+  "./bootstrap.js",
   "./manifest.webmanifest",
   "./favicon.ico",
   "./icon-32.png",
@@ -28,7 +30,16 @@ const APP_SHELL_OPTIONAL=[
   "./icon-512.png",
   "./icon-maskable-192.png",
   "./icon-maskable-512.png",
-  "./apple-touch-icon.png"
+  "./apple-touch-icon.png",
+  "./database/manifest.json",
+  "./database/data/constellations.json",
+  "./database/data/stars.json",
+  "./database/data/planets.json",
+  "./database/data/deep-sky.json",
+  "./database/data/asterisms.json",
+  "./database/data/catalog.json",
+  "./database/data/external-sources.json",
+  "./database/data/solar-system.json"
 ];
 
 async function cacheOptionalAsset(cache,url){
@@ -74,6 +85,7 @@ function getDataPolicyKey(url){
     return "other";
   }
   if(url.hostname==="kensukesuga86.github.io"&&url.pathname.startsWith("/Hoshinotori/"))return "hoshinotori";
+  if(url.hostname==="kensukesuga86.github.io"&&url.pathname.startsWith("/Nicole-Astronomy-Database/"))return "astronomyStatic";
   if(url.hostname==="raw.githubusercontent.com")return "astronomyStatic";
   return "other";
 }
@@ -81,6 +93,7 @@ function isDataRequest(url){
   return url.hostname==="api.open-meteo.com" ||
     url.hostname==="astro-nicole.hideld12.workers.dev" ||
     (url.hostname==="kensukesuga86.github.io"&&url.pathname.startsWith("/Hoshinotori/")) ||
+    (url.hostname==="kensukesuga86.github.io"&&url.pathname.startsWith("/Nicole-Astronomy-Database/")) ||
     url.hostname==="raw.githubusercontent.com";
 }
 function cachedAtFromResponse(response){

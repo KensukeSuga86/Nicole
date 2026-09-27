@@ -10,29 +10,23 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 1.12.0**
+**Current Version: 2.0.0**
 
 ---
 
-## v1.12.0 の変更点
+## v2.0.0 の変更点
 
-- PWA / iPhoneホーム画面起動まわりを全面整理
-  - `<head>` 内の重複した favicon / apple-touch-icon / theme-color を統合
-  - `viewport-fit=cover` と Safe Area 対応を追加
-  - manifest の `theme_color` / `background_color` とアプリ背景色を統一
-- PWAアイコン一式を再生成
-  - 角丸・透明コーナーを画像側に持たせず、OS側のマスクに任せる構成へ変更
-  - iOS用180px、PWA用192px / 512px、maskable用192px / 512px、faviconを同梱
-- Service Workerを安定化
-  - アイコン等の任意資産が欠けてもService Worker更新全体が失敗しないよう変更
-  - HTMLのオフラインキャッシュキーを `index.html` に統一
-  - 天候・彗星等の動的データキャッシュをアプリ更新のたびに消さない構成へ変更
-- 新しいService Workerが待機した場合に「新しいバージョンがあります」通知を表示し、利用者が更新できるよう変更
-- 起動時セルフチェックを追加し、主要DOM欠落・ID重複をコンソールと診断情報から確認可能にした
-- 赤色夜間モードを `body` 全体のCSS filter方式からオーバーレイ方式へ変更し、Fullscreen / fixed UIとの干渉を低減
-- 星図パネルの旧折りたたみ構造に由来する不要な処理を整理
-- カメラ起動時に実際のMediaStream設定を取得し、`window.NicoleDiagnostics.cameraSettings()` から確認可能にした
-- Service Worker のキャッシュ名前空間を `nicole-pwa-v1.12.0` に更新
+- **Nicole Astronomy Database v0.1.2** を共通天文DBとして導入
+  - オンラインでは固定URLの v0.1.2 を読み込み
+  - 通信できない場合はアプリ同梱の v0.1.2 へ自動フォールバック
+  - 両方を読み込めない場合のみ、従来の内蔵データへフォールバック
+- 共通DBのID・星座・恒星・Deep Sky・アステリズム情報をNicoleの従来UIへ変換する互換層を追加
+- **Messier M1〜M110を全件**、天体検索・天体一覧・星図の対象へ拡張
+- 従来から解説がある天体はその解説を維持し、追加されたカタログのみのMessier天体は位置・種類・等級・見かけの大きさ等を表示して、未整備の解説は「情報準備中」と表示
+- 共通DBの恒星測光情報（B−V・スペクトル型・表示色）と、Deep Skyの正式な所属星座・見かけサイズを利用できる基盤を追加
+- 太陽・月・惑星の物理直径など、Nicole the Astroriumと共有する描画用Solar SystemメタデータをDB v0.1.2へ追加
+- PWAのオフラインキャッシュに共通DBローダーと同梱DBを追加し、オフライン起動時にも共通DBを利用可能に変更
+- Service Worker のキャッシュ名前空間を `nicole-pwa-v2.0.0` に更新
 
 ---
 
@@ -447,33 +441,22 @@ Nicoleでは機能に応じて、以下のデータ・サービスを利用し�
 
 ```text
 index.html
+bootstrap.js
+app.js
+database/
 sw.js
 manifest.webmanifest
 favicon.ico
 icon-32.png
 icon-192.png
-icon-512.png
-icon-maskable-192.png
-icon-maskable-512.png
 apple-touch-icon.png
-icon-master-1024.png
-RELEASE.md
-README.md
-CHANGELOG.md
 ```
 
-`index.html` にアプリ本体、天文計算、UI、組み込み使用マニュアルなどを収録しています。
+`index.html` は画面本体、`bootstrap.js` は共通DB v0.1.2の読込とNicole互換データへの変換、`app.js` は天文計算・UI・組み込み使用マニュアルなどのアプリ本体です。
 
-`sw.js` はPWA・オフラインキャッシュを管理します。
+`database/` にはオフラインフォールバック用の共通DB v0.1.2を同梱しています。`sw.js` はPWA・オフラインキャッシュを管理します。
 
 ---
-
-
-### v1.12.0をGitHubへ反映するとき
-
-v1.12.0ではPWA資産も更新しているため、**初回のv1.12.0反映時は `Nicole-v1.12.0-full.zip` の内容をすべてGitHub Pagesの同じ階層へ配置してください。**
-
-`manifest.webmanifest` とアイコン一式を配置した後、これらに変更がない通常アップデートでは従来どおり `index.html / RELEASE.md / README.md / CHANGELOG.md / sw.js` の更新だけでも運用できます。
 
 ## 更新時の注意
 
@@ -482,7 +465,7 @@ Service Workerを変更した場合はキャッシュ名前空間も更新し、
 現在のキャッシュ名前空間：
 
 ```text
-nicole-pwa-v1.12.0
+nicole-pwa-v2.0.0
 ```
 
 ---
@@ -497,4 +480,4 @@ https://kensuke-suga.myportfolio.com
 
 ## Version
 
-**Nicole the Astronavigator v1.12.0**
+**Nicole the Astronavigator v2.0.0**

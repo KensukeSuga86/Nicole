@@ -1,0 +1,2902 @@
+[
+  {
+    "id": "UMa",
+    "name": {
+      "ja": "おおぐま座",
+      "en": "Ursa Major",
+      "abbr": "UMa"
+    },
+    "season": "circumpolar",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "main_stars_text": "アリオト・ドゥーベ・アルカイド・ミザール・メラク",
+    "legacy_story": "北斗七星を含む北天の代表的な星座。ギリシャ神話ではゼウスに愛されたカリストが熊に変えられ天に上げられたとされる。北極星を見つけるための「道しるべ」として古来から航海者に重宝された。一年中見える周極星座。",
+    "explanation": {
+      "science": "北斗七星はおおぐま座の一部です。ミザールとアルコルは肉眼で分離でき、M81・M82・M101など多くの有名な銀河もあります。",
+      "myth": "ギリシャ神話では、美しい女性カリストが女神ヘラの怒りによって熊の姿に変えられた物語と結び付けられています。後に息子アルカスとともに天へ上げられたとされています。"
+    },
+    "representative_position": {
+      "ra_deg": 165,
+      "dec_deg": 55
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "UMi",
+    "name": {
+      "ja": "こぐま座",
+      "en": "Ursa Minor",
+      "abbr": "UMi"
+    },
+    "season": "circumpolar",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "main_stars_text": "ポラリス（北極星）・コカブ・フェルカド",
+    "legacy_story": "北極星（ポラリス）を含む北天の星座。北極星は現在の地球の自転軸の延長線上にある星で、方位の基準として古来から航海者に重宝された。地球の歳差運動により、北極星は約2万6千年周期で変わる。",
+    "explanation": {
+      "science": "α星ポラリスは現在の地球の自転軸の延長方向に近いため、他の星がその周囲を回るように見えます。ポラリス自身はケフェイド変光星で、複数の恒星からなる星系です。",
+      "myth": "おおぐま座のカリストの息子アルカスとされることが多い星座です。熊となった母を知らずに狩ろうとしたアルカスを見たゼウスが、親子をともに天へ上げたと伝えられています。"
+    },
+    "representative_position": {
+      "ra_deg": 220,
+      "dec_deg": 77
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Dra",
+    "name": {
+      "ja": "りゅう座",
+      "en": "Draco",
+      "abbr": "Dra"
+    },
+    "season": "circumpolar",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "main_stars_text": "エルタニン・アステリオン・アルタイス",
+    "legacy_story": "北天を大きく蛇行する星座。ギリシャ神話ではヘスペリデスの園の黄金のリンゴを守る竜ラドン。約5,000年前は北極星の近くにあるトゥバン（α星）が北極星だった。NGC6543（キャッツアイ星雲）を含む。",
+    "explanation": {
+      "science": "α星トゥバンは約5000年前には北極星に近い位置にありました。NGC 6543「キャッツアイ星雲」は複雑な構造を持つ美しい惑星状星雲です。",
+      "myth": "ギリシャ神話では、ヘスペリデスの園の黄金のリンゴを守っていた竜ラドンと結び付けられています。ヘラクレスの十二の功業にも登場します。"
+    },
+    "representative_position": {
+      "ra_deg": 240,
+      "dec_deg": 65
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Cas",
+    "name": {
+      "ja": "カシオペヤ座",
+      "en": "Cassiopeia",
+      "abbr": "Cas"
+    },
+    "season": "circumpolar",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "main_stars_text": "シェダル・カフ・ルクバ",
+    "legacy_story": "W字形が特徴的な北天の星座。北極星を挟んで北斗七星の反対側にあり、一年中見える周極星座。ギリシャ神話ではエチオピアの王妃カシオペヤ。NGC7789（カロリーンのバラ）を含む。",
+    "explanation": {
+      "science": "天の川の中にあり、M52やNGC 457など多くの散開星団があります。1572年には超新星が出現し、ティコ・ブラーエの観測によって「天上界は不変」という当時の考えを覆す重要な証拠となりました。",
+      "myth": "エチオピア王妃カシオペヤを表します。自分や娘アンドロメダの美しさを海の精より上だと自慢したため海神の怒りを買い、国に災いを招いたとされています。"
+    },
+    "representative_position": {
+      "ra_deg": 15,
+      "dec_deg": 60
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Cep",
+    "name": {
+      "ja": "ケフェウス座",
+      "en": "Cepheus",
+      "abbr": "Cep"
+    },
+    "season": "circumpolar",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "main_stars_text": "アルデラミン・アルフィルク",
+    "legacy_story": "北天の周極星座。ギリシャ神話ではエチオピアの王ケフェウス。δ星（デルタ・ケフェイ）はケフェイド型変光星の原型として天文学的に重要。約5,500年後にはγ星が北極星になる。",
+    "explanation": {
+      "science": "δ星デルタ・ケフェイは「ケフェイド変光星」の代表で、変光周期と本来の明るさの関係を使って遠方天体までの距離を測れます。μ星は非常に赤い赤色超巨星で「ガーネット・スター」とも呼ばれます。",
+      "myth": "エチオピア王ケフェウスを表し、カシオペヤの夫、アンドロメダの父に当たります。妻の発言によって国が災いに見舞われ、娘を生贄に差し出すことになります。"
+    },
+    "representative_position": {
+      "ra_deg": 330,
+      "dec_deg": 68
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Cam",
+    "name": {
+      "ja": "きりん座",
+      "en": "Camelopardalis",
+      "abbr": "Cam"
+    },
+    "season": "circumpolar",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "main_stars_text": "β星・α星",
+    "legacy_story": "北天の大きな星座だが明るい星がなく見つけにくい。1612年にペトルス・プランシウスが設定。キリン（ジラフ）を表す。",
+    "explanation": {
+      "science": "広い面積を持つ一方で明るい星は少ない星座です。IC 342やNGC 2403などの銀河があり、双眼鏡では「ケンブルのカスケード」と呼ばれる星の連なりも楽しめます。",
+      "myth": "17世紀初めにペトルス・プランシウスによって設定されました。キリンを表し、古代ギリシャ神話とは関係のない比較的新しい星座です。"
+    },
+    "representative_position": {
+      "ra_deg": 75,
+      "dec_deg": 70
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Lyn",
+    "name": {
+      "ja": "やまねこ座",
+      "en": "Lynx",
+      "abbr": "Lyn"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "main_stars_text": "α星",
+    "legacy_story": "1690年にヘベリウスが設定した星座。「この星座を見つけるにはやまねこのような目が必要」と言われるほど暗い星ばかり。",
+    "explanation": {
+      "science": "非常に暗い星が多い星座です。NGC 2419は天の川銀河の外縁にある遠方の球状星団で、「銀河間放浪者」と呼ばれることもあります。",
+      "myth": "17世紀にヘベリウスが設定しました。暗い星ばかりで見つけにくいため「ヤマネコのような鋭い目が必要」という発想から名付けられたと伝えられています。"
+    },
+    "representative_position": {
+      "ra_deg": 120,
+      "dec_deg": 47
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Cnc",
+    "name": {
+      "ja": "かに座",
+      "en": "Cancer",
+      "abbr": "Cnc"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "main_stars_text": "アクベンス・アルタルフ",
+    "legacy_story": "黄道十二星座の一つ。M44プレセペ星団やM67を含む。ギリシャ神話ではヘラクレスとヒュドラの戦いに現れた巨大な蟹カルキノスとされる。",
+    "explanation": {
+      "science": "星座自体は暗いものの、M44「プレセペ星団」が有名です。肉眼では淡い光の雲、双眼鏡では多数の星に分かれて見えます。M67は非常に古い散開星団で、恒星進化の研究にも使われます。",
+      "myth": "ヘラクレスがヒュドラと戦っていた際、女神ヘラが送り込んだ巨大な蟹カルキノスとされています。蟹はヘラクレスに踏みつぶされますが、その働きを称えたヘラによって天に上げられたと伝えられます。"
+    },
+    "representative_position": {
+      "ra_deg": 130,
+      "dec_deg": 20
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Leo",
+    "name": {
+      "ja": "しし座",
+      "en": "Leo",
+      "abbr": "Leo"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "main_stars_text": "レグルス・デネボラ・アルギエバ",
+    "legacy_story": "春の代表的な星座。ギリシャ神話ではヘラクレスが退治したネメアの獅子。鎌（シックル）形の星の並びが獅子の頭部を表す。M65・M66・NGC3628のレオトリプレット（三つ子銀河）が有名な観測対象。",
+    "explanation": {
+      "science": "α星レグルスは非常に速く自転し、赤道方向が膨らんでいます。M65・M66・NGC 3628は「しし座の三つ子銀河」と呼ばれ、複数の銀河を同じ領域で観察できます。",
+      "myth": "ヘラクレスの十二の功業で最初に登場する「ネメアの獅子」を表します。どんな武器も通さない毛皮を持ち、ヘラクレスは最後には素手で絞め殺しました。"
+    },
+    "representative_position": {
+      "ra_deg": 160,
+      "dec_deg": 18
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "LMi",
+    "name": {
+      "ja": "こじし座",
+      "en": "Leo Minor",
+      "abbr": "LMi"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "main_stars_text": "プラエキプア・β星",
+    "legacy_story": "1690年にヘベリウスが設定した小さな星座。しし座の北側に位置する。",
+    "explanation": {
+      "science": "明るい星や大型の星雲・星団は少ないものの、NGC 3344など美しい渦巻銀河があります。最も明るい星には「プラエキプア」という固有名があります。",
+      "myth": "17世紀にヘベリウスが設定しました。しし座の近くにいる「小さな獅子」を表し、独自の古代神話はありません。"
+    },
+    "representative_position": {
+      "ra_deg": 155,
+      "dec_deg": 33
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Vir",
+    "name": {
+      "ja": "おとめ座",
+      "en": "Virgo",
+      "abbr": "Vir"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "main_stars_text": "スピカ・ポリマ・ビンデミアトリックス",
+    "legacy_story": "春の夜空を代表する星座。1等星スピカは「春の大曲線」の終点として有名。おとめ座銀河団（M87・M84・M86など）の方向にあり、銀河観測の宝庫。ギリシャ神話では農業の女神デメテルまたはその娘ペルセポネとされる。",
+    "explanation": {
+      "science": "α星スピカは肉眼では一つですが、高温の恒星からなる連星系です。おとめ座銀河団にはM87など多数の銀河があり、M87中心の巨大ブラックホールは2019年に初めて影が画像化されました。",
+      "myth": "乙女の姿をした古代星座で、正義の女神アストレア、農業の女神デメテル、その娘ペルセポネなど複数の女神と結び付けられてきました。"
+    },
+    "representative_position": {
+      "ra_deg": 195,
+      "dec_deg": 0
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Com",
+    "name": {
+      "ja": "かみのけ座",
+      "en": "Coma Berenices",
+      "abbr": "Com"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "main_stars_text": "ディアデム・β星",
+    "legacy_story": "エジプトの王妃ベレニケ2世が夫の無事を祈って捧げた髪の毛が星になったという伝説に基づく。かみのけ座銀河団（M85・M98・M99・M100など）を含む銀河の宝庫。",
+    "explanation": {
+      "science": "肉眼では淡い星がまとまって見える「かみのけ座星団」が特徴です。M64「黒眼銀河」など多数の銀河があり、さらにその奥には巨大なかみのけ座銀河団があります。",
+      "myth": "紀元前3世紀のエジプト王妃ベレニケ2世の髪を表します。夫の無事を祈って髪を神殿に捧げたところ姿を消し、「神々が天に上げた」と説明されたという伝説があります。"
+    },
+    "representative_position": {
+      "ra_deg": 195,
+      "dec_deg": 22
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "CVn",
+    "name": {
+      "ja": "りょうけん座",
+      "en": "Canes Venatici",
+      "abbr": "CVn"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "main_stars_text": "コル・カロリ・アステリオン",
+    "legacy_story": "1690年にヘベリウスが設定。うしかい座の猟師が連れる2匹の猟犬を表す。M51（子持ち銀河）・M63（ひまわり銀河）・M94・M106など多くの銀河を含む。",
+    "explanation": {
+      "science": "M51「子持ち銀河」をはじめ、M63、M94、M106など多くの銀河があります。M51は二つの銀河が重力的に相互作用する姿を観察でき、銀河の衝突や進化を考える代表的な天体です。",
+      "myth": "17世紀にヘベリウスが設定しました。うしかい座の人物が連れている2匹の猟犬を表し、それぞれアステリオンとカーラという名が付けられています。"
+    },
+    "representative_position": {
+      "ra_deg": 195,
+      "dec_deg": 40
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Boo",
+    "name": {
+      "ja": "うしかい座",
+      "en": "Boötes",
+      "abbr": "Boo"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "main_stars_text": "アルクトゥルス・イザール・ムフリド",
+    "legacy_story": "春の代表的な星座。アルクトゥルスは「春の大曲線」の中間点として有名な橙色の巨星。ギリシャ神話では熊を追う猟師の姿で描かれる。イザールは美しい二重星として知られる。",
+    "explanation": {
+      "science": "α星アルクトゥルスは約37光年離れたオレンジ色の巨星で、全天でも特に明るい恒星です。ε星イザールは色の対比が美しい二重星として知られています。",
+      "myth": "名前には「牛を追う者」「牧夫」という意味があります。おおぐま座の熊を追う人物、あるいはカリストの息子アルカスなど、複数の神話と結び付けられています。"
+    },
+    "representative_position": {
+      "ra_deg": 218,
+      "dec_deg": 30
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "CrB",
+    "name": {
+      "ja": "かんむり座",
+      "en": "Corona Borealis",
+      "abbr": "CrB"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "main_stars_text": "アルフェッカ・ヌサカン",
+    "legacy_story": "半円形に並ぶ星が王冠のように見える小さな星座。ギリシャ神話ではアリアドネが被った黄金の冠。T星は「回帰新星」として知られ、数十年に一度急激に明るくなる。",
+    "explanation": {
+      "science": "α星アルフェッカを中心に半円形の美しい星の並びをつくります。T Coronae Borealisは数十年規模で突然明るくなる「回帰新星」として知られています。",
+      "myth": "ギリシャ神話ではクレタ島の王女アリアドネの冠とされています。英雄テセウスに見捨てられた彼女を酒神ディオニュソスが迎え、贈った冠が天に上げられたと伝えられます。"
+    },
+    "representative_position": {
+      "ra_deg": 235,
+      "dec_deg": 30
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Ser",
+    "name": {
+      "ja": "へび座",
+      "en": "Serpens",
+      "abbr": "Ser"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "main_stars_text": "ウヌカルハイ・エタ・ムー",
+    "legacy_story": "へびつかい座に分断される唯一の星座（頭部と尾部に分かれる）。ギリシャ神話では医神アスクレピオスが持つ蛇。M5（球状星団）・M16（わし星雲）を含む。",
+    "explanation": {
+      "science": "88星座で唯一、へびつかい座によって頭と尾の二領域に分かれています。M5やM16「わし星雲」があり、わし星雲の「創造の柱」は新しい星が誕生している領域として有名です。",
+      "myth": "医神アスクレピオスが手に持つ蛇を表します。蛇の脱皮は古くから再生や生命力の象徴とされ、医術とも深く結び付けられてきました。"
+    },
+    "representative_position": {
+      "ra_deg": 240,
+      "dec_deg": 5
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Lib",
+    "name": {
+      "ja": "てんびん座",
+      "en": "Libra",
+      "abbr": "Lib"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "main_stars_text": "ズベンエルゲヌビ・ズベンエスカマリ",
+    "legacy_story": "黄道十二星座の一つ。古代ローマでは正義の女神アストレアが持つ天秤を表す。かつてはさそり座の爪とされていた。",
+    "explanation": {
+      "science": "α星ズベン・エル・ゲヌビは双眼鏡でも分離しやすい二重星です。星名に「南の爪」「北の爪」という意味が残るのは、かつてこの領域がさそり座の爪とされていた名残です。",
+      "myth": "正義の女神が持つ天秤と結び付けられています。古代にはさそり座の一部でしたが、後に独立しました。黄道十二星座の中で唯一、生物ではなく道具を表します。"
+    },
+    "representative_position": {
+      "ra_deg": 230,
+      "dec_deg": -15
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Hya",
+    "name": {
+      "ja": "うみへび座",
+      "en": "Hydra",
+      "abbr": "Hya"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "main_stars_text": "アルファルド・γ・ζ",
+    "legacy_story": "全88星座の中で最大の面積を持つ星座。ギリシャ神話ではヘラクレスが退治した9つの頭を持つ水蛇ヒュドラ。M48・M68・M83（南の風車銀河）・NGC3242（木星状星雲）を含む。",
+    "explanation": {
+      "science": "88星座で最も面積が大きい星座です。M48、M68、M83などさまざまな天体があり、NGC 3242「木星状星雲」も比較的見やすい惑星状星雲です。",
+      "myth": "ヘラクレスが戦った怪物ヒュドラとされています。複数の頭を持ち、一つ切り落とすと新しい頭が生えるため、ヘラクレスは切り口を焼きながら退治しました。"
+    },
+    "representative_position": {
+      "ra_deg": 150,
+      "dec_deg": -15
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Crt",
+    "name": {
+      "ja": "コップ座",
+      "en": "Crater",
+      "abbr": "Crt"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "main_stars_text": "アルケス・β・γ",
+    "legacy_story": "うみへび座の上に乗るコップを表す小さな星座。ギリシャ神話ではアポロンの聖杯。",
+    "explanation": {
+      "science": "明るい恒星や大型の星雲・星団は少ない一方、背景にはNGC 3887など多数の銀河があります。肉眼では地味な領域でも、その奥に無数の銀河が存在していることを実感できます。",
+      "myth": "杯を表す古代星座で、からす座・うみへび座と同じアポロンの物語に登場します。カラスが水を汲むために持たされた杯とされています。"
+    },
+    "representative_position": {
+      "ra_deg": 172,
+      "dec_deg": -15
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Crv",
+    "name": {
+      "ja": "からす座",
+      "en": "Corvus",
+      "abbr": "Crv"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "main_stars_text": "ギエナー・クラズ・アルゴラブ",
+    "legacy_story": "うみへび座の上に乗るからすを表す星座。ギリシャ神話ではアポロンの使いのカラス。4つの星が台形を作る特徴的な形。",
+    "explanation": {
+      "science": "四つの比較的明るい星が特徴的な形をつくります。NGC 4038・4039「アンテナ銀河」は二つの銀河が衝突している代表例で、星形成が活発に起こっています。",
+      "myth": "太陽神アポロンに仕えるカラスとされています。水を汲むよう命じられたカラスが寄り道をし、蛇のせいにして嘘をついたため、アポロンがカラス・杯・蛇をまとめて天に置いたという物語があります。"
+    },
+    "representative_position": {
+      "ra_deg": 185,
+      "dec_deg": -18
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Ant",
+    "name": {
+      "ja": "ポンプ座",
+      "en": "Antlia",
+      "abbr": "Ant"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "main_stars_text": "α星・ε星",
+    "legacy_story": "1756年にラカイユが設定した近代的な星座。空気ポンプを表す。明るい星がなく見つけにくい。",
+    "explanation": {
+      "science": "明るい星が少なく、肉眼では形をたどるのが難しい星座です。最も明るいα星でも4等級ほどですが、その方向にはポンプ座銀河団など多数の遠方銀河があり、大型望遠鏡では銀河の世界を観察できます。",
+      "myth": "古代神話に由来する星座ではありません。18世紀にフランスの天文学者ラカーユが設定し、当時の科学技術を象徴する空気ポンプをモチーフにしました。"
+    },
+    "representative_position": {
+      "ra_deg": 155,
+      "dec_deg": -33
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Sex",
+    "name": {
+      "ja": "ろくぶんぎ座",
+      "en": "Sextans",
+      "abbr": "Sex"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "main_stars_text": "α星",
+    "legacy_story": "1690年にヘベリウスが設定した星座。六分儀（セクスタント）を表す。明るい星がなく見つけにくい。",
+    "explanation": {
+      "science": "肉眼では暗い星座ですが、NGC 3115「スピンドル銀河」などがあります。Sextans A、Sextans Bという矮小銀河もあり、近傍銀河の進化や星形成の研究対象です。",
+      "myth": "17世紀にヘベリウスが設定しました。自身が天体観測に愛用していた六分儀を表し、火災で観測機器を失った経験とも関連するとされています。"
+    },
+    "representative_position": {
+      "ra_deg": 155,
+      "dec_deg": 0
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Her",
+    "name": {
+      "ja": "ヘルクレス座",
+      "en": "Hercules",
+      "abbr": "Her"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "main_stars_text": "コルネフォロス・ザニア",
+    "legacy_story": "M13（ヘルクレス座大球状星団）を含む夏の星座。1974年にアレシボ電波望遠鏡からM13に向けてアレシボメッセージが送信された。ギリシャ神話の大英雄ヘラクレスの姿を表す。M92という別の球状星団も含む。",
+    "explanation": {
+      "science": "M13「ヘルクレス座大球状星団」は数十万個もの恒星が集まる巨大な球状星団です。1974年にはアレシボ電波望遠鏡からM13方向へ「アレシボ・メッセージ」が送信されました。",
+      "myth": "ギリシャ神話最大級の英雄ヘラクレスを表します。十二の功業では、しし座やうみへび座のモデルとなった怪物とも戦いました。"
+    },
+    "representative_position": {
+      "ra_deg": 255,
+      "dec_deg": 30
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Oph",
+    "name": {
+      "ja": "へびつかい座",
+      "en": "Ophiuchus",
+      "abbr": "Oph"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "main_stars_text": "ラス・アルハゲ・サビク",
+    "legacy_story": "へびを持つ男の姿を表す大きな星座。黄道上に位置するが黄道十二星座には含まれない「第13の星座」として話題になることも。M9・M10・M12・M14・M19・M62・M107など多くの球状星団を含む。",
+    "explanation": {
+      "science": "多数の球状星団があり、太陽系に比較的近いバーナード星もあります。1604年には「ケプラーの超新星」が出現しました。黄道上に位置しますが、伝統的な黄道十二星座には含まれていません。",
+      "myth": "医術の神アスクレピオスが蛇を持つ姿とされています。死者を蘇らせるほどの医術を身につけたためゼウスに雷で撃たれ、その後才能を惜しまれて星座になったと伝えられています。"
+    },
+    "representative_position": {
+      "ra_deg": 260,
+      "dec_deg": -5
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Sco",
+    "name": {
+      "ja": "さそり座",
+      "en": "Scorpius",
+      "abbr": "Sco"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "main_stars_text": "アンタレス・シャウラ・サルガス",
+    "legacy_story": "夏の南天を代表する星座。ギリシャ神話では狩人オリオンを刺した大サソリ。オリオン座と正反対の位置にあり、一方が昇ると他方が沈む。赤い超巨星アンタレスは「火星に対抗するもの」という意味を持つ。M4・M6・M7・M80などを含む。",
+    "explanation": {
+      "science": "α星アンタレスは太陽の数百倍の直径を持つ赤色超巨星です。M4、M6、M7などの星団があり、強力なX線源さそり座X-1もあります。",
+      "myth": "狩人オリオンを倒した巨大なサソリとされています。オリオンが地上のすべての動物を倒せると豪語したため、大地の女神がサソリを送り込んだという物語があります。"
+    },
+    "representative_position": {
+      "ra_deg": 248,
+      "dec_deg": -30
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Sgr",
+    "name": {
+      "ja": "いて座",
+      "en": "Sagittarius",
+      "abbr": "Sgr"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "main_stars_text": "カウス・アウストラリス・アルナスル",
+    "legacy_story": "銀河系の中心方向に位置する星座。南斗六星（ティーポット）の形が有名。M8干潟星雲・M17オメガ星雲・M22球状星団など、メシエ天体が密集する天文観測の宝庫。ギリシャ神話では半人半馬のケンタウロス族の賢者ケイロンとされる。",
+    "explanation": {
+      "science": "この方向には天の川銀河の中心があり、超大質量ブラックホール「いて座A*」が存在します。M8、M17、M20、M22など星雲・星団が密集し、銀河中心から星形成まで観察できます。",
+      "myth": "弓を引く半人半馬の射手として描かれます。後世には賢者ケイロンとされることもありますが、クロトスとする説もあります。"
+    },
+    "representative_position": {
+      "ra_deg": 285,
+      "dec_deg": -28
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "CrA",
+    "name": {
+      "ja": "みなみのかんむり座",
+      "en": "Corona Australis",
+      "abbr": "CrA"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "いて座の南に位置する小さな星座。かんむり座（北）に対応する南の王冠。古代ギリシャから知られる星座。",
+    "explanation": {
+      "science": "周辺にはR Coronae Australisを中心とする星形成領域があります。暗黒星雲や反射星雲の中で若い恒星が形成されており、恒星誕生の現場を観察できる領域です。",
+      "myth": "古代から知られる星座ですが、特定の一つの神話には明確に対応していません。冠や花輪として描かれ、北天のかんむり座に対応する「南の冠」として現在の名称が使われています。"
+    },
+    "representative_position": {
+      "ra_deg": 285,
+      "dec_deg": -40
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Tel",
+    "name": {
+      "ja": "望遠鏡座",
+      "en": "Telescopium",
+      "abbr": "Tel"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "main_stars_text": "α星・ζ星",
+    "legacy_story": "1756年にラカイユが設定した近代的な星座。望遠鏡を表す。南天低空にあるため日本では観測しにくい。",
+    "explanation": {
+      "science": "明るい恒星は少ないものの、球状星団NGC 6584などがあります。星座そのものは目立たなくても、望遠鏡を使えば遠方銀河など多様な天体を観察できます。",
+      "myth": "18世紀にラカーユが設定し、望遠鏡を表します。望遠鏡によって月の地形や木星の衛星、銀河など、それまで知られていなかった宇宙が次々と発見されました。"
+    },
+    "representative_position": {
+      "ra_deg": 285,
+      "dec_deg": -50
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Ara",
+    "name": {
+      "ja": "さいだん座",
+      "en": "Ara",
+      "abbr": "Ara"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "main_stars_text": "β星・α星",
+    "legacy_story": "古代ギリシャから知られる星座。神々が巨人族との戦いの前に誓いを立てた祭壇を表す。南天低空にあるため日本では観測しにくい。",
+    "explanation": {
+      "science": "天の川の濃い領域にあり、多数の恒星や星団があります。NGC 6397は地球に比較的近い球状星団の一つで、古い恒星が高密度に集まっています。",
+      "myth": "祭壇を表す古代星座です。ギリシャ神話では、神々が巨人族との戦いを前に勝利を誓い、供物を捧げた祭壇とされることがあります。"
+    },
+    "representative_position": {
+      "ra_deg": 255,
+      "dec_deg": -55
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Sct",
+    "name": {
+      "ja": "たて座",
+      "en": "Scutum",
+      "abbr": "Sct"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "1684年にヘベリウスがポーランド王ヤン3世ソビエスキーの盾として設定した星座。M11（野鴨星団）・M26を含む。天の川の濃い部分に位置する。",
+    "explanation": {
+      "science": "天の川の非常に濃い領域にあり「たて座スタークラウド」があります。M11「野鴨星団」は非常に星数の多い散開星団で、望遠鏡では無数の星が密集して見えます。",
+      "myth": "17世紀にヘベリウスが設定し、ポーランド王ヤン3世ソビエスキーの盾を記念したものです。実在した人物の功績と深く関係する珍しい星座です。"
+    },
+    "representative_position": {
+      "ra_deg": 282,
+      "dec_deg": -9
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Aql",
+    "name": {
+      "ja": "わし座",
+      "en": "Aquila",
+      "abbr": "Aql"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "アルタイル（彦星）・タラゼド・アルシャイン",
+    "legacy_story": "七夕の彦星アルタイルを含む星座。ギリシャ神話ではゼウスの使いの鷲、またはゼウス自身が変身した鷲とされる。アルタイルは自転速度が非常に速く、赤道部分が膨らんだ扁平な形をしている。",
+    "explanation": {
+      "science": "α星アルタイルは約17光年の近距離にある恒星で、非常に速く自転しているため赤道方向に膨らんでいます。天の川の中に位置し、双眼鏡を向けると背景に非常に多くの恒星を見ることができます。",
+      "myth": "ギリシャ神話では大神ゼウスに仕える鷲、あるいはゼウス自身が変身した鷲とされています。日本ではアルタイルが七夕の彦星として知られ、こと座のベガと対になっています。"
+    },
+    "representative_position": {
+      "ra_deg": 295,
+      "dec_deg": 3
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Sge",
+    "name": {
+      "ja": "や座",
+      "en": "Sagitta",
+      "abbr": "Sge"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "γ星・δ星",
+    "legacy_story": "矢の形をした小さな星座。ギリシャ神話ではヘラクレスがワシに射た矢、またはアポロンの矢とされる。M71（球状星団）を含む。",
+    "explanation": {
+      "science": "88星座でも特に小さな星座です。M71は球状星団に分類される星の集まりで、天の川の中にあるため背景にも多数の恒星が見えます。",
+      "myth": "一本の矢を表す古代星座です。ヘラクレスの矢、アポロンの矢、エロスの矢など複数の解釈があり、一つの神話には定まっていません。"
+    },
+    "representative_position": {
+      "ra_deg": 298,
+      "dec_deg": 18
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Vul",
+    "name": {
+      "ja": "こぎつね座",
+      "en": "Vulpecula",
+      "abbr": "Vul"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "アンサー・α星",
+    "legacy_story": "1690年にヘベリウスが設定した小さな星座。M27（亜鈴状星雲）を含む。天の川の中に位置する。",
+    "explanation": {
+      "science": "M27「亜鈴状星雲」は最初に発見された惑星状星雲として知られています。また1967年に最初に発見されたパルサーも、こぎつね座の方向にあります。",
+      "myth": "17世紀にヘベリウスが設定しました。当初は「ガチョウをくわえた小さなキツネ」という意味の名称で、後にガチョウの部分が省かれて現在のこぎつね座だけが残りました。"
+    },
+    "representative_position": {
+      "ra_deg": 300,
+      "dec_deg": 25
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Lyr",
+    "name": {
+      "ja": "こと座",
+      "en": "Lyra",
+      "abbr": "Lyr"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "ベガ（織姫星）・スラフト・シェリアク",
+    "legacy_story": "七夕の織姫星ベガを含む星座。ギリシャ神話では音楽の名手オルフェウスの竪琴。彼の死後、竪琴は天に上げられたとされる。M57（リング星雲）とこと座ε（四重星）という観測的に面白い天体を含む。",
+    "explanation": {
+      "science": "α星ベガは約25光年と近く、恒星の明るさを測る基準として重要な役割を果たしてきました。ε星は「ダブル・ダブルスター」、M57は代表的な惑星状星雲です。",
+      "myth": "音楽の名手オルフェウスの竪琴を表します。彼の奏でる音は人間だけでなく動物や木々まで魅了したとされ、死後その竪琴が天に上げられたと伝えられます。"
+    },
+    "representative_position": {
+      "ra_deg": 283,
+      "dec_deg": 38
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Cyg",
+    "name": {
+      "ja": "はくちょう座",
+      "en": "Cygnus",
+      "abbr": "Cyg"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "デネブ・アルビレオ・サドル",
+    "legacy_story": "夏の大三角の一角を担う星座。ギリシャ神話ではゼウスが白鳥に変身した姿とも言われる。北十字とも呼ばれ、天の川の中に位置するため双眼鏡での星野観察が楽しい。アルビレオは金色と青色の美しい二重星として有名。NGC6992（網状星雲）・NGC7000（北アメリカ星雲）を含む。",
+    "explanation": {
+      "science": "α星デネブは非常に遠方にありながら1等星として見える超巨星です。アルビレオ、北アメリカ星雲、網状星雲、X線連星はくちょう座X-1など、多様な天体が集まっています。",
+      "myth": "白鳥を表す古代星座で、複数の神話があります。大神ゼウスが白鳥に変身した姿とする話や、親友を失った人物が白鳥になったという話などが伝えられています。"
+    },
+    "representative_position": {
+      "ra_deg": 308,
+      "dec_deg": 42
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Del",
+    "name": {
+      "ja": "いるか座",
+      "en": "Delphinus",
+      "abbr": "Del"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "スアロキン・ロタネフ",
+    "legacy_story": "小さいながらも特徴的な菱形の形をした星座。ギリシャ神話では音楽家アリオンを救ったイルカ。α星とβ星の名前は天文学者ニコラウス・ヴェンデリンのラテン語名を逆さにしたもの。",
+    "explanation": {
+      "science": "小さな星座ですが、四つの星がまとまった特徴的な形をしています。γ星は望遠鏡で楽しめる二重星で、球状星団NGC 6934もあります。",
+      "myth": "ギリシャ神話では、海へ投げ出された音楽家アリオンをイルカが背中に乗せて救ったという伝説が有名です。その功績を称えてイルカが星座になったとされています。"
+    },
+    "representative_position": {
+      "ra_deg": 309,
+      "dec_deg": 13
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Equ",
+    "name": {
+      "ja": "こうま座",
+      "en": "Equuleus",
+      "abbr": "Equ"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "キタルファ・β星",
+    "legacy_story": "全88星座の中で2番目に小さな星座。小さな馬の頭を表す。ギリシャ神話ではヘルメスが作った最初の馬とされる。",
+    "explanation": {
+      "science": "全天で2番目に面積が小さい星座です。明るい星や有名な深宇宙天体は少なく、その小ささ自体が88星座を比較する際の特徴になっています。",
+      "myth": "名前は「小さな馬」を意味します。古代からある星座ですが、その馬が誰なのかについては複数の説があり、一つの神話には定まっていません。"
+    },
+    "representative_position": {
+      "ra_deg": 318,
+      "dec_deg": 8
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "And",
+    "name": {
+      "ja": "アンドロメダ座",
+      "en": "Andromeda",
+      "abbr": "And"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "main_stars_text": "アルフェラッツ・ミラク・アルマク",
+    "legacy_story": "M31（アンドロメダ銀河）を含む秋の星座。ギリシャ神話ではエチオピアの王女アンドロメダ。海の怪物に生贄として捧げられそうになったところを英雄ペルセウスに救われた。アルマクは金色と青緑の美しい二重星として有名。",
+    "explanation": {
+      "science": "アンドロメダ座で特に有名なのがM31「アンドロメダ銀河」です。約250万光年離れた巨大な渦巻銀河で、天の川銀河と同じ局所銀河群に属します。空の暗い場所では肉眼でも淡い光として見ることができ、γ星アルマクは色の対比が美しい二重星として知られています。",
+      "myth": "アンドロメダは、エチオピア王ケフェウスと王妃カシオペヤの娘です。母の自慢が海神の怒りを買い、生贄として岩に鎖でつながれましたが、英雄ペルセウスに救われます。ケフェウス座、カシオペヤ座、ペルセウス座、くじら座も同じ物語につながっています。"
+    },
+    "representative_position": {
+      "ra_deg": 15,
+      "dec_deg": 40
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Per",
+    "name": {
+      "ja": "ペルセウス座",
+      "en": "Perseus",
+      "abbr": "Per"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "main_stars_text": "ミルファク・アルゴル",
+    "legacy_story": "秋から冬の北天の星座。ギリシャ神話の英雄ペルセウス。メドゥーサの首を持つ姿で描かれ、アルゴルは「悪魔の目」として古来から知られる変光星。NGC869/884（二重星団）という美しい散開星団ペアを含む。",
+    "explanation": {
+      "science": "β星アルゴルは食変光星の代表で、二つの恒星が互いを隠すことで周期的に明るさが変わります。h・χ二重星団やNGC 1499「カリフォルニア星雲」も有名です。",
+      "myth": "英雄ペルセウスを表します。メドゥーサを退治した帰路、海の怪物への生贄となっていたアンドロメダを救い、後に妻としました。"
+    },
+    "representative_position": {
+      "ra_deg": 52,
+      "dec_deg": 48
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Peg",
+    "name": {
+      "ja": "ペガスス座",
+      "en": "Pegasus",
+      "abbr": "Peg"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "main_stars_text": "エニフ・シェアト・マルカブ・アルゲニブ",
+    "legacy_story": "秋の代表的な星座。4つの星が作る「秋の四辺形」が目印。ギリシャ神話では英雄ペルセウスがメドゥーサを倒した時に生まれた天馬ペガサス。M15（球状星団）を含む。",
+    "explanation": {
+      "science": "M15は高密度な球状星団です。また51番星は、太陽に似た恒星の周囲で太陽系外惑星が発見された代表的な星として天文学史上重要です。",
+      "myth": "翼を持つ天馬ペガサスを表します。英雄ペルセウスが怪物メドゥーサを倒した際、その血から生まれたとされています。"
+    },
+    "representative_position": {
+      "ra_deg": 340,
+      "dec_deg": 20
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Tri",
+    "name": {
+      "ja": "さんかく座",
+      "en": "Triangulum",
+      "abbr": "Tri"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "main_stars_text": "ベータ・アルファ",
+    "legacy_story": "3つの星が作る三角形の小さな星座。M33（さんかく座銀河）を含む。古代ギリシャから知られる星座。",
+    "explanation": {
+      "science": "M33「さんかく座銀河」は約270万光年離れた渦巻銀河で、天の川銀河やアンドロメダ銀河とともに局所銀河群を代表する大型銀河です。非常に暗い空では肉眼で見えることもあります。",
+      "myth": "三つの星がつくる単純な三角形を表す古代星座です。ギリシャ文字のデルタや、三角形に近い形のシチリア島と結び付けられることがあります。"
+    },
+    "representative_position": {
+      "ra_deg": 32,
+      "dec_deg": 32
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Ari",
+    "name": {
+      "ja": "おひつじ座",
+      "en": "Aries",
+      "abbr": "Ari"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "main_stars_text": "ハマル・シェラタン・メサルティム",
+    "legacy_story": "黄道十二星座の一つ。かつて春分点がおひつじ座にあった（約2,000年前）。ギリシャ神話では金の羊毛を持つ神聖な羊。メサルティムは望遠鏡で初めて発見された二重星の一つ。",
+    "explanation": {
+      "science": "α星ハマルはオレンジ色の巨星で、γ星メサルティムは望遠鏡で分離できる二重星です。約2000年前には春分点がこの星座にあり、天文学や暦の歴史でも重要な位置を占めます。",
+      "myth": "ギリシャ神話の「金の羊毛」を持つ牡羊がモデルです。王子プリクソスを救った羊の毛皮は、後に英雄イアソンとアルゴ船の仲間たちが探し求める宝物となりました。"
+    },
+    "representative_position": {
+      "ra_deg": 38,
+      "dec_deg": 20
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Psc",
+    "name": {
+      "ja": "うお座",
+      "en": "Pisces",
+      "abbr": "Psc"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "main_stars_text": "エタ・ピスキウム・アルレシャ",
+    "legacy_story": "秋から冬の黄道十二星座の一つ。現在の春分点がうお座にあり、占星術では重要な星座。ギリシャ神話ではアフロディーテとエロスが魚に変身した姿とされる。",
+    "explanation": {
+      "science": "M74は正面から見た美しい渦巻銀河として知られています。現在の春分点はこの星座の領域にあり、地球の歳差運動によって約2000年前のおひつじ座から移動してきました。",
+      "myth": "二匹の魚が紐で結ばれた姿です。怪物テュポンから逃れるため、女神アフロディーテと息子エロスが魚に姿を変え、離れないよう互いを紐で結んだという伝説があります。"
+    },
+    "representative_position": {
+      "ra_deg": 15,
+      "dec_deg": 10
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Cet",
+    "name": {
+      "ja": "くじら座",
+      "en": "Cetus",
+      "abbr": "Cet"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "main_stars_text": "ディフダ・メンカル・ミラ",
+    "legacy_story": "秋の大きな星座。ギリシャ神話ではアンドロメダを食べようとした海の怪物。ミラ（ο星）は「驚くべきもの」という意味の有名な長周期変光星で、約332日周期で2等から10等まで変化する。M77（セイファート銀河）を含む。",
+    "explanation": {
+      "science": "ο星ミラは長い周期で明るさが大きく変化するミラ型変光星の代表です。M77は活動銀河核を持つ銀河で、中心の巨大ブラックホールへ物質が落ち込むことで強いエネルギーを放っています。",
+      "myth": "日本語では「くじら座」ですが、ギリシャ神話では王女アンドロメダを襲う海の怪物ケートスを表します。現代的なクジラというより怪獣に近い存在です。"
+    },
+    "representative_position": {
+      "ra_deg": 25,
+      "dec_deg": -10
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Phe",
+    "name": {
+      "ja": "ほうおう座",
+      "en": "Phoenix",
+      "abbr": "Phe"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "main_stars_text": "アンカー・β星",
+    "legacy_story": "南天の星座。不死鳥フェニックスを表す。南天低空にあるため日本では観測しにくい。",
+    "explanation": {
+      "science": "α星アンカーが最も明るい恒星です。周辺には矮小銀河や遠方の巨大銀河団もあり、宇宙の大規模構造を見る方向でもあります。",
+      "myth": "16世紀末に設定された南天星座で、不死鳥フェニックスを表します。炎に包まれて死に、灰の中から再び生まれる再生の象徴です。"
+    },
+    "representative_position": {
+      "ra_deg": 15,
+      "dec_deg": -48
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Scl",
+    "name": {
+      "ja": "ちょうこくしつ座",
+      "en": "Sculptor",
+      "abbr": "Scl"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "1756年にラカイユが設定した近代的な星座。彫刻家の作業台を表す。NGC253（ちょうこくしつ座銀河）・NGC300を含む。",
+    "explanation": {
+      "science": "NGC 253「ちょうこくしつ座銀河」は比較的近い大型銀河で、活発な星形成が行われています。ちょうこくしつ座矮小銀河も天の川銀河の伴銀河の一つです。",
+      "myth": "18世紀にラカーユが設定しました。もともとは「彫刻家のアトリエ」を意味し、彫像や制作道具を含む姿として描かれていました。"
+    },
+    "representative_position": {
+      "ra_deg": 10,
+      "dec_deg": -32
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "For",
+    "name": {
+      "ja": "ろ座",
+      "en": "Fornax",
+      "abbr": "For"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "1756年にラカイユが設定した近代的な星座。化学炉を表す。ろ座銀河団を含む。",
+    "explanation": {
+      "science": "ろ座銀河団と呼ばれる比較的近い銀河団があります。NGC 1365は棒渦巻銀河の代表例で、中心には活動中の巨大ブラックホールがあります。",
+      "myth": "18世紀にラカーユが設定した星座で、化学実験などに使われる炉を表します。当時発展しつつあった科学や実験技術を象徴する星座の一つです。"
+    },
+    "representative_position": {
+      "ra_deg": 45,
+      "dec_deg": -30
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Eri",
+    "name": {
+      "ja": "エリダヌス座",
+      "en": "Eridanus",
+      "abbr": "Eri"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "main_stars_text": "アケルナル・アクマル・クルサ",
+    "legacy_story": "南北に長い大きな星座。川（エリダヌス川）を表す。最南端のα星アケルナルは日本の南端でかろうじて見える。ε星（エプシロン・エリダニ）は太陽に近い恒星で、惑星系を持つ可能性がある。",
+    "explanation": {
+      "science": "α星アケルナルは非常に高速で自転し、赤道方向が大きく膨らんでいます。εエリダニは約10.5光年と近く、惑星系や塵円盤の研究対象として知られています。",
+      "myth": "大河エリダヌスを表します。ギリシャ神話では、太陽神ヘリオスの息子パエトンが太陽の戦車を暴走させ、ゼウスの雷で撃ち落とされた際に落ちた川と結び付けられています。"
+    },
+    "representative_position": {
+      "ra_deg": 60,
+      "dec_deg": -25
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Hor",
+    "name": {
+      "ja": "とけい座",
+      "en": "Horologium",
+      "abbr": "Hor"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "main_stars_text": "α星",
+    "legacy_story": "1756年にラカイユが設定した近代的な星座。振り子時計を表す。南天低空にあるため日本では観測しにくい。",
+    "explanation": {
+      "science": "明るい恒星は少ないものの、球状星団NGC 1261などがあります。また遠方には巨大な銀河の集まりもあり、宇宙の大規模構造を研究する対象になります。",
+      "myth": "18世紀にラカーユが設定し、振り子時計を表します。正確な時計は天体観測や航海に不可欠であり、近代科学を象徴する道具の一つでした。"
+    },
+    "representative_position": {
+      "ra_deg": 45,
+      "dec_deg": -55
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Cae",
+    "name": {
+      "ja": "ちょうこくぐ座",
+      "en": "Caelum",
+      "abbr": "Cae"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "1756年にラカイユが設定した近代的な星座。彫刻刀を表す。非常に小さく暗い星座。",
+    "explanation": {
+      "science": "全天でも特に暗い星座の一つで、肉眼で目立つ恒星はほとんどありません。そのため主な観測対象は背景の遠方銀河などで、星が空に均等に分布していないことも実感できます。",
+      "myth": "18世紀にラカーユが設定し、彫刻や版画に使う「たがね」を表します。科学や芸術、技術の道具を星座にしたラカーユらしい近代星座です。"
+    },
+    "representative_position": {
+      "ra_deg": 70,
+      "dec_deg": -38
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Col",
+    "name": {
+      "ja": "はと座",
+      "en": "Columba",
+      "abbr": "Col"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "main_stars_text": "ファクト・ウァズン",
+    "legacy_story": "1592年にプランシウスが設定した星座。ノアの方舟に使われた鳩を表す。",
+    "explanation": {
+      "science": "α星ファクトや球状星団NGC 1851があります。NGC 1851は多数の古い恒星が高密度に集まった天体で、星団内部に複数の恒星集団が存在する可能性も研究されています。",
+      "myth": "16世紀ごろに設定された比較的新しい星座です。旧約聖書の「ノアの方舟」で陸地の出現を知らせた鳩、あるいはアルゴ船を導いた鳩と結び付けられることがあります。"
+    },
+    "representative_position": {
+      "ra_deg": 85,
+      "dec_deg": -35
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Lac",
+    "name": {
+      "ja": "とかげ座",
+      "en": "Lacerta",
+      "abbr": "Lac"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "1690年にヘベリウスが設定した小さな星座。トカゲを表す。天の川の中に位置する。",
+    "explanation": {
+      "science": "天の川の中にあり、散開星団などがあります。「BL Lacertae」は、中心の巨大ブラックホールから強力なジェットをこちらへ向けている活動銀河「BL Lac天体」の名前の由来です。",
+      "myth": "17世紀にヘベリウスが設定した星座で、トカゲを表します。古代神話との特別な関係はありません。"
+    },
+    "representative_position": {
+      "ra_deg": 338,
+      "dec_deg": 45
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Aqr",
+    "name": {
+      "ja": "みずがめ座",
+      "en": "Aquarius",
+      "abbr": "Aqr"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "サダルスード・サダルメリク",
+    "legacy_story": "秋の黄道十二星座の一つ。M2・M72という球状星団やNGC7293（らせん星雲）・NGC7009（土星状星雲）などの惑星状星雲を含む。ギリシャ神話では水を注ぐ美少年ガニュメデスの姿とされる。",
+    "explanation": {
+      "science": "M2やM72などの球状星団に加え、NGC 7293「らせん星雲」やNGC 7009「土星状星雲」といった惑星状星雲があります。太陽程度の質量を持つ恒星が最期にどのような姿を見せるかを観察できる星座です。",
+      "myth": "水瓶から水を注ぐ人物として古代から描かれてきました。ギリシャ神話では、ゼウスに気に入られて神々の給仕役となった美少年ガニメデと結び付けられることがよくあります。"
+    },
+    "representative_position": {
+      "ra_deg": 335,
+      "dec_deg": -10
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Cap",
+    "name": {
+      "ja": "やぎ座",
+      "en": "Capricornus",
+      "abbr": "Cap"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "デネブ・アルゲディ・ダビ",
+    "legacy_story": "秋の黄道十二星座の一つ。ギリシャ神話では上半身が山羊、下半身が魚という奇妙な姿のパン神が変身した姿。M30（球状星団）を含む。",
+    "explanation": {
+      "science": "α星付近は肉眼でも二つの星に見え、β星ダビーも複雑な多重星系です。M30は非常に古い恒星からなる球状星団で、太陽や月、惑星が通る黄道上にも位置します。",
+      "myth": "上半身が山羊、下半身が魚という姿で描かれます。ギリシャ神話では牧神パンやアイギパンと結び付けられ、怪物から逃れるため水中へ飛び込んだ際に下半身が魚になったという伝説があります。"
+    },
+    "representative_position": {
+      "ra_deg": 315,
+      "dec_deg": -18
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "PsA",
+    "name": {
+      "ja": "みなみのうお座",
+      "en": "Piscis Austrinus",
+      "abbr": "PsA"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "フォーマルハウト",
+    "legacy_story": "「秋の一つ星」フォーマルハウトを含む星座。フォーマルハウトは「魚の口」を意味し、ハッブル宇宙望遠鏡で惑星系の証拠（塵のリング）が発見された。",
+    "explanation": {
+      "science": "α星フォーマルハウトは約25光年の近距離にある若い恒星で、周囲には塵でできたリング構造があります。惑星系の形成・進化を研究する重要な対象です。",
+      "myth": "古代から知られる大きな魚の星座です。みずがめ座が水瓶から流す水を口で受けている姿として描かれます。"
+    },
+    "representative_position": {
+      "ra_deg": 340,
+      "dec_deg": -30
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Mic",
+    "name": {
+      "ja": "けんびきょう座",
+      "en": "Microscopium",
+      "abbr": "Mic"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "γ星・ε星",
+    "legacy_story": "1756年にラカイユが設定した近代的な星座。顕微鏡を表す。",
+    "explanation": {
+      "science": "AU Microscopiiは若い赤色矮星で、周囲には塵の円盤と複数の惑星が確認されています。若い惑星系がどのように形成・進化するかを研究する重要な対象です。",
+      "myth": "18世紀にラカーユが設定し、顕微鏡を表します。人間の目だけでは見えない世界を明らかにする近代科学の象徴として星座になりました。"
+    },
+    "representative_position": {
+      "ra_deg": 315,
+      "dec_deg": -37
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Gru",
+    "name": {
+      "ja": "つる座",
+      "en": "Grus",
+      "abbr": "Gru"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "アルナイル・β星",
+    "legacy_story": "南天の星座。鶴を表す。日本では南の低空に見える。",
+    "explanation": {
+      "science": "α星アルナイルが明るく目立ちます。周辺には複数の銀河からなる「つる座銀河群」もあり、望遠鏡でははるか遠方の銀河の世界を見ることができます。",
+      "myth": "16世紀末に南天で設定された比較的新しい星座で、鶴を表します。古代ギリシャの48星座には含まれていません。"
+    },
+    "representative_position": {
+      "ra_deg": 335,
+      "dec_deg": -47
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Tuc",
+    "name": {
+      "ja": "きょしちょう座",
+      "en": "Tucana",
+      "abbr": "Tuc"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "南天の星座。オオハシ（トゥーカン）を表す。小マゼラン雲と47 Tucanae（NGC104、全天2位の球状星団）を含む。",
+    "explanation": {
+      "science": "小マゼラン雲があることで有名です。また47 Tucanaeは非常に大きく明るい球状星団で、数十万から百万個規模の恒星が集まっています。",
+      "myth": "大航海時代につくられた星座で、南米などに生息する大きなくちばしを持つ鳥オオハシを表します。"
+    },
+    "representative_position": {
+      "ra_deg": 0,
+      "dec_deg": -63
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Ind",
+    "name": {
+      "ja": "インディアン座",
+      "en": "Indus",
+      "abbr": "Ind"
+    },
+    "season": "autumn",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "南天の星座。アメリカ先住民（インディアン）を表す。ε星は太陽に近い恒星（約11.8光年）。",
+    "explanation": {
+      "science": "ε星は約12光年と比較的近い恒星系で、褐色矮星を含むことでも知られています。近傍恒星から遠方銀河まで多様な天体があります。",
+      "myth": "16世紀末に設定された南天星座です。当時のヨーロッパ人が航海で出会った「異国の先住民」を人物像として星座にしたもので、大航海時代の世界観を反映しています。"
+    },
+    "representative_position": {
+      "ra_deg": 315,
+      "dec_deg": -55
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Pav",
+    "name": {
+      "ja": "くじゃく座",
+      "en": "Pavo",
+      "abbr": "Pav"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "main_stars_text": "ピーコック（α星）",
+    "legacy_story": "南天の星座。孔雀を表す。NGC6752（球状星団）を含む。",
+    "explanation": {
+      "science": "α星ピーコックは青白い明るい恒星です。NGC 6752は地球に比較的近い大型の球状星団で、非常に多くの古い恒星が密集しています。",
+      "myth": "大航海時代に設定された星座で、孔雀を表します。古代星座ではありませんが、孔雀そのものはギリシャ神話では女神ヘラの聖鳥として知られています。"
+    },
+    "representative_position": {
+      "ra_deg": 290,
+      "dec_deg": -63
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Ori",
+    "name": {
+      "ja": "オリオン座",
+      "en": "Orion",
+      "abbr": "Ori"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "main_stars_text": "ベテルギウス・リゲル・ベラトリックス・アルニラム",
+    "legacy_story": "ギリシャ神話の狩人オリオン。女神アルテミスに愛されたが、兄アポロンの策略で射殺されたとも、大サソリに刺されて死んだとも伝えられる。三ツ星の並びは世界中の文化で特別な意味を持ち、エジプトのピラミッドとの対応も指摘されている。M42（オリオン大星雲）・M43・M78・IC434（馬頭星雲）を含む。",
+    "explanation": {
+      "science": "赤いベテルギウスと青白いリゲルという、性質の大きく異なる二つの明るい星があります。M42オリオン大星雲では現在もガスや塵から新しい恒星が誕生しています。",
+      "myth": "オリオンはギリシャ神話に登場する腕自慢の狩人です。大サソリに刺されて命を落としたという伝説が有名で、星空でもオリオン座とさそり座は離れた位置に置かれています。"
+    },
+    "representative_position": {
+      "ra_deg": 83,
+      "dec_deg": 3
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Tau",
+    "name": {
+      "ja": "おうし座",
+      "en": "Taurus",
+      "abbr": "Tau"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "main_stars_text": "アルデバラン・エルナト",
+    "legacy_story": "冬の星座。M45（プレアデス星団・すばる）とM1（かに星雲）を含む。ギリシャ神話ではゼウスが白牛に変身した姿。アルデバランは「牛の目」を意味し、赤色巨星として有名。すばるは日本で古来から親しまれ、清少納言の枕草子にも登場する。",
+    "explanation": {
+      "science": "M45「プレアデス星団」とヒアデス星団があります。α星アルデバランはヒアデスと同じ方向に見えますが実際には手前の星です。M1「かに星雲」は1054年の超新星残骸で、中心にパルサーがあります。",
+      "myth": "大神ゼウスが王女エウロペに近づくため変身した白い牡牛とされています。エウロペを背に乗せて海を渡りクレタ島へ連れて行ったという物語です。"
+    },
+    "representative_position": {
+      "ra_deg": 65,
+      "dec_deg": 18
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Gem",
+    "name": {
+      "ja": "ふたご座",
+      "en": "Gemini",
+      "abbr": "Gem"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "main_stars_text": "ポルックス・カストル・アルヘナ",
+    "legacy_story": "冬の星座。双子の兄弟カストルとポルックスを表す。ポルックスは太陽系外惑星を持つことが確認されている。M35という美しい散開星団を含む。ギリシャ神話ではアルゴナウタイの英雄双子。",
+    "explanation": {
+      "science": "α星カストルは肉眼では一つですが、実際には六つの恒星からなる複雑な多重星系です。β星ポルックスには太陽系外惑星が確認され、M35は美しい散開星団です。",
+      "myth": "双子の兄弟カストルとポルックスを表します。カストルが命を落とした際、不死身だったポルックスは兄弟と離れることを望まず、ゼウスによって二人とも天へ上げられたと伝えられています。"
+    },
+    "representative_position": {
+      "ra_deg": 105,
+      "dec_deg": 25
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Aur",
+    "name": {
+      "ja": "ぎょしゃ座",
+      "en": "Auriga",
+      "abbr": "Aur"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "main_stars_text": "カペラ・メンカリナン・マアズ",
+    "legacy_story": "冬の星座。カペラは「子山羊」を意味し、全天で6番目に明るい恒星。M36・M37・M38の三散開星団を含む観測の宝庫。ギリシャ神話では馬車を操る御者の姿で描かれる。",
+    "explanation": {
+      "science": "1等星カペラは肉眼では一つに見えますが、実際には複数の恒星からなる星系です。M36・M37・M38という三つの散開星団があり、それぞれ異なる星の集まり方を楽しめます。",
+      "myth": "馬車を操る御者を表します。ギリシャ神話のアテネ王エリクトニオスなどと結び付けられます。カペラは「小さな雌山羊」を意味し、幼いゼウスを育てた山羊アマルテイアとも関連付けられています。"
+    },
+    "representative_position": {
+      "ra_deg": 85,
+      "dec_deg": 42
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "CMa",
+    "name": {
+      "ja": "おおいぬ座",
+      "en": "Canis Major",
+      "abbr": "CMa"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "main_stars_text": "シリウス・アドハラ・ウェゼン",
+    "legacy_story": "全天最明星シリウスを含む冬の星座。シリウスは「焼き焦がすもの」という意味で、古代エジプトではナイル川の氾濫を予告する重要な星だった。M41という明るい散開星団を含む。",
+    "explanation": {
+      "science": "α星シリウスは約8.6光年の距離にあり、夜空で最も明るく見える恒星です。白色矮星の伴星シリウスBを持ち、M41は双眼鏡や低倍率の望遠鏡で楽しめる散開星団です。",
+      "myth": "狩人オリオンが連れていた猟犬の一匹とされることが一般的です。シリウスは古代エジプトでも重要視され、その出現はナイル川の増水時期を知る目印になりました。"
+    },
+    "representative_position": {
+      "ra_deg": 105,
+      "dec_deg": -22
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "CMi",
+    "name": {
+      "ja": "こいぬ座",
+      "en": "Canis Minor",
+      "abbr": "CMi"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "main_stars_text": "プロキオン・ゴメイサ",
+    "legacy_story": "冬の大三角の一角プロキオンを含む小さな星座。「犬の前を行くもの」という意味で、シリウスより先に昇ることから命名。ギリシャ神話ではオリオンの猟犬。",
+    "explanation": {
+      "science": "α星プロキオンは約11.5光年と近い恒星で、白色矮星を伴う連星系です。名前には「犬より先に」という意味があり、シリウスより先に昇ることに由来するとされています。",
+      "myth": "おおいぬ座とともに狩人オリオンに付き従う犬として描かれることが多い星座です。ただし古代の伝承には複数の解釈があり、その正体は一つに定まっていません。"
+    },
+    "representative_position": {
+      "ra_deg": 113,
+      "dec_deg": 6
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Mon",
+    "name": {
+      "ja": "いっかくじゅう座",
+      "en": "Monoceros",
+      "abbr": "Mon"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "main_stars_text": "β星・α星",
+    "legacy_story": "1612年にプランシウスが設定した星座。一角獣（ユニコーン）を表す。天の川の中に位置し、M50などの散開星団を含む。NGC2244（バラ星雲）が有名。",
+    "explanation": {
+      "science": "星座自体に非常に明るい恒星はありませんが、ばら星雲、コーン星雲、クリスマスツリー星団など星形成領域が豊富です。M50も美しい散開星団です。",
+      "myth": "17世紀に設定された比較的新しい星座で、伝説上の動物ユニコーンを表します。古代ギリシャの星座ではありません。"
+    },
+    "representative_position": {
+      "ra_deg": 103,
+      "dec_deg": 0
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Lep",
+    "name": {
+      "ja": "うさぎ座",
+      "en": "Lepus",
+      "abbr": "Lep"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "main_stars_text": "アルネブ・ニハル",
+    "legacy_story": "オリオン座の足元に位置するうさぎを表す星座。ギリシャ神話ではオリオンが追う兎。M79（球状星団）を含む。",
+    "explanation": {
+      "science": "M79は球状星団としては珍しく天の川銀河中心とは反対方向にあります。R Leporisは非常に赤い炭素星で「ハインドのクリムゾン・スター」と呼ばれています。",
+      "myth": "オリオン座の足元に描かれるウサギです。狩人オリオンや猟犬であるおおいぬ座・こいぬ座に追われる獲物として星図に描かれることが多い星座です。"
+    },
+    "representative_position": {
+      "ra_deg": 83,
+      "dec_deg": -20
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Pup",
+    "name": {
+      "ja": "とも座",
+      "en": "Puppis",
+      "abbr": "Pup"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "main_stars_text": "ナオス・ζ星",
+    "legacy_story": "かつてのアルゴ座（アルゴ船）を分割した星座の一つ（船尾部分）。M46・M47・M93などの散開星団を含む。",
+    "explanation": {
+      "science": "M46とM47という性格の異なる散開星団があります。M46の方向には惑星状星雲NGC 2438も重なって見え、ζ星ナオスは非常に高温で明るい大質量星です。",
+      "myth": "かつての巨大星座「アルゴ船座」を分割してできた星座で、船の船尾部分を表します。アルゴ船はイアソンたちが金の羊毛を求めて航海した船です。"
+    },
+    "representative_position": {
+      "ra_deg": 118,
+      "dec_deg": -32
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Pyx",
+    "name": {
+      "ja": "らしんばん座",
+      "en": "Pyxis",
+      "abbr": "Pyx"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "かつてのアルゴ座（アルゴ船）を分割した星座の一つ（羅針盤部分）。1756年にラカイユが設定。",
+    "explanation": {
+      "science": "T Pyxidisは爆発を繰り返す「回帰新星」として知られています。白色矮星が伴星から物質を受け取り、その表面で核融合爆発が起こる現象です。",
+      "myth": "18世紀にラカーユが設定し、航海用の磁気コンパスを表します。近くにアルゴ船由来の星座がありますが、らしんばん座自体は古代のアルゴ船座には含まれていませんでした。"
+    },
+    "representative_position": {
+      "ra_deg": 133,
+      "dec_deg": -30
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Car",
+    "name": {
+      "ja": "りゅうこつ座",
+      "en": "Carina",
+      "abbr": "Car"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "main_stars_text": "カノープス・ミアプラキドゥス",
+    "legacy_story": "かつてのアルゴ座（アルゴ船）を分割した星座の一つ（竜骨部分）。全天2位の明るさを持つカノープスを含む。η星（イータ・カリーナ）は近い将来超新星爆発を起こす可能性がある超大質量星。",
+    "explanation": {
+      "science": "α星カノープスは全天でシリウスに次いで明るく見える恒星です。イータ・カリーナ星雲は巨大な星形成領域で、その中心のηカリーナは非常に大質量で高光度の恒星系です。",
+      "myth": "かつての巨大星座「アルゴ船座」の一部で、船の竜骨を表します。アルゴ船は英雄イアソンたちが金の羊毛を求める冒険に使った船で、近代になって複数の星座へ分割されました。"
+    },
+    "representative_position": {
+      "ra_deg": 130,
+      "dec_deg": -60
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Vel",
+    "name": {
+      "ja": "ほ座",
+      "en": "Vela",
+      "abbr": "Vel"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "main_stars_text": "γ星・δ星",
+    "legacy_story": "かつてのアルゴ座（アルゴ船）を分割した星座の一つ（帆部分）。NGC3132（南のリング星雲）を含む。",
+    "explanation": {
+      "science": "ほ座超新星残骸が広がり、その中心付近には高速回転する中性子星「ほ座パルサー」があります。γ星は非常に明るいウォルフ・ライエ星を含む恒星系です。",
+      "myth": "巨大星座アルゴ船座の一部で、船の帆を表します。英雄イアソンとアルゴナウタイが金の羊毛を求めて航海したアルゴ船の帆に当たります。"
+    },
+    "representative_position": {
+      "ra_deg": 145,
+      "dec_deg": -47
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Pic",
+    "name": {
+      "ja": "がか座",
+      "en": "Pictor",
+      "abbr": "Pic"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "1756年にラカイユが設定した近代的な星座。画家のイーゼルを表す。β星（ベータ・ピクトリス）は惑星系の証拠が発見された有名な星。",
+    "explanation": {
+      "science": "β星ベータ・ピクトリスは若い恒星で、周囲に巨大な塵の円盤と複数の太陽系外惑星があります。惑星系形成を研究する代表的な天体です。",
+      "myth": "18世紀にラカーユが設定しました。もともとは「画家のイーゼル」を意味し、絵を描くための画架や道具を表しています。"
+    },
+    "representative_position": {
+      "ra_deg": 85,
+      "dec_deg": -53
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Dor",
+    "name": {
+      "ja": "かじき座",
+      "en": "Dorado",
+      "abbr": "Dor"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "南天の星座。大マゼラン雲の大部分を含む。大マゼラン雲内のタランチュラ星雲（NGC2070）は肉眼で見える最大の星形成領域の一つ。",
+    "explanation": {
+      "science": "大マゼラン雲の主要部分があり、その内部の「タランチュラ星雲」は局所銀河群最大級の星形成領域です。1987年には超新星SN 1987Aが出現し、現代天文学に大きな影響を与えました。",
+      "myth": "大航海時代につくられた南天星座で、大型の海水魚を表します。熱帯の海で航海者たちが目にした生物が星空に取り入れられました。"
+    },
+    "representative_position": {
+      "ra_deg": 75,
+      "dec_deg": -60
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Ret",
+    "name": {
+      "ja": "レチクル座",
+      "en": "Reticulum",
+      "abbr": "Ret"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "1756年にラカイユが設定した近代的な星座。望遠鏡の接眼レンズの十字線（レチクル）を表す。",
+    "explanation": {
+      "science": "ζ星は太陽系から比較的近い二重星系です。NGC 1313など星形成活動の盛んな銀河もあり、近傍恒星から遠方銀河まで多様な対象があります。",
+      "myth": "18世紀にラカーユが設定しました。レチクルとは望遠鏡の接眼部などに入れる目盛りや網線で、天体位置を精密に測る道具です。"
+    },
+    "representative_position": {
+      "ra_deg": 57,
+      "dec_deg": -60
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Men",
+    "name": {
+      "ja": "テーブルさん座",
+      "en": "Mensa",
+      "abbr": "Men"
+    },
+    "season": "winter",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "main_stars_text": "α星",
+    "legacy_story": "1756年にラカイユが設定した近代的な星座。南アフリカのテーブル山を表す。全88星座の中で最も暗い星しか含まない星座。",
+    "explanation": {
+      "science": "全天でも特に暗い星座の一つですが、大マゼラン雲の一部がこの星座にかかっています。肉眼の星座としては地味でも、実際には一つの銀河そのものを含む領域です。",
+      "myth": "18世紀にラカーユが設定し、南アフリカのケープタウン近郊にあるテーブル山にちなんで名付けました。88星座でも珍しく、実在する山を直接モチーフにしています。"
+    },
+    "representative_position": {
+      "ra_deg": 75,
+      "dec_deg": -78
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Cen",
+    "name": {
+      "ja": "ケンタウルス座",
+      "en": "Centaurus",
+      "abbr": "Cen"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "main_stars_text": "リギル・ケンタウルス（α星）・ハダル（β星）",
+    "legacy_story": "南天の大きな星座。α星リギル・ケンタウルスは太陽に最も近い恒星系（約4.24光年）。ギリシャ神話では賢い半人半馬のケンタウロス族の賢者ケイロン。NGC5128（ケンタウルスA）・ω星団（NGC5139）を含む。",
+    "explanation": {
+      "science": "αケンタウリは太陽系に最も近い恒星系で、その一員プロキシマ・ケンタウリは約4.24光年の距離にあります。ωケンタウリは天の川銀河で最大級の球状星団で、電波銀河ケンタウルスAも有名です。",
+      "myth": "半人半馬のケンタウロスを表す古代星座です。後世には医学や音楽に優れた賢者ケイロンと結び付けられることがありますが、古代の伝承では必ずしもケイロン本人とは限りません。"
+    },
+    "representative_position": {
+      "ra_deg": 190,
+      "dec_deg": -47
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Cru",
+    "name": {
+      "ja": "みなみじゅうじ座",
+      "en": "Crux",
+      "abbr": "Cru"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "main_stars_text": "アクルックス・ミモサ・ガクルックス",
+    "legacy_story": "全88星座の中で最小の面積を持つ星座。南十字星として有名で、南半球の方位の基準として使われる。日本では沖縄の南端でかろうじて見える。",
+    "explanation": {
+      "science": "88星座で最も面積が小さい星座です。α星アクルックスは複数の恒星からなる星系で、近くにはNGC 4755「宝石箱星団」と暗黒星雲「コールサック」があります。",
+      "myth": "現在の星座として独立したのは比較的新しく、もともとはケンタウルス座の一部でした。大航海時代に南半球の航海で重要な目印となり、十字形の星の並びが独立した星座として定着しました。"
+    },
+    "representative_position": {
+      "ra_deg": 187,
+      "dec_deg": -60
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Lup",
+    "name": {
+      "ja": "おおかみ座",
+      "en": "Lupus",
+      "abbr": "Lup"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "南天の星座。ギリシャ神話ではケンタウロスが捧げる獣。1006年に出現した史上最も明るい超新星（SN 1006）がこの星座の方向に現れた。",
+    "explanation": {
+      "science": "周辺には若い恒星が生まれている「おおかみ座分子雲」があります。また西暦1006年に出現した超新星SN 1006の残骸もあり、記録上きわめて明るかった超新星として知られます。",
+      "myth": "古代には必ずしも狼と決まっておらず、ケンタウルス座の人物が持つ野生動物や生贄として描かれていました。後に狼として解釈されるようになりました。"
+    },
+    "representative_position": {
+      "ra_deg": 230,
+      "dec_deg": -42
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Nor",
+    "name": {
+      "ja": "じょうぎ座",
+      "en": "Norma",
+      "abbr": "Nor"
+    },
+    "season": "summer",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "main_stars_text": "γ星・ε星",
+    "legacy_story": "1756年にラカイユが設定した近代的な星座。大工の定規（直角定規）を表す。",
+    "explanation": {
+      "science": "天の川の濃い領域にあり、多くの恒星や散開星団があります。その向こうには巨大なじょうぎ座銀河団があり、「グレート・アトラクター」と呼ばれる大規模構造の研究でも重要です。",
+      "myth": "18世紀にラカーユが設定し、直角を測る定規や製図用具を表します。精密な測定を象徴する科学・技術系の星座です。"
+    },
+    "representative_position": {
+      "ra_deg": 245,
+      "dec_deg": -52
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Cir",
+    "name": {
+      "ja": "コンパス座",
+      "en": "Circinus",
+      "abbr": "Cir"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "1756年にラカイユが設定した近代的な星座。コンパス（製図用）を表す。全88星座の中で3番目に小さな星座。",
+    "explanation": {
+      "science": "明るい星は少ないものの、その方向には活動銀河「コンパス座銀河」があります。中心の巨大ブラックホール周辺で激しい活動が起こり、強い電波やX線を放射しています。",
+      "myth": "18世紀にラカーユが設定しました。ここでいうコンパスは方角を示す磁気コンパスではなく、円を描く製図用コンパスを意味します。"
+    },
+    "representative_position": {
+      "ra_deg": 220,
+      "dec_deg": -63
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Mus",
+    "name": {
+      "ja": "はえ座",
+      "en": "Musca",
+      "abbr": "Mus"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "南天の星座。ハエを表す。みなみじゅうじ座の近くに位置する。",
+    "explanation": {
+      "science": "天の川に近く、球状星団NGC 4833などがあります。暗黒星雲もあり、星が存在しないように見える黒い領域にも大量のガスや塵があることが分かります。",
+      "myth": "大航海時代につくられた南天星座です。当初は蜂と呼ばれた時期もありましたが、後に「蝿」を意味するMuscaが定着しました。"
+    },
+    "representative_position": {
+      "ra_deg": 190,
+      "dec_deg": -70
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Cha",
+    "name": {
+      "ja": "カメレオン座",
+      "en": "Chamaeleon",
+      "abbr": "Cha"
+    },
+    "season": "circumpolar",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "main_stars_text": "α星・γ星",
+    "legacy_story": "南天の周極星座。カメレオンを表す。南極に近い位置にある。",
+    "explanation": {
+      "science": "周辺にはカメレオン分子雲と呼ばれる低温のガスや塵の雲があり、現在も新しい恒星が誕生しています。比較的近距離にある星形成領域として研究されています。",
+      "myth": "大航海時代に設定された南天星座で、カメレオンを表します。古代ギリシャ神話とは関係なく、南方で知られた珍しい動物がモチーフです。"
+    },
+    "representative_position": {
+      "ra_deg": 165,
+      "dec_deg": -78
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Vol",
+    "name": {
+      "ja": "とびうお座",
+      "en": "Volans",
+      "abbr": "Vol"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "main_stars_text": "β星・γ星",
+    "legacy_story": "南天の星座。飛び魚を表す。りゅうこつ座の近くに位置する。",
+    "explanation": {
+      "science": "NGC 2442は重力的な影響によって渦巻腕が大きく歪んだ銀河で、「ミートフック銀河」と呼ばれることもあります。銀河が相互作用によって姿を変える例です。",
+      "myth": "16世紀末の南天観測から生まれた星座で、海面から飛び出して滑空するトビウオを表します。大航海時代の船乗りに身近だった海洋生物が星座になった例です。"
+    },
+    "representative_position": {
+      "ra_deg": 115,
+      "dec_deg": -70
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "TrA",
+    "name": {
+      "ja": "みなみのさんかく座",
+      "en": "Triangulum Australe",
+      "abbr": "TrA"
+    },
+    "season": "spring",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "main_stars_text": "アトリア・β星",
+    "legacy_story": "南天の星座。南の三角形を表す。みなみじゅうじ座の近くに位置する。",
+    "explanation": {
+      "science": "三つの比較的明るい星がはっきりした三角形をつくります。散開星団NGC 6025などがあり、双眼鏡や小型望遠鏡でも星の集まりを楽しめます。",
+      "myth": "16世紀末の南天観測から生まれた星座です。北天のさんかく座に対応する「南の三角形」として名付けられ、特定の神話はありません。"
+    },
+    "representative_position": {
+      "ra_deg": 240,
+      "dec_deg": -65
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Hyi",
+    "name": {
+      "ja": "みずへび座",
+      "en": "Hydrus",
+      "abbr": "Hyi"
+    },
+    "season": "circumpolar",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "main_stars_text": "β星・α星",
+    "legacy_story": "南天の周極星座。小さな水蛇を表す。大マゼラン雲・小マゼラン雲の近くに位置する。",
+    "explanation": {
+      "science": "南天の極に近く、明るい星は多くありません。β星は太陽に比較的似た性質を持つ恒星として研究されています。",
+      "myth": "大航海時代につくられた星座で、水蛇を表します。古代のうみへび座Hydraとは別の星座で、特定のギリシャ神話には由来しません。"
+    },
+    "representative_position": {
+      "ra_deg": 35,
+      "dec_deg": -72
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Oct",
+    "name": {
+      "ja": "はちぶんぎ座",
+      "en": "Octans",
+      "abbr": "Oct"
+    },
+    "season": "circumpolar",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "main_stars_text": "ν星・δ星",
+    "legacy_story": "南天の周極星座。南極星（σ星）を含む。八分儀（オクタント）を表す。南極点に最も近い星座。",
+    "explanation": {
+      "science": "南天の天の極を含む星座です。σ星は南極星に近い位置にありますが、北極星ほど明るくないため目印としては使いにくい星です。",
+      "myth": "18世紀にラカーユが設定しました。八分儀は天体の高度など角度を測る航海・天文観測用の器具です。"
+    },
+    "representative_position": {
+      "ra_deg": 0,
+      "dec_deg": -82
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Aps",
+    "name": {
+      "ja": "ふうちょう座",
+      "en": "Apus",
+      "abbr": "Aps"
+    },
+    "season": "circumpolar",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "main_stars_text": "α星・β星",
+    "legacy_story": "南天の周極星座。極楽鳥（フウチョウ）を表す。",
+    "explanation": {
+      "science": "明るい星は少ないものの、球状星団NGC 6101などを含みます。NGC 6101は多数の古い恒星が球状に集まった天体で、南天の深宇宙観測で興味深い対象です。",
+      "myth": "16世紀末の南天観測から生まれた星座で、極楽鳥を表します。大航海時代にヨーロッパへ知られるようになった南方の珍しい動物が星座に取り入れられました。"
+    },
+    "representative_position": {
+      "ra_deg": 250,
+      "dec_deg": -75
+    },
+    "source": {
+      "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  }
+]

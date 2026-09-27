@@ -1,0 +1,42 @@
+{
+  "database_name": "Nicole Astronomy Database",
+  "database_version": "0.1.2",
+  "schema_version": 3,
+  "source": {
+    "base_app": "Nicole the Astronavigator",
+    "base_version": "1.12.0",
+    "enrichment": [
+      "Yale Bright Star Catalogue-derived stars.csv",
+      "Complete Messier catalog",
+      "OpenNGC",
+      "orthodox asterism review",
+      "NASA/NSSDC solar-system physical diameters",
+      "numeric deep-sky angular-size normalization"
+    ]
+  },
+  "id_policy": "Existing Nicole IDs are immutable. Existing IDs are preserved; new Messier objects use M1..M110.",
+  "counts": {
+    "constellations": 88,
+    "stars_total": 64,
+    "stars_with_photometry": 64,
+    "stars_with_full_explanation": 22,
+    "planets": 7,
+    "non_planetary_objects_total": 119,
+    "messier_objects": 110,
+    "messier_with_nicole_explanation": 38,
+    "asterisms": 9,
+    "catalog_entries": 287,
+    "solar_system_bodies": 9,
+    "deep_sky_with_angular_size": 119
+  },
+  "checksums_sha256": {
+    "data/asterisms.json": "ccb33689749f290fa063e850f8ea5c24bc356e8cd611c0cd4241c2b8b2922501",
+    "data/catalog.json": "b0d5d5d5a971f4388ca9782555bdedade743932bb9d9049eba764cb4173409ca",
+    "data/constellations.json": "06f1050195611b6e7684bde8c5307ea5b54c03707a81d62b5c0eb0952926781b",
+    "data/deep-sky.json": "be1237f6e5c2d066a764dd75a0465a32f05f150de40681e4653249be69bb862d",
+    "data/external-sources.json": "9d547fedb4b5df06296c95f0064096565bd2028c0934fbb3a9f949462fc9c5aa",
+    "data/planets.json": "4644b69a4ad19743c50508e0b42ebbdd24314f8dcb9a54b160788870cc31f49b",
+    "data/solar-system.json": "d90195208e4f02fc8e178c4f26193be86b25a254287bb6745570c1166705c200",
+    "data/stars.json": "67854a71da9cd14ffc790a2621f6c313c7cc0ed664b91edfe3d1a29ebd0c8ec2"
+  }
+}

@@ -1,0 +1,3290 @@
+[
+  {
+    "id": "Sirius",
+    "name": {
+      "ja": "シリウス",
+      "ja_full": "シリウス（おおいぬ座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 101.2872,
+      "dec_deg": -16.7161,
+      "mode": "fixed"
+    },
+    "magnitude_v": -1.46,
+    "constellation_id": "CMa",
+    "catalog_category": "恒星",
+    "icon": "⭐",
+    "distance_text": "約8.6光年",
+    "size_text": "直径約238万km",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "全天最明星。白色矮星の伴星を持つ",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "シリウス（おおいぬ座α）は、全天最明星。白色矮星の伴星を持つ天体です。距離は約8.6光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼〜低倍率です。",
+      "science": "主星シリウスAと白色矮星シリウスBからなる連星系です。Bは恒星が核融合を終えた後に残る高密度な天体で、恒星進化を考えるうえで重要な実例です。",
+      "history": "古代から非常に目立つ星として知られ、英名 Sirius はギリシャ語の「焼き焦がすもの」に由来するとされます。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>シリウス（おおいぬ座α）は、全天最明星。白色矮星の伴星を持つ天体です。距離は約8.6光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼〜低倍率です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>主星シリウスAと白色矮星シリウスBからなる連星系です。Bは恒星が核融合を終えた後に残る高密度な天体で、恒星進化を考えるうえで重要な実例です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>古代から非常に目立つ星として知られ、英名 Sirius はギリシャ語の「焼き焦がすもの」に由来するとされます。</p></div>"
+    },
+    "photometry": {
+      "bv": 0.0,
+      "spectral_type": "A1Vm",
+      "effective_temperature_estimate_k": 10125,
+      "display_color_hex": "#C9DAFF",
+      "display_rgb": {
+        "r": 201,
+        "g": 218,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Canopus",
+    "name": {
+      "ja": "カノープス",
+      "ja_full": "カノープス（りゅうこつ座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 95.9879,
+      "dec_deg": -52.6957,
+      "mode": "fixed"
+    },
+    "magnitude_v": -0.74,
+    "constellation_id": "Car",
+    "catalog_category": "恒星",
+    "icon": "⭐",
+    "distance_text": "約310光年",
+    "size_text": "直径約7,200万km",
+    "recommended_magnification": "肉眼",
+    "highlight": "全天2位の明るさ。日本では南の低空に見える",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "explanation": {
+      "overview": "カノープス（りゅうこつ座α）は、全天2位の明るさ。日本では南の低空に見える天体です。距離は約310光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "黄白色の明るい巨星で、シリウスより遠方にありながら全天2位の明るさに見えるほど本来の光度が大きい星です。",
+      "history": "日本や中国では南の低空に現れる「老人星」「南極老人星」と結び付けられ、長寿の象徴として扱われてきました。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>カノープス（りゅうこつ座α）は、全天2位の明るさ。日本では南の低空に見える天体です。距離は約310光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>黄白色の明るい巨星で、シリウスより遠方にありながら全天2位の明るさに見えるほど本来の光度が大きい星です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>日本や中国では南の低空に現れる「老人星」「南極老人星」と結び付けられ、長寿の象徴として扱われてきました。</p></div>"
+    },
+    "photometry": {
+      "bv": 0.15,
+      "spectral_type": "F0II",
+      "effective_temperature_estimate_k": 8571,
+      "display_color_hex": "#D6E1FF",
+      "display_rgb": {
+        "r": 214,
+        "g": 225,
+        "b": 255
+      },
+      "color_label_ja": "白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Arcturus",
+    "name": {
+      "ja": "アルクトゥルス",
+      "ja_full": "アルクトゥルス（うしかい座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 213.9153,
+      "dec_deg": 19.1822,
+      "mode": "fixed"
+    },
+    "magnitude_v": -0.05,
+    "constellation_id": "Boo",
+    "catalog_category": "恒星",
+    "icon": "🟠",
+    "distance_text": "約37光年",
+    "size_text": "直径約3,600万km",
+    "recommended_magnification": "肉眼",
+    "highlight": "北天最明星。春の大曲線の中間点",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "explanation": {
+      "overview": "アルクトゥルス（うしかい座α）は、北天最明星。春の大曲線の中間点天体です。距離は約37光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "太陽より進化の進んだ橙色巨星です。大きな固有運動を持ち、太陽近傍の恒星集団とは異なる運動を示すことでも知られます。",
+      "history": "名前はギリシャ語で「熊の番人」を意味し、おおぐま座の後を追うような位置関係に由来します。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>アルクトゥルス（うしかい座α）は、北天最明星。春の大曲線の中間点天体です。距離は約37光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>太陽より進化の進んだ橙色巨星です。大きな固有運動を持ち、太陽近傍の恒星集団とは異なる運動を示すことでも知られます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>名前はギリシャ語で「熊の番人」を意味し、おおぐま座の後を追うような位置関係に由来します。</p></div>"
+    },
+    "photometry": {
+      "bv": 1.23,
+      "spectral_type": "K1.5IIIFe-0.5",
+      "effective_temperature_estimate_k": 4251,
+      "display_color_hex": "#FFD4B1",
+      "display_rgb": {
+        "r": 255,
+        "g": 212,
+        "b": 177
+      },
+      "color_label_ja": "橙",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Vega",
+    "name": {
+      "ja": "ベガ",
+      "ja_full": "ベガ（こと座α・織姫星）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 279.2347,
+      "dec_deg": 38.7837,
+      "mode": "fixed"
+    },
+    "magnitude_v": 0.03,
+    "constellation_id": "Lyr",
+    "catalog_category": "恒星",
+    "icon": "✨",
+    "distance_text": "約25光年",
+    "size_text": "直径約240万km",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "全天3位の明るさ。七夕の織姫星",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "ベガ（こと座α・織姫星）は、全天3位の明るさ。七夕の織姫星天体です。距離は約25光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼〜低倍率です。",
+      "science": "比較的近いA型主系列星で、高速自転のため極方向と赤道方向で性質が少し異なることが分かっています。周囲には塵の円盤も知られています。",
+      "history": "七夕では織姫星として親しまれます。測光の歴史では、等級の基準を考える際の代表的な標準星として長く使われました。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>ベガ（こと座α・織姫星）は、全天3位の明るさ。七夕の織姫星天体です。距離は約25光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼〜低倍率です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>比較的近いA型主系列星で、高速自転のため極方向と赤道方向で性質が少し異なることが分かっています。周囲には塵の円盤も知られています。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>七夕では織姫星として親しまれます。測光の歴史では、等級の基準を考える際の代表的な標準星として長く使われました。</p></div>"
+    },
+    "photometry": {
+      "bv": 0.0,
+      "spectral_type": "A0Va",
+      "effective_temperature_estimate_k": 10125,
+      "display_color_hex": "#C9DAFF",
+      "display_rgb": {
+        "r": 201,
+        "g": 218,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Capella",
+    "name": {
+      "ja": "カペラ",
+      "ja_full": "カペラ（ぎょしゃ座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 79.1723,
+      "dec_deg": 45.998,
+      "mode": "fixed"
+    },
+    "magnitude_v": 0.08,
+    "constellation_id": "Aur",
+    "catalog_category": "恒星",
+    "icon": "🟡",
+    "distance_text": "約43光年",
+    "size_text": "—",
+    "recommended_magnification": "肉眼",
+    "highlight": "冬の北天の明星。実は2つの黄色巨星の連星",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "カペラ（ぎょしゃ座α）は、冬の北天の明星。実は2つの黄色巨星の連星天体です。距離は約43光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "肉眼では1つに見えますが、明るい成分自体が2つの黄色巨星からなる連星で、さらに離れた赤色矮星のペアも含む多重星系です。",
+      "history": "ラテン語で「小さな雌ヤギ」を意味し、ぎょしゃ座の神話的表現と結び付いています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>カペラ（ぎょしゃ座α）は、冬の北天の明星。実は2つの黄色巨星の連星天体です。距離は約43光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>肉眼では1つに見えますが、明るい成分自体が2つの黄色巨星からなる連星で、さらに離れた赤色矮星のペアも含む多重星系です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>ラテン語で「小さな雌ヤギ」を意味し、ぎょしゃ座の神話的表現と結び付いています。</p></div>"
+    },
+    "photometry": {
+      "bv": 0.8,
+      "spectral_type": "G5IIIe+G0III",
+      "effective_temperature_estimate_k": 5281,
+      "display_color_hex": "#FFE9D7",
+      "display_rgb": {
+        "r": 255,
+        "g": 233,
+        "b": 215
+      },
+      "color_label_ja": "黄",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Rigel",
+    "name": {
+      "ja": "リゲル",
+      "ja_full": "リゲル（オリオン座β）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 78.6345,
+      "dec_deg": -8.2016,
+      "mode": "fixed"
+    },
+    "magnitude_v": 0.18,
+    "constellation_id": "Ori",
+    "catalog_category": "恒星",
+    "icon": "🔵",
+    "distance_text": "約860光年",
+    "size_text": "直径約9,700万km",
+    "recommended_magnification": "肉眼",
+    "highlight": "オリオン座の青白い超巨星。太陽の約7万倍の光度",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "リゲル（オリオン座β）は、オリオン座の青白い超巨星。太陽の約7万倍の光度天体です。距離は約860光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "非常に高温で高光度の青色超巨星です。大質量星が短い寿命の後半へ進んだ姿で、周囲には複数の伴星も知られています。",
+      "history": "オリオンの足を表す星で、名称はアラビア語の「巨人の足」に由来します。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>リゲル（オリオン座β）は、オリオン座の青白い超巨星。太陽の約7万倍の光度天体です。距離は約860光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>非常に高温で高光度の青色超巨星です。大質量星が短い寿命の後半へ進んだ姿で、周囲には複数の伴星も知られています。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>オリオンの足を表す星で、名称はアラビア語の「巨人の足」に由来します。</p></div>"
+    },
+    "photometry": {
+      "bv": -0.03,
+      "spectral_type": "B8Ia:",
+      "effective_temperature_estimate_k": 10516,
+      "display_color_hex": "#C6D8FF",
+      "display_rgb": {
+        "r": 198,
+        "g": 216,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Procyon",
+    "name": {
+      "ja": "プロキオン",
+      "ja_full": "プロキオン（こいぬ座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 114.8255,
+      "dec_deg": 5.225,
+      "mode": "fixed"
+    },
+    "magnitude_v": 0.4,
+    "constellation_id": "CMi",
+    "catalog_category": "恒星",
+    "icon": "⭐",
+    "distance_text": "約11.5光年",
+    "size_text": "直径約200万km",
+    "recommended_magnification": "肉眼",
+    "highlight": "冬の大三角の一角。白色矮星の伴星を持つ",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "プロキオン（こいぬ座α）は、冬の大三角の一角。白色矮星の伴星を持つ天体です。距離は約11.5光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "主星と白色矮星の伴星からなる連星系で、シリウス系と似た構成です。比較的近距離にあるため、恒星進化と連星軌道研究の重要な対象です。",
+      "history": "「犬の前」を意味する名で、シリウスより少し早く昇ることに由来します。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>プロキオン（こいぬ座α）は、冬の大三角の一角。白色矮星の伴星を持つ天体です。距離は約11.5光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>主星と白色矮星の伴星からなる連星系で、シリウス系と似た構成です。比較的近距離にあるため、恒星進化と連星軌道研究の重要な対象です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>「犬の前」を意味する名で、シリウスより少し早く昇ることに由来します。</p></div>"
+    },
+    "photometry": {
+      "bv": 0.42,
+      "spectral_type": "F5IV-V",
+      "effective_temperature_estimate_k": 6776,
+      "display_color_hex": "#FBF7FF",
+      "display_rgb": {
+        "r": 251,
+        "g": 247,
+        "b": 255
+      },
+      "color_label_ja": "黄白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Betelgeuse",
+    "name": {
+      "ja": "ベテルギウス",
+      "ja_full": "ベテルギウス（オリオン座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 88.7929,
+      "dec_deg": 7.4071,
+      "mode": "fixed"
+    },
+    "magnitude_v": 0.45,
+    "constellation_id": "Ori",
+    "catalog_category": "恒星",
+    "icon": "🔴",
+    "distance_text": "約700光年",
+    "size_text": "直径約12億km（太陽の約1,000倍）",
+    "recommended_magnification": "肉眼",
+    "highlight": "近い将来超新星爆発する赤色超巨星",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "ベテルギウス（オリオン座α）は、近い将来超新星爆発する赤色超巨星天体です。距離は約700光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "大質量星が進化した赤色超巨星で、外層が大きく膨張し、明るさも不規則に変化します。将来は超新星になると考えられますが、その時期を人間の時間尺度で予測することはできません。",
+      "history": "オリオンの肩を表す星として知られ、2019〜2020年の大減光では塵と表面活動が注目されました。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>ベテルギウス（オリオン座α）は、近い将来超新星爆発する赤色超巨星天体です。距離は約700光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>大質量星が進化した赤色超巨星で、外層が大きく膨張し、明るさも不規則に変化します。将来は超新星になると考えられますが、その時期を人間の時間尺度で予測することはできません。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>オリオンの肩を表す星として知られ、2019〜2020年の大減光では塵と表面活動が注目されました。</p></div>"
+    },
+    "photometry": {
+      "bv": 1.85,
+      "spectral_type": "M1-2Ia-Iab",
+      "effective_temperature_estimate_k": 3333,
+      "display_color_hex": "#FFBC83",
+      "display_rgb": {
+        "r": 255,
+        "g": 188,
+        "b": 131
+      },
+      "color_label_ja": "橙赤〜赤",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Altair",
+    "name": {
+      "ja": "アルタイル",
+      "ja_full": "アルタイル（わし座α・彦星）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 297.6958,
+      "dec_deg": 8.8683,
+      "mode": "fixed"
+    },
+    "magnitude_v": 0.76,
+    "constellation_id": "Aql",
+    "catalog_category": "恒星",
+    "icon": "✨",
+    "distance_text": "約17光年",
+    "size_text": "直径約200万km",
+    "recommended_magnification": "肉眼",
+    "highlight": "七夕の彦星。高速自転で扁平な形",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "アルタイル（わし座α・彦星）は、七夕の彦星。高速自転で扁平な形天体です。距離は約17光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "非常に高速で自転しているため、完全な球ではなく赤道方向に膨らんだ形をしています。高速自転が恒星の形や表面温度に与える影響を直接調べられる星です。",
+      "history": "七夕では彦星として親しまれ、ベガ・デネブと夏の大三角を作ります。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>アルタイル（わし座α・彦星）は、七夕の彦星。高速自転で扁平な形天体です。距離は約17光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>非常に高速で自転しているため、完全な球ではなく赤道方向に膨らんだ形をしています。高速自転が恒星の形や表面温度に与える影響を直接調べられる星です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>七夕では彦星として親しまれ、ベガ・デネブと夏の大三角を作ります。</p></div>"
+    },
+    "photometry": {
+      "bv": 0.22,
+      "spectral_type": "A7V",
+      "effective_temperature_estimate_k": 8011,
+      "display_color_hex": "#DDE6FF",
+      "display_rgb": {
+        "r": 221,
+        "g": 230,
+        "b": 255
+      },
+      "color_label_ja": "白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Aldebaran",
+    "name": {
+      "ja": "アルデバラン",
+      "ja_full": "アルデバラン（おうし座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 68.9802,
+      "dec_deg": 16.5093,
+      "mode": "fixed"
+    },
+    "magnitude_v": 0.87,
+    "constellation_id": "Tau",
+    "catalog_category": "恒星",
+    "icon": "🔴",
+    "distance_text": "約65光年",
+    "size_text": "直径約6,100万km",
+    "recommended_magnification": "肉眼",
+    "highlight": "おうし座の目。赤色巨星",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "アルデバラン（おうし座α）は、おうし座の目。赤色巨星天体です。距離は約65光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "太陽より進化した橙色巨星で、おうし座のヒアデス星団の方向に見えますが、実際には星団より手前にあります。",
+      "history": "名前はアラビア語で「後に続くもの」を意味し、プレアデス星団を追うように昇る姿に由来します。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>アルデバラン（おうし座α）は、おうし座の目。赤色巨星天体です。距離は約65光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>太陽より進化した橙色巨星で、おうし座のヒアデス星団の方向に見えますが、実際には星団より手前にあります。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>名前はアラビア語で「後に続くもの」を意味し、プレアデス星団を追うように昇る姿に由来します。</p></div>"
+    },
+    "photometry": {
+      "bv": 1.54,
+      "spectral_type": "K5+III",
+      "effective_temperature_estimate_k": 3734,
+      "display_color_hex": "#FFC799",
+      "display_rgb": {
+        "r": 255,
+        "g": 199,
+        "b": 153
+      },
+      "color_label_ja": "橙赤〜赤",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Spica",
+    "name": {
+      "ja": "スピカ",
+      "ja_full": "スピカ（おとめ座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 201.2983,
+      "dec_deg": -11.1613,
+      "mode": "fixed"
+    },
+    "magnitude_v": 0.98,
+    "constellation_id": "Vir",
+    "catalog_category": "恒星",
+    "icon": "🔵",
+    "distance_text": "約250光年",
+    "size_text": "直径約1,400万km",
+    "recommended_magnification": "肉眼",
+    "highlight": "春の大曲線の終点。青白い連星",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explanation": {
+      "overview": "スピカ（おとめ座α）は、春の大曲線の終点。青白い連星天体です。距離は約250光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "肉眼では1つですが、実際には互いに近接して回る高温の連星です。潮汐力による変形やスペクトル変化も研究対象になります。",
+      "history": "おとめ座が持つ麦の穂を表す名前で、春の大曲線をたどる目印としても有名です。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>スピカ（おとめ座α）は、春の大曲線の終点。青白い連星天体です。距離は約250光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>肉眼では1つですが、実際には互いに近接して回る高温の連星です。潮汐力による変形やスペクトル変化も研究対象になります。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>おとめ座が持つ麦の穂を表す名前で、春の大曲線をたどる目印としても有名です。</p></div>"
+    },
+    "photometry": {
+      "bv": -0.23,
+      "spectral_type": "B1III-IV+B2V",
+      "effective_temperature_estimate_k": 14354,
+      "display_color_hex": "#B7CEFF",
+      "display_rgb": {
+        "r": 183,
+        "g": 206,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Antares",
+    "name": {
+      "ja": "アンタレス",
+      "ja_full": "アンタレス（さそり座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 247.3519,
+      "dec_deg": -26.432,
+      "mode": "fixed"
+    },
+    "magnitude_v": 0.96,
+    "constellation_id": "Sco",
+    "catalog_category": "恒星",
+    "icon": "🔴",
+    "distance_text": "約550光年",
+    "size_text": "直径約12億km（太陽の約700倍）",
+    "recommended_magnification": "肉眼",
+    "highlight": "火星に対抗する赤い超巨星",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "アンタレス（さそり座α）は、火星に対抗する赤い超巨星天体です。距離は約550光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "赤色超巨星で、低温の表面と巨大な半径を持つ大質量星です。周囲には星風で放出された物質も存在します。",
+      "history": "名は「火星に対抗するもの」の意味で、赤い色が火星と似ていることから付けられました。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>アンタレス（さそり座α）は、火星に対抗する赤い超巨星天体です。距離は約550光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>赤色超巨星で、低温の表面と巨大な半径を持つ大質量星です。周囲には星風で放出された物質も存在します。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>名は「火星に対抗するもの」の意味で、赤い色が火星と似ていることから付けられました。</p></div>"
+    },
+    "photometry": {
+      "bv": 1.83,
+      "spectral_type": "M1.5Iab-Ib+B4Ve",
+      "effective_temperature_estimate_k": 3356,
+      "display_color_hex": "#FFBC85",
+      "display_rgb": {
+        "r": 255,
+        "g": 188,
+        "b": 133
+      },
+      "color_label_ja": "橙赤〜赤",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Pollux",
+    "name": {
+      "ja": "ポルックス",
+      "ja_full": "ポルックス（ふたご座β）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 116.3289,
+      "dec_deg": 28.0262,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.14,
+    "constellation_id": "Gem",
+    "catalog_category": "恒星",
+    "icon": "🟠",
+    "distance_text": "約34光年",
+    "size_text": "直径約1,100万km",
+    "recommended_magnification": "肉眼",
+    "highlight": "ふたご座の兄。太陽系外惑星を持つ",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "ポルックス（ふたご座β）は、ふたご座の兄。太陽系外惑星を持つ天体です。距離は約34光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "進化した橙色巨星で、周囲には太陽系外惑星が確認されています。肉眼で明るい恒星にも惑星系が存在する好例です。",
+      "history": "ふたご座の双子の一人ポルックスを表し、カストルと並んで冬の空の分かりやすい目印になります。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>ポルックス（ふたご座β）は、ふたご座の兄。太陽系外惑星を持つ天体です。距離は約34光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>進化した橙色巨星で、周囲には太陽系外惑星が確認されています。肉眼で明るい恒星にも惑星系が存在する好例です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>ふたご座の双子の一人ポルックスを表し、カストルと並んで冬の空の分かりやすい目印になります。</p></div>"
+    },
+    "photometry": {
+      "bv": 1.0,
+      "spectral_type": "K0IIIb",
+      "effective_temperature_estimate_k": 4743,
+      "display_color_hex": "#FFDFC5",
+      "display_rgb": {
+        "r": 255,
+        "g": 223,
+        "b": 197
+      },
+      "color_label_ja": "橙",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Fomalhaut",
+    "name": {
+      "ja": "フォーマルハウト",
+      "ja_full": "フォーマルハウト（みなみのうお座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 344.4127,
+      "dec_deg": -29.6223,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.16,
+    "constellation_id": "PsA",
+    "catalog_category": "恒星",
+    "icon": "⭐",
+    "distance_text": "約25光年",
+    "size_text": "直径約200万km",
+    "recommended_magnification": "肉眼",
+    "highlight": "秋の一つ星。惑星系の証拠が発見された",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "フォーマルハウト（みなみのうお座α）は、秋の一つ星。惑星系の証拠が発見された天体です。距離は約25光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "若い恒星の周囲に塵の円盤が広がっており、惑星形成後の円盤構造を調べる代表的な対象です。",
+      "history": "秋の南の空で周囲に明るい星が少ないため「秋の一つ星」と呼ばれます。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>フォーマルハウト（みなみのうお座α）は、秋の一つ星。惑星系の証拠が発見された天体です。距離は約25光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>若い恒星の周囲に塵の円盤が広がっており、惑星形成後の円盤構造を調べる代表的な対象です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>秋の南の空で周囲に明るい星が少ないため「秋の一つ星」と呼ばれます。</p></div>"
+    },
+    "photometry": {
+      "bv": 0.09,
+      "spectral_type": "A3V",
+      "effective_temperature_estimate_k": 9125,
+      "display_color_hex": "#D0DEFF",
+      "display_rgb": {
+        "r": 208,
+        "g": 222,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Deneb",
+    "name": {
+      "ja": "デネブ",
+      "ja_full": "デネブ（はくちょう座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 310.358,
+      "dec_deg": 45.2803,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.25,
+    "constellation_id": "Cyg",
+    "catalog_category": "恒星",
+    "icon": "🔵",
+    "distance_text": "約2,600光年",
+    "size_text": "直径約2億km（太陽の約200倍）",
+    "recommended_magnification": "肉眼",
+    "highlight": "夏の大三角の一角。超巨星で実は超明るい",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "デネブ（はくちょう座α）は、夏の大三角の一角。超巨星で実は超明るい天体です。距離は約2,600光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "非常に遠方にあるにもかかわらず1等星に見える、極めて高光度の白色超巨星です。大質量星の進化を考えるうえで重要です。",
+      "history": "はくちょう座の尾を表し、ベガ・アルタイルと夏の大三角を形成します。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>デネブ（はくちょう座α）は、夏の大三角の一角。超巨星で実は超明るい天体です。距離は約2,600光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>非常に遠方にあるにもかかわらず1等星に見える、極めて高光度の白色超巨星です。大質量星の進化を考えるうえで重要です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>はくちょう座の尾を表し、ベガ・アルタイルと夏の大三角を形成します。</p></div>"
+    },
+    "photometry": {
+      "bv": 0.09,
+      "spectral_type": "A2Ia",
+      "effective_temperature_estimate_k": 9125,
+      "display_color_hex": "#D0DEFF",
+      "display_rgb": {
+        "r": 208,
+        "g": 222,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Regulus",
+    "name": {
+      "ja": "レグルス",
+      "ja_full": "レグルス（しし座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 152.093,
+      "dec_deg": 11.9672,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.35,
+    "constellation_id": "Leo",
+    "catalog_category": "恒星",
+    "icon": "🔵",
+    "distance_text": "約79光年",
+    "size_text": "直径約500万km",
+    "recommended_magnification": "肉眼",
+    "highlight": "しし座の心臓。高速自転で扁平",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "レグルス（しし座α）は、しし座の心臓。高速自転で扁平天体です。距離は約79光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "高速自転する多重星系で、主星は自転によって扁平になっています。恒星の回転が形状に及ぼす影響の好例です。",
+      "history": "「小さな王」を意味する名で、しし座の心臓に位置します。黄道に近いため月や惑星に隠されることもあります。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>レグルス（しし座α）は、しし座の心臓。高速自転で扁平天体です。距離は約79光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>高速自転する多重星系で、主星は自転によって扁平になっています。恒星の回転が形状に及ぼす影響の好例です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>「小さな王」を意味する名で、しし座の心臓に位置します。黄道に近いため月や惑星に隠されることもあります。</p></div>"
+    },
+    "photometry": {
+      "bv": -0.11,
+      "spectral_type": "B7V",
+      "effective_temperature_estimate_k": 11744,
+      "display_color_hex": "#C0D4FF",
+      "display_rgb": {
+        "r": 192,
+        "g": 212,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Castor",
+    "name": {
+      "ja": "カストル",
+      "ja_full": "カストル（ふたご座α）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 113.6495,
+      "dec_deg": 31.8883,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.58,
+    "constellation_id": "Gem",
+    "catalog_category": "二重星",
+    "icon": "🔵",
+    "distance_text": "約52光年",
+    "size_text": "—",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "実は6重星系！望遠鏡で2つに分かれる",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "カストル（ふたご座α）は、実は6重星系！望遠鏡で2つに分かれる天体です。距離は約52光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "まず低倍率で導入し、像が安定してから倍率を上げます。推奨は50〜100倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。",
+      "science": "肉眼では1つに見えますが、複数の連星が組み合わさった6重星系として知られます。望遠鏡ではまず明るい2成分を分離して楽しめます。",
+      "history": "ふたご座の双子の一人カストルを表し、ポルックスとの対比で古くから親しまれています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>カストル（ふたご座α）は、実は6重星系！望遠鏡で2つに分かれる天体です。距離は約52光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>まず低倍率で導入し、像が安定してから倍率を上げます。推奨は50〜100倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>肉眼では1つに見えますが、複数の連星が組み合わさった6重星系として知られます。望遠鏡ではまず明るい2成分を分離して楽しめます。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>ふたご座の双子の一人カストルを表し、ポルックスとの対比で古くから親しまれています。</p></div>"
+    },
+    "photometry": {
+      "bv": 0.03,
+      "spectral_type": "A1V",
+      "effective_temperature_estimate_k": 9766,
+      "display_color_hex": "#CBDBFF",
+      "display_rgb": {
+        "r": 203,
+        "g": 219,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Polaris",
+    "name": {
+      "ja": "ポラリス",
+      "ja_full": "ポラリス（こぐま座α・北極星）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 37.9546,
+      "dec_deg": 89.2641,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.98,
+    "constellation_id": "UMi",
+    "catalog_category": "恒星",
+    "icon": "⭐",
+    "distance_text": "約433光年",
+    "size_text": "直径約7,000万km",
+    "recommended_magnification": "肉眼",
+    "highlight": "現在の北極星。ほぼ動かない道しるべの星",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "ポラリス（こぐま座α・北極星）は、現在の北極星。ほぼ動かない道しるべの星天体です。距離は約433光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
+      "science": "北天の回転中心に近い位置にあるケフェイド型変光星を含む多重星系です。地球の歳差運動のため、北極星は永遠に同じ星ではありません。",
+      "history": "航海や方位確認に長く使われてきた実用的な星です。北斗七星やカシオペヤ座から探す方法がよく知られています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>ポラリス（こぐま座α・北極星）は、現在の北極星。ほぼ動かない道しるべの星天体です。距離は約433光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>北天の回転中心に近い位置にあるケフェイド型変光星を含む多重星系です。地球の歳差運動のため、北極星は永遠に同じ星ではありません。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>航海や方位確認に長く使われてきた実用的な星です。北斗七星やカシオペヤ座から探す方法がよく知られています。</p></div>"
+    },
+    "photometry": {
+      "bv": 0.6,
+      "spectral_type": "F7:Ib-II",
+      "effective_temperature_estimate_k": 5968,
+      "display_color_hex": "#FFF6EC",
+      "display_rgb": {
+        "r": 255,
+        "g": 246,
+        "b": 236
+      },
+      "color_label_ja": "黄白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Albireo",
+    "name": {
+      "ja": "アルビレオ",
+      "ja_full": "アルビレオ（はくちょう座β）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 292.6803,
+      "dec_deg": 27.9597,
+      "mode": "fixed"
+    },
+    "magnitude_v": 3.1,
+    "constellation_id": "Cyg",
+    "catalog_category": "二重星",
+    "icon": "💎",
+    "distance_text": "約380〜430光年",
+    "size_text": "—",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "金色×青白の色対比。北天の宝石",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "アルビレオ（はくちょう座β）は、金色×青白の色対比。北天の宝石天体です。距離は約380〜430光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "まず低倍率で導入し、像が安定してから倍率を上げます。推奨は50〜100倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。",
+      "science": "望遠鏡で金色と青白色の鮮やかな色対比を楽しめる代表的な二重星です。色の差は表面温度の違いを視覚的に感じる良い教材になります。",
+      "history": "はくちょう座のくちばし付近にあり、観望会で人気の高い対象です。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>アルビレオ（はくちょう座β）は、金色×青白の色対比。北天の宝石天体です。距離は約380〜430光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>まず低倍率で導入し、像が安定してから倍率を上げます。推奨は50〜100倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>望遠鏡で金色と青白色の鮮やかな色対比を楽しめる代表的な二重星です。色の差は表面温度の違いを視覚的に感じる良い教材になります。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>はくちょう座のくちばし付近にあり、観望会で人気の高い対象です。</p></div>"
+    },
+    "photometry": {
+      "bv": 1.13,
+      "spectral_type": "K3II+B9.5V",
+      "effective_temperature_estimate_k": 4451,
+      "display_color_hex": "#FFD8B9",
+      "display_rgb": {
+        "r": 255,
+        "g": 216,
+        "b": 185
+      },
+      "color_label_ja": "橙",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "EpsLyr",
+    "name": {
+      "ja": "こと座ε星",
+      "ja_full": "こと座ε星（四重星）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 282.5196,
+      "dec_deg": 39.6167,
+      "mode": "fixed"
+    },
+    "magnitude_v": 4.7,
+    "constellation_id": "Lyr",
+    "catalog_category": "二重星",
+    "icon": "🌟",
+    "distance_text": "約160光年",
+    "size_text": "—",
+    "recommended_magnification": "150〜200倍",
+    "highlight": "1→2→4つに分かれる！望遠鏡の醍醐味",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "こと座ε星（四重星）は、1→2→4つに分かれる！望遠鏡の醍醐味天体です。距離は約160光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "まず低倍率で導入し、像が安定してから倍率を上げます。推奨は150〜200倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。",
+      "science": "肉眼または双眼鏡では2つ、十分な口径とシーイングではそれぞれがさらに2つに分かる「ダブル・ダブル」です。",
+      "history": "望遠鏡の分解能やシーイングを体感する定番対象として広く観測されています。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>こと座ε星（四重星）は、1→2→4つに分かれる！望遠鏡の醍醐味天体です。距離は約160光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>まず低倍率で導入し、像が安定してから倍率を上げます。推奨は150〜200倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>肉眼または双眼鏡では2つ、十分な口径とシーイングではそれぞれがさらに2つに分かる「ダブル・ダブル」です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>望遠鏡の分解能やシーイングを体感する定番対象として広く観測されています。</p></div>"
+    },
+    "photometry": {
+      "bv": 0.17,
+      "spectral_type": "A3V+F0V",
+      "effective_temperature_estimate_k": 8403,
+      "display_color_hex": "#D8E3FF",
+      "display_rgb": {
+        "r": 216,
+        "g": 227,
+        "b": 255
+      },
+      "color_label_ja": "白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv",
+      "note": "NicoleのEpsLyrはダブル・ダブル全体を表すため、測光値は代表としてε1 Lyraeの値を使用。"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Mizar",
+    "name": {
+      "ja": "ミザール",
+      "ja_full": "ミザール（おおぐま座ζ）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 200.9814,
+      "dec_deg": 54.9254,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.2,
+    "constellation_id": "UMa",
+    "catalog_category": "二重星",
+    "icon": "🔭",
+    "distance_text": "約78光年",
+    "size_text": "—",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "肉眼二重星＋望遠鏡二重星",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "ミザール（おおぐま座ζ）は、肉眼二重星＋望遠鏡二重星天体です。距離は約78光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "まず低倍率で導入し、像が安定してから倍率を上げます。推奨は50〜100倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。",
+      "science": "ミザールとアルコルは肉眼二重星として有名で、ミザール自体も望遠鏡で分離できます。さらに分光連星を含む多重系です。",
+      "history": "北斗七星の柄にあり、古くから視力試験の星として語られてきました。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>ミザール（おおぐま座ζ）は、肉眼二重星＋望遠鏡二重星天体です。距離は約78光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>まず低倍率で導入し、像が安定してから倍率を上げます。推奨は50〜100倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>ミザールとアルコルは肉眼二重星として有名で、ミザール自体も望遠鏡で分離できます。さらに分光連星を含む多重系です。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>北斗七星の柄にあり、古くから視力試験の星として語られてきました。</p></div>"
+    },
+    "photometry": {
+      "bv": 0.02,
+      "spectral_type": "A1VpSrSi",
+      "effective_temperature_estimate_k": 9882,
+      "display_color_hex": "#CBDBFF",
+      "display_rgb": {
+        "r": 203,
+        "g": 219,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Almach",
+    "name": {
+      "ja": "アルマク",
+      "ja_full": "アルマク（アンドロメダ座γ）",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 30.975,
+      "dec_deg": 42.3297,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.1,
+    "constellation_id": "And",
+    "catalog_category": "二重星",
+    "icon": "💫",
+    "distance_text": "約350光年",
+    "size_text": "—",
+    "recommended_magnification": "50〜100倍",
+    "highlight": "金色×青緑の美しい色対比",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "explanation": {
+      "overview": "アルマク（アンドロメダ座γ）は、金色×青緑の美しい色対比天体です。距離は約350光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "observing": "まず低倍率で導入し、像が安定してから倍率を上げます。推奨は50〜100倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。",
+      "science": "明るい主星と青みを帯びた伴星の色対比が美しい二重星です。伴星側も複雑な多重系であることが知られています。",
+      "history": "アンドロメダ座の端に位置し、アルビレオと並ぶ色彩二重星として人気があります。",
+      "raw_html": "<div class=\"story-topic\"><h4>概要</h4><p>アルマク（アンドロメダ座γ）は、金色×青緑の美しい色対比天体です。距離は約350光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。</p></div><div class=\"story-topic\"><h4>観測のポイント</h4><p>まず低倍率で導入し、像が安定してから倍率を上げます。推奨は50〜100倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。</p></div><div class=\"story-topic\"><h4>天文学的な見どころ</h4><p>明るい主星と青みを帯びた伴星の色対比が美しい二重星です。伴星側も複雑な多重系であることが知られています。</p></div><div class=\"story-topic\"><h4>歴史・名前</h4><p>アンドロメダ座の端に位置し、アルビレオと並ぶ色彩二重星として人気があります。</p></div>"
+    },
+    "photometry": {
+      "bv": 1.37,
+      "spectral_type": "K3-IIb",
+      "effective_temperature_estimate_k": 4000,
+      "display_color_hex": "#FFCEA6",
+      "display_rgb": {
+        "r": 255,
+        "g": 206,
+        "b": 166
+      },
+      "color_label_ja": "橙",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "curated_object",
+      "sky_chart"
+    ],
+    "source": {
+      "dataset": "STARS_DB",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Dubhe",
+    "name": {
+      "ja": "ドゥーベ",
+      "ja_full": "ドゥーベ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 165.932,
+      "dec_deg": 61.751,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.79,
+    "constellation_id": "UMa",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 1.07,
+      "spectral_type": "K0IIIa",
+      "effective_temperature_estimate_k": 4581,
+      "display_color_hex": "#FFDBBF",
+      "display_rgb": {
+        "r": 255,
+        "g": 219,
+        "b": 191
+      },
+      "color_label_ja": "橙",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Merak",
+    "name": {
+      "ja": "メラク",
+      "ja_full": "メラク",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 165.46,
+      "dec_deg": 56.382,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.37,
+    "constellation_id": "UMa",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.02,
+      "spectral_type": "A1V",
+      "effective_temperature_estimate_k": 10382,
+      "display_color_hex": "#C7D9FF",
+      "display_rgb": {
+        "r": 199,
+        "g": 217,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Phecda",
+    "name": {
+      "ja": "フェクダ",
+      "ja_full": "フェクダ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 178.458,
+      "dec_deg": 53.695,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.44,
+    "constellation_id": "UMa",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.0,
+      "spectral_type": "A0Ve",
+      "effective_temperature_estimate_k": 10125,
+      "display_color_hex": "#C9DAFF",
+      "display_rgb": {
+        "r": 201,
+        "g": 218,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Megrez",
+    "name": {
+      "ja": "メグレズ",
+      "ja_full": "メグレズ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 183.856,
+      "dec_deg": 57.033,
+      "mode": "fixed"
+    },
+    "magnitude_v": 3.31,
+    "constellation_id": "UMa",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.08,
+      "spectral_type": "A3V",
+      "effective_temperature_estimate_k": 9226,
+      "display_color_hex": "#D0DEFF",
+      "display_rgb": {
+        "r": 208,
+        "g": 222,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Alioth",
+    "name": {
+      "ja": "アリオト",
+      "ja_full": "アリオト",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 193.507,
+      "dec_deg": 55.96,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.77,
+    "constellation_id": "UMa",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.02,
+      "spectral_type": "A0pCr",
+      "effective_temperature_estimate_k": 10382,
+      "display_color_hex": "#C7D9FF",
+      "display_rgb": {
+        "r": 199,
+        "g": 217,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Alkaid",
+    "name": {
+      "ja": "アルカイド",
+      "ja_full": "アルカイド",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 206.885,
+      "dec_deg": 49.313,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.86,
+    "constellation_id": "UMa",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.19,
+      "spectral_type": "B3V",
+      "effective_temperature_estimate_k": 13348,
+      "display_color_hex": "#BAD0FF",
+      "display_rgb": {
+        "r": 186,
+        "g": 208,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Schedar",
+    "name": {
+      "ja": "シェダル",
+      "ja_full": "シェダル",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 10.127,
+      "dec_deg": 56.537,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.24,
+    "constellation_id": "Cas",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 1.17,
+      "spectral_type": "K0IIIa",
+      "effective_temperature_estimate_k": 4368,
+      "display_color_hex": "#FFD7B6",
+      "display_rgb": {
+        "r": 255,
+        "g": 215,
+        "b": 182
+      },
+      "color_label_ja": "橙",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Caph",
+    "name": {
+      "ja": "カフ",
+      "ja_full": "カフ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 2.295,
+      "dec_deg": 59.15,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.28,
+    "constellation_id": "Cas",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.34,
+      "spectral_type": "F2III-IV",
+      "effective_temperature_estimate_k": 7217,
+      "display_color_hex": "#ECEFFF",
+      "display_rgb": {
+        "r": 236,
+        "g": 239,
+        "b": 255
+      },
+      "color_label_ja": "白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "GammaCas",
+    "name": {
+      "ja": "カシオペヤ座γ",
+      "ja_full": "カシオペヤ座γ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 14.177,
+      "dec_deg": 60.717,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.15,
+    "constellation_id": "Cas",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.15,
+      "spectral_type": "B0IVe",
+      "effective_temperature_estimate_k": 12489,
+      "display_color_hex": "#BDD2FF",
+      "display_rgb": {
+        "r": 189,
+        "g": 210,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Ruchbah",
+    "name": {
+      "ja": "ルクバ",
+      "ja_full": "ルクバ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 21.454,
+      "dec_deg": 60.235,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.68,
+    "constellation_id": "Cas",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.13,
+      "spectral_type": "A5III-IV",
+      "effective_temperature_estimate_k": 8748,
+      "display_color_hex": "#D4E0FF",
+      "display_rgb": {
+        "r": 212,
+        "g": 224,
+        "b": 255
+      },
+      "color_label_ja": "白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Segin",
+    "name": {
+      "ja": "セギン",
+      "ja_full": "セギン",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 28.599,
+      "dec_deg": 63.67,
+      "mode": "fixed"
+    },
+    "magnitude_v": 3.35,
+    "constellation_id": "Cas",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.15,
+      "spectral_type": "B3III",
+      "effective_temperature_estimate_k": 12489,
+      "display_color_hex": "#BDD2FF",
+      "display_rgb": {
+        "r": 189,
+        "g": 210,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Bellatrix",
+    "name": {
+      "ja": "ベラトリックス",
+      "ja_full": "ベラトリックス",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 81.283,
+      "dec_deg": 6.35,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.64,
+    "constellation_id": "Ori",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.22,
+      "spectral_type": "B2III",
+      "effective_temperature_estimate_k": 14087,
+      "display_color_hex": "#B8CFFF",
+      "display_rgb": {
+        "r": 184,
+        "g": 207,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Alnilam",
+    "name": {
+      "ja": "アルニラム",
+      "ja_full": "アルニラム",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 84.053,
+      "dec_deg": -1.202,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.69,
+    "constellation_id": "Ori",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.19,
+      "spectral_type": "B0Ia",
+      "effective_temperature_estimate_k": 13348,
+      "display_color_hex": "#BAD0FF",
+      "display_rgb": {
+        "r": 186,
+        "g": 208,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Alnitak",
+    "name": {
+      "ja": "アルニタク",
+      "ja_full": "アルニタク",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 85.19,
+      "dec_deg": -1.943,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.74,
+    "constellation_id": "Ori",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.21,
+      "spectral_type": "O9.7Ib",
+      "effective_temperature_estimate_k": 13831,
+      "display_color_hex": "#B8CFFF",
+      "display_rgb": {
+        "r": 184,
+        "g": 207,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Mintaka",
+    "name": {
+      "ja": "ミンタカ",
+      "ja_full": "ミンタカ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 83.002,
+      "dec_deg": -0.299,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.23,
+    "constellation_id": "Ori",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.22,
+      "spectral_type": "O9.5II",
+      "effective_temperature_estimate_k": 14087,
+      "display_color_hex": "#B8CFFF",
+      "display_rgb": {
+        "r": 184,
+        "g": 207,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Saiph",
+    "name": {
+      "ja": "サイフ",
+      "ja_full": "サイフ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 86.939,
+      "dec_deg": -9.67,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.06,
+    "constellation_id": "Ori",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.17,
+      "spectral_type": "B0.5Ia",
+      "effective_temperature_estimate_k": 12902,
+      "display_color_hex": "#BCD1FF",
+      "display_rgb": {
+        "r": 188,
+        "g": 209,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Denebola",
+    "name": {
+      "ja": "デネボラ",
+      "ja_full": "デネボラ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 177.265,
+      "dec_deg": 14.572,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.14,
+    "constellation_id": "Leo",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.09,
+      "spectral_type": "A3V",
+      "effective_temperature_estimate_k": 9125,
+      "display_color_hex": "#D0DEFF",
+      "display_rgb": {
+        "r": 208,
+        "g": 222,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Algieba",
+    "name": {
+      "ja": "アルギエバ",
+      "ja_full": "アルギエバ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 154.993,
+      "dec_deg": 19.842,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.01,
+    "constellation_id": "Leo",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 1.15,
+      "spectral_type": "K1-IIIbFe-0.5",
+      "effective_temperature_estimate_k": 4409,
+      "display_color_hex": "#FFD8B8",
+      "display_rgb": {
+        "r": 255,
+        "g": 216,
+        "b": 184
+      },
+      "color_label_ja": "橙",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Zosma",
+    "name": {
+      "ja": "ゾスマ",
+      "ja_full": "ゾスマ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 168.527,
+      "dec_deg": 20.524,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.56,
+    "constellation_id": "Leo",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.12,
+      "spectral_type": "A4V",
+      "effective_temperature_estimate_k": 8839,
+      "display_color_hex": "#D3E0FF",
+      "display_rgb": {
+        "r": 211,
+        "g": 224,
+        "b": 255
+      },
+      "color_label_ja": "白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Shaula",
+    "name": {
+      "ja": "シャウラ",
+      "ja_full": "シャウラ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 263.402,
+      "dec_deg": -37.104,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.62,
+    "constellation_id": "Sco",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.22,
+      "spectral_type": "B2IV+B",
+      "effective_temperature_estimate_k": 14087,
+      "display_color_hex": "#B8CFFF",
+      "display_rgb": {
+        "r": 184,
+        "g": 207,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Sargas",
+    "name": {
+      "ja": "サルガス",
+      "ja_full": "サルガス",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 264.33,
+      "dec_deg": -42.998,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.86,
+    "constellation_id": "Sco",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.4,
+      "spectral_type": "F1II",
+      "effective_temperature_estimate_k": 6880,
+      "display_color_hex": "#F7F4FF",
+      "display_rgb": {
+        "r": 247,
+        "g": 244,
+        "b": 255
+      },
+      "color_label_ja": "黄白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Dschubba",
+    "name": {
+      "ja": "ジュバ",
+      "ja_full": "ジュバ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 240.083,
+      "dec_deg": -22.622,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.32,
+    "constellation_id": "Sco",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.12,
+      "spectral_type": "B0.3IV",
+      "effective_temperature_estimate_k": 11920,
+      "display_color_hex": "#BFD4FF",
+      "display_rgb": {
+        "r": 191,
+        "g": 212,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Acrab",
+    "name": {
+      "ja": "アクラブ",
+      "ja_full": "アクラブ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 241.359,
+      "dec_deg": -19.805,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.56,
+    "constellation_id": "Sco",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.07,
+      "spectral_type": "B1V",
+      "effective_temperature_estimate_k": 11092,
+      "display_color_hex": "#C3D6FF",
+      "display_rgb": {
+        "r": 195,
+        "g": 214,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "KausAust",
+    "name": {
+      "ja": "カウス・アウストラリス",
+      "ja_full": "カウス・アウストラリス",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 276.043,
+      "dec_deg": -34.385,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.79,
+    "constellation_id": "Sgr",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.03,
+      "spectral_type": "B9.5III",
+      "effective_temperature_estimate_k": 10516,
+      "display_color_hex": "#C6D8FF",
+      "display_rgb": {
+        "r": 198,
+        "g": 216,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Nunki",
+    "name": {
+      "ja": "ヌンキ",
+      "ja_full": "ヌンキ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 283.816,
+      "dec_deg": -26.297,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.05,
+    "constellation_id": "Sgr",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.22,
+      "spectral_type": "B2.5V",
+      "effective_temperature_estimate_k": 14087,
+      "display_color_hex": "#B8CFFF",
+      "display_rgb": {
+        "r": 184,
+        "g": 207,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Ascella",
+    "name": {
+      "ja": "アスケラ",
+      "ja_full": "アスケラ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 285.653,
+      "dec_deg": -29.88,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.6,
+    "constellation_id": "Sgr",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.08,
+      "spectral_type": "A2III+A4IV",
+      "effective_temperature_estimate_k": 9226,
+      "display_color_hex": "#D0DEFF",
+      "display_rgb": {
+        "r": 208,
+        "g": 222,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Alpheratz",
+    "name": {
+      "ja": "アルフェラッツ",
+      "ja_full": "アルフェラッツ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 2.097,
+      "dec_deg": 29.09,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.06,
+    "constellation_id": "And",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.11,
+      "spectral_type": "B8IVpMnHg",
+      "effective_temperature_estimate_k": 11744,
+      "display_color_hex": "#C0D4FF",
+      "display_rgb": {
+        "r": 192,
+        "g": 212,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Mirach",
+    "name": {
+      "ja": "ミラク",
+      "ja_full": "ミラク",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 17.433,
+      "dec_deg": 35.621,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.05,
+    "constellation_id": "And",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 1.58,
+      "spectral_type": "M0+IIIa",
+      "effective_temperature_estimate_k": 3677,
+      "display_color_hex": "#FFC596",
+      "display_rgb": {
+        "r": 255,
+        "g": 197,
+        "b": 150
+      },
+      "color_label_ja": "橙赤〜赤",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Markab",
+    "name": {
+      "ja": "マルカブ",
+      "ja_full": "マルカブ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 346.19,
+      "dec_deg": 15.205,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.49,
+    "constellation_id": "Peg",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.04,
+      "spectral_type": "B9V",
+      "effective_temperature_estimate_k": 10653,
+      "display_color_hex": "#C6D8FF",
+      "display_rgb": {
+        "r": 198,
+        "g": 216,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Scheat",
+    "name": {
+      "ja": "シェアト",
+      "ja_full": "シェアト",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 345.944,
+      "dec_deg": 28.083,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.42,
+    "constellation_id": "Peg",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 1.67,
+      "spectral_type": "M2.5II-III",
+      "effective_temperature_estimate_k": 3555,
+      "display_color_hex": "#FFC290",
+      "display_rgb": {
+        "r": 255,
+        "g": 194,
+        "b": 144
+      },
+      "color_label_ja": "橙赤〜赤",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Algenib",
+    "name": {
+      "ja": "アルゲニブ",
+      "ja_full": "アルゲニブ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 3.309,
+      "dec_deg": 15.184,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.84,
+    "constellation_id": "Peg",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.23,
+      "spectral_type": "B2IV",
+      "effective_temperature_estimate_k": 14354,
+      "display_color_hex": "#B7CEFF",
+      "display_rgb": {
+        "r": 183,
+        "g": 206,
+        "b": 255
+      },
+      "color_label_ja": "青白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Sadr",
+    "name": {
+      "ja": "サドル",
+      "ja_full": "サドル",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 305.557,
+      "dec_deg": 40.257,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.23,
+    "constellation_id": "Cyg",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.68,
+      "spectral_type": "F8Ib",
+      "effective_temperature_estimate_k": 5671,
+      "display_color_hex": "#FFF1E3",
+      "display_rgb": {
+        "r": 255,
+        "g": 241,
+        "b": 227
+      },
+      "color_label_ja": "黄",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "GienahCyg",
+    "name": {
+      "ja": "ギェナー",
+      "ja_full": "ギェナー",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 311.553,
+      "dec_deg": 33.97,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.48,
+    "constellation_id": "Cyg",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 1.03,
+      "spectral_type": "K0-III",
+      "effective_temperature_estimate_k": 4672,
+      "display_color_hex": "#FFDDC2",
+      "display_rgb": {
+        "r": 255,
+        "g": 221,
+        "b": 194
+      },
+      "color_label_ja": "橙",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Eltanin",
+    "name": {
+      "ja": "エルタニン",
+      "ja_full": "エルタニン",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 269.152,
+      "dec_deg": 51.489,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.24,
+    "constellation_id": "Dra",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 1.52,
+      "spectral_type": "K5III",
+      "effective_temperature_estimate_k": 3764,
+      "display_color_hex": "#FFC89B",
+      "display_rgb": {
+        "r": 255,
+        "g": 200,
+        "b": 155
+      },
+      "color_label_ja": "橙赤〜赤",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Rastaban",
+    "name": {
+      "ja": "ラスタバン",
+      "ja_full": "ラスタバン",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 262.608,
+      "dec_deg": 52.301,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.79,
+    "constellation_id": "Dra",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.98,
+      "spectral_type": "G2Ib-IIa",
+      "effective_temperature_estimate_k": 4791,
+      "display_color_hex": "#FFE0C6",
+      "display_rgb": {
+        "r": 255,
+        "g": 224,
+        "b": 198
+      },
+      "color_label_ja": "黄",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Kochab",
+    "name": {
+      "ja": "コカブ",
+      "ja_full": "コカブ",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 222.676,
+      "dec_deg": 74.156,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.08,
+    "constellation_id": "UMi",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 1.47,
+      "spectral_type": "K4-III",
+      "effective_temperature_estimate_k": 3839,
+      "display_color_hex": "#FFCA9E",
+      "display_rgb": {
+        "r": 255,
+        "g": 202,
+        "b": 158
+      },
+      "color_label_ja": "橙赤〜赤",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Pherkad",
+    "name": {
+      "ja": "フェルカド",
+      "ja_full": "フェルカド",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 230.182,
+      "dec_deg": 71.834,
+      "mode": "fixed"
+    },
+    "magnitude_v": 3.05,
+    "constellation_id": "UMi",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.05,
+      "spectral_type": "A3II-III",
+      "effective_temperature_estimate_k": 9542,
+      "display_color_hex": "#CDDCFF",
+      "display_rgb": {
+        "r": 205,
+        "g": 220,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Hamal",
+    "name": {
+      "ja": "ハマル",
+      "ja_full": "ハマル",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 31.793,
+      "dec_deg": 23.462,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2,
+    "constellation_id": "Ari",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 1.15,
+      "spectral_type": "K2-IIICa-1",
+      "effective_temperature_estimate_k": 4409,
+      "display_color_hex": "#FFD8B8",
+      "display_rgb": {
+        "r": 255,
+        "g": 216,
+        "b": 184
+      },
+      "color_label_ja": "橙",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Sheratan",
+    "name": {
+      "ja": "シェラタン",
+      "ja_full": "シェラタン",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 28.66,
+      "dec_deg": 20.809,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.64,
+    "constellation_id": "Ari",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.13,
+      "spectral_type": "A5V",
+      "effective_temperature_estimate_k": 8748,
+      "display_color_hex": "#D4E0FF",
+      "display_rgb": {
+        "r": 212,
+        "g": 224,
+        "b": 255
+      },
+      "color_label_ja": "白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Mirfak",
+    "name": {
+      "ja": "ミルファク",
+      "ja_full": "ミルファク",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 51.081,
+      "dec_deg": 49.861,
+      "mode": "fixed"
+    },
+    "magnitude_v": 1.79,
+    "constellation_id": "Per",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": 0.48,
+      "spectral_type": "F5Ib",
+      "effective_temperature_estimate_k": 6481,
+      "display_color_hex": "#FFFEFA",
+      "display_rgb": {
+        "r": 255,
+        "g": 254,
+        "b": 250
+      },
+      "color_label_ja": "黄白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Algol",
+    "name": {
+      "ja": "アルゴル",
+      "ja_full": "アルゴル",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 47.042,
+      "dec_deg": 40.956,
+      "mode": "fixed"
+    },
+    "magnitude_v": 2.12,
+    "constellation_id": "Per",
+    "catalog_category": "星図補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.05,
+      "spectral_type": "B8V",
+      "effective_temperature_estimate_k": 10795,
+      "display_color_hex": "#C5D7FF",
+      "display_rgb": {
+        "r": 197,
+        "g": 215,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "sky_chart_helper"
+    ],
+    "source": {
+      "dataset": "SKY_EXTRA_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  },
+  {
+    "id": "Fawaris",
+    "name": {
+      "ja": "ファワリス",
+      "ja_full": "ファワリス",
+      "en": null
+    },
+    "position": {
+      "ra_deg": 296.2436,
+      "dec_deg": 45.1308,
+      "mode": "fixed"
+    },
+    "magnitude_v": null,
+    "constellation_id": null,
+    "catalog_category": "アステリズム補助恒星",
+    "icon": null,
+    "distance_text": null,
+    "size_text": null,
+    "recommended_magnification": null,
+    "highlight": null,
+    "visible_months_legacy": [],
+    "explanation": null,
+    "photometry": {
+      "bv": -0.03,
+      "spectral_type": "B9.5IV+F1V",
+      "effective_temperature_estimate_k": 10516,
+      "display_color_hex": "#C6D8FF",
+      "display_rgb": {
+        "r": 198,
+        "g": 216,
+        "b": 255
+      },
+      "color_label_ja": "青白〜白",
+      "status": "catalog_enriched",
+      "display_color_method": "B-V → Ballesteros temperature estimate → approximate blackbody RGB",
+      "source": "Yale Bright Star Catalogue 5th Revised Edition via isene/starmap stars.csv"
+    },
+    "roles": [
+      "asterism_helper"
+    ],
+    "source": {
+      "dataset": "SKY_ASTERISM_STARS",
+      "app": "Nicole the Astronavigator",
+      "version": "1.12.0"
+    }
+  }
+]

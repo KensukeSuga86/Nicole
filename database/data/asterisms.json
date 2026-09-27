@@ -1,0 +1,325 @@
+[
+  {
+    "id": "big_dipper",
+    "name": {
+      "ja": "北斗七星",
+      "en": "Big Dipper"
+    },
+    "star_ids": [
+      "Dubhe",
+      "Merak",
+      "Phecda",
+      "Megrez",
+      "Alioth",
+      "Mizar",
+      "Alkaid"
+    ],
+    "lines": [
+      {
+        "from": "Dubhe",
+        "to": "Merak"
+      },
+      {
+        "from": "Merak",
+        "to": "Phecda"
+      },
+      {
+        "from": "Phecda",
+        "to": "Megrez"
+      },
+      {
+        "from": "Megrez",
+        "to": "Alioth"
+      },
+      {
+        "from": "Alioth",
+        "to": "Mizar"
+      },
+      {
+        "from": "Mizar",
+        "to": "Alkaid"
+      }
+    ],
+    "definition_note": "おおぐま座の主要7星からなる標準的な北斗七星。",
+    "source": {
+      "dataset": "orthodox asterism review",
+      "version": "0.1.1"
+    }
+  },
+  {
+    "id": "spring_arc",
+    "name": {
+      "ja": "春の大曲線",
+      "en": "Spring Arc"
+    },
+    "star_ids": [
+      "Alioth",
+      "Mizar",
+      "Alkaid",
+      "Arcturus",
+      "Spica"
+    ],
+    "lines": [
+      {
+        "from": "Alioth",
+        "to": "Mizar"
+      },
+      {
+        "from": "Mizar",
+        "to": "Alkaid"
+      },
+      {
+        "from": "Alkaid",
+        "to": "Arcturus"
+      },
+      {
+        "from": "Arcturus",
+        "to": "Spica"
+      }
+    ],
+    "definition_note": "北斗七星の柄のカーブをアルクトゥルス、さらにスピカへ延長する案内線。",
+    "source": {
+      "dataset": "orthodox asterism review",
+      "version": "0.1.1"
+    }
+  },
+  {
+    "id": "spring_triangle",
+    "name": {
+      "ja": "春の大三角",
+      "en": "Spring Triangle"
+    },
+    "star_ids": [
+      "Arcturus",
+      "Spica",
+      "Denebola"
+    ],
+    "lines": [
+      {
+        "from": "Arcturus",
+        "to": "Spica"
+      },
+      {
+        "from": "Spica",
+        "to": "Denebola"
+      },
+      {
+        "from": "Denebola",
+        "to": "Arcturus"
+      }
+    ],
+    "definition_note": "本DBではアルクトゥルス・スピカ・デネボラを採用。資料によってはデネボラの代わりにレグルスを採る定義もある。",
+    "source": {
+      "dataset": "orthodox asterism review",
+      "version": "0.1.1"
+    }
+  },
+  {
+    "id": "summer_triangle",
+    "name": {
+      "ja": "夏の大三角",
+      "en": "Summer Triangle"
+    },
+    "star_ids": [
+      "Vega",
+      "Deneb",
+      "Altair"
+    ],
+    "lines": [
+      {
+        "from": "Vega",
+        "to": "Deneb"
+      },
+      {
+        "from": "Deneb",
+        "to": "Altair"
+      },
+      {
+        "from": "Altair",
+        "to": "Vega"
+      }
+    ],
+    "definition_note": "ベガ・デネブ・アルタイル。",
+    "source": {
+      "dataset": "orthodox asterism review",
+      "version": "0.1.1"
+    }
+  },
+  {
+    "id": "northern_cross",
+    "name": {
+      "ja": "北十字",
+      "en": "Northern Cross"
+    },
+    "star_ids": [
+      "Deneb",
+      "Sadr",
+      "Albireo",
+      "Fawaris",
+      "GienahCyg"
+    ],
+    "lines": [
+      {
+        "from": "Deneb",
+        "to": "Sadr"
+      },
+      {
+        "from": "Sadr",
+        "to": "Albireo"
+      },
+      {
+        "from": "Fawaris",
+        "to": "Sadr"
+      },
+      {
+        "from": "Sadr",
+        "to": "GienahCyg"
+      }
+    ],
+    "definition_note": "はくちょう座のデネブ–サドル–アルビレオを縦軸、ファワリス–サドル–ギェナーを横軸とする。",
+    "source": {
+      "dataset": "orthodox asterism review",
+      "version": "0.1.1"
+    }
+  },
+  {
+    "id": "autumn_great_square",
+    "name": {
+      "ja": "秋の四辺形",
+      "en": "Great Square of Pegasus"
+    },
+    "star_ids": [
+      "Alpheratz",
+      "Scheat",
+      "Markab",
+      "Algenib"
+    ],
+    "lines": [
+      {
+        "from": "Alpheratz",
+        "to": "Scheat"
+      },
+      {
+        "from": "Scheat",
+        "to": "Markab"
+      },
+      {
+        "from": "Markab",
+        "to": "Algenib"
+      },
+      {
+        "from": "Algenib",
+        "to": "Alpheratz"
+      }
+    ],
+    "definition_note": "アルフェラッツ・シェアト・マルカブ・アルゲニブ。アルフェラッツは現在はアンドロメダ座α。",
+    "source": {
+      "dataset": "orthodox asterism review",
+      "version": "0.1.1"
+    }
+  },
+  {
+    "id": "orion_belt",
+    "name": {
+      "ja": "オリオンの三つ星",
+      "en": "Orion's Belt"
+    },
+    "star_ids": [
+      "Mintaka",
+      "Alnilam",
+      "Alnitak"
+    ],
+    "lines": [
+      {
+        "from": "Mintaka",
+        "to": "Alnilam"
+      },
+      {
+        "from": "Alnilam",
+        "to": "Alnitak"
+      }
+    ],
+    "definition_note": "ミンタカ・アルニラム・アルニタク。",
+    "source": {
+      "dataset": "orthodox asterism review",
+      "version": "0.1.1"
+    }
+  },
+  {
+    "id": "winter_triangle",
+    "name": {
+      "ja": "冬の大三角",
+      "en": "Winter Triangle"
+    },
+    "star_ids": [
+      "Betelgeuse",
+      "Sirius",
+      "Procyon"
+    ],
+    "lines": [
+      {
+        "from": "Betelgeuse",
+        "to": "Sirius"
+      },
+      {
+        "from": "Sirius",
+        "to": "Procyon"
+      },
+      {
+        "from": "Procyon",
+        "to": "Betelgeuse"
+      }
+    ],
+    "definition_note": "ベテルギウス・シリウス・プロキオン。",
+    "source": {
+      "dataset": "orthodox asterism review",
+      "version": "0.1.1"
+    }
+  },
+  {
+    "id": "winter_diamond",
+    "name": {
+      "ja": "冬のダイヤモンド",
+      "en": "Winter Hexagon / Winter Circle"
+    },
+    "star_ids": [
+      "Capella",
+      "Aldebaran",
+      "Rigel",
+      "Sirius",
+      "Procyon",
+      "Pollux"
+    ],
+    "lines": [
+      {
+        "from": "Capella",
+        "to": "Aldebaran"
+      },
+      {
+        "from": "Aldebaran",
+        "to": "Rigel"
+      },
+      {
+        "from": "Rigel",
+        "to": "Sirius"
+      },
+      {
+        "from": "Sirius",
+        "to": "Procyon"
+      },
+      {
+        "from": "Procyon",
+        "to": "Pollux"
+      },
+      {
+        "from": "Pollux",
+        "to": "Capella"
+      }
+    ],
+    "definition_note": "カペラ・アルデバラン・リゲル・シリウス・プロキオン・ポルックスからなる六角形。",
+    "source": {
+      "dataset": "orthodox asterism review",
+      "version": "0.1.1"
+    }
+  }
+]

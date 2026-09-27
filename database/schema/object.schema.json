@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nicole.local/schema/object.schema.json",
+  "title": "Nicole Astronomy Object",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "type",
+    "source"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "object",
+      "required": [
+        "ja"
+      ],
+      "properties": {
+        "ja": {
+          "type": "string"
+        },
+        "en": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "type": {
+      "type": "string"
+    },
+    "position": {
+      "type": "object"
+    },
+    "magnitude_v": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "constellation_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "IAU constellation abbreviation / Nicole stable constellation ID"
+    },
+    "explanation": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "source": {
+      "type": "object"
+    },
+    "photometry": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "bv": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "spectral_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "effective_temperature_estimate_k": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "display_color_hex": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "color_label_ja": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "messier_number": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 110
+    },
+    "catalog_metadata": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "physical_diameter_km": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "exclusiveMinimum": 0
+    },
+    "rendering": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "angular_size": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "major_arcmin": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "minor_arcmin": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "source_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
