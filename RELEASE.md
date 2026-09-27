@@ -1,8 +1,8 @@
-# Nicole the Astronavigator v2.0.0
+# Nicole the Astronavigator v2.0.1
 
 **星空の案内人・ニコルと一緒に**
 
-Nicole the Astronavigator v2.0.0 は、Nicoleシリーズで天文データを共有するためのメジャーアップデートです。
+Nicole the Astronavigator v2.0.1 は、Nicoleシリーズで天文データを共有するためのメジャーアップデートです。
 
 公開版：  
 https://kensukesuga86.github.io/Nicole/
@@ -11,12 +11,12 @@ https://kensukesuga86.github.io/Nicole/
 
 ## 共通天文DBへ移行
 
-Nicole the Astronavigator は **Nicole Astronomy Database v0.1.2** を使用します。
+Nicole the Astronavigator は **Nicole Astronomy Database v0.2.0** を使用します。
 
 読み込み順は次のとおりです。
 
-1. GitHub Pages上の固定バージョン `0.1.2`
-2. Nicoleに同梱した `0.1.2`
+1. GitHub Pages上の固定バージョン `0.2.0`
+2. Nicoleに同梱した `0.2.0`
 3. 従来の内蔵データ（最終フォールバック）
 
 `latest.json` を自動追従せず、動作確認済みのDBバージョンを固定して使う構成です。
@@ -50,12 +50,12 @@ Nicole the Astronavigator と Nicole the Astrorium が同じ不変IDと天文デ
 
 ## PWA / オフライン
 
-共通DBローダーとDB v0.1.2をアプリシェルへ追加しています。オンラインDBが利用できない場合でも、同梱DBへ切り替えて起動できます。
+共通DBローダーとDB v0.2.0をアプリシェルへ追加しています。オンラインDBが利用できない場合でも、同梱DBへ切り替えて起動できます。
 
 Service Workerのアプリキャッシュ名前空間：
 
 ```text
-nicole-pwa-v2.0.0
+nicole-pwa-v2.0.1
 ```
 
 動的データキャッシュ：
@@ -66,4 +66,4 @@ nicole-data-v1
 
 ---
 
-**Version 2.0.0**
+**Version 2.0.1**

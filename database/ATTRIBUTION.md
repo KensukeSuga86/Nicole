@@ -25,8 +25,5 @@ NASA等の一般的な星空案内資料と複数資料を照合し、実用上�
 春の大三角は定義にバリエーションがあるため、本DBではアルクトゥルス・スピカ・デネボラを採用し注記。
 
 
-## NASA/NSSDC solar-system bulk diameters (v0.1.2)
-Solar, lunar and planetary physical diameters used for apparent-size rendering are based on NASA/NSSDC fact sheets. Apparent angular diameter is calculated by the consuming application from physical diameter and its dynamic distance model.
-
-- Planetary Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/
-- Sun Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html
+## v0.1.2 solar-system metadata
+Physical-diameter metadata uses NASA/NSSDC Planetary Fact Sheet / Sun Fact Sheet conventions. Deep Sky angular sizes are normalized from the existing v0.1.1 Nicole fields; no new position angle is inferred.

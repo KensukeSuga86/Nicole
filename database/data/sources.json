@@ -1,0 +1,81 @@
+{
+  "version": "0.2.0",
+  "policy": {
+    "science": "Prefer institutional/primary astronomy sources; use catalog-derived values where bulk coverage is required; do not invent unavailable position angles or physical sizes.",
+    "mythology": "Separate cultural/historical narrative from scientific facts; identify variants as variants; modern constellations are not assigned fabricated Greek myths.",
+    "miyazawa_kenji": "Tag only direct textual correspondences or conservative identifications; retain work title and quoted-expression keywords rather than speculative symbolism."
+  },
+  "sources": [
+    {
+      "id": "NASA_HUBBLE_MESSIER",
+      "provider": "NASA Science / Hubble",
+      "title": "Hubble’s Messier Catalog",
+      "url": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/",
+      "use": "Messier object type, distance, magnitude, notable science/history"
+    },
+    {
+      "id": "NASA_SOLAR_SYSTEM",
+      "provider": "NASA Science / NSSDC",
+      "title": "Planetary Fact Sheets and Solar System Exploration",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+      "use": "Solar-system physical parameters"
+    },
+    {
+      "id": "IAU_CONSTELLATIONS",
+      "provider": "International Astronomical Union",
+      "title": "The Constellations",
+      "url": "https://www.iau.org/public/themes/constellations/",
+      "use": "88 official constellations and nomenclature"
+    },
+    {
+      "id": "NAOJ_CONSTELLATIONS",
+      "provider": "国立天文台 暦計算室",
+      "title": "星座の名前",
+      "url": "https://eco.mtk.nao.ac.jp/koyomi/faq/constellations.html",
+      "use": "Japanese names, abbreviations, 88-constellation framework, Ptolemaic classification"
+    },
+    {
+      "id": "SIMBAD",
+      "provider": "CDS, Université de Strasbourg / CNRS",
+      "title": "SIMBAD Astronomical Database",
+      "url": "https://simbad.cds.unistra.fr/simbad/",
+      "use": "Star identifiers, astrometry, spectral classifications; reference authority for object cross-checking"
+    },
+    {
+      "id": "HYG41",
+      "provider": "Astronexus HYG Database v4.1",
+      "title": "HYG Database v4.1",
+      "url": "https://github.com/astronexus/HYG-Database",
+      "use": "Bulk star distance/proper-name cross-check; Hipparcos/Yale-derived compilation",
+      "note": "Secondary compiled catalog; institutional SIMBAD/CDS remains the preferred object-by-object authority."
+    },
+    {
+      "id": "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+      "provider": "Smithsonian Astrophysical Observatory / Chandra X-ray Center",
+      "title": "Introduction to Constellations",
+      "url": "https://chandra.si.edu/photo/constellations/constellations_intro.html",
+      "use": "Historical/cultural constellation narratives and myth variants"
+    },
+    {
+      "id": "NASA_ORION",
+      "provider": "NASA Science",
+      "title": "Discovering the Universe Through the Constellation Orion",
+      "url": "https://science.nasa.gov/universe/stories/quick-reads/discovering-the-universe-through-the-constellation-orion/",
+      "use": "Orion constellation science and cultural context"
+    },
+    {
+      "id": "AOZORA_HOSHIMEGURI",
+      "provider": "青空文庫",
+      "title": "宮澤賢治「星めぐりの歌」",
+      "url": "https://www.aozora.gr.jp/cards/000081/files/46268_23911.html",
+      "use": "Direct textual identification of Kenji-related constellations/objects"
+    },
+    {
+      "id": "AOZORA_GINGATETSUDO",
+      "provider": "青空文庫",
+      "title": "宮沢賢治「銀河鉄道の夜」",
+      "url": "https://www.aozora.gr.jp/cards/000081/files/43737_19215.html",
+      "use": "Direct textual identification of Kenji-related constellations/objects"
+    }
+  ]
+}

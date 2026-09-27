@@ -1319,7 +1319,7 @@ if(cameraBtn)cameraBtn.textContent=isFull?"⤢ 全画面終了":"⛶ カメラ�
 }
 
 function syncNightFullscreenFilter(){
-/* v2.0.0: red mode is an overlay; no filtered ancestor/fullscreen handoff is required. */
+/* v2.0.1: red mode is an overlay; no filtered ancestor/fullscreen handoff is required. */
 }
 
 async function toggleSkyFullscreen(){
@@ -6200,7 +6200,7 @@ return pts;
 
 const $=s=>document.querySelector(s);
 
-// v2.0.0: constellation modal listeners are registered only after DOM helpers are initialized.
+// v2.0.1: constellation modal listeners are registered only after DOM helpers are initialized.
 document.getElementById("closeConstellationDetail")?.addEventListener("click",closeConstellationDetailModal);
 document.getElementById("constellationDetailModal")?.addEventListener("click",event=>{
   if(event.target===document.getElementById("constellationDetailModal"))closeConstellationDetailModal();
@@ -8487,7 +8487,7 @@ document.addEventListener("keydown",event=>{
 });
 
 
-/* ===== v2.0.0 PWA / Startup Stability ===== */
+/* ===== v2.0.1 PWA / Startup Stability ===== */
 let NICOLE_SW_REGISTRATION=null;
 let NICOLE_SW_REFRESHING=false;
 let NICOLE_SW_DISMISSED=false;
@@ -8567,7 +8567,7 @@ function runNicoleSelfCheck(){
   document.querySelectorAll("[id]").forEach(el=>{
     if(seen.has(el.id))duplicates.push(el.id); else seen.add(el.id);
   });
-  const report={version:"2.0.0",missing,duplicates:[...new Set(duplicates)],standalone:!!(window.navigator.standalone||matchMedia("(display-mode: standalone)").matches)};
+  const report={version:"2.0.1",missing,duplicates:[...new Set(duplicates)],standalone:!!(window.navigator.standalone||matchMedia("(display-mode: standalone)").matches)};
   window.NicoleDiagnostics=Object.assign(window.NicoleDiagnostics||{},report,{cameraSettings:()=>SKY_CAMERA_SETTINGS});
   if(missing.length||report.duplicates.length){
     console.error("Nicole startup self-check failed",report);

@@ -1,0 +1,1323 @@
+{
+  "version": "0.2.0",
+  "summary": {
+    "constellations": 88,
+    "stars": 64,
+    "deep_sky": 119,
+    "planets": 7,
+    "asterisms": 9,
+    "stars_full_explanation": 64,
+    "stars_distance_filled": 64,
+    "stars_english_name_filled": 64,
+    "deep_sky_full_explanation": 119,
+    "deep_sky_distance_filled": 119,
+    "constellations_with_mythology_metadata": 88,
+    "kenji_constellations": 10,
+    "kenji_stars": 4,
+    "kenji_deep_sky": 1
+  },
+  "changes": [
+    {
+      "file": "stars.json",
+      "id": "Dubhe",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Merak",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Phecda",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Megrez",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Alioth",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Alkaid",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Schedar",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Caph",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "GammaCas",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Ruchbah",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Segin",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Bellatrix",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Alnilam",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Alnitak",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Mintaka",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Saiph",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Denebola",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Algieba",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Zosma",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Shaula",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Sargas",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Dschubba",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Acrab",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "KausAust",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Nunki",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Ascella",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Alpheratz",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Mirach",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Markab",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Scheat",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Algenib",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Sadr",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "GienahCyg",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Eltanin",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Rastaban",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Kochab",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Pherkad",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Hamal",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Sheratan",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Mirfak",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Algol",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "stars.json",
+      "id": "Fawaris",
+      "change": "欠損していた距離・解説・英名・観望情報等を補完",
+      "basis": "SIMBAD/Hipparcos系カタログ + スペクトル型"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M9",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M10",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M12",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M14",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M18",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M19",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M21",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M23",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M24",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M25",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M26",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M28",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M29",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M30",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M32",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M34",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M39",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M40",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M43",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M46",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M47",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M48",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M49",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M50",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M52",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M53",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M54",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M55",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M56",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M58",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M59",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M60",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M61",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M62",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M67",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M68",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M69",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M70",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M71",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M72",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M73",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M74",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M75",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M76",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M77",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M78",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M79",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M80",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M83",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M84",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M85",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M86",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M88",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M89",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M90",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M91",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M93",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M94",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M95",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M96",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M97",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M98",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M99",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M100",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M102",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M103",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M105",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M106",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M107",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M108",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M109",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "deep-sky.json",
+      "id": "M110",
+      "change": "catalog_onlyから詳細解説へ昇格。距離・観望・科学解説・ハイライトを補完",
+      "basis": "NASA Hubble Messier + catalog metadata"
+    },
+    {
+      "file": "constellations.json",
+      "id": "UMa",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "UMi",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Dra",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Cas",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Cep",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Cam",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Lyn",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Cnc",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Leo",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "LMi",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Vir",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Com",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "CVn",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Boo",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "CrB",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Ser",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Lib",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Hya",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Crt",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Crv",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Ant",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Sex",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Her",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Oph",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Sco",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Sgr",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "CrA",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Tel",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Ara",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Sct",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Aql",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Sge",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Vul",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Lyr",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Cyg",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Del",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Equ",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "And",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Per",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Peg",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Tri",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Ari",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Psc",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Cet",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Phe",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Scl",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "For",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Eri",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Hor",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Cae",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Col",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Lac",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Aqr",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Cap",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "PsA",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Mic",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Gru",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Tuc",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Ind",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Pav",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Ori",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Tau",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Gem",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Aur",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "CMa",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "CMi",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Mon",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Lep",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Pup",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Pyx",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Car",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Vel",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Pic",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Dor",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Ret",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Men",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Cen",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Cru",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Lup",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Nor",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Cir",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Mus",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Cha",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Vol",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "TrA",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Hyi",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Oct",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "constellations.json",
+      "id": "Aps",
+      "change": "科学と神話を分離した出典・検証メタデータを追加",
+      "basis": "IAU/国立天文台/Smithsonian Chandra"
+    },
+    {
+      "file": "cultural_context",
+      "id": "Sco",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "Aql",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "CMi",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "Ori",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "And",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "UMa",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "UMi",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "Cyg",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "Cru",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "Lyr",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "Antares",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "Procyon",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "Polaris",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "Vega",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    },
+    {
+      "file": "cultural_context",
+      "id": "M31",
+      "change": "宮沢賢治作品との直接的・保守的対応を追加",
+      "basis": "青空文庫本文"
+    }
+  ]
+}

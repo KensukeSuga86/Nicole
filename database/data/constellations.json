@@ -35,6 +35,42 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "ギリシャ神話では、美しい女性カリストが女神ヘラの怒りによって熊の姿に変えられた物語と結び付けられています。後に息子アルカスとともに天へ上げられたとされています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "星めぐりの歌"
+        ],
+        "basis": [
+          "「大ぐまのあしを きたに」"
+        ],
+        "confidence": "high"
+      }
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -73,6 +109,42 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "おおぐま座のカリストの息子アルカスとされることが多い星座です。熊となった母を知らずに狩ろうとしたアルカスを見たゼウスが、親子をともに天へ上げたと伝えられています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "星めぐりの歌"
+        ],
+        "basis": [
+          "「小熊のひたいの うへは そらのめぐりの めあて」"
+        ],
+        "confidence": "high"
+      }
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -111,6 +183,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "ギリシャ神話では、ヘスペリデスの園の黄金のリンゴを守っていた竜ラドンと結び付けられています。ヘラクレスの十二の功業にも登場します。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -149,6 +246,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "エチオピア王妃カシオペヤを表します。自分や娘アンドロメダの美しさを海の精より上だと自慢したため海神の怒りを買い、国に災いを招いたとされています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -187,6 +309,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "エチオピア王ケフェウスを表し、カシオペヤの夫、アンドロメダの父に当たります。妻の発言によって国が災いに見舞われ、娘を生贄に差し出すことになります。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -225,6 +372,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "17世紀初めにペトルス・プランシウスによって設定されました。キリンを表し、古代ギリシャ神話とは関係のない比較的新しい星座です。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -257,6 +429,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "17世紀にヘベリウスが設定しました。暗い星ばかりで見つけにくいため「ヤマネコのような鋭い目が必要」という発想から名付けられたと伝えられています。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -290,6 +487,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "ヘラクレスがヒュドラと戦っていた際、女神ヘラが送り込んだ巨大な蟹カルキノスとされています。蟹はヘラクレスに踏みつぶされますが、その働きを称えたヘラによって天に上げられたと伝えられます。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -323,6 +545,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "ヘラクレスの十二の功業で最初に登場する「ネメアの獅子」を表します。どんな武器も通さない毛皮を持ち、ヘラクレスは最後には素手で絞め殺しました。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -355,6 +602,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "17世紀にヘベリウスが設定しました。しし座の近くにいる「小さな獅子」を表し、独自の古代神話はありません。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -388,6 +660,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "乙女の姿をした古代星座で、正義の女神アストレア、農業の女神デメテル、その娘ペルセポネなど複数の女神と結び付けられてきました。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -421,6 +718,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "紀元前3世紀のエジプト王妃ベレニケ2世の髪を表します。夫の無事を祈って髪を神殿に捧げたところ姿を消し、「神々が天に上げた」と説明されたという伝説があります。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -455,6 +777,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "17世紀にヘベリウスが設定しました。うしかい座の人物が連れている2匹の猟犬を表し、それぞれアステリオンとカーラという名が付けられています。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -488,6 +835,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "名前には「牛を追う者」「牧夫」という意味があります。おおぐま座の熊を追う人物、あるいはカリストの息子アルカスなど、複数の神話と結び付けられています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -521,6 +893,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "ギリシャ神話ではクレタ島の王女アリアドネの冠とされています。英雄テセウスに見捨てられた彼女を酒神ディオニュソスが迎え、贈った冠が天に上げられたと伝えられます。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -554,6 +951,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "医神アスクレピオスが手に持つ蛇を表します。蛇の脱皮は古くから再生や生命力の象徴とされ、医術とも深く結び付けられてきました。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -586,6 +1008,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "正義の女神が持つ天秤と結び付けられています。古代にはさそり座の一部でしたが、後に独立しました。黄道十二星座の中で唯一、生物ではなく道具を表します。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -620,6 +1067,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "ヘラクレスが戦った怪物ヒュドラとされています。複数の頭を持ち、一つ切り落とすと新しい頭が生えるため、ヘラクレスは切り口を焼きながら退治しました。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -652,6 +1124,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "杯を表す古代星座で、からす座・うみへび座と同じアポロンの物語に登場します。カラスが水を汲むために持たされた杯とされています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -684,6 +1181,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "太陽神アポロンに仕えるカラスとされています。水を汲むよう命じられたカラスが寄り道をし、蛇のせいにして嘘をついたため、アポロンがカラス・杯・蛇をまとめて天に置いたという物語があります。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -716,6 +1238,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "古代神話に由来する星座ではありません。18世紀にフランスの天文学者ラカーユが設定し、当時の科学技術を象徴する空気ポンプをモチーフにしました。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -748,6 +1295,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "17世紀にヘベリウスが設定しました。自身が天体観測に愛用していた六分儀を表し、火災で観測機器を失った経験とも関連するとされています。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -782,6 +1354,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "ギリシャ神話最大級の英雄ヘラクレスを表します。十二の功業では、しし座やうみへび座のモデルとなった怪物とも戦いました。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -815,6 +1412,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "医術の神アスクレピオスが蛇を持つ姿とされています。死者を蘇らせるほどの医術を身につけたためゼウスに雷で撃たれ、その後才能を惜しまれて星座になったと伝えられています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -836,7 +1458,7 @@
     "main_stars_text": "アンタレス・シャウラ・サルガス",
     "legacy_story": "夏の南天を代表する星座。ギリシャ神話では狩人オリオンを刺した大サソリ。オリオン座と正反対の位置にあり、一方が昇ると他方が沈む。赤い超巨星アンタレスは「火星に対抗するもの」という意味を持つ。M4・M6・M7・M80などを含む。",
     "explanation": {
-      "science": "α星アンタレスは太陽の数百倍の直径を持つ赤色超巨星です。M4、M6、M7などの星団があり、強力なX線源さそり座X-1もあります。",
+      "science": "黄道沿いにある星座で、赤色超巨星アンタレスや、尾の付近の散開星団M6・M7などを含みます。天の川の中心方向に近いため、星団・星雲が豊富な領域です。",
       "myth": "狩人オリオンを倒した巨大なサソリとされています。オリオンが地上のすべての動物を倒せると豪語したため、大地の女神がサソリを送り込んだという物語があります。"
     },
     "representative_position": {
@@ -847,6 +1469,43 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "地中海・中東では古くからサソリの形と見なされてきました。ギリシャ系の伝承では狩人オリオンを倒したサソリと結び付ける説があり、オリオンとさそり座が空の反対側に位置することを物語で説明します。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "星めぐりの歌",
+          "銀河鉄道の夜"
+        ],
+        "basis": [
+          "「あかいめだまの さそり」",
+          "「さそり座の赤い星」"
+        ],
+        "confidence": "high"
+      }
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -879,6 +1538,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "弓を引く半人半馬の射手として描かれます。後世には賢者ケイロンとされることもありますが、クロトスとする説もあります。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -910,6 +1594,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "古代から知られる星座ですが、特定の一つの神話には明確に対応していません。冠や花輪として描かれ、北天のかんむり座に対応する「南の冠」として現在の名称が使われています。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -941,6 +1650,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定し、望遠鏡を表します。望遠鏡によって月の地形や木星の衛星、銀河など、それまで知られていなかった宇宙が次々と発見されました。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -973,6 +1707,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "祭壇を表す古代星座です。ギリシャ神話では、神々が巨人族との戦いを前に勝利を誓い、供物を捧げた祭壇とされることがあります。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1006,6 +1765,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "17世紀にヘベリウスが設定し、ポーランド王ヤン3世ソビエスキーの盾を記念したものです。実在した人物の功績と深く関係する珍しい星座です。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1039,6 +1823,44 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "ギリシャ神話では大神ゼウスに仕える鷲、あるいはゼウス自身が変身した鷲とされています。日本ではアルタイルが七夕の彦星として知られ、こと座のベガと対になっています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "星めぐりの歌",
+          "銀河鉄道の夜"
+        ],
+        "basis": [
+          "「ひろげた鷲の つばさ」",
+          "「鷲の停車場」"
+        ],
+        "confidence": "high"
+      }
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1073,6 +1895,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "一本の矢を表す古代星座です。ヘラクレスの矢、アポロンの矢、エロスの矢など複数の解釈があり、一つの神話には定まっていません。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1107,6 +1954,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "17世紀にヘベリウスが設定しました。当初は「ガチョウをくわえた小さなキツネ」という意味の名称で、後にガチョウの部分が省かれて現在のこぎつね座だけが残りました。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1141,6 +2013,42 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "音楽の名手オルフェウスの竪琴を表します。彼の奏でる音は人間だけでなく動物や木々まで魅了したとされ、死後その竪琴が天に上げられたと伝えられます。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "銀河鉄道の夜"
+        ],
+        "basis": [
+          "「琴の星」"
+        ],
+        "confidence": "medium"
+      }
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1174,6 +2082,42 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "白鳥を表す古代星座で、複数の神話があります。大神ゼウスが白鳥に変身した姿とする話や、親友を失った人物が白鳥になったという話などが伝えられています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "銀河鉄道の夜"
+        ],
+        "basis": [
+          "章題「北十字」—北十字ははくちょう座の主要星がつくるアステリズム"
+        ],
+        "confidence": "high"
+      }
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1207,6 +2151,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "ギリシャ神話では、海へ投げ出された音楽家アリオンをイルカが背中に乗せて救ったという伝説が有名です。その功績を称えてイルカが星座になったとされています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1240,6 +2209,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "名前は「小さな馬」を意味します。古代からある星座ですが、その馬が誰なのかについては複数の説があり、一つの神話には定まっていません。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1273,6 +2267,42 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "アンドロメダは、エチオピア王ケフェウスと王妃カシオペヤの娘です。母の自慢が海神の怒りを買い、生贄として岩に鎖でつながれましたが、英雄ペルセウスに救われます。ケフェウス座、カシオペヤ座、ペルセウス座、くじら座も同じ物語につながっています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "星めぐりの歌"
+        ],
+        "basis": [
+          "「アンドロメダの くも」"
+        ],
+        "confidence": "high"
+      }
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1307,6 +2337,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "英雄ペルセウスを表します。メドゥーサを退治した帰路、海の怪物への生贄となっていたアンドロメダを救い、後に妻としました。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1340,6 +2395,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "翼を持つ天馬ペガサスを表します。英雄ペルセウスが怪物メドゥーサを倒した際、その血から生まれたとされています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1373,6 +2453,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "三つの星がつくる単純な三角形を表す古代星座です。ギリシャ文字のデルタや、三角形に近い形のシチリア島と結び付けられることがあります。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1406,6 +2511,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "ギリシャ神話の「金の羊毛」を持つ牡羊がモデルです。王子プリクソスを救った羊の毛皮は、後に英雄イアソンとアルゴ船の仲間たちが探し求める宝物となりました。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1438,6 +2568,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "二匹の魚が紐で結ばれた姿です。怪物テュポンから逃れるため、女神アフロディーテと息子エロスが魚に姿を変え、離れないよう互いを紐で結んだという伝説があります。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1471,6 +2626,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "日本語では「くじら座」ですが、ギリシャ神話では王女アンドロメダを襲う海の怪物ケートスを表します。現代的なクジラというより怪獣に近い存在です。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1503,6 +2683,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "16世紀末に設定された南天星座で、不死鳥フェニックスを表します。炎に包まれて死に、灰の中から再び生まれる再生の象徴です。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1535,6 +2740,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定しました。もともとは「彫刻家のアトリエ」を意味し、彫像や制作道具を含む姿として描かれていました。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1567,6 +2797,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定した星座で、化学実験などに使われる炉を表します。当時発展しつつあった科学や実験技術を象徴する星座の一つです。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1599,6 +2854,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "大河エリダヌスを表します。ギリシャ神話では、太陽神ヘリオスの息子パエトンが太陽の戦車を暴走させ、ゼウスの雷で撃ち落とされた際に落ちた川と結び付けられています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1630,6 +2910,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定し、振り子時計を表します。正確な時計は天体観測や航海に不可欠であり、近代科学を象徴する道具の一つでした。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1661,6 +2966,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定し、彫刻や版画に使う「たがね」を表します。科学や芸術、技術の道具を星座にしたラカーユらしい近代星座です。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1693,6 +3023,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "16世紀ごろに設定された比較的新しい星座です。旧約聖書の「ノアの方舟」で陸地の出現を知らせた鳩、あるいはアルゴ船を導いた鳩と結び付けられることがあります。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1725,6 +3080,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "17世紀にヘベリウスが設定した星座で、トカゲを表します。古代神話との特別な関係はありません。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1757,6 +3137,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "水瓶から水を注ぐ人物として古代から描かれてきました。ギリシャ神話では、ゼウスに気に入られて神々の給仕役となった美少年ガニメデと結び付けられることがよくあります。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1789,6 +3194,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "上半身が山羊、下半身が魚という姿で描かれます。ギリシャ神話では牧神パンやアイギパンと結び付けられ、怪物から逃れるため水中へ飛び込んだ際に下半身が魚になったという伝説があります。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1820,6 +3250,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "古代から知られる大きな魚の星座です。みずがめ座が水瓶から流す水を口で受けている姿として描かれます。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1852,6 +3307,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定し、顕微鏡を表します。人間の目だけでは見えない世界を明らかにする近代科学の象徴として星座になりました。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1883,6 +3363,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "16世紀末に南天で設定された比較的新しい星座で、鶴を表します。古代ギリシャの48星座には含まれていません。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1914,6 +3419,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "大航海時代につくられた星座で、南米などに生息する大きなくちばしを持つ鳥オオハシを表します。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1945,6 +3475,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "16世紀末に設定された南天星座です。当時のヨーロッパ人が航海で出会った「異国の先住民」を人物像として星座にしたもので、大航海時代の世界観を反映しています。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1977,6 +3532,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "大航海時代に設定された星座で、孔雀を表します。古代星座ではありませんが、孔雀そのものはギリシャ神話では女神ヘラの聖鳥として知られています。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -1998,7 +3578,7 @@
     "main_stars_text": "ベテルギウス・リゲル・ベラトリックス・アルニラム",
     "legacy_story": "ギリシャ神話の狩人オリオン。女神アルテミスに愛されたが、兄アポロンの策略で射殺されたとも、大サソリに刺されて死んだとも伝えられる。三ツ星の並びは世界中の文化で特別な意味を持ち、エジプトのピラミッドとの対応も指摘されている。M42（オリオン大星雲）・M43・M78・IC434（馬頭星雲）を含む。",
     "explanation": {
-      "science": "赤いベテルギウスと青白いリゲルという、性質の大きく異なる二つの明るい星があります。M42オリオン大星雲では現在もガスや塵から新しい恒星が誕生しています。",
+      "science": "天の赤道付近に位置し、世界の広い緯度帯から見られる代表的な星座です。ベテルギウスとリゲルという進化段階・表面温度の大きく異なる超巨星、三つ星、巨大な星形成領域M42などを含み、恒星進化と星形成を一つの領域で解説できます。",
       "myth": "オリオンはギリシャ神話に登場する腕自慢の狩人です。大サソリに刺されて命を落としたという伝説が有名で、星空でもオリオン座とさそり座は離れた位置に置かれています。"
     },
     "representative_position": {
@@ -2009,6 +3589,42 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "ギリシャ神話の狩人オリオンに結び付けられますが、死因やアルテミス、さそりとの関係には複数の伝承があります。オリオンとさそりが空の反対側に現れる季節的関係を説明する物語としても語られてきました。",
+      "source_basis": [
+        "NASA_ORION",
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "星めぐりの歌"
+        ],
+        "basis": [
+          "「オリオンは高く うたひ」"
+        ],
+        "confidence": "high"
+      }
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2043,6 +3659,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "大神ゼウスが王女エウロペに近づくため変身した白い牡牛とされています。エウロペを背に乗せて海を渡りクレタ島へ連れて行ったという物語です。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2076,6 +3717,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "双子の兄弟カストルとポルックスを表します。カストルが命を落とした際、不死身だったポルックスは兄弟と離れることを望まず、ゼウスによって二人とも天へ上げられたと伝えられています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2110,6 +3776,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "馬車を操る御者を表します。ギリシャ神話のアテネ王エリクトニオスなどと結び付けられます。カペラは「小さな雌山羊」を意味し、幼いゼウスを育てた山羊アマルテイアとも関連付けられています。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2141,6 +3832,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "狩人オリオンが連れていた猟犬の一匹とされることが一般的です。シリウスは古代エジプトでも重要視され、その出現はナイル川の増水時期を知る目印になりました。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2173,6 +3889,42 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "おおいぬ座とともに狩人オリオンに付き従う犬として描かれることが多い星座です。ただし古代の伝承には複数の解釈があり、その正体は一つに定まっていません。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "星めぐりの歌"
+        ],
+        "basis": [
+          "「あをいめだまの 小いぬ」"
+        ],
+        "confidence": "high"
+      }
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2205,6 +3957,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "17世紀に設定された比較的新しい星座で、伝説上の動物ユニコーンを表します。古代ギリシャの星座ではありません。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2236,6 +4013,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "オリオン座の足元に描かれるウサギです。狩人オリオンや猟犬であるおおいぬ座・こいぬ座に追われる獲物として星図に描かれることが多い星座です。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2268,6 +4070,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "かつての巨大星座「アルゴ船座」を分割してできた星座で、船の船尾部分を表します。アルゴ船はイアソンたちが金の羊毛を求めて航海した船です。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2300,6 +4127,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定し、航海用の磁気コンパスを表します。近くにアルゴ船由来の星座がありますが、らしんばん座自体は古代のアルゴ船座には含まれていませんでした。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2332,6 +4184,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "かつての巨大星座「アルゴ船座」の一部で、船の竜骨を表します。アルゴ船は英雄イアソンたちが金の羊毛を求める冒険に使った船で、近代になって複数の星座へ分割されました。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2365,6 +4242,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "巨大星座アルゴ船座の一部で、船の帆を表します。英雄イアソンとアルゴナウタイが金の羊毛を求めて航海したアルゴ船の帆に当たります。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2396,6 +4298,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定しました。もともとは「画家のイーゼル」を意味し、絵を描くための画架や道具を表しています。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2427,6 +4354,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "大航海時代につくられた南天星座で、大型の海水魚を表します。熱帯の海で航海者たちが目にした生物が星空に取り入れられました。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2458,6 +4410,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定しました。レチクルとは望遠鏡の接眼部などに入れる目盛りや網線で、天体位置を精密に測る道具です。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2489,6 +4466,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定し、南アフリカのケープタウン近郊にあるテーブル山にちなんで名付けました。88星座でも珍しく、実在する山を直接モチーフにしています。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2521,6 +4523,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "半人半馬のケンタウロスを表す古代星座です。後世には医学や音楽に優れた賢者ケイロンと結び付けられることがありますが、古代の伝承では必ずしもケイロン本人とは限りません。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2553,6 +4580,42 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "現在の星座として独立したのは比較的新しく、もともとはケンタウルス座の一部でした。大航海時代に南半球の航海で重要な目印となり、十字形の星の並びが独立した星座として定着しました。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "銀河鉄道の夜"
+        ],
+        "basis": [
+          "「南十字（サウザンクロス）」"
+        ],
+        "confidence": "high"
+      }
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2585,6 +4648,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "classical_tradition_variant",
+      "summary": "古代には必ずしも狼と決まっておらず、ケンタウルス座の人物が持つ野生動物や生贄として描かれていました。後に狼として解釈されるようになりました。",
+      "source_basis": [
+        "SMITHSONIAN_CHANDRA_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "古代ギリシャ・ローマ系の伝承には複数の異伝があります。単一の「正解」とせず、代表的な系譜として扱います。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2617,6 +4705,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定し、直角を測る定規や製図用具を表します。精密な測定を象徴する科学・技術系の星座です。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2648,6 +4761,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定しました。ここでいうコンパスは方角を示す磁気コンパスではなく、円を描く製図用コンパスを意味します。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2680,6 +4818,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "大航海時代につくられた南天星座です。当初は蜂と呼ばれた時期もありましたが、後に「蝿」を意味するMuscaが定着しました。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2718,6 +4881,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "大航海時代に設定された南天星座で、カメレオンを表します。古代ギリシャ神話とは関係なく、南方で知られた珍しい動物がモチーフです。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2751,6 +4939,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "16世紀末の南天観測から生まれた星座で、海面から飛び出して滑空するトビウオを表します。大航海時代の船乗りに身近だった海洋生物が星座になった例です。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2783,6 +4996,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "16世紀末の南天観測から生まれた星座です。北天のさんかく座に対応する「南の三角形」として名付けられ、特定の神話はありません。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2821,6 +5059,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "大航海時代につくられた星座で、水蛇を表します。古代のうみへび座Hydraとは別の星座で、特定のギリシャ神話には由来しません。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2859,6 +5122,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "18世紀にラカーユが設定しました。八分儀は天体の高度など角度を測る航海・天文観測用の器具です。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   },
   {
@@ -2897,6 +5185,31 @@
       "dataset": "CONSTELLATIONS + CONSTELLATION_TEXT + CONST_COORD",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "mythology": {
+      "status": "historical_origin_not_classical_myth",
+      "summary": "16世紀末の南天観測から生まれた星座で、極楽鳥を表します。大航海時代にヨーロッパへ知られるようになった南方の珍しい動物が星座に取り入れられました。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "editorial_note": "近世以降に設定された星座を含むため、古代ギリシャ神話を後付けしません。名称成立史と航海・自然史などの歴史的背景を優先します。"
+    },
+    "scientific_context": {
+      "official_status": "IAU 88 constellations",
+      "role": "星座は星の絵柄だけでなく、IAUが定めた天球上の領域として天体位置の表現に使われます。",
+      "source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ]
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "science_source_basis": [
+        "IAU_CONSTELLATIONS",
+        "NAOJ_CONSTELLATIONS"
+      ],
+      "mythology_handling": "variant-aware; modern constellations are not assigned fabricated classical myths"
     }
   }
 ]

@@ -4,7 +4,7 @@
     "name": {
       "ja": "シリウス",
       "ja_full": "シリウス（おおいぬ座α）",
-      "en": null
+      "en": "Sirius"
     },
     "position": {
       "ra_deg": 101.2872,
@@ -28,7 +28,7 @@
       4
     ],
     "explanation": {
-      "overview": "シリウス（おおいぬ座α）は、全天最明星。白色矮星の伴星を持つ天体です。距離は約8.6光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "シリウスはCMaに位置する恒星です。見かけの等級は-1.46等、距離は約8.6光年。全天最明星。白色矮星の伴星を持つ",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼〜低倍率です。",
       "science": "主星シリウスAと白色矮星シリウスBからなる連星系です。Bは恒星が核融合を終えた後に残る高密度な天体で、恒星進化を考えるうえで重要な実例です。",
       "history": "古代から非常に目立つ星として知られ、英名 Sirius はギリシャ語の「焼き焦がすもの」に由来するとされます。",
@@ -57,6 +57,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -64,7 +73,7 @@
     "name": {
       "ja": "カノープス",
       "ja_full": "カノープス（りゅうこつ座α）",
-      "en": null
+      "en": "Canopus"
     },
     "position": {
       "ra_deg": 95.9879,
@@ -87,7 +96,7 @@
       3
     ],
     "explanation": {
-      "overview": "カノープス（りゅうこつ座α）は、全天2位の明るさ。日本では南の低空に見える天体です。距離は約310光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "カノープスはCarに位置する恒星です。見かけの等級は-0.74等、距離は約310光年。全天2位の明るさ。日本では南の低空に見える",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "黄白色の明るい巨星で、シリウスより遠方にありながら全天2位の明るさに見えるほど本来の光度が大きい星です。",
       "history": "日本や中国では南の低空に現れる「老人星」「南極老人星」と結び付けられ、長寿の象徴として扱われてきました。",
@@ -116,6 +125,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -123,7 +141,7 @@
     "name": {
       "ja": "アルクトゥルス",
       "ja_full": "アルクトゥルス（うしかい座α）",
-      "en": null
+      "en": "Arcturus"
     },
     "position": {
       "ra_deg": 213.9153,
@@ -148,7 +166,7 @@
       8
     ],
     "explanation": {
-      "overview": "アルクトゥルス（うしかい座α）は、北天最明星。春の大曲線の中間点天体です。距離は約37光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "アルクトゥルスはBooに位置する恒星です。見かけの等級は-0.05等、距離は約37光年。北天最明星。春の大曲線の中間点",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "太陽より進化の進んだ橙色巨星です。大きな固有運動を持ち、太陽近傍の恒星集団とは異なる運動を示すことでも知られます。",
       "history": "名前はギリシャ語で「熊の番人」を意味し、おおぐま座の後を追うような位置関係に由来します。",
@@ -177,6 +195,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -184,7 +211,7 @@
     "name": {
       "ja": "ベガ",
       "ja_full": "ベガ（こと座α・織姫星）",
-      "en": null
+      "en": "Vega"
     },
     "position": {
       "ra_deg": 279.2347,
@@ -211,7 +238,7 @@
       11
     ],
     "explanation": {
-      "overview": "ベガ（こと座α・織姫星）は、全天3位の明るさ。七夕の織姫星天体です。距離は約25光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "ベガはLyrに位置する恒星です。見かけの等級は0.03等、距離は約25光年。全天3位の明るさ。七夕の織姫星",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼〜低倍率です。",
       "science": "比較的近いA型主系列星で、高速自転のため極方向と赤道方向で性質が少し異なることが分かっています。周囲には塵の円盤も知られています。",
       "history": "七夕では織姫星として親しまれます。測光の歴史では、等級の基準を考える際の代表的な標準星として長く使われました。",
@@ -240,6 +267,26 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "銀河鉄道の夜"
+        ],
+        "basis": [
+          "終盤の「琴の星」—こと座の代表星として関連付け"
+        ],
+        "confidence": "medium"
+      }
     }
   },
   {
@@ -247,7 +294,7 @@
     "name": {
       "ja": "カペラ",
       "ja_full": "カペラ（ぎょしゃ座α）",
-      "en": null
+      "en": "Capella"
     },
     "position": {
       "ra_deg": 79.1723,
@@ -273,7 +320,7 @@
       4
     ],
     "explanation": {
-      "overview": "カペラ（ぎょしゃ座α）は、冬の北天の明星。実は2つの黄色巨星の連星天体です。距離は約43光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "カペラはAurに位置する恒星です。見かけの等級は0.08等、距離は約43光年。冬の北天の明星。実は2つの黄色巨星の連星",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "肉眼では1つに見えますが、明るい成分自体が2つの黄色巨星からなる連星で、さらに離れた赤色矮星のペアも含む多重星系です。",
       "history": "ラテン語で「小さな雌ヤギ」を意味し、ぎょしゃ座の神話的表現と結び付いています。",
@@ -302,6 +349,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -309,7 +365,7 @@
     "name": {
       "ja": "リゲル",
       "ja_full": "リゲル（オリオン座β）",
-      "en": null
+      "en": "Rigel"
     },
     "position": {
       "ra_deg": 78.6345,
@@ -334,7 +390,7 @@
       4
     ],
     "explanation": {
-      "overview": "リゲル（オリオン座β）は、オリオン座の青白い超巨星。太陽の約7万倍の光度天体です。距離は約860光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "リゲルはOriに位置する恒星です。見かけの等級は0.18等、距離は約860光年。オリオン座の青白い超巨星。太陽の約7万倍の光度",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "非常に高温で高光度の青色超巨星です。大質量星が短い寿命の後半へ進んだ姿で、周囲には複数の伴星も知られています。",
       "history": "オリオンの足を表す星で、名称はアラビア語の「巨人の足」に由来します。",
@@ -363,6 +419,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -370,7 +435,7 @@
     "name": {
       "ja": "プロキオン",
       "ja_full": "プロキオン（こいぬ座α）",
-      "en": null
+      "en": "Procyon"
     },
     "position": {
       "ra_deg": 114.8255,
@@ -394,7 +459,7 @@
       4
     ],
     "explanation": {
-      "overview": "プロキオン（こいぬ座α）は、冬の大三角の一角。白色矮星の伴星を持つ天体です。距離は約11.5光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "プロキオンはCMiに位置する恒星です。見かけの等級は0.4等、距離は約11.5光年。冬の大三角の一角。白色矮星の伴星を持つ",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "主星と白色矮星の伴星からなる連星系で、シリウス系と似た構成です。比較的近距離にあるため、恒星進化と連星軌道研究の重要な対象です。",
       "history": "「犬の前」を意味する名で、シリウスより少し早く昇ることに由来します。",
@@ -423,6 +488,26 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "星めぐりの歌"
+        ],
+        "basis": [
+          "「あをいめだまの 小いぬ」—こいぬ座の代表的な明るい星として対応"
+        ],
+        "confidence": "medium"
+      }
     }
   },
   {
@@ -430,7 +515,7 @@
     "name": {
       "ja": "ベテルギウス",
       "ja_full": "ベテルギウス（オリオン座α）",
-      "en": null
+      "en": "Betelgeuse"
     },
     "position": {
       "ra_deg": 88.7929,
@@ -455,7 +540,7 @@
       4
     ],
     "explanation": {
-      "overview": "ベテルギウス（オリオン座α）は、近い将来超新星爆発する赤色超巨星天体です。距離は約700光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "ベテルギウスはOriに位置する恒星です。見かけの等級は0.45等、距離は約700光年。近い将来超新星爆発する赤色超巨星",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "大質量星が進化した赤色超巨星で、外層が大きく膨張し、明るさも不規則に変化します。将来は超新星になると考えられますが、その時期を人間の時間尺度で予測することはできません。",
       "history": "オリオンの肩を表す星として知られ、2019〜2020年の大減光では塵と表面活動が注目されました。",
@@ -484,6 +569,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -491,7 +585,7 @@
     "name": {
       "ja": "アルタイル",
       "ja_full": "アルタイル（わし座α・彦星）",
-      "en": null
+      "en": "Altair"
     },
     "position": {
       "ra_deg": 297.6958,
@@ -517,7 +611,7 @@
       11
     ],
     "explanation": {
-      "overview": "アルタイル（わし座α・彦星）は、七夕の彦星。高速自転で扁平な形天体です。距離は約17光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "アルタイルはAqlに位置する恒星です。見かけの等級は0.76等、距離は約17光年。七夕の彦星。高速自転で扁平な形",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "非常に高速で自転しているため、完全な球ではなく赤道方向に膨らんだ形をしています。高速自転が恒星の形や表面温度に与える影響を直接調べられる星です。",
       "history": "七夕では彦星として親しまれ、ベガ・デネブと夏の大三角を作ります。",
@@ -546,6 +640,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -553,7 +656,7 @@
     "name": {
       "ja": "アルデバラン",
       "ja_full": "アルデバラン（おうし座α）",
-      "en": null
+      "en": "Aldebaran"
     },
     "position": {
       "ra_deg": 68.9802,
@@ -579,7 +682,7 @@
       4
     ],
     "explanation": {
-      "overview": "アルデバラン（おうし座α）は、おうし座の目。赤色巨星天体です。距離は約65光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "アルデバランはTauに位置する恒星です。見かけの等級は0.87等、距離は約65光年。おうし座の目。赤色巨星",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "太陽より進化した橙色巨星で、おうし座のヒアデス星団の方向に見えますが、実際には星団より手前にあります。",
       "history": "名前はアラビア語で「後に続くもの」を意味し、プレアデス星団を追うように昇る姿に由来します。",
@@ -608,6 +711,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -615,7 +727,7 @@
     "name": {
       "ja": "スピカ",
       "ja_full": "スピカ（おとめ座α）",
-      "en": null
+      "en": "Spica"
     },
     "position": {
       "ra_deg": 201.2983,
@@ -640,7 +752,7 @@
       7
     ],
     "explanation": {
-      "overview": "スピカ（おとめ座α）は、春の大曲線の終点。青白い連星天体です。距離は約250光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "スピカはVirに位置する恒星です。見かけの等級は0.98等、距離は約250光年。春の大曲線の終点。青白い連星",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "肉眼では1つですが、実際には互いに近接して回る高温の連星です。潮汐力による変形やスペクトル変化も研究対象になります。",
       "history": "おとめ座が持つ麦の穂を表す名前で、春の大曲線をたどる目印としても有名です。",
@@ -669,6 +781,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -676,7 +797,7 @@
     "name": {
       "ja": "アンタレス",
       "ja_full": "アンタレス（さそり座α）",
-      "en": null
+      "en": "Antares"
     },
     "position": {
       "ra_deg": 247.3519,
@@ -700,7 +821,7 @@
       9
     ],
     "explanation": {
-      "overview": "アンタレス（さそり座α）は、火星に対抗する赤い超巨星天体です。距離は約550光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "アンタレスはScoに位置する恒星です。見かけの等級は0.96等、距離は約550光年。火星に対抗する赤い超巨星",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "赤色超巨星で、低温の表面と巨大な半径を持つ大質量星です。周囲には星風で放出された物質も存在します。",
       "history": "名は「火星に対抗するもの」の意味で、赤い色が火星と似ていることから付けられました。",
@@ -729,6 +850,28 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "星めぐりの歌",
+          "銀河鉄道の夜"
+        ],
+        "basis": [
+          "「あかいめだまの さそり」",
+          "「さそり座の赤い星」"
+        ],
+        "confidence": "high"
+      }
     }
   },
   {
@@ -736,7 +879,7 @@
     "name": {
       "ja": "ポルックス",
       "ja_full": "ポルックス（ふたご座β）",
-      "en": null
+      "en": "Pollux"
     },
     "position": {
       "ra_deg": 116.3289,
@@ -761,7 +904,7 @@
       4
     ],
     "explanation": {
-      "overview": "ポルックス（ふたご座β）は、ふたご座の兄。太陽系外惑星を持つ天体です。距離は約34光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "ポルックスはGemに位置する恒星です。見かけの等級は1.14等、距離は約34光年。ふたご座の兄。太陽系外惑星を持つ",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "進化した橙色巨星で、周囲には太陽系外惑星が確認されています。肉眼で明るい恒星にも惑星系が存在する好例です。",
       "history": "ふたご座の双子の一人ポルックスを表し、カストルと並んで冬の空の分かりやすい目印になります。",
@@ -790,6 +933,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -797,7 +949,7 @@
     "name": {
       "ja": "フォーマルハウト",
       "ja_full": "フォーマルハウト（みなみのうお座α）",
-      "en": null
+      "en": "Fomalhaut"
     },
     "position": {
       "ra_deg": 344.4127,
@@ -821,7 +973,7 @@
       12
     ],
     "explanation": {
-      "overview": "フォーマルハウト（みなみのうお座α）は、秋の一つ星。惑星系の証拠が発見された天体です。距離は約25光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "フォーマルハウトはPsAに位置する恒星です。見かけの等級は1.16等、距離は約25光年。秋の一つ星。惑星系の証拠が発見された",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "若い恒星の周囲に塵の円盤が広がっており、惑星形成後の円盤構造を調べる代表的な対象です。",
       "history": "秋の南の空で周囲に明るい星が少ないため「秋の一つ星」と呼ばれます。",
@@ -850,6 +1002,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -857,7 +1018,7 @@
     "name": {
       "ja": "デネブ",
       "ja_full": "デネブ（はくちょう座α）",
-      "en": null
+      "en": "Deneb"
     },
     "position": {
       "ra_deg": 310.358,
@@ -883,7 +1044,7 @@
       11
     ],
     "explanation": {
-      "overview": "デネブ（はくちょう座α）は、夏の大三角の一角。超巨星で実は超明るい天体です。距離は約2,600光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "デネブはCygに位置する恒星です。見かけの等級は1.25等、距離は約2,600光年。夏の大三角の一角。超巨星で実は超明るい",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "非常に遠方にあるにもかかわらず1等星に見える、極めて高光度の白色超巨星です。大質量星の進化を考えるうえで重要です。",
       "history": "はくちょう座の尾を表し、ベガ・アルタイルと夏の大三角を形成します。",
@@ -912,6 +1073,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -919,7 +1089,7 @@
     "name": {
       "ja": "レグルス",
       "ja_full": "レグルス（しし座α）",
-      "en": null
+      "en": "Regulus"
     },
     "position": {
       "ra_deg": 152.093,
@@ -944,7 +1114,7 @@
       6
     ],
     "explanation": {
-      "overview": "レグルス（しし座α）は、しし座の心臓。高速自転で扁平天体です。距離は約79光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "レグルスはLeoに位置する恒星です。見かけの等級は1.35等、距離は約79光年。しし座の心臓。高速自転で扁平",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "高速自転する多重星系で、主星は自転によって扁平になっています。恒星の回転が形状に及ぼす影響の好例です。",
       "history": "「小さな王」を意味する名で、しし座の心臓に位置します。黄道に近いため月や惑星に隠されることもあります。",
@@ -973,6 +1143,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -980,7 +1159,7 @@
     "name": {
       "ja": "カストル",
       "ja_full": "カストル（ふたご座α）",
-      "en": null
+      "en": "Castor"
     },
     "position": {
       "ra_deg": 113.6495,
@@ -1005,7 +1184,7 @@
       4
     ],
     "explanation": {
-      "overview": "カストル（ふたご座α）は、実は6重星系！望遠鏡で2つに分かれる天体です。距離は約52光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "カストルはGemに位置する恒星です。見かけの等級は1.58等、距離は約52光年。実は6重星系！望遠鏡で2つに分かれる",
       "observing": "まず低倍率で導入し、像が安定してから倍率を上げます。推奨は50〜100倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。",
       "science": "肉眼では1つに見えますが、複数の連星が組み合わさった6重星系として知られます。望遠鏡ではまず明るい2成分を分離して楽しめます。",
       "history": "ふたご座の双子の一人カストルを表し、ポルックスとの対比で古くから親しまれています。",
@@ -1034,6 +1213,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1041,7 +1229,7 @@
     "name": {
       "ja": "ポラリス",
       "ja_full": "ポラリス（こぐま座α・北極星）",
-      "en": null
+      "en": "Polaris"
     },
     "position": {
       "ra_deg": 37.9546,
@@ -1071,7 +1259,7 @@
       12
     ],
     "explanation": {
-      "overview": "ポラリス（こぐま座α・北極星）は、現在の北極星。ほぼ動かない道しるべの星天体です。距離は約433光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "ポラリスはUMiに位置する恒星です。見かけの等級は1.98等、距離は約433光年。現在の北極星。ほぼ動かない道しるべの星",
       "observing": "肉眼で位置と色を確かめるのが基本です。望遠鏡では恒星自体は点像なので、倍率を上げるよりも色・瞬き・周囲の星並びを楽しむのが向いています。目安は肉眼です。",
       "science": "北天の回転中心に近い位置にあるケフェイド型変光星を含む多重星系です。地球の歳差運動のため、北極星は永遠に同じ星ではありません。",
       "history": "航海や方位確認に長く使われてきた実用的な星です。北斗七星やカシオペヤ座から探す方法がよく知られています。",
@@ -1100,6 +1288,26 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "星めぐりの歌"
+        ],
+        "basis": [
+          "「小熊のひたいの うへは そらのめぐりの めあて」—北極星を示す表現として扱う"
+        ],
+        "confidence": "high"
+      }
     }
   },
   {
@@ -1107,7 +1315,7 @@
     "name": {
       "ja": "アルビレオ",
       "ja_full": "アルビレオ（はくちょう座β）",
-      "en": null
+      "en": "Albireo"
     },
     "position": {
       "ra_deg": 292.6803,
@@ -1133,7 +1341,7 @@
       11
     ],
     "explanation": {
-      "overview": "アルビレオ（はくちょう座β）は、金色×青白の色対比。北天の宝石天体です。距離は約380〜430光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "アルビレオはCygに位置する恒星です。見かけの等級は3.1等、距離は約380〜430光年。金色×青白の色対比。北天の宝石",
       "observing": "まず低倍率で導入し、像が安定してから倍率を上げます。推奨は50〜100倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。",
       "science": "望遠鏡で金色と青白色の鮮やかな色対比を楽しめる代表的な二重星です。色の差は表面温度の違いを視覚的に感じる良い教材になります。",
       "history": "はくちょう座のくちばし付近にあり、観望会で人気の高い対象です。",
@@ -1162,6 +1370,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1169,7 +1386,7 @@
     "name": {
       "ja": "こと座ε星",
       "ja_full": "こと座ε星（四重星）",
-      "en": null
+      "en": "Epsilon Lyrae"
     },
     "position": {
       "ra_deg": 282.5196,
@@ -1196,7 +1413,7 @@
       11
     ],
     "explanation": {
-      "overview": "こと座ε星（四重星）は、1→2→4つに分かれる！望遠鏡の醍醐味天体です。距離は約160光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "こと座ε星はLyrに位置する恒星です。見かけの等級は4.7等、距離は約160光年。1→2→4つに分かれる！望遠鏡の醍醐味",
       "observing": "まず低倍率で導入し、像が安定してから倍率を上げます。推奨は150〜200倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。",
       "science": "肉眼または双眼鏡では2つ、十分な口径とシーイングではそれぞれがさらに2つに分かる「ダブル・ダブル」です。",
       "history": "望遠鏡の分解能やシーイングを体感する定番対象として広く観測されています。",
@@ -1226,6 +1443,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1233,7 +1459,7 @@
     "name": {
       "ja": "ミザール",
       "ja_full": "ミザール（おおぐま座ζ）",
-      "en": null
+      "en": "Mizar"
     },
     "position": {
       "ra_deg": 200.9814,
@@ -1263,7 +1489,7 @@
       12
     ],
     "explanation": {
-      "overview": "ミザール（おおぐま座ζ）は、肉眼二重星＋望遠鏡二重星天体です。距離は約78光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "ミザールはUMaに位置する恒星です。見かけの等級は2.2等、距離は約78光年。肉眼二重星＋望遠鏡二重星",
       "observing": "まず低倍率で導入し、像が安定してから倍率を上げます。推奨は50〜100倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。",
       "science": "ミザールとアルコルは肉眼二重星として有名で、ミザール自体も望遠鏡で分離できます。さらに分光連星を含む多重系です。",
       "history": "北斗七星の柄にあり、古くから視力試験の星として語られてきました。",
@@ -1292,6 +1518,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1299,7 +1534,7 @@
     "name": {
       "ja": "アルマク",
       "ja_full": "アルマク（アンドロメダ座γ）",
-      "en": null
+      "en": "Almach"
     },
     "position": {
       "ra_deg": 30.975,
@@ -1324,7 +1559,7 @@
       2
     ],
     "explanation": {
-      "overview": "アルマク（アンドロメダ座γ）は、金色×青緑の美しい色対比天体です。距離は約350光年。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "アルマクはAndに位置する恒星です。見かけの等級は2.1等、距離は約350光年。金色×青緑の美しい色対比",
       "observing": "まず低倍率で導入し、像が安定してから倍率を上げます。推奨は50〜100倍。二星の間隔だけでなく色の違いにも注目すると見応えがあります。シーイングが悪い日は分離しにくくなります。",
       "science": "明るい主星と青みを帯びた伴星の色対比が美しい二重星です。伴星側も複雑な多重系であることが知られています。",
       "history": "アンドロメダ座の端に位置し、アルビレオと並ぶ色彩二重星として人気があります。",
@@ -1353,6 +1588,15 @@
       "dataset": "STARS_DB",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "legacy value retained; cross-check target SIMBAD",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1360,7 +1604,7 @@
     "name": {
       "ja": "ドゥーベ",
       "ja_full": "ドゥーベ",
-      "en": null
+      "en": "Dubhe"
     },
     "position": {
       "ra_deg": 165.932,
@@ -1370,13 +1614,26 @@
     "magnitude_v": 1.79,
     "constellation_id": "UMa",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約123光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "北斗七星の「ひしゃく」の外側をつくる橙色巨星。メラクと結んだ線は北極星探しの目印になる。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "ドゥーベはUMaに位置する恒星です。見かけの等級は1.79等、距離は約123光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "北斗七星の「ひしゃく」の外側をつくる橙色巨星。メラクと結んだ線は北極星探しの目印になる。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 1.07,
       "spectral_type": "K0IIIa",
@@ -1399,6 +1656,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1406,7 +1672,7 @@
     "name": {
       "ja": "メラク",
       "ja_full": "メラク",
-      "en": null
+      "en": "Merak"
     },
     "position": {
       "ra_deg": 165.46,
@@ -1416,13 +1682,26 @@
     "magnitude_v": 2.37,
     "constellation_id": "UMa",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約79.7光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "北斗七星の指極星の一つ。ドゥーベと結ぶ方向を延ばすと北極星付近へ至る。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "メラクはUMaに位置する恒星です。見かけの等級は2.37等、距離は約79.7光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "北斗七星の指極星の一つ。ドゥーベと結ぶ方向を延ばすと北極星付近へ至る。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.02,
       "spectral_type": "A1V",
@@ -1445,6 +1724,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1452,7 +1740,7 @@
     "name": {
       "ja": "フェクダ",
       "ja_full": "フェクダ",
-      "en": null
+      "en": "Phecda"
     },
     "position": {
       "ra_deg": 178.458,
@@ -1462,13 +1750,26 @@
     "magnitude_v": 2.44,
     "constellation_id": "UMa",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約83.2光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "北斗七星のひしゃく部分をつくるA型主系列星。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "フェクダはUMaに位置する恒星です。見かけの等級は2.44等、距離は約83.2光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "北斗七星のひしゃく部分をつくるA型主系列星。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.0,
       "spectral_type": "A0Ve",
@@ -1491,6 +1792,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1498,7 +1808,7 @@
     "name": {
       "ja": "メグレズ",
       "ja_full": "メグレズ",
-      "en": null
+      "en": "Megrez"
     },
     "position": {
       "ra_deg": 183.856,
@@ -1508,13 +1818,26 @@
     "magnitude_v": 3.31,
     "constellation_id": "UMa",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約80.5光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "北斗七星で柄とひしゃくをつなぐ位置にある星。七星の中では比較的暗い。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "メグレズはUMaに位置する恒星です。見かけの等級は3.31等、距離は約80.5光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "北斗七星で柄とひしゃくをつなぐ位置にある星。七星の中では比較的暗い。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.08,
       "spectral_type": "A3V",
@@ -1537,6 +1860,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1544,7 +1876,7 @@
     "name": {
       "ja": "アリオト",
       "ja_full": "アリオト",
-      "en": null
+      "en": "Alioth"
     },
     "position": {
       "ra_deg": 193.507,
@@ -1554,13 +1886,26 @@
     "magnitude_v": 1.77,
     "constellation_id": "UMa",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約82.6光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "おおぐま座ε星。北斗七星で最も明るく見えることが多い化学特異星。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "アリオトはUMaに位置する恒星です。見かけの等級は1.77等、距離は約82.6光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "おおぐま座ε星。北斗七星で最も明るく見えることが多い化学特異星。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.02,
       "spectral_type": "A0pCr",
@@ -1583,6 +1928,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1590,7 +1944,7 @@
     "name": {
       "ja": "アルカイド",
       "ja_full": "アルカイド",
-      "en": null
+      "en": "Alkaid"
     },
     "position": {
       "ra_deg": 206.885,
@@ -1600,13 +1954,26 @@
     "magnitude_v": 1.86,
     "constellation_id": "UMa",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約104光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "北斗七星の柄の端。ミザール・アリオトなどとは運動が異なり、おおぐま座運動星団の主要群には属さない。",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explanation": {
+      "overview": "アルカイドはUMaに位置する恒星です。見かけの等級は1.86等、距離は約104光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "北斗七星の柄の端。ミザール・アリオトなどとは運動が異なり、おおぐま座運動星団の主要群には属さない。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.19,
       "spectral_type": "B3V",
@@ -1629,6 +1996,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1636,7 +2012,7 @@
     "name": {
       "ja": "シェダル",
       "ja_full": "シェダル",
-      "en": null
+      "en": "Schedar"
     },
     "position": {
       "ra_deg": 10.127,
@@ -1646,13 +2022,26 @@
     "magnitude_v": 2.24,
     "constellation_id": "Cas",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約228光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "シェダル。スペクトル型 K0IIIa の恒星",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "シェダルはCasに位置する恒星です。見かけの等級は2.24等、距離は約228光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は K0IIIa。橙色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 1.17,
       "spectral_type": "K0IIIa",
@@ -1675,6 +2064,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1682,7 +2080,7 @@
     "name": {
       "ja": "カフ",
       "ja_full": "カフ",
-      "en": null
+      "en": "Caph"
     },
     "position": {
       "ra_deg": 2.295,
@@ -1692,13 +2090,26 @@
     "magnitude_v": 2.28,
     "constellation_id": "Cas",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約54.5光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "カフ。スペクトル型 F2III-IV の恒星",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "カフはCasに位置する恒星です。見かけの等級は2.28等、距離は約54.5光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は F2III-IV。黄白色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.34,
       "spectral_type": "F2III-IV",
@@ -1721,6 +2132,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1728,7 +2148,7 @@
     "name": {
       "ja": "カシオペヤ座γ",
       "ja_full": "カシオペヤ座γ",
-      "en": null
+      "en": "Gamma Cassiopeiae"
     },
     "position": {
       "ra_deg": 14.177,
@@ -1738,13 +2158,26 @@
     "magnitude_v": 2.15,
     "constellation_id": "Cas",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約550光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "高速自転するBe星で、ガス円盤に由来する輝線と不規則な変光を示す。",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "カシオペヤ座γはCasに位置する恒星です。見かけの等級は2.15等、距離は約550光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "高速自転するBe星で、ガス円盤に由来する輝線と不規則な変光を示す。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.15,
       "spectral_type": "B0IVe",
@@ -1767,6 +2200,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1774,7 +2216,7 @@
     "name": {
       "ja": "ルクバ",
       "ja_full": "ルクバ",
-      "en": null
+      "en": "Ruchbah"
     },
     "position": {
       "ra_deg": 21.454,
@@ -1784,13 +2226,26 @@
     "magnitude_v": 2.68,
     "constellation_id": "Cas",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約99光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "ルクバ。スペクトル型 A5III-IV の恒星",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "explanation": {
+      "overview": "ルクバはCasに位置する恒星です。見かけの等級は2.68等、距離は約99光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は A5III-IV。白色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.13,
       "spectral_type": "A5III-IV",
@@ -1813,6 +2268,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1820,7 +2284,7 @@
     "name": {
       "ja": "セギン",
       "ja_full": "セギン",
-      "en": null
+      "en": "Segin"
     },
     "position": {
       "ra_deg": 28.599,
@@ -1830,13 +2294,26 @@
     "magnitude_v": 3.35,
     "constellation_id": "Cas",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約440光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "セギン。スペクトル型 B3III の恒星",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "explanation": {
+      "overview": "セギンはCasに位置する恒星です。見かけの等級は3.35等、距離は約440光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は B3III。高温な青白色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.15,
       "spectral_type": "B3III",
@@ -1859,6 +2336,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1866,7 +2352,7 @@
     "name": {
       "ja": "ベラトリックス",
       "ja_full": "ベラトリックス",
-      "en": null
+      "en": "Bellatrix"
     },
     "position": {
       "ra_deg": 81.283,
@@ -1876,13 +2362,26 @@
     "magnitude_v": 1.64,
     "constellation_id": "Ori",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約250光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "オリオンの肩を示す青白いB型巨星。",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "explanation": {
+      "overview": "ベラトリックスはOriに位置する恒星です。見かけの等級は1.64等、距離は約250光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "オリオンの肩を示す青白いB型巨星。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.22,
       "spectral_type": "B2III",
@@ -1905,6 +2404,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1912,7 +2420,7 @@
     "name": {
       "ja": "アルニラム",
       "ja_full": "アルニラム",
-      "en": null
+      "en": "Alnilam"
     },
     "position": {
       "ra_deg": 84.053,
@@ -1922,13 +2430,26 @@
     "magnitude_v": 1.69,
     "constellation_id": "Ori",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約2000光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "オリオン座の三つ星中央。非常に高光度の青色超巨星。",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "explanation": {
+      "overview": "アルニラムはOriに位置する恒星です。見かけの等級は1.69等、距離は約2000光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "オリオン座の三つ星中央。非常に高光度の青色超巨星。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.19,
       "spectral_type": "B0Ia",
@@ -1951,6 +2472,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -1958,7 +2488,7 @@
     "name": {
       "ja": "アルニタク",
       "ja_full": "アルニタク",
-      "en": null
+      "en": "Alnitak"
     },
     "position": {
       "ra_deg": 85.19,
@@ -1968,13 +2498,26 @@
     "magnitude_v": 1.74,
     "constellation_id": "Ori",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約1260光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "オリオン座の三つ星東端。多重星系で、近くに馬頭星雲・燃える木星雲がある。",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "explanation": {
+      "overview": "アルニタクはOriに位置する恒星です。見かけの等級は1.74等、距離は約1260光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "オリオン座の三つ星東端。多重星系で、近くに馬頭星雲・燃える木星雲がある。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.21,
       "spectral_type": "O9.7Ib",
@@ -1997,6 +2540,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2004,7 +2556,7 @@
     "name": {
       "ja": "ミンタカ",
       "ja_full": "ミンタカ",
-      "en": null
+      "en": "Mintaka"
     },
     "position": {
       "ra_deg": 83.002,
@@ -2014,13 +2566,26 @@
     "magnitude_v": 2.23,
     "constellation_id": "Ori",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約1200光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "オリオン座の三つ星西端。複数星からなる星系として知られる。",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "explanation": {
+      "overview": "ミンタカはOriに位置する恒星です。見かけの等級は2.23等、距離は約1200光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "オリオン座の三つ星西端。複数星からなる星系として知られる。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.22,
       "spectral_type": "O9.5II",
@@ -2043,6 +2608,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2050,7 +2624,7 @@
     "name": {
       "ja": "サイフ",
       "ja_full": "サイフ",
-      "en": null
+      "en": "Saiph"
     },
     "position": {
       "ra_deg": 86.939,
@@ -2060,13 +2634,26 @@
     "magnitude_v": 2.06,
     "constellation_id": "Ori",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約650光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "オリオンの足元を示す高温の青色超巨星。",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "explanation": {
+      "overview": "サイフはOriに位置する恒星です。見かけの等級は2.06等、距離は約650光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "オリオンの足元を示す高温の青色超巨星。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.17,
       "spectral_type": "B0.5Ia",
@@ -2089,6 +2676,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2096,7 +2692,7 @@
     "name": {
       "ja": "デネボラ",
       "ja_full": "デネボラ",
-      "en": null
+      "en": "Denebola"
     },
     "position": {
       "ra_deg": 177.265,
@@ -2106,13 +2702,26 @@
     "magnitude_v": 2.14,
     "constellation_id": "Leo",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約36光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "デネボラ。スペクトル型 A3V の恒星",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "デネボラはLeoに位置する恒星です。見かけの等級は2.14等、距離は約36光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は A3V。白色主系列星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.09,
       "spectral_type": "A3V",
@@ -2135,6 +2744,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2142,7 +2760,7 @@
     "name": {
       "ja": "アルギエバ",
       "ja_full": "アルギエバ",
-      "en": null
+      "en": "Algieba"
     },
     "position": {
       "ra_deg": 154.993,
@@ -2152,13 +2770,26 @@
     "magnitude_v": 2.01,
     "constellation_id": "Leo",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約130光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "50〜150倍（分離観察）",
+    "highlight": "しし座γ星。小望遠鏡で色の対比を楽しめる有名な実視連星。",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "explanation": {
+      "overview": "アルギエバはLeoに位置する恒星です。見かけの等級は2.01等、距離は約130光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "しし座γ星。小望遠鏡で色の対比を楽しめる有名な実視連星。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 1.15,
       "spectral_type": "K1-IIIbFe-0.5",
@@ -2181,6 +2812,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2188,7 +2828,7 @@
     "name": {
       "ja": "ゾスマ",
       "ja_full": "ゾスマ",
-      "en": null
+      "en": "Zosma"
     },
     "position": {
       "ra_deg": 168.527,
@@ -2198,13 +2838,26 @@
     "magnitude_v": 2.56,
     "constellation_id": "Leo",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約58光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "ゾスマ。スペクトル型 A4V の恒星",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "ゾスマはLeoに位置する恒星です。見かけの等級は2.56等、距離は約58光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は A4V。白色主系列星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.12,
       "spectral_type": "A4V",
@@ -2227,6 +2880,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2234,7 +2896,7 @@
     "name": {
       "ja": "シャウラ",
       "ja_full": "シャウラ",
-      "en": null
+      "en": "Shaula"
     },
     "position": {
       "ra_deg": 263.402,
@@ -2244,13 +2906,26 @@
     "magnitude_v": 1.62,
     "constellation_id": "Sco",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約570光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "さそり座の尾の先端付近で明るく輝く多重星系。",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "シャウラはScoに位置する恒星です。見かけの等級は1.62等、距離は約570光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "さそり座の尾の先端付近で明るく輝く多重星系。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.22,
       "spectral_type": "B2IV+B",
@@ -2273,6 +2948,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2280,7 +2964,7 @@
     "name": {
       "ja": "サルガス",
       "ja_full": "サルガス",
-      "en": null
+      "en": "Sargas"
     },
     "position": {
       "ra_deg": 264.33,
@@ -2290,13 +2974,26 @@
     "magnitude_v": 1.86,
     "constellation_id": "Sco",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約270光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "サルガス。スペクトル型 F1II の恒星",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "サルガスはScoに位置する恒星です。見かけの等級は1.86等、距離は約270光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は F1II。黄白色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.4,
       "spectral_type": "F1II",
@@ -2319,6 +3016,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2326,7 +3032,7 @@
     "name": {
       "ja": "ジュバ",
       "ja_full": "ジュバ",
-      "en": null
+      "en": "Dschubba"
     },
     "position": {
       "ra_deg": 240.083,
@@ -2336,13 +3042,26 @@
     "magnitude_v": 2.32,
     "constellation_id": "Sco",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約400光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "ジュバ。スペクトル型 B0.3IV の恒星",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "explanation": {
+      "overview": "ジュバはScoに位置する恒星です。見かけの等級は2.32等、距離は約400光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は B0.3IV。高温な青白色準巨星成分を含む恒星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.12,
       "spectral_type": "B0.3IV",
@@ -2365,6 +3084,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2372,7 +3100,7 @@
     "name": {
       "ja": "アクラブ",
       "ja_full": "アクラブ",
-      "en": null
+      "en": "Acrab"
     },
     "position": {
       "ra_deg": 241.359,
@@ -2382,13 +3110,26 @@
     "magnitude_v": 2.56,
     "constellation_id": "Sco",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約400光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "50〜150倍（分離観察）",
+    "highlight": "さそり座β星。望遠鏡で複数成分が見られる多重星系。",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "explanation": {
+      "overview": "アクラブはScoに位置する恒星です。見かけの等級は2.56等、距離は約400光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "さそり座β星。望遠鏡で複数成分が見られる多重星系。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.07,
       "spectral_type": "B1V",
@@ -2411,6 +3152,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2418,7 +3168,7 @@
     "name": {
       "ja": "カウス・アウストラリス",
       "ja_full": "カウス・アウストラリス",
-      "en": null
+      "en": "KausAust"
     },
     "position": {
       "ra_deg": 276.043,
@@ -2428,13 +3178,26 @@
     "magnitude_v": 1.79,
     "constellation_id": "Sgr",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約143光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "カウス・アウストラリス。スペクトル型 B9.5III の恒星",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "カウス・アウストラリスはSgrに位置する恒星です。見かけの等級は1.79等、距離は約143光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は B9.5III。高温な青白色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.03,
       "spectral_type": "B9.5III",
@@ -2457,6 +3220,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2464,7 +3236,7 @@
     "name": {
       "ja": "ヌンキ",
       "ja_full": "ヌンキ",
-      "en": null
+      "en": "Nunki"
     },
     "position": {
       "ra_deg": 283.816,
@@ -2474,13 +3246,26 @@
     "magnitude_v": 2.05,
     "constellation_id": "Sgr",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約228光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "ヌンキ。スペクトル型 B2.5V の恒星",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "ヌンキはSgrに位置する恒星です。見かけの等級は2.05等、距離は約228光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は B2.5V。高温な青白色主系列星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.22,
       "spectral_type": "B2.5V",
@@ -2503,6 +3288,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2510,7 +3304,7 @@
     "name": {
       "ja": "アスケラ",
       "ja_full": "アスケラ",
-      "en": null
+      "en": "Ascella"
     },
     "position": {
       "ra_deg": 285.653,
@@ -2520,13 +3314,26 @@
     "magnitude_v": 2.6,
     "constellation_id": "Sgr",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約89光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "アスケラ。スペクトル型 A2III+A4IV の恒星",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "アスケラはSgrに位置する恒星です。見かけの等級は2.6等、距離は約89光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は A2III+A4IV。白色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.08,
       "spectral_type": "A2III+A4IV",
@@ -2549,6 +3356,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2556,7 +3372,7 @@
     "name": {
       "ja": "アルフェラッツ",
       "ja_full": "アルフェラッツ",
-      "en": null
+      "en": "Alpheratz"
     },
     "position": {
       "ra_deg": 2.097,
@@ -2566,13 +3382,26 @@
     "magnitude_v": 2.06,
     "constellation_id": "And",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約97光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "アルフェラッツ。スペクトル型 B8IVpMnHg の恒星",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "アルフェラッツはAndに位置する恒星です。見かけの等級は2.06等、距離は約97光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は B8IVpMnHg。高温な青白色準巨星成分を含む恒星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.11,
       "spectral_type": "B8IVpMnHg",
@@ -2595,6 +3424,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2602,7 +3440,7 @@
     "name": {
       "ja": "ミラク",
       "ja_full": "ミラク",
-      "en": null
+      "en": "Mirach"
     },
     "position": {
       "ra_deg": 17.433,
@@ -2612,13 +3450,26 @@
     "magnitude_v": 2.05,
     "constellation_id": "And",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約197光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "ミラク。スペクトル型 M0+IIIa の恒星",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "explanation": {
+      "overview": "ミラクはAndに位置する恒星です。見かけの等級は2.05等、距離は約197光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は M0+IIIa。赤色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 1.58,
       "spectral_type": "M0+IIIa",
@@ -2641,6 +3492,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2648,7 +3508,7 @@
     "name": {
       "ja": "マルカブ",
       "ja_full": "マルカブ",
-      "en": null
+      "en": "Markab"
     },
     "position": {
       "ra_deg": 346.19,
@@ -2658,13 +3518,26 @@
     "magnitude_v": 2.49,
     "constellation_id": "Peg",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約133光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "マルカブ。スペクトル型 B9V の恒星",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "マルカブはPegに位置する恒星です。見かけの等級は2.49等、距離は約133光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は B9V。高温な青白色主系列星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.04,
       "spectral_type": "B9V",
@@ -2687,6 +3560,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2694,7 +3576,7 @@
     "name": {
       "ja": "シェアト",
       "ja_full": "シェアト",
-      "en": null
+      "en": "Scheat"
     },
     "position": {
       "ra_deg": 345.944,
@@ -2704,13 +3586,26 @@
     "magnitude_v": 2.42,
     "constellation_id": "Peg",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約196光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "シェアト。スペクトル型 M2.5II-III の恒星",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "シェアトはPegに位置する恒星です。見かけの等級は2.42等、距離は約196光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は M2.5II-III。赤色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 1.67,
       "spectral_type": "M2.5II-III",
@@ -2733,6 +3628,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2740,7 +3644,7 @@
     "name": {
       "ja": "アルゲニブ",
       "ja_full": "アルゲニブ",
-      "en": null
+      "en": "Algenib"
     },
     "position": {
       "ra_deg": 3.309,
@@ -2750,13 +3654,26 @@
     "magnitude_v": 2.84,
     "constellation_id": "Peg",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約390光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "アルゲニブ。スペクトル型 B2IV の恒星",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "アルゲニブはPegに位置する恒星です。見かけの等級は2.84等、距離は約390光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は B2IV。高温な青白色準巨星成分を含む恒星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.23,
       "spectral_type": "B2IV",
@@ -2779,6 +3696,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2786,7 +3712,7 @@
     "name": {
       "ja": "サドル",
       "ja_full": "サドル",
-      "en": null
+      "en": "Sadr"
     },
     "position": {
       "ra_deg": 305.557,
@@ -2796,13 +3722,26 @@
     "magnitude_v": 2.23,
     "constellation_id": "Cyg",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約1800光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "サドル。スペクトル型 F8Ib の恒星",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "サドルはCygに位置する恒星です。見かけの等級は2.23等、距離は約1800光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は F8Ib。黄白色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.68,
       "spectral_type": "F8Ib",
@@ -2825,6 +3764,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2832,7 +3780,7 @@
     "name": {
       "ja": "ギェナー",
       "ja_full": "ギェナー",
-      "en": null
+      "en": "GienahCyg"
     },
     "position": {
       "ra_deg": 311.553,
@@ -2842,13 +3790,26 @@
     "magnitude_v": 2.48,
     "constellation_id": "Cyg",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約73光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "ギェナー。スペクトル型 K0-III の恒星",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "ギェナーはCygに位置する恒星です。見かけの等級は2.48等、距離は約73光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は K0-III。橙色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 1.03,
       "spectral_type": "K0-III",
@@ -2871,6 +3832,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2878,7 +3848,7 @@
     "name": {
       "ja": "エルタニン",
       "ja_full": "エルタニン",
-      "en": null
+      "en": "Eltanin"
     },
     "position": {
       "ra_deg": 269.152,
@@ -2888,13 +3858,26 @@
     "magnitude_v": 2.24,
     "constellation_id": "Dra",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約154光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "エルタニン。スペクトル型 K5III の恒星",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "エルタニンはDraに位置する恒星です。見かけの等級は2.24等、距離は約154光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は K5III。橙色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 1.52,
       "spectral_type": "K5III",
@@ -2917,6 +3900,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2924,7 +3916,7 @@
     "name": {
       "ja": "ラスタバン",
       "ja_full": "ラスタバン",
-      "en": null
+      "en": "Rastaban"
     },
     "position": {
       "ra_deg": 262.608,
@@ -2934,13 +3926,26 @@
     "magnitude_v": 2.79,
     "constellation_id": "Dra",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約380光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "ラスタバン。スペクトル型 G2Ib-IIa の恒星",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "ラスタバンはDraに位置する恒星です。見かけの等級は2.79等、距離は約380光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は G2Ib-IIa。黄色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.98,
       "spectral_type": "G2Ib-IIa",
@@ -2963,6 +3968,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -2970,7 +3984,7 @@
     "name": {
       "ja": "コカブ",
       "ja_full": "コカブ",
-      "en": null
+      "en": "Kochab"
     },
     "position": {
       "ra_deg": 222.676,
@@ -2980,13 +3994,26 @@
     "magnitude_v": 2.08,
     "constellation_id": "UMi",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約131光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "コカブ。スペクトル型 K4-III の恒星",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explanation": {
+      "overview": "コカブはUMiに位置する恒星です。見かけの等級は2.08等、距離は約131光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は K4-III。橙色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 1.47,
       "spectral_type": "K4-III",
@@ -3009,6 +4036,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -3016,7 +4052,7 @@
     "name": {
       "ja": "フェルカド",
       "ja_full": "フェルカド",
-      "en": null
+      "en": "Pherkad"
     },
     "position": {
       "ra_deg": 230.182,
@@ -3026,13 +4062,26 @@
     "magnitude_v": 3.05,
     "constellation_id": "UMi",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約487光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "フェルカド。スペクトル型 A3II-III の恒星",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "explanation": {
+      "overview": "フェルカドはUMiに位置する恒星です。見かけの等級は3.05等、距離は約487光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は A3II-III。白色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.05,
       "spectral_type": "A3II-III",
@@ -3055,6 +4104,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -3062,7 +4120,7 @@
     "name": {
       "ja": "ハマル",
       "ja_full": "ハマル",
-      "en": null
+      "en": "Hamal"
     },
     "position": {
       "ra_deg": 31.793,
@@ -3072,13 +4130,26 @@
     "magnitude_v": 2,
     "constellation_id": "Ari",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約66光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "ハマル。スペクトル型 K2-IIICa-1 の恒星",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "explanation": {
+      "overview": "ハマルはAriに位置する恒星です。見かけの等級は2等、距離は約66光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は K2-IIICa-1。橙色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 1.15,
       "spectral_type": "K2-IIICa-1",
@@ -3101,6 +4172,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -3108,7 +4188,7 @@
     "name": {
       "ja": "シェラタン",
       "ja_full": "シェラタン",
-      "en": null
+      "en": "Sheratan"
     },
     "position": {
       "ra_deg": 28.66,
@@ -3118,13 +4198,26 @@
     "magnitude_v": 2.64,
     "constellation_id": "Ari",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約60光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "シェラタン。スペクトル型 A5V の恒星",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "explanation": {
+      "overview": "シェラタンはAriに位置する恒星です。見かけの等級は2.64等、距離は約60光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は A5V。白色主系列星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.13,
       "spectral_type": "A5V",
@@ -3147,6 +4240,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -3154,7 +4256,7 @@
     "name": {
       "ja": "ミルファク",
       "ja_full": "ミルファク",
-      "en": null
+      "en": "Mirfak"
     },
     "position": {
       "ra_deg": 51.081,
@@ -3164,13 +4266,26 @@
     "magnitude_v": 1.79,
     "constellation_id": "Per",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約590光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "ミルファク。スペクトル型 F5Ib の恒星",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "explanation": {
+      "overview": "ミルファクはPerに位置する恒星です。見かけの等級は1.79等、距離は約590光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "スペクトル型は F5Ib。黄白色進化の進んだ高光度星として分類されます。色は表面温度と強く関係しますが、連星・特異星・星間減光などの影響もあるため、表示色は観望上の近似です。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": 0.48,
       "spectral_type": "F5Ib",
@@ -3193,6 +4308,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -3200,7 +4324,7 @@
     "name": {
       "ja": "アルゴル",
       "ja_full": "アルゴル",
-      "en": null
+      "en": "Algol"
     },
     "position": {
       "ra_deg": 47.042,
@@ -3210,13 +4334,26 @@
     "magnitude_v": 2.12,
     "constellation_id": "Per",
     "catalog_category": "星図補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約93光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "代表的な食変光星。暗い伴星が主星を周期的に隠すことで明るさが変化する。",
+    "visible_months_legacy": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "explanation": {
+      "overview": "アルゴルはPerに位置する恒星です。見かけの等級は2.12等、距離は約93光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "代表的な食変光星。暗い伴星が主星を周期的に隠すことで明るさが変化する。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.05,
       "spectral_type": "B8V",
@@ -3239,6 +4376,15 @@
       "dataset": "SKY_EXTRA_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   },
   {
@@ -3246,23 +4392,36 @@
     "name": {
       "ja": "ファワリス",
       "ja_full": "ファワリス",
-      "en": null
+      "en": "Fawaris"
     },
     "position": {
       "ra_deg": 296.2436,
       "dec_deg": 45.1308,
       "mode": "fixed"
     },
-    "magnitude_v": null,
-    "constellation_id": null,
+    "magnitude_v": 2.87,
+    "constellation_id": "Cyg",
     "catalog_category": "アステリズム補助恒星",
-    "icon": null,
-    "distance_text": null,
-    "size_text": null,
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
+    "icon": "⭐",
+    "distance_text": "約165光年",
+    "size_text": "恒星本体は通常の望遠鏡では点像（物理半径は星ごとに異なる）",
+    "recommended_magnification": "肉眼〜低倍率",
+    "highlight": "はくちょう座δ星。北十字の一部を構成する多重星系。",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "ファワリスはCygに位置する恒星です。見かけの等級は2.87等、距離は約165光年。",
+      "observing": "恒星本体は通常の望遠鏡では点像として見えます。まず肉眼や低倍率で星座内の位置と色を確認し、多重星の場合はシーイングの良い夜に倍率を上げます。",
+      "science": "はくちょう座δ星。北十字の一部を構成する多重星系。",
+      "history": "固有名はIAUの恒星名標準化や歴史的な星名資料と照合して扱います。名称の語源には複数説がある場合があるため、語源を科学的性質と混同しないよう区別します。"
+    },
     "photometry": {
       "bv": -0.03,
       "spectral_type": "B9.5IV+F1V",
@@ -3285,6 +4444,15 @@
       "dataset": "SKY_ASTERISM_STARS",
       "app": "Nicole the Astronavigator",
       "version": "1.12.0"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "astrometry_photometry_basis": [
+        "SIMBAD",
+        "Yale Bright Star Catalogue-derived photometry"
+      ],
+      "distance_basis": "HYG/Hipparcos-derived rounded value",
+      "note": "Distances are rounded for public-facing explanation; high-precision work should query current astrometric catalogs."
     }
   }
 ]

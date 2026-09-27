@@ -23,7 +23,7 @@
       4
     ],
     "explanation": {
-      "overview": "M1 かに星雲は、1054年の超新星爆発の残骸。中心にパルサーが存在天体です。距離は約6,500光年。見かけの大きさは約7'×5'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M1 かに星雲はTauに位置する天体です。距離は約6,500光年。見かけの等級は約8.4等。見かけの大きさは約7'×5'。1054年の超新星爆発の残骸。中心にパルサーが存在",
       "observing": "非常に淡い広がりを持つため、暗い空と低〜中倍率が有利です。50〜100倍を目安に、直接注視せずそらし目を使うと細い構造が浮かびやすくなります。",
       "science": "超新星爆発で吹き飛ばされたガスが現在も膨張しており、中心には高速自転する中性子星（かにパルサー）があります。",
       "history": "1054年に東アジアなどで記録された「客星」と関連付けられています。メシエが彗星と紛らわしい天体を整理するきっかけの一つでもあります。",
@@ -61,14 +61,22 @@
     "angular_size": {
       "major_arcmin": 7.0,
       "minor_arcmin": 5.0,
-      "source_text": "約7'×5'"
+      "position_angle_deg": null,
+      "source_text": "約7'×5'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M2",
     "name": {
       "ja": "M2 球状星団",
-      "en": null
+      "en": "Messier 2"
     },
     "type": "cluster",
     "icon": "⭐",
@@ -87,7 +95,7 @@
       11
     ],
     "explanation": {
-      "overview": "M2 球状星団は、みずがめ座の大型球状星団天体です。距離は約3万7,500光年。見かけの大きさは約16'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M2 球状星団はAqrに位置する天体です。距離は約3万7,500光年。見かけの等級は約6.3等。見かけの大きさは約16'。みずがめ座の大型球状星団",
       "observing": "100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
       "history": "メシエ天体M2としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -125,14 +133,22 @@
     "angular_size": {
       "major_arcmin": 16.0,
       "minor_arcmin": 16.0,
-      "source_text": "約16'"
+      "position_angle_deg": null,
+      "source_text": "約16'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M3",
     "name": {
       "ja": "M3 球状星団",
-      "en": null
+      "en": "Messier 3"
     },
     "type": "cluster",
     "icon": "⭐",
@@ -152,7 +168,7 @@
       8
     ],
     "explanation": {
-      "overview": "M3 球状星団は、春の空の大型球状星団。約50万個の星天体です。距離は約3万3,900光年。見かけの大きさは約18'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M3 球状星団はCVnに位置する天体です。距離は約3万3,900光年。見かけの等級は約6.4等。見かけの大きさは約18'。春の空の大型球状星団。約50万個の星",
       "observing": "100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
       "history": "メシエ天体M3としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -190,14 +206,22 @@
     "angular_size": {
       "major_arcmin": 18.0,
       "minor_arcmin": 18.0,
-      "source_text": "約18'"
+      "position_angle_deg": null,
+      "source_text": "約18'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M4",
     "name": {
       "ja": "M4 球状星団",
-      "en": null
+      "en": "Messier 4"
     },
     "type": "cluster",
     "icon": "⭐",
@@ -216,7 +240,7 @@
       9
     ],
     "explanation": {
-      "overview": "M4 球状星団は、最も近い球状星団の一つ天体です。距離は約7,200光年。見かけの大きさは約26'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M4 球状星団はScoに位置する天体です。距離は約7,200光年。見かけの等級は約5.6等。見かけの大きさは約26'。最も近い球状星団の一つ",
       "observing": "50〜150倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
       "history": "メシエ天体M4としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -254,14 +278,22 @@
     "angular_size": {
       "major_arcmin": 26.0,
       "minor_arcmin": 26.0,
-      "source_text": "約26'"
+      "position_angle_deg": null,
+      "source_text": "約26'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M5",
     "name": {
       "ja": "M5 球状星団",
-      "en": null
+      "en": "Messier 5"
     },
     "type": "cluster",
     "icon": "⭐",
@@ -281,7 +313,7 @@
       9
     ],
     "explanation": {
-      "overview": "M5 球状星団は、M13に匹敵する北天の大型球状星団天体です。距離は約2万4,500光年。見かけの大きさは約17'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M5 球状星団はSerに位置する天体です。距離は約2万4,500光年。見かけの等級は約5.7等。見かけの大きさは約17'。M13に匹敵する北天の大型球状星団",
       "observing": "100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
       "history": "メシエ天体M5としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -319,7 +351,15 @@
     "angular_size": {
       "major_arcmin": 17.0,
       "minor_arcmin": 17.0,
-      "source_text": "約17'"
+      "position_angle_deg": null,
+      "source_text": "約17'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -346,7 +386,7 @@
       10
     ],
     "explanation": {
-      "overview": "M6 バタフライ星団は、蝶の形に見える散開星団天体です。距離は約1,600光年。見かけの大きさは約25'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M6 バタフライ星団はScoに位置する天体です。距離は約1,600光年。見かけの等級は約4.2等。見かけの大きさは約25'。蝶の形に見える散開星団",
       "observing": "広がりを楽しむため低倍率が基本です。10〜30倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
       "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
       "history": "メシエ天体M6としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -384,7 +424,15 @@
     "angular_size": {
       "major_arcmin": 25.0,
       "minor_arcmin": 25.0,
-      "source_text": "約25'"
+      "position_angle_deg": null,
+      "source_text": "約25'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -411,7 +459,7 @@
       10
     ],
     "explanation": {
-      "overview": "M7 プトレマイオス星団は、全天最明の散開星団の一つ天体です。距離は約800光年。見かけの大きさは約80'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M7 プトレマイオス星団はScoに位置する天体です。距離は約800光年。見かけの等級は約3.3等。見かけの大きさは約80'。全天最明の散開星団の一つ",
       "observing": "広がりを楽しむため低倍率が基本です。肉眼〜10倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
       "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
       "history": "メシエ天体M7としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -449,7 +497,15 @@
     "angular_size": {
       "major_arcmin": 80.0,
       "minor_arcmin": 80.0,
-      "source_text": "約80'"
+      "position_angle_deg": null,
+      "source_text": "約80'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -476,7 +532,7 @@
       10
     ],
     "explanation": {
-      "overview": "M8 干潟星雲は、肉眼でも見える！現役の星形成領域天体です。距離は約5,200光年。見かけの大きさは約90'×40'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M8 干潟星雲はSgrに位置する天体です。距離は約5,200光年。見かけの等級は約6等。見かけの大きさは約90'×40'。肉眼でも見える！現役の星形成領域",
       "observing": "20〜60倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。",
       "science": "電離水素が光る巨大な星形成領域で、暗黒帯と明るい散光部が複雑な形を作ります。若い星団NGC 6530も同じ視野で楽しめます。",
       "history": "「干潟」の名は、明るい星雲を横切る暗黒帯が入り江や干潟のように見えることに由来します。",
@@ -514,26 +570,47 @@
     "angular_size": {
       "major_arcmin": 90.0,
       "minor_arcmin": 40.0,
-      "source_text": "約90'×40'"
+      "position_angle_deg": null,
+      "source_text": "約90'×40'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M9",
     "name": {
       "ja": "M9",
-      "en": null
+      "en": "Messier 9"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.7,
-    "distance_text": null,
+    "distance_text": "約2万5,000光年",
     "size_text": "9.3",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "銀河系中心方向に近い球状星団で、星間塵の影響を受けて見えます。",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M9はOphに位置する球状星団です。約2万5,000光年。見かけの等級は約7.7等。見かけの大きさは9.3。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "銀河系中心方向に近い球状星団で、星間塵の影響を受けて見えます。",
+      "history": "メシエ天体M9としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -565,26 +642,47 @@
     "angular_size": {
       "major_arcmin": 9.3,
       "minor_arcmin": 9.3,
-      "source_text": "9.3"
+      "position_angle_deg": null,
+      "source_text": "9.3",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M10",
     "name": {
       "ja": "M10",
-      "en": null
+      "en": "Messier 10"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.6,
-    "distance_text": null,
+    "distance_text": "約1万5,000光年",
     "size_text": "15.1",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "青色はぐれ星を比較的多く含む球状星団です。",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "explanation": {
+      "overview": "M10はOphに位置する球状星団です。約1万5,000光年。見かけの等級は約6.6等。見かけの大きさは15.1。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "青色はぐれ星を比較的多く含む球状星団です。",
+      "history": "メシエ天体M10としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -616,7 +714,15 @@
     "angular_size": {
       "major_arcmin": 15.1,
       "minor_arcmin": 15.1,
-      "source_text": "15.1"
+      "position_angle_deg": null,
+      "source_text": "15.1",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -644,7 +750,7 @@
       11
     ],
     "explanation": {
-      "overview": "M11 野鴨星団は、密集した美しい散開星団天体です。距離は約6,200光年。見かけの大きさは約14'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M11 野鴨星団はSctに位置する天体です。距離は約6,200光年。見かけの等級は約6.3等。見かけの大きさは約14'。密集した美しい散開星団",
       "observing": "30〜100倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
       "history": "メシエ天体M11としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -682,26 +788,47 @@
     "angular_size": {
       "major_arcmin": 14.0,
       "minor_arcmin": 14.0,
-      "source_text": "約14'"
+      "position_angle_deg": null,
+      "source_text": "約14'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M12",
     "name": {
       "ja": "M12",
-      "en": null
+      "en": "Messier 12"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.7,
-    "distance_text": null,
+    "distance_text": "約2万3,000光年",
     "size_text": "14.5",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "力学進化によって低質量星を多数失った可能性が研究されています。",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "explanation": {
+      "overview": "M12はOphに位置する球状星団です。約2万3,000光年。見かけの等級は約6.7等。見かけの大きさは14.5。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "力学進化によって低質量星を多数失った可能性が研究されています。",
+      "history": "メシエ天体M12としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -733,7 +860,15 @@
     "angular_size": {
       "major_arcmin": 14.5,
       "minor_arcmin": 14.5,
-      "source_text": "14.5"
+      "position_angle_deg": null,
+      "source_text": "14.5",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -761,7 +896,7 @@
       10
     ],
     "explanation": {
-      "overview": "M13 ヘルクレス座大球状星団は、アレシボメッセージの宛先。約30万個の星の集団天体です。距離は約2万5,000光年。見かけの大きさは約20'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M13 ヘルクレス座大球状星団はHerに位置する天体です。距離は約2万5,000光年。見かけの等級は約5.8等。見かけの大きさは約20'。アレシボメッセージの宛先。約30万個の星の集団",
       "observing": "100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "銀河系ハローに属する古い球状星団で、数十万個規模の恒星が重力で密集しています。中心に向かうほど星の密度が急激に高くなります。",
       "history": "1974年、アレシボ電波望遠鏡から送信された有名なメッセージの方向として選ばれました。",
@@ -799,26 +934,47 @@
     "angular_size": {
       "major_arcmin": 20.0,
       "minor_arcmin": 20.0,
-      "source_text": "約20'"
+      "position_angle_deg": null,
+      "source_text": "約20'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M14",
     "name": {
       "ja": "M14",
-      "en": null
+      "en": "Messier 14"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.6,
-    "distance_text": null,
+    "distance_text": "約2万9,000光年",
     "size_text": "11.7",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "15万個を超える星を含む大きな球状星団です。",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M14はOphに位置する球状星団です。約2万9,000光年。見かけの等級は約7.6等。見かけの大きさは11.7。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "15万個を超える星を含む大きな球状星団です。",
+      "history": "メシエ天体M14としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -850,7 +1006,15 @@
     "angular_size": {
       "major_arcmin": 11.7,
       "minor_arcmin": 11.7,
-      "source_text": "11.7"
+      "position_angle_deg": null,
+      "source_text": "11.7",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -876,7 +1040,7 @@
       11
     ],
     "explanation": {
-      "overview": "M15 球状星団は、中心核崩壊を起こした超高密度な球状星団天体です。距離は約3万3,600光年。見かけの大きさは約18'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M15 球状星団はPegに位置する天体です。距離は約3万3,600光年。見かけの等級は約6.3等。見かけの大きさは約18'。中心核崩壊を起こした超高密度な球状星団",
       "observing": "100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
       "history": "メシエ天体M15としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -914,7 +1078,15 @@
     "angular_size": {
       "major_arcmin": 18.0,
       "minor_arcmin": 18.0,
-      "source_text": "約18'"
+      "position_angle_deg": null,
+      "source_text": "約18'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -941,7 +1113,7 @@
       10
     ],
     "explanation": {
-      "overview": "M16 わし星雲は、ハッブルの「創造の柱」で有名な星形成領域天体です。距離は約7,000光年。見かけの大きさは約7'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M16 わし星雲はSerに位置する天体です。距離は約7,000光年。見かけの等級は約6.4等。見かけの大きさは約7'。ハッブルの「創造の柱」で有名な星形成領域",
       "observing": "30〜100倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。",
       "science": "若い星団と電離ガスからなる星形成領域で、濃い分子雲の柱の内部では新しい星が形成されています。",
       "history": "ハッブル宇宙望遠鏡が撮影した「創造の柱」で世界的に有名になりました。",
@@ -979,7 +1151,15 @@
     "angular_size": {
       "major_arcmin": 7.0,
       "minor_arcmin": 7.0,
-      "source_text": "約7'"
+      "position_angle_deg": null,
+      "source_text": "約7'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -1006,7 +1186,7 @@
       10
     ],
     "explanation": {
-      "overview": "M17 オメガ星雲は、Ω形・白鳥形に見える美しい散光星雲天体です。距離は約5,500光年。見かけの大きさは約46'×37'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M17 オメガ星雲はSgrに位置する天体です。距離は約5,500光年。見かけの等級は約6等。見かけの大きさは約46'×37'。Ω形・白鳥形に見える美しい散光星雲",
       "observing": "20〜60倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。",
       "science": "若い大質量星の紫外線で輝く星形成領域です。明るい中心部は比較的見やすく、淡い外縁まで含めると非常に大きな星雲です。",
       "history": "見る向きによって「オメガ」「白鳥」「馬蹄」など複数の愛称があります。",
@@ -1044,26 +1224,47 @@
     "angular_size": {
       "major_arcmin": 46.0,
       "minor_arcmin": 37.0,
-      "source_text": "約46'×37'"
+      "position_angle_deg": null,
+      "source_text": "約46'×37'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M18",
     "name": {
       "ja": "M18",
-      "en": null
+      "en": "Messier 18"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.5,
-    "distance_text": null,
+    "distance_text": "約4,900光年",
     "size_text": "9",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "若い散開星団で、いて座の濃い天の川の中に見えます。",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M18はSgrに位置する散開星団です。約4,900光年。見かけの等級は約7.5等。見かけの大きさは9。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "若い散開星団で、いて座の濃い天の川の中に見えます。",
+      "history": "メシエ天体M18としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -1095,26 +1296,47 @@
     "angular_size": {
       "major_arcmin": 9.0,
       "minor_arcmin": 9.0,
-      "source_text": "9"
+      "position_angle_deg": null,
+      "source_text": "9",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M19",
     "name": {
       "ja": "M19",
-      "en": null
+      "en": "Messier 19"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.8,
-    "distance_text": null,
+    "distance_text": "約2万8,500光年",
     "size_text": "13.5",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "扁平度が大きいことで知られる球状星団です。",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M19はOphに位置する球状星団です。約2万8,500光年。見かけの等級は約6.8等。見かけの大きさは13.5。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "扁平度が大きいことで知られる球状星団です。",
+      "history": "メシエ天体M19としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -1146,7 +1368,15 @@
     "angular_size": {
       "major_arcmin": 13.5,
       "minor_arcmin": 13.5,
-      "source_text": "13.5"
+      "position_angle_deg": null,
+      "source_text": "13.5",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -1173,7 +1403,7 @@
       10
     ],
     "explanation": {
-      "overview": "M20 三裂星雲は、3つに裂けて見える美しい散光星雲天体です。距離は約5,200光年。見かけの大きさは約28'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M20 三裂星雲はSgrに位置する天体です。距離は約5,200光年。見かけの等級は約9等。見かけの大きさは約28'。3つに裂けて見える美しい散光星雲",
       "observing": "30〜80倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。",
       "science": "赤い放射星雲、青い反射星雲、暗黒帯が一つの領域に共存する複合的な星形成領域です。",
       "history": "暗黒帯が明るい星雲を三つに分けて見せることから「三裂星雲」と呼ばれます。",
@@ -1211,26 +1441,47 @@
     "angular_size": {
       "major_arcmin": 28.0,
       "minor_arcmin": 28.0,
-      "source_text": "約28'"
+      "position_angle_deg": null,
+      "source_text": "約28'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M21",
     "name": {
       "ja": "M21",
-      "en": null
+      "en": "Messier 21"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.5,
-    "distance_text": null,
+    "distance_text": "約4,200光年",
     "size_text": "13",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "若い青白い星が目立つ散開星団です。",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M21はSgrに位置する散開星団です。約4,200光年。見かけの等級は約6.5等。見かけの大きさは13。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "若い青白い星が目立つ散開星団です。",
+      "history": "メシエ天体M21としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -1262,7 +1513,15 @@
     "angular_size": {
       "major_arcmin": 13.0,
       "minor_arcmin": 13.0,
-      "source_text": "13"
+      "position_angle_deg": null,
+      "source_text": "13",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -1288,7 +1547,7 @@
       10
     ],
     "explanation": {
-      "overview": "M22 球状星団は、南天の大型球状星団。肉眼でも見える天体です。距離は約1万600光年。見かけの大きさは約24'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M22 球状星団はSgrに位置する天体です。距離は約1万600光年。見かけの等級は約5.1等。見かけの大きさは約24'。南天の大型球状星団。肉眼でも見える",
       "observing": "50〜150倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
       "history": "メシエ天体M22としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -1326,26 +1585,47 @@
     "angular_size": {
       "major_arcmin": 24.0,
       "minor_arcmin": 24.0,
-      "source_text": "約24'"
+      "position_angle_deg": null,
+      "source_text": "約24'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M23",
     "name": {
       "ja": "M23",
-      "en": null
+      "en": "Messier 23"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.9,
-    "distance_text": null,
+    "distance_text": "約2,150光年",
     "size_text": "27",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "広がりのある散開星団で、低倍率で多数の星を楽しめます。",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M23はSgrに位置する散開星団です。約2,150光年。見かけの等級は約6.9等。見かけの大きさは27。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "広がりのある散開星団で、低倍率で多数の星を楽しめます。",
+      "history": "メシエ天体M23としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -1377,7 +1657,15 @@
     "angular_size": {
       "major_arcmin": 27.0,
       "minor_arcmin": 27.0,
-      "source_text": "27"
+      "position_angle_deg": null,
+      "source_text": "27",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -1387,16 +1675,29 @@
       "en": "Sagittarius Star Cloud"
     },
     "type": "star_cloud",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 4.6,
-    "distance_text": null,
+    "distance_text": "約1万光年（星雲状天体ではなく銀河系内を見通す星野）",
     "size_text": "90",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "双眼鏡〜30倍",
+    "highlight": "独立した星団ではなく、暗黒星雲の隙間から銀河系の星々を見通す「星の雲」です。",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M24はSgrに位置する星雲状の星野です。約1万光年（星雲状天体ではなく銀河系内を見通す星野）。見かけの等級は約4.6等。見かけの大きさは90。",
+      "observing": "双眼鏡〜低倍率の広視野で、天の川の星密度と暗黒帯の対比を見るのに適します。",
+      "science": "独立した星団ではなく、暗黒星雲の隙間から銀河系の星々を見通す「星の雲」です。",
+      "history": "メシエ天体M24としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -1424,26 +1725,47 @@
     "angular_size": {
       "major_arcmin": 90.0,
       "minor_arcmin": 90.0,
-      "source_text": "90"
+      "position_angle_deg": null,
+      "source_text": "90",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M25",
     "name": {
       "ja": "M25",
-      "en": null
+      "en": "Messier 25"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.5,
-    "distance_text": null,
+    "distance_text": "約2,000光年",
     "size_text": "40",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "明るい散開星団で、ケフェイド変光星U Sgrを含みます。",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M25はSgrに位置する散開星団です。約2,000光年。見かけの等級は約6.5等。見かけの大きさは40。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "明るい散開星団で、ケフェイド変光星U Sgrを含みます。",
+      "history": "メシエ天体M25としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -1475,26 +1797,47 @@
     "angular_size": {
       "major_arcmin": 40.0,
       "minor_arcmin": 40.0,
-      "source_text": "40"
+      "position_angle_deg": null,
+      "source_text": "40",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M26",
     "name": {
       "ja": "M26",
-      "en": null
+      "en": "Messier 26"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 8.0,
-    "distance_text": null,
+    "distance_text": "約5,000光年",
     "size_text": "15",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "比較的コンパクトな散開星団で、中心部に星が少なく見える領域があります。",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M26はSctに位置する散開星団です。約5,000光年。見かけの等級は約8.0等。見かけの大きさは15。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "比較的コンパクトな散開星団で、中心部に星が少なく見える領域があります。",
+      "history": "メシエ天体M26としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -1526,7 +1869,15 @@
     "angular_size": {
       "major_arcmin": 15.0,
       "minor_arcmin": 15.0,
-      "source_text": "15"
+      "position_angle_deg": null,
+      "source_text": "15",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -1554,7 +1905,7 @@
       11
     ],
     "explanation": {
-      "overview": "M27 亜鈴状星雲は、惑星状星雲で最も明るい天体です。距離は約1,000〜1,360光年。見かけの大きさは約8'×6'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M27 亜鈴状星雲はVulに位置する天体です。距離は約1,000〜1,360光年。見かけの等級は約7.5等。見かけの大きさは約8'×6'。惑星状星雲で最も明るい",
       "observing": "惑星状星雲は比較的小さく表面輝度が高いものが多いため、50〜100倍で倍率を上げても形を保ちやすい対象です。OIIIフィルターがコントラスト改善に有効な場合があります。",
       "science": "太陽程度の質量の恒星が晩年に外層を放出してできた惑星状星雲です。中心には高温の白色矮星が残っています。",
       "history": "1764年にメシエが記録した最初期の惑星状星雲の一つで、形が鉄亜鈴に似ることから愛称が付きました。",
@@ -1592,26 +1943,47 @@
     "angular_size": {
       "major_arcmin": 8.0,
       "minor_arcmin": 6.0,
-      "source_text": "約8'×6'"
+      "position_angle_deg": null,
+      "source_text": "約8'×6'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M28",
     "name": {
       "ja": "M28",
-      "en": null
+      "en": "Messier 28"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.8,
-    "distance_text": null,
+    "distance_text": "約1万8,000光年",
     "size_text": "11.2",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "ミリ秒パルサーが最初期に発見された球状星団の一つです。",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M28はSgrに位置する球状星団です。約1万8,000光年。見かけの等級は約6.8等。見かけの大きさは11.2。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "ミリ秒パルサーが最初期に発見された球状星団の一つです。",
+      "history": "メシエ天体M28としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -1643,26 +2015,47 @@
     "angular_size": {
       "major_arcmin": 11.2,
       "minor_arcmin": 11.2,
-      "source_text": "11.2"
+      "position_angle_deg": null,
+      "source_text": "11.2",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M29",
     "name": {
       "ja": "M29",
-      "en": null
+      "en": "Messier 29"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.1,
-    "distance_text": null,
+    "distance_text": "約4,000光年",
     "size_text": "7",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "はくちょう座の天の川中にある若い散開星団です。",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M29はCygに位置する散開星団です。約4,000光年。見かけの等級は約7.1等。見かけの大きさは7。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "はくちょう座の天の川中にある若い散開星団です。",
+      "history": "メシエ天体M29としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -1694,26 +2087,47 @@
     "angular_size": {
       "major_arcmin": 7.0,
       "minor_arcmin": 7.0,
-      "source_text": "7"
+      "position_angle_deg": null,
+      "source_text": "7",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M30",
     "name": {
       "ja": "M30",
-      "en": null
+      "en": "Messier 30"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.2,
-    "distance_text": null,
+    "distance_text": "約2万8,000光年",
     "size_text": "11",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "中心核崩壊を経験したと考えられる高密度の球状星団です。",
+    "visible_months_legacy": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "M30はCapに位置する球状星団です。約2万8,000光年。見かけの等級は約7.2等。見かけの大きさは11。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "中心核崩壊を経験したと考えられる高密度の球状星団です。",
+      "history": "メシエ天体M30としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -1745,7 +2159,15 @@
     "angular_size": {
       "major_arcmin": 11.0,
       "minor_arcmin": 11.0,
-      "source_text": "11"
+      "position_angle_deg": null,
+      "source_text": "11",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -1772,7 +2194,7 @@
       1
     ],
     "explanation": {
-      "overview": "M31 アンドロメダ銀河は、肉眼でも見える！254万年前の光天体です。距離は約254万光年。見かけの大きさは約3°×1°。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M31 アンドロメダ銀河はAndに位置する天体です。距離は約254万光年。見かけの等級は約3.4等。見かけの大きさは約3°×1°。肉眼でも見える！254万年前の光",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。20〜40倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "天の川銀河に近い大型渦巻銀河で、恒星・ガス・塵・球状星団などを含む巨大な銀河系です。伴銀河M32とM110も周囲にあります。",
       "history": "肉眼で見える最遠級の天体として知られます。アンドロメダ銀河の「星雲」ではなく独立した銀河だと理解されたことは、宇宙観の拡大につながりました。",
@@ -1810,26 +2232,59 @@
     "angular_size": {
       "major_arcmin": 180.0,
       "minor_arcmin": 60.0,
-      "source_text": "約3°×1°"
+      "position_angle_deg": null,
+      "source_text": "約3°×1°",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
+    },
+    "cultural_context": {
+      "miyazawa_kenji": {
+        "works": [
+          "星めぐりの歌"
+        ],
+        "basis": [
+          "「アンドロメダの くも」—一般にアンドロメダ銀河／星雲を連想させる表現として重点表示"
+        ],
+        "confidence": "medium",
+        "note": "作品の詩的表現と現代天文学上のM31を同一視しすぎないよう、文化的関連として分離して保持。"
+      }
     }
   },
   {
     "id": "M32",
     "name": {
       "ja": "M32",
-      "en": null
+      "en": "Andromeda Satellite Galaxy"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 8.1,
-    "distance_text": null,
+    "distance_text": "約250万光年",
     "size_text": "8x6",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "アンドロメダ銀河M31の伴銀河で、コンパクト楕円銀河の代表例です。",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "M32はAndに位置する楕円銀河です。約250万光年。見かけの等級は約8.1等。見かけの大きさは8x6。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "アンドロメダ銀河M31の伴銀河で、コンパクト楕円銀河の代表例です。",
+      "history": "メシエ天体M32としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -1861,7 +2316,15 @@
     "angular_size": {
       "major_arcmin": 8.0,
       "minor_arcmin": 6.0,
-      "source_text": "8x6"
+      "position_angle_deg": null,
+      "source_text": "8x6",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -1888,7 +2351,7 @@
       1
     ],
     "explanation": {
-      "overview": "M33 さんかく座銀河は、正面向きの渦巻き天体です。距離は約273万光年。見かけの大きさは約70'×40'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M33 さんかく座銀河はTriに位置する天体です。距離は約273万光年。見かけの等級は約5.7等。見かけの大きさは約70'×40'。正面向きの渦巻き",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。20〜30倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "局所銀河群の渦巻銀河で、正面に近い向きのため腕構造や星形成領域を研究しやすい銀河です。",
       "history": "非常に淡く広がるため、総合等級の数字より観測が難しい「低表面輝度天体」の好例です。",
@@ -1926,26 +2389,47 @@
     "angular_size": {
       "major_arcmin": 70.0,
       "minor_arcmin": 40.0,
-      "source_text": "約70'×40'"
+      "position_angle_deg": null,
+      "source_text": "約70'×40'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M34",
     "name": {
       "ja": "M34",
-      "en": null
+      "en": "Messier 34"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 5.5,
-    "distance_text": null,
+    "distance_text": "約1,500光年",
     "size_text": "35",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M34。散開星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "explanation": {
+      "overview": "M34はPerに位置する散開星団です。約1,500光年。見かけの等級は約5.5等。見かけの大きさは35。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M34としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -1977,14 +2461,22 @@
     "angular_size": {
       "major_arcmin": 35.0,
       "minor_arcmin": 35.0,
-      "source_text": "35"
+      "position_angle_deg": null,
+      "source_text": "35",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M35",
     "name": {
       "ja": "M35 散開星団",
-      "en": null
+      "en": "Messier 35"
     },
     "type": "cluster",
     "icon": "🌟",
@@ -2004,7 +2496,7 @@
       4
     ],
     "explanation": {
-      "overview": "M35 散開星団は、ふたご座の大型散開星団天体です。距離は約2,800光年。見かけの大きさは約28'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M35 散開星団はGemに位置する天体です。距離は約2,800光年。見かけの等級は約5.3等。見かけの大きさは約28'。ふたご座の大型散開星団",
       "observing": "広がりを楽しむため低倍率が基本です。20〜60倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
       "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
       "history": "メシエ天体M35としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -2042,14 +2534,22 @@
     "angular_size": {
       "major_arcmin": 28.0,
       "minor_arcmin": 28.0,
-      "source_text": "約28'"
+      "position_angle_deg": null,
+      "source_text": "約28'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M36",
     "name": {
       "ja": "M36 散開星団",
-      "en": null
+      "en": "Messier 36"
     },
     "type": "cluster",
     "icon": "🌟",
@@ -2070,7 +2570,7 @@
       4
     ],
     "explanation": {
-      "overview": "M36 散開星団は、ぎょしゃ座の散開星団トリオの一つ天体です。距離は約4,100光年。見かけの大きさは約12'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M36 散開星団はAurに位置する天体です。距離は約4,100光年。見かけの等級は約6.3等。見かけの大きさは約12'。ぎょしゃ座の散開星団トリオの一つ",
       "observing": "30〜80倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
       "history": "メシエ天体M36としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -2108,14 +2608,22 @@
     "angular_size": {
       "major_arcmin": 12.0,
       "minor_arcmin": 12.0,
-      "source_text": "約12'"
+      "position_angle_deg": null,
+      "source_text": "約12'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M37",
     "name": {
       "ja": "M37 散開星団",
-      "en": null
+      "en": "Messier 37"
     },
     "type": "cluster",
     "icon": "🌟",
@@ -2136,7 +2644,7 @@
       4
     ],
     "explanation": {
-      "overview": "M37 散開星団は、ぎょしゃ座三散開星団の中で最大・最明天体です。距離は約4,500光年。見かけの大きさは約24'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M37 散開星団はAurに位置する天体です。距離は約4,500光年。見かけの等級は約6.2等。見かけの大きさは約24'。ぎょしゃ座三散開星団の中で最大・最明",
       "observing": "30〜100倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
       "history": "メシエ天体M37としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -2174,14 +2682,22 @@
     "angular_size": {
       "major_arcmin": 24.0,
       "minor_arcmin": 24.0,
-      "source_text": "約24'"
+      "position_angle_deg": null,
+      "source_text": "約24'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M38",
     "name": {
       "ja": "M38 散開星団",
-      "en": null
+      "en": "Messier 38"
     },
     "type": "cluster",
     "icon": "🌟",
@@ -2202,7 +2718,7 @@
       4
     ],
     "explanation": {
-      "overview": "M38 散開星団は、ぎょしゃ座三散開星団の一つ天体です。距離は約4,200光年。見かけの大きさは約21'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M38 散開星団はAurに位置する天体です。距離は約4,200光年。見かけの等級は約7.4等。見かけの大きさは約21'。ぎょしゃ座三散開星団の一つ",
       "observing": "30〜80倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
       "history": "メシエ天体M38としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -2240,26 +2756,47 @@
     "angular_size": {
       "major_arcmin": 21.0,
       "minor_arcmin": 21.0,
-      "source_text": "約21'"
+      "position_angle_deg": null,
+      "source_text": "約21'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M39",
     "name": {
       "ja": "M39",
-      "en": null
+      "en": "Messier 39"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 4.6,
-    "distance_text": null,
+    "distance_text": "約820光年",
     "size_text": "32",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M39。散開星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "explanation": {
+      "overview": "M39はCygに位置する散開星団です。約820光年。見かけの等級は約4.6等。見かけの大きさは32。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M39としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -2291,7 +2828,15 @@
     "angular_size": {
       "major_arcmin": 32.0,
       "minor_arcmin": 32.0,
-      "source_text": "32"
+      "position_angle_deg": null,
+      "source_text": "32",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -2301,16 +2846,29 @@
       "en": "Winnecke 4"
     },
     "type": "double_star",
-    "icon": null,
+    "icon": "✦",
     "catalog_category": "メシエ",
     "magnitude_v": 8.4,
-    "distance_text": null,
+    "distance_text": "単一距離なし（見かけ上の二重星）",
     "size_text": "0.8",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "50〜150倍",
+    "highlight": "メシエが記録した二重星で、現在は物理的な連星ではないと考えられています。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M40はUMaに位置する二重星です。単一距離なし（見かけ上の二重星）。見かけの等級は約8.4等。見かけの大きさは0.8。",
+      "observing": "中倍率から倍率を上げ、二つの星像の分離と色の違いを観察します。",
+      "science": "メシエが記録した二重星で、現在は物理的な連星ではないと考えられています。",
+      "history": "メシエ天体M40としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -2342,14 +2900,22 @@
     "angular_size": {
       "major_arcmin": 0.8,
       "minor_arcmin": 0.8,
-      "source_text": "0.8"
+      "position_angle_deg": null,
+      "source_text": "0.8",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M41",
     "name": {
       "ja": "M41 散開星団",
-      "en": null
+      "en": "Messier 41"
     },
     "type": "cluster",
     "icon": "🌟",
@@ -2367,7 +2933,7 @@
       3
     ],
     "explanation": {
-      "overview": "M41 散開星団は、シリウスの近くの明るい散開星団天体です。距離は約2,300光年。見かけの大きさは約38'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M41 散開星団はCMaに位置する天体です。距離は約2,300光年。見かけの等級は約4.5等。見かけの大きさは約38'。シリウスの近くの明るい散開星団",
       "observing": "広がりを楽しむため低倍率が基本です。肉眼〜20倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
       "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
       "history": "メシエ天体M41としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -2405,7 +2971,15 @@
     "angular_size": {
       "major_arcmin": 38.0,
       "minor_arcmin": 38.0,
-      "source_text": "約38'"
+      "position_angle_deg": null,
+      "source_text": "約38'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -2432,7 +3006,7 @@
       4
     ],
     "explanation": {
-      "overview": "M42 オリオン大星雲は、肉眼でも見える！現在進行形の星の産院天体です。距離は約1,344光年。見かけの大きさは約65'×60'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M42 オリオン大星雲はOriに位置する天体です。距離は約1,344光年。見かけの等級は約4等。見かけの大きさは約65'×60'。肉眼でも見える！現在進行形の星の産院",
       "observing": "20〜100倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。",
       "science": "巨大分子雲の一部が若い大質量星からの紫外線で電離されて輝く星形成領域です。中心のトラペジウム星団は、生まれたばかりの星々が集まる場所です。",
       "history": "古くから肉眼で存在が知られていましたが、望遠鏡時代以降に複雑なガス構造と若い星の集団が詳しく研究されるようになりました。",
@@ -2470,7 +3044,15 @@
     "angular_size": {
       "major_arcmin": 65.0,
       "minor_arcmin": 60.0,
-      "source_text": "約65'×60'"
+      "position_angle_deg": null,
+      "source_text": "約65'×60'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -2480,16 +3062,29 @@
       "en": "De Mairan's Nebula"
     },
     "type": "nebula",
-    "icon": null,
+    "icon": "☁️",
     "catalog_category": "メシエ",
     "magnitude_v": 9.0,
-    "distance_text": null,
+    "distance_text": "約1,350光年",
     "size_text": "20x15",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "M42に隣接するHII領域で、暗黒帯によって主星雲から分かれて見えます。",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "explanation": {
+      "overview": "M43はOriに位置する散光星雲です。約1,350光年。見かけの等級は約9.0等。見かけの大きさは20x15。",
+      "observing": "暗い空と十分な瞳径が有利です。低〜中倍率を基本にし、対象によってはUHC/OIII系フィルターがコントラスト改善に役立ちます。",
+      "science": "M42に隣接するHII領域で、暗黒帯によって主星雲から分かれて見えます。",
+      "history": "メシエ天体M43としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -2521,7 +3116,15 @@
     "angular_size": {
       "major_arcmin": 20.0,
       "minor_arcmin": 15.0,
-      "source_text": "20x15"
+      "position_angle_deg": null,
+      "source_text": "20x15",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -2548,7 +3151,7 @@
       5
     ],
     "explanation": {
-      "overview": "M44 プレセペ星団（蜂の巣）は、かに座の蜂の巣星団天体です。距離は約577光年。見かけの大きさは約95'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M44 プレセペ星団（蜂の巣）はCncに位置する天体です。距離は約577光年。見かけの等級は約3.1等。見かけの大きさは約95'。かに座の蜂の巣星団",
       "observing": "広がりを楽しむため低倍率が基本です。10〜30倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
       "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
       "history": "メシエ天体M44としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -2586,7 +3189,15 @@
     "angular_size": {
       "major_arcmin": 95.0,
       "minor_arcmin": 95.0,
-      "source_text": "約95'"
+      "position_angle_deg": null,
+      "source_text": "約95'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -2614,7 +3225,7 @@
       4
     ],
     "explanation": {
-      "overview": "M45 プレアデス星団（すばる）は、日本古来の「すばる」天体です。距離は約440光年。見かけの大きさは約110'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M45 プレアデス星団（すばる）はTauに位置する天体です。距離は約440光年。見かけの等級は約1.6等。見かけの大きさは約110'。日本古来の「すばる」",
       "observing": "広がりを楽しむため低倍率が基本です。20〜30倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
       "science": "比較的若い散開星団で、青白い高温星が目立ちます。写真で見える青い星雲は、星団形成時の残りではなく周囲の塵を照らす反射星雲と考えられています。",
       "history": "日本では「すばる」として古くから親しまれ、世界各地にも多様な神話・名称があります。",
@@ -2648,26 +3259,47 @@
     "angular_size": {
       "major_arcmin": 110.0,
       "minor_arcmin": 110.0,
-      "source_text": "約110'"
+      "position_angle_deg": null,
+      "source_text": "約110'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M46",
     "name": {
       "ja": "M46",
-      "en": null
+      "en": "Messier 46"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.0,
-    "distance_text": null,
+    "distance_text": "約5,400光年",
     "size_text": "27",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "散開星団の手前に惑星状星雲NGC 2438が重なって見えることで有名です。",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M46はPupに位置する散開星団です。約5,400光年。見かけの等級は約6.0等。見かけの大きさは27。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "散開星団の手前に惑星状星雲NGC 2438が重なって見えることで有名です。",
+      "history": "メシエ天体M46としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -2699,26 +3331,47 @@
     "angular_size": {
       "major_arcmin": 27.0,
       "minor_arcmin": 27.0,
-      "source_text": "27"
+      "position_angle_deg": null,
+      "source_text": "27",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M47",
     "name": {
       "ja": "M47",
-      "en": null
+      "en": "Messier 47"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 5.2,
-    "distance_text": null,
+    "distance_text": "約1,600光年",
     "size_text": "30",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M47。散開星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M47はPupに位置する散開星団です。約1,600光年。見かけの等級は約5.2等。見かけの大きさは30。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M47としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -2750,26 +3403,47 @@
     "angular_size": {
       "major_arcmin": 30.0,
       "minor_arcmin": 30.0,
-      "source_text": "30"
+      "position_angle_deg": null,
+      "source_text": "30",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M48",
     "name": {
       "ja": "M48",
-      "en": null
+      "en": "Messier 48"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 5.5,
-    "distance_text": null,
+    "distance_text": "約2,500光年",
     "size_text": "54",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "数百個規模の星を含む中間年齢の散開星団です。",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M48はHyaに位置する散開星団です。約2,500光年。見かけの等級は約5.5等。見かけの大きさは54。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "数百個規模の星を含む中間年齢の散開星団です。",
+      "history": "メシエ天体M48としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -2801,26 +3475,47 @@
     "angular_size": {
       "major_arcmin": 54.0,
       "minor_arcmin": 54.0,
-      "source_text": "54"
+      "position_angle_deg": null,
+      "source_text": "54",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M49",
     "name": {
       "ja": "M49",
-      "en": null
+      "en": "Messier 49"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 8.4,
-    "distance_text": null,
+    "distance_text": "約6,000万光年",
     "size_text": "9x7.5",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "おとめ座銀河団の巨大楕円銀河で、多数の球状星団を伴います。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M49はVirに位置する楕円銀河です。約6,000万光年。見かけの等級は約8.4等。見かけの大きさは9x7.5。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "おとめ座銀河団の巨大楕円銀河で、多数の球状星団を伴います。",
+      "history": "メシエ天体M49としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -2852,26 +3547,47 @@
     "angular_size": {
       "major_arcmin": 9.0,
       "minor_arcmin": 7.5,
-      "source_text": "9x7.5"
+      "position_angle_deg": null,
+      "source_text": "9x7.5",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M50",
     "name": {
       "ja": "M50",
-      "en": null
+      "en": "Messier 50"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.3,
-    "distance_text": null,
+    "distance_text": "約3,200光年",
     "size_text": "16",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M50。散開星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M50はMonに位置する散開星団です。約3,200光年。見かけの等級は約6.3等。見かけの大きさは16。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M50としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -2903,7 +3619,15 @@
     "angular_size": {
       "major_arcmin": 16.0,
       "minor_arcmin": 16.0,
-      "source_text": "16"
+      "position_angle_deg": null,
+      "source_text": "16",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -2931,7 +3655,7 @@
       8
     ],
     "explanation": {
-      "overview": "M51 子持ち銀河は、渦巻き構造が美しい天体です。距離は約2,300万光年。見かけの大きさは約11'×7'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M51 子持ち銀河はCVnに位置する天体です。距離は約2,300万光年。見かけの等級は約8.4等。見かけの大きさは約11'×7'。渦巻き構造が美しい",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜150倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "典型的なグランドデザイン渦巻銀河で、伴銀河NGC 5195との重力相互作用が腕構造や星形成に影響しています。",
       "history": "渦巻構造が望遠鏡で認識された最初期の銀河として天文学史上も重要です。",
@@ -2969,26 +3693,47 @@
     "angular_size": {
       "major_arcmin": 11.0,
       "minor_arcmin": 7.0,
-      "source_text": "約11'×7'"
+      "position_angle_deg": null,
+      "source_text": "約11'×7'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M52",
     "name": {
       "ja": "M52",
-      "en": null
+      "en": "Messier 52"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.3,
-    "distance_text": null,
+    "distance_text": "約5,000光年",
     "size_text": "13",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M52。散開星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "M52はCasに位置する散開星団です。約5,000光年。見かけの等級は約7.3等。見かけの大きさは13。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M52としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3020,26 +3765,47 @@
     "angular_size": {
       "major_arcmin": 13.0,
       "minor_arcmin": 13.0,
-      "source_text": "13"
+      "position_angle_deg": null,
+      "source_text": "13",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M53",
     "name": {
       "ja": "M53",
-      "en": null
+      "en": "Messier 53"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.6,
-    "distance_text": null,
+    "distance_text": "約5万9,700光年",
     "size_text": "12.6",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "銀河系ハローの遠方にある球状星団です。",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explanation": {
+      "overview": "M53はComに位置する球状星団です。約5万9,700光年。見かけの等級は約7.6等。見かけの大きさは12.6。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "銀河系ハローの遠方にある球状星団です。",
+      "history": "メシエ天体M53としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3071,26 +3837,47 @@
     "angular_size": {
       "major_arcmin": 12.6,
       "minor_arcmin": 12.6,
-      "source_text": "12.6"
+      "position_angle_deg": null,
+      "source_text": "12.6",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M54",
     "name": {
       "ja": "M54",
-      "en": null
+      "en": "Messier 54"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.6,
-    "distance_text": null,
+    "distance_text": "約9万光年",
     "size_text": "9.1",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "いて座矮小楕円銀河に属し、銀河系外の星団として認識された最初期の例です。",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M54はSgrに位置する球状星団です。約9万光年。見かけの等級は約7.6等。見かけの大きさは9.1。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "いて座矮小楕円銀河に属し、銀河系外の星団として認識された最初期の例です。",
+      "history": "メシエ天体M54としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3122,26 +3909,47 @@
     "angular_size": {
       "major_arcmin": 9.1,
       "minor_arcmin": 9.1,
-      "source_text": "9.1"
+      "position_angle_deg": null,
+      "source_text": "9.1",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M55",
     "name": {
       "ja": "M55",
-      "en": null
+      "en": "Messier 55"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.3,
-    "distance_text": null,
+    "distance_text": "約2万光年",
     "size_text": "19",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "比較的疎らで大きく広がる球状星団です。",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M55はSgrに位置する球状星団です。約2万光年。見かけの等級は約6.3等。見かけの大きさは19。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "比較的疎らで大きく広がる球状星団です。",
+      "history": "メシエ天体M55としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3173,26 +3981,47 @@
     "angular_size": {
       "major_arcmin": 19.0,
       "minor_arcmin": 19.0,
-      "source_text": "19"
+      "position_angle_deg": null,
+      "source_text": "19",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M56",
     "name": {
       "ja": "M56",
-      "en": null
+      "en": "Messier 56"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 8.3,
-    "distance_text": null,
+    "distance_text": "約3万3,000光年",
     "size_text": "7.1",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "重元素量が比較的少ない古い球状星団です。",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M56はLyrに位置する球状星団です。約3万3,000光年。見かけの等級は約8.3等。見かけの大きさは7.1。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "重元素量が比較的少ない古い球状星団です。",
+      "history": "メシエ天体M56としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3224,7 +4053,15 @@
     "angular_size": {
       "major_arcmin": 7.1,
       "minor_arcmin": 7.1,
-      "source_text": "7.1"
+      "position_angle_deg": null,
+      "source_text": "7.1",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -3251,7 +4088,7 @@
       10
     ],
     "explanation": {
-      "overview": "M57 リング星雲は、ドーナツ形のリング。太陽の未来の姿天体です。距離は約2,300〜2,600光年。見かけの大きさは約2.5'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M57 リング星雲はLyrに位置する天体です。距離は約2,300〜2,600光年。見かけの等級は約9等。見かけの大きさは約2.5'。ドーナツ形のリング。太陽の未来の姿",
       "observing": "惑星状星雲は比較的小さく表面輝度が高いものが多いため、100〜200倍で倍率を上げても形を保ちやすい対象です。OIIIフィルターがコントラスト改善に有効な場合があります。",
       "science": "中心星が放出したガス殻をほぼ軸方向から見ている惑星状星雲です。リング状に見えますが、実際には三次元的なガス構造を持ちます。",
       "history": "こと座のβ星とγ星の間にあり、小型望遠鏡でも探しやすい惑星状星雲として定番です。",
@@ -3289,26 +4126,47 @@
     "angular_size": {
       "major_arcmin": 2.5,
       "minor_arcmin": 2.5,
-      "source_text": "約2.5'"
+      "position_angle_deg": null,
+      "source_text": "約2.5'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M58",
     "name": {
       "ja": "M58",
-      "en": null
+      "en": "Messier 58"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.7,
-    "distance_text": null,
+    "distance_text": "約6,200万光年",
     "size_text": "5.5x4.5",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "棒渦巻銀河で、おとめ座銀河団に属します。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M58はVirに位置する棒渦巻銀河です。約6,200万光年。見かけの等級は約9.7等。見かけの大きさは5.5x4.5。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "棒渦巻銀河で、おとめ座銀河団に属します。",
+      "history": "メシエ天体M58としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3340,26 +4198,47 @@
     "angular_size": {
       "major_arcmin": 5.5,
       "minor_arcmin": 4.5,
-      "source_text": "5.5x4.5"
+      "position_angle_deg": null,
+      "source_text": "5.5x4.5",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M59",
     "name": {
       "ja": "M59",
-      "en": null
+      "en": "Messier 59"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.6,
-    "distance_text": null,
+    "distance_text": "約6,000万光年",
     "size_text": "5x3.5",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "M59。楕円銀河として登録された深宇宙天体",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M59はVirに位置する楕円銀河です。約6,000万光年。見かけの等級は約9.6等。見かけの大きさは5x3.5。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "銀河は恒星・ガス・塵・暗黒物質から成る巨大な系で、形態・星形成・活動銀河核・環境相互作用などを調べる重要な対象です。",
+      "history": "メシエ天体M59としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3391,26 +4270,47 @@
     "angular_size": {
       "major_arcmin": 5.0,
       "minor_arcmin": 3.5,
-      "source_text": "5x3.5"
+      "position_angle_deg": null,
+      "source_text": "5x3.5",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M60",
     "name": {
       "ja": "M60",
-      "en": null
+      "en": "Messier 60"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 8.8,
-    "distance_text": null,
+    "distance_text": "約5,400万光年",
     "size_text": "7x6",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "巨大楕円銀河で、近くに渦巻銀河NGC 4647が見えます。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M60はVirに位置する楕円銀河です。約5,400万光年。見かけの等級は約8.8等。見かけの大きさは7x6。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "巨大楕円銀河で、近くに渦巻銀河NGC 4647が見えます。",
+      "history": "メシエ天体M60としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3442,26 +4342,47 @@
     "angular_size": {
       "major_arcmin": 7.0,
       "minor_arcmin": 6.0,
-      "source_text": "7x6"
+      "position_angle_deg": null,
+      "source_text": "7x6",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M61",
     "name": {
       "ja": "M61",
-      "en": null
+      "en": "Messier 61"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.7,
-    "distance_text": null,
+    "distance_text": "約5,250万光年",
     "size_text": "6x5.5",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "活発な星形成を示す正面向きの渦巻銀河です。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M61はVirに位置する渦巻銀河です。約5,250万光年。見かけの等級は約9.7等。見かけの大きさは6x5.5。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "活発な星形成を示す正面向きの渦巻銀河です。",
+      "history": "メシエ天体M61としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3493,26 +4414,47 @@
     "angular_size": {
       "major_arcmin": 6.0,
       "minor_arcmin": 5.5,
-      "source_text": "6x5.5"
+      "position_angle_deg": null,
+      "source_text": "6x5.5",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M62",
     "name": {
       "ja": "M62",
-      "en": null
+      "en": "Messier 62"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.5,
-    "distance_text": null,
+    "distance_text": "約2万2,000光年",
     "size_text": "14.1",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M62。球状星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M62はOphに位置する球状星団です。約2万2,000光年。見かけの等級は約6.5等。見かけの大きさは14.1。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M62としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3544,7 +4486,15 @@
     "angular_size": {
       "major_arcmin": 14.1,
       "minor_arcmin": 14.1,
-      "source_text": "14.1"
+      "position_angle_deg": null,
+      "source_text": "14.1",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -3572,7 +4522,7 @@
       8
     ],
     "explanation": {
-      "overview": "M63 ひまわり銀河は、ひまわりのような渦巻き構造天体です。距離は約2,700万光年。見かけの大きさは約12'×7.5'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M63 ひまわり銀河はCVnに位置する天体です。距離は約2,700万光年。見かけの等級は約8.6等。見かけの大きさは約12'×7.5'。ひまわりのような渦巻き構造",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "銀河は数十億〜数千億規模の恒星、星間ガス、塵、暗黒物質などからなる巨大な系です。形や星形成活動の違いは、銀河の進化や周囲との相互作用を反映します。",
       "history": "メシエ天体M63としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -3610,7 +4560,15 @@
     "angular_size": {
       "major_arcmin": 12.0,
       "minor_arcmin": 7.5,
-      "source_text": "約12'×7.5'"
+      "position_angle_deg": null,
+      "source_text": "約12'×7.5'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -3637,7 +4595,7 @@
       7
     ],
     "explanation": {
-      "overview": "M64 黒眼銀河は、中心部に大きな暗黒帯天体です。距離は約1,700万光年。見かけの大きさは約10'×5'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M64 黒眼銀河はComに位置する天体です。距離は約1,700万光年。見かけの等級は約8.5等。見かけの大きさは約10'×5'。中心部に大きな暗黒帯",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜150倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "中心近くの目立つ暗黒帯は塵による吸収です。内外でガスの回転方向が異なる領域があり、過去の銀河合体との関連が考えられています。",
       "history": "暗黒帯が片目のように見えることから「黒眼銀河」と呼ばれます。",
@@ -3675,14 +4633,22 @@
     "angular_size": {
       "major_arcmin": 10.0,
       "minor_arcmin": 5.0,
-      "source_text": "約10'×5'"
+      "position_angle_deg": null,
+      "source_text": "約10'×5'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M65",
     "name": {
       "ja": "M65 渦巻銀河",
-      "en": null
+      "en": "Messier 65"
     },
     "type": "galaxy",
     "icon": "🌀",
@@ -3702,7 +4668,7 @@
       6
     ],
     "explanation": {
-      "overview": "M65 渦巻銀河は、レオトリプレットの一つ天体です。距離は約3,500万光年。見かけの大きさは約10'×3'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M65 渦巻銀河はLeoに位置する天体です。距離は約3,500万光年。見かけの等級は約9.3等。見かけの大きさは約10'×3'。レオトリプレットの一つ",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "銀河は数十億〜数千億規模の恒星、星間ガス、塵、暗黒物質などからなる巨大な系です。形や星形成活動の違いは、銀河の進化や周囲との相互作用を反映します。",
       "history": "メシエ天体M65としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -3740,14 +4706,22 @@
     "angular_size": {
       "major_arcmin": 10.0,
       "minor_arcmin": 3.0,
-      "source_text": "約10'×3'"
+      "position_angle_deg": null,
+      "source_text": "約10'×3'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M66",
     "name": {
       "ja": "M66 渦巻銀河",
-      "en": null
+      "en": "Messier 66"
     },
     "type": "galaxy",
     "icon": "🌀",
@@ -3767,7 +4741,7 @@
       6
     ],
     "explanation": {
-      "overview": "M66 渦巻銀河は、レオトリプレットの一つ天体です。距離は約3,600万光年。見かけの大きさは約9'×4'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M66 渦巻銀河はLeoに位置する天体です。距離は約3,600万光年。見かけの等級は約8.9等。見かけの大きさは約9'×4'。レオトリプレットの一つ",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "銀河は数十億〜数千億規模の恒星、星間ガス、塵、暗黒物質などからなる巨大な系です。形や星形成活動の違いは、銀河の進化や周囲との相互作用を反映します。",
       "history": "メシエ天体M66としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -3805,26 +4779,47 @@
     "angular_size": {
       "major_arcmin": 9.0,
       "minor_arcmin": 4.0,
-      "source_text": "約9'×4'"
+      "position_angle_deg": null,
+      "source_text": "約9'×4'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M67",
     "name": {
       "ja": "M67",
-      "en": null
+      "en": "Messier 67"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.1,
-    "distance_text": null,
+    "distance_text": "約2,700光年",
     "size_text": "30",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "非常に古い散開星団で、太陽に近い組成の恒星研究に重要です。",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M67はCncに位置する散開星団です。約2,700光年。見かけの等級は約6.1等。見かけの大きさは30。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "非常に古い散開星団で、太陽に近い組成の恒星研究に重要です。",
+      "history": "メシエ天体M67としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3856,26 +4851,47 @@
     "angular_size": {
       "major_arcmin": 30.0,
       "minor_arcmin": 30.0,
-      "source_text": "30"
+      "position_angle_deg": null,
+      "source_text": "30",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M68",
     "name": {
       "ja": "M68",
-      "en": null
+      "en": "Messier 68"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.8,
-    "distance_text": null,
+    "distance_text": "約3万3,000光年",
     "size_text": "12",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M68。球状星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M68はHyaに位置する球状星団です。約3万3,000光年。見かけの等級は約7.8等。見かけの大きさは12。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M68としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3907,26 +4923,47 @@
     "angular_size": {
       "major_arcmin": 12.0,
       "minor_arcmin": 12.0,
-      "source_text": "12"
+      "position_angle_deg": null,
+      "source_text": "12",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M69",
     "name": {
       "ja": "M69",
-      "en": null
+      "en": "Messier 69"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.6,
-    "distance_text": null,
+    "distance_text": "約2万9,700光年",
     "size_text": "7.1",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M69。球状星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M69はSgrに位置する球状星団です。約2万9,700光年。見かけの等級は約7.6等。見かけの大きさは7.1。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M69としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -3958,26 +4995,47 @@
     "angular_size": {
       "major_arcmin": 7.1,
       "minor_arcmin": 7.1,
-      "source_text": "7.1"
+      "position_angle_deg": null,
+      "source_text": "7.1",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M70",
     "name": {
       "ja": "M70",
-      "en": null
+      "en": "Messier 70"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.9,
-    "distance_text": null,
+    "distance_text": "約2万9,400光年",
     "size_text": "7.8",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M70。球状星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "explanation": {
+      "overview": "M70はSgrに位置する球状星団です。約2万9,400光年。見かけの等級は約7.9等。見かけの大きさは7.8。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M70としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4009,26 +5067,47 @@
     "angular_size": {
       "major_arcmin": 7.8,
       "minor_arcmin": 7.8,
-      "source_text": "7.8"
+      "position_angle_deg": null,
+      "source_text": "7.8",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M71",
     "name": {
       "ja": "M71",
-      "en": null
+      "en": "Messier 71"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 8.2,
-    "distance_text": null,
+    "distance_text": "約1万3,000光年",
     "size_text": "7.2",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "球状星団としては疎らで金属量が比較的高い天体です。",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M71はSgeに位置する球状星団です。約1万3,000光年。見かけの等級は約8.2等。見かけの大きさは7.2。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "球状星団としては疎らで金属量が比較的高い天体です。",
+      "history": "メシエ天体M71としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4060,26 +5139,47 @@
     "angular_size": {
       "major_arcmin": 7.2,
       "minor_arcmin": 7.2,
-      "source_text": "7.2"
+      "position_angle_deg": null,
+      "source_text": "7.2",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M72",
     "name": {
       "ja": "M72",
-      "en": null
+      "en": "Messier 72"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 9.3,
-    "distance_text": null,
+    "distance_text": "約5万5,000光年",
     "size_text": "5.9",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "メシエ天体の球状星団の中でも遠方に位置します。",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M72はAqrに位置する球状星団です。約5万5,000光年。見かけの等級は約9.3等。見かけの大きさは5.9。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "メシエ天体の球状星団の中でも遠方に位置します。",
+      "history": "メシエ天体M72としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4111,26 +5211,47 @@
     "angular_size": {
       "major_arcmin": 5.9,
       "minor_arcmin": 5.9,
-      "source_text": "5.9"
+      "position_angle_deg": null,
+      "source_text": "5.9",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M73",
     "name": {
       "ja": "M73",
-      "en": null
+      "en": "Messier 73"
     },
     "type": "asterism",
-    "icon": null,
+    "icon": "✧",
     "catalog_category": "メシエ",
     "magnitude_v": 9.0,
-    "distance_text": null,
+    "distance_text": "単一距離なし（互いに無関係な星の見かけの並び）",
     "size_text": "2.8",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "双眼鏡〜50倍",
+    "highlight": "4個ほどの星が近接して見えるアステリズムで、物理的な星団ではありません。",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M73はAqrに位置するアステリズムです。単一距離なし（互いに無関係な星の見かけの並び）。見かけの等級は約9.0等。見かけの大きさは2.8。",
+      "observing": "低倍率または双眼鏡で、周囲の星野との並びを楽しむ対象です。",
+      "science": "4個ほどの星が近接して見えるアステリズムで、物理的な星団ではありません。",
+      "history": "メシエ天体M73としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4162,26 +5283,47 @@
     "angular_size": {
       "major_arcmin": 2.8,
       "minor_arcmin": 2.8,
-      "source_text": "2.8"
+      "position_angle_deg": null,
+      "source_text": "2.8",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M74",
     "name": {
       "ja": "M74",
-      "en": null
+      "en": "Messier 74"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.4,
-    "distance_text": null,
+    "distance_text": "約3,200万光年",
     "size_text": "10.2x9.5",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "ほぼ正面向きの「グランドデザイン」型渦巻銀河です。",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "explanation": {
+      "overview": "M74はPscに位置する渦巻銀河です。約3,200万光年。見かけの等級は約9.4等。見かけの大きさは10.2x9.5。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "ほぼ正面向きの「グランドデザイン」型渦巻銀河です。",
+      "history": "メシエ天体M74としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4213,26 +5355,47 @@
     "angular_size": {
       "major_arcmin": 10.2,
       "minor_arcmin": 9.5,
-      "source_text": "10.2x9.5"
+      "position_angle_deg": null,
+      "source_text": "10.2x9.5",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M75",
     "name": {
       "ja": "M75",
-      "en": null
+      "en": "Messier 75"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 8.5,
-    "distance_text": null,
+    "distance_text": "約6万7,500光年",
     "size_text": "6",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M75。球状星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "explanation": {
+      "overview": "M75はSgrに位置する球状星団です。約6万7,500光年。見かけの等級は約8.5等。見かけの大きさは6。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M75としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4264,7 +5427,15 @@
     "angular_size": {
       "major_arcmin": 6.0,
       "minor_arcmin": 6.0,
-      "source_text": "6"
+      "position_angle_deg": null,
+      "source_text": "6",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -4274,16 +5445,29 @@
       "en": "Little Dumbbell Nebula"
     },
     "type": "nebula",
-    "icon": null,
+    "icon": "☁️",
     "catalog_category": "メシエ",
     "magnitude_v": 10.1,
-    "distance_text": null,
+    "distance_text": "約2,500光年",
     "size_text": "2.7x1.8",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "小あれい星雲とも呼ばれる双極性の惑星状星雲です。",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "explanation": {
+      "overview": "M76はPerに位置する惑星状星雲です。約2,500光年。見かけの等級は約10.1等。見かけの大きさは2.7x1.8。",
+      "observing": "暗い空と十分な瞳径が有利です。低〜中倍率を基本にし、対象によってはUHC/OIII系フィルターがコントラスト改善に役立ちます。",
+      "science": "小あれい星雲とも呼ばれる双極性の惑星状星雲です。",
+      "history": "メシエ天体M76としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4315,26 +5499,47 @@
     "angular_size": {
       "major_arcmin": 2.7,
       "minor_arcmin": 1.8,
-      "source_text": "2.7x1.8"
+      "position_angle_deg": null,
+      "source_text": "2.7x1.8",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M77",
     "name": {
       "ja": "M77",
-      "en": null
+      "en": "Cetus A"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 8.9,
-    "distance_text": null,
+    "distance_text": "約4,500万光年",
     "size_text": "7x6",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "活動銀河核を持つセイファート銀河の代表例です。",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "explanation": {
+      "overview": "M77はCetに位置する渦巻銀河です。約4,500万光年。見かけの等級は約8.9等。見かけの大きさは7x6。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "活動銀河核を持つセイファート銀河の代表例です。",
+      "history": "メシエ天体M77としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4366,26 +5571,47 @@
     "angular_size": {
       "major_arcmin": 7.0,
       "minor_arcmin": 6.0,
-      "source_text": "7x6"
+      "position_angle_deg": null,
+      "source_text": "7x6",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M78",
     "name": {
       "ja": "M78",
-      "en": null
+      "en": "Messier 78"
     },
     "type": "nebula",
-    "icon": null,
+    "icon": "☁️",
     "catalog_category": "メシエ",
     "magnitude_v": 8.3,
-    "distance_text": null,
+    "distance_text": "約1,350光年",
     "size_text": "8x6",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "オリオン分子雲に属する反射星雲で、若い星を含みます。",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "explanation": {
+      "overview": "M78はOriに位置する散光星雲です。約1,350光年。見かけの等級は約8.3等。見かけの大きさは8x6。",
+      "observing": "暗い空と十分な瞳径が有利です。低〜中倍率を基本にし、対象によってはUHC/OIII系フィルターがコントラスト改善に役立ちます。",
+      "science": "オリオン分子雲に属する反射星雲で、若い星を含みます。",
+      "history": "メシエ天体M78としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4417,26 +5643,47 @@
     "angular_size": {
       "major_arcmin": 8.0,
       "minor_arcmin": 6.0,
-      "source_text": "8x6"
+      "position_angle_deg": null,
+      "source_text": "8x6",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M79",
     "name": {
       "ja": "M79",
-      "en": null
+      "en": "Messier 79"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.7,
-    "distance_text": null,
+    "distance_text": "約4万1,000光年",
     "size_text": "8.7",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "銀河系外起源の可能性も議論される遠方の球状星団です。",
+    "visible_months_legacy": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "explanation": {
+      "overview": "M79はLepに位置する球状星団です。約4万1,000光年。見かけの等級は約7.7等。見かけの大きさは8.7。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "銀河系外起源の可能性も議論される遠方の球状星団です。",
+      "history": "メシエ天体M79としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4468,26 +5715,47 @@
     "angular_size": {
       "major_arcmin": 8.7,
       "minor_arcmin": 8.7,
-      "source_text": "8.7"
+      "position_angle_deg": null,
+      "source_text": "8.7",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M80",
     "name": {
       "ja": "M80",
-      "en": null
+      "en": "Messier 80"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.3,
-    "distance_text": null,
+    "distance_text": "約3万2,600光年",
     "size_text": "8.9",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "非常に高密度な球状星団で、過去の新星残骸の研究対象にもなっています。",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "explanation": {
+      "overview": "M80はScoに位置する球状星団です。約3万2,600光年。見かけの等級は約7.3等。見かけの大きさは8.9。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "非常に高密度な球状星団で、過去の新星残骸の研究対象にもなっています。",
+      "history": "メシエ天体M80としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4519,7 +5787,15 @@
     "angular_size": {
       "major_arcmin": 8.9,
       "minor_arcmin": 8.9,
-      "source_text": "8.9"
+      "position_angle_deg": null,
+      "source_text": "8.9",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -4551,7 +5827,7 @@
       12
     ],
     "explanation": {
-      "overview": "M81 ボーデ銀河は、整った渦巻き。M82とペアで比較観測天体です。距離は約1,160万光年。見かけの大きさは約26'×14'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M81 ボーデ銀河はUMaに位置する天体です。距離は約1,160万光年。見かけの等級は約6.9等。見かけの大きさは約26'×14'。整った渦巻き。M82とペアで比較観測",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "大きく整った渦巻構造を持つ銀河で、近くのM82などと重力相互作用をしています。",
       "history": "M82と同一視野に入る低倍率観測は、性質の異なる銀河を比較する定番の楽しみ方です。",
@@ -4589,7 +5865,15 @@
     "angular_size": {
       "major_arcmin": 26.0,
       "minor_arcmin": 14.0,
-      "source_text": "約26'×14'"
+      "position_angle_deg": null,
+      "source_text": "約26'×14'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -4621,7 +5905,7 @@
       12
     ],
     "explanation": {
-      "overview": "M82 葉巻銀河は、スターバースト銀河天体です。距離は約1,200万光年。見かけの大きさは約11'×4'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M82 葉巻銀河はUMaに位置する天体です。距離は約1,200万光年。見かけの等級は約8.4等。見かけの大きさは約11'×4'。スターバースト銀河",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "中心部で非常に活発な星形成が起きているスターバースト銀河です。星形成と超新星活動によって銀河面の上下へガスが吹き出しています。",
       "history": "細長い形から「葉巻銀河」と呼ばれ、M81との相互作用が活発な星形成を促したと考えられています。",
@@ -4659,7 +5943,15 @@
     "angular_size": {
       "major_arcmin": 11.0,
       "minor_arcmin": 4.0,
-      "source_text": "約11'×4'"
+      "position_angle_deg": null,
+      "source_text": "約11'×4'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -4669,16 +5961,29 @@
       "en": "Southern Pinwheel"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 7.6,
-    "distance_text": null,
+    "distance_text": "約1,500万光年",
     "size_text": "11x10",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "南の回転花火銀河とも呼ばれる星形成の活発な棒渦巻銀河です。",
+    "visible_months_legacy": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explanation": {
+      "overview": "M83はHyaに位置する渦巻銀河です。約1,500万光年。見かけの等級は約7.6等。見かけの大きさは11x10。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "南の回転花火銀河とも呼ばれる星形成の活発な棒渦巻銀河です。",
+      "history": "メシエ天体M83としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4710,26 +6015,47 @@
     "angular_size": {
       "major_arcmin": 11.0,
       "minor_arcmin": 10.0,
-      "source_text": "11x10"
+      "position_angle_deg": null,
+      "source_text": "11x10",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M84",
     "name": {
       "ja": "M84",
-      "en": null
+      "en": "Messier 84"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.1,
-    "distance_text": null,
+    "distance_text": "約6,000万光年",
     "size_text": "5",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "おとめ座銀河団中心域の楕円／レンズ状銀河です。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M84はVirに位置するレンズ状銀河です。約6,000万光年。見かけの等級は約9.1等。見かけの大きさは5。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "おとめ座銀河団中心域の楕円／レンズ状銀河です。",
+      "history": "メシエ天体M84としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4761,26 +6087,47 @@
     "angular_size": {
       "major_arcmin": 5.0,
       "minor_arcmin": 5.0,
-      "source_text": "5"
+      "position_angle_deg": null,
+      "source_text": "5",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M85",
     "name": {
       "ja": "M85",
-      "en": null
+      "en": "Messier 85"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.1,
-    "distance_text": null,
+    "distance_text": "約6,000万光年",
     "size_text": "7.1x5.2",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "楕円銀河またはレンズ状銀河として分類される、おとめ座銀河団の明るい銀河です。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M85はComに位置するレンズ状銀河です。約6,000万光年。見かけの等級は約9.1等。見かけの大きさは7.1x5.2。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "楕円銀河またはレンズ状銀河として分類される、おとめ座銀河団の明るい銀河です。",
+      "history": "メシエ天体M85としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4812,26 +6159,47 @@
     "angular_size": {
       "major_arcmin": 7.1,
       "minor_arcmin": 5.2,
-      "source_text": "7.1x5.2"
+      "position_angle_deg": null,
+      "source_text": "7.1x5.2",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M86",
     "name": {
       "ja": "M86",
-      "en": null
+      "en": "Messier 86"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 8.9,
-    "distance_text": null,
+    "distance_text": "約5,200万光年",
     "size_text": "7.5x5.5",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "おとめ座銀河団内を高速で運動し、ガスの相互作用が観測されています。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M86はVirに位置するレンズ状銀河です。約5,200万光年。見かけの等級は約8.9等。見かけの大きさは7.5x5.5。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "おとめ座銀河団内を高速で運動し、ガスの相互作用が観測されています。",
+      "history": "メシエ天体M86としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4863,14 +6231,22 @@
     "angular_size": {
       "major_arcmin": 7.5,
       "minor_arcmin": 5.5,
-      "source_text": "7.5x5.5"
+      "position_angle_deg": null,
+      "source_text": "7.5x5.5",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M87",
     "name": {
       "ja": "M87 楕円銀河（乙女座A）",
-      "en": null
+      "en": "Messier 87"
     },
     "type": "galaxy",
     "icon": "🔵",
@@ -4890,7 +6266,7 @@
       7
     ],
     "explanation": {
-      "overview": "M87 楕円銀河（乙女座A）は、2019年に人類初のブラックホール撮影に成功天体です。距離は約5,400万光年。見かけの大きさは約7'×7'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M87 楕円銀河（乙女座A）はVirに位置する天体です。距離は約5,400万光年。見かけの等級は約8.6等。見かけの大きさは約7'×7'。2019年に人類初のブラックホール撮影に成功",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "巨大楕円銀河で、中心には超大質量ブラックホールがあります。相対論的ジェットを放ち、銀河団中心の活動銀河として重要です。",
       "history": "Event Horizon Telescopeにより、2019年に中心ブラックホール周辺の画像が初めて公開されました。",
@@ -4928,26 +6304,47 @@
     "angular_size": {
       "major_arcmin": 7.0,
       "minor_arcmin": 7.0,
-      "source_text": "約7'×7'"
+      "position_angle_deg": null,
+      "source_text": "約7'×7'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M88",
     "name": {
       "ja": "M88",
-      "en": null
+      "en": "Messier 88"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.6,
-    "distance_text": null,
+    "distance_text": "約4,700万光年",
     "size_text": "7x4",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "比較的明瞭な渦巻構造を持つおとめ座銀河団の銀河です。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M88はComに位置する渦巻銀河です。約4,700万光年。見かけの等級は約9.6等。見かけの大きさは7x4。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "比較的明瞭な渦巻構造を持つおとめ座銀河団の銀河です。",
+      "history": "メシエ天体M88としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -4979,26 +6376,47 @@
     "angular_size": {
       "major_arcmin": 7.0,
       "minor_arcmin": 4.0,
-      "source_text": "7x4"
+      "position_angle_deg": null,
+      "source_text": "7x4",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M89",
     "name": {
       "ja": "M89",
-      "en": null
+      "en": "Messier 89"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.8,
-    "distance_text": null,
+    "distance_text": "約5,000万光年",
     "size_text": "4",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "ほぼ球形に見える楕円銀河です。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M89はVirに位置する楕円銀河です。約5,000万光年。見かけの等級は約9.8等。見かけの大きさは4。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "ほぼ球形に見える楕円銀河です。",
+      "history": "メシエ天体M89としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5030,26 +6448,47 @@
     "angular_size": {
       "major_arcmin": 4.0,
       "minor_arcmin": 4.0,
-      "source_text": "4"
+      "position_angle_deg": null,
+      "source_text": "4",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M90",
     "name": {
       "ja": "M90",
-      "en": null
+      "en": "Messier 90"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.5,
-    "distance_text": null,
+    "distance_text": "約6,000万光年",
     "size_text": "9.5x4.5",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "おとめ座銀河団の渦巻銀河で、星形成の低下とガス剥離が研究されています。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M90はVirに位置する渦巻銀河です。約6,000万光年。見かけの等級は約9.5等。見かけの大きさは9.5x4.5。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "おとめ座銀河団の渦巻銀河で、星形成の低下とガス剥離が研究されています。",
+      "history": "メシエ天体M90としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5081,26 +6520,47 @@
     "angular_size": {
       "major_arcmin": 9.5,
       "minor_arcmin": 4.5,
-      "source_text": "9.5x4.5"
+      "position_angle_deg": null,
+      "source_text": "9.5x4.5",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M91",
     "name": {
       "ja": "M91",
-      "en": null
+      "en": "Messier 91"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 10.2,
-    "distance_text": null,
+    "distance_text": "約6,300万光年",
     "size_text": "5.4x4.4",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "メシエ天体の中でも淡い棒渦巻銀河です。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M91はComに位置する棒渦巻銀河です。約6,300万光年。見かけの等級は約10.2等。見かけの大きさは5.4x4.4。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "メシエ天体の中でも淡い棒渦巻銀河です。",
+      "history": "メシエ天体M91としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5132,14 +6592,22 @@
     "angular_size": {
       "major_arcmin": 5.4,
       "minor_arcmin": 4.4,
-      "source_text": "5.4x4.4"
+      "position_angle_deg": null,
+      "source_text": "5.4x4.4",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M92",
     "name": {
       "ja": "M92 球状星団",
-      "en": null
+      "en": "Messier 92"
     },
     "type": "cluster",
     "icon": "⭐",
@@ -5160,7 +6628,7 @@
       10
     ],
     "explanation": {
-      "overview": "M92 球状星団は、M13の近くのヘルクレス座球状星団天体です。距離は約2万6,700光年。見かけの大きさは約14'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M92 球状星団はHerに位置する天体です。距離は約2万6,700光年。見かけの等級は約6.5等。見かけの大きさは約14'。M13の近くのヘルクレス座球状星団",
       "observing": "100〜200倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "球状星団は銀河系のハローに多く存在する非常に古い恒星集団です。同じ距離・ほぼ同じ年代の星を多数含むため、恒星進化や銀河系形成史を調べる重要な研究対象です。",
       "history": "メシエ天体M92としてカタログ化された対象です。メシエカタログは、彗星探索中に紛らわしい恒星状・星雲状天体を記録したことから始まり、現在では代表的な深宇宙天体リストとして観望に広く使われています。",
@@ -5198,26 +6666,47 @@
     "angular_size": {
       "major_arcmin": 14.0,
       "minor_arcmin": 14.0,
-      "source_text": "約14'"
+      "position_angle_deg": null,
+      "source_text": "約14'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M93",
     "name": {
       "ja": "M93",
-      "en": null
+      "en": "Messier 93"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 6.0,
-    "distance_text": null,
+    "distance_text": "約3,600光年",
     "size_text": "22",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M93。散開星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explanation": {
+      "overview": "M93はPupに位置する散開星団です。約3,600光年。見かけの等級は約6.0等。見かけの大きさは22。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M93としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5249,26 +6738,47 @@
     "angular_size": {
       "major_arcmin": 22.0,
       "minor_arcmin": 22.0,
-      "source_text": "22"
+      "position_angle_deg": null,
+      "source_text": "22",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M94",
     "name": {
       "ja": "M94",
-      "en": null
+      "en": "Messier 94"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 8.2,
-    "distance_text": null,
+    "distance_text": "約1,600万光年",
     "size_text": "7x3",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "明るい内側リングと非常に淡い外側構造を持つ渦巻銀河です。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M94はCVnに位置する渦巻銀河です。約1,600万光年。見かけの等級は約8.2等。見かけの大きさは7x3。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "明るい内側リングと非常に淡い外側構造を持つ渦巻銀河です。",
+      "history": "メシエ天体M94としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5300,26 +6810,47 @@
     "angular_size": {
       "major_arcmin": 7.0,
       "minor_arcmin": 3.0,
-      "source_text": "7x3"
+      "position_angle_deg": null,
+      "source_text": "7x3",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M95",
     "name": {
       "ja": "M95",
-      "en": null
+      "en": "Messier 95"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.7,
-    "distance_text": null,
+    "distance_text": "約3,300万光年",
     "size_text": "4.4x3.3",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "棒渦巻銀河で、中心付近にリング状の星形成領域があります。",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "explanation": {
+      "overview": "M95はLeoに位置する棒渦巻銀河です。約3,300万光年。見かけの等級は約9.7等。見かけの大きさは4.4x3.3。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "棒渦巻銀河で、中心付近にリング状の星形成領域があります。",
+      "history": "メシエ天体M95としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5351,26 +6882,47 @@
     "angular_size": {
       "major_arcmin": 4.4,
       "minor_arcmin": 3.3,
-      "source_text": "4.4x3.3"
+      "position_angle_deg": null,
+      "source_text": "4.4x3.3",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M96",
     "name": {
       "ja": "M96",
-      "en": null
+      "en": "Messier 96"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.2,
-    "distance_text": null,
+    "distance_text": "約3,500万光年",
     "size_text": "6x4",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "M96銀河群の主要銀河で、非対称な渦巻構造を示します。",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "explanation": {
+      "overview": "M96はLeoに位置する渦巻銀河です。約3,500万光年。見かけの等級は約9.2等。見かけの大きさは6x4。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "M96銀河群の主要銀河で、非対称な渦巻構造を示します。",
+      "history": "メシエ天体M96としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5402,7 +6954,15 @@
     "angular_size": {
       "major_arcmin": 6.0,
       "minor_arcmin": 4.0,
-      "source_text": "6x4"
+      "position_angle_deg": null,
+      "source_text": "6x4",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -5412,16 +6972,29 @@
       "en": "Owl Nebula"
     },
     "type": "nebula",
-    "icon": null,
+    "icon": "☁️",
     "catalog_category": "メシエ",
     "magnitude_v": 9.9,
-    "distance_text": null,
+    "distance_text": "約2,000光年",
     "size_text": "3.4x3.3",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "ふくろう星雲の名で知られる惑星状星雲で、二つの暗い「目」のような模様が特徴です。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M97はUMaに位置する惑星状星雲です。約2,000光年。見かけの等級は約9.9等。見かけの大きさは3.4x3.3。",
+      "observing": "暗い空と十分な瞳径が有利です。低〜中倍率を基本にし、対象によってはUHC/OIII系フィルターがコントラスト改善に役立ちます。",
+      "science": "ふくろう星雲の名で知られる惑星状星雲で、二つの暗い「目」のような模様が特徴です。",
+      "history": "メシエ天体M97としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5453,26 +7026,47 @@
     "angular_size": {
       "major_arcmin": 3.4,
       "minor_arcmin": 3.3,
-      "source_text": "3.4x3.3"
+      "position_angle_deg": null,
+      "source_text": "3.4x3.3",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M98",
     "name": {
       "ja": "M98",
-      "en": null
+      "en": "Messier 98"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 10.1,
-    "distance_text": null,
+    "distance_text": "約4,400万光年",
     "size_text": "9.5x3.2",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "ほぼ横向きに近い渦巻銀河で、星間ガスと塵を豊富に含みます。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M98はComに位置する渦巻銀河です。約4,400万光年。見かけの等級は約10.1等。見かけの大きさは9.5x3.2。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "ほぼ横向きに近い渦巻銀河で、星間ガスと塵を豊富に含みます。",
+      "history": "メシエ天体M98としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5504,26 +7098,47 @@
     "angular_size": {
       "major_arcmin": 9.5,
       "minor_arcmin": 3.2,
-      "source_text": "9.5x3.2"
+      "position_angle_deg": null,
+      "source_text": "9.5x3.2",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M99",
     "name": {
       "ja": "M99",
-      "en": null
+      "en": "Messier 99"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.9,
-    "distance_text": null,
+    "distance_text": "約5,500万光年",
     "size_text": "5.4x4.8",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "片側に長く伸びる渦巻腕を持つ非対称な銀河です。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M99はComに位置する渦巻銀河です。約5,500万光年。見かけの等級は約9.9等。見かけの大きさは5.4x4.8。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "片側に長く伸びる渦巻腕を持つ非対称な銀河です。",
+      "history": "メシエ天体M99としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5555,26 +7170,47 @@
     "angular_size": {
       "major_arcmin": 5.4,
       "minor_arcmin": 4.8,
-      "source_text": "5.4x4.8"
+      "position_angle_deg": null,
+      "source_text": "5.4x4.8",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M100",
     "name": {
       "ja": "M100",
-      "en": null
+      "en": "Messier 100"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.3,
-    "distance_text": null,
+    "distance_text": "約5,600万光年",
     "size_text": "7x6",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "代表的なグランドデザイン渦巻銀河で、星形成の活発な腕を持ちます。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M100はComに位置する渦巻銀河です。約5,600万光年。見かけの等級は約9.3等。見かけの大きさは7x6。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "代表的なグランドデザイン渦巻銀河で、星形成の活発な腕を持ちます。",
+      "history": "メシエ天体M100としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5606,7 +7242,15 @@
     "angular_size": {
       "major_arcmin": 7.0,
       "minor_arcmin": 6.0,
-      "source_text": "7x6"
+      "position_angle_deg": null,
+      "source_text": "7x6",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -5635,7 +7279,7 @@
       9
     ],
     "explanation": {
-      "overview": "M101 風車銀河は、正面向きの大型渦巻銀河天体です。距離は約2,700万光年。見かけの大きさは約29'×27'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M101 風車銀河はUMaに位置する天体です。距離は約2,700万光年。見かけの等級は約7.9等。見かけの大きさは約29'×27'。正面向きの大型渦巻銀河",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。30〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "正面向きに近い大型渦巻銀河で、腕に多数のHII領域が見られます。非対称な構造は周辺銀河との相互作用の影響も受けています。",
       "history": "「風車銀河」の名の通り渦巻腕が大きく広がりますが、表面輝度が低いため暗い空が重要です。",
@@ -5673,26 +7317,47 @@
     "angular_size": {
       "major_arcmin": 29.0,
       "minor_arcmin": 27.0,
-      "source_text": "約29'×27'"
+      "position_angle_deg": null,
+      "source_text": "約29'×27'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M102",
     "name": {
       "ja": "M102",
-      "en": null
+      "en": "Spindle Galaxy"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.9,
-    "distance_text": null,
+    "distance_text": "約5,000万光年（NGC 5866同定を採用）",
     "size_text": "5.2x2.3",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "一般にはNGC 5866（スピンドル銀河）との同定が広く採用されますが、歴史的同定には議論があります。",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "explanation": {
+      "overview": "M102はDraに位置するレンズ状銀河です。約5,000万光年（NGC 5866同定を採用）。見かけの等級は約9.9等。見かけの大きさは5.2x2.3。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "一般にはNGC 5866（スピンドル銀河）との同定が広く採用されますが、歴史的同定には議論があります。",
+      "history": "メシエ天体M102としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5726,26 +7391,47 @@
     "angular_size": {
       "major_arcmin": 5.2,
       "minor_arcmin": 2.3,
-      "source_text": "5.2x2.3"
+      "position_angle_deg": null,
+      "source_text": "5.2x2.3",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M103",
     "name": {
       "ja": "M103",
-      "en": null
+      "en": "Messier 103"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.4,
-    "distance_text": null,
+    "distance_text": "約1万光年",
     "size_text": "6",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M103。散開星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "explanation": {
+      "overview": "M103はCasに位置する散開星団です。約1万光年。見かけの等級は約7.4等。見かけの大きさは6。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M103としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5777,7 +7463,15 @@
     "angular_size": {
       "major_arcmin": 6.0,
       "minor_arcmin": 6.0,
-      "source_text": "6"
+      "position_angle_deg": null,
+      "source_text": "6",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
@@ -5804,7 +7498,7 @@
       7
     ],
     "explanation": {
-      "overview": "M104 ソンブレロ銀河は、ソンブレロ帽のような形天体です。距離は約2,800万光年。見かけの大きさは約9'×4'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "M104 ソンブレロ銀河はVirに位置する天体です。距離は約2,800万光年。見かけの等級は約8等。見かけの大きさは約9'×4'。ソンブレロ帽のような形",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜150倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "大きなバルジと濃いダストレーンを持つ銀河で、ほぼ横向きに近い角度から見ています。巨大な球状星団系も知られます。",
       "history": "帽子のつばのような暗黒帯と明るい中心部から「ソンブレロ銀河」と呼ばれます。",
@@ -5842,26 +7536,47 @@
     "angular_size": {
       "major_arcmin": 9.0,
       "minor_arcmin": 4.0,
-      "source_text": "約9'×4'"
+      "position_angle_deg": null,
+      "source_text": "約9'×4'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M105",
     "name": {
       "ja": "M105",
-      "en": null
+      "en": "Messier 105"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.3,
-    "distance_text": null,
+    "distance_text": "約3,200万光年",
     "size_text": "2",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "M105はメシエカタログ中の大きな楕円銀河の一つです。",
+    "visible_months_legacy": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "explanation": {
+      "overview": "M105はLeoに位置する楕円銀河です。約3,200万光年。見かけの等級は約9.3等。見かけの大きさは2。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "M105はメシエカタログ中の大きな楕円銀河の一つです。",
+      "history": "メシエ天体M105としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5893,26 +7608,47 @@
     "angular_size": {
       "major_arcmin": 2.0,
       "minor_arcmin": 2.0,
-      "source_text": "2"
+      "position_angle_deg": null,
+      "source_text": "2",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M106",
     "name": {
       "ja": "M106",
-      "en": null
+      "en": "Messier 106"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 8.4,
-    "distance_text": null,
+    "distance_text": "約2,370万光年",
     "size_text": "19x8",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "中心に活動銀河核と水メーザー円盤を持ち、ブラックホール質量測定で重要な銀河です。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M106はCVnに位置する渦巻銀河です。約2,370万光年。見かけの等級は約8.4等。見かけの大きさは19x8。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "中心に活動銀河核と水メーザー円盤を持ち、ブラックホール質量測定で重要な銀河です。",
+      "history": "メシエ天体M106としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5944,26 +7680,47 @@
     "angular_size": {
       "major_arcmin": 19.0,
       "minor_arcmin": 8.0,
-      "source_text": "19x8"
+      "position_angle_deg": null,
+      "source_text": "19x8",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M107",
     "name": {
       "ja": "M107",
-      "en": null
+      "en": "Messier 107"
     },
     "type": "cluster",
-    "icon": null,
+    "icon": "✨",
     "catalog_category": "メシエ",
     "magnitude_v": 7.9,
-    "distance_text": null,
+    "distance_text": "約2万1,000光年",
     "size_text": "10",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜150倍",
+    "highlight": "M107。球状星団として登録された深宇宙天体",
+    "visible_months_legacy": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "explanation": {
+      "overview": "M107はOphに位置する球状星団です。約2万1,000光年。見かけの等級は約7.9等。見かけの大きさは10。",
+      "observing": "低倍率で全体を導入し、散開星団なら広い視野、球状星団なら中〜高倍率で中心部と周辺の分解を比較します。",
+      "science": "星団は、同じ分子雲から生まれた恒星集団または重力的に強く束縛された古い恒星集団で、恒星進化や銀河系形成史の研究に使われます。",
+      "history": "メシエ天体M107としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -5995,26 +7752,47 @@
     "angular_size": {
       "major_arcmin": 10.0,
       "minor_arcmin": 10.0,
-      "source_text": "10"
+      "position_angle_deg": null,
+      "source_text": "10",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M108",
     "name": {
       "ja": "M108",
-      "en": null
+      "en": "Messier 108"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 10.0,
-    "distance_text": null,
+    "distance_text": "約4,600万光年",
     "size_text": "8x1",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "細長く横向きに見える棒渦巻銀河です。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M108はUMaに位置する渦巻銀河です。約4,600万光年。見かけの等級は約10.0等。見かけの大きさは8x1。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "細長く横向きに見える棒渦巻銀河です。",
+      "history": "メシエ天体M108としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -6046,26 +7824,47 @@
     "angular_size": {
       "major_arcmin": 8.0,
       "minor_arcmin": 1.0,
-      "source_text": "8x1"
+      "position_angle_deg": null,
+      "source_text": "8x1",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M109",
     "name": {
       "ja": "M109",
-      "en": null
+      "en": "Messier 109"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 9.8,
-    "distance_text": null,
+    "distance_text": "約6,750万光年",
     "size_text": "7x4",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "おおぐま座銀河群の明るい棒渦巻銀河です。",
+    "visible_months_legacy": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explanation": {
+      "overview": "M109はUMaに位置する棒渦巻銀河です。約6,750万光年。見かけの等級は約9.8等。見かけの大きさは7x4。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "おおぐま座銀河群の明るい棒渦巻銀河です。",
+      "history": "メシエ天体M109としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -6097,26 +7896,47 @@
     "angular_size": {
       "major_arcmin": 7.0,
       "minor_arcmin": 4.0,
-      "source_text": "7x4"
+      "position_angle_deg": null,
+      "source_text": "7x4",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "M110",
     "name": {
       "ja": "M110",
-      "en": null
+      "en": "Andromeda Satellite Galaxy"
     },
     "type": "galaxy",
-    "icon": null,
+    "icon": "🌌",
     "catalog_category": "メシエ",
     "magnitude_v": 8.5,
-    "distance_text": null,
+    "distance_text": "約269万光年",
     "size_text": "17x10",
-    "recommended_magnification": null,
-    "highlight": null,
-    "visible_months_legacy": [],
-    "explanation": null,
-    "explanation_status": "catalog_only",
+    "recommended_magnification": "30〜100倍",
+    "highlight": "M31の伴銀河で、淡い楕円状の矮小銀河として見えます。",
+    "visible_months_legacy": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "explanation": {
+      "overview": "M110はAndに位置する楕円銀河です。約269万光年。見かけの等級は約8.5等。見かけの大きさは17x10。",
+      "observing": "暗い空が最重要です。低〜中倍率で視野を広く取り、そらし目で核・腕・扁平な形などの濃淡を探します。",
+      "science": "M31の伴銀河で、淡い楕円状の矮小銀河として見えます。",
+      "history": "メシエ天体M110としてカタログ化されています。メシエカタログは、彗星探索時に紛らわしい恒星状・星雲状天体を識別する目的から発展しました。"
+    },
+    "explanation_status": "completed_v0.2.0",
     "source": {
       "dataset": "Messier catalog enrichment",
       "version": "0.1.1"
@@ -6148,14 +7968,22 @@
     "angular_size": {
       "major_arcmin": 17.0,
       "minor_arcmin": 10.0,
-      "source_text": "17x10"
+      "position_angle_deg": null,
+      "source_text": "17x10",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "NASA Hubble Messier Catalog",
+      "distance_basis": "NASA Hubble Messier page or rounded catalog consensus",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "IC434",
     "name": {
       "ja": "IC434 馬頭星雲",
-      "en": null
+      "en": "IC434"
     },
     "type": "nebula",
     "icon": "🐴",
@@ -6175,7 +8003,7 @@
       4
     ],
     "explanation": {
-      "overview": "IC434 馬頭星雲は、馬の頭の形をした暗黒星雲天体です。距離は約1,500光年。見かけの大きさは約60'×10'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "IC434 馬頭星雲はOriに位置する天体です。距離は約1,500光年。見かけの等級は約6.8等。見かけの大きさは約60'×10'。馬の頭の形をした暗黒星雲",
       "observing": "眼視難度の高い暗黒星雲です。50〜100倍（Hβフィルター推奨）を目安に大口径・十分な暗順応・Hβフィルターを組み合わせ、背景のIC434とのわずかな明暗差を探します。",
       "science": "IC434という淡い発光星雲を背景に、前景の冷たい暗黒雲Barnard 33がシルエットとして浮かぶことで馬頭形が見えます。",
       "history": "写真では有名ですが眼視では非常に難しく、暗い空・大口径・Hβフィルターが大きな助けになります。",
@@ -6197,14 +8025,22 @@
     "angular_size": {
       "major_arcmin": 60.0,
       "minor_arcmin": 10.0,
-      "source_text": "約60'×10'"
+      "position_angle_deg": null,
+      "source_text": "約60'×10'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "legacy Nicole/OpenNGC-derived entry",
+      "distance_basis": "legacy value retained",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "NGC3628",
     "name": {
       "ja": "NGC3628 ハンバーガー銀河",
-      "en": null
+      "en": "NGC3628"
     },
     "type": "galaxy",
     "icon": "🍔",
@@ -6224,7 +8060,7 @@
       6
     ],
     "explanation": {
-      "overview": "NGC3628 ハンバーガー銀河は、レオトリプレットの3番目天体です。距離は約3,500万光年。見かけの大きさは約15'×3.5'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "NGC3628 ハンバーガー銀河はLeoに位置する天体です。距離は約3,500万光年。見かけの等級は約9.5等。見かけの大きさは約15'×3.5'。レオトリプレットの3番目",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜100倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "ほぼ横向きの渦巻銀河で、濃いダストレーンが円盤を二分して見せます。M65・M66との重力相互作用で長い潮汐尾も形成されています。",
       "history": "M65、M66と合わせて「レオトリプレット」を構成し、3銀河を同一視野で比較できます。",
@@ -6246,14 +8082,22 @@
     "angular_size": {
       "major_arcmin": 15.0,
       "minor_arcmin": 3.5,
-      "source_text": "約15'×3.5'"
+      "position_angle_deg": null,
+      "source_text": "約15'×3.5'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "legacy Nicole/OpenNGC-derived entry",
+      "distance_basis": "legacy value retained",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "NGC4565",
     "name": {
       "ja": "NGC4565 針銀河",
-      "en": null
+      "en": "NGC4565"
     },
     "type": "galaxy",
     "icon": "🪡",
@@ -6273,7 +8117,7 @@
       7
     ],
     "explanation": {
-      "overview": "NGC4565 針銀河は、完全な横向き銀河の代表例天体です。距離は約4,200万光年。見かけの大きさは約16'×2'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "NGC4565 針銀河はComに位置する天体です。距離は約4,200万光年。見かけの等級は約9.6等。見かけの大きさは約16'×2'。完全な横向き銀河の代表例",
       "observing": "銀河は総合等級よりも表面輝度の影響が大きいため、暗い空と十分な暗順応が重要です。50〜150倍を目安に、まず中心核を捉え、視線を少し外す「そらし目」で淡い外縁を追います。",
       "science": "薄い円盤をほぼ真横から見ている渦巻銀河で、中央バルジと細いダストレーンが目立ちます。銀河円盤の厚みを視覚的に理解しやすい天体です。",
       "history": "針のように細長い外観から「針銀河」と呼ばれます。",
@@ -6295,14 +8139,22 @@
     "angular_size": {
       "major_arcmin": 16.0,
       "minor_arcmin": 2.0,
-      "source_text": "約16'×2'"
+      "position_angle_deg": null,
+      "source_text": "約16'×2'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "legacy Nicole/OpenNGC-derived entry",
+      "distance_basis": "legacy value retained",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "NGC6543",
     "name": {
       "ja": "NGC6543 キャッツアイ星雲",
-      "en": null
+      "en": "NGC6543"
     },
     "type": "nebula",
     "icon": "👁️",
@@ -6324,7 +8176,7 @@
       11
     ],
     "explanation": {
-      "overview": "NGC6543 キャッツアイ星雲は、複雑な多重構造を持つ惑星状星雲天体です。距離は約3,300光年。見かけの大きさは約0.3'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "NGC6543 キャッツアイ星雲はDraに位置する天体です。距離は約3,300光年。見かけの等級は約8.1等。見かけの大きさは約0.3'。複雑な多重構造を持つ惑星状星雲",
       "observing": "惑星状星雲は比較的小さく表面輝度が高いものが多いため、150〜300倍で倍率を上げても形を保ちやすい対象です。OIIIフィルターがコントラスト改善に有効な場合があります。",
       "science": "中心星が複数回にわたって放出したガスや恒星風が複雑な殻を作る惑星状星雲です。高倍率・高解像度ほど細部が現れます。",
       "history": "中心部の模様が猫の目のように見えることから「キャッツアイ星雲」の名があります。",
@@ -6346,14 +8198,22 @@
     "angular_size": {
       "major_arcmin": 0.3,
       "minor_arcmin": 0.3,
-      "source_text": "約0.3'"
+      "position_angle_deg": null,
+      "source_text": "約0.3'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "legacy Nicole/OpenNGC-derived entry",
+      "distance_basis": "legacy value retained",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "NGC6992",
     "name": {
       "ja": "NGC6992 網状星雲",
-      "en": null
+      "en": "NGC6992"
     },
     "type": "snr",
     "icon": "🕸️",
@@ -6373,7 +8233,7 @@
       11
     ],
     "explanation": {
-      "overview": "NGC6992 網状星雲は、約5,000〜8,000年前の超新星爆発の残骸天体です。距離は約2,100光年。見かけの大きさは約60'×8'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "NGC6992 網状星雲はCygに位置する天体です。距離は約2,100光年。見かけの等級は約7等。見かけの大きさは約60'×8'。約5,000〜8,000年前の超新星爆発の残骸",
       "observing": "非常に淡い広がりを持つため、暗い空と低〜中倍率が有利です。20〜50倍を目安に、直接注視せずそらし目を使うと細い構造が浮かびやすくなります。",
       "science": "はくちょう座ループと呼ばれる巨大な超新星残骸の一部です。衝撃波が星間ガスを加熱・電離し、細いフィラメント状に光ります。",
       "history": "網のような繊細な構造から「網状星雲」と呼ばれ、OIIIフィルターが特に有効な対象として有名です。",
@@ -6395,14 +8255,22 @@
     "angular_size": {
       "major_arcmin": 60.0,
       "minor_arcmin": 8.0,
-      "source_text": "約60'×8'"
+      "position_angle_deg": null,
+      "source_text": "約60'×8'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "legacy Nicole/OpenNGC-derived entry",
+      "distance_basis": "legacy value retained",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "NGC7000",
     "name": {
       "ja": "NGC7000 北アメリカ星雲",
-      "en": null
+      "en": "NGC7000"
     },
     "type": "nebula",
     "icon": "🌎",
@@ -6423,7 +8291,7 @@
       11
     ],
     "explanation": {
-      "overview": "NGC7000 北アメリカ星雲は、北アメリカ大陸の形をした巨大散光星雲天体です。距離は約2,600光年。見かけの大きさは約120'×100'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "NGC7000 北アメリカ星雲はCygに位置する天体です。距離は約2,600光年。見かけの等級は約4等。見かけの大きさは約120'×100'。北アメリカ大陸の形をした巨大散光星雲",
       "observing": "肉眼〜10倍を目安に低倍率から始め、星雲全体の広がりを優先して観察します。暗い空では淡い外縁が伸び、対象によってはUHC/OIII系フィルターでコントラストが改善します。",
       "science": "巨大なHII領域で、星間ガスが電離して赤く輝きます。非常に広いため望遠鏡より双眼鏡や低倍率、写真撮影との相性が良い対象です。",
       "history": "外形が北アメリカ大陸に似ることからこの愛称が付きました。",
@@ -6445,14 +8313,22 @@
     "angular_size": {
       "major_arcmin": 120.0,
       "minor_arcmin": 100.0,
-      "source_text": "約120'×100'"
+      "position_angle_deg": null,
+      "source_text": "約120'×100'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "legacy Nicole/OpenNGC-derived entry",
+      "distance_basis": "legacy value retained",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "NGC7293",
     "name": {
       "ja": "NGC7293 らせん星雲",
-      "en": null
+      "en": "NGC7293"
     },
     "type": "nebula",
     "icon": "🌀",
@@ -6471,7 +8347,7 @@
       11
     ],
     "explanation": {
-      "overview": "NGC7293 らせん星雲は、地球に最も近い惑星状星雲天体です。距離は約655光年。見かけの大きさは約16'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "NGC7293 らせん星雲はAqrに位置する天体です。距離は約655光年。見かけの等級は約7.6等。見かけの大きさは約16'。地球に最も近い惑星状星雲",
       "observing": "惑星状星雲は比較的小さく表面輝度が高いものが多いため、30〜80倍で倍率を上げても形を保ちやすい対象です。OIIIフィルターがコントラスト改善に有効な場合があります。",
       "science": "太陽に比較的近い惑星状星雲で、中心星から放出されたガス殻をほぼ正面から見ています。写真では複雑な環状構造が分かります。",
       "history": "大きく淡い姿から「らせん星雲」と呼ばれ、写真では「神の目」の愛称で紹介されることもあります。",
@@ -6493,14 +8369,22 @@
     "angular_size": {
       "major_arcmin": 16.0,
       "minor_arcmin": 16.0,
-      "source_text": "約16'"
+      "position_angle_deg": null,
+      "source_text": "約16'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "legacy Nicole/OpenNGC-derived entry",
+      "distance_basis": "legacy value retained",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "NGC7789",
     "name": {
       "ja": "NGC7789 カロリーンのバラ",
-      "en": null
+      "en": "NGC7789"
     },
     "type": "cluster",
     "icon": "🌹",
@@ -6521,7 +8405,7 @@
       3
     ],
     "explanation": {
-      "overview": "NGC7789 カロリーンのバラは、カシオペヤ座の豪華な散開星団天体です。距離は約8,000光年。見かけの大きさは約25'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "NGC7789 カロリーンのバラはCasに位置する天体です。距離は約8,000光年。見かけの等級は約6.7等。見かけの大きさは約25'。カシオペヤ座の豪華な散開星団",
       "observing": "30〜100倍を目安に、低倍率で全体像を確認してから倍率を上げ、周辺部の星がどこまで分離するかを見ます。口径と空の暗さが増すほど星粒が豊かになります。",
       "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
       "history": "NGC（New General Catalogue）に収録された天体です。NGCは19世紀末にまとめられ、星雲・星団・銀河などを整理した代表的な深宇宙天体カタログです。",
@@ -6543,14 +8427,22 @@
     "angular_size": {
       "major_arcmin": 25.0,
       "minor_arcmin": 25.0,
-      "source_text": "約25'"
+      "position_angle_deg": null,
+      "source_text": "約25'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "legacy Nicole/OpenNGC-derived entry",
+      "distance_basis": "legacy value retained",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   },
   {
     "id": "NGC869",
     "name": {
       "ja": "NGC869/884 ペルセウス二重星団",
-      "en": null
+      "en": "NGC869"
     },
     "type": "cluster",
     "icon": "💫",
@@ -6571,7 +8463,7 @@
       3
     ],
     "explanation": {
-      "overview": "NGC869/884 ペルセウス二重星団は、2つの星団が並ぶ絶景天体です。距離は約7,500光年。見かけの大きさは約30'×30'。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "NGC869/884 ペルセウス二重星団はPerに位置する天体です。距離は約7,500光年。見かけの等級は約4.3等。見かけの大きさは約30'×30'。2つの星団が並ぶ絶景",
       "observing": "広がりを楽しむため低倍率が基本です。20〜40倍を目安に、視野の中で星の密集度や形を眺めます。暗い空では背景とのコントラストが上がります。",
       "science": "散開星団は同じ分子雲からほぼ同時期に生まれた星々の集団です。星団内の星の色や明るさの違いを比べることで、恒星の質量と進化の関係を考えることができます。",
       "history": "NGC（New General Catalogue）に収録された天体です。NGCは19世紀末にまとめられ、星雲・星団・銀河などを整理した代表的な深宇宙天体カタログです。",
@@ -6593,7 +8485,15 @@
     "angular_size": {
       "major_arcmin": 30.0,
       "minor_arcmin": 30.0,
-      "source_text": "約30'×30'"
+      "position_angle_deg": null,
+      "source_text": "約30'×30'",
+      "position_angle_status": "not_available_in_v0.1.1_source"
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "messier_basis": "legacy Nicole/OpenNGC-derived entry",
+      "distance_basis": "legacy value retained",
+      "angular_size_basis": "normalized from v0.1.1 source; no position angle invented when unavailable"
     }
   }
 ]

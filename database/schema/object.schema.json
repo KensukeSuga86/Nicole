@@ -117,7 +117,8 @@
         "number",
         "null"
       ],
-      "exclusiveMinimum": 0
+      "exclusiveMinimum": 0,
+      "description": "Physical diameter used for apparent angular diameter rendering."
     },
     "rendering": {
       "type": [
@@ -136,15 +137,31 @@
           "type": [
             "number",
             "null"
-          ]
+          ],
+          "exclusiveMinimum": 0
         },
         "minor_arcmin": {
           "type": [
             "number",
             "null"
-          ]
+          ],
+          "exclusiveMinimum": 0
+        },
+        "position_angle_deg": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "exclusiveMaximum": 360
         },
         "source_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "position_angle_status": {
           "type": [
             "string",
             "null"

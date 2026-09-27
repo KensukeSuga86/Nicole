@@ -10,23 +10,30 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 2.0.0**
+**Current Version: 2.0.1**
 
 ---
 
+## v2.0.1 の変更点
+
+- Nicole Astronomy Database の固定参照を **v0.2.0** へ更新
+- オンラインv0.2.0取得失敗時は、同梱v0.2.0へフォールバック
+- 恒星64件・Deep Sky 119件・88星座の補完済み解説データを利用
+- PWAアプリキャッシュを `nicole-pwa-v2.0.1` へ更新
+
 ## v2.0.0 の変更点
 
-- **Nicole Astronomy Database v0.1.2** を共通天文DBとして導入
-  - オンラインでは固定URLの v0.1.2 を読み込み
-  - 通信できない場合はアプリ同梱の v0.1.2 へ自動フォールバック
+- **Nicole Astronomy Database v0.2.0** を共通天文DBとして導入
+  - オンラインでは固定URLの v0.2.0 を読み込み
+  - 通信できない場合はアプリ同梱の v0.2.0 へ自動フォールバック
   - 両方を読み込めない場合のみ、従来の内蔵データへフォールバック
 - 共通DBのID・星座・恒星・Deep Sky・アステリズム情報をNicoleの従来UIへ変換する互換層を追加
 - **Messier M1〜M110を全件**、天体検索・天体一覧・星図の対象へ拡張
 - 従来から解説がある天体はその解説を維持し、追加されたカタログのみのMessier天体は位置・種類・等級・見かけの大きさ等を表示して、未整備の解説は「情報準備中」と表示
 - 共通DBの恒星測光情報（B−V・スペクトル型・表示色）と、Deep Skyの正式な所属星座・見かけサイズを利用できる基盤を追加
-- 太陽・月・惑星の物理直径など、Nicole the Astroriumと共有する描画用Solar SystemメタデータをDB v0.1.2へ追加
+- 太陽・月・惑星の物理直径など、Nicole the Astroriumと共有する描画用Solar SystemメタデータをDB v0.2.0へ追加
 - PWAのオフラインキャッシュに共通DBローダーと同梱DBを追加し、オフライン起動時にも共通DBを利用可能に変更
-- Service Worker のキャッシュ名前空間を `nicole-pwa-v2.0.0` に更新
+- Service Worker のキャッシュ名前空間を `nicole-pwa-v2.0.1` に更新
 
 ---
 
@@ -452,9 +459,9 @@ icon-192.png
 apple-touch-icon.png
 ```
 
-`index.html` は画面本体、`bootstrap.js` は共通DB v0.1.2の読込とNicole互換データへの変換、`app.js` は天文計算・UI・組み込み使用マニュアルなどのアプリ本体です。
+`index.html` は画面本体、`bootstrap.js` は共通DB v0.2.0の読込とNicole互換データへの変換、`app.js` は天文計算・UI・組み込み使用マニュアルなどのアプリ本体です。
 
-`database/` にはオフラインフォールバック用の共通DB v0.1.2を同梱しています。`sw.js` はPWA・オフラインキャッシュを管理します。
+`database/` にはオフラインフォールバック用の共通DB v0.2.0を同梱しています。`sw.js` はPWA・オフラインキャッシュを管理します。
 
 ---
 
@@ -465,7 +472,7 @@ Service Workerを変更した場合はキャッシュ名前空間も更新し、
 現在のキャッシュ名前空間：
 
 ```text
-nicole-pwa-v2.0.0
+nicole-pwa-v2.0.1
 ```
 
 ---
@@ -480,4 +487,4 @@ https://kensuke-suga.myportfolio.com
 
 ## Version
 
-**Nicole the Astronavigator v2.0.0**
+**Nicole the Astronavigator v2.0.1**

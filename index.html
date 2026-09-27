@@ -372,7 +372,7 @@ max-inline-size:100%;
 .night-mode-toggle:hover{background:#260000;color:#ffb4ad;}
 body.night-mode{background:#000;}
 /*
-  v2.0.0: body 自体には filter を掛けない。
+  v2.0.1: body 自体には filter を掛けない。
   fixed / fullscreen の containing block を変えず、iOS Safari の全画面・モーダルと干渉しないよう
   viewport 上の backdrop-filter オーバーレイで赤色化する。
 */
@@ -2592,7 +2592,7 @@ body.public-info-open{overflow:hidden;}
 
 
 
-/* ===== v2.0.0 OBJECT DETAIL MODAL ===== */
+/* ===== v2.0.1 OBJECT DETAIL MODAL ===== */
 .detail-popup-modal{
   display:none;
   position:fixed;
@@ -2624,12 +2624,12 @@ body.detail-popup-open{overflow:hidden;}
 }
 
 
-/* ===== v2.0.0 DETAIL ACTIONS ===== */
+/* ===== v2.0.1 DETAIL ACTIONS ===== */
 .recommend-actions{gap:6px;flex-wrap:wrap;}
 .card-plan-actions{gap:6px;flex-wrap:wrap;}
 
 
-/* ===== v2.0.0 footer / planetarium easter egg ===== */
+/* ===== v2.0.1 footer / planetarium easter egg ===== */
 .footer-app-title{
   color:#7eb8e8;
   font-size:12px;
@@ -2787,7 +2787,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v2.0.0 constellation detail modal ===== */
+/* ===== v2.0.1 constellation detail modal ===== */
 .constellation-popup-card{
   width:min(640px,100%);
 }
@@ -2860,7 +2860,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v2.0.0 今夜のおすすめ 折りたたみ見出し統一 ===== */
+/* ===== v2.0.1 今夜のおすすめ 折りたたみ見出し統一 ===== */
 .recommend-details{
   padding:0 !important;
   overflow:hidden;
@@ -2886,11 +2886,11 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* v2.0.0: 隠し星設定はモード有効化前に確実に非表示 */
+/* v2.0.1: 隠し星設定はモード有効化前に確実に非表示 */
 #skyMyStarOption[hidden]{display:none !important;}
 
 
-/* ===== v2.0.0 カメラ星図 ===== */
+/* ===== v2.0.1 カメラ星図 ===== */
 .skymap-camera-controls{
   display:none;
   width:100%;
@@ -2931,7 +2931,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v2.0.0 result sections / calendar / star-map layout ===== */
+/* ===== v2.0.1 result sections / calendar / star-map layout ===== */
 .result-section-panel{
   margin:10px 0;
   padding:0;
@@ -3034,7 +3034,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v2.0.0 赤道儀独立パネル ===== */
+/* ===== v2.0.1 赤道儀独立パネル ===== */
 .standalone-polar-panel{
   margin:10px 0;
 }
@@ -3048,7 +3048,7 @@ body.planetarium-picking #skyMapCanvasWrap{
   background:transparent;
 }
 
-/* ===== v2.0.0 カメラ全画面補正パネル ===== */
+/* ===== v2.0.1 カメラ全画面補正パネル ===== */
 .camera-fullscreen-controls{
   display:none;
   position:absolute;
@@ -3163,7 +3163,7 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v2.0.0 空の情報 日付スワイプ ===== */
+/* ===== v2.0.1 空の情報 日付スワイプ ===== */
 .sky-info-datebar{
   display:flex;
   align-items:center;
@@ -3216,13 +3216,13 @@ body.planetarium-picking #skyMapCanvasWrap{
 }
 
 
-/* ===== v2.0.0 iOS Safe Area / PWA base ===== */
+/* ===== v2.0.1 iOS Safe Area / PWA base ===== */
 header{padding-top:calc(14px + env(safe-area-inset-top));}
 footer{padding-bottom:calc(10px + env(safe-area-inset-bottom));}
 @media(display-mode:standalone){html,body{background:#080c18;}}
 
 
-/* ===== v2.0.0 PWA update / boot diagnostics ===== */
+/* ===== v2.0.1 PWA update / boot diagnostics ===== */
 .pwa-update-banner{
   position:fixed;left:50%;top:max(10px,calc(env(safe-area-inset-top) + 8px));transform:translateX(-50%);
   z-index:2147482900;display:flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);
@@ -4832,7 +4832,7 @@ footer{padding-bottom:calc(10px + env(safe-area-inset-bottom));}
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 2.0.0&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 2.0.1&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -5035,7 +5035,7 @@ initialManualNightMode();
 
 <footer>
 <div class="footer-app-title">🔭 Nicole the Astronavigator</div>
-<div class="footer-app-version">Version 2.0.0</div>
+<div class="footer-app-version">Version 2.0.1</div>
 <div class="footer-creator">制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
 <div class="footer-info-actions">
   <button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
@@ -5043,6 +5043,6 @@ initialManualNightMode();
 </div>
 </footer>
 
-<script type="module" src="./bootstrap.js?v=2.0.0"></script>
+<script type="module" src="./bootstrap.js?v=2.0.1"></script>
 </body>
 </html>

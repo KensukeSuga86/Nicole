@@ -33,7 +33,7 @@
     },
     "source": {
       "provider": "NASA/NSSDC",
-      "reference": "Planetary Fact Sheet / Moon",
+      "reference": "Planetary Fact Sheet",
       "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
     }
   },

@@ -1,7 +1,7 @@
 {
   "database_name": "Nicole Astronomy Database",
-  "database_version": "0.1.2",
-  "schema_version": 3,
+  "database_version": "0.2.0",
+  "schema_version": 4,
   "source": {
     "base_app": "Nicole the Astronavigator",
     "base_version": "1.12.0",
@@ -11,7 +11,12 @@
       "OpenNGC",
       "orthodox asterism review",
       "NASA/NSSDC solar-system physical diameters",
-      "numeric deep-sky angular-size normalization"
+      "numeric deep-sky angular-size normalization",
+      "NASA Hubble Messier Catalog review",
+      "IAU + NAOJ constellation review",
+      "SIMBAD/CDS star verification target",
+      "mythology provenance separation",
+      "Miyazawa Kenji cultural-context tagging"
     ]
   },
   "id_policy": "Existing Nicole IDs are immutable. Existing IDs are preserved; new Messier objects use M1..M110.",
@@ -19,24 +24,30 @@
     "constellations": 88,
     "stars_total": 64,
     "stars_with_photometry": 64,
-    "stars_with_full_explanation": 22,
+    "stars_with_full_explanation": 64,
     "planets": 7,
     "non_planetary_objects_total": 119,
     "messier_objects": 110,
-    "messier_with_nicole_explanation": 38,
+    "messier_with_nicole_explanation": 110,
     "asterisms": 9,
     "catalog_entries": 287,
     "solar_system_bodies": 9,
-    "deep_sky_with_angular_size": 119
+    "deep_sky_with_angular_size": 119,
+    "deep_sky_with_full_explanation": 119,
+    "constellations_with_mythology_metadata": 88,
+    "kenji_tagged_constellations": 10,
+    "kenji_tagged_stars": 4,
+    "kenji_tagged_deep_sky": 1
   },
   "checksums_sha256": {
-    "data/asterisms.json": "ccb33689749f290fa063e850f8ea5c24bc356e8cd611c0cd4241c2b8b2922501",
+    "data/asterisms.json": "4be9081432e29f7bea745fae65a9a0595f9217cb2f0dadf6d2fd223e6f164e70",
     "data/catalog.json": "b0d5d5d5a971f4388ca9782555bdedade743932bb9d9049eba764cb4173409ca",
-    "data/constellations.json": "06f1050195611b6e7684bde8c5307ea5b54c03707a81d62b5c0eb0952926781b",
-    "data/deep-sky.json": "be1237f6e5c2d066a764dd75a0465a32f05f150de40681e4653249be69bb862d",
+    "data/constellations.json": "065949d6d6626c57c1f70afefacb59c56fb9841c5a7d13a96293425e9b383de8",
+    "data/deep-sky.json": "b58707ac818e9fdecc67a5207b712a8e6a49cd82cb01357c8b71813b3e6d6d10",
     "data/external-sources.json": "9d547fedb4b5df06296c95f0064096565bd2028c0934fbb3a9f949462fc9c5aa",
-    "data/planets.json": "4644b69a4ad19743c50508e0b42ebbdd24314f8dcb9a54b160788870cc31f49b",
-    "data/solar-system.json": "d90195208e4f02fc8e178c4f26193be86b25a254287bb6745570c1166705c200",
-    "data/stars.json": "67854a71da9cd14ffc790a2621f6c313c7cc0ed664b91edfe3d1a29ebd0c8ec2"
+    "data/planets.json": "7eab9ec32e5c9d508489a3d2585e64d1d9f6d4f5417392b90ad124d671f91cb7",
+    "data/solar-system.json": "76fb6a99bb3101b9f0f531f8913f51e1c809a39739796e4ea325ae0d5863be22",
+    "data/sources.json": "a48e2f0b014fea50e25d7283a50b836c45384d0731b4592e85b5fdd1e4d74499",
+    "data/stars.json": "d149f744b20a4cf8ec8867951807204e187b37f1b0d0326df63ac7a31886386d"
   }
 }

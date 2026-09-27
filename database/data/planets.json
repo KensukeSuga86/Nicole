@@ -3,7 +3,7 @@
     "id": "Mercury",
     "name": {
       "ja": "水星",
-      "en": null
+      "en": "Mercury"
     },
     "type": "planet",
     "icon": "🪨",
@@ -15,7 +15,7 @@
     "highlight": "満ち欠けが見える！日没直後か夜明け前の低空に",
     "visible_months_legacy": [],
     "explanation": {
-      "overview": "水星は、満ち欠けが見える！日没直後か夜明け前の低空に天体です。距離は約0.4〜2.2億km。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "水星は太陽系の惑星です。物理直径は約4,879 km。地球からの距離・見かけの明るさ・視直径は、公転位置によって変化します。満ち欠けが見える！日没直後か夜明け前の低空に",
       "observing": "内惑星なので太陽から大きく離れず、日没直後か日の出前の低空が観測の中心です。望遠鏡では月のような満ち欠けが分かります。 推奨倍率の目安は50〜100倍です。",
       "science": "太陽に最も近い岩石惑星で、公転周期は約88日です。大気は非常に希薄で、表面には多数のクレーターが残ります。",
       "history": "惑星は背景の恒星に対して位置を変えるため、古代から「さまよう星」として知られてきました。数日〜数か月おきに位置や見え方を追うと、公転運動を実感できます。",
@@ -34,13 +34,18 @@
     "rendering": {
       "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
       "minimum_display_px": 1.0
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "physical_parameters_basis": "NASA/NSSDC",
+      "dynamic_note": "Magnitude and apparent diameter are epoch-dependent; fixed magnitude_v is only a UI reference value."
     }
   },
   {
     "id": "Venus",
     "name": {
       "ja": "金星",
-      "en": null
+      "en": "Venus"
     },
     "type": "planet",
     "icon": "🌟",
@@ -52,7 +57,7 @@
     "highlight": "三日月〜満月形の満ち欠けが見える",
     "visible_months_legacy": [],
     "explanation": {
-      "overview": "金星は、三日月〜満月形の満ち欠けが見える天体です。距離は約0.4〜2.6億km。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "金星は太陽系の惑星です。物理直径は約12,104 km。地球からの距離・見かけの明るさ・視直径は、公転位置によって変化します。三日月〜満月形の満ち欠けが見える",
       "observing": "内惑星のため大きく満ち欠けします。細い三日月状の時期は見かけの直径が大きく、望遠鏡で変化を追うと公転運動を実感できます。 推奨倍率の目安は50〜150倍です。",
       "science": "厚い二酸化炭素大気と硫酸雲に覆われ、強い温室効果によって表面は太陽系で最も高温な惑星です。",
       "history": "惑星は背景の恒星に対して位置を変えるため、古代から「さまよう星」として知られてきました。数日〜数か月おきに位置や見え方を追うと、公転運動を実感できます。",
@@ -71,13 +76,18 @@
     "rendering": {
       "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
       "minimum_display_px": 1.0
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "physical_parameters_basis": "NASA/NSSDC",
+      "dynamic_note": "Magnitude and apparent diameter are epoch-dependent; fixed magnitude_v is only a UI reference value."
     }
   },
   {
     "id": "Mars",
     "name": {
       "ja": "火星",
-      "en": null
+      "en": "Mars"
     },
     "type": "planet",
     "icon": "🔴",
@@ -89,7 +99,7 @@
     "highlight": "極冠・模様が見える（接近時）",
     "visible_months_legacy": [],
     "explanation": {
-      "overview": "火星は、極冠・模様が見える（接近時）天体です。距離は約0.5〜4億km。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "火星は太陽系の惑星です。物理直径は約6,792 km。地球からの距離・見かけの明るさ・視直径は、公転位置によって変化します。極冠・模様が見える（接近時）",
       "observing": "地球との距離変化が大きく、接近期ほど表面模様を観察しやすくなります。高倍率ではシーイングの良い瞬間を待つのが重要です。 推奨倍率の目安は100〜200倍です。",
       "science": "鉄を含む鉱物が酸化したため赤く見える岩石惑星です。極冠、巨大火山、峡谷など多様な地形を持ちます。",
       "history": "惑星は背景の恒星に対して位置を変えるため、古代から「さまよう星」として知られてきました。数日〜数か月おきに位置や見え方を追うと、公転運動を実感できます。",
@@ -108,13 +118,18 @@
     "rendering": {
       "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
       "minimum_display_px": 1.0
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "physical_parameters_basis": "NASA/NSSDC",
+      "dynamic_note": "Magnitude and apparent diameter are epoch-dependent; fixed magnitude_v is only a UI reference value."
     }
   },
   {
     "id": "Jupiter",
     "name": {
       "ja": "木星",
-      "en": null
+      "en": "Jupiter"
     },
     "type": "planet",
     "icon": "🟠",
@@ -126,7 +141,7 @@
     "highlight": "縞模様・大赤斑・ガリレオ衛星4個が見える",
     "visible_months_legacy": [],
     "explanation": {
-      "overview": "木星は、縞模様・大赤斑・ガリレオ衛星4個が見える天体です。距離は約6〜9億km。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "木星は太陽系の惑星です。物理直径は約142,984 km。地球からの距離・見かけの明るさ・視直径は、公転位置によって変化します。縞模様・大赤斑・ガリレオ衛星4個が見える",
       "observing": "60倍程度でもガリレオ衛星と縞模様が楽しめます。衛星の位置は数時間でも変わるため、時間を空けて再観察すると動きを実感できます。 推奨倍率の目安は60〜150倍です。",
       "science": "太陽系最大のガス惑星で、雲の帯や大赤斑など活発な大気現象が見られます。強い磁場と多数の衛星を持ちます。",
       "history": "惑星は背景の恒星に対して位置を変えるため、古代から「さまよう星」として知られてきました。数日〜数か月おきに位置や見え方を追うと、公転運動を実感できます。",
@@ -145,13 +160,18 @@
     "rendering": {
       "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
       "minimum_display_px": 1.0
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "physical_parameters_basis": "NASA/NSSDC",
+      "dynamic_note": "Magnitude and apparent diameter are epoch-dependent; fixed magnitude_v is only a UI reference value."
     }
   },
   {
     "id": "Saturn",
     "name": {
       "ja": "土星",
-      "en": null
+      "en": "Saturn"
     },
     "type": "planet",
     "icon": "🪐",
@@ -163,7 +183,7 @@
     "highlight": "リング（環）が見える！",
     "visible_months_legacy": [],
     "explanation": {
-      "overview": "土星は、リング（環）が見える！天体です。距離は約12〜16億km。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "土星は太陽系の惑星です。物理直径は約120,536 km。地球からの距離・見かけの明るさ・視直径は、公転位置によって変化します。リング（環）が見える！",
       "observing": "環は80倍前後から明瞭になり、条件が良ければ環の濃淡や衛星タイタンも楽しめます。環の傾きは年単位で変化します。 推奨倍率の目安は80〜150倍です。",
       "science": "水素・ヘリウムを主成分とするガス惑星で、氷粒子を中心とした巨大な環系を持ちます。",
       "history": "惑星は背景の恒星に対して位置を変えるため、古代から「さまよう星」として知られてきました。数日〜数か月おきに位置や見え方を追うと、公転運動を実感できます。",
@@ -182,13 +202,18 @@
     "rendering": {
       "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
       "minimum_display_px": 1.0
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "physical_parameters_basis": "NASA/NSSDC",
+      "dynamic_note": "Magnitude and apparent diameter are epoch-dependent; fixed magnitude_v is only a UI reference value."
     }
   },
   {
     "id": "Uranus",
     "name": {
       "ja": "天王星",
-      "en": null
+      "en": "Uranus"
     },
     "type": "planet",
     "icon": "🔵",
@@ -200,7 +225,7 @@
     "highlight": "青緑色の円盤。肉眼限界の惑星",
     "visible_months_legacy": [],
     "explanation": {
-      "overview": "天王星は、青緑色の円盤。肉眼限界の惑星天体です。距離は約27〜32億km。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "天王星は太陽系の惑星です。物理直径は約51,118 km。地球からの距離・見かけの明るさ・視直径は、公転位置によって変化します。青緑色の円盤。肉眼限界の惑星",
       "observing": "肉眼限界近くの明るさなので、まず星図で位置を正確に合わせます。高倍率では恒星とは違う小さな円盤状に見えることがあります。 推奨倍率の目安は100〜200倍です。",
       "science": "氷巨星に分類され、メタンの吸収によって青緑色に見えます。自転軸がほぼ横倒しという特異な姿勢を持ちます。",
       "history": "惑星は背景の恒星に対して位置を変えるため、古代から「さまよう星」として知られてきました。数日〜数か月おきに位置や見え方を追うと、公転運動を実感できます。",
@@ -219,13 +244,18 @@
     "rendering": {
       "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
       "minimum_display_px": 1.0
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "physical_parameters_basis": "NASA/NSSDC",
+      "dynamic_note": "Magnitude and apparent diameter are epoch-dependent; fixed magnitude_v is only a UI reference value."
     }
   },
   {
     "id": "Neptune",
     "name": {
       "ja": "海王星",
-      "en": null
+      "en": "Neptune"
     },
     "type": "planet",
     "icon": "🌀",
@@ -237,7 +267,7 @@
     "highlight": "青みがかった小さな円盤。望遠鏡必須",
     "visible_months_legacy": [],
     "explanation": {
-      "overview": "海王星は、青みがかった小さな円盤。望遠鏡必須天体です。距離は約43〜47億km。数値だけでなく、実際の空でどのように見えるかを意識すると特徴をつかみやすくなります。",
+      "overview": "海王星は太陽系の惑星です。物理直径は約49,528 km。地球からの距離・見かけの明るさ・視直径は、公転位置によって変化します。青みがかった小さな円盤。望遠鏡必須",
       "observing": "肉眼では見えないため星図での導入が必須です。高倍率でも小さな青い円盤で、位置確認そのものが観測の面白さになります。 推奨倍率の目安は150〜250倍です。",
       "science": "太陽から最も遠い8番目の惑星で、メタンを含む大気と非常に強い風を持つ氷巨星です。",
       "history": "惑星は背景の恒星に対して位置を変えるため、古代から「さまよう星」として知られてきました。数日〜数か月おきに位置や見え方を追うと、公転運動を実感できます。",
@@ -256,6 +286,11 @@
     "rendering": {
       "apparent_diameter_model": "physical_diameter_over_dynamic_geocentric_distance",
       "minimum_display_px": 1.0
+    },
+    "verification": {
+      "status": "reviewed_2026_09",
+      "physical_parameters_basis": "NASA/NSSDC",
+      "dynamic_note": "Magnitude and apparent diameter are epoch-dependent; fixed magnitude_v is only a UI reference value."
     }
   }
 ]

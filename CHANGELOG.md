@@ -15,7 +15,7 @@ Nicole the Astronavigator の主な変更履歴です。
 ## [2.0.0]
 
 ### Added
-- Nicole Astronomy Database v0.1.2 の共通DBローダーを追加。
+- Nicole Astronomy Database v0.2.0 の共通DBローダーを追加。
 - オンライン固定バージョン → 同梱DB → 従来内蔵データの3段階フォールバックを追加。
 - Messier M1〜M110の110天体を天体検索・天体一覧・星図へ追加。
 - 共通DBのB−V、スペクトル型、恒星表示色、Deep Sky所属星座・見かけサイズを利用する互換層を追加。
@@ -528,3 +528,9 @@ Nicole the Astronavigator の主な変更履歴です。
 - 複数ファイルを提供する場合はZIPにまとめる。
 - ZIP内のService Workerは `sw.js` のまま収録する。
 - バージョン更新時はアプリ上部タイトル直下にもバージョン番号を表示する。
+
+
+## v2.0.1
+- Nicole Astronomy Database の固定参照を v0.2.0 へ更新。
+- 同梱フォールバックDBも v0.2.0へ更新。
+- PWAキャッシュを v2.0.1 に更新。
