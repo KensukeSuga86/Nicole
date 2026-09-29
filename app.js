@@ -7554,6 +7554,8 @@ document.addEventListener("keydown",event=>{
   }
 });
 
+let DETAIL_CURRENT_OBJECT=null;
+
 function closeDetailPopup(){
 const modal=$("#detailPopupModal");
 if(modal){modal.classList.remove("open");modal.setAttribute("aria-hidden","true");}
@@ -7561,6 +7563,12 @@ document.body.classList.remove("detail-popup-open");
 document.querySelectorAll(".obj-card").forEach(c=>c.classList.remove("active"));
 }
 $("#btnCloseDetail").addEventListener("click",closeDetailPopup);
+$("#btnDetailSky")?.addEventListener("click",()=>{
+  const obj=DETAIL_CURRENT_OBJECT;
+  if(!obj)return;
+  closeDetailPopup();
+  focusObjectOnSky(obj);
+});
 $("#detailPopupModal").addEventListener("click",event=>{if(event.target===$("#detailPopupModal"))closeDetailPopup();});
 $("#sortSel").addEventListener("change",()=>{currentSort=$("#sortSel").value;renderCards(currentResults);});
 function sortResults(arr){
@@ -8375,6 +8383,13 @@ if(event.target===$("#scheduleObjectModal"))closeScheduleObjectModal();
 });
 
 function showDetail(obj,card){
+DETAIL_CURRENT_OBJECT=obj||null;
+const detailSkyBtn=$("#btnDetailSky");
+if(detailSkyBtn){
+  const d=currentDate instanceof Date&&!isNaN(currentDate)?currentDate:new Date();
+  detailSkyBtn.disabled=!objectRaDecAt(obj,d);
+  detailSkyBtn.title=detailSkyBtn.disabled?"この天体は星図上の座標を取得できません":"この天体を星図で強調表示します";
+}
 document.querySelectorAll(".obj-card").forEach(c=>c.classList.remove("active"));
 if(card)card.classList.add("active");
 const dl=diffLabel(obj.difficulty||3);
@@ -8567,7 +8582,7 @@ function runNicoleSelfCheck(){
   document.querySelectorAll("[id]").forEach(el=>{
     if(seen.has(el.id))duplicates.push(el.id); else seen.add(el.id);
   });
-  const report={version:"2.0.1",missing,duplicates:[...new Set(duplicates)],standalone:!!(window.navigator.standalone||matchMedia("(display-mode: standalone)").matches)};
+  const report={version:"2.0.2",missing,duplicates:[...new Set(duplicates)],standalone:!!(window.navigator.standalone||matchMedia("(display-mode: standalone)").matches)};
   window.NicoleDiagnostics=Object.assign(window.NicoleDiagnostics||{},report,{cameraSettings:()=>SKY_CAMERA_SETTINGS});
   if(missing.length||report.duplicates.length){
     console.error("Nicole startup self-check failed",report);

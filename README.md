@@ -10,16 +10,21 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 2.0.1**
+**Current Version: 2.0.2**
 
 ---
+
+## v2.0.2 の変更点
+
+- 天体詳細モーダルに「星図でも見る」を追加。観測条件パネルの天体検索から詳細を開いた場合も、その天体を星図で強調表示できます。
+- PWAアプリキャッシュを `nicole-pwa-v2.0.2` へ更新。
 
 ## v2.0.1 の変更点
 
 - Nicole Astronomy Database の固定参照を **v0.2.0** へ更新
 - オンラインv0.2.0取得失敗時は、同梱v0.2.0へフォールバック
 - 恒星64件・Deep Sky 119件・88星座の補完済み解説データを利用
-- PWAアプリキャッシュを `nicole-pwa-v2.0.1` へ更新
+- PWAアプリキャッシュを `nicole-pwa-v2.0.2` へ更新
 
 ## v2.0.0 の変更点
 
@@ -33,7 +38,7 @@ https://kensukesuga86.github.io/Nicole/
 - 共通DBの恒星測光情報（B−V・スペクトル型・表示色）と、Deep Skyの正式な所属星座・見かけサイズを利用できる基盤を追加
 - 太陽・月・惑星の物理直径など、Nicole the Astroriumと共有する描画用Solar SystemメタデータをDB v0.2.0へ追加
 - PWAのオフラインキャッシュに共通DBローダーと同梱DBを追加し、オフライン起動時にも共通DBを利用可能に変更
-- Service Worker のキャッシュ名前空間を `nicole-pwa-v2.0.1` に更新
+- Service Worker のキャッシュ名前空間を `nicole-pwa-v2.0.2` に更新
 
 ---
 
@@ -472,7 +477,7 @@ Service Workerを変更した場合はキャッシュ名前空間も更新し、
 現在のキャッシュ名前空間：
 
 ```text
-nicole-pwa-v2.0.1
+nicole-pwa-v2.0.2
 ```
 
 ---
@@ -487,4 +492,4 @@ https://kensuke-suga.myportfolio.com
 
 ## Version
 
-**Nicole the Astronavigator v2.0.1**
+**Nicole the Astronavigator v2.0.2**

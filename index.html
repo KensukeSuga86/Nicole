@@ -2624,9 +2624,11 @@ body.detail-popup-open{overflow:hidden;}
 }
 
 
-/* ===== v2.0.1 DETAIL ACTIONS ===== */
+/* ===== v2.0.2 DETAIL ACTIONS ===== */
 .recommend-actions{gap:6px;flex-wrap:wrap;}
 .card-plan-actions{gap:6px;flex-wrap:wrap;}
+.detail-popup-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;}
+.detail-popup-actions .action{margin:0;}
 
 
 /* ===== v2.0.1 footer / planetarium easter egg ===== */
@@ -3996,7 +3998,10 @@ footer{padding-bottom:calc(10px + env(safe-area-inset-bottom));}
 <div style="color:#7eb8e8;font-size:13px;margin-bottom:6px">今夜の高度変化（18時〜翌6時）</div>
 <canvas id="altChart" height="120"></canvas>
 </div>
-<div style="margin-top:12px"><button class="action gray sm" id="btnCloseDetail">✕ 閉じる</button></div>
+<div class="detail-popup-actions">
+<button class="action sm" id="btnDetailSky">🌌 星図でも見る</button>
+<button class="action gray sm" id="btnCloseDetail">✕ 閉じる</button>
+</div>
 </div>
 
 </div>
@@ -4832,7 +4837,7 @@ footer{padding-bottom:calc(10px + env(safe-area-inset-bottom));}
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 2.0.1&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 2.0.2&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -5035,7 +5040,7 @@ initialManualNightMode();
 
 <footer>
 <div class="footer-app-title">🔭 Nicole the Astronavigator</div>
-<div class="footer-app-version">Version 2.0.1</div>
+<div class="footer-app-version">Version 2.0.2</div>
 <div class="footer-creator">制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
 <div class="footer-info-actions">
   <button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
@@ -5043,6 +5048,6 @@ initialManualNightMode();
 </div>
 </footer>
 
-<script type="module" src="./bootstrap.js?v=2.0.1"></script>
+<script type="module" src="./bootstrap.js?v=2.0.2"></script>
 </body>
 </html>
