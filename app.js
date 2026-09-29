@@ -8582,7 +8582,7 @@ function runNicoleSelfCheck(){
   document.querySelectorAll("[id]").forEach(el=>{
     if(seen.has(el.id))duplicates.push(el.id); else seen.add(el.id);
   });
-  const report={version:"2.0.2",missing,duplicates:[...new Set(duplicates)],standalone:!!(window.navigator.standalone||matchMedia("(display-mode: standalone)").matches)};
+  const report={version:"2.0.3",missing,duplicates:[...new Set(duplicates)],standalone:!!(window.navigator.standalone||matchMedia("(display-mode: standalone)").matches)};
   window.NicoleDiagnostics=Object.assign(window.NicoleDiagnostics||{},report,{cameraSettings:()=>SKY_CAMERA_SETTINGS});
   if(missing.length||report.duplicates.length){
     console.error("Nicole startup self-check failed",report);

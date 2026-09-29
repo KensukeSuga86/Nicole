@@ -1,4 +1,4 @@
-const CACHE_VERSION="nicole-pwa-v2.0.2";
+const CACHE_VERSION="nicole-pwa-v2.0.3";
 const APP_CACHE=`${CACHE_VERSION}-app`;
 // Dynamic astronomical/weather data survives ordinary app releases; TTL policies expire it safely.
 const DATA_CACHE="nicole-data-v1";

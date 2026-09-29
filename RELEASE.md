@@ -1,6 +1,6 @@
-# Nicole the Astronavigator v2.0.2
+# Nicole the Astronavigator v2.0.3
 
-## v2.0.2 の追加変更
+## v2.0.3 の追加変更
 
 - 天体詳細モーダルに「🌌 星図でも見る」を追加。
 - 観測条件パネルの天体検索から詳細を開いた場合、そのまま対象天体を星図で強調表示できます。
@@ -8,7 +8,7 @@
 
 **星空の案内人・ニコルと一緒に**
 
-Nicole the Astronavigator v2.0.2 は、Nicoleシリーズで天文データを共有するためのメジャーアップデートです。
+Nicole the Astronavigator v2.0.3 は、Nicoleシリーズで天文データを共有するためのメジャーアップデートです。
 
 公開版：  
 https://kensukesuga86.github.io/Nicole/
@@ -61,7 +61,7 @@ Nicole the Astronavigator と Nicole the Astrorium が同じ不変IDと天文デ
 Service Workerのアプリキャッシュ名前空間：
 
 ```text
-nicole-pwa-v2.0.2
+nicole-pwa-v2.0.3
 ```
 
 動的データキャッシュ：
@@ -72,4 +72,4 @@ nicole-data-v1
 
 ---
 
-**Version 2.0.2**
+**Version 2.0.3**

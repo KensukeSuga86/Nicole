@@ -824,9 +824,20 @@ footer{
   z-index:12000;
   display:none;
   background:#07111c;
+  box-sizing:border-box;
+  width:100vw;
+  height:100vh;
+  height:100dvh;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-right:env(safe-area-inset-right,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  padding-left:env(safe-area-inset-left,0px);
+  overflow:hidden;
 }
 .manual-modal.open{display:flex;flex-direction:column;}
 .manual-modal-head{
+  position:relative;
+  z-index:2;
   flex:0 0 auto;
   min-height:54px;
   display:flex;
@@ -868,7 +879,19 @@ body.manual-open{overflow:hidden;}
 @media(max-width:600px){
   .header-actions{width:100%;margin-left:0;}
   .header-actions .night-mode-toggle{flex:1 1 auto;}
-  .manual-modal-head{padding:8px 10px;}
+  .manual-modal-head{
+    min-height:58px;
+    padding:8px 10px;
+  }
+  .manual-modal-title{font-size:13px;}
+  .manual-close-btn{
+    min-height:40px;
+    padding:9px 13px;
+    font-size:13px;
+  }
+}
+@supports not (height:100dvh){
+  .manual-modal{height:-webkit-fill-available;}
 }
 
 
@@ -2624,7 +2647,7 @@ body.detail-popup-open{overflow:hidden;}
 }
 
 
-/* ===== v2.0.2 DETAIL ACTIONS ===== */
+/* ===== v2.0.3 DETAIL ACTIONS ===== */
 .recommend-actions{gap:6px;flex-wrap:wrap;}
 .card-plan-actions{gap:6px;flex-wrap:wrap;}
 .detail-popup-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;}
@@ -4837,7 +4860,7 @@ footer{padding-bottom:calc(10px + env(safe-area-inset-bottom));}
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 2.0.2&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 2.0.3&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -5040,7 +5063,7 @@ initialManualNightMode();
 
 <footer>
 <div class="footer-app-title">🔭 Nicole the Astronavigator</div>
-<div class="footer-app-version">Version 2.0.2</div>
+<div class="footer-app-version">Version 2.0.3</div>
 <div class="footer-creator">制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
 <div class="footer-info-actions">
   <button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
@@ -5048,6 +5071,6 @@ initialManualNightMode();
 </div>
 </footer>
 
-<script type="module" src="./bootstrap.js?v=2.0.2"></script>
+<script type="module" src="./bootstrap.js?v=2.0.3"></script>
 </body>
 </html>
