@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.1.0
+## 2.1.1
 - Nicole Astronomy Database v0.3.0 固定参照へ更新。
 - Nicole標準星座線を星図へ反映。
 - 端末保存ユーザーデータのJSONバックアップ／復元を追加。

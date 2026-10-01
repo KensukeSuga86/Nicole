@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Nicole Constellation Line Star",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "coordinate_status",
+      "used_by_constellations"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "coordinate_status": {
+        "enum": [
+          "embedded",
+          "upstream_reference"
+        ]
+      },
+      "ra_deg": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "dec_deg": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Nicole Constellation Standard",
+  "type": "array",
+  "minItems": 88,
+  "maxItems": 88,
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "standard_version",
+      "line",
+      "art",
+      "provenance"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "standard_version": {
+        "type": "string"
+      },
+      "line": {
+        "type": "object",
+        "required": [
+          "segments",
+          "star_ids",
+          "source_mode"
+        ],
+        "properties": {
+          "segments": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "from",
+                "to"
+              ],
+              "properties": {
+                "from": {
+                  "type": "string"
+                },
+                "to": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "star_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_mode": {
+            "enum": [
+              "edited",
+              "v0.7.6_base_adopted"
+            ]
+          }
+        }
+      },
+      "art": {
+        "type": "object",
+        "required": [
+          "asset",
+          "placement",
+          "image_source"
+        ]
+      },
+      "provenance": {
+        "type": "object"
+      }
+    }
+  }
+}

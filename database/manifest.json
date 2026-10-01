@@ -1,7 +1,7 @@
 {
   "database_name": "Nicole Astronomy Database",
-  "database_version": "0.2.0",
-  "schema_version": 4,
+  "database_version": "0.3.0",
+  "schema_version": 5,
   "source": {
     "base_app": "Nicole the Astronavigator",
     "base_version": "1.12.0",
@@ -16,8 +16,16 @@
       "IAU + NAOJ constellation review",
       "SIMBAD/CDS star verification target",
       "mythology provenance separation",
-      "Miyazawa Kenji cultural-context tagging"
-    ]
+      "Miyazawa Kenji cultural-context tagging",
+      "Nicole the Astrorium v0.7.6 completed 88-constellation standard lines and artwork"
+    ],
+    "constellation_standard_project": {
+      "schema": "nicole-astrorium-constellation-project-v1",
+      "schema_version": 6,
+      "app_version": "0.7.6",
+      "exported_at": "2026-10-01T14:02:20.820Z",
+      "sha256": "8f060f4e47a4060d43ab65b2c98dd67bb7f2f1c336091e84f345f99d37654739"
+    }
   },
   "id_policy": "Existing Nicole IDs are immutable. Existing IDs are preserved; new Messier objects use M1..M110.",
   "counts": {
@@ -37,17 +45,35 @@
     "constellations_with_mythology_metadata": 88,
     "kenji_tagged_constellations": 10,
     "kenji_tagged_stars": 4,
-    "kenji_tagged_deep_sky": 1
+    "kenji_tagged_deep_sky": 1,
+    "constellation_standard_entries": 88,
+    "constellation_standard_line_segments": 717,
+    "constellation_standard_line_star_ids": 760,
+    "constellation_line_star_coordinates_embedded": 270,
+    "constellation_line_star_upstream_references": 490,
+    "constellation_art_assets": 88,
+    "constellation_art_image_overrides": 9,
+    "constellation_line_edited": 55,
+    "constellation_line_base_adopted": 33
   },
   "checksums_sha256": {
     "data/asterisms.json": "4be9081432e29f7bea745fae65a9a0595f9217cb2f0dadf6d2fd223e6f164e70",
     "data/catalog.json": "b0d5d5d5a971f4388ca9782555bdedade743932bb9d9049eba764cb4173409ca",
+    "data/constellation-art-manifest.json": "b0ececd8009d01e532836d7a101601fb9da4ad5e9c83e6a63fd31b1e25fd3af7",
+    "data/constellation-editor-audit.json": "1c718e71f26e7264d96e18a97577c2021f7cdf9b13277b24a4a32bdaa9fb9458",
+    "data/constellation-line-stars.json": "2a406de75bcc59b68c629556c468e850d1c4a3aa7ce1ee6b0868f4a5a4944418",
+    "data/constellation-standard.json": "f48aa7ad946c0292a7c06af61bb50d653b79573c385434cbfa12ba5f7dbe22fc",
     "data/constellations.json": "065949d6d6626c57c1f70afefacb59c56fb9841c5a7d13a96293425e9b383de8",
     "data/deep-sky.json": "b58707ac818e9fdecc67a5207b712a8e6a49cd82cb01357c8b71813b3e6d6d10",
-    "data/external-sources.json": "9d547fedb4b5df06296c95f0064096565bd2028c0934fbb3a9f949462fc9c5aa",
+    "data/external-sources.json": "efa281fae4a2c0165eca9904f89008c799ee87878aa8d201e0f627d12d410227",
     "data/planets.json": "7eab9ec32e5c9d508489a3d2585e64d1d9f6d4f5417392b90ad124d671f91cb7",
     "data/solar-system.json": "76fb6a99bb3101b9f0f531f8913f51e1c809a39739796e4ea325ae0d5863be22",
     "data/sources.json": "a48e2f0b014fea50e25d7283a50b836c45384d0731b4592e85b5fdd1e4d74499",
-    "data/stars.json": "d149f744b20a4cf8ec8867951807204e187b37f1b0d0326df63ac7a31886386d"
-  }
+    "data/stars.json": "d149f744b20a4cf8ec8867951807204e187b37f1b0d0326df63ac7a31886386d",
+    "schema/constellation-line-star.schema.json": "af284d018c86727b732ef5fe5ebc5d5ff00faec0e1c64e4b6d04d481e7a3e342",
+    "schema/constellation-standard.schema.json": "983645a5aaf93cb3be6680c7f25fe177bdbe703381483dbc6984e3649e195d6f",
+    "schema/constellation.schema.json": "6bad0249449a25670d4460f4e69fc7ae8748e69a0fb988cace2f81dfd3746052",
+    "schema/object.schema.json": "8deed814b54e6410d97b66f6e23631d7a4aa175b0075b153e6cef82d3972e83e"
+  },
+  "constellation_art_manifest": "data/constellation-art-manifest.json"
 }

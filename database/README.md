@@ -1,28 +1,37 @@
-# Nicole Astronomy Database v0.2.0
+# Nicole Astronomy Database v0.3.0
 
-## v0.2.0 — データ補完・科学/文化再検証
-- 恒星64件すべてに解説・英名・距離表示を整備（一般向け丸め値）
-- Deep Sky 119件すべてに解説・距離表示を整備し、`catalog_only` の72 Messierを補完
-- 88星座に科学と神話/成立史を分離した検証メタデータを追加
-- NASA Hubble Messier、IAU、国立天文台、SIMBAD/CDS、Smithsonian/Chandra等を出典体系に追加
-- 宮沢賢治『星めぐりの歌』『銀河鉄道の夜』の直接的な天文対応を `cultural_context.miyazawa_kenji` として追加
-- 追加・修正内容は `COMPLETION_REPORT.md/.csv/.json` で確認可能
-- v0.1.2の視直径描画メタデータは維持
+## v0.3.0 — Nicole標準星座データ正式版
+Nicole the Astrorium v0.7.6 で完了した88星座の編集成果を共通DBへ正式登録しました。
 
-## v0.1.2 変更
-- v0.1.1を基礎に、太陽・月・7惑星の視直径描画用メタデータを追加
-- `data/solar-system.json` を新設し、物理直径と距離モデルを保持
-- Deep Sky 119件すべてに `angular_size.major_arcmin / minor_arcmin` を数値化して追加
-- Position Angle はv0.1.1の元データに確実な値がないため `null` とし、推測値は入れない
-- 既存Nicole ID、既存解説、星座・恒星・Messier収録内容は変更しない
+### 新規正式データ
+- `data/constellation-standard.json` — 88星座のNicole標準星座線、構成星ID、星座絵配置
+- `data/constellation-line-stars.json` — 標準星座線が参照する恒星IDと座標解決情報
+- `data/constellation-art-manifest.json` — 88星座絵のSHA-256と由来
+- `assets/constellation-art/*.png` — 88星座の正式星座絵
+- `data/constellation-editor-audit.json` — 編集成果の監査情報
 
-## 件数
-- 88星座
-- 恒星 64
-- 7惑星
-- 非惑星天体 119（Messier 110）
-- アステリズム 9
-- solar-system 9（太陽・月・7惑星）
-- Deep Sky視サイズ数値化 119/119
+### 完成状態
+- 星座: 88/88
+- workflow完了: 88/88
+- Nicole標準星座線: 88/88
+- 線分: 717
+- 星座線恒星ID: 760
+- 星座絵: 88/88
+- 星座絵差し替え正式昇格: 9
+- 手動編集線: 55星座
+- v0.7.6基準線を完成形として採用: 33星座
 
-既存のNicole IDは変更していません。
+### 座標互換性
+標準星座線の**トポロジー（どの星とどの星を結ぶか）と星座絵はv0.3.0で完全固定**されています。
+線で使う恒星ID 760件のうち、270件はv0.3.0内に座標を保持しています。残る490件のHIP座標は、v0.7.6が従来利用していた `hip_constellation_line_star.csv` を明示的な参照元として保持しています。
+これはデータ欠損を推測値で埋めないための互換設計です。将来の完全オフライン版では上流座標カタログをライセンス表示とともに同梱できます。
+
+## v0.2.0から継続するデータ
+- 星座88の科学・神話/成立史メタデータ
+- 恒星64
+- Deep Sky 119 / Messier 110
+- 惑星・太陽系描画メタデータ
+- アステリズム9
+- 宮沢賢治関連タグ
+
+既存Nicole IDは変更していません。

@@ -1,0 +1,28 @@
+{
+  "source_filename": "Nicole-constellation-project-2026-10-01T14-02-20.json",
+  "source_sha256": "8f060f4e47a4060d43ab65b2c98dd67bb7f2f1c336091e84f345f99d37654739",
+  "schema": "nicole-astrorium-constellation-project-v1",
+  "schemaVersion": 6,
+  "appVersion": "0.7.6",
+  "exportedAt": "2026-10-01T14:02:20.820Z",
+  "stats": {
+    "constellationCount": 88,
+    "artAdjusted": 82,
+    "lineEdited": 55,
+    "extraStars": 282,
+    "excludedStars": 0,
+    "userConstellations": 0
+  },
+  "art_override_ids": [
+    "And",
+    "Aql",
+    "Her",
+    "Peg",
+    "Scl",
+    "Sco",
+    "Tau",
+    "Vir",
+    "Vul"
+  ],
+  "note": "Full project JSON is intentionally not duplicated because override PNGs are promoted to formal assets."
+}

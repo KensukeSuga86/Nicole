@@ -10,17 +10,16 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 2.1.0**
+**Current Version: 2.1.1**
 
 ---
 
-## v2.1.0 の変更点
-
-- Nicole Astronomy Database の固定参照を **v0.3.0** へ更新。
-- 星空表示の星座線を、Nicole 2と共通の **Nicole標準星座線** へ統一。
-- オンラインの恒星座標取得に失敗した場合も、DB内に座標を持つ星はそのまま描画し、通信復帰後に不足座標を補完。
-- 端末に保存しているユーザーデータをJSONへ書き出し／読み込みできるバックアップ機能を追加。
-- PWAアプリキャッシュを `nicole-pwa-v2.1.0` へ更新。
+## v2.1.1 の変更点
+- Nicole Astronomy Database v0.3.0 のオンライン参照は維持。
+- GitHub Pages用のローカルフォールバックから、Nicole 1で使用しない星座絵88枚を除外。
+- 星座線・恒星座標・天体データ等の必要JSONはローカルフォールバックとして継続同梱。
+- ユーザーデータのバックアップ／復元機能はv2.1.0から継続。
+- PWAキャッシュを `nicole-pwa-v2.1.1` へ更新。
 
 ## v2.0.3 の変更点
 
@@ -474,7 +473,7 @@ apple-touch-icon.png
 
 `index.html` は画面本体、`bootstrap.js` は共通DB v0.2.0の読込とNicole互換データへの変換、`app.js` は天文計算・UI・組み込み使用マニュアルなどのアプリ本体です。
 
-`database/` にはオフラインフォールバック用の共通DB v0.2.0を同梱しています。`sw.js` はPWA・オフラインキャッシュを管理します。
+`database/` にはオフラインフォールバック用の共通DB v0.3.0の必要JSONのみを同梱しています。星座絵アセットはNicole 1では使用しないため含めません。`sw.js` はPWA・オフラインキャッシュを管理します。
 
 ---
 

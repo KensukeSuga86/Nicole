@@ -28,5 +28,19 @@
   "meteor_showers": {
     "endpoint_template": "https://astro-nicole.hideld12.workers.dev/meteors?year={year}",
     "source_app": "Nicole the Astronavigator v1.12.0"
+  },
+  "nicole_constellation_standard": {
+    "version": "1.0.0",
+    "database_version": "0.3.0",
+    "source_app": "Nicole the Astrorium v0.7.6",
+    "project_schema": "nicole-astrorium-constellation-project-v1",
+    "project_schema_version": 6,
+    "project_exported_at": "2026-10-01T14:02:20.820Z",
+    "workflow_complete_constellations": 88,
+    "edited_line_constellations": 55,
+    "adopted_base_line_constellations": 33,
+    "art_assets": 88,
+    "art_image_overrides": 9,
+    "line_coordinate_policy": "Project/Nicole coordinates are embedded where available; unresolved HIP coordinates retain explicit upstream source references for compatibility."
   }
 }

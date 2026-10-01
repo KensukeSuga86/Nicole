@@ -1,4 +1,4 @@
-# Nicole the Astronavigator v2.1.0
+# Nicole the Astronavigator v2.1.1
 
 - Nicole Astronomy Database v0.3.0 を固定参照。
 - 星空表示の星座線をNicole標準星座線へ統一。

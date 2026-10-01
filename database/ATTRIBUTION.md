@@ -27,3 +27,15 @@ NASA等の一般的な星空案内資料と複数資料を照合し、実用上�
 
 ## v0.1.2 solar-system metadata
 Physical-diameter metadata uses NASA/NSSDC Planetary Fact Sheet / Sun Fact Sheet conventions. Deep Sky angular sizes are normalized from the existing v0.1.1 Nicole fields; no new position angle is inferred.
+
+## Nicole標準星座線・星座絵 (v0.3.0)
+Nicole標準星座線は、Nicole the Astrorium v0.7.6 の星座編集プロジェクトで88星座を手作業確認・調整した結果を正式化したものです。
+
+星座線の基礎データには **Hipparcos Planetarium Data Creator / Stellarium-derived constellation-line data** を使用しています。上流プロジェクトが示すライセンスは GNU GPL v2.0 です。v0.3.0で基準線をそのまま採用した33星座、および編集の出発点となった線データについて、上流の帰属・ライセンス条件を維持してください。
+
+- Upstream: https://github.com/creativival/hipparcos_planetarium_data_creator
+- Line data: `hip_constellation_line.csv`
+- Line-star data: `hip_constellation_line_star.csv`
+
+88枚の星座絵はNicole用に制作・調整した画像です。v0.3.0ではAstrorium v0.7.6同梱画像79枚と、最終編集プロジェクトで差し替えられた9枚を正式アセットとして格納しています。
+
