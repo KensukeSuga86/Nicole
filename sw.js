@@ -1,4 +1,4 @@
-const CACHE_VERSION="nicole-pwa-v2.0.3";
+const CACHE_VERSION="nicole-pwa-v2.1.0";
 const APP_CACHE=`${CACHE_VERSION}-app`;
 // Dynamic astronomical/weather data survives ordinary app releases; TTL policies expire it safely.
 const DATA_CACHE="nicole-data-v1";
@@ -39,7 +39,9 @@ const APP_SHELL_OPTIONAL=[
   "./database/data/asterisms.json",
   "./database/data/catalog.json",
   "./database/data/external-sources.json",
-  "./database/data/solar-system.json"
+  "./database/data/solar-system.json",
+  "./database/data/constellation-standard.json",
+  "./database/data/constellation-line-stars.json"
 ];
 
 async function cacheOptionalAsset(cache,url){

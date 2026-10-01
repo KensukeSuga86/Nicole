@@ -1,7 +1,7 @@
-const EXPECTED_DB_VERSION="0.2.0";
-const REMOTE_BASE="https://kensukesuga86.github.io/Nicole-Astronomy-Database/versions/0.2.0/";
+const EXPECTED_DB_VERSION="0.3.0";
+const REMOTE_BASE="https://kensukesuga86.github.io/Nicole-Astronomy-Database/versions/0.3.0/";
 const LOCAL_BASE="./database/";
-const DATA_NAMES=["constellations","stars","planets","deep-sky","asterisms","catalog","external-sources","solar-system"];
+const DATA_NAMES=["constellations","stars","planets","deep-sky","asterisms","catalog","external-sources","solar-system","constellation-standard","constellation-line-stars"];
 
 async function fetchJson(base,path){const r=await fetch(base+path,{cache:"no-store"});if(!r.ok)throw new Error(`${path} HTTP ${r.status}`);return r.json()}
 async function loadDb(base){const manifest=await fetchJson(base,"manifest.json");if(manifest.database_version!==EXPECTED_DB_VERSION)throw new Error(`DB version mismatch: ${manifest.database_version}`);const values=await Promise.all(DATA_NAMES.map(n=>fetchJson(base,`data/${n}.json`)));const db={manifest};DATA_NAMES.forEach((n,i)=>db[n.replaceAll("-","_")]=values[i]);if(!Array.isArray(db.constellations)||db.constellations.length!==88)throw new Error("88星座DBではありません");if(!Array.isArray(db.deep_sky)||db.deep_sky.filter(x=>Number(x.messier_number)>=1&&Number(x.messier_number)<=110).length!==110)throw new Error("M1-M110が揃っていません");return db}
@@ -20,7 +20,11 @@ function legacy(db){
  const allStars=Object.fromEntries(db.stars.map(x=>[x.id,x])),SKY_ASTERISM_STARS={};for(const a of db.asterisms)for(const id of a.star_ids||[]){const o=allStars[id];if(o)SKY_ASTERISM_STARS[id]={name:o.name?.ja||id,ra:Number(o.position?.ra_deg),dec:Number(o.position?.dec_deg)}}
  const SKY_ASTERISMS=db.asterisms.map(a=>({name:a.name?.ja||a.id,stars:a.star_ids||[],lines:(a.lines||[]).map(x=>[x.from,x.to])}));
  const SKY_STAR_CONSTELLATION_MAP=Object.fromEntries(db.stars.filter(x=>x.constellation_id).map(x=>[x.id,x.constellation_id]));
- return{CONSTELLATIONS,CONSTELLATION_TEXT,CONST_COORD,STARS_DB,DSO_DB:[...planets,...deep],SKY_EXTRA_STARS,SKY_ASTERISM_STARS,SKY_ASTERISMS,SKY_STAR_CONSTELLATION_MAP};
+ for(const c of db.constellation_standard||[])for(const id of c.line?.star_ids||[])if(!SKY_STAR_CONSTELLATION_MAP[id])SKY_STAR_CONSTELLATION_MAP[id]=c.id;
+ const SKY_CONSTELLATION_STANDARD=(db.constellation_standard||[]).map(c=>({name:c.name?.ja||c.id,abbr:c.name?.abbr||c.id,lines:(c.line?.segments||[]).map(x=>[x.from,x.to])}));
+ const SKY_STANDARD_LINE_STARS=Object.fromEntries((db.constellation_line_stars||[]).filter(x=>x.ra_deg!=null&&x.dec_deg!=null&&Number.isFinite(Number(x.ra_deg))&&Number.isFinite(Number(x.dec_deg))).map(x=>[x.id,{id:x.id,hip:x.hip??null,name:x.name||null,ra:Number(x.ra_deg),dec:Number(x.dec_deg),mag:x.magnitude_v==null?6:Number(x.magnitude_v)}]));
+ const SKY_STANDARD_LINE_STAR_REFERENCES=(db.constellation_line_stars||[]).filter(x=>x.coordinate_status==="upstream_reference");
+ return{CONSTELLATIONS,CONSTELLATION_TEXT,CONST_COORD,STARS_DB,DSO_DB:[...planets,...deep],SKY_EXTRA_STARS,SKY_ASTERISM_STARS,SKY_ASTERISMS,SKY_STAR_CONSTELLATION_MAP,SKY_CONSTELLATION_STANDARD,SKY_STANDARD_LINE_STARS,SKY_STANDARD_LINE_STAR_REFERENCES};
 }
 function loadClassic(src){return new Promise((resolve,reject)=>{const el=document.createElement("script");el.src=src;el.async=false;el.onload=resolve;el.onerror=()=>reject(new Error(`script load failed: ${src}`));document.body.appendChild(el)})}
-(async()=>{let db=null,source="";for(const [kind,base] of [["online",REMOTE_BASE],["local",LOCAL_BASE]]){try{db=await loadDb(base);source=kind;break}catch(err){console.warn(`Nicole common DB ${kind} load failed`,err)}}if(db){window.NICOLE_COMMON=legacy(db);window.NicoleAstronomyDatabase=db;window.NicoleAstronomyDatabaseMeta={version:db.manifest.database_version,source}}else{window.NICOLE_COMMON=null;window.NicoleAstronomyDatabaseMeta={version:"legacy-embedded",source:"embedded"}}await loadClassic(`./app.js?v=2.0.1`)})().catch(err=>{console.error("Nicole bootstrap failed",err);loadClassic(`./app.js?v=2.0.1`) });
+(async()=>{let db=null,source="";for(const [kind,base] of [["online",REMOTE_BASE],["local",LOCAL_BASE]]){try{db=await loadDb(base);source=kind;break}catch(err){console.warn(`Nicole common DB ${kind} load failed`,err)}}if(db){window.NICOLE_COMMON=legacy(db);window.NicoleAstronomyDatabase=db;window.NicoleAstronomyDatabaseMeta={version:db.manifest.database_version,source}}else{window.NICOLE_COMMON=null;window.NicoleAstronomyDatabaseMeta={version:"legacy-embedded",source:"embedded"}}await loadClassic(`./app.js?v=2.1.0`)})().catch(err=>{console.error("Nicole bootstrap failed",err);loadClassic(`./app.js?v=2.1.0`) });

@@ -10,9 +10,17 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 2.0.3**
+**Current Version: 2.1.0**
 
 ---
+
+## v2.1.0 の変更点
+
+- Nicole Astronomy Database の固定参照を **v0.3.0** へ更新。
+- 星空表示の星座線を、Nicole 2と共通の **Nicole標準星座線** へ統一。
+- オンラインの恒星座標取得に失敗した場合も、DB内に座標を持つ星はそのまま描画し、通信復帰後に不足座標を補完。
+- 端末に保存しているユーザーデータをJSONへ書き出し／読み込みできるバックアップ機能を追加。
+- PWAアプリキャッシュを `nicole-pwa-v2.1.0` へ更新。
 
 ## v2.0.3 の変更点
 

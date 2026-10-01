@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.0
+- Nicole Astronomy Database v0.3.0 固定参照へ更新。
+- Nicole標準星座線を星図へ反映。
+- 端末保存ユーザーデータのJSONバックアップ／復元を追加。
+
 Nicole the Astronavigator の主な変更履歴です。
 
 今後の更新では、新しいバージョンを上に追記していきます。
