@@ -1,0 +1,26 @@
+{
+  "database_version": "0.3.1",
+  "source_project": "Nicole-constellation-project-2026-10-02T01-33-03.json",
+  "source_sha256": "c3c535277955c8191b5f7881489d4451f0fc3d97e92974c91149717f476865cc",
+  "project_schema": "nicole-astrorium-constellation-project-v1",
+  "project_schema_version": 6,
+  "project_app_version": "0.10.0",
+  "project_exported_at": "2026-10-02T01:33:03.360Z",
+  "constellations": 88,
+  "workflow_done": 88,
+  "line_edited": 55,
+  "line_segments": 717,
+  "line_star_ids": 759,
+  "line_star_coordinates_embedded": 269,
+  "line_star_coordinates_upstream_reference": 490,
+  "changed_constellations": [
+    "Aqr"
+  ],
+  "checks": [
+    "88 final line sets",
+    "segment pair validity",
+    "line-star ID closure",
+    "Aqr hotfix promoted",
+    "v0.3.0 artwork/data retained"
+  ]
+}

@@ -1,3 +1,3 @@
-# Validation
+# Nicole Astronomy Database validation
 
-最新版の検証結果は `VALIDATION-v0.3.0.md` を参照してください。
+Current validated release: **v0.3.2**. See `VALIDATION-v0.3.2.md`.

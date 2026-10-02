@@ -3510,7 +3510,7 @@ return;
 }
 
 if(NICOLE_STANDARD_CONSTELLATION_LINES){
-setSkyLineStatus("Nicole標準星座線 v0.3.0 / 恒星座標を準備中…","#ffd54f");
+setSkyLineStatus("Nicole標準星座線 v0.3.2 / 恒星座標を準備中…","#ffd54f");
 try{
 const starText=await fetchFirstText(WESTERN_STAR_URLS);
 const stars=parseWesternStarCsv(starText);
@@ -3518,7 +3518,7 @@ if(Object.keys(stars).length<500)throw new Error(`恒星座標件数不足 ${Obj
 WESTERN_LINE_STARS={...stars,...NICOLE_STANDARD_LINE_STARS};
 SKY_CONSTELLATION_LINES=[...NICOLE_STANDARD_CONSTELLATION_LINES];
 WESTERN_LINES_READY=true;
-try{localStorage.setItem(WESTERN_CACHE_KEY,JSON.stringify({savedAt:new Date().toISOString(),databaseVersion:"0.3.0",stars}));}catch(e){}
+try{localStorage.setItem(WESTERN_CACHE_KEY,JSON.stringify({savedAt:new Date().toISOString(),databaseVersion:"0.3.2",stars}));}catch(e){}
 setSkyLineStatus("");
 if($("#resultPanel-skymap")?.open)renderSkyChart();
 return;
@@ -3526,7 +3526,7 @@ return;
 WESTERN_LINE_STARS={...NICOLE_STANDARD_LINE_STARS};
 SKY_CONSTELLATION_LINES=[...NICOLE_STANDARD_CONSTELLATION_LINES];
 WESTERN_LINES_READY=false;
-setSkyLineStatus("Nicole標準星座線 v0.3.0（未取得の恒星座標は通信復帰後に補完）","#fb923c");
+setSkyLineStatus("Nicole標準星座線 v0.3.2（未取得の恒星座標は通信復帰後に補完）","#fb923c");
 if($("#resultPanel-skymap")?.open)renderSkyChart();
 return;
 }
@@ -6898,7 +6898,7 @@ function normalizeImportedPrivateStar(x){
   return{id:String(x.id||`my-${Date.now()}-${Math.random().toString(36).slice(2,8)}`),name:String(x.name).slice(0,80),mag:Number.isFinite(Number(x.mag))?Number(x.mag):5,ra:norm360(Number(x.ra)),dec:Math.max(-90,Math.min(90,Number(x.dec))),typeLabel:String(x.typeLabel||"恒星").slice(0,40),cat:String(x.cat||"").slice(0,60),dist:String(x.dist||"").slice(0,80),size:String(x.size||"").slice(0,80),scope:String(x.scope||"").slice(0,80),difficulty:Math.max(1,Math.min(5,Number(x.difficulty)||3)),highlight:String(x.highlight||"").slice(0,300),story:String(x.story||"").slice(0,3000)};
 }
 function exportNicoleUserData(){
-  const payload={schema:NICOLE_USER_DATA_SCHEMA,schemaVersion:1,appVersion:"2.1.1",exportedAt:new Date().toISOString(),data:{favoriteLocations:FAVORITE_LOCATIONS,privateStars:MY_STARS}};
+  const payload={schema:NICOLE_USER_DATA_SCHEMA,schemaVersion:1,appVersion:"2.1.2",exportedAt:new Date().toISOString(),data:{favoriteLocations:FAVORITE_LOCATIONS,privateStars:MY_STARS}};
   const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
   const url=URL.createObjectURL(blob),a=document.createElement("a");
   const stamp=new Date().toISOString().replace(/[:.]/g,"-").slice(0,19);
@@ -8616,7 +8616,7 @@ function runNicoleSelfCheck(){
   document.querySelectorAll("[id]").forEach(el=>{
     if(seen.has(el.id))duplicates.push(el.id); else seen.add(el.id);
   });
-  const report={version:"2.1.1",missing,duplicates:[...new Set(duplicates)],standalone:!!(window.navigator.standalone||matchMedia("(display-mode: standalone)").matches)};
+  const report={version:"2.1.2",missing,duplicates:[...new Set(duplicates)],standalone:!!(window.navigator.standalone||matchMedia("(display-mode: standalone)").matches)};
   window.NicoleDiagnostics=Object.assign(window.NicoleDiagnostics||{},report,{cameraSettings:()=>SKY_CAMERA_SETTINGS});
   if(missing.length||report.duplicates.length){
     console.error("Nicole startup self-check failed",report);

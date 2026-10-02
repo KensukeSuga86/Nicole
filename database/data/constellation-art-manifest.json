@@ -1,0 +1,706 @@
+[
+  {
+    "constellation_id": "UMa",
+    "asset": "assets/constellation-art/UMa.png",
+    "sha256": "f6a510cde907905003e5d3af4e01441ee951a9a0673e46006fa93711da728eba",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "UMi",
+    "asset": "assets/constellation-art/UMi.png",
+    "sha256": "0475febb886d110712b0a28fae3dd5ba16920b2243e377b0fdc85734be9feff0",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Dra",
+    "asset": "assets/constellation-art/Dra.png",
+    "sha256": "5ae579f9ecbf4c25d9f5ac0cbb59a5aa567419b3d49e20d5408615d35a24caf9",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Cas",
+    "asset": "assets/constellation-art/Cas.png",
+    "sha256": "4d4ed76115b118a7dc93b1a1dfff7a51f2288e89aa06e14a1fbfac648e25e150",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Cep",
+    "asset": "assets/constellation-art/Cep.png",
+    "sha256": "145144f86251c4e5e752ea874e0a3b40bbd3c5a522cb4d1cb2bf03889e8856e3",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Cam",
+    "asset": "assets/constellation-art/Cam.png",
+    "sha256": "e990b9db290ff9f310cb2d29c6899570d14676932374db66e96787a0442b754f",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Lyn",
+    "asset": "assets/constellation-art/Lyn.png",
+    "sha256": "07d62380fe06e935490f33918ca6d4b6b019ec8f843550c683fefec66ac7d2b1",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Cnc",
+    "asset": "assets/constellation-art/Cnc.png",
+    "sha256": "8cf108d8878f9510e814a1b12423ee41efea9b774f0f448a7086e2b94830778b",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Leo",
+    "asset": "assets/constellation-art/Leo.png",
+    "sha256": "8a8ac563827df8c0a83fb916855ed7a6ef9b3de06f39095047ea0745e6ff3c48",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "LMi",
+    "asset": "assets/constellation-art/LMi.png",
+    "sha256": "616b9209c927e5abeb40a806865a167f6626b36148aaf2a5780b618ccde55ddd",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Vir",
+    "asset": "assets/constellation-art/Vir.png",
+    "sha256": "f0425ffc16217b77992eb13db0453f1881ac3d96ca3809c3b1e8cc127f433393",
+    "source_mode": "project_override",
+    "original_override_name": "ChatGPT 画像 2026年9月30日 20_48_20.png",
+    "override_updated_at": "2026-10-01T11:29:43.015Z"
+  },
+  {
+    "constellation_id": "Com",
+    "asset": "assets/constellation-art/Com.png",
+    "sha256": "7626e5af232722574c67c9709cf9156b1b1db86f12d3443ec5b89eaa3145eff7",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "CVn",
+    "asset": "assets/constellation-art/CVn.png",
+    "sha256": "dab283154ffa38b6b0892dcd10646ea265ccda3a4db0c9301a6d65cac10f77de",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Boo",
+    "asset": "assets/constellation-art/Boo.png",
+    "sha256": "092f507c11ff46b77d6935a862a0fdde1845bd04ce83bff8f85f4c647250bdcb",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "CrB",
+    "asset": "assets/constellation-art/CrB.png",
+    "sha256": "8fd15ff75bba6d13d97705363d9707255064eddd8e9715892daac3aaea3a608c",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Ser",
+    "asset": "assets/constellation-art/Ser.png",
+    "sha256": "414c7feb798f913eaef93dd77fda606c129a7f0f598b8975d1c295035cfb9227",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Lib",
+    "asset": "assets/constellation-art/Lib.png",
+    "sha256": "3e219cd53a2c274b75ad8ee08580b4c3724d83b55ea1630e6d666debbde5cb1d",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Hya",
+    "asset": "assets/constellation-art/Hya.png",
+    "sha256": "f7b85d8ba316a44b3901bba297a48d89bfb0ca0a048cd12e1eeeaae77d2d1ef5",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Crt",
+    "asset": "assets/constellation-art/Crt.png",
+    "sha256": "f92fa002430e1387c636989b5e3d24fbcc9803bf195fc4b6fb2e5fc15dfaeb83",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Crv",
+    "asset": "assets/constellation-art/Crv.png",
+    "sha256": "230ddee69f1b504ca4f4997cec5375b968e2c40a9d28a7e5ad80a999dc1aed85",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Ant",
+    "asset": "assets/constellation-art/Ant.png",
+    "sha256": "fa4ebd926feb2b58a781f85f450d8212a850ba0ce80f96601fa9eb545851baa5",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Sex",
+    "asset": "assets/constellation-art/Sex.png",
+    "sha256": "d1fb7ba9821003507dc253421c8cbab5bde50cb814521101c6f964b4b715c9d7",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Her",
+    "asset": "assets/constellation-art/Her.png",
+    "sha256": "b688198cd8ec85bea6ec33fb9c9b199eb8758b9965c2dd79946de21028801fa0",
+    "source_mode": "project_override",
+    "original_override_name": "ChatGPT 画像 2026年9月30日 22_32_43.png",
+    "override_updated_at": "2026-10-01T11:29:42.971Z"
+  },
+  {
+    "constellation_id": "Oph",
+    "asset": "assets/constellation-art/Oph.png",
+    "sha256": "8706061ea29683ff0f0b9dc2a3b04b314f540112fad705726bfe5a79e1146269",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Sco",
+    "asset": "assets/constellation-art/Sco.png",
+    "sha256": "c4697e4ca7f79c2e1921f019427029651c8b38c3bfc9e1dfe0f6434496513e8e",
+    "source_mode": "project_override",
+    "original_override_name": "ChatGPT 画像 2026年9月30日 22_47_36.png",
+    "override_updated_at": "2026-10-01T11:29:43.005Z"
+  },
+  {
+    "constellation_id": "Sgr",
+    "asset": "assets/constellation-art/Sgr.png",
+    "sha256": "7e6f70545ab6053dd17275bed9b2390497fb403795945180fafe54b6de1a95ac",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "CrA",
+    "asset": "assets/constellation-art/CrA.png",
+    "sha256": "f1abcf4fc77fb76ba345e0f8f06b7e012e2c893bb8963f4fe9782f7b78c695e5",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Tel",
+    "asset": "assets/constellation-art/Tel.png",
+    "sha256": "d1ff4755bd2b5f5c7bf3959e31455885c3c02ae8dc62ec8e6fdf7b9ab16310f9",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Ara",
+    "asset": "assets/constellation-art/Ara.png",
+    "sha256": "563d74815effc62e019283278155cb31553d4ecfcc4b2baa4787b1534c2c8663",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Sct",
+    "asset": "assets/constellation-art/Sct.png",
+    "sha256": "20edc29c892a53c9efe262d72747e06ba77cc1c34e8b6d60f7207209ae285922",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Aql",
+    "asset": "assets/constellation-art/Aql.png",
+    "sha256": "caaba759aaf3939190e237ed0f53ac6ce8fc5ee5ab3b6df7365d67ea42835c0a",
+    "source_mode": "project_override",
+    "original_override_name": "氷光の翼を広げる天空の鷲.png",
+    "override_updated_at": "2026-10-01T11:29:42.959Z"
+  },
+  {
+    "constellation_id": "Sge",
+    "asset": "assets/constellation-art/Sge.png",
+    "sha256": "6dc197a7e831857343dbe2bf41272c5a8e1cee882606b8707062a73ee81ce0ea",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Vul",
+    "asset": "assets/constellation-art/Vul.png",
+    "sha256": "576771260b747f5c1d88d7b31750643ceacff1ccfbe44c7bfaae12f7556571ff",
+    "source_mode": "project_override",
+    "original_override_name": "天狐が運ぶ白鳥の星影.png",
+    "override_updated_at": "2026-10-01T11:29:43.024Z"
+  },
+  {
+    "constellation_id": "Lyr",
+    "asset": "assets/constellation-art/Lyr.png",
+    "sha256": "400080ebbf9f961ea3810b7f174d24c3f19944be0620727f1717b95a887c9943",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Cyg",
+    "asset": "assets/constellation-art/Cyg.png",
+    "sha256": "c490f9a68b8dd8170ca7df60999e0851e3ffcad76ba7145e4c62ec6e1355b4f5",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Del",
+    "asset": "assets/constellation-art/Del.png",
+    "sha256": "700a40ac432186c93bf822e3249277de76d93ae1fde310fc37a1739a9360d8ea",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Equ",
+    "asset": "assets/constellation-art/Equ.png",
+    "sha256": "f06aa5e16b67e8aef9a24d930395f39fed3d27698a8117856b97bafeefcc4f50",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "And",
+    "asset": "assets/constellation-art/And.png",
+    "sha256": "51c76a457b04941fd56a2b9348abaa2806c1ee5b9c5e50217439f83f271f33d1",
+    "source_mode": "project_override",
+    "original_override_name": "氷の星座に縛られた女神.png",
+    "override_updated_at": "2026-10-01T11:29:42.946Z"
+  },
+  {
+    "constellation_id": "Per",
+    "asset": "assets/constellation-art/Per.png",
+    "sha256": "08255b89a4e368c721f91023f4b029d97ce8539b29c93cd49cda21d60142ee94",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Peg",
+    "asset": "assets/constellation-art/Peg.png",
+    "sha256": "5e851b088917891921749e4c3e975b87813fd76254bcf25ee301200fa2968c8d",
+    "source_mode": "project_override",
+    "original_override_name": "ChatGPT 画像 2026年9月30日 19_07_23-2.png",
+    "override_updated_at": "2026-10-01T11:29:42.986Z"
+  },
+  {
+    "constellation_id": "Tri",
+    "asset": "assets/constellation-art/Tri.png",
+    "sha256": "747c9b8b09453be2142af3d4a18595c580ae729ed3f00fcaf075713cb4323414",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Ari",
+    "asset": "assets/constellation-art/Ari.png",
+    "sha256": "13cd5106bacf8a1012bb05081f8b248caea5648d728a75ac335e884493925640",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Psc",
+    "asset": "assets/constellation-art/Psc.png",
+    "sha256": "d23e78b0b7daaefe515736d3f0fef9c0156089e51f6be5de7bacd13a8b6a2cea",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Cet",
+    "asset": "assets/constellation-art/Cet.png",
+    "sha256": "af8423a65e42fd62c7c4b9960ea39ded38842a4bc6b33f5ed390f0ac868b824e",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Phe",
+    "asset": "assets/constellation-art/Phe.png",
+    "sha256": "ccb329c1eb459af687e37548953ac66354e170e88b4f93670cf0112a2e77d86d",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Scl",
+    "asset": "assets/constellation-art/Scl.png",
+    "sha256": "a85fa445b462794140318615eba330c3f1c94efc901c1e1d096e05b1a46e8e29",
+    "source_mode": "project_override",
+    "original_override_name": "氷光に輝く彫刻家の神殿.png",
+    "override_updated_at": "2026-10-01T11:29:42.995Z"
+  },
+  {
+    "constellation_id": "For",
+    "asset": "assets/constellation-art/For.png",
+    "sha256": "0560b05efad667d75b26e3a13b01a7d4c38e5f6b40db3544a7496cba0202ff04",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Eri",
+    "asset": "assets/constellation-art/Eri.png",
+    "sha256": "6032a1a6525523b5b272780a3178ca6f367bd02ebd274f921271934ad9a7165d",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Hor",
+    "asset": "assets/constellation-art/Hor.png",
+    "sha256": "6c3eb134083aa1fe4a63c78735d94c352d81c6da3af72cb5b7f3c640b887f5c2",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Cae",
+    "asset": "assets/constellation-art/Cae.png",
+    "sha256": "7e16c089d0bf91ee39336ffc311c2519303676089493715dd554c01fd7d645e8",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Col",
+    "asset": "assets/constellation-art/Col.png",
+    "sha256": "0cb987f8af360e952d4b3a1ce55422d721c8e3087d31e6b9493e313770966fbe",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Lac",
+    "asset": "assets/constellation-art/Lac.png",
+    "sha256": "c0572a9fc6bd3c702e177b90c0d63d26a9938e338eb4f19c172aa0298c4f1884",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Aqr",
+    "asset": "assets/constellation-art/Aqr.png",
+    "sha256": "1f8e8f305879aa3ba61de3715f36add8d9c31adc5b51ed2f47b1da8d94a217ca",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Cap",
+    "asset": "assets/constellation-art/Cap.png",
+    "sha256": "ec395aca243efba0dd1dabe2300ab4f74d60fefeb88927adf136d474b5e5c127",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "PsA",
+    "asset": "assets/constellation-art/PsA.png",
+    "sha256": "a3489a190e3bfe6d1c0244ac1d49cf082fa5aa76bfab69dc037726e2bb366fdc",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Mic",
+    "asset": "assets/constellation-art/Mic.png",
+    "sha256": "edadc8878f538b80f58c076ce9ecbed2cdb77822700032c710a54b6044537684",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Gru",
+    "asset": "assets/constellation-art/Gru.png",
+    "sha256": "2defdce41b517bf86787cdd202ec6171aa5c0a6b40f822d07476d658943e6237",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Tuc",
+    "asset": "assets/constellation-art/Tuc.png",
+    "sha256": "fe1a5c6eccd5a2bad6030e5f396a8ab8137793017121e4812a3bb80a0f765804",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Ind",
+    "asset": "assets/constellation-art/Ind.png",
+    "sha256": "3cef26be4d0c658a7b0b950b0ac5e5b628c157f46399ea5ed7dac4e0a31974e1",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Pav",
+    "asset": "assets/constellation-art/Pav.png",
+    "sha256": "fbd48fc0c37fc3da03bbe5189f7742fa338524d4ceb3944bba10bcfb9d50179d",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Ori",
+    "asset": "assets/constellation-art/Ori.png",
+    "sha256": "bc77202cf770294495fe9be1db0b0edb02d782c45843e8d35fbdca18dbb0b660",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Tau",
+    "asset": "assets/constellation-art/Tau.png",
+    "sha256": "2c52eb0ce104d6accc50724ee0b0bc900dd863f36cc67d107fb114c16ffb2d5f",
+    "source_mode": "project_override",
+    "original_override_name": "ChatGPT 画像 2026年9月30日 19_07_21-1.png",
+    "override_updated_at": "2026-10-01T11:42:43.791Z"
+  },
+  {
+    "constellation_id": "Gem",
+    "asset": "assets/constellation-art/Gem.png",
+    "sha256": "6d7a1955e92cdb5a413eac98aada422cb1177bcd2dcf8c8e89f69486fc794264",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Aur",
+    "asset": "assets/constellation-art/Aur.png",
+    "sha256": "d1c60df82ebaa22aeba5d88071171400a24dc26be5cd8b795370c2282c121391",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "CMa",
+    "asset": "assets/constellation-art/CMa.png",
+    "sha256": "0d36d011ec97842a1941d365004eef16fdce443b5b62c8fc758161347fd2d3ee",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "CMi",
+    "asset": "assets/constellation-art/CMi.png",
+    "sha256": "005a32ad91d8e7d367c227ca7780beb05252bdce7bbf1fe59fe1a84ade07aea7",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Mon",
+    "asset": "assets/constellation-art/Mon.png",
+    "sha256": "d0bfc4b698b99956c13da055a1b89d2a97fec17baa840c8a165378e2323ada50",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Lep",
+    "asset": "assets/constellation-art/Lep.png",
+    "sha256": "697dc191ce9a90fa07afceff9d119f68277a69e517af9ebc920b8537a6721919",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Pup",
+    "asset": "assets/constellation-art/Pup.png",
+    "sha256": "35d4ec0e252b08bcc99daf97acef153da869ea853e489ed27342d918bf1ddece",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Pyx",
+    "asset": "assets/constellation-art/Pyx.png",
+    "sha256": "1fd96797aaf84eece53f632a9dcd24682090bb6c5ff201ef6f38806e9759c347",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Car",
+    "asset": "assets/constellation-art/Car.png",
+    "sha256": "e74ff8fb1d94789cce9b02805a6a14004b4f1d3f7a7596af3dfc4e525ac9e07c",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Vel",
+    "asset": "assets/constellation-art/Vel.png",
+    "sha256": "034a9870b56f1a06a93e511bab377e8104a15a7e65a067520b0083ac2a5982aa",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Pic",
+    "asset": "assets/constellation-art/Pic.png",
+    "sha256": "f842cdf5982312a0198dd3ca9d3c911a049b1f55251bf5274e72054593dbce9d",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Dor",
+    "asset": "assets/constellation-art/Dor.png",
+    "sha256": "0de9c4831426d480caef95464600594650217816a20b9095cc5f5191836c3301",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Ret",
+    "asset": "assets/constellation-art/Ret.png",
+    "sha256": "9175c1df71f74b5a8ef8add685c8cdfe1bee84a9dc28fcfbf4241cc41e46a026",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Men",
+    "asset": "assets/constellation-art/Men.png",
+    "sha256": "df8c6a9026134711787082a464d1801b3db6b5b144818240eb1045cc32de36ad",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Cen",
+    "asset": "assets/constellation-art/Cen.png",
+    "sha256": "e064e3d5302d759a6a61c845d412b09cfd028492cbcd60b09b4dc5e3b5b081c0",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Cru",
+    "asset": "assets/constellation-art/Cru.png",
+    "sha256": "05e1781826e80235d0fb9c90eaf6e73d504d5e7a994ddc14f6862fa473e1e50f",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Lup",
+    "asset": "assets/constellation-art/Lup.png",
+    "sha256": "17f6b350fb1813bc5a998a0fecf4a6aa711c1aa70e205308859c5256fa44b62d",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Nor",
+    "asset": "assets/constellation-art/Nor.png",
+    "sha256": "e788f322469256e58b25ca33f64286ce2e9e7c65a5ea9dd42eb240bbe7a3bfdc",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Cir",
+    "asset": "assets/constellation-art/Cir.png",
+    "sha256": "f05e68ca8e64ae0fb882dee387f3ea920978da227306d15f2cdfcd82f58f49c2",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Mus",
+    "asset": "assets/constellation-art/Mus.png",
+    "sha256": "3d7f5a0aa62713207f4e9513ee36b8244f4c973e0fe8cabf56e1a9e043a28dc6",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Cha",
+    "asset": "assets/constellation-art/Cha.png",
+    "sha256": "c74542cefb8b44df68dae546f57c29428613beb35fe2be6fffce392f6ac3d3c8",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Vol",
+    "asset": "assets/constellation-art/Vol.png",
+    "sha256": "a3aa179dc91c2dbaf3d654dcc40812a7227a293c291691a0d7e2386d9395a8b1",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "TrA",
+    "asset": "assets/constellation-art/TrA.png",
+    "sha256": "bcb9093c3158ddcdaaeae328be83ec3da18011e9002cd532031f2cd45a5ff45c",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Hyi",
+    "asset": "assets/constellation-art/Hyi.png",
+    "sha256": "3e1e528481decadf131f6e0381384c6e6e9966aa47228cc25e2eb81f2e6593b1",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Oct",
+    "asset": "assets/constellation-art/Oct.png",
+    "sha256": "49ba432b2cd97798efd2c4289f6b42a0e69e9066e64d89b06d9c6eea171e33fd",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  },
+  {
+    "constellation_id": "Aps",
+    "asset": "assets/constellation-art/Aps.png",
+    "sha256": "06f2e48f5918db2a84f6f9370ba57dcf1d4446fe832e317f4ea56f9f35eed5c5",
+    "source_mode": "astrorium-v0.7.6-base",
+    "original_override_name": null,
+    "override_updated_at": null
+  }
+]

@@ -5260,7 +5260,7 @@
       "en": "Aquarius",
       "abbr": "Aqr"
     },
-    "standard_version": "1.0.0",
+    "standard_version": "1.0.1",
     "line": {
       "segments": [
         {
@@ -5320,40 +5320,60 @@
           "to": "HIP112716"
         },
         {
-          "from": "HIP114341",
-          "to": "HIP112542"
+          "from": "HIP112716",
+          "to": "HIP114341"
         }
       ],
       "star_ids": [
-        "HIP102618",
         "HIP106278",
         "HIP109074",
-        "HIP109139",
-        "HIP110003",
         "HIP110395",
         "HIP110960",
         "HIP111497",
-        "HIP112542",
-        "HIP112716",
-        "HIP113184",
+        "HIP114855",
+        "HIP115438",
+        "HIP110003",
+        "HIP109139",
+        "HIP102618",
+        "HIP114375",
         "HIP113368",
         "HIP113532",
+        "HIP113184",
         "HIP114341",
-        "HIP114375",
-        "HIP114855",
-        "HIP115438"
+        "HIP112716"
       ],
       "segment_count": 15,
-      "star_count": 17,
+      "star_count": 16,
       "source_mode": "edited",
       "excluded_membership_star_ids": [],
       "editor_added_stars_used": [
         {
-          "id": "HIP114341",
+          "id": "HIP110960",
           "name": null,
-          "ra_deg": 347.3617,
-          "dec_deg": -21.1724,
-          "magnitude_v": 3.68
+          "ra_deg": 337.20799999999997,
+          "dec_deg": -0.02,
+          "magnitude_v": 3.65
+        },
+        {
+          "id": "HIP111497",
+          "name": null,
+          "ra_deg": 338.8391,
+          "dec_deg": -0.1175,
+          "magnitude_v": 4.04
+        },
+        {
+          "id": "HIP114855",
+          "name": null,
+          "ra_deg": 348.9729,
+          "dec_deg": -9.0877,
+          "magnitude_v": 4.24
+        },
+        {
+          "id": "HIP115438",
+          "name": null,
+          "ra_deg": 350.7426,
+          "dec_deg": -20.1006,
+          "magnitude_v": 3.96
         },
         {
           "id": "HIP114375",
@@ -5370,39 +5390,11 @@
           "magnitude_v": 1.17
         },
         {
-          "id": "HIP115438",
-          "name": null,
-          "ra_deg": 350.7426,
-          "dec_deg": -20.1006,
-          "magnitude_v": 3.96
-        },
-        {
           "id": "HIP113532",
           "name": null,
           "ra_deg": 344.899,
           "dec_deg": -29.4623,
           "magnitude_v": 5.51
-        },
-        {
-          "id": "HIP111497",
-          "name": null,
-          "ra_deg": 338.8391,
-          "dec_deg": -0.1175,
-          "magnitude_v": 4.04
-        },
-        {
-          "id": "HIP112716",
-          "name": null,
-          "ra_deg": 342.3979,
-          "dec_deg": -13.5926,
-          "magnitude_v": 4.05
-        },
-        {
-          "id": "HIP114855",
-          "name": null,
-          "ra_deg": 348.9729,
-          "dec_deg": -9.0877,
-          "magnitude_v": 4.24
         },
         {
           "id": "HIP113184",
@@ -5412,18 +5404,18 @@
           "magnitude_v": 5.72
         },
         {
-          "id": "HIP110960",
+          "id": "HIP114341",
           "name": null,
-          "ra_deg": 337.20799999999997,
-          "dec_deg": -0.02,
-          "magnitude_v": 3.65
+          "ra_deg": 347.3617,
+          "dec_deg": -21.1724,
+          "magnitude_v": 3.68
         },
         {
-          "id": "HIP112542",
+          "id": "HIP112716",
           "name": null,
-          "ra_deg": 341.9282,
-          "dec_deg": -14.0564,
-          "magnitude_v": 5.68
+          "ra_deg": 342.3979,
+          "dec_deg": -13.5926,
+          "magnitude_v": 4.05
         }
       ]
     },
@@ -5446,7 +5438,10 @@
       "project_schema_version": 6,
       "app_version": "0.7.6",
       "project_exported_at": "2026-10-01T14:02:20.820Z",
-      "workflow_status": "done"
+      "workflow_status": "done",
+      "hotfix_app_version": "0.10.0",
+      "hotfix_project_exported_at": "2026-10-02T01:33:03.360Z",
+      "hotfix_project_sha256": "c3c535277955c8191b5f7881489d4451f0fc3d97e92974c91149717f476865cc"
     }
   },
   {

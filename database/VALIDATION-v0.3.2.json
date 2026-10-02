@@ -1,0 +1,16 @@
+{
+  "database_version": "0.3.2",
+  "validated_at": "2026-10-02",
+  "astronomical_data_changed": false,
+  "description_editor": true,
+  "constellations": 88,
+  "line_segments": 717,
+  "line_star_ids": 759,
+  "editor_categories": [
+    "constellations",
+    "stars",
+    "deep-sky",
+    "planets"
+  ],
+  "status": "pass"
+}

@@ -1,0 +1,30 @@
+{
+  "database_version": "0.3.1",
+  "source_filename": "Nicole-constellation-project-2026-10-02T01-33-03.json",
+  "source_sha256": "c3c535277955c8191b5f7881489d4451f0fc3d97e92974c91149717f476865cc",
+  "schema": "nicole-astrorium-constellation-project-v1",
+  "schemaVersion": 6,
+  "appVersion": "0.10.0",
+  "exportedAt": "2026-10-02T01:33:03.360Z",
+  "scope": "constellation-line hotfix only; artwork and other DB content unchanged from v0.3.0",
+  "changed_constellations": [
+    "Aqr"
+  ],
+  "line_changes": 1,
+  "aquarius_removed_segment": [
+    "HIP112542",
+    "HIP114341"
+  ],
+  "aquarius_added_segment": [
+    "HIP112716",
+    "HIP114341"
+  ],
+  "stats": {
+    "constellationCount": 88,
+    "artAdjusted": 0,
+    "lineEdited": 55,
+    "extraStars": 281,
+    "excludedStars": 0,
+    "userConstellations": 0
+  }
+}

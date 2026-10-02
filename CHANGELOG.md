@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.2
+- Nicole Astronomy Database v0.3.2へ固定参照を更新。
+- Nicole 0で修正済みのみずがめ座（Aqr）の星座線をNicole 1へ反映。
+- オンライン取得失敗時の同梱DBもv0.3.2へ更新。
+- PWAキャッシュを `nicole-pwa-v2.1.2` へ更新。
+
+
 ## 2.1.1
 - Nicole Astronomy Database v0.3.0 固定参照へ更新。
 - Nicole標準星座線を星図へ反映。

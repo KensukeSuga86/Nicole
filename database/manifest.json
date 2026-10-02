@@ -1,6 +1,6 @@
 {
   "database_name": "Nicole Astronomy Database",
-  "database_version": "0.3.0",
+  "database_version": "0.3.2",
   "schema_version": 5,
   "source": {
     "base_app": "Nicole the Astronavigator",
@@ -17,7 +17,8 @@
       "SIMBAD/CDS star verification target",
       "mythology provenance separation",
       "Miyazawa Kenji cultural-context tagging",
-      "Nicole the Astrorium v0.7.6 completed 88-constellation standard lines and artwork"
+      "Nicole the Astrorium v0.7.6 completed 88-constellation standard lines and artwork",
+      "browser-based description editor for common Nicole explanations"
     ],
     "constellation_standard_project": {
       "schema": "nicole-astrorium-constellation-project-v1",
@@ -25,6 +26,17 @@
       "app_version": "0.7.6",
       "exported_at": "2026-10-01T14:02:20.820Z",
       "sha256": "8f060f4e47a4060d43ab65b2c98dd67bb7f2f1c336091e84f345f99d37654739"
+    },
+    "constellation_standard_hotfix": {
+      "schema": "nicole-astrorium-constellation-project-v1",
+      "schema_version": 6,
+      "app_version": "0.10.0",
+      "exported_at": "2026-10-02T01:33:03.360Z",
+      "sha256": "c3c535277955c8191b5f7881489d4451f0fc3d97e92974c91149717f476865cc",
+      "changed_constellations": [
+        "Aqr"
+      ],
+      "line_changes": 1
     }
   },
   "id_policy": "Existing Nicole IDs are immutable. Existing IDs are preserved; new Messier objects use M1..M110.",
@@ -48,8 +60,8 @@
     "kenji_tagged_deep_sky": 1,
     "constellation_standard_entries": 88,
     "constellation_standard_line_segments": 717,
-    "constellation_standard_line_star_ids": 760,
-    "constellation_line_star_coordinates_embedded": 270,
+    "constellation_standard_line_star_ids": 759,
+    "constellation_line_star_coordinates_embedded": 269,
     "constellation_line_star_upstream_references": 490,
     "constellation_art_assets": 88,
     "constellation_art_image_overrides": 9,
@@ -61,8 +73,8 @@
     "data/catalog.json": "b0d5d5d5a971f4388ca9782555bdedade743932bb9d9049eba764cb4173409ca",
     "data/constellation-art-manifest.json": "b0ececd8009d01e532836d7a101601fb9da4ad5e9c83e6a63fd31b1e25fd3af7",
     "data/constellation-editor-audit.json": "1c718e71f26e7264d96e18a97577c2021f7cdf9b13277b24a4a32bdaa9fb9458",
-    "data/constellation-line-stars.json": "2a406de75bcc59b68c629556c468e850d1c4a3aa7ce1ee6b0868f4a5a4944418",
-    "data/constellation-standard.json": "f48aa7ad946c0292a7c06af61bb50d653b79573c385434cbfa12ba5f7dbe22fc",
+    "data/constellation-line-stars.json": "1a4e860cb1e5d9e22cbec1ff1b34af1e9280675d62a35071fb82cad0fa3ec25b",
+    "data/constellation-standard.json": "0d06741d5783567a119fa5c250d0b70e77cb2ba2d6e1f9149e13a1e4ada1994f",
     "data/constellations.json": "065949d6d6626c57c1f70afefacb59c56fb9841c5a7d13a96293425e9b383de8",
     "data/deep-sky.json": "b58707ac818e9fdecc67a5207b712a8e6a49cd82cb01357c8b71813b3e6d6d10",
     "data/external-sources.json": "efa281fae4a2c0165eca9904f89008c799ee87878aa8d201e0f627d12d410227",
@@ -73,7 +85,10 @@
     "schema/constellation-line-star.schema.json": "af284d018c86727b732ef5fe5ebc5d5ff00faec0e1c64e4b6d04d481e7a3e342",
     "schema/constellation-standard.schema.json": "983645a5aaf93cb3be6680c7f25fe177bdbe703381483dbc6984e3649e195d6f",
     "schema/constellation.schema.json": "6bad0249449a25670d4460f4e69fc7ae8748e69a0fb988cace2f81dfd3746052",
-    "schema/object.schema.json": "8deed814b54e6410d97b66f6e23631d7a4aa175b0075b153e6cef82d3972e83e"
+    "schema/object.schema.json": "8deed814b54e6410d97b66f6e23631d7a4aa175b0075b153e6cef82d3972e83e",
+    "provenance/constellation-project-hotfix-v0.3.1.json": "f8a451a6a15d6e954f1171dbfeee840f40de06c134e5cbb4c1a37617dd2465b9",
+    "description-editor.html": "731307e9d09d1d064558e69d6fb6f65d5b5955f72788d6ca1369f4cbf0df7780",
+    "description-editor.js": "3156dd2332515d06aa7308637c148b596a140d99955cc4d8052d9814ee16df41"
   },
   "constellation_art_manifest": "data/constellation-art-manifest.json"
 }

@@ -1416,18 +1416,6 @@
     ]
   },
   {
-    "id": "HIP112542",
-    "name": null,
-    "ra_deg": 341.9282,
-    "dec_deg": -14.0564,
-    "magnitude_v": 5.68,
-    "coordinate_status": "embedded",
-    "coordinate_source": "constellation-project-v0.7.6",
-    "used_by_constellations": [
-      "Aqr"
-    ]
-  },
-  {
     "id": "HIP112623",
     "name": null,
     "ra_deg": 342.1387,

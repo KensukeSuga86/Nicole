@@ -1,6 +1,6 @@
 {
   "summary": {
-    "database_version": "0.3.0",
+    "database_version": "0.3.2",
     "project_schema": "nicole-astrorium-constellation-project-v1",
     "project_schema_version": 6,
     "project_app_version": "0.7.6",
@@ -10,14 +10,14 @@
     "line_edited": 55,
     "line_base_adopted": 33,
     "line_segments": 717,
-    "line_star_ids": 760,
-    "line_star_coordinates_embedded": 270,
+    "line_star_ids": 759,
+    "line_star_coordinates_embedded": 269,
     "line_star_coordinates_upstream_reference": 490,
     "art_assets": 88,
     "art_adjusted": 82,
     "art_image_overrides": 9,
-    "project_extra_star_records": 282,
-    "project_extra_stars_used_by_final_lines": 270,
+    "project_extra_star_records": 281,
+    "project_extra_stars_used_by_final_lines": 269,
     "project_extra_stars_unused_by_final_lines": 12,
     "excluded_stars": 0,
     "user_constellations": 0,
@@ -31,6 +31,11 @@
       "override PNG decode",
       "line-star ID catalog",
       "v0.2.0 datasets retained"
+    ],
+    "hotfix_source_project": "Nicole-constellation-project-2026-10-02T01-33-03.json",
+    "hotfix_source_sha256": "c3c535277955c8191b5f7881489d4451f0fc3d97e92974c91149717f476865cc",
+    "hotfix_changed_constellations": [
+      "Aqr"
     ]
   },
   "constellations": [
@@ -725,9 +730,9 @@
       "id": "Aqr",
       "line_source": "edited",
       "segment_count": 15,
-      "line_star_count": 17,
-      "editor_added_star_count": 13,
-      "editor_added_star_used_count": 11,
+      "line_star_count": 16,
+      "editor_added_star_count": 12,
+      "editor_added_star_used_count": 10,
       "editor_added_star_unused_count": 2,
       "unused_editor_added_star_ids": [
         "Fomalhaut",
