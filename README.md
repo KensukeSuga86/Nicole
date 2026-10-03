@@ -10,20 +10,27 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 2.1.2**
+**Current Version: 2.1.3**
 
 ---
 
+## v2.1.3 の変更点
+- Nicole Astronomy Database **v0.3.3** を固定参照。
+- オンラインでは `/versions/0.3.3/` を取得し、失敗時は同梱DB v0.3.3へフォールバック。
+- 共通天文データ本体はv0.3.2と同一で、v0.3.3ではDatabase Editor/PWA側の更新を含む正本versionを採用。
+- PWAキャッシュを `nicole-pwa-v2.1.3` へ更新。
+- 既存の観測・星図・天候・月・彗星・流星群・撮影支援機能は維持。
+
 ## v2.1.2 の変更点
 - Nicole Astronomy Database **v0.3.2** を固定参照。
-- 2026-10-02にNicole 0へ正式反映した、みずがめ座（Aqr）の最新星座線をNicole 1へ更新。
+- 2026-10-02にNicole Astronomy Databaseへ正式反映した、みずがめ座（Aqr）の最新星座線をNicole the Astronavigatorへ更新。
 - オンライン取得失敗時は同梱DB v0.3.2へフォールバック。
-- 星座絵PNGはNicole 1では使用しないため、引き続き同梱しない。
+- 星座絵PNGはNicole the Astronavigatorでは使用しないため、引き続き同梱しない。
 - PWAキャッシュを `nicole-pwa-v2.1.2` へ更新。
 
 ## v2.1.1 の変更点
 - Nicole Astronomy Database v0.3.0 のオンライン参照は維持。
-- GitHub Pages用のローカルフォールバックから、Nicole 1で使用しない星座絵88枚を除外。
+- GitHub Pages用のローカルフォールバックから、Nicole the Astronavigatorで使用しない星座絵88枚を除外。
 - 星座線・恒星座標・天体データ等の必要JSONはローカルフォールバックとして継続同梱。
 - ユーザーデータのバックアップ／復元機能はv2.1.0から継続。
 - PWAキャッシュを `nicole-pwa-v2.1.1` へ更新。
@@ -480,7 +487,7 @@ apple-touch-icon.png
 
 `index.html` は画面本体、`bootstrap.js` は共通DB v0.2.0の読込とNicole互換データへの変換、`app.js` は天文計算・UI・組み込み使用マニュアルなどのアプリ本体です。
 
-`database/` にはオフラインフォールバック用の共通DB v0.3.2の必要データを同梱しています。星座絵アセットはNicole 1では使用しないため含めません。`sw.js` はPWA・オフラインキャッシュを管理します。
+`database/` にはオフラインフォールバック用の共通DB v0.3.2の必要データを同梱しています。星座絵アセットはNicole the Astronavigatorでは使用しないため含めません。`sw.js` はPWA・オフラインキャッシュを管理します。
 
 ---
 
