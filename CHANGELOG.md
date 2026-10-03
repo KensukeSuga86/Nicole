@@ -1,8 +1,14 @@
 # Changelog
 
+## 2.1.3
+- Nicole Astronomy Database v0.3.3へ固定参照を更新。
+- オンライン取得失敗時の同梱DB manifestもv0.3.3へ更新。
+- 共通天文データJSONはv0.3.2から変更なし。
+- PWAキャッシュを `nicole-pwa-v2.1.3` へ更新。
+
 ## 2.1.2
 - Nicole Astronomy Database v0.3.2へ固定参照を更新。
-- Nicole 0で修正済みのみずがめ座（Aqr）の星座線をNicole 1へ反映。
+- Nicole Astronomy Databaseで修正済みのみずがめ座（Aqr）の星座線をNicole the Astronavigatorへ反映。
 - オンライン取得失敗時の同梱DBもv0.3.2へ更新。
 - PWAキャッシュを `nicole-pwa-v2.1.2` へ更新。
 
