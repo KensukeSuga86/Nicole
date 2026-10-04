@@ -1,4 +1,4 @@
-const CACHE_VERSION="nicole-pwa-v2.1.3-icon-r3";
+const CACHE_VERSION="nicole-pwa-v2.1.3-icon-r4";
 const APP_CACHE=`${CACHE_VERSION}-app`;
 // Dynamic astronomical/weather data survives ordinary app releases; TTL policies expire it safely.
 const DATA_CACHE="nicole-data-v1";
@@ -24,8 +24,6 @@ const APP_SHELL_OPTIONAL=[
   "./app.js",
   "./bootstrap.js",
   "./manifest.webmanifest",
-  "./icon-192.png",
-  "./icon-512.png",
   "./apple-touch-icon-v213r5.png",
   "./database/manifest.json",
   "./database/data/constellations.json",
