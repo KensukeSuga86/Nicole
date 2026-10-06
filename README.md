@@ -10,9 +10,15 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 2.1.3**
+**Current Version: 2.1.4**
 
 ---
+
+## v2.1.4 の変更点
+- 流星群の年跨ぎに対応（12月は翌年分、1月は前年分も参照し、しぶんぎ座流星群などを正しく判定）。
+- 観測日時を同じ年の12月/1月へ移すと流星群データを自動再取得。
+- PWAキャッシュを `nicole-pwa-v2.1.4` へ更新。
+- 既存の観測・星図・天候・月・彗星・流星群・撮影支援機能は維持。
 
 ## v2.1.3 の変更点
 - Nicole Astronomy Database **v0.3.3** を固定参照。

@@ -3089,7 +3089,7 @@ if(tabName==="skymap"){
 if(tabName==="smallbodies")updateSmallBodyStoredStatus();
 if(tabName==="meteors"){
   const d=$("#inDatetime").value?new Date($("#inDatetime").value):new Date();
-  if(!METEOR_SHOWERS.length||meteorLoadedYear!==d.getFullYear())loadMeteorShowers();
+  if(!METEOR_SHOWERS.length||meteorLoadedYear!==d.getFullYear()||(meteorLoadedKey&&meteorLoadedKey!==meteorDataKey(d)))loadMeteorShowers();
   else renderMeteorShowers();
 }
 }
@@ -5697,7 +5697,18 @@ appendSkyHitActions(info,hit);
 流星群 オンライン取得（IMO → Cloudflare Worker）
 ===================================================== */
 let METEOR_SHOWERS=[];
+let METEOR_YEAR_SHOWERS=[];
 let meteorLoadedYear=null;
+let meteorLoadedKey=null;
+/* 年跨ぎ対応：12月は翌年分、1月は前年分も取得して活動中判定に使う */
+function meteorDataYears(date){
+const d=date instanceof Date&&!isNaN(date)?date:new Date();
+const y=d.getFullYear(),m=d.getMonth(),ys=[y];
+if(m===0)ys.unshift(y-1);
+if(m===11)ys.push(y+1);
+return ys;
+}
+function meteorDataKey(date){return meteorDataYears(date).join("+");}
 
 function parseISODateLocal(s){
 if(!s)return null;
@@ -5883,7 +5894,7 @@ return;
 }
 
 const active=METEOR_SHOWERS.filter(s=>isMeteorActiveOnDate(s,date)).sort((a,b)=>(b.zhr||0)-(a.zhr||0));
-const all=[...METEOR_SHOWERS].sort((a,b)=>String(a.peakStart||a.activeStart).localeCompare(String(b.peakStart||b.activeStart)));
+const all=[...(METEOR_YEAR_SHOWERS.length?METEOR_YEAR_SHOWERS:METEOR_SHOWERS)].sort((a,b)=>String(a.peakStart||a.activeStart).localeCompare(String(b.peakStart||b.activeStart)));
 
 $("#meteorActiveCount").textContent=`（${active.length}件）`;
 $("#meteorYearCount").textContent=`（${all.length}件）`;
@@ -5896,24 +5907,37 @@ all.forEach(s=>yearGrid.appendChild(makeMeteorYearCard(s)));
 
 async function loadMeteorShowers(){
 const date=$("#inDatetime").value?new Date($("#inDatetime").value):new Date();
-const year=date.getFullYear(),status=$("#meteorStatus");
+const year=date.getFullYear(),years=meteorDataYears(date),key=years.join("+"),status=$("#meteorStatus");
 status.className="meteor-status";
 status.textContent=`IMOの${year}年流星群カレンダーを取得しています…`;
 $("#meteorRefresh").disabled=true;
 
 try{
-const response=await fetch(`https://astro-nicole.hideld12.workers.dev/meteors?year=${year}`,{cache:"no-store"});
+const fetchYear=async y=>{
+const response=await fetch(`https://astro-nicole.hideld12.workers.dev/meteors?year=${y}`,{cache:"no-store"});
 if(!response.ok)throw new Error(`Nicole API HTTP ${response.status}`);
 const data=await response.json();
 if(!data.ok)throw new Error(data.error||"取得失敗");
-METEOR_SHOWERS=(data.showers||[]).filter(s=>Number.isFinite(s.ra)&&Number.isFinite(s.dec));
+return (data.showers||[]).filter(s=>Number.isFinite(s.ra)&&Number.isFinite(s.dec));
+};
+const results=await Promise.allSettled(years.map(fetchYear));
+const main=results[years.indexOf(year)];
+if(main.status!=="fulfilled")throw main.reason;
+const seen=new Set(),merged=[],missing=[];
+results.forEach((r,i)=>{
+if(r.status!=="fulfilled"){missing.push(years[i]);return;}
+for(const s of r.value){const k=`${s.code||s.name}|${s.activeStart}|${s.activeEnd}`;if(seen.has(k))continue;seen.add(k);merged.push(s);}
+});
+METEOR_YEAR_SHOWERS=main.value;
+METEOR_SHOWERS=merged;
 meteorLoadedYear=year;
+meteorLoadedKey=missing.length?null:key;
 renderMeteorShowers();
 status.className="meteor-status";
-status.textContent=`取得完了：${year}年の主要流星群 ${METEOR_SHOWERS.length}件 / 出典 IMO Meteor Shower Calendar`;
+status.textContent=`取得完了：${year}年の主要流星群 ${METEOR_YEAR_SHOWERS.length}件`+(years.length>1&&!missing.length?`（年跨ぎ判定のため${years.filter(y=>y!==year).join("・")}年分も参照）`:"")+(missing.length?`（${missing.join("・")}年分は未提供のため年跨ぎ分は表示されません）`:"")+` / 出典 IMO Meteor Shower Calendar`;
 if($("#resultPanel-skymap")?.open)renderSkyChart();
 }catch(e){
-METEOR_SHOWERS=[];meteorLoadedYear=null;
+METEOR_SHOWERS=[];METEOR_YEAR_SHOWERS=[];meteorLoadedYear=null;meteorLoadedKey=null;
 status.className="meteor-status error";
 status.innerHTML=`取得に失敗しました。Cloudflare Workerの /meteors を確認してください。<br><span style="font-size:10px">${escapeHTML(String(e.message||e))}</span>`;
 }finally{$("#meteorRefresh").disabled=false;}
@@ -6898,7 +6922,7 @@ function normalizeImportedPrivateStar(x){
   return{id:String(x.id||`my-${Date.now()}-${Math.random().toString(36).slice(2,8)}`),name:String(x.name).slice(0,80),mag:Number.isFinite(Number(x.mag))?Number(x.mag):5,ra:norm360(Number(x.ra)),dec:Math.max(-90,Math.min(90,Number(x.dec))),typeLabel:String(x.typeLabel||"恒星").slice(0,40),cat:String(x.cat||"").slice(0,60),dist:String(x.dist||"").slice(0,80),size:String(x.size||"").slice(0,80),scope:String(x.scope||"").slice(0,80),difficulty:Math.max(1,Math.min(5,Number(x.difficulty)||3)),highlight:String(x.highlight||"").slice(0,300),story:String(x.story||"").slice(0,3000)};
 }
 function exportNicoleUserData(){
-  const payload={schema:NICOLE_USER_DATA_SCHEMA,schemaVersion:1,appVersion:"2.1.3",exportedAt:new Date().toISOString(),data:{favoriteLocations:FAVORITE_LOCATIONS,privateStars:MY_STARS}};
+  const payload={schema:NICOLE_USER_DATA_SCHEMA,schemaVersion:1,appVersion:"2.1.4",exportedAt:new Date().toISOString(),data:{favoriteLocations:FAVORITE_LOCATIONS,privateStars:MY_STARS}};
   const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
   const url=URL.createObjectURL(blob),a=document.createElement("a");
   const stamp=new Date().toISOString().replace(/[:.]/g,"-").slice(0,19);
@@ -7060,7 +7084,7 @@ document.querySelectorAll(".result-section-panel").forEach(section=>{
       updateSmallBodyStoredStatus();
     }else if(name==="meteors"){
       const d=$("#inDatetime").value?new Date($("#inDatetime").value):new Date();
-      if(!METEOR_SHOWERS.length||meteorLoadedYear!==d.getFullYear())loadMeteorShowers();
+      if(!METEOR_SHOWERS.length||meteorLoadedYear!==d.getFullYear()||(meteorLoadedKey&&meteorLoadedKey!==meteorDataKey(d)))loadMeteorShowers();
       else renderMeteorShowers();
     }else if(name==="mooncalendar"){
       const d=currentDate instanceof Date&&!isNaN(currentDate)?currentDate:new Date();
@@ -8257,12 +8281,14 @@ SKY_VIEW_DATE=new Date(date);
 /* 観測地点確定時に天候予報を取得。オフライン時は保存済みAPI応答を利用できる場合がある。 */
 loadWeatherForecast(lat,lon);
 
-/* 流星群は同じ年のデータなら観測条件だけ再計算 */
+/* 流星群は同じ年（年跨ぎ参照年を含む）のデータなら観測条件だけ再計算 */
 if(METEOR_SHOWERS.length){
-if(meteorLoadedYear===date.getFullYear()){
+if(meteorLoadedYear===date.getFullYear()&&(!meteorLoadedKey||meteorLoadedKey===meteorDataKey(date))){
 renderMeteorShowers();
+}else if(meteorLoadedYear===date.getFullYear()){
+loadMeteorShowers();
 }else{
-METEOR_SHOWERS=[];meteorLoadedYear=null;
+METEOR_SHOWERS=[];METEOR_YEAR_SHOWERS=[];meteorLoadedYear=null;meteorLoadedKey=null;
 if($("#meteorStatus")){
 $("#meteorStatus").className="meteor-status";
 $("#meteorStatus").textContent=`観測年が${date.getFullYear()}年に変わりました。「最新データを取得」で更新してください。`;
@@ -8616,7 +8642,7 @@ function runNicoleSelfCheck(){
   document.querySelectorAll("[id]").forEach(el=>{
     if(seen.has(el.id))duplicates.push(el.id); else seen.add(el.id);
   });
-  const report={version:"2.1.3",missing,duplicates:[...new Set(duplicates)],standalone:!!(window.navigator.standalone||matchMedia("(display-mode: standalone)").matches)};
+  const report={version:"2.1.4",missing,duplicates:[...new Set(duplicates)],standalone:!!(window.navigator.standalone||matchMedia("(display-mode: standalone)").matches)};
   window.NicoleDiagnostics=Object.assign(window.NicoleDiagnostics||{},report,{cameraSettings:()=>SKY_CAMERA_SETTINGS});
   if(missing.length||report.duplicates.length){
     console.error("Nicole startup self-check failed",report);
