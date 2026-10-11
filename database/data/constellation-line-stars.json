@@ -9966,7 +9966,8 @@
       "https://creativival.github.io/hipparcos_planetarium_data_creator/data/hip_constellation_line_star.csv"
     ],
     "used_by_constellations": [
-      "Oph"
+      "Oph",
+      "Ser"
     ]
   },
   {
@@ -10039,24 +10040,6 @@
     ],
     "used_by_constellations": [
       "Her"
-    ]
-  },
-  {
-    "id": "HIP84880",
-    "hip": 84880,
-    "name": null,
-    "ra_deg": null,
-    "dec_deg": null,
-    "magnitude_v": null,
-    "coordinate_status": "upstream_reference",
-    "coordinate_source": "Hipparcos Planetarium Data Creator / Stellarium-derived line-star catalog",
-    "source_file": "hip_constellation_line_star.csv",
-    "source_urls": [
-      "https://raw.githubusercontent.com/creativival/hipparcos_planetarium_data_creator/main/data/hip_constellation_line_star.csv",
-      "https://creativival.github.io/hipparcos_planetarium_data_creator/data/hip_constellation_line_star.csv"
-    ],
-    "used_by_constellations": [
-      "Ser"
     ]
   },
   {
@@ -10333,24 +10316,6 @@
     "coordinate_source": "constellation-project-v0.7.6",
     "used_by_constellations": [
       "Cet"
-    ]
-  },
-  {
-    "id": "HIP86565",
-    "hip": 86565,
-    "name": null,
-    "ra_deg": null,
-    "dec_deg": null,
-    "magnitude_v": null,
-    "coordinate_status": "upstream_reference",
-    "coordinate_source": "Hipparcos Planetarium Data Creator / Stellarium-derived line-star catalog",
-    "source_file": "hip_constellation_line_star.csv",
-    "source_urls": [
-      "https://raw.githubusercontent.com/creativival/hipparcos_planetarium_data_creator/main/data/hip_constellation_line_star.csv",
-      "https://creativival.github.io/hipparcos_planetarium_data_creator/data/hip_constellation_line_star.csv"
-    ],
-    "used_by_constellations": [
-      "Ser"
     ]
   },
   {
@@ -12049,6 +12014,56 @@
     "coordinate_source": "constellation-project-v0.7.6",
     "used_by_constellations": [
       "Gem"
+    ]
+  },
+  {
+    "id": "HIP76852",
+    "name": "へび座ι星",
+    "ra_deg": 235.387885,
+    "dec_deg": 19.670506,
+    "magnitude_v": 4.52,
+    "coordinate_status": "embedded",
+    "coordinate_source": "Hipparcos new reduction (van Leeuwen 2007, CDS I/311); V from SIMBAD",
+    "used_by_constellations": [
+      "Ser"
+    ]
+  },
+  {
+    "id": "HIP79593",
+    "name": "へびつかい座δ星（イェド・プリオル）",
+    "ra_deg": 243.586526,
+    "dec_deg": -3.693976,
+    "magnitude_v": 2.75,
+    "coordinate_status": "embedded",
+    "coordinate_source": "Hipparcos new reduction (van Leeuwen 2007, CDS I/311); V from SIMBAD",
+    "used_by_constellations": [
+      "Oph",
+      "Ser"
+    ]
+  },
+  {
+    "id": "HIP87108",
+    "name": "へびつかい座γ星",
+    "ra_deg": 266.973226,
+    "dec_deg": 2.707459,
+    "magnitude_v": 3.75,
+    "coordinate_status": "embedded",
+    "coordinate_source": "Hipparcos new reduction (van Leeuwen 2007, CDS I/311); V from SIMBAD",
+    "used_by_constellations": [
+      "Oph"
+    ]
+  },
+  {
+    "id": "HIP88048",
+    "name": "へびつかい座ν星",
+    "ra_deg": 269.756656,
+    "dec_deg": -9.77335,
+    "magnitude_v": 3.32,
+    "coordinate_status": "embedded",
+    "coordinate_source": "Hipparcos new reduction (van Leeuwen 2007, CDS I/311); V from SIMBAD",
+    "used_by_constellations": [
+      "Oph",
+      "Ser"
     ]
   }
 ]
