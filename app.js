@@ -3510,7 +3510,7 @@ return;
 }
 
 if(NICOLE_STANDARD_CONSTELLATION_LINES){
-setSkyLineStatus("Nicole標準星座線 v0.3.2 / 恒星座標を準備中…","#ffd54f");
+setSkyLineStatus("Nicole標準星座線 v0.4.0 / 恒星座標を準備中…","#ffd54f");
 try{
 const starText=await fetchFirstText(WESTERN_STAR_URLS);
 const stars=parseWesternStarCsv(starText);
@@ -3518,7 +3518,7 @@ if(Object.keys(stars).length<500)throw new Error(`恒星座標件数不足 ${Obj
 WESTERN_LINE_STARS={...stars,...NICOLE_STANDARD_LINE_STARS};
 SKY_CONSTELLATION_LINES=[...NICOLE_STANDARD_CONSTELLATION_LINES];
 WESTERN_LINES_READY=true;
-try{localStorage.setItem(WESTERN_CACHE_KEY,JSON.stringify({savedAt:new Date().toISOString(),databaseVersion:"0.3.2",stars}));}catch(e){}
+try{localStorage.setItem(WESTERN_CACHE_KEY,JSON.stringify({savedAt:new Date().toISOString(),databaseVersion:"0.4.0",stars}));}catch(e){}
 setSkyLineStatus("");
 if($("#resultPanel-skymap")?.open)renderSkyChart();
 return;
@@ -3526,7 +3526,7 @@ return;
 WESTERN_LINE_STARS={...NICOLE_STANDARD_LINE_STARS};
 SKY_CONSTELLATION_LINES=[...NICOLE_STANDARD_CONSTELLATION_LINES];
 WESTERN_LINES_READY=false;
-setSkyLineStatus("Nicole標準星座線 v0.3.2（未取得の恒星座標は通信復帰後に補完）","#fb923c");
+setSkyLineStatus("Nicole標準星座線 v0.4.0（未取得の恒星座標は通信復帰後に補完）","#fb923c");
 if($("#resultPanel-skymap")?.open)renderSkyChart();
 return;
 }
