@@ -1315,22 +1315,6 @@
     "line": {
       "segments": [
         {
-          "from": "HIP77516",
-          "to": "HIP77622"
-        },
-        {
-          "from": "HIP77622",
-          "to": "HIP77070"
-        },
-        {
-          "from": "HIP77070",
-          "to": "HIP76276"
-        },
-        {
-          "from": "HIP76276",
-          "to": "HIP77233"
-        },
-        {
           "from": "HIP77233",
           "to": "HIP78072"
         },
@@ -1340,54 +1324,83 @@
         },
         {
           "from": "HIP77450",
+          "to": "HIP76852"
+        },
+        {
+          "from": "HIP76852",
           "to": "HIP77233"
         },
         {
-          "from": "HIP92946",
-          "to": "HIP89962"
+          "from": "HIP77233",
+          "to": "HIP76276"
         },
         {
-          "from": "HIP89962",
-          "to": "HIP86565"
+          "from": "HIP76276",
+          "to": "HIP77070"
         },
         {
-          "from": "HIP86565",
+          "from": "HIP77070",
+          "to": "HIP77622"
+        },
+        {
+          "from": "HIP77622",
+          "to": "HIP77516"
+        },
+        {
+          "from": "HIP77516",
+          "to": "HIP79593"
+        },
+        {
+          "from": "HIP84012",
           "to": "HIP86263"
         },
         {
           "from": "HIP86263",
-          "to": "HIP84880"
+          "to": "HIP88048"
+        },
+        {
+          "from": "HIP88048",
+          "to": "HIP89962"
+        },
+        {
+          "from": "HIP89962",
+          "to": "HIP92946"
         }
       ],
       "star_ids": [
         "HIP76276",
+        "HIP76852",
         "HIP77070",
         "HIP77233",
         "HIP77450",
         "HIP77516",
         "HIP77622",
         "HIP78072",
-        "HIP84880",
+        "HIP79593",
+        "HIP84012",
         "HIP86263",
-        "HIP86565",
+        "HIP88048",
         "HIP89962",
         "HIP92946"
       ],
-      "segment_count": 11,
-      "star_count": 12,
-      "source_mode": "v0.7.6_base_adopted",
+      "segment_count": 13,
+      "star_count": 14,
+      "source_mode": "sky_and_telescope_shared_stars",
       "excluded_membership_star_ids": [],
-      "editor_added_stars_used": []
+      "editor_added_stars_used": [],
+      "shared_with": [
+        "Oph"
+      ]
     },
     "art": {
       "asset": "assets/constellation-art/Ser.png",
       "placement": {
-        "ra_deg": 237.5,
-        "dec_deg": 6,
-        "width_deg": 24.640419997416224,
-        "height_deg": 24.578818947422683,
-        "rotation_deg": -36,
-        "flip_x": true,
+        "ra_deg": 254,
+        "dec_deg": 2.5,
+        "width_deg": 48.78634617634285,
+        "height_deg": 43.919603230589054,
+        "rotation_deg": 94,
+        "flip_x": false,
         "flip_y": false,
         "opacity": 0.58
       },
@@ -1397,8 +1410,9 @@
       "project_schema": "nicole-astrorium-constellation-project-v1",
       "project_schema_version": 6,
       "app_version": "0.7.6",
-      "project_exported_at": "2026-10-01T14:02:20.820Z",
-      "workflow_status": "done"
+      "project_exported_at": "2026-10-08T23:02:51.579Z",
+      "workflow_status": "done",
+      "line_revision": "2026-10-09 shared-star Ser/Oph (Sky & Telescope figures)"
     }
   },
   {
@@ -2092,6 +2106,10 @@
         },
         {
           "from": "HIP83000",
+          "to": "HIP79593"
+        },
+        {
+          "from": "HIP79593",
           "to": "HIP79882"
         },
         {
@@ -2105,22 +2123,36 @@
         {
           "from": "HIP84012",
           "to": "HIP85755"
+        },
+        {
+          "from": "HIP86742",
+          "to": "HIP87108"
+        },
+        {
+          "from": "HIP87108",
+          "to": "HIP88048"
         }
       ],
       "star_ids": [
+        "HIP79593",
         "HIP79882",
         "HIP81377",
         "HIP83000",
         "HIP84012",
         "HIP85755",
         "HIP86032",
-        "HIP86742"
+        "HIP86742",
+        "HIP87108",
+        "HIP88048"
       ],
-      "segment_count": 7,
-      "star_count": 7,
-      "source_mode": "v0.7.6_base_adopted",
+      "segment_count": 10,
+      "star_count": 10,
+      "source_mode": "sky_and_telescope_shared_stars",
       "excluded_membership_star_ids": [],
-      "editor_added_stars_used": []
+      "editor_added_stars_used": [],
+      "shared_with": [
+        "Ser"
+      ]
     },
     "art": {
       "asset": "assets/constellation-art/Oph.png",
@@ -2129,7 +2161,7 @@
         "dec_deg": -4,
         "width_deg": 55.56600000000001,
         "height_deg": 41.67450000000001,
-        "rotation_deg": -24,
+        "rotation_deg": -20,
         "flip_x": false,
         "flip_y": false,
         "opacity": 0.58
@@ -2140,8 +2172,9 @@
       "project_schema": "nicole-astrorium-constellation-project-v1",
       "project_schema_version": 6,
       "app_version": "0.7.6",
-      "project_exported_at": "2026-10-01T14:02:20.820Z",
-      "workflow_status": "done"
+      "project_exported_at": "2026-10-08T23:02:51.579Z",
+      "workflow_status": "done",
+      "line_revision": "2026-10-09 shared-star Ser/Oph (Sky & Telescope figures)"
     }
   },
   {

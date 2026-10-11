@@ -10,9 +10,14 @@ Nicole the Astronavigator は、天体観測の計画、観測中の星空確認
 
 https://kensukesuga86.github.io/Nicole/
 
-**Current Version: 2.1.4**
+**Current Version: 2.1.5**
 
 ---
+
+## v2.1.5 の変更点
+- Nicole Astronomy Database **v0.4.0** を固定参照。オンライン取得失敗時は同梱v0.4.0へフォールバック。
+- 278天体の拡充解説、へび座・へびつかい座の星座線（722線分）を更新。
+- PWAキャッシュを `nicole-pwa-v2.1.5` へ更新。
 
 ## v2.1.4 の変更点
 - 流星群の年跨ぎに対応（12月は翌年分、1月は前年分も参照し、しぶんぎ座流星群などを正しく判定）。
@@ -493,7 +498,7 @@ apple-touch-icon.png
 
 `index.html` は画面本体、`bootstrap.js` は共通DB v0.2.0の読込とNicole互換データへの変換、`app.js` は天文計算・UI・組み込み使用マニュアルなどのアプリ本体です。
 
-`database/` にはオフラインフォールバック用の共通DB v0.3.2の必要データを同梱しています。星座絵アセットはNicole the Astronavigatorでは使用しないため含めません。`sw.js` はPWA・オフラインキャッシュを管理します。
+`database/` にはオフラインフォールバック用の共通DB v0.4.0の必要データを同梱しています。星座絵アセットはNicole the Astronavigatorでは使用しないため含めません。`sw.js` はPWA・オフラインキャッシュを管理します。
 
 ---
 

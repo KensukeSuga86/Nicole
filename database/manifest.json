@@ -1,6 +1,6 @@
 {
   "database_name": "Nicole Astronomy Database",
-  "database_version": "0.3.3",
+  "database_version": "0.4.0",
   "schema_version": 5,
   "source": {
     "base_app": "Nicole the Astronavigator",
@@ -19,7 +19,8 @@
       "Miyazawa Kenji cultural-context tagging",
       "Nicole the Astrorium v0.7.6 completed 88-constellation standard lines and artwork",
       "browser-based description editor for common Nicole explanations",
-      "installable PWA shell for the browser-based common-description editor"
+      "installable PWA shell for the browser-based common-description editor",
+      "v0.4.0 story-rich explanations for all 278 objects (deep-sky 119, stars 64, constellations 88, planets 7) with recent observations and missions"
     ],
     "constellation_standard_project": {
       "schema": "nicole-astrorium-constellation-project-v1",
@@ -38,6 +39,16 @@
         "Aqr"
       ],
       "line_changes": 1
+    },
+    "constellation_standard_revision_v0_4_0": {
+      "changed_constellations": [
+        "Ser",
+        "Oph"
+      ],
+      "basis": "Sky & Telescope / IAU chart figures (Stellarium modern_st)",
+      "line_segments_before": 717,
+      "line_segments_after": 722,
+      "art_placement_source": "Nicole-constellation-project-2026-10-08T23-02-51.json"
     }
   },
   "id_policy": "Existing Nicole IDs are immutable. Existing IDs are preserved; new Messier objects use M1..M110.",
@@ -60,41 +71,42 @@
     "kenji_tagged_stars": 4,
     "kenji_tagged_deep_sky": 1,
     "constellation_standard_entries": 88,
-    "constellation_standard_line_segments": 717,
-    "constellation_standard_line_star_ids": 759,
-    "constellation_line_star_coordinates_embedded": 269,
-    "constellation_line_star_upstream_references": 490,
+    "constellation_standard_line_segments": 722,
+    "constellation_standard_line_star_ids": 761,
+    "constellation_line_star_coordinates_embedded": 273,
+    "constellation_line_star_upstream_references": 488,
     "constellation_art_assets": 88,
     "constellation_art_image_overrides": 9,
     "constellation_line_edited": 55,
-    "constellation_line_base_adopted": 33
+    "constellation_line_base_adopted": 33,
+    "explanations_enriched_v0_4_0": 278
   },
   "checksums_sha256": {
     "data/asterisms.json": "4be9081432e29f7bea745fae65a9a0595f9217cb2f0dadf6d2fd223e6f164e70",
-    "data/catalog.json": "b0d5d5d5a971f4388ca9782555bdedade743932bb9d9049eba764cb4173409ca",
+    "data/catalog.json": "9f85d7363f542ddb0f973023ef3e1decd75cd10ad79bba13fd25af9595346bbc",
     "data/constellation-art-manifest.json": "b0ececd8009d01e532836d7a101601fb9da4ad5e9c83e6a63fd31b1e25fd3af7",
-    "data/constellation-editor-audit.json": "1c718e71f26e7264d96e18a97577c2021f7cdf9b13277b24a4a32bdaa9fb9458",
-    "data/constellation-line-stars.json": "1a4e860cb1e5d9e22cbec1ff1b34af1e9280675d62a35071fb82cad0fa3ec25b",
-    "data/constellation-standard.json": "0d06741d5783567a119fa5c250d0b70e77cb2ba2d6e1f9149e13a1e4ada1994f",
-    "data/constellations.json": "065949d6d6626c57c1f70afefacb59c56fb9841c5a7d13a96293425e9b383de8",
-    "data/deep-sky.json": "b58707ac818e9fdecc67a5207b712a8e6a49cd82cb01357c8b71813b3e6d6d10",
+    "data/constellation-editor-audit.json": "a80291cdf2fdea5402ebbf2a8bea8cca45336fbf604515dcac3b8d96b6f781c8",
+    "data/constellation-line-stars.json": "2b62ec03d413c84e3f5dd30cba76b01707f945ccc699df122c9192b960ff0fef",
+    "data/constellation-standard.json": "b4407303f17cf4440b3efe6c40ea95104bc79c5873e2920874ccec7ca1bd40f7",
+    "data/constellations.json": "41e8ccdb00452e54f18faf47c2775bc4bef6d034c12fac922c52b6c0bc7d6af8",
+    "data/deep-sky.json": "8750f503202c048bb4c7600ba6b1bd3ec691e843d664572b5e111537bf525e31",
     "data/external-sources.json": "efa281fae4a2c0165eca9904f89008c799ee87878aa8d201e0f627d12d410227",
-    "data/planets.json": "7eab9ec32e5c9d508489a3d2585e64d1d9f6d4f5417392b90ad124d671f91cb7",
+    "data/planets.json": "652dbb6b1a5fb7fd59a48aee23b5210d40b96d3155b001ec73c56a68f928f330",
     "data/solar-system.json": "76fb6a99bb3101b9f0f531f8913f51e1c809a39739796e4ea325ae0d5863be22",
     "data/sources.json": "a48e2f0b014fea50e25d7283a50b836c45384d0731b4592e85b5fdd1e4d74499",
-    "data/stars.json": "d149f744b20a4cf8ec8867951807204e187b37f1b0d0326df63ac7a31886386d",
+    "data/stars.json": "640a773b27ee26bec41f9cf3a8b30f4455299594a2af10a0f8a755210268701d",
     "schema/constellation-line-star.schema.json": "af284d018c86727b732ef5fe5ebc5d5ff00faec0e1c64e4b6d04d481e7a3e342",
     "schema/constellation-standard.schema.json": "983645a5aaf93cb3be6680c7f25fe177bdbe703381483dbc6984e3649e195d6f",
     "schema/constellation.schema.json": "6bad0249449a25670d4460f4e69fc7ae8748e69a0fb988cace2f81dfd3746052",
     "schema/object.schema.json": "8deed814b54e6410d97b66f6e23631d7a4aa175b0075b153e6cef82d3972e83e",
     "provenance/constellation-project-hotfix-v0.3.1.json": "f8a451a6a15d6e954f1171dbfeee840f40de06c134e5cbb4c1a37617dd2465b9",
-    "description-editor.html": "6569c930a1ef5a096a3fe80fea57103ea2572d31dd90a644e4de5023ea2abf68",
-    "description-editor.js": "62e707932e28f8d0a4d5e55710ad1c108b151e352524d636d78c37cb0744a027",
-    "editor.webmanifest": "60dc540c19109504ef356bdafcd26521cf9293607da7b0f8652036dd86037d0b",
-    "editor-sw.js": "2e9ef004a91a51029e3b547c5050f13d2a688aa33d16307261fc6b667eb03c6f",
-    "assets/editor/icon-192.png": "6e8a8dcc56e18c5a7c1b81d067c19afae0ac6449d4d4043bc3a302149918ca11",
-    "assets/editor/icon-512.png": "ed2174256ddb068213fb6e66c827de37f90a7e1e64ec8ec1fb61acb44ccffda3",
-    "assets/editor/apple-touch-icon.png": "2e550922a0705430131750711951be33025ee92f8060e4b6798b2fed230eeccf"
+    "description-editor.html": "c8f2dbe758c99fb0e24961369ba8ee0d5919f4a14178f97c328ef05ec6c7608e",
+    "description-editor.js": "db970b95a9ccf57b56853d5ec32bd0d82b840a63c198fe3f799e37fcdf97af6a",
+    "editor.webmanifest": "415157d98ffaa99f6862bac9dd79aa52c4eec5fc950081769cf58ffa5caf83fd",
+    "editor-sw.js": "28879f5155dd9953b9a689628fc6417625c2ad888cc69993574b229246dc02a7",
+    "assets/editor/icon-192.png": "dc0ca6862620c98b2e9b39d10e5e910dedc01e9f3049302abfbcf6fdba5478d5",
+    "assets/editor/icon-512.png": "6e23d7d976c6bcff0adf00d5c370e27ca4536adaf53f3e771406e33deb548cf3",
+    "assets/editor/apple-touch-icon.png": "860daac1b706a1bf52f1920372ecde226259ae4bfe1aeaf3325e7fba735160e5"
   },
   "constellation_art_manifest": "data/constellation-art-manifest.json"
 }

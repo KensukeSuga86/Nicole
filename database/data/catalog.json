@@ -116,7 +116,7 @@
   {
     "id": "EpsLyr",
     "kind": "star",
-    "name_ja": "こと座ε星",
+    "name_ja": "こと座ε星（ダブル・ダブル）",
     "file": "stars.json"
   },
   {
@@ -476,13 +476,13 @@
   {
     "id": "M9",
     "kind": "cluster",
-    "name_ja": "M9",
+    "name_ja": "M9 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M10",
     "kind": "cluster",
-    "name_ja": "M10",
+    "name_ja": "M10 球状星団",
     "file": "deep-sky.json"
   },
   {
@@ -494,7 +494,7 @@
   {
     "id": "M12",
     "kind": "cluster",
-    "name_ja": "M12",
+    "name_ja": "M12 球状星団",
     "file": "deep-sky.json"
   },
   {
@@ -506,7 +506,7 @@
   {
     "id": "M14",
     "kind": "cluster",
-    "name_ja": "M14",
+    "name_ja": "M14 球状星団",
     "file": "deep-sky.json"
   },
   {
@@ -524,19 +524,19 @@
   {
     "id": "M17",
     "kind": "nebula",
-    "name_ja": "M17 オメガ星雲",
+    "name_ja": "M17 オメガ星雲（白鳥星雲）",
     "file": "deep-sky.json"
   },
   {
     "id": "M18",
     "kind": "cluster",
-    "name_ja": "M18",
+    "name_ja": "M18 散開星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M19",
     "kind": "cluster",
-    "name_ja": "M19",
+    "name_ja": "M19 球状星団",
     "file": "deep-sky.json"
   },
   {
@@ -548,7 +548,7 @@
   {
     "id": "M21",
     "kind": "cluster",
-    "name_ja": "M21",
+    "name_ja": "M21 散開星団",
     "file": "deep-sky.json"
   },
   {
@@ -560,25 +560,25 @@
   {
     "id": "M23",
     "kind": "cluster",
-    "name_ja": "M23",
+    "name_ja": "M23 散開星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M24",
     "kind": "star_cloud",
-    "name_ja": "M24",
+    "name_ja": "M24 いて座の星雲（スタークラウド）",
     "file": "deep-sky.json"
   },
   {
     "id": "M25",
     "kind": "cluster",
-    "name_ja": "M25",
+    "name_ja": "M25 散開星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M26",
     "kind": "cluster",
-    "name_ja": "M26",
+    "name_ja": "M26 散開星団",
     "file": "deep-sky.json"
   },
   {
@@ -590,19 +590,19 @@
   {
     "id": "M28",
     "kind": "cluster",
-    "name_ja": "M28",
+    "name_ja": "M28 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M29",
     "kind": "cluster",
-    "name_ja": "M29",
+    "name_ja": "M29 散開星団（冷却塔）",
     "file": "deep-sky.json"
   },
   {
     "id": "M30",
     "kind": "cluster",
-    "name_ja": "M30",
+    "name_ja": "M30 球状星団",
     "file": "deep-sky.json"
   },
   {
@@ -614,7 +614,7 @@
   {
     "id": "M32",
     "kind": "galaxy",
-    "name_ja": "M32",
+    "name_ja": "M32 アンドロメダ銀河の伴銀河",
     "file": "deep-sky.json"
   },
   {
@@ -626,7 +626,7 @@
   {
     "id": "M34",
     "kind": "cluster",
-    "name_ja": "M34",
+    "name_ja": "M34 散開星団",
     "file": "deep-sky.json"
   },
   {
@@ -656,13 +656,13 @@
   {
     "id": "M39",
     "kind": "cluster",
-    "name_ja": "M39",
+    "name_ja": "M39 散開星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M40",
     "kind": "double_star",
-    "name_ja": "M40",
+    "name_ja": "M40 ウィネッケ4（二重星）",
     "file": "deep-sky.json"
   },
   {
@@ -680,7 +680,7 @@
   {
     "id": "M43",
     "kind": "nebula",
-    "name_ja": "M43",
+    "name_ja": "M43 ド・メランの星雲",
     "file": "deep-sky.json"
   },
   {
@@ -698,31 +698,31 @@
   {
     "id": "M46",
     "kind": "cluster",
-    "name_ja": "M46",
+    "name_ja": "M46 散開星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M47",
     "kind": "cluster",
-    "name_ja": "M47",
+    "name_ja": "M47 散開星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M48",
     "kind": "cluster",
-    "name_ja": "M48",
+    "name_ja": "M48 散開星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M49",
     "kind": "galaxy",
-    "name_ja": "M49",
+    "name_ja": "M49 楕円銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M50",
     "kind": "cluster",
-    "name_ja": "M50",
+    "name_ja": "M50 散開星団",
     "file": "deep-sky.json"
   },
   {
@@ -734,31 +734,31 @@
   {
     "id": "M52",
     "kind": "cluster",
-    "name_ja": "M52",
+    "name_ja": "M52 散開星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M53",
     "kind": "cluster",
-    "name_ja": "M53",
+    "name_ja": "M53 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M54",
     "kind": "cluster",
-    "name_ja": "M54",
+    "name_ja": "M54 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M55",
     "kind": "cluster",
-    "name_ja": "M55",
+    "name_ja": "M55 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M56",
     "kind": "cluster",
-    "name_ja": "M56",
+    "name_ja": "M56 球状星団",
     "file": "deep-sky.json"
   },
   {
@@ -770,31 +770,31 @@
   {
     "id": "M58",
     "kind": "galaxy",
-    "name_ja": "M58",
+    "name_ja": "M58 棒渦巻銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M59",
     "kind": "galaxy",
-    "name_ja": "M59",
+    "name_ja": "M59 楕円銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M60",
     "kind": "galaxy",
-    "name_ja": "M60",
+    "name_ja": "M60 楕円銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M61",
     "kind": "galaxy",
-    "name_ja": "M61",
+    "name_ja": "M61 棒渦巻銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M62",
     "kind": "cluster",
-    "name_ja": "M62",
+    "name_ja": "M62 球状星団",
     "file": "deep-sky.json"
   },
   {
@@ -812,103 +812,103 @@
   {
     "id": "M65",
     "kind": "galaxy",
-    "name_ja": "M65 渦巻銀河",
+    "name_ja": "M65 渦巻銀河（しし座の三つ子銀河）",
     "file": "deep-sky.json"
   },
   {
     "id": "M66",
     "kind": "galaxy",
-    "name_ja": "M66 渦巻銀河",
+    "name_ja": "M66 渦巻銀河（しし座の三つ子銀河）",
     "file": "deep-sky.json"
   },
   {
     "id": "M67",
     "kind": "cluster",
-    "name_ja": "M67",
+    "name_ja": "M67 散開星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M68",
     "kind": "cluster",
-    "name_ja": "M68",
+    "name_ja": "M68 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M69",
     "kind": "cluster",
-    "name_ja": "M69",
+    "name_ja": "M69 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M70",
     "kind": "cluster",
-    "name_ja": "M70",
+    "name_ja": "M70 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M71",
     "kind": "cluster",
-    "name_ja": "M71",
+    "name_ja": "M71 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M72",
     "kind": "cluster",
-    "name_ja": "M72",
+    "name_ja": "M72 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M73",
     "kind": "asterism",
-    "name_ja": "M73",
+    "name_ja": "M73 4つの星の並び",
     "file": "deep-sky.json"
   },
   {
     "id": "M74",
     "kind": "galaxy",
-    "name_ja": "M74",
+    "name_ja": "M74 ファントム銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M75",
     "kind": "cluster",
-    "name_ja": "M75",
+    "name_ja": "M75 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M76",
     "kind": "nebula",
-    "name_ja": "M76",
+    "name_ja": "M76 小亜鈴状星雲",
     "file": "deep-sky.json"
   },
   {
     "id": "M77",
     "kind": "galaxy",
-    "name_ja": "M77",
+    "name_ja": "M77 セイファート銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M78",
     "kind": "nebula",
-    "name_ja": "M78",
+    "name_ja": "M78 反射星雲",
     "file": "deep-sky.json"
   },
   {
     "id": "M79",
     "kind": "cluster",
-    "name_ja": "M79",
+    "name_ja": "M79 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M80",
     "kind": "cluster",
-    "name_ja": "M80",
+    "name_ja": "M80 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M81",
     "kind": "galaxy",
-    "name_ja": "M81 ボーデ銀河",
+    "name_ja": "M81 ボーデの銀河",
     "file": "deep-sky.json"
   },
   {
@@ -920,55 +920,55 @@
   {
     "id": "M83",
     "kind": "galaxy",
-    "name_ja": "M83",
+    "name_ja": "M83 南の回転花火銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M84",
     "kind": "galaxy",
-    "name_ja": "M84",
+    "name_ja": "M84 レンズ状銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M85",
     "kind": "galaxy",
-    "name_ja": "M85",
+    "name_ja": "M85 レンズ状銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M86",
     "kind": "galaxy",
-    "name_ja": "M86",
+    "name_ja": "M86 レンズ状銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M87",
     "kind": "galaxy",
-    "name_ja": "M87 楕円銀河（乙女座A）",
+    "name_ja": "M87 楕円銀河（おとめ座A）",
     "file": "deep-sky.json"
   },
   {
     "id": "M88",
     "kind": "galaxy",
-    "name_ja": "M88",
+    "name_ja": "M88 渦巻銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M89",
     "kind": "galaxy",
-    "name_ja": "M89",
+    "name_ja": "M89 楕円銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M90",
     "kind": "galaxy",
-    "name_ja": "M90",
+    "name_ja": "M90 渦巻銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M91",
     "kind": "galaxy",
-    "name_ja": "M91",
+    "name_ja": "M91 棒渦巻銀河",
     "file": "deep-sky.json"
   },
   {
@@ -980,67 +980,67 @@
   {
     "id": "M93",
     "kind": "cluster",
-    "name_ja": "M93",
+    "name_ja": "M93 散開星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M94",
     "kind": "galaxy",
-    "name_ja": "M94",
+    "name_ja": "M94 渦巻銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M95",
     "kind": "galaxy",
-    "name_ja": "M95",
+    "name_ja": "M95 棒渦巻銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M96",
     "kind": "galaxy",
-    "name_ja": "M96",
+    "name_ja": "M96 渦巻銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M97",
     "kind": "nebula",
-    "name_ja": "M97",
+    "name_ja": "M97 ふくろう星雲",
     "file": "deep-sky.json"
   },
   {
     "id": "M98",
     "kind": "galaxy",
-    "name_ja": "M98",
+    "name_ja": "M98 渦巻銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M99",
     "kind": "galaxy",
-    "name_ja": "M99",
+    "name_ja": "M99 渦巻銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M100",
     "kind": "galaxy",
-    "name_ja": "M100",
+    "name_ja": "M100 渦巻銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M101",
     "kind": "galaxy",
-    "name_ja": "M101 風車銀河",
+    "name_ja": "M101 回転花火銀河（風車銀河）",
     "file": "deep-sky.json"
   },
   {
     "id": "M102",
     "kind": "galaxy",
-    "name_ja": "M102",
+    "name_ja": "M102 紡錘銀河（NGC 5866）",
     "file": "deep-sky.json"
   },
   {
     "id": "M103",
     "kind": "cluster",
-    "name_ja": "M103",
+    "name_ja": "M103 散開星団",
     "file": "deep-sky.json"
   },
   {
@@ -1052,37 +1052,37 @@
   {
     "id": "M105",
     "kind": "galaxy",
-    "name_ja": "M105",
+    "name_ja": "M105 楕円銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M106",
     "kind": "galaxy",
-    "name_ja": "M106",
+    "name_ja": "M106 渦巻銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M107",
     "kind": "cluster",
-    "name_ja": "M107",
+    "name_ja": "M107 球状星団",
     "file": "deep-sky.json"
   },
   {
     "id": "M108",
     "kind": "galaxy",
-    "name_ja": "M108",
+    "name_ja": "M108 棒渦巻銀河（サーフボード銀河）",
     "file": "deep-sky.json"
   },
   {
     "id": "M109",
     "kind": "galaxy",
-    "name_ja": "M109",
+    "name_ja": "M109 棒渦巻銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "M110",
     "kind": "galaxy",
-    "name_ja": "M110",
+    "name_ja": "M110 アンドロメダ銀河の伴銀河",
     "file": "deep-sky.json"
   },
   {
@@ -1094,49 +1094,49 @@
   {
     "id": "NGC3628",
     "kind": "galaxy",
-    "name_ja": "NGC3628 ハンバーガー銀河",
+    "name_ja": "NGC 3628 ハンバーガー銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "NGC4565",
     "kind": "galaxy",
-    "name_ja": "NGC4565 針銀河",
+    "name_ja": "NGC 4565 針銀河",
     "file": "deep-sky.json"
   },
   {
     "id": "NGC6543",
     "kind": "nebula",
-    "name_ja": "NGC6543 キャッツアイ星雲",
+    "name_ja": "NGC 6543 キャッツアイ星雲",
     "file": "deep-sky.json"
   },
   {
     "id": "NGC6992",
     "kind": "snr",
-    "name_ja": "NGC6992 網状星雲",
+    "name_ja": "NGC 6992 網状星雲（東）",
     "file": "deep-sky.json"
   },
   {
     "id": "NGC7000",
     "kind": "nebula",
-    "name_ja": "NGC7000 北アメリカ星雲",
+    "name_ja": "NGC 7000 北アメリカ星雲",
     "file": "deep-sky.json"
   },
   {
     "id": "NGC7293",
     "kind": "nebula",
-    "name_ja": "NGC7293 らせん星雲",
+    "name_ja": "NGC 7293 らせん星雲",
     "file": "deep-sky.json"
   },
   {
     "id": "NGC7789",
     "kind": "cluster",
-    "name_ja": "NGC7789 カロリーンのバラ",
+    "name_ja": "NGC 7789 カロラインのバラ",
     "file": "deep-sky.json"
   },
   {
     "id": "NGC869",
     "kind": "cluster",
-    "name_ja": "NGC869/884 ペルセウス二重星団",
+    "name_ja": "NGC 869/884 ペルセウス座の二重星団",
     "file": "deep-sky.json"
   },
   {
