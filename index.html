@@ -45,6 +45,7 @@ button.action.sm{padding:5px 12px;font-size:12px;}
 .search-bar input:focus{border-color:#4a9fd4;outline:none;}
 .search-count{font-size:12px;color:#6a8aaa;white-space:nowrap;}
 #resultArea{margin:0 14px 14px;}
+#appSettingsPanel{margin:10px 14px 14px;}
 .sky-panel{background:#0a1428;border:1px solid #1e4a6a;border-radius:12px;padding:16px 18px;margin-bottom:14px;}
 .sky-panel h3{font-size:14px;color:#ffd54f;margin:0 0 12px;}
 .sky-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;}
@@ -1478,7 +1479,8 @@ button.action.sm,
     margin:10px 8px;
   }
 
-  #resultArea{
+  #resultArea,
+  #appSettingsPanel{
     margin-left:8px;
     margin-right:8px;
   }
@@ -1544,7 +1546,8 @@ button.action.sm,
     border-radius:10px;
   }
 
-  #resultArea{
+  #resultArea,
+  #appSettingsPanel{
     margin-left:6px;
     margin-right:6px;
   }
@@ -3361,31 +3364,6 @@ footer{padding-bottom:calc(10px + env(safe-area-inset-bottom));}
 
 
     <details class="compact-settings">
-      <summary>ユーザーデータのバックアップ</summary>
-      <div class="compact-settings-body">
-        <div class="favorite-location-box">
-          <button type="button" class="favorite-location-btn" id="exportUserData">⬇︎ ユーザーデータを書き出す</button>
-          <button type="button" class="favorite-location-btn" id="importUserData">⬆︎ ユーザーデータを読み込む</button>
-          <input id="importUserDataFile" type="file" accept="application/json,.json" hidden>
-        </div>
-        <div class="muted" style="margin-top:7px;font-size:11px;line-height:1.6">お気に入り地点など、この端末に保存したユーザーデータをJSONとして別途保存できます。アプリ更新や端末移行の前に書き出しておくと、あとから読み戻せます。</div>
-      </div>
-    </details>
-
-    <details class="compact-settings" id="dbUpdatePanel">
-      <summary>天文データベース</summary>
-      <div class="compact-settings-body">
-        <div id="dbUpdateInfo" style="font-size:12px;line-height:1.6">使用中：—</div>
-        <div class="favorite-location-box" style="margin-top:6px">
-          <button type="button" class="favorite-location-btn" id="dbUpdateCheck">最新版を確認</button>
-          <button type="button" class="favorite-location-btn danger" id="dbUpdateRevert" hidden>同梱版に戻す</button>
-        </div>
-        <div id="dbUpdateStatus" role="status" aria-live="polite" style="margin-top:6px;font-size:11px;line-height:1.6"></div>
-        <div class="muted" style="margin-top:7px;font-size:11px;line-height:1.6">星座・天体の解説などの共通データベースを、アプリを更新せずに最新版へ入れ替えます。取り込んだデータは検証してからこの端末に保存し、次回からオフラインでも使えます。通信するのはボタンを押したときだけです。</div>
-      </div>
-    </details>
-
-    <details class="compact-settings">
       <summary>星の見え方</summary>
       <div class="compact-settings-body">
         <div class="obs-row obs-limit-grid">
@@ -4034,6 +4012,36 @@ footer{padding-bottom:calc(10px + env(safe-area-inset-bottom));}
 </details>
 
 </div>
+
+<details class="result-section-panel app-settings-panel" id="appSettingsPanel">
+<summary>⚙️ 設定</summary>
+<div class="result-section-body">
+    <details class="compact-settings">
+      <summary>ユーザーデータのバックアップ</summary>
+      <div class="compact-settings-body">
+        <div class="favorite-location-box">
+          <button type="button" class="favorite-location-btn" id="exportUserData">⬇︎ ユーザーデータを書き出す</button>
+          <button type="button" class="favorite-location-btn" id="importUserData">⬆︎ ユーザーデータを読み込む</button>
+          <input id="importUserDataFile" type="file" accept="application/json,.json" hidden>
+        </div>
+        <div class="muted" style="margin-top:7px;font-size:11px;line-height:1.6">お気に入り地点など、この端末に保存したユーザーデータをJSONとして別途保存できます。アプリ更新や端末移行の前に書き出しておくと、あとから読み戻せます。</div>
+      </div>
+    </details>
+
+    <details class="compact-settings" id="dbUpdatePanel">
+      <summary>天文データベース</summary>
+      <div class="compact-settings-body">
+        <div id="dbUpdateInfo" style="font-size:12px;line-height:1.6">使用中：—</div>
+        <div class="favorite-location-box" style="margin-top:6px">
+          <button type="button" class="favorite-location-btn" id="dbUpdateCheck">最新版を確認</button>
+          <button type="button" class="favorite-location-btn danger" id="dbUpdateRevert" hidden>同梱版に戻す</button>
+        </div>
+        <div id="dbUpdateStatus" role="status" aria-live="polite" style="margin-top:6px;font-size:11px;line-height:1.6"></div>
+        <div class="muted" style="margin-top:7px;font-size:11px;line-height:1.6">星座・天体の解説などの共通データベースを、アプリを更新せずに最新版へ入れ替えます。取り込んだデータは検証してからこの端末に保存し、次回からオフラインでも使えます。通信するのはボタンを押したときだけです。</div>
+      </div>
+    </details>
+</div>
+</details>
 
 <div class="detail-popup-modal" id="detailPopupModal" aria-hidden="true">
 <div id="detailPanel">
