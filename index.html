@@ -1045,6 +1045,7 @@ body.manual-open{overflow:hidden;}
   white-space:nowrap;
 }
 .favorite-location-btn:hover{border-color:#5285b0;color:#fff;}
+#dbUpdateRevert[hidden]{display:none}#dbUpdateStatus[data-kind="ok"]{color:#8fd9b0}#dbUpdateStatus[data-kind="warn"]{color:#e9b38f}
 .favorite-location-btn.danger{color:#e9a1a1;border-color:#5a3037;}
 .obj-search-actions,.card-plan-actions,.const-plan-actions{
   display:flex;
@@ -3371,6 +3372,19 @@ footer{padding-bottom:calc(10px + env(safe-area-inset-bottom));}
       </div>
     </details>
 
+    <details class="compact-settings" id="dbUpdatePanel">
+      <summary>天文データベース</summary>
+      <div class="compact-settings-body">
+        <div id="dbUpdateInfo" style="font-size:12px;line-height:1.6">使用中：—</div>
+        <div class="favorite-location-box" style="margin-top:6px">
+          <button type="button" class="favorite-location-btn" id="dbUpdateCheck">最新版を確認</button>
+          <button type="button" class="favorite-location-btn danger" id="dbUpdateRevert" hidden>同梱版に戻す</button>
+        </div>
+        <div id="dbUpdateStatus" role="status" aria-live="polite" style="margin-top:6px;font-size:11px;line-height:1.6"></div>
+        <div class="muted" style="margin-top:7px;font-size:11px;line-height:1.6">星座・天体の解説などの共通データベースを、アプリを更新せずに最新版へ入れ替えます。取り込んだデータは検証してからこの端末に保存し、次回からオフラインでも使えます。通信するのはボタンを押したときだけです。</div>
+      </div>
+    </details>
+
     <details class="compact-settings">
       <summary>星の見え方</summary>
       <div class="compact-settings-body">
@@ -4874,7 +4888,7 @@ footer{padding-bottom:calc(10px + env(safe-area-inset-bottom));}
       &lt;/details&gt;
     &lt;/section&gt;
 
-    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 2.1.5&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;Nicole the Astronavigator 使用マニュアル&lt;br&gt;&lt;strong&gt;Version 2.1.6&lt;/strong&gt;&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;script&gt;
@@ -5077,7 +5091,7 @@ initialManualNightMode();
 
 <footer>
 <div class="footer-app-title">🔭 Nicole the Astronavigator</div>
-<div class="footer-app-version">Version 2.1.5</div>
+<div class="footer-app-version">Version 2.1.6</div>
 <div class="footer-creator">制作者：<a href="https://kensuke-suga.myportfolio.com" target="_blank" rel="noopener noreferrer">Kensuke Suga</a></div>
 <div class="footer-info-actions">
   <button type="button" class="manual-open-btn footer-manual-btn" id="openManual">📖 使い方</button>
@@ -5085,6 +5099,6 @@ initialManualNightMode();
 </div>
 </footer>
 
-<script type="module" src="./bootstrap.js?v=2.1.5"></script>
+<script type="module" src="./bootstrap.js?v=2.1.6"></script>
 </body>
 </html>
